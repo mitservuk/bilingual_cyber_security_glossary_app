@@ -1,0 +1,3686 @@
+# CCSP Domain 3: Cloud Platform and Infrastructure Security.
+# Format is described in content/README.md. Every `found` text was confirmed
+# on its page with scripts/check_sources.py when these entries were written.
+
+- id: cloud.management-plane
+  en:
+    term: management plane
+    definition: >-
+      The consoles, APIs and tooling through which cloud resources and the
+      platform itself are configured and administered. Whoever controls it
+      controls everything built on top of it, which makes it a prime target.
+  es:
+    verdict: translated
+    forms:
+      - text: plano de gestión
+        usedBy: [official, microsoft]
+        article: el
+        kind: noun
+        primary: true
+        note: >-
+          INCIBE's 5G guide uses it in the network sense, beside the user
+          plane and the signalling plane.
+      - text: plano de administración
+        usedBy: [microsoft]
+        article: el
+        kind: noun
+        note: >-
+          Microsoft's page on its enterprise access model uses both this and
+          "plano de gestión".
+    definition: >-
+      Conjunto de consolas, API y herramientas con las que se configuran y
+      administran los recursos de la nube y la propia plataforma.
+    examples:
+      - es: El acceso al plano de gestión está protegido con MFA.
+        en: Access to the management plane is protected with MFA.
+  topics: [architecture, iam]
+  technology: [cloud-general]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [cloud.control-plane, sec.iam, sec.mfa, sec.least-privilege]
+  sources:
+    - label: "INCIBE y Universidad de León, Guía de buenas prácticas de ciberseguridad para redes privadas 5G"
+      url: "https://www.incibe.es/sites/default/files/2025-12/INCIBE&ULE_GuiaBuenasPracticasCiberseguridadRedesPrivadas5G.pdf"
+      found: ["el plano de señalización y el plano de gestión"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/security/privileged-access-workstations/privileged-access-access-model"
+      found: ["creando un plano de gestión", "Plano de administración"]
+      checked: 2026-11-14
+  status: draft
+
+- id: cloud.control-plane
+  en:
+    term: control plane
+    definition: >-
+      The part of a system that takes the decisions: it accepts requests to
+      create, change or delete resources and configures the data plane, which
+      carries the workload's own traffic.
+  es:
+    verdict: both
+    forms:
+      - text: plano de control
+        usedBy: [official, engineers, microsoft, aws]
+        article: el
+        kind: noun
+        primary: true
+      - text: control plane
+        usedBy: [engineers]
+        headline: true
+        article: el
+        kind: noun
+        note: >-
+          The English term is also written as it stands: Paradigma Digital's
+          cloud comparison has "control plane de tráfico" on the same page as
+          "plano de control".
+      - text: plano de datos
+        usedBy: [official, engineers, microsoft, aws]
+        article: el
+        kind: noun
+        note: Data plane, its counterpart.
+    definition: >-
+      Parte de un sistema que recibe las peticiones de creación o cambio de
+      recursos y configura el plano de datos, por donde pasa el tráfico.
+    examples:
+      - es: El proveedor gestiona el plano de control del clúster de Kubernetes.
+        en: The provider manages the control plane of the Kubernetes cluster.
+  topics: [architecture]
+  technology: [cloud-general, kubernetes]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [cloud.management-plane, cloud.sdn, cloud.orchestration, cloud.container]
+  sources:
+    - label: "INCIBE y Universidad de León, Guía de buenas prácticas de ciberseguridad para redes privadas 5G"
+      url: "https://www.incibe.es/sites/default/files/2025-12/INCIBE&ULE_GuiaBuenasPracticasCiberseguridadRedesPrivadas5G.pdf"
+      found: ["desacoplando el plano de control del plano de datos"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/guerra-de-nubes-aws-azure-gcp/"
+      found: ["un plano de control del tráfico", "Control plane de tráfico"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/jugando-con-istio-the-next-big-thing-en-microservicios-1-2/"
+      found: ["Plano de datos", "Plano de control"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/azure/azure-resource-manager/management/control-plane-and-data-plane"
+      found: ["El plano de control se utiliza para administrar los recursos", "plano de control y plano de datos"]
+      checked: 2026-11-14
+    - label: "AWS, documentación en español"
+      url: "https://docs.aws.amazon.com/es_es/whitepapers/latest/aws-fault-isolation-boundaries/control-planes-and-data-planes.html"
+      found: ["los conceptos de plano de control y plano de datos"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: cloud.compute
+  en:
+    term: compute
+    definition: >-
+      Processing capacity offered as a cloud resource, in the form of virtual
+      machines, containers or functions, as distinct from storage and
+      networking.
+  es:
+    verdict: translated
+    forms:
+      - text: computación
+        usedBy: [official, engineers, google, microsoft, aws]
+        article: la
+        kind: noun
+        primary: true
+        note: >-
+          Usually inside a phrase: "recursos de computación", "servicios de
+          computación", "instancias de computación".
+      - text: cómputo
+        usedBy: [official, microsoft, oracle]
+        article: el
+        kind: noun
+        note: >-
+          Oracle writes "instancias de cómputo" and INCIBE's 5G guide
+          "capacidades de cómputo".
+      - text: proceso
+        usedBy: [microsoft]
+        article: el
+        kind: noun
+        note: >-
+          Microsoft's Azure architecture guide calls a compute service a
+          "servicio de proceso", and on the same page also a "servicio de
+          cómputo" and a "servicio de computación".
+    definition: >-
+      Capacidad de procesamiento que se ofrece como recurso en la nube, en
+      forma de máquinas virtuales, contenedores o funciones.
+    examples:
+      - es: Necesitamos más recursos de computación para el entorno de pruebas.
+        en: We need more compute resources for the test environment.
+    watchOut: >-
+      The vendors do not agree on one word, and "la computación" on its own
+      means computing in general, as in "computación en la nube". Say
+      "recursos de computación" or "capacidad de cómputo" to make clear you
+      mean compute.
+  topics: [architecture]
+  technology: [cloud-general]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [cloud.virtual-machine, cloud.iaas, cloud.container, cloud.serverless]
+  sources:
+    - label: "INCIBE y Universidad de León, Guía de buenas prácticas de ciberseguridad para redes privadas 5G"
+      url: "https://www.incibe.es/sites/default/files/2025-12/INCIBE&ULE_GuiaBuenasPracticasCiberseguridadRedesPrivadas5G.pdf"
+      found: ["recursos de computación", "capacidades de cómputo"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/comparativa-servicios-cloud-aws-azure-gcp/"
+      found: ["servicios de computación"]
+      checked: 2026-11-14
+    - label: "AWS, páginas en español"
+      url: "https://aws.amazon.com/es/what-is/compute/"
+      found: ["Los recursos de computación son cantidades medibles de potencia de computación"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/compute?hl=es"
+      found: ["instancias de computación"]
+      checked: 2026-11-14
+    - label: "Oracle España"
+      url: "https://www.oracle.com/es/cloud/compute/"
+      found: ["instancias de cómputo"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/azure/architecture/guide/technology-choices/compute-decision-tree"
+      found: ["servicio de proceso", "servicio de cómputo", "servicio de computación"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: cloud.sdn
+  en:
+    term: software-defined networking
+    acronym: SDN
+    definition: >-
+      An approach to networking that takes the control plane out of the
+      individual devices and centralises it in software, so that the network
+      can be programmed and reconfigured through APIs.
+  es:
+    verdict: both
+    acronym: SDN
+    forms:
+      - text: SDN
+        usedBy: [official, engineers, microsoft]
+        article: la
+        kind: noun
+        primary: true
+        note: >-
+          The English acronym, glossed in Spanish on first mention. Microsoft
+          writes it with no article: "puede usar SDN para crear...".
+      - text: redes definidas por software
+        usedBy: [official, microsoft]
+        headline: true
+        article: las
+        kind: noun
+        note: >-
+          The expansion, in the plural for the technology as a whole. One
+          such network is "una red definida por software", as Telefónica Tech
+          writes.
+    say: Said letter by letter, "ese-de-ene".
+    definition: >-
+      Arquitectura de red en la que el plano de control se separa de los
+      equipos y se centraliza en software, de modo que la red se puede
+      programar.
+    examples:
+      - es: La red del proveedor se gestiona con SDN, no equipo por equipo.
+        en: The provider's network is managed with SDN, not device by device.
+  topics: [network, architecture]
+  technology: [networking]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [cloud.control-plane, cloud.virtual-network, cloud.virtualization, sec.microsegmentation]
+  sources:
+    - label: "INCIBE y Universidad de León, Guía de buenas prácticas de ciberseguridad para redes privadas 5G"
+      url: "https://www.incibe.es/sites/default/files/2025-12/INCIBE&ULE_GuiaBuenasPracticasCiberseguridadRedesPrivadas5G.pdf"
+      found: ["SDN (Software Defined Networks / Redes Definidas por Software)"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/un-recorrido-del-mainframe-a-la-nube"
+      found: ["lo que se conoce como SDN", "red definida por software"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/windows-server/networking/sdn/software-defined-networking"
+      found: ["Redes definidas por software (SDN)", "Puede usar SDN para crear"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: cloud.vpc
+  en:
+    term: virtual private cloud
+    acronym: VPC
+    definition: >-
+      A logically isolated network that a customer defines inside a public
+      cloud, with its own address ranges, subnets, routes and filtering
+      rules.
+  es:
+    verdict: both
+    acronym: VPC
+    forms:
+      - text: VPC
+        usedBy: [engineers, google, aws]
+        article: la
+        kind: noun
+        primary: true
+        plural: las VPC
+        note: >-
+          The acronym is the working term. AWS and Google make it feminine
+          ("una VPC"); Paradigma Digital also writes "del VPC" and the plural
+          "VPCs".
+      - text: nube privada virtual
+        usedBy: [google, aws]
+        headline: true
+        article: la
+        kind: noun
+        note: >-
+          The expansion in Google's and AWS's pages. AWS's guide also has the
+          other word order, "nubes virtuales privadas".
+    definition: >-
+      Red aislada de forma lógica que un cliente define dentro de una nube
+      pública, con sus propios rangos de direcciones, subredes y reglas.
+    examples:
+      - es: La base de datos está en una subred privada de la VPC.
+        en: The database is in a private subnet of the VPC.
+    watchOut: >-
+      Three near-identical names: "nube privada virtual" is a VPC, "red
+      privada virtual" is a VPN, and "nube privada" is a private cloud.
+  topics: [network]
+  technology: [cloud-general, networking]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [cloud.virtual-network, sec.security-group, sec.network-segmentation, sec.vpn]
+  sources:
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/desplegar-microservicios-amazon/"
+      found: ["en su VPC", "tarjeta de red del VPC"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/guerra-de-nubes-aws-azure-gcp/"
+      found: ["Conectividad privada entre VPCs"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/vpc?hl=es"
+      found: ["Nube privada virtual (VPC)", "Una sola VPC"]
+      checked: 2026-11-14
+    - label: "AWS, documentación en español"
+      url: "https://docs.aws.amazon.com/es_es/vpc/latest/userguide/what-is-amazon-vpc.html"
+      found: ["nube privada virtual (VPC)", "Nubes virtuales privadas (VPC)", "Una VPC es una red virtual"]
+      checked: 2026-11-14
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["Una red privada virtual, también conocida por sus siglas VPN"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: cloud.virtual-network
+  en:
+    term: virtual network
+    definition: >-
+      A network built in software on top of shared physical infrastructure,
+      which behaves for its owner like a private network with its own
+      addressing, subnets and routing.
+  es:
+    verdict: translated
+    forms:
+      - text: red virtual
+        usedBy: [engineers, google, microsoft, oracle, aws]
+        article: la
+        kind: noun
+        primary: true
+        plural: las redes virtuales
+        note: >-
+          Microsoft calls an Azure VNet "una red virtual". Oracle's
+          equivalent, the VCN, is a "red virtual en la nube".
+    definition: >-
+      Red creada por software sobre una infraestructura física compartida,
+      que su propietario usa como una red privada con sus propias subredes.
+    examples:
+      - es: Las dos máquinas virtuales están en la misma red virtual.
+        en: The two virtual machines are on the same virtual network.
+    watchOut: >-
+      One extra word changes the meaning: "red privada virtual" is a VPN.
+  topics: [network]
+  technology: [cloud-general, networking]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [cloud.vpc, cloud.sdn, sec.network-segmentation, sec.vpn]
+  sources:
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/techbiz/control-acceso-cloud-mucho-mas-seguro-propio-datacenter/"
+      found: ["aislamiento entre redes virtuales"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/azure/virtual-network/virtual-networks-overview"
+      found: ["¿Por qué usar una red virtual", "todos los recursos de una red virtual"]
+      checked: 2026-11-14
+    - label: "Oracle España"
+      url: "https://www.oracle.com/es/cloud/networking/virtual-cloud-network/"
+      found: ["Red virtual en la nube"]
+      checked: 2026-11-14
+    - label: "AWS, documentación en español"
+      url: "https://docs.aws.amazon.com/es_es/vpc/latest/userguide/what-is-amazon-vpc.html"
+      found: ["Una VPC es una red virtual"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/vpc?hl=es"
+      found: ["Red virtual mundial"]
+      checked: 2026-11-14
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["Una red privada virtual, también conocida por sus siglas VPN"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: cloud.load-balancer
+  en:
+    term: load balancer
+    definition: >-
+      A component that spreads incoming traffic across several servers or
+      instances and stops sending it to those that fail their health checks.
+  es:
+    verdict: translated
+    forms:
+      - text: balanceador de carga
+        usedBy: [engineers, google]
+        article: el
+        kind: noun
+        primary: true
+        plural: los balanceadores de carga
+        note: >-
+          Often shortened to "el balanceador" once the context is clear.
+      - text: equilibrador de carga
+        usedBy: [microsoft, oracle, aws]
+        article: el
+        kind: noun
+        note: >-
+          The wording of Microsoft, AWS and Oracle. Microsoft's Azure Load
+          Balancer page has "balanceador de carga" in places as well.
+      - text: balanceo de carga
+        usedBy: [official, engineers, google]
+        article: el
+        kind: noun
+        note: >-
+          Load balancing, the activity. Microsoft and AWS call it "equilibrio
+          de carga".
+    definition: >-
+      Componente que reparte el tráfico entrante entre varios servidores o
+      instancias y deja de enviarlo a los que no responden.
+    examples:
+      - es: El balanceador de carga reparte el tráfico entre tres servidores.
+        en: The load balancer spreads the traffic across three servers.
+    watchOut: >-
+      The Spain-based blogs read for this entry all say "balanceador";
+      "equilibrador" is what you will read in Azure, AWS and Oracle
+      documentation.
+  topics: [network, architecture]
+  technology: [networking]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [sec.high-availability, sec.failover, cloud.cdn, sec.dos]
+  sources:
+    - label: "INCIBE y Universidad de León, Guía de buenas prácticas de ciberseguridad para redes privadas 5G"
+      url: "https://www.incibe.es/sites/default/files/2025-12/INCIBE&ULE_GuiaBuenasPracticasCiberseguridadRedesPrivadas5G.pdf"
+      found: ["el balanceo de carga"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/guerra-de-nubes-aws-azure-gcp/"
+      found: ["utilizar balanceadores de carga", "el balanceo de carga global"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/desplegar-microservicios-amazon/"
+      found: ["en el balanceador"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/resiliencia-clave-sistemas-cloud-native"
+      found: ["un balanceador de carga"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/load-balancing?hl=es"
+      found: ["Elegir un balanceador de carga", "Balanceo de carga escalable"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/azure/load-balancer/load-balancer-overview"
+      found: ["un equilibrador de carga interno", "El equilibrio de carga hace referencia", "Crea un balanceador de carga público"]
+      checked: 2026-11-14
+    - label: "AWS, páginas en español"
+      url: "https://aws.amazon.com/es/what-is/load-balancing/"
+      found: ["Un equilibrador de carga es un dispositivo", "¿Qué es el equilibrio de carga?"]
+      checked: 2026-11-14
+    - label: "Oracle España"
+      url: "https://www.oracle.com/es/cloud/compute/"
+      found: ["mediante un equilibrador de carga"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: cloud.cdn
+  en:
+    term: content delivery network
+    acronym: CDN
+    definition: >-
+      A geographically distributed network of servers that caches content
+      close to users, reducing latency and taking load, including much
+      volumetric attack traffic, off the origin.
+  es:
+    verdict: both
+    acronym: CDN
+    forms:
+      - text: CDN
+        usedBy: [engineers, google, microsoft, aws]
+        article: la
+        kind: noun
+        primary: true
+        plural: las CDN
+        note: >-
+          The acronym is the working term. AWS and Google make it feminine
+          ("una CDN", "la CDN"); Paradigma Digital writes "un CDN".
+      - text: red de distribución de contenidos
+        usedBy: [eu]
+        headline: true
+        article: la
+        kind: noun
+        note: >-
+          The term defined in the Spanish text of the NIS 2 directive. Google
+          Cloud writes it in the singular, "red de distribución de
+          contenido".
+      - text: red de entrega de contenido
+        usedBy: [engineers, microsoft, aws]
+        article: la
+        kind: noun
+        note: >-
+          The wording of Microsoft and AWS. AWS's own page says CDN can stand
+          for either "red de entrega" or "red de distribución".
+    say: Said letter by letter, "ce-de-ene".
+    definition: >-
+      Red de servidores repartidos geográficamente que guarda copias del
+      contenido cerca de los usuarios para servirlo con menos latencia.
+    examples:
+      - es: Servimos las imágenes desde una CDN para reducir la latencia.
+        en: We serve the images from a CDN to reduce latency.
+  topics: [network]
+  technology: [networking]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  frameworks: [NIS2]
+  related: [cloud.load-balancer, cloud.edge-computing, sec.dos, cloud.region]
+  sources:
+    - label: "BOE, Directiva (UE) 2022/2555 (NIS 2)"
+      url: "https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81963"
+      found: ["«red de distribución de contenidos»: una red de servidores distribuidos"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/guerra-de-nubes-aws-azure-gcp/"
+      found: ["desplegar un CDN", "Red de entrega de contenido global"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/cdn?hl=es"
+      found: ["Cloud CDN: red de distribución de contenido", "a la CDN"]
+      checked: 2026-11-14
+    - label: "AWS, páginas en español"
+      url: "https://aws.amazon.com/es/what-is/cdn/"
+      found: ["Una red de entrega de contenido (CDN) es una red de servidores", "CDN puede significar red de entrega de contenido o red de distribución de contenido", "¿Qué es una CDN?"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/azure/frontdoor/front-door-overview"
+      found: ["una red de entrega de contenido avanzada (CDN)"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: cloud.region
+  en:
+    term: region
+    definition: >-
+      A geographic area in which a cloud provider groups data centres and
+      offers its services. Customers choose the region where their resources
+      run and their data is stored.
+  es:
+    verdict: translated
+    forms:
+      - text: región
+        usedBy: [engineers, google, microsoft, oracle, aws]
+        article: la
+        kind: noun
+        primary: true
+        plural: las regiones
+    definition: >-
+      Zona geográfica en la que un proveedor de nube agrupa centros de datos y
+      ofrece sus servicios, y que el cliente elige para sus recursos y datos.
+    examples:
+      - es: Los datos de los clientes se guardan en la región de España.
+        en: Customer data is stored in the Spain region.
+    watchOut: >-
+      The accent is only on the singular: "región", but "regiones".
+  topics: [architecture]
+  technology: [cloud-general]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [cloud.availability-zone, tech.data-centre, law.data-residency, sec.geolocation]
+  sources:
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/techbiz/aws-espana-cerca-rapido-barato/"
+      found: ["la región de España"]
+      checked: 2026-11-14
+    - label: "AWS, páginas en español"
+      url: "https://aws.amazon.com/es/about-aws/global-infrastructure/regions_az/"
+      found: ["Cada región de AWS consta de un mínimo de", "Zonas de disponibilidad y regiones"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/azure/reliability/availability-zones-overview"
+      found: ["centros de datos separados dentro de una región"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/vpc?hl=es"
+      found: ["disponible en todas las regiones"]
+      checked: 2026-11-14
+    - label: "Oracle España"
+      url: "https://www.oracle.com/es/cloud/networking/"
+      found: ["Regiones de nube pública", "Centros de datos de Oracle por región"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: cloud.availability-zone
+  en:
+    term: availability zone
+    acronym: AZ
+    definition: >-
+      One or more data centres within a cloud region with independent power,
+      cooling and networking, far enough from the region's other zones that a
+      single failure should not take down more than one.
+  es:
+    verdict: translated
+    acronym: AZ
+    forms:
+      - text: zona de disponibilidad
+        usedBy: [engineers, microsoft, aws]
+        article: la
+        kind: noun
+        primary: true
+        plural: las zonas de disponibilidad
+      - text: AZ
+        usedBy: [engineers]
+        article: la
+        kind: noun
+        note: >-
+          The English acronym, feminine: "una AZ". Paradigma Digital writes
+          the plural "AZs".
+    definition: >-
+      Uno o varios centros de datos de una región de nube, con alimentación,
+      refrigeración y red independientes de las demás zonas.
+    examples:
+      - es: Desplegamos la aplicación en tres zonas de disponibilidad.
+        en: We deploy the application in three availability zones.
+  topics: [architecture]
+  technology: [cloud-general]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [cloud.region, tech.data-centre, sec.high-availability, sec.redundancy]
+  sources:
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/techbiz/aws-espana-cerca-rapido-barato/"
+      found: ["Una zona de disponibilidad es una agrupación de datacenters", "dentro de una AZ (availability zone)"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/10-antipatrones-cloud/"
+      found: ["una única zona de disponibilidad (AZ)", "varias AZs o regiones"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/azure/reliability/availability-zones-overview"
+      found: ["Cada zona de disponibilidad tiene una infraestructura independiente"]
+      checked: 2026-11-14
+    - label: "AWS, páginas en español"
+      url: "https://aws.amazon.com/es/about-aws/global-infrastructure/regions_az/"
+      found: ["Regiones y zonas de disponibilidad", "alimentación, refrigeración y seguridad física independientes"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: tech.data-centre
+  en:
+    term: data centre
+    definition: >-
+      A facility that houses servers, storage and network equipment together
+      with the power, cooling, fire protection and physical security they
+      depend on.
+  es:
+    verdict: both
+    acronym: CPD
+    forms:
+      - text: centro de datos
+        usedBy: [eu, engineers, google, microsoft, oracle, aws]
+        article: el
+        kind: noun
+        primary: true
+        plural: los centros de datos
+      - text: CPD
+        usedBy: [official, engineers]
+        headline: true
+        article: el
+        kind: noun
+        plural: los CPD
+        note: >-
+          Short for "centro de proceso de datos" (the ENS's wording) or
+          "centro de procesamiento de datos" (INCIBE, Telefónica Tech). In
+          Paradigma Digital's architecture article it is the customer's own
+          facility, as opposed to the cloud: "el CPD del cliente".
+      - text: datacenter
+        usedBy: [engineers]
+        article: el
+        kind: noun
+        plural: los datacenters
+        note: >-
+          The English word, written as one word in Paradigma Digital's blog:
+          "nuestro datacenter corporativo".
+    say: CPD is said letter by letter, "ce-pe-de".
+    definition: >-
+      Instalación que aloja servidores, almacenamiento y equipos de red, con
+      la alimentación eléctrica, la climatización y la seguridad física que
+      necesitan.
+    examples:
+      - es: Vamos a cerrar el centro de datos de Madrid y migrar a la nube.
+        en: We're going to close the Madrid data centre and migrate to the cloud.
+    watchOut: >-
+      CPD is a Spanish acronym with no English equivalent. In INCIBE's
+      glossary the backup site is the "centro de respaldo", the CPD that
+      takes over from the "CPD principal".
+  topics: [physical, architecture]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [sec.physical-security, tech.hvac, tech.ups, cloud.region]
+  sources:
+    - label: "BOE, Directiva (UE) 2022/2555 (NIS 2)"
+      url: "https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81963"
+      found: ["«servicio de centro de datos»"]
+      checked: 2026-11-14
+    - label: "Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1"
+      url: "https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191"
+      found: ["El equipamiento del Centro de Proceso de Datos (CPD)"]
+      checked: 2026-11-14
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["Un centro de respaldo es un centro de procesamiento de datos (CPD)", "CPD principal"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, glosario de términos de cloud computing"
+      url: "https://telefonicatech.com/blog/glosario-terminos-cloud-computing"
+      found: ["Centros de Procesamiento de Datos", "disponer de un centro de datos propio"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/diseno-soluciones-arquitectura-la-infraestructura/"
+      found: ["en el CPD del cliente"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/guerra-de-nubes-aws-azure-gcp/"
+      found: ["nuestro datacenter corporativo"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/techbiz/aws-espana-cerca-rapido-barato/"
+      found: ["una agrupación de datacenters"]
+      checked: 2026-11-14
+    - label: "AWS, páginas en español"
+      url: "https://aws.amazon.com/es/what-is/data-center/"
+      found: ["Un centro de datos es una ubicación física"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/azure/security/fundamentals/physical-security"
+      found: ["centros de datos"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/learn/what-is-disaster-recovery?hl=es"
+      found: ["centro de datos principal"]
+      checked: 2026-11-14
+    - label: "Oracle España"
+      url: "https://www.oracle.com/es/cloud/networking/"
+      found: ["Los centros de datos de Oracle"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.redundancy
+  en:
+    term: redundancy
+    definition: >-
+      Duplicating components, links or whole sites so that, when one fails,
+      another carries on and the service is not interrupted.
+  es:
+    verdict: translated
+    forms:
+      - text: redundancia
+        usedBy: [official, engineers, google, microsoft, aws]
+        article: la
+        kind: noun
+        primary: true
+      - text: redundante
+        usedBy: [official, eu, engineers, aws]
+        kind: adjective
+        note: 'Redundant: "fuentes de alimentación redundantes".'
+      - text: redundado
+        usedBy: [engineers]
+        kind: adjective
+        note: >-
+          Engineers' shorthand for "made redundant", as in Paradigma
+          Digital's "todo está redundado".
+    definition: >-
+      Duplicación de componentes, enlaces o instalaciones para que, si uno
+      falla, otro siga dando el servicio.
+    examples:
+      - es: Hay redundancia en la alimentación eléctrica y en la red.
+        en: There is redundancy in the power supply and in the network.
+  topics: [architecture, incident]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [sec.high-availability, sec.fault-tolerance, sec.failover, sec.resiliency]
+  sources:
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["2.17.4. Redundancia"]
+      checked: 2026-11-14
+    - label: "INCIBE y Universidad de León, Guía de buenas prácticas de ciberseguridad para redes privadas 5G"
+      url: "https://www.incibe.es/sites/default/files/2025-12/INCIBE&ULE_GuiaBuenasPracticasCiberseguridadRedesPrivadas5G.pdf"
+      found: ["una arquitectura redundante"]
+      checked: 2026-11-14
+    - label: "BOE, Directiva (UE) 2022/2555 (NIS 2)"
+      url: "https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81963"
+      found: ["sistemas redundantes"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/resiliencia-clave-sistemas-cloud-native"
+      found: ["La redundancia consiste en", "fuentes de alimentación redundantes"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/techbiz/aws-espana-cerca-rapido-barato/"
+      found: ["todo está redundado", "una redundancia total en las comunicaciones"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/azure/reliability/concept-redundancy-replication-backup"
+      found: ["La redundancia consiste en implementar varias instancias"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/learn/what-is-disaster-recovery?hl=es"
+      found: ["redundancia integrada"]
+      checked: 2026-11-14
+    - label: "AWS, páginas en español"
+      url: "https://aws.amazon.com/es/about-aws/global-infrastructure/regions_az/"
+      found: ["redes redundantes"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.high-availability
+  en:
+    term: high availability
+    acronym: HA
+    definition: >-
+      Designing a system with redundancy and automatic failover so that it
+      stays in service when components fail, usually against an agreed
+      availability target.
+  es:
+    verdict: translated
+    acronym: HA
+    forms:
+      - text: alta disponibilidad
+        usedBy: [official, engineers, google, microsoft, oracle, aws]
+        article: la
+        kind: noun
+        primary: true
+        note: >-
+          Also describes a set-up, after "en": "para que nuestra aplicación
+          esté en alta disponibilidad". The acronym stays in English:
+          Paradigma Digital writes "alta disponibilidad (HA)".
+    definition: >-
+      Característica de un sistema o servicio que reduce al mínimo el tiempo
+      de indisponibilidad cuando hay un fallo o un incidente.
+    examples:
+      - es: La base de datos está configurada en alta disponibilidad.
+        en: The database is configured for high availability.
+  topics: [architecture, incident]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [sec.availability, sec.redundancy, sec.failover, grc.sla]
+  sources:
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["2.1.9. Alta disponibilidad", "al mínimo el tiempo de indisponibilidad"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/kubernetes-multi-cluster-rhacm-glsb-haproxy/"
+      found: ["alta disponibilidad (HA)", "Para que nuestra aplicación esté en alta disponibilidad"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/azure/reliability/concept-redundancy-replication-backup"
+      found: ["una estrategia de alta disponibilidad"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/learn/what-is-disaster-recovery?hl=es"
+      found: ["funciones de alta disponibilidad"]
+      checked: 2026-11-14
+    - label: "Oracle España"
+      url: "https://www.oracle.com/es/cloud/compute/"
+      found: ["en modo de alta disponibilidad"]
+      checked: 2026-11-14
+    - label: "AWS, páginas en español"
+      url: "https://aws.amazon.com/es/about-aws/global-infrastructure/regions_az/"
+      found: ["centrados en la alta disponibilidad"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.fault-tolerance
+  en:
+    term: fault tolerance
+    definition: >-
+      The ability of a system to keep working correctly, with no interruption
+      visible to its users, when one or more of its components fail.
+  es:
+    verdict: translated
+    forms:
+      - text: tolerancia a fallos
+        usedBy: [engineers, aws]
+        article: la
+        kind: noun
+        primary: true
+      - text: tolerante a fallos
+        usedBy: [official, google]
+        kind: adjective
+        note: 'Fault-tolerant: "hacer al sistema tolerante a fallos".'
+      - text: tolerancia a errores
+        usedBy: [microsoft, aws]
+        article: la
+        kind: noun
+        note: >-
+          Microsoft's wording. AWS's regions page has it too, while its load
+          balancing page says "tolerancia a fallos".
+    definition: >-
+      Capacidad de un sistema para seguir funcionando correctamente cuando
+      falla alguno de sus componentes.
+    examples:
+      - es: Diseñamos el servicio con tolerancia a fallos desde el principio.
+        en: We designed the service with fault tolerance from the start.
+    watchOut: >-
+      The Spain-based sources read for this entry write "fallos". AWS's
+      translated documentation also has "fallas" ("aislamiento de fallas"),
+      which none of them use.
+  topics: [architecture, incident]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [sec.redundancy, sec.high-availability, sec.failover, sec.resiliency]
+  sources:
+    - label: "INCIBE y Universidad de León, Guía de buenas prácticas de ciberseguridad para redes privadas 5G"
+      url: "https://www.incibe.es/sites/default/files/2025-12/INCIBE&ULE_GuiaBuenasPracticasCiberseguridadRedesPrivadas5G.pdf"
+      found: ["hacer al sistema tolerante a fallos"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/10-antipatrones-cloud/"
+      found: ["diseñar sistemas con tolerancia a fallos"]
+      checked: 2026-11-14
+    - label: "AWS, páginas en español"
+      url: "https://aws.amazon.com/es/what-is/load-balancing/"
+      found: ["aumentan la tolerancia a fallos"]
+      checked: 2026-11-14
+    - label: "AWS, páginas en español"
+      url: "https://aws.amazon.com/es/about-aws/global-infrastructure/regions_az/"
+      found: ["lograr una mayor tolerancia a errores"]
+      checked: 2026-11-14
+    - label: "AWS, documentación en español"
+      url: "https://docs.aws.amazon.com/es_es/whitepapers/latest/aws-fault-isolation-boundaries/control-planes-and-data-planes.html"
+      found: ["aislamiento de fallas"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/load-balancing?hl=es"
+      found: ["escalables y tolerantes a fallos"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/azure/well-architected/reliability/redundancy"
+      found: ["Reforzar la tolerancia a errores"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.failover
+  en:
+    term: failover
+    definition: >-
+      Switching a service, automatically or by hand, from a failed component
+      or site to a standby one so that it can carry on. The return to the
+      original is failback.
+  es:
+    verdict: both
+    forms:
+      - text: failover
+        usedBy: [engineers]
+        article: el
+        kind: noun
+        primary: true
+        note: >-
+          The English word, masculine: "hacer el failover".
+      - text: conmutación por error
+        usedBy: [google, microsoft, aws]
+        headline: true
+        article: la
+        kind: noun
+        note: >-
+          The translation in Google's, Microsoft's and AWS's documentation.
+          Microsoft calls failback "conmutación por recuperación".
+    definition: >-
+      Paso del servicio, automático o manual, de un componente o un centro
+      que ha fallado a otro de reserva para que siga funcionando.
+    examples:
+      - es: Probamos el failover al centro de respaldo dos veces al año.
+        en: We test the failover to the backup site twice a year.
+  topics: [incident, architecture]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [sec.high-availability, sec.redundancy, sec.disaster-recovery, sec.rto]
+  sources:
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/kubernetes-multi-cluster-rhacm-glsb-haproxy/"
+      found: ["cómo hacer el failover de la app"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/azure/reliability/concept-failover-failback"
+      found: ["la conmutación por error y la conmutación por recuperación"]
+      checked: 2026-11-14
+    - label: "AWS, documentación en español"
+      url: "https://docs.aws.amazon.com/es_es/wellarchitected/latest/reliability-pillar/rel_withstand_component_failures_failover2good.html"
+      found: ["Conmutación por error a recursos en buen estado"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/learn/what-is-disaster-recovery?hl=es"
+      found: ["conmutación por error automática"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: tech.hvac
+  en:
+    term: heating, ventilation and air conditioning
+    acronym: HVAC
+    definition: >-
+      The systems that keep temperature, humidity and airflow in a facility
+      within the limits its equipment needs. In a data centre, above all the
+      cooling.
+  es:
+    verdict: translated
+    forms:
+      - text: climatización
+        usedBy: [official]
+        article: la
+        kind: noun
+        primary: true
+        note: >-
+          INCIBE writes "los equipos de climatización del CPD". The ENS
+          covers the subject under "acondicionamiento de los locales"
+          (mp.if.3), which asks for the right "condiciones de temperatura y
+          humedad".
+      - text: HVAC
+        usedBy: [official]
+        article: el
+        kind: noun
+        note: >-
+          The English acronym. INCIBE-CERT introduces it as "sistemas
+          denominados en inglés (HVAC)", next to humidity control,
+          ventilation and air conditioning.
+      - text: refrigeración
+        usedBy: [microsoft, aws]
+        article: la
+        kind: noun
+        note: >-
+          Cooling. AWS lists "equipos de ventilación y refrigeración" among
+          the parts of a data centre.
+    definition: >-
+      Sistemas que mantienen la temperatura, la humedad y la ventilación de
+      una instalación dentro de los márgenes que necesitan los equipos.
+    examples:
+      - es: Falló la climatización del CPD y tuvimos que apagar varios servidores.
+        en: The data centre's HVAC failed and we had to shut down several servers.
+  topics: [physical]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [tech.data-centre, tech.ups, sec.physical-security, sec.redundancy]
+  sources:
+    - label: "INCIBE, blog de empresas"
+      url: "https://www.incibe.es/empresas/blog/analisis-riesgos-pasos-sencillo"
+      found: ["los equipos de climatización del CPD"]
+      checked: 2026-11-14
+    - label: "INCIBE-CERT, blog"
+      url: "https://www.incibe.es/incibe-cert/blog/el-punto-el-seguridad-y-ciberseguridad-convergen"
+      found: ["Sistemas denominados en inglés (HVAC)", "control de humedad, ventilación y aire acondicionado"]
+      checked: 2026-11-14
+    - label: "Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.3"
+      url: "https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191"
+      found: ["Acondicionamiento de los locales [mp.if.3]", "Las condiciones de temperatura y humedad"]
+      checked: 2026-11-14
+    - label: "AWS, páginas en español"
+      url: "https://aws.amazon.com/es/what-is/data-center/"
+      found: ["Equipos de ventilación y refrigeración"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/azure/security/fundamentals/physical-security"
+      found: ["alimentación, refrigeración y redes independientes"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: tech.ups
+  en:
+    term: uninterruptible power supply
+    acronym: UPS
+    definition: >-
+      A battery-backed device that takes over instantly when mains power
+      fails or fluctuates, keeping equipment running long enough for a
+      generator to start or for an orderly shutdown.
+  es:
+    verdict: translated
+    acronym: SAI
+    forms:
+      - text: SAI
+        usedBy: [official, aws]
+        article: el
+        kind: noun
+        primary: true
+        plural: los SAI
+        note: >-
+          The acronym of "sistema de alimentación ininterrumpida". The ENS
+          measure behind it is "energía eléctrica" (mp.if.4), reinforced by
+          "suministro eléctrico de emergencia".
+      - text: sistema de alimentación ininterrumpida
+        usedBy: [official, aws]
+        article: el
+        kind: noun
+        note: The full name, used to introduce the acronym.
+      - text: grupo electrógeno
+        usedBy: [official]
+        article: el
+        kind: noun
+        note: >-
+          A generator set. INCIBE names it beside the SAI as a way of keeping
+          the CPD supplied with electricity.
+    say: Said as a word, "sai".
+    definition: >-
+      Equipo con baterías que sigue alimentando los sistemas cuando falla el
+      suministro eléctrico, hasta que arranca un generador o se apagan de
+      forma ordenada.
+    examples:
+      - es: Si se va la luz, el SAI mantiene los servidores encendidos unos minutos.
+        en: If the power goes, the UPS keeps the servers on for a few minutes.
+    watchOut: >-
+      The acronym changes with the language: UPS in English, SAI in Spanish.
+      INCIBE-CERT explains the English one as "conocidos como UPS por sus
+      siglas en inglés".
+  topics: [physical]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [tech.data-centre, tech.hvac, sec.redundancy, sec.physical-security]
+  sources:
+    - label: "INCIBE, blog de empresas"
+      url: "https://www.incibe.es/empresas/blog/analisis-riesgos-pasos-sencillo"
+      found: ["un sistema SAI (Sistema de Alimentación Ininterrumpida) o un grupo electrógeno"]
+      checked: 2026-11-14
+    - label: "INCIBE-CERT, blog"
+      url: "https://www.incibe.es/incibe-cert/blog/el-punto-el-seguridad-y-ciberseguridad-convergen"
+      found: ["conocidos como UPS por sus siglas en inglés"]
+      checked: 2026-11-14
+    - label: "Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.4"
+      url: "https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191"
+      found: ["Energía eléctrica [mp.if.4]", "Suministro eléctrico de emergencia"]
+      checked: 2026-11-14
+    - label: "AWS, páginas en español"
+      url: "https://aws.amazon.com/es/what-is/data-center/"
+      found: ["Sistemas de alimentación ininterrumpida (SAI)"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.physical-security
+  en:
+    term: physical security
+    definition: >-
+      The measures that protect premises, equipment and people from
+      unauthorised physical access, theft, damage and environmental hazards:
+      perimeters, access control, surveillance and environmental protection.
+  es:
+    verdict: translated
+    forms:
+      - text: seguridad física
+        usedBy: [official, eu, engineers, microsoft, aws]
+        article: la
+        kind: noun
+        primary: true
+      - text: protección de las instalaciones
+        usedBy: [official]
+        article: la
+        kind: noun
+        register: formal
+        note: >-
+          The ENS's name for it: the title of article 18 and of the group of
+          measures "protección de las instalaciones e infraestructuras"
+          (mp.if).
+      - text: seguridad lógica
+        usedBy: [official, engineers]
+        article: la
+        kind: noun
+        note: 'Logical security, its counterpart: "seguridad física y lógica".'
+    definition: >-
+      Medidas que protegen las instalaciones, los equipos y las personas
+      frente a accesos físicos no autorizados, robos, daños y riesgos
+      ambientales.
+    examples:
+      - es: La seguridad física del CPD incluye control de acceso y cámaras.
+        en: The data centre's physical security includes access control and cameras.
+  topics: [physical]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  frameworks: [ENS]
+  related: [tech.data-centre, sec.access-control, sec.defence-in-depth, tech.hvac]
+  sources:
+    - label: "INCIBE-CERT, blog"
+      url: "https://www.incibe.es/incibe-cert/blog/el-punto-el-seguridad-y-ciberseguridad-convergen"
+      found: ["El principal objetivo de la seguridad física", "seguridad lógica y la seguridad física"]
+      checked: 2026-11-14
+    - label: "Esquema Nacional de Seguridad (RD 311/2022), artículo 18 y medidas mp.if"
+      url: "https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191"
+      found: ["Artículo 18. Protección de las instalaciones", "Protección de las instalaciones e infraestructuras"]
+      checked: 2026-11-14
+    - label: "BOE, Directiva (UE) 2022/2555 (NIS 2)"
+      url: "https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81963"
+      found: ["la seguridad física y del entorno"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/comparativa-servicios-cloud-aws-azure-gcp/"
+      found: ["seguridad física y lógica"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/azure/security/fundamentals/physical-security"
+      found: ["un enfoque en capas de seguridad física"]
+      checked: 2026-11-14
+    - label: "AWS, páginas en español"
+      url: "https://aws.amazon.com/es/about-aws/global-infrastructure/regions_az/"
+      found: ["alimentación, refrigeración y seguridad física independientes"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: cloud.tenant-partitioning
+  en:
+    term: tenant partitioning
+    definition: >-
+      Keeping each tenant's resources and data apart on shared
+      infrastructure, by logical or physical means, so that one tenant can
+      neither reach nor affect another's.
+  es:
+    verdict: both
+    forms:
+      - text: aislamiento de inquilinos
+        usedBy: [microsoft, aws]
+        article: el
+        kind: noun
+        primary: true
+        note: >-
+          The heading for tenant isolation in Microsoft's and AWS's Spanish
+          documentation, where a tenant is "un inquilino". No set Spanish
+          rendering of "partitioning" itself was found.
+      - text: aislamiento entre tenants
+        article: el
+        kind: noun
+        note: >-
+          With the English "tenant" that engineers keep (see multitenancy).
+          Not confirmed in a source read for this entry.
+    definition: >-
+      Separación, lógica o física, de los recursos y los datos de cada
+      cliente en una infraestructura compartida, para que ninguno pueda
+      acceder a los de otro.
+    examples:
+      - es: El aislamiento de inquilinos impide que un cliente vea los datos de otro.
+        en: Tenant isolation prevents one customer from seeing another's data.
+  topics: [architecture]
+  technology: [cloud-general]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [cloud.multitenancy, sec.isolation, sec.network-segmentation, cloud.hypervisor]
+  sources:
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/azure/architecture/guide/multitenant/considerations/tenancy-models"
+      found: ["Aislamiento de inquilinos"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/azure/security/fundamentals/isolation-choices"
+      found: ["aislamiento a nivel de inquilino", "un inquilino es un cliente u organización"]
+      checked: 2026-11-14
+    - label: "AWS, documentación en español"
+      url: "https://docs.aws.amazon.com/es_es/whitepapers/latest/saas-architecture-fundamentals/tenant-isolation.html"
+      found: ["Esto es lo que denominamos aislamiento de inquilinos"]
+      checked: 2026-11-14
+  status: draft
+
+- id: sec.network-segmentation
+  en:
+    term: network segmentation
+    definition: >-
+      Dividing a network into smaller zones and controlling the traffic
+      allowed between them, so that a compromise or fault in one zone does not
+      spread to the rest.
+  es:
+    verdict: translated
+    forms:
+      - text: segmentación de red
+        usedBy: [official, engineers, microsoft]
+        article: la
+        kind: noun
+        primary: true
+        note: >-
+          Also written "segmentación de redes", in INCIBE-CERT posts and job
+          adverts, and "segmentación de la red" in the Spanish text of NIS 2.
+      - text: segmentar
+        usedBy: [official, engineers, microsoft]
+        kind: verb
+        note: >-
+          To segment: "segmentar una red física en múltiples redes lógicas".
+          Each zone is "un segmento de red".
+    definition: >-
+      Técnica que divide una red en segmentos más pequeños y controla el
+      tráfico entre ellos para limitar el alcance de un incidente.
+    examples:
+      - es: La segmentación de red evita que un atacante llegue a los servidores desde la red de oficina.
+        en: Network segmentation stops an attacker reaching the servers from the office network.
+    watchOut: >-
+      Spain's ENS does not name the measure "segmentación": it is "separación
+      de flujos de información en la red" (mp.com.4), and segmentación appears
+      in its reinforcements, "segmentación lógica" and "segmentación física".
+  topics: [network]
+  technology: [networking]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [sec.microsegmentation, sec.firewall, sec.isolation, cloud.vpc]
+  sources:
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["Segmentación de red", "dividir una red informática en otras redes más pequeñas"]
+      checked: 2026-11-14
+    - label: "Esquema Nacional de Seguridad (RD 311/2022), medida mp.com.4"
+      url: "https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191"
+      found: ["Separación de flujos de información en la red [mp.com.4]", "Segmentación lógica básica", "Segmentación física", "Los segmentos de red"]
+      checked: 2026-11-14
+    - label: "Directiva (UE) 2022/2555 (NIS 2), texto en español publicado en el BOE"
+      url: "https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81963"
+      found: ["la segmentación de la red"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-network-security"
+      found: ["Segmente la red", "Use la segmentación de red para aislar"]
+      checked: 2026-11-14
+    - label: "Tecnoempleo, oferta de empleo en España"
+      url: "https://www.tecnoempleo.com/senior-devops-platform-engineer-michael-page/terraform-ci-cd/rf-86731885c24533f35a43"
+      found: ["segmentación de red"]
+      checked: 2026-11-14
+    - label: "INCIBE-CERT, blog"
+      url: "https://www.incibe.es/incibe-cert/blog/iot-protocolos-comunicacion-ataques-y-recomendaciones"
+      found: ["Segmentación de redes"]
+      checked: 2026-11-14
+    - label: "Tecnoempleo, oferta de empleo en España"
+      url: "https://www.tecnoempleo.com/arquitecto-ciberseguridad-gmv/siem-togaf/rf-ec69138032da6352ac43"
+      found: ["segmentación de redes"]
+      checked: 2026-11-14
+    - label: "INCIBE y Universidad de León, Guía de buenas prácticas de ciberseguridad en redes privadas 5G"
+      url: "https://www.incibe.es/sites/default/files/2025-12/INCIBE&ULE_GuiaBuenasPracticasCiberseguridadRedesPrivadas5G.pdf"
+      found: ["segmentar una red física en múltiples redes lógicas"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/virtualizacion-contenedores-kubernetes-despliegue-networking/"
+      found: ["segmentar el tráfico de red"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-container-security"
+      found: ["segmentar redes"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.microsegmentation
+  en:
+    term: microsegmentation
+    definition: >-
+      Segmentation applied at the level of individual workloads or
+      applications, with a policy for each, so that traffic inside a network
+      zone is restricted as tightly as traffic entering it.
+  es:
+    verdict: translated
+    forms:
+      - text: microsegmentación
+        usedBy: [official, engineers, google, microsoft]
+        article: la
+        kind: noun
+        primary: true
+        note: >-
+          Written as one word, without a hyphen. Often mentioned together
+          with "movimiento lateral" (lateral movement), which it is meant to
+          contain.
+    definition: >-
+      Segmentación aplicada a cada carga de trabajo o aplicación, con
+      políticas propias, para limitar el movimiento lateral dentro de la red.
+    examples:
+      - es: Con la microsegmentación, cada carga de trabajo solo habla con los servicios que necesita.
+        en: With microsegmentation, each workload only talks to the services it needs.
+  topics: [network]
+  technology: [networking, cloud-general]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [sec.network-segmentation, sec.zero-trust, sec.security-group, sec.firewall]
+  sources:
+    - label: "INCIBE, blog para empresas"
+      url: "https://www.incibe.es/empresas/blog/beneficios-implantar-modelo-zero-trust-tu-empresa"
+      found: ["la microsegmentación"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/microsegmentacion-la-respuesta-decisiva-frente-al-movimiento-lateral-de-los-atacantes"
+      found: ["la microsegmentación se convierte en la barrera decisiva", "movimiento lateral"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/learn/what-is-cloud-network-security?hl=es"
+      found: ["La microsegmentación ayuda a contener el movimiento lateral"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-information-security-infosec"
+      found: ["La microsegmentación divide los centros de datos"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.security-group
+  en:
+    term: security group
+    definition: >-
+      A named set of rules, acting as a virtual firewall, that controls the
+      inbound and outbound traffic of the cloud resources it is attached to.
+  es:
+    verdict: both
+    forms:
+      - text: grupo de seguridad
+        usedBy: [official, microsoft, aws]
+        article: el
+        kind: noun
+        primary: true
+        plural: los grupos de seguridad
+        note: >-
+          AWS's wording in its Spanish documentation. Azure's equivalent is
+          "grupo de seguridad de red", which keeps the English acronym NSG.
+      - text: security group
+        usedBy: [engineers]
+        headline: true
+        article: el
+        kind: noun
+        plural: los security groups
+        note: >-
+          Engineers working with AWS often keep the English name: "es
+          importante que el security group tenga abiertos los puertos".
+    definition: >-
+      Conjunto de reglas que actúa como cortafuegos virtual y controla el
+      tráfico de entrada y de salida de los recursos en la nube a los que se
+      asocia.
+    examples:
+      - es: Hay que añadir una regla al grupo de seguridad para permitir el puerto 443.
+        en: A rule needs to be added to the security group to allow port 443.
+    watchOut: >-
+      In Microsoft's identity documentation "grupo de seguridad" is something
+      else: a directory group whose members are given permissions. The
+      network control is "grupo de seguridad de red" there.
+  topics: [network]
+  technology: [aws, azure, networking]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [sec.firewall, cloud.vpc, sec.microsegmentation, sec.network-segmentation]
+  sources:
+    - label: "AWS, documentación en español"
+      url: "https://docs.aws.amazon.com/es_es/vpc/latest/userguide/vpc-security-groups.html"
+      found: ["Ejemplo de grupo de seguridad", "mediante grupos de seguridad"]
+      checked: 2026-11-14
+    - label: "Real Decreto 145/2026, curso de especialización en Recursos y servicios en la nube (BOE)"
+      url: "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-4673"
+      found: ["cortafuegos y/o grupos de seguridad"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/azure/security/fundamentals/isolation-choices"
+      found: ["grupos de seguridad de red (NSG)"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/azure/container-apps/storage-mounts"
+      found: ["grupo de seguridad de red (NSG)"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/entra/id-governance/entitlement-management-access-package-incompatible"
+      found: ["miembro de un grupo de seguridad"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/desplegar-microservicios-amazon/"
+      found: ["es importante que el security group tenga abiertos los puertos"]
+      checked: 2026-11-14
+    - label: "Tecnoempleo, oferta de empleo en España"
+      url: "https://www.tecnoempleo.com/platform-engineer-cloud-ai-infra-michael-page/aws-iam/rf-f1cc1297a268d30b6e45"
+      found: ["security groups"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.ids
+  en:
+    term: intrusion detection system
+    acronym: IDS
+    definition: >-
+      A system that monitors network traffic or host activity for signs of
+      attack or policy violation and raises alerts, without itself blocking
+      the activity.
+  es:
+    verdict: both
+    acronym: IDS
+    forms:
+      - text: IDS
+        usedBy: [official, engineers]
+        article: el
+        kind: noun
+        primary: true
+        note: >-
+          The English acronym is the working term, masculine like "el
+          sistema" and often paired with its sibling: "IDS/IPS". Host and
+          network variants are HIDS and NIDS.
+      - text: sistema de detección de intrusos
+        usedBy: [official, google]
+        headline: true
+        article: el
+        kind: noun
+        note: >-
+          The expansion in INCIBE's glossary and on Google Cloud's pages for
+          Spain.
+      - text: sistema de detección de intrusiones
+        usedBy: [official, microsoft]
+        article: el
+        kind: noun
+        note: >-
+          The other expansion, with intrusiones (intrusions) in place of
+          intrusos (intruders). INCIBE-CERT and Microsoft use it; the ENS
+          measure is "detección de intrusión" (op.mon.1).
+    say: Said letter by letter, "i-de-ese".
+    definition: >-
+      Sistema que vigila el tráfico de red o la actividad de un equipo para
+      detectar accesos no autorizados y genera alertas, sin bloquearlos.
+    examples:
+      - es: El IDS ha generado una alerta por tráfico sospechoso en la red interna.
+        en: The IDS has raised an alert for suspicious traffic on the internal network.
+    watchOut: >-
+      Two expansions coexist, with intrusos and with intrusiones, even within
+      INCIBE's own publications. The acronym avoids the choice.
+  topics: [detection, network]
+  technology: [networking]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [sec.ips, sec.firewall, sec.log, sec.traffic-inspection]
+  sources:
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["Un sistema de detección de intrusos (o IDS de sus siglas en inglés"]
+      checked: 2026-11-14
+    - label: "INCIBE-CERT, blog"
+      url: "https://www.incibe.es/incibe-cert/blog/bastionado-sistemas-el-caso-linux"
+      found: ["un sistema de detección de intrusiones en host (HIDS) o en red (NIDS)"]
+      checked: 2026-11-14
+    - label: "INCIBE, Guía de gestión de crisis"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_gestion_de_crisis.pdf"
+      found: ["IDS/IPS"]
+      checked: 2026-11-14
+    - label: "Esquema Nacional de Seguridad (RD 311/2022), medida op.mon.1"
+      url: "https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191"
+      found: ["Detección de intrusión [op.mon.1]"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/security/compliance/ens?hl=es"
+      found: ["Cloud IDS (sistema de detección de intrusos de Cloud)"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-data-security"
+      found: ["Sistemas de detección de intrusiones"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/techbiz/podcast-security-foundations/"
+      found: ["IDS (detección de intrusiones)"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.ips
+  en:
+    term: intrusion prevention system
+    acronym: IPS
+    definition: >-
+      A system placed in the traffic path that detects attacks in the same
+      way as an IDS and also blocks or drops the offending traffic.
+  es:
+    verdict: both
+    acronym: IPS
+    forms:
+      - text: IPS
+        usedBy: [official, engineers]
+        article: el
+        kind: noun
+        primary: true
+        note: >-
+          The English acronym is the working term, masculine: "el IPS".
+          Combined products are IDS/IPS or IDPS, "sistemas de detección y
+          prevención de intrusiones" in Microsoft's wording.
+      - text: sistema de prevención de intrusiones
+        usedBy: [official, aws]
+        headline: true
+        article: el
+        kind: noun
+        note: The expansion in INCIBE's glossary and in AWS's Spanish pages.
+      - text: sistema de prevención de intrusos
+        usedBy: [official]
+        article: el
+        kind: noun
+        note: >-
+          The other expansion, with intrusos (intruders), used in a 2026
+          royal decree on cloud training. Google Cloud also writes
+          "detección y prevención de intrusos".
+    say: Said letter by letter, "i-pe-ese".
+    definition: >-
+      Sistema situado en el camino del tráfico que detecta los ataques y,
+      además, los bloquea.
+    examples:
+      - es: El IPS ha bloqueado varios intentos de explotar esa vulnerabilidad.
+        en: The IPS has blocked several attempts to exploit that vulnerability.
+    watchOut: >-
+      Do not misread "IPs": engineers write "las IPs" for IP addresses
+      (feminine plural), which differs from "el IPS" only by the lower-case s.
+  topics: [network, detection]
+  technology: [networking]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [sec.ids, sec.firewall, sec.traffic-inspection, sec.dos]
+  sources:
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["Siglas de Intrusion Prevention System (sistema de prevención de intrusiones)"]
+      checked: 2026-11-14
+    - label: "INCIBE, Protocolos y seguridad de red en infraestructuras SCI"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/incibe_protocolos_seguridad_red_sci.pdf"
+      found: ["el IPS Tofino"]
+      checked: 2026-11-14
+    - label: "Real Decreto 145/2026, curso de especialización en Recursos y servicios en la nube (BOE)"
+      url: "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-4673"
+      found: ["IPS (sistema de prevención de intrusos)"]
+      checked: 2026-11-14
+    - label: "AWS, páginas en español"
+      url: "https://aws.amazon.com/es/network-firewall/features/"
+      found: ["Sistema de prevención de intrusiones (IPS)"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-cloud-security"
+      found: ["sistemas de detección y prevención de intrusiones (IDPS)"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/security/products/firewall?hl=es"
+      found: ["servicio de detección y prevención de intrusos"]
+      checked: 2026-11-14
+    - label: "Tecnoempleo, oferta de empleo en España"
+      url: "https://www.tecnoempleo.com/administrador-a-de-seguridad-perimetral-100-en-rem/checkpoint-firewall/rf-8ac4uf852x6076dee64b"
+      found: ["firewalls, IPS y VPN"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/montar-nube-la-ayuda-aws-cloudformation/"
+      found: ["las IPs dentro del CIDR", "rangos de IPs"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.bastion-host
+  en:
+    term: bastion host
+    definition: >-
+      A hardened server exposed at the edge of a network that acts as the
+      single controlled entry point for administrative access to systems on a
+      private network. Also called a jump host or jump server.
+  es:
+    verdict: both
+    forms:
+      - text: host bastión
+        usedBy: [microsoft, aws]
+        article: el
+        kind: noun
+        primary: true
+        note: >-
+          The wording in AWS's and Microsoft's Spanish documentation,
+          shortened to "el bastión" once introduced. Azure and Oracle sell
+          managed services under the English name Bastion.
+      - text: servidor de salto
+        usedBy: [official, engineers]
+        headline: true
+        article: el
+        kind: noun
+        note: >-
+          "Jump server". INCIBE-CERT's term, and the one Paradigma Digital
+          uses to gloss the English: un servidor "de salto" (Bastion host).
+      - text: bastion host
+        usedBy: [official, engineers]
+        article: el
+        kind: noun
+        note: The English term, also used as it stands, in an INCIBE guide among others.
+    definition: >-
+      Servidor reforzado y expuesto en el borde de la red que sirve de único
+      punto de entrada para administrar los sistemas de una red privada.
+    examples:
+      - es: Solo se puede entrar por SSH a las máquinas privadas a través del host bastión.
+        en: You can only SSH into the private machines through the bastion host.
+    watchOut: >-
+      Do not confuse it with "bastionado", the Spanish for hardening: "un
+      servidor bastionado" is a hardened server, whatever its role.
+  topics: [network, hardening]
+  technology: [networking, cloud-general]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [sec.firewall, sec.vpn, sec.dmz, sec.least-privilege]
+  sources:
+    - label: "AWS, documentación en español"
+      url: "https://docs.aws.amazon.com/es_es/mwaa/latest/userguide/tutorials-private-network-bastion.html"
+      found: ["mediante un host bastión de Linux", "grupo de seguridad del bastión"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/azure/bastion/tutorial-create-host-portal"
+      found: ["cuando se crea un host bastión", "Implementación de Azure Bastion"]
+      checked: 2026-11-14
+    - label: "INCIBE-CERT, blog"
+      url: "https://www.incibe.es/incibe-cert/blog/sistemas-pam-un-escudo-para-la-proteccion-de-accesos"
+      found: ["servidor de salto"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/montar-nube-la-ayuda-aws-cloudformation/"
+      found: ["servidor \"de salto\" (Bastion host)"]
+      checked: 2026-11-14
+    - label: "INCIBE y Universidad de León, Guía de buenas prácticas de ciberseguridad en redes privadas 5G"
+      url: "https://www.incibe.es/sites/default/files/2025-12/INCIBE&ULE_GuiaBuenasPracticasCiberseguridadRedesPrivadas5G.pdf"
+      found: ["se debe implementar un \"bastion host\""]
+      checked: 2026-11-14
+    - label: "Oracle España"
+      url: "https://www.oracle.com/es/security/cloud-security/"
+      found: ["Oracle Cloud Infrastructure Bastion"]
+      checked: 2026-11-14
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["Bastionado"]
+      checked: 2026-11-14
+    - label: "Tecnoempleo, oferta de empleo en España"
+      url: "https://www.tecnoempleo.com/administrador-sistemas-linux-rhel-vmware-baoss/intel-red-hat-satellite/rf-59231cd0e2ca33f1e04c"
+      found: ["bastionado (hardening)"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.honeypot
+  en:
+    term: honeypot
+    definition: >-
+      A decoy system or service, deliberately made attractive to attackers,
+      that has no legitimate use, so that any interaction with it reveals an
+      attack and can be studied.
+  es:
+    verdict: english-kept
+    forms:
+      - text: honeypot
+        usedBy: [official, engineers]
+        article: el
+        kind: noun
+        primary: true
+        plural: los honeypots
+        note: >-
+          Kept in English by INCIBE and by practitioners: "un honeypot es una
+          herramienta de seguridad".
+      - text: señuelo
+        usedBy: [official]
+        article: el
+        kind: noun
+        note: >-
+          "Decoy". INCIBE's glossary gives it as the Spanish synonym, and
+          INCIBE-CERT speaks of "sistemas señuelo". In INCIBE's own posts it
+          explains the idea, while honeypot names the tool.
+    definition: >-
+      Sistema señuelo, atractivo para un atacante y sin uso legítimo, que
+      permite detectar los ataques y estudiar cómo actúa quien los realiza.
+    examples:
+      - es: Hemos puesto un honeypot en la red para detectar movimientos laterales.
+        en: We have put a honeypot on the network to detect lateral movement.
+    watchOut: >-
+      Señuelo is also the ordinary word for a lure, including the bait in a
+      phishing or social engineering attack, so on its own it does not
+      necessarily mean a honeypot.
+  topics: [detection, threat]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [sec.ids, sec.sandbox, sec.threat]
+  sources:
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["Honeypot", "Sinónimo: Señuelo"]
+      checked: 2026-11-14
+    - label: "INCIBE, blog para empresas"
+      url: "https://www.incibe.es/empresas/blog/honeypot-una-trampa-para-los-ciberdelincuentes"
+      found: ["Un honeypot es una herramienta de seguridad", "(señuelo)"]
+      checked: 2026-11-14
+    - label: "INCIBE-CERT, blog"
+      url: "https://www.incibe.es/incibe-cert/blog/iot-protocolos-comunicacion-ataques-y-recomendaciones"
+      found: ["Sistemas señuelo: elementos como honeypots o canary tokens sirven como señuelos"]
+      checked: 2026-11-14
+    - label: "El Lado del Mal"
+      url: "https://www.elladodelmal.com/2016/06/configurar-un-honeypot-en-tu-aplicacon.html"
+      found: ["Configurar un HoneyPot en tu aplicación web", "para montar el honeypot"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-information-security-infosec"
+      found: ["a través de un señuelo"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.vpn
+  en:
+    term: virtual private network
+    acronym: VPN
+    definition: >-
+      An encrypted, authenticated tunnel that extends a private network
+      across an untrusted one, connecting a remote user or another site as if
+      they were on the local network.
+  es:
+    verdict: both
+    acronym: VPN
+    forms:
+      - text: VPN
+        usedBy: [official, engineers, google, microsoft]
+        article: la
+        kind: noun
+        primary: true
+        note: >-
+          The English acronym is the everyday word, feminine because "red" is
+          feminine: "una VPN". The written plural varies: "las VPN" in
+          INCIBE's and Microsoft's texts, "las VPNs" on Google's pages and
+          "VPNs" in job adverts.
+      - text: red privada virtual
+        usedBy: [official, engineers, google, microsoft]
+        headline: true
+        article: la
+        kind: noun
+        plural: las redes privadas virtuales
+        note: >-
+          The full name, used to introduce the acronym and in formal texts:
+          the ENS requires "redes privadas virtuales cifradas".
+    say: Said letter by letter, "uve-pe-ene".
+    definition: >-
+      Túnel cifrado y autenticado que extiende una red privada a través de
+      una red pública como Internet.
+    examples:
+      - es: Para acceder a los servidores desde casa hay que conectarse a la VPN.
+        en: To reach the servers from home you have to connect to the VPN.
+  topics: [network]
+  technology: [networking]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [sec.tls, sec.data-in-transit, sec.zero-trust, sec.bastion-host]
+  sources:
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["Una red privada virtual, también conocida por sus siglas VPN", "Sinónimo: VPN"]
+      checked: 2026-11-14
+    - label: "Esquema Nacional de Seguridad (RD 311/2022), medidas mp.com"
+      url: "https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191"
+      found: ["Se emplearán redes privadas virtuales cifradas"]
+      checked: 2026-11-14
+    - label: "INCIBE, blog para empresas"
+      url: "https://www.incibe.es/empresas/blog/ztna-tu-conexion-remota-mas-segura"
+      found: ["utilizan una VPN (red privada virtual)", "Las VPN también crean túneles seguros"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog: glosario de términos de cloud computing"
+      url: "https://telefonicatech.com/blog/glosario-terminos-cloud-computing"
+      found: ["Virtual Private Network o Red Privada Virtual"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/guerra-de-nubes-aws-azure-gcp/"
+      found: ["sin necesidad de configurar una VPN"]
+      checked: 2026-11-14
+    - label: "Tecnoempleo, oferta de empleo en España"
+      url: "https://www.tecnoempleo.com/platform-engineer-cloud-ai-infra-michael-page/aws-iam/rf-f1cc1297a268d30b6e45"
+      found: ["VPNs, IAM, security groups"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/learn/what-is-hybrid-cloud?hl=es"
+      found: ["Redes privadas virtuales (VPN): las VPNs crean un túnel seguro"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/azure/security/fundamentals/encryption-overview"
+      found: ["Las VPN de sitio a sitio"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-network-security"
+      found: ["redes privadas virtuales (VPN)"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.dmz
+  en:
+    term: demilitarized zone
+    acronym: DMZ
+    definition: >-
+      A network segment placed between an untrusted network, usually the
+      Internet, and the internal network, holding the services that must be
+      reachable from outside so that their compromise does not expose
+      internal systems.
+  es:
+    verdict: both
+    acronym: DMZ
+    forms:
+      - text: DMZ
+        usedBy: [official, engineers, aws]
+        article: la
+        kind: noun
+        primary: true
+        note: >-
+          The English acronym is the working term, feminine after "zona": "la
+          DMZ", "una DMZ".
+      - text: zona desmilitarizada
+        usedBy: [official, microsoft]
+        headline: true
+        article: la
+        kind: noun
+        note: >-
+          The full name in Spanish, given to explain the acronym.
+      - text: red perimetral
+        usedBy: [microsoft]
+        article: la
+        kind: noun
+        note: >-
+          "Perimeter network", Microsoft's name for it in its Spanish
+          documentation: "red perimetral (también conocido como DMZ, zona
+          desmilitarizada y subred filtrada)".
+    say: Said letter by letter, "de-eme-zeta".
+    definition: >-
+      Segmento de red situado entre Internet y la red interna, donde se
+      colocan los servicios que deben ser accesibles desde el exterior.
+    examples:
+      - es: El servidor web está en la DMZ y la base de datos en la red interna.
+        en: The web server is in the DMZ and the database is on the internal network.
+  topics: [network, architecture]
+  technology: [networking]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [sec.firewall, sec.network-segmentation, sec.bastion-host, sec.defence-in-depth]
+  sources:
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["en español, zona desmilitarizada", "una DMZ permite las conexiones"]
+      checked: 2026-11-14
+    - label: "Esquema Nacional de Seguridad (RD 311/2022)"
+      url: "https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191"
+      found: ["cortafuegos, DMZ, etc."]
+      checked: 2026-11-14
+    - label: "El Lado del Mal"
+      url: "https://www.elladodelmal.com/2012/06/explorando-la-dmz-de-una-red-1-de-3.html"
+      found: ["Explorando la DMZ de una red"]
+      checked: 2026-11-14
+    - label: "AWS, documentación en español"
+      url: "https://docs.aws.amazon.com/es_es/config/latest/developerguide/operational-best-practices-for-pci-dss.html"
+      found: ["segregados de la DMZ"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/azure/cloud-adoption-framework/ready/azure-best-practices/perimeter-networks"
+      found: ["red perimetral (también conocido como DMZ , zona desmilitarizada y subred filtrada )"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.packet-capture
+  en:
+    term: packet capture
+    definition: >-
+      Recording the packets that cross a network interface or link, in full
+      or in part, for troubleshooting, intrusion analysis or forensic
+      evidence.
+  es:
+    verdict: translated
+    forms:
+      - text: captura de paquetes
+        usedBy: [official, engineers, google, microsoft]
+        article: la
+        kind: noun
+        primary: true
+        plural: las capturas de paquetes
+        note: >-
+          Names both the activity and its result: "inspeccionan capturas de
+          paquetes". The verb is capturar.
+      - text: captura de tráfico
+        usedBy: [official, engineers]
+        article: la
+        kind: noun
+        note: >-
+          "Traffic capture", used with the same meaning: "activar la captura
+          de tráfico".
+      - text: sniffer
+        usedBy: [official, engineers]
+        article: el
+        kind: noun
+        note: >-
+          The tool that captures the traffic, kept in English. INCIBE's
+          glossary has an entry for it.
+    definition: >-
+      Registro de los paquetes que pasan por una interfaz o un enlace de red
+      para diagnosticar problemas, analizar intrusiones u obtener evidencias.
+    examples:
+      - es: Necesitamos una captura de paquetes del servidor para analizar el incidente.
+        en: We need a packet capture from the server to analyse the incident.
+  topics: [network, detection]
+  technology: [networking]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [sec.traffic-inspection, sec.ids, sec.mitm, sec.log]
+  sources:
+    - label: "INCIBE-CERT, blog"
+      url: "https://www.incibe.es/incibe-cert/blog/big-data-ia-y-analitica-predictiva-del-dato-inteligencia-ciberseguridad"
+      found: ["la captura de paquetes completos"]
+      checked: 2026-11-14
+    - label: "INCIBE, Protocolos y seguridad de red en infraestructuras SCI"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/incibe_protocolos_seguridad_red_sci.pdf"
+      found: ["la captura de tráfico", "un sniffer de red"]
+      checked: 2026-11-14
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["Un sniffer es un programa que monitoriza la información que circula por la red"]
+      checked: 2026-11-14
+    - label: "El Lado del Mal"
+      url: "https://www.elladodelmal.com/2008/08/atacar-wpawpa2-psk-parte-ii-de-iv.html"
+      found: ["activar la captura de tráfico", "activar la captura de paquetes", "Capturar el handshake"]
+      checked: 2026-11-14
+    - label: "El Lado del Mal"
+      url: "https://www.elladodelmal.com/2013/06/que-podria-capturar-la-operacion.html"
+      found: ["interceptado por un sniffer"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/discover/what-is-incident-response?hl=es"
+      found: ["inspeccionan capturas de paquetes"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/azure/network-watcher/packet-capture-overview"
+      found: ["Introducción a la captura de paquetes"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.identification
+  en:
+    term: identification
+    definition: >-
+      The step in which a subject claims an identity, for example by
+      presenting a user name or other identifier, before that claim is
+      verified by authentication.
+  es:
+    verdict: translated
+    forms:
+      - text: identificación
+        usedBy: [official, engineers]
+        article: la
+        kind: noun
+        primary: true
+        note: >-
+          INCIBE's glossary defines it as telling another person or system
+          who we are. It is also the name of the first access control measure
+          in the ENS (op.acc.1).
+      - text: identificador
+        usedBy: [official]
+        article: el
+        kind: noun
+        note: >-
+          The identifier itself. The ENS requires each account to be tied to
+          "un identificador único".
+    definition: >-
+      Acción por la que un usuario o un sistema declara quién es, antes de
+      que esa identidad se compruebe mediante la autenticación.
+    examples:
+      - es: La identificación se hace con el nombre de usuario y la autenticación con la contraseña.
+        en: Identification is done with the user name and authentication with the password.
+  topics: [iam, authn]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [sec.authentication, sec.authorization, sec.iam, sec.accountability]
+  sources:
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["Identificación", "Acción mediante la cual le decimos a otra persona o sistema quiénes somos"]
+      checked: 2026-11-14
+    - label: "Esquema Nacional de Seguridad (RD 311/2022), medida op.acc.1"
+      url: "https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191"
+      found: ["Identificación [op.acc.1]", "estará asociada a un identificador único"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/diferencias-cifrado-hashing-codificacion-ofuscacion"
+      found: ["la identificación de entidades, mecanismos de autenticación y de control de acceso"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.authentication
+  en:
+    term: authentication
+    definition: >-
+      Verifying that a subject is who or what it claims to be, using one or
+      more factors such as something it knows, holds or is.
+  es:
+    verdict: translated
+    forms:
+      - text: autenticación
+        usedBy: [official, eu, engineers, google, microsoft, aws]
+        article: la
+        kind: noun
+        primary: true
+        note: >-
+          The form in the ENS, in the Spanish text of NIS 2 and in Google's,
+          Microsoft's and AWS's documentation.
+      - text: autentificación
+        usedBy: [official, engineers]
+        article: la
+        kind: noun
+        note: >-
+          A variant with the same meaning. INCIBE's glossary lists it as a
+          synonym of autenticación, and it turns up in some INCIBE guides and
+          practitioner posts: "segundo factor de autentificación".
+      - text: autenticar
+        usedBy: [official, microsoft]
+        kind: verb
+        note: >-
+          To authenticate: "autenticar al usuario". The variant verb
+          "autentificar" also appears in INCIBE documents.
+    definition: >-
+      Comprobación de que un usuario, un proceso o un dispositivo es quien
+      dice ser.
+    examples:
+      - es: La autenticación falla porque el certificado ha caducado.
+        en: Authentication is failing because the certificate has expired.
+    watchOut: >-
+      Both autenticación and autentificación exist and mean the same thing.
+      Write autenticación, the form used in Spanish law and vendor
+      documentation; expect to meet autentificación when reading.
+  topics: [authn]
+  technology: [identity-platforms]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [sec.identification, sec.authorization, sec.mfa, sec.iam]
+  sources:
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["Autenticación", "Sinónimo: Autentificación", "mediante la autentificación y el cifrado"]
+      checked: 2026-11-14
+    - label: "Esquema Nacional de Seguridad (RD 311/2022), glosario"
+      url: "https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191"
+      found: ["autenticación: ratificación de la identidad de un usuario, proceso o dispositivo", "para autenticar al usuario"]
+      checked: 2026-11-14
+    - label: "Directiva (UE) 2022/2555 (NIS 2), texto en español publicado en el BOE"
+      url: "https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81963"
+      found: ["soluciones de autenticación multifactorial o de autenticación continua"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/entra/identity-platform/authentication-vs-authorization"
+      found: ["Autenticación frente a autorización", "autenticar y autorizar a los usuarios"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/learn/what-is-cloud-security?hl=es"
+      found: ["la autenticación multifactor"]
+      checked: 2026-11-14
+    - label: "AWS Well-Architected Framework, es_ES"
+      url: "https://docs.aws.amazon.com/es_es/wellarchitected/latest/framework/sec-iam.html"
+      found: ["autenticación multifactor (MFA)"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/cloud-adoption-framework-azure-metodologias/"
+      found: ["requisitos de autenticación y autorización"]
+      checked: 2026-11-14
+    - label: "INCIBE, Guía de implantación y buenas prácticas de DNSSEC"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/incibe_guia_de_implantacion_y_buenas_practicas_de_dnssec.pdf"
+      found: ["segundo factor de autentificación"]
+      checked: 2026-11-14
+    - label: "INCIBE, Taxonomía de soluciones de ciberseguridad"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/taxonomia_ciberseguridad.pdf"
+      found: ["permiten autentificar"]
+      checked: 2026-11-14
+    - label: "El Lado del Mal"
+      url: "https://www.elladodelmal.com/2013/06/que-podria-capturar-la-operacion.html"
+      found: ["tokens de autentificación"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.authorization
+  en:
+    term: authorization
+    definition: >-
+      Determining which actions an authenticated subject may perform on which
+      resources, and granting or denying each request accordingly.
+  es:
+    verdict: translated
+    forms:
+      - text: autorización
+        usedBy: [official, engineers, microsoft]
+        article: la
+        kind: noun
+        primary: true
+        note: >-
+          Usually paired with its sibling: "autenticación y autorización".
+          Microsoft notes that the English short forms AuthN and AuthZ are
+          used too.
+      - text: autorizar
+        usedBy: [microsoft]
+        kind: verb
+        note: 'To authorise: "autenticar y autorizar a los usuarios".'
+      - text: derechos de acceso
+        usedBy: [official]
+        article: los
+        kind: noun
+        note: >-
+          Access rights, which is what authorisation grants. The ENS measure
+          is "proceso de gestión de derechos de acceso" (op.acc.4).
+    definition: >-
+      Proceso que determina qué acciones puede realizar un usuario ya
+      autenticado sobre cada recurso.
+    examples:
+      - es: El usuario se autentica bien, pero falla la autorización porque le falta un rol.
+        en: The user authenticates fine, but authorisation fails because a role is missing.
+    watchOut: >-
+      In the ENS, "proceso de autorización" (org.4) is a different thing: the
+      formal sign-off needed before equipment, applications or links go into
+      service. And as in English, "sin autorización" just means without
+      permission.
+  topics: [authz]
+  technology: [identity-platforms]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [sec.authentication, sec.access-control, sec.least-privilege, sec.identification]
+  sources:
+    - label: "Esquema Nacional de Seguridad (RD 311/2022)"
+      url: "https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191"
+      found: ["Autorización y control de los accesos", "Proceso de gestión de derechos de acceso [op.acc.4]", "Proceso de autorización [org.4]", "Se establecerá un proceso formal de autorizaciones"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/entra/identity-platform/authentication-vs-authorization"
+      found: ["Autenticación frente a autorización", "A veces se acorta a AuthN", "la autorización se acorta a AuthZ", "autenticar y autorizar a los usuarios"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/cloud-adoption-framework-azure-metodologias/"
+      found: ["requisitos de autenticación y autorización"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/diferencias-cifrado-hashing-codificacion-ofuscacion"
+      found: ["sin autorización"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.mfa
+  en:
+    term: multi-factor authentication
+    acronym: MFA
+    definition: >-
+      Authentication that requires two or more independent factors from
+      different categories (something known, something held, something
+      inherent) before access is granted.
+  es:
+    verdict: both
+    acronym: MFA
+    forms:
+      - text: autenticación multifactor
+        usedBy: [official, engineers, google, microsoft, aws]
+        article: la
+        kind: noun
+        primary: true
+        note: >-
+          The term defined in the ENS and used by INCIBE, the AEPD and the
+          vendors, usually followed by "(MFA)".
+      - text: MFA
+        usedBy: [engineers, google, microsoft, aws]
+        headline: true
+        article: la
+        kind: noun
+        note: >-
+          The English acronym, feminine in AWS's and Microsoft's texts: "la
+          MFA". Job adverts list it bare: "SSO y MFA".
+      - text: doble factor de autenticación
+        usedBy: [official]
+        article: el
+        kind: noun
+        note: >-
+          Two-factor authentication specifically, with the acronym 2FA.
+          INCIBE's glossary files 2FA under this name and the ENS uses it
+          too. Often shortened to "doble factor".
+      - text: autenticación multifactorial
+        usedBy: [eu]
+        article: la
+        kind: noun
+        register: formal
+        note: The wording of the Spanish text of the NIS 2 Directive.
+    say: Said letter by letter, "eme-efe-a".
+    definition: >-
+      Autenticación que exige dos o más factores independientes antes de
+      conceder el acceso.
+    examples:
+      - es: La autenticación multifactor es obligatoria para todas las cuentas de administrador.
+        en: Multi-factor authentication is mandatory for all administrator accounts.
+  topics: [authn]
+  technology: [identity-platforms]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [sec.authentication, sec.iam, sec.zero-trust, sec.account-hijacking]
+  sources:
+    - label: "Esquema Nacional de Seguridad (RD 311/2022), glosario y medidas op.acc"
+      url: "https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191"
+      found: ["autenticación multifactor: exigencia de dos o más factores de autenticación", "se requerirá un doble factor de autenticación", "Refuerzo R8-Doble factor"]
+      checked: 2026-11-14
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["Doble factor de autenticación", "2FA"]
+      checked: 2026-11-14
+    - label: "INCIBE, blog para empresas"
+      url: "https://www.incibe.es/empresas/blog/ztna-tu-conexion-remota-mas-segura"
+      found: ["autenticación multifactor"]
+      checked: 2026-11-14
+    - label: "INCIBE, blog para empresas"
+      url: "https://www.incibe.es/empresas/blog/recomendaciones-gestion-identidades-eficiente"
+      found: ["Doble factor en los sistemas críticos"]
+      checked: 2026-11-14
+    - label: "AEPD, Guía de privacidad desde el diseño"
+      url: "https://www.aepd.es/guias/guia-privacidad-desde-diseno.pdf"
+      found: ["autenticación multifactor"]
+      checked: 2026-11-14
+    - label: "Directiva (UE) 2022/2555 (NIS 2), texto en español publicado en el BOE"
+      url: "https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81963"
+      found: ["autenticación multifactorial"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/guerra-de-nubes-aws-azure-gcp/"
+      found: ["autenticación multifactor"]
+      checked: 2026-11-14
+    - label: "Tecnoempleo, oferta de empleo en España"
+      url: "https://www.tecnoempleo.com/365-expert-ingeniero-workplace-michael-page/microsoft-365-intune/rf-6e3e18b8c256230b8549"
+      found: ["SSO y MFA"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/discover/what-is-virtual-desktop-infrastructure-vdi?hl=es"
+      found: ["Implementa la autenticación multifactor (MFA)"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-multifactor-authentication-mfa"
+      found: ["¿Qué es la autenticación multifactor (MFA)?"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-identity-access-management-iam"
+      found: ["la MFA es más segura"]
+      checked: 2026-11-14
+    - label: "AWS, documentación en español"
+      url: "https://docs.aws.amazon.com/es_es/config/latest/developerguide/operational-best-practices-for-pci-dss.html"
+      found: ["la MFA esté habilitada"]
+      checked: 2026-11-14
+    - label: "AWS Well-Architected Framework, es_ES"
+      url: "https://docs.aws.amazon.com/es_es/wellarchitected/latest/framework/sec-iam.html"
+      found: ["autenticación multifactor (MFA)"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.business-continuity
+  en:
+    term: business continuity
+    definition: >-
+      An organisation's capability to keep delivering its critical products
+      and services at an acceptable level during and after a disruption.
+  es:
+    verdict: translated
+    forms:
+      - text: continuidad de negocio
+        usedBy: [official, engineers]
+        article: la
+        kind: noun
+        primary: true
+        note: >-
+          The wording INCIBE mostly uses, also found at Telefónica Tech and
+          in job adverts.
+      - text: continuidad del negocio
+        usedBy: [official, engineers, google]
+        article: la
+        kind: noun
+        note: >-
+          The same term with the article, as in the Spanish title of ISO
+          22301: "sistema de gestión de la continuidad del negocio". The two
+          are used interchangeably, sometimes in one document.
+      - text: continuidad empresarial
+        usedBy: [google, microsoft]
+        article: la
+        kind: noun
+        note: >-
+          Microsoft's wording in its Spanish documentation; Google Cloud
+          uses it as well.
+      - text: continuidad de la actividad
+        usedBy: [official, eu]
+        article: la
+        kind: noun
+        register: formal
+        note: >-
+          The wording of legal texts: DORA in Spanish and article 26 of the
+          ENS. NIS 2 says "continuidad de las actividades", and the ENS
+          groups its measures under "continuidad del servicio" (op.cont).
+    definition: >-
+      Capacidad de una organización para seguir prestando sus servicios
+      críticos a un nivel aceptable durante una interrupción y después de
+      ella.
+    examples:
+      - es: La continuidad de negocio no es solo un tema de TI; afecta a toda la empresa.
+        en: Business continuity is not just an IT matter; it affects the whole company.
+  topics: [incident, grc]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  frameworks: [ISO-22301]
+  related: [sec.bcp, sec.disaster-recovery, grc.bia, sec.resiliency]
+  sources:
+    - label: "INCIBE, Guía de gestión de crisis"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_gestion_de_crisis.pdf"
+      found: ["planes de continuidad de negocio", "Sistema de gestión de la continuidad del negocio"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/plan-continuidad-negocio-diseno-implementacion"
+      found: ["las estrategias de continuidad de negocio"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/copias-seguridad-continuidad-negocio-ciberresiliencia"
+      found: ["continuidad del negocio"]
+      checked: 2026-11-14
+    - label: "Tecnoempleo, oferta de empleo en España"
+      url: "https://www.tecnoempleo.com/analista-seguridad-la-informacion-gmv/iso-iec-27001-ens/rf-533a1110520603e86148"
+      found: ["resiliencia operativa y continuidad de negocio"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/learn/what-is-disaster-recovery?hl=es"
+      found: ["un subconjunto de continuidad empresarial", "Asegura la continuidad del negocio"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/azure/reliability/concept-business-continuity-high-availability-disaster-recovery"
+      found: ["¿Qué son la continuidad empresarial, la alta disponibilidad y la recuperación ante desastres?"]
+      checked: 2026-11-14
+    - label: "Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE"
+      url: "https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81962"
+      found: ["planes de continuidad de la actividad"]
+      checked: 2026-11-14
+    - label: "Esquema Nacional de Seguridad (RD 311/2022), artículo 26 y medidas op.cont"
+      url: "https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191"
+      found: ["Artículo 26. Continuidad de la actividad", "Continuidad del servicio [op.cont]"]
+      checked: 2026-11-14
+    - label: "Directiva (UE) 2022/2555 (NIS 2), texto en español publicado en el BOE"
+      url: "https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81963"
+      found: ["la continuidad de las actividades"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.bcp
+  en:
+    term: business continuity plan
+    acronym: BCP
+    definition: >-
+      The documented procedures and resources an organisation uses to keep
+      its critical processes running, and to restore them, when a disruption
+      occurs.
+  es:
+    verdict: both
+    acronym: PCN
+    forms:
+      - text: plan de continuidad de negocio
+        usedBy: [official, engineers]
+        article: el
+        kind: noun
+        primary: true
+        plural: los planes de continuidad de negocio
+        note: The full term, at INCIBE and in practitioner writing.
+      - text: PCN
+        usedBy: [official]
+        article: el
+        kind: noun
+        note: >-
+          The Spanish acronym, used in INCIBE's crisis management guide next
+          to DRP for the disaster recovery plan.
+      - text: BCP
+        usedBy: [official]
+        article: el
+        kind: noun
+        note: The English acronym, which INCIBE's glossary gives as a synonym.
+      - text: plan de continuidad
+        usedBy: [official]
+        article: el
+        kind: noun
+        register: formal
+        note: >-
+          The short name, and the name of the ENS measure (op.cont.2).
+          DORA's Spanish text speaks of "planes de continuidad de la
+          actividad".
+    definition: >-
+      Conjunto de procedimientos y recursos con los que una organización
+      mantiene y recupera sus procesos críticos cuando se produce una
+      interrupción.
+    examples:
+      - es: El plan de continuidad de negocio se revisa y se prueba una vez al año.
+        en: The business continuity plan is reviewed and tested once a year.
+    watchOut: >-
+      "Plan de contingencia" is not a synonym in INCIBE's usage: it is the
+      part that restores the IT systems supporting the critical processes,
+      one of the plans inside the plan de continuidad.
+  topics: [incident, grc]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  frameworks: [ISO-22301, ENS]
+  related: [sec.business-continuity, sec.disaster-recovery, grc.bia, sec.tabletop-exercise]
+  sources:
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["Un Plan de Continuidad de Negocio es un conjunto formado por planes de actuación", "Sinónimo: BCP", "Plan de contingencia", "considerados críticos en el Plan de Continuidad de Negocio"]
+      checked: 2026-11-14
+    - label: "INCIBE, Guía de gestión de crisis"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_gestion_de_crisis.pdf"
+      found: ["plan de continuidad de negocio (PCN)", "PCN y DRP"]
+      checked: 2026-11-14
+    - label: "INCIBE, blog para empresas"
+      url: "https://www.incibe.es/empresas/blog/desastre-no-te-detenga-elabora-plan-continuidad-negocio"
+      found: ["elabora un plan de continuidad de negocio"]
+      checked: 2026-11-14
+    - label: "Esquema Nacional de Seguridad (RD 311/2022), medida op.cont.2"
+      url: "https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191"
+      found: ["Plan de continuidad [op.cont.2]"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/plan-continuidad-negocio-diseno-implementacion"
+      found: ["Un plan de continuidad de negocio articula"]
+      checked: 2026-11-14
+    - label: "Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE"
+      url: "https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81962"
+      found: ["planes de continuidad de la actividad"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.rto
+  en:
+    term: recovery time objective
+    acronym: RTO
+    definition: >-
+      The maximum acceptable time between the interruption of a service and
+      its restoration to an agreed level.
+  es:
+    verdict: both
+    acronym: RTO
+    forms:
+      - text: RTO
+        usedBy: [official, engineers, google, microsoft, aws]
+        article: el
+        kind: noun
+        primary: true
+        note: >-
+          The English acronym is the working term, masculine: "el RTO y el
+          RPO". INCIBE and Telefónica Tech often gloss it with the English
+          words, "Recovery Time Objective", rather than a Spanish expansion.
+      - text: objetivo de tiempo de recuperación
+        usedBy: [eu, engineers, google, microsoft, aws]
+        headline: true
+        article: el
+        kind: noun
+        note: >-
+          The expansion in Google's, Microsoft's and AWS's documentation and
+          at Telefónica Tech. DORA's Spanish text uses the same word order:
+          "objetivos de tiempo de recuperación".
+      - text: tiempo de recuperación objetivo
+        usedBy: [official]
+        article: el
+        kind: noun
+        note: The word order in INCIBE's crisis management guide.
+    say: Said letter by letter, "erre-te-o".
+    definition: >-
+      Tiempo máximo aceptable entre la interrupción de un servicio y su
+      restablecimiento.
+    examples:
+      - es: El RTO de este servicio es de cuatro horas.
+        en: The RTO for this service is four hours.
+    watchOut: >-
+      The Spanish expansion is not settled: the vendors and DORA put
+      "objetivo" first, INCIBE puts it last. Say RTO.
+  topics: [incident]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [sec.rpo, sec.disaster-recovery, grc.bia, grc.sla]
+  sources:
+    - label: "INCIBE, Guía de gestión de crisis"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_gestion_de_crisis.pdf"
+      found: ["RTO: tiempo de recuperación objetivo"]
+      checked: 2026-11-14
+    - label: "INCIBE, blog para empresas"
+      url: "https://www.incibe.es/empresas/blog/fases-plan-continuidad-negocio"
+      found: ["RTO ( Recovery Time Objective )"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/plan-continuidad-negocio-diseno-implementacion"
+      found: ["el RTO y el RPO", "El Recovery Time Objective (RTO)"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/copias-seguridad-continuidad-negocio-ciberresiliencia"
+      found: ["objetivo de tiempo de recuperación (RTO)"]
+      checked: 2026-11-14
+    - label: "Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE"
+      url: "https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81962"
+      found: ["objetivos de tiempo de recuperación y punto de recuperación"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/learn/what-is-disaster-recovery?hl=es"
+      found: ["Objetivo de tiempo de recuperación (RTO)"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/azure/reliability/concept-business-continuity-high-availability-disaster-recovery"
+      found: ["El objetivo de tiempo de recuperación (RTO)", "El RTO también se mide en unidades de tiempo"]
+      checked: 2026-11-14
+    - label: "AWS Well-Architected Framework, es_ES"
+      url: "https://docs.aws.amazon.com/es_es/wellarchitected/latest/reliability-pillar/disaster-recovery-dr-objectives.html"
+      found: ["Objetivo de tiempo de recuperación (RTO)", "El RTO es la máxima demora aceptable"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.rpo
+  en:
+    term: recovery point objective
+    acronym: RPO
+    definition: >-
+      The maximum acceptable amount of data loss after a disruption,
+      expressed as the period of time before the event from which data may
+      not be recoverable.
+  es:
+    verdict: both
+    acronym: RPO
+    forms:
+      - text: RPO
+        usedBy: [official, engineers, google, microsoft, aws]
+        article: el
+        kind: noun
+        primary: true
+        note: >-
+          The English acronym is the working term, masculine: "el RPO". It is
+          usually named together with the RTO.
+      - text: objetivo de punto de recuperación
+        usedBy: [engineers, google, microsoft, aws]
+        headline: true
+        article: el
+        kind: noun
+        note: >-
+          The expansion in Google's, Microsoft's and AWS's documentation and
+          at Telefónica Tech. DORA's Spanish text follows the same order:
+          "objetivos de tiempo y punto de recuperación".
+      - text: punto de recuperación objetivo
+        usedBy: [official]
+        article: el
+        kind: noun
+        note: >-
+          The word order in INCIBE's crisis management guide, which
+          describes the RPO as "grado de dependencia de la actualidad de los
+          datos".
+    say: Said letter by letter, "erre-pe-o".
+    definition: >-
+      Pérdida máxima de datos aceptable tras una interrupción, medida como
+      un periodo de tiempo.
+    examples:
+      - es: Con una copia de seguridad cada hora, el RPO es de una hora.
+        en: With a backup every hour, the RPO is one hour.
+    watchOut: >-
+      The Spanish expansion is not settled: the vendors put "objetivo"
+      first, INCIBE puts it last. Say RPO.
+  topics: [incident]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [sec.rto, sec.backup, sec.disaster-recovery, grc.bia]
+  sources:
+    - label: "INCIBE, Guía de gestión de crisis"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_gestion_de_crisis.pdf"
+      found: ["RPO: grado de dependencia de la actualidad de los datos (punto de recuperación objetivo)"]
+      checked: 2026-11-14
+    - label: "INCIBE, blog para empresas"
+      url: "https://www.incibe.es/empresas/blog/fases-plan-continuidad-negocio"
+      found: ["RPO ( Recovery Point Objetive )"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/plan-continuidad-negocio-diseno-implementacion"
+      found: ["el RTO y el RPO", "El Recovery Point Objective (RPO)"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/copias-seguridad-continuidad-negocio-ciberresiliencia"
+      found: ["objetivo de punto de recuperación (RPO)"]
+      checked: 2026-11-14
+    - label: "Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE"
+      url: "https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81962"
+      found: ["objetivos de tiempo y punto de recuperación"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/learn/what-is-disaster-recovery?hl=es"
+      found: ["Objetivo de punto de recuperación (RPO)", "El RPO ayuda a definir la frecuencia de las copias de seguridad"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/azure/reliability/concept-business-continuity-high-availability-disaster-recovery"
+      found: ["El objetivo de punto de recuperación (RPO)"]
+      checked: 2026-11-14
+    - label: "AWS Well-Architected Framework, es_ES"
+      url: "https://docs.aws.amazon.com/es_es/wellarchitected/latest/reliability-pillar/disaster-recovery-dr-objectives.html"
+      found: ["Objetivo de punto de recuperación (RPO)"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.tabletop-exercise
+  en:
+    term: tabletop exercise
+    definition: >-
+      A discussion-based exercise in which the people named in a plan talk
+      through their response to a simulated scenario, testing roles,
+      decisions and procedures without touching production systems.
+  es:
+    verdict: both
+    forms:
+      - text: tabletop
+        usedBy: [official]
+        article: el
+        kind: noun
+        primary: true
+        note: >-
+          INCIBE keeps the English word, alone ("un tabletop") or after
+          simulacro ("un simulacro tabletop"), and describes it as an
+          executive-level exercise run from a theoretical point of view.
+      - text: ejercicio de simulación
+        usedBy: [google, microsoft, aws]
+        headline: true
+        article: el
+        kind: noun
+        plural: los ejercicios de simulación
+        note: >-
+          How Google Cloud's and AWS's Spanish pages render "tabletop
+          exercise". Microsoft adds the table: "ejercicios de simulación en
+          mesa".
+      - text: simulacro
+        usedBy: [official, google, microsoft, aws]
+        article: el
+        kind: noun
+        note: >-
+          The general word for a drill or rehearsal, hands-on ones included:
+          "simulacro de DR". INCIBE treats the tabletop as one type of
+          simulacro.
+    definition: >-
+      Ejercicio teórico en el que los responsables de un plan repasan cómo
+      responderían ante un escenario simulado, sin afectar a los sistemas
+      reales.
+    examples:
+      - es: La semana que viene hacemos un tabletop con la dirección sobre un ataque de ransomware.
+        en: Next week we are running a tabletop with senior management on a ransomware attack.
+    watchOut: >-
+      AWS's Spanish documentation also translates "tabletop exercises" as
+      "ejercicios prácticos", which reads as hands-on exercises, the
+      opposite of what is meant.
+  topics: [incident, assessment]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [sec.bcp, sec.incident-response, sec.disaster-recovery, sec.business-continuity]
+  sources:
+    - label: "INCIBE, Guía de gestión de crisis"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_gestion_de_crisis.pdf"
+      found: ["Tabletop: se trata de un ejercicio, de carácter ejecutivo", "desde un punto de vista teórico", "un simulacro, en concreto, un tabletop", "simulacro tabletop"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/discover/incident-response-plan-template?hl=es"
+      found: ["las lecciones aprendidas de los ejercicios de simulación"]
+      checked: 2026-11-14
+    - label: "Google Cloud, original en inglés de la misma página"
+      url: "https://cloud.google.com/discover/incident-response-plan-template?hl=en"
+      found: ["lessons learned from tabletop exercises"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/discover/what-is-incident-response?hl=es"
+      found: ["al menos una vez al año con un simulacro"]
+      checked: 2026-11-14
+    - label: "AWS Well-Architected Framework, es_ES"
+      url: "https://docs.aws.amazon.com/es_es/wellarchitected/latest/security-pillar/sec_incident_response_run_game_days.html"
+      found: ["Ejercicios prácticos: el enfoque de los ejercicios prácticos consiste en llevar a cabo una sesión de debate", "el ejercicio de simulación se centra en los procesos, las personas y la colaboración", "simulacros de ataques"]
+      checked: 2026-11-14
+    - label: "AWS Well-Architected Framework, original en inglés de la misma página"
+      url: "https://docs.aws.amazon.com/wellarchitected/latest/security-pillar/sec_incident_response_run_game_days.html"
+      found: ["Tabletop exercises: The tabletop approach to simulations is a discussion-based session", "the tabletop exercise focuses on processes, people, and collaboration"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/security/operations/incident-response-planning"
+      found: ["Ejercicios de simulación en mesa"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/azure/well-architected/reliability/disaster-recovery"
+      found: ["Simulacro de DR"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.recovery-service-level
+  en:
+    term: recovery service level
+    acronym: RSL
+    definition: >-
+      The proportion of normal production service, usually a percentage of
+      capacity or functionality, that must be restored for a recovery to
+      count as meeting its objectives.
+  es:
+    verdict: translated
+    forms:
+      - text: nivel mínimo de recuperación del servicio
+        usedBy: [official]
+        article: el
+        kind: noun
+        primary: true
+        plural: los niveles mínimos de recuperación del servicio
+        note: >-
+          INCIBE's name for the closest concept in its continuity guidance,
+          which it labels ROL (revised operating level): the minimum level an
+          activity must reach to be considered recovered.
+    definition: >-
+      Parte del servicio normal, normalmente un porcentaje, que debe
+      restablecerse para considerar recuperada una actividad tras un
+      desastre.
+    examples:
+      - es: El nivel mínimo de recuperación del servicio es el 50 % de la capacidad normal.
+        en: The recovery service level is 50% of normal capacity.
+    watchOut: >-
+      RSL is CCSP exam vocabulary. No Spanish source using the acronym, or a
+      settled Spanish expansion of it, was found: explain the idea rather
+      than rely on the acronym. INCIBE's ROL is a near equivalent, not the
+      same term.
+  topics: [incident]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [sec.rto, sec.rpo, sec.disaster-recovery, grc.sla]
+  sources:
+    - label: "INCIBE, blog para empresas"
+      url: "https://www.incibe.es/empresas/blog/fases-plan-continuidad-negocio"
+      found: ["Niveles mínimos de recuperación del servicio o ROL ( Revised Operating Level )", "el nivel mínimo de recuperación que debe tener una actividad para que se considere recuperada"]
+      checked: 2026-11-14
+    - label: "INCIBE, Guía de gestión de crisis"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_gestion_de_crisis.pdf"
+      found: ["ROL: niveles mínimos de recuperación del servicio"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/plan-continuidad-negocio-diseno-implementacion"
+      found: ["No todos los sistemas requieren los mismos niveles de recuperación"]
+      checked: 2026-11-14
+  status: draft
+
+- id: sec.threat
+  en:
+    term: threat
+    definition: >-
+      Any circumstance or actor with the potential to harm an asset by
+      exploiting a vulnerability, whether deliberately, by accident or through
+      natural causes.
+  es:
+    verdict: translated
+    forms:
+      - text: amenaza
+        usedBy: [official, eu, engineers, google]
+        article: la
+        kind: noun
+        primary: true
+      - text: ciberamenaza
+        usedBy: [eu, google]
+        article: la
+        kind: noun
+        note: >-
+          A cyber threat. One of the terms the NIS 2 Directive defines.
+    definition: >-
+      Circunstancia o agente que puede causar daño a un activo aprovechando
+      una vulnerabilidad.
+    examples:
+      - es: La mayor amenaza para este servicio es el robo de credenciales.
+        en: The biggest threat to this service is credential theft.
+  topics: [threat]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [sec.vulnerability, sec.threat-modelling, sec.risk-assessment, sec.apt]
+  sources:
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["Amenaza", "Una amenaza puede tener causas naturales"]
+      checked: 2026-11-14
+    - label: "Directiva (UE) 2022/2555 (NIS 2), texto en español publicado en el BOE"
+      url: "https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81963"
+      found: ["«ciberamenaza»", "mayor nivel de amenazas"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/backup-empresarial-continuidad-negocio-proteger-datos"
+      found: ["Los ciberataques son una amenaza constante"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/discover/what-is-incident-response?hl=es"
+      found: ["ciberamenazas activas", "actividades de amenazas activas"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.vulnerability
+  en:
+    term: vulnerability
+    definition: >-
+      A weakness in a system, its configuration or its processes that a threat
+      can exploit to compromise confidentiality, integrity or availability.
+  es:
+    verdict: translated
+    forms:
+      - text: vulnerabilidad
+        usedBy: [official, eu, engineers]
+        article: la
+        kind: noun
+        primary: true
+      - text: agujero de seguridad
+        usedBy: [official]
+        article: el
+        kind: noun
+        note: >-
+          A security hole. INCIBE's glossary gives it as a synonym.
+      - text: fallo de seguridad
+        usedBy: [engineers]
+        article: el
+        kind: noun
+        note: >-
+          A security flaw. Seen in practitioner writing alongside
+          vulnerabilidad.
+    definition: >-
+      Debilidad de un sistema, de su configuración o de sus procesos que una
+      amenaza puede aprovechar.
+    examples:
+      - es: Esta vulnerabilidad afecta a todas las versiones anteriores a la 2.4.
+        en: This vulnerability affects all versions before 2.4.
+    watchOut: >-
+      A zero-day keeps its English name: INCIBE's glossary lists it as
+      "Zero-day" and writes "vulnerabilidades de tipo Zero Day".
+  topics: [vulnmgmt, threat]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [sec.threat, sec.exploit, sec.patch-management, sec.risk-assessment]
+  sources:
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["Vulnerabilidad", "Sinónimo: Agujero de seguridad", "Zero-day", "vulnerabilidades de tipo Zero Day"]
+      checked: 2026-11-14
+    - label: "Directiva (UE) 2022/2555 (NIS 2), texto en español publicado en el BOE"
+      url: "https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81963"
+      found: ["«vulnerabilidad»: deficiencia, susceptibilidad o fallo"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/zerologon-parchea-o-muere"
+      found: ["explotar la vulnerabilidad"]
+      checked: 2026-11-14
+    - label: "El Lado del Mal"
+      url: "https://www.elladodelmal.com/2017/04/hackear-windows-7-2008-r2-con.html"
+      found: ["un fallo de seguridad en el protocolo SMB"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.exploit
+  en:
+    term: exploit
+    definition: >-
+      Code or a technique that takes advantage of a specific vulnerability to
+      make a system behave in a way its owner did not intend, typically to
+      gain access or raise privileges.
+  es:
+    verdict: english-kept
+    forms:
+      - text: exploit
+        usedBy: [official, engineers]
+        article: el
+        kind: noun
+        primary: true
+        plural: los exploits
+        note: >-
+          Kept in English. INCIBE's glossary lists it under this name, and the
+          incident taxonomy of RD 43/2021 has "ataque empleando exploit
+          desconocido".
+      - text: explotar
+        usedBy: [official, engineers]
+        kind: verb
+        note: >-
+          To exploit: "explotar una vulnerabilidad". The noun is
+          "explotación": "explotación de vulnerabilidades conocidas".
+    definition: >-
+      Código o técnica que aprovecha una vulnerabilidad concreta para provocar
+      un comportamiento no previsto en un sistema.
+    examples:
+      - es: Ya hay un exploit público para esta vulnerabilidad.
+        en: There is already a public exploit for this vulnerability.
+    watchOut: >-
+      Microsoft's Spanish security page does not keep the word: "exploit kit"
+      becomes "kit de vulnerabilidad de seguridad", which reads as "security
+      vulnerability kit". Explotar also means to operate or run something:
+      the EU Data Act says "explotar la infraestructura".
+  topics: [threat, vulnmgmt]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [sec.vulnerability, sec.patch-management, sec.malware, sec.apt]
+  sources:
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["Exploit", "hace uso de exploits"]
+      checked: 2026-11-14
+    - label: "Real Decreto 43/2021, de seguridad de las redes y sistemas de información (BOE)"
+      url: "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2021-1192"
+      found: ["Ataque empleando exploit desconocido", "explotar una vulnerabilidad", "Explotación de vulnerabilidades conocidas"]
+      checked: 2026-11-14
+    - label: "El Lado del Mal"
+      url: "https://www.elladodelmal.com/2017/04/hackear-windows-7-2008-r2-con.html"
+      found: ["Eternalblue es el exploit que nos permitirá", "entre los exploits que se publicaron", "Explotar Eternalblue"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-information-security-infosec"
+      found: ["Kit de vulnerabilidad de seguridad"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, en-US (the same page in English)"
+      url: "https://www.microsoft.com/en-us/security/business/security-101/what-is-information-security-infosec"
+      found: ["Exploit kit"]
+      checked: 2026-11-14
+    - label: "BOE, Reglamento (UE) 2023/2854 (Reglamento de Datos)"
+      url: "https://www.boe.es/buscar/doc.php?id=DOUE-L-2023-81895"
+      found: ["explotar la infraestructura"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.attack-surface
+  en:
+    term: attack surface
+    definition: >-
+      The sum of the points at which an attacker can try to get into a system
+      or take data out of it: exposed interfaces, services, identities and
+      permissions. In the cloud it includes the management APIs.
+  es:
+    verdict: translated
+    forms:
+      - text: superficie de ataque
+        usedBy: [official, eu, engineers, microsoft]
+        article: la
+        kind: noun
+        primary: true
+      - text: superficie de exposición
+        usedBy: [official, engineers]
+        article: la
+        kind: noun
+        note: >-
+          Used in the ENS, alongside "superficie de ataque", and in the
+          hardening principle "mínima superficie de exposición".
+    definition: >-
+      Conjunto de puntos por los que un atacante puede intentar entrar en un
+      sistema o extraer datos de él.
+    examples:
+      - es: Cerrar los puertos que no se usan reduce la superficie de ataque.
+        en: Closing unused ports reduces the attack surface.
+  topics: [threat, hardening]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [sec.threat, sec.vulnerability, sec.security-baseline, sec.least-privilege]
+  sources:
+    - label: "Directiva (UE) 2022/2555 (NIS 2), texto en español publicado en el BOE"
+      url: "https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81963"
+      found: ["la superficie de ataque sigue aumentando"]
+      checked: 2026-11-14
+    - label: "Esquema Nacional de Seguridad (RD 311/2022)"
+      url: "https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191"
+      found: ["reducción de la superficie de exposición", "reducir la superficie de ataque"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, Techiepedia"
+      url: "https://telefonicatech.com/techiepedia/superficie-de-ataque"
+      found: ["¿Qué es la superficie de ataque?"]
+      checked: 2026-11-14
+    - label: "El Lado del Mal"
+      url: "https://www.elladodelmal.com/2014/05/no-esperes-ser-hackeado-piensa-como-un.html"
+      found: ["Mínima Superficie de Exposición"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-container-security"
+      found: ["aumentan la superficie de ataque"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.dos
+  en:
+    term: denial of service
+    acronym: DoS
+    definition: >-
+      An attack that makes a service unavailable to its legitimate users by
+      exhausting its resources or triggering a fault. When the traffic comes
+      from many sources at once it is a distributed denial of service (DDoS).
+  es:
+    verdict: translated
+    acronym: DoS
+    forms:
+      - text: denegación de servicio
+        usedBy: [official, eu, engineers, microsoft]
+        article: la
+        kind: noun
+        primary: true
+        note: >-
+          In full, "un ataque de denegación de servicio (DoS)": the English
+          acronym is kept.
+      - text: denegación de servicio distribuida
+        usedBy: [official]
+        article: la
+        kind: noun
+        note: >-
+          Distributed denial of service, DDoS. INCIBE's glossary makes the
+          adjective agree with denegación; Microsoft's page writes
+          "denegación de servicio distribuido".
+    definition: >-
+      Ataque que deja un servicio fuera de funcionamiento para sus usuarios
+      legítimos al agotar sus recursos.
+    examples:
+      - es: Ayer sufrimos un ataque de denegación de servicio contra la web.
+        en: Yesterday we suffered a denial-of-service attack against the website.
+  topics: [threat, network]
+  technology: [networking]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [sec.availability, sec.firewall, cloud.cdn, cloud.load-balancer]
+  sources:
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["Denegación de servicio", "Sinónimo: Denial Of Service", "Denegación de servicio distribuida"]
+      checked: 2026-11-14
+    - label: "Reglamento (UE) 2016/679 (RGPD), texto en español publicado en el BOE"
+      url: "https://www.boe.es/buscar/doc.php?id=DOUE-L-2016-80807"
+      found: ["ataques de «denegación de servicio»"]
+      checked: 2026-11-14
+    - label: "El Lado del Mal"
+      url: "https://www.elladodelmal.com/2025/11/echogram-bypassing-guardrails-con-flip.html"
+      found: ["ataque de Denegación de Servicio (DoS)"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-network-security"
+      found: ["denegación de servicio (DoS)", "denegación de servicio distribuido (DDoS)"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.mitm
+  en:
+    term: man-in-the-middle attack
+    acronym: MITM
+    definition: >-
+      An attack in which the adversary sits between two communicating parties
+      and reads or alters the traffic without either of them noticing. Also
+      called an on-path attack.
+  es:
+    verdict: both
+    acronym: MitM
+    forms:
+      - text: ataque man-in-the-middle
+        usedBy: [official, engineers]
+        article: el
+        kind: noun
+        primary: true
+        note: >-
+          The English name is kept, after "ataque" or "ataque de tipo".
+          INCIBE's glossary lists it as "Man-in-the-Middle"; the acronym is
+          written MitM.
+      - text: ataque de intermediario
+        usedBy: [official, microsoft]
+        headline: true
+        article: el
+        kind: noun
+        note: >-
+          The translation used by INCIBE-CERT's blog, with the English in
+          brackets after it, and by Microsoft.
+      - text: hombre en el medio
+        usedBy: [official]
+        article: el
+        kind: noun
+        note: >-
+          The literal translation: "ataques de hombre en el medio" in an
+          INCIBE guide, and "hombre en medio" as a synonym in its glossary.
+    definition: >-
+      Ataque en el que alguien se sitúa entre dos partes que se comunican
+      para leer o modificar el tráfico sin que lo noten.
+    examples:
+      - es: Sin TLS, la conexión es vulnerable a un ataque man-in-the-middle.
+        en: Without TLS, the connection is vulnerable to a man-in-the-middle attack.
+  topics: [threat, network]
+  technology: [networking]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [sec.tls, sec.data-in-transit, sec.digital-certificate, sec.encryption]
+  sources:
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["Man-in-the-Middle", "Sinónimo: Hombre en medio"]
+      checked: 2026-11-14
+    - label: "INCIBE-CERT, blog"
+      url: "https://www.incibe.es/incibe-cert/blog/seguridad-en-arquitectura-de-microservicios"
+      found: ["ataques de intermediario (man-in-the-middle)"]
+      checked: 2026-11-14
+    - label: "INCIBE, Guía de implantación y buenas prácticas de DNSSEC"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/incibe_guia_de_implantacion_y_buenas_practicas_de_dnssec.pdf"
+      found: ["Man-in-the-Middle (MitM)", "ataques de hombre en el medio"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/ataque-a-los-sistemas-de-soporte-de-otka-ficheros-har-y-tokens-de-sesion"
+      found: ["ataques man-in-the-middle"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-email-encryption"
+      found: ["Ataques de intermediario"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.vm-escape
+  en:
+    term: VM escape
+    definition: >-
+      An attack in which code running inside a virtual machine breaks out of
+      its isolation to reach the hypervisor, the host or other tenants'
+      virtual machines.
+  es:
+    verdict: both
+    forms:
+      - text: escape de máquina virtual
+        article: el
+        kind: noun
+        primary: true
+        note: >-
+          No source checked names the attack with this phrase: INCIBE-CERT's
+          advisories describe it instead, as a flaw that lets an attacker
+          "ejecutar código en el hipervisor desde la propia máquina virtual".
+          INCIBE-CERT and Microsoft do use the noun for containers: "escapes
+          de contenedores", "escape del contenedor".
+      - text: VM escape
+        headline: true
+        article: el
+        kind: noun
+        note: The English name. Not found in the sources checked.
+      - text: escapar
+        usedBy: [official, microsoft]
+        kind: verb
+        note: >-
+          The verb in descriptions of container escapes: "escapar del entorno
+          aislado del contenedor", "escapar de un contenedor".
+    definition: >-
+      Ataque en el que el código que se ejecuta dentro de una máquina virtual
+      rompe el aislamiento y llega al hipervisor o a otras máquinas
+      virtuales.
+    examples:
+      - es: Esta vulnerabilidad del hipervisor permite un escape de máquina virtual.
+        en: This hypervisor vulnerability allows a VM escape.
+  topics: [threat]
+  technology: [cloud-general]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [cloud.hypervisor, cloud.virtual-machine, sec.isolation, cloud.multitenancy]
+  sources:
+    - label: "INCIBE-CERT, aviso: Leaky Vessels, vulnerabilidades en componentes de contenedores"
+      url: "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/leaky-vessels-multiples-vulnerabilidades-en-componentes-de-contenedores"
+      found: ["escapes de contenedores", "escapar del entorno aislado del contenedor"]
+      checked: 2026-11-14
+    - label: "INCIBE-CERT, aviso: Múltiples vulnerabilidades en productos VMware"
+      url: "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-productos-vmware-16"
+      found: ["ejecutar código en el hipervisor desde la propia máquina virtual"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-container-security"
+      found: ["Escape del contenedor", "escapar de un contenedor"]
+      checked: 2026-11-14
+  status: draft
+
+- id: sec.vm-sprawl
+  en:
+    term: VM sprawl
+    definition: >-
+      The uncontrolled growth in the number of virtual machines, so that some
+      are left without an owner, unpatched and unmonitored, wasting resources
+      and widening the attack surface.
+  es:
+    verdict: both
+    forms:
+      - text: proliferación de máquinas virtuales
+        article: la
+        kind: noun
+        primary: true
+        note: >-
+          A descriptive translation: no source checked uses a fixed Spanish
+          term. INCIBE describes the problem as "excesivas máquinas
+          virtuales".
+      - text: VM sprawl
+        headline: true
+        article: el
+        kind: noun
+        note: The English name. Not found in the Spanish sources checked.
+    definition: >-
+      Crecimiento sin control del número de máquinas virtuales, de modo que
+      algunas quedan sin responsable, sin parches y sin supervisión.
+    examples:
+      - es: >-
+          Para evitar la proliferación de máquinas virtuales, cada una debe
+          tener un responsable y una fecha de caducidad.
+        en: >-
+          To avoid VM sprawl, each virtual machine must have an owner and an
+          expiry date.
+    watchOut: >-
+      Microsoft's Spanish documentation translates "sprawl" as "expansión"
+      ("la expansión de servicios no autorizados") and keeps "proliferación"
+      for "proliferation". The machines left behind are "máquinas virtuales
+      inactivas" or "recursos huérfanos".
+  topics: [asset]
+  technology: [cloud-general]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [cloud.virtual-machine, cloud.virtualization, sec.attack-surface, sec.patch-management]
+  sources:
+    - label: "INCIBE, blog para empresas"
+      url: "https://www.incibe.es/empresas/blog/virtualizacion-puede-ser-solucion-tus-problemas"
+      found: ["Excesivas máquinas virtuales", "El número de VMs puede aumentar considerablemente"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/security/benchmark/azure/mcsb-v2-asset-management"
+      found: ["la expansión de servicios no autorizados", "proliferación de TI en sombra", "máquinas virtuales inactivas", "recursos huérfanos"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, en-US (the same page in English)"
+      url: "https://learn.microsoft.com/en-us/security/benchmark/azure/mcsb-v2-asset-management"
+      found: ["unauthorized service sprawl", "shadow IT proliferation"]
+      checked: 2026-11-14
+  status: draft
+
+- id: sec.misconfiguration
+  en:
+    term: misconfiguration
+    definition: >-
+      A setting that leaves a system less secure than intended, such as a
+      publicly readable storage bucket, an over-permissive role or a default
+      password. It is one of the commonest causes of data exposure in the
+      cloud.
+  es:
+    verdict: translated
+    forms:
+      - text: mala configuración
+        usedBy: [official, engineers]
+        article: la
+        kind: noun
+        primary: true
+        plural: las malas configuraciones
+        note: >-
+          The name of an incident type in the taxonomy of RD 43/2021.
+          Telefónica Tech's blog uses it for exposed S3 buckets.
+      - text: error de configuración
+        usedBy: [google, microsoft]
+        article: el
+        kind: noun
+        note: >-
+          The mistake itself. Google and Microsoft write it in the plural:
+          "errores de configuración".
+      - text: configuración incorrecta
+        usedBy: [official, engineers, microsoft]
+        article: la
+        kind: noun
+        note: >-
+          RD 43/2021 uses it to explain "mala configuración". Google's page
+          says "configuración errónea".
+    definition: >-
+      Ajuste que deja un sistema menos protegido de lo previsto, como un
+      bucket de almacenamiento con acceso público.
+    examples:
+      - es: La fuga de datos se debió a una mala configuración del bucket.
+        en: The data leak was caused by a misconfiguration of the bucket.
+  topics: [hardening, threat]
+  technology: [cloud-general]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [sec.security-baseline, sec.vulnerability, sec.attack-surface, sec.data-breach]
+  sources:
+    - label: "Real Decreto 43/2021, de seguridad de las redes y sistemas de información (BOE)"
+      url: "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2021-1192"
+      found: ["Mala configuración", "Configuración incorrecta del software"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/almacenamiento-aws-s3-ataques-denial-of-wallet"
+      found: ["mala configuración de sus accesos", "malas configuraciones"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/adopcion-cloud-publica-infraestructura-como-codigo"
+      found: ["una configuración incorrecta también puede automatizarse"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/learn/what-is-cloud-security?hl=es"
+      found: ["errores de configuración", "Una configuración errónea de la seguridad en la nube"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-cloud-security"
+      found: ["errores de configuración", "configuraciones incorrectas"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.insider-threat
+  en:
+    term: insider threat
+    definition: >-
+      The risk that someone with legitimate access (an employee, a contractor
+      or a provider's administrator) misuses it, whether maliciously or
+      through negligence.
+  es:
+    verdict: both
+    forms:
+      - text: amenaza interna
+        usedBy: [official, google, microsoft]
+        article: la
+        kind: noun
+        primary: true
+      - text: insider
+        usedBy: [official, google]
+        headline: true
+        article: el
+        kind: noun
+        plural: los insiders
+        note: >-
+          The person, kept in English. INCIBE defines "insider" as someone
+          with legitimate access who misuses it, and separates "insiders
+          maliciosos y negligentes". Google's page writes "amenazas de
+          insiders".
+      - text: riesgo interno
+        usedBy: [microsoft]
+        article: el
+        kind: noun
+        note: Microsoft's wording for "insider risk".
+    definition: >-
+      Riesgo de que una persona con acceso legítimo lo use mal, de forma
+      intencionada o por descuido.
+    examples:
+      - es: El control de accesos limita el daño de una amenaza interna.
+        en: Access control limits the damage of an insider threat.
+  topics: [threat, human]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [sec.threat, sec.least-privilege, sec.separation-of-duties, sec.dlp]
+  sources:
+    - label: "INCIBE, blog para empresas"
+      url: "https://www.incibe.es/empresas/blog/el-enemigo-esta-dentro"
+      found: ["una amenaza interna", "una fuente de amenazas internas"]
+      checked: 2026-11-14
+    - label: "INCIBE, blog para empresas"
+      url: "https://www.incibe.es/empresas/blog/insiders-como-atacan-desde-dentro"
+      found: ["Se conoce como insider a una persona con acceso legítimo", "dos tipos de insiders: maliciosos y negligentes"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/learn/what-is-cloud-security?hl=es"
+      found: ["amenazas internas", "amenazas de insiders"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-cloud-security"
+      found: ["Las amenazas internas"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-a-data-leak"
+      found: ["El Riesgo interno se produce cuando"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.account-hijacking
+  en:
+    term: account hijacking
+    definition: >-
+      Taking over a legitimate user or service account, usually with stolen
+      credentials or session tokens, in order to act with its privileges.
+      Also called account takeover.
+  es:
+    verdict: translated
+    forms:
+      - text: secuestro de cuentas
+        usedBy: [official]
+        article: el
+        kind: noun
+        primary: true
+      - text: robo de cuentas
+        usedBy: [official, engineers]
+        article: el
+        kind: noun
+        note: >-
+          Account theft. INCIBE uses the two together: "robo o secuestro de
+          cuentas".
+      - text: apropiación de cuentas
+        usedBy: [aws]
+        article: la
+        kind: noun
+        note: >-
+          AWS's rendering of "account takeover" in its Spanish documentation,
+          which is machine-translated. Microsoft's page says "toma de control
+          de cuentas".
+    definition: >-
+      Toma del control de una cuenta legítima, normalmente con credenciales
+      robadas, para actuar con sus privilegios.
+    examples:
+      - es: La autenticación multifactor ayuda a evitar el secuestro de cuentas.
+        en: Multi-factor authentication helps to prevent account hijacking.
+  topics: [threat, iam]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [sec.mfa, sec.authentication, sec.iam, sec.mitm]
+  sources:
+    - label: "INCIBE, blog"
+      url: "https://www.incibe.es/ciudadania/blog/suplantacion-de-identidad-y-secuestro-de-cuentas-como-actuar"
+      found: ["Suplantación de identidad y secuestro de cuentas", "Robo o secuestro de cuentas", "robo de cuentas"]
+      checked: 2026-11-14
+    - label: "El Lado del Mal"
+      url: "https://www.elladodelmal.com/2020/07/el-robo-de-cuentas-de-instagram-por.html"
+      found: ["El robo de cuentas de Instagram"]
+      checked: 2026-11-14
+    - label: "AWS, documentación en español"
+      url: "https://docs.aws.amazon.com/es_es/waf/latest/developerguide/waf-atp.html"
+      found: ["La apropiación de cuentas es una actividad ilegal", "Las traducciones son generadas a través de traducción automática"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-email-security"
+      found: ["la toma de control de cuentas"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.apt
+  en:
+    term: advanced persistent threat
+    acronym: APT
+    definition: >-
+      A well-resourced adversary, often state-sponsored, that gains access to
+      a specific target and stays hidden there for a long time, typically to
+      spy or to exfiltrate data.
+  es:
+    verdict: both
+    acronym: APT
+    forms:
+      - text: amenaza persistente avanzada
+        usedBy: [official, microsoft]
+        article: la
+        kind: noun
+        primary: true
+        note: The word order of the ENS and of RD 43/2021.
+      - text: APT
+        usedBy: [official, engineers]
+        headline: true
+        article: el
+        kind: noun
+        note: The English acronym is kept.
+      - text: amenaza avanzada persistente
+        usedBy: [official]
+        article: la
+        kind: noun
+        note: The word order in INCIBE's glossary.
+    definition: >-
+      Adversario con muchos recursos que entra en un objetivo concreto y
+      permanece oculto durante mucho tiempo para espiar o robar datos.
+    examples:
+      - es: Los indicios apuntan a una amenaza persistente avanzada.
+        en: The evidence points to an advanced persistent threat.
+    watchOut: >-
+      Amenaza is feminine, but the acronym is treated as masculine in
+      Telefónica Tech's blog: "un APT", "un ataque del tipo APT".
+  topics: [threat]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [sec.threat, sec.malware, sec.exploit, sec.ids]
+  sources:
+    - label: "Esquema Nacional de Seguridad (RD 311/2022)"
+      url: "https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191"
+      found: ["detección de amenazas persistentes avanzadas"]
+      checked: 2026-11-14
+    - label: "Real Decreto 43/2021, de seguridad de las redes y sistemas de información (BOE)"
+      url: "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2021-1192"
+      found: ["Amenaza Persistente Avanzada", "Nivel crítico: – APT"]
+      checked: 2026-11-14
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["Amenaza avanzada persistente"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-information-security-infosec"
+      found: ["amenaza persistente avanzada (APT)"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/orientando-el-pentesting-hacia-un"
+      found: ["Un APT es un concepto complejo", "un ataque del tipo APT"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.malware
+  en:
+    term: malware
+    definition: >-
+      Software written to damage or disrupt systems, or to gain unauthorised
+      access to them or to their data. The category covers viruses, worms,
+      trojans, spyware and ransomware.
+  es:
+    verdict: both
+    forms:
+      - text: malware
+        usedBy: [official, engineers, microsoft]
+        article: el
+        kind: noun
+        primary: true
+        note: INCIBE's glossary lists it under the English name.
+      - text: código dañino
+        usedBy: [official]
+        headline: true
+        article: el
+        kind: noun
+        register: formal
+        note: >-
+          The term of the ENS: its measure op.exp.6 is "Protección frente a
+          código dañino". RD 43/2021 glosses one with the other: "Malware
+          (código dañino)".
+      - text: software malicioso
+        usedBy: [official]
+        article: el
+        kind: noun
+        note: Given as a synonym in INCIBE's glossary.
+      - text: programa malicioso
+        usedBy: [official, eu]
+        article: el
+        kind: noun
+        note: >-
+          The wording of the NIS 2 Directive's Spanish text: "los programas
+          maliciosos".
+      - text: software malintencionado
+        usedBy: [microsoft]
+        article: el
+        kind: noun
+        note: Microsoft's wording in its Spanish pages.
+    definition: >-
+      Software creado para dañar sistemas o datos, o para acceder a ellos sin
+      autorización.
+    examples:
+      - es: Hemos encontrado malware en uno de los servidores.
+        en: We have found malware on one of the servers.
+    watchOut: >-
+      Unlike the English word, malware can be counted in Spanish: RD 43/2021
+      writes "aquel malware que infecta una máquina".
+  topics: [threat]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [sec.ransomware, sec.exploit, sec.sandbox, sec.apt]
+  sources:
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["Malware", "Sinónimo: Software malicioso"]
+      checked: 2026-11-14
+    - label: "Esquema Nacional de Seguridad (RD 311/2022)"
+      url: "https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191"
+      found: ["Protección frente a código dañino"]
+      checked: 2026-11-14
+    - label: "Real Decreto 43/2021, de seguridad de las redes y sistemas de información (BOE)"
+      url: "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2021-1192"
+      found: ["Malware (código dañino)", "programa malicioso", "aquel malware que infecta una máquina"]
+      checked: 2026-11-14
+    - label: "Directiva (UE) 2022/2555 (NIS 2), texto en español publicado en el BOE"
+      url: "https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81963"
+      found: ["los programas maliciosos cifran datos"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/redefiniendo-seguridad-nube-con-sase"
+      found: ["descargue malware"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-email-security"
+      found: ["Malware es software malintencionado"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.ransomware
+  en:
+    term: ransomware
+    definition: >-
+      Malware that encrypts or locks the victim's data or systems and demands
+      payment for restoring access, often with the added threat of publishing
+      stolen data.
+  es:
+    verdict: english-kept
+    forms:
+      - text: ransomware
+        usedBy: [official, engineers, google]
+        article: el
+        kind: noun
+        primary: true
+        note: >-
+          Kept in English, as a masculine noun: "el ransomware", "un ataque
+          de ransomware".
+      - text: programa de secuestro
+        usedBy: [eu]
+        article: el
+        kind: noun
+        register: formal
+        note: >-
+          The translation in the NIS 2 Directive's Spanish text: "ataques con
+          programas de secuestro".
+      - text: rescate
+        usedBy: [official, eu]
+        article: el
+        kind: noun
+        note: >-
+          The ransom, as in "si la víctima no paga el rescate".
+    definition: >-
+      Malware que cifra o bloquea los datos de la víctima y exige un pago
+      para devolverle el acceso.
+    examples:
+      - es: Un ataque de ransomware cifró todos los servidores de ficheros.
+        en: A ransomware attack encrypted all the file servers.
+    watchOut: >-
+      Watch the spelling. The Spanish text of NIS 2 itself prints the English
+      word wrongly, as «ramsonware».
+  topics: [threat, incident]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 3 }
+  related: [sec.malware, sec.backup, sec.encryption, sec.incident-response]
+  sources:
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["Ransomware", "no paga el rescate"]
+      checked: 2026-11-14
+    - label: "Directiva (UE) 2022/2555 (NIS 2), texto en español publicado en el BOE"
+      url: "https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81963"
+      found: ["ataques con programas de secuestro", "«ramsonware»", "el pago de un rescate"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/backup-empresarial-continuidad-negocio-proteger-datos"
+      found: ["ataques de ransomware", "aumento del ransomware"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/discover/what-is-incident-response?hl=es"
+      found: ["El ransomware moderno combina"]
+      checked: 2026-11-14
+  status: sourced

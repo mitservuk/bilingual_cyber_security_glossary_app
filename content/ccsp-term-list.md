@@ -1,6 +1,6 @@
 # CCSP term list
 
-The working list for completing CCSP: 156 terms are written and 248 are proposed, 404 in all.
+The working list for completing CCSP: 209 terms are written and 195 are proposed, 404 in all.
 
 This is a proposal to review, trim and add to before the entries are written.
 
@@ -22,21 +22,7 @@ exam touches it in several.
 
 ## 3. Cloud Platform and Infrastructure Security
 
-57 terms: 4 written, 53 proposed.
-
-**Written:** hypervisor, virtual machine (VM), disaster recovery (DR), firewall.
-
-**Infrastructure components** (10): management plane, control plane, compute, software-defined networking (SDN), virtual private cloud (VPC), virtual network, load balancer, content delivery network (CDN), region, availability zone.
-
-**Data centre design** (9): data centre, redundancy, high availability, fault tolerance, failover, heating, ventilation and air conditioning (HVAC), uninterruptible power supply (UPS), physical security, tenant partitioning.
-
-**Network controls** (10): network segmentation, microsegmentation, security group, intrusion detection system (IDS), intrusion prevention system (IPS), bastion host, honeypot, virtual private network (VPN), demilitarized zone (DMZ), packet capture.
-
-**Threats** (14): threat, vulnerability, exploit, attack surface, denial of service (DoS), man-in-the-middle attack, VM escape, VM sprawl, misconfiguration, insider threat, account hijacking, advanced persistent threat (APT), malware, ransomware.
-
-**Access** (4): identification, authentication, authorization, multi-factor authentication (MFA).
-
-**Continuity** (6): business continuity, business continuity plan (BCP), recovery time objective (RTO), recovery point objective (RPO), tabletop exercise, recovery service level.
+57 terms, all written.
 
 ## 4. Cloud Application Security
 
