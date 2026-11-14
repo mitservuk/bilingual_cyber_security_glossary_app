@@ -1,10 +1,8 @@
-# Glosario
+# Bilingual Cyber
 
 Cloud and cyber security terms in English, with how each one is actually said
 by professionals in Spain. Runs in the browser, installs to an iPhone home
 screen, and works offline.
-
-"Glosario" is a working title.
 
 ## Run it
 
