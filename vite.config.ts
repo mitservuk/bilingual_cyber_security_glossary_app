@@ -10,7 +10,7 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['icon.svg', 'apple-touch-icon.png'],
+      includeAssets: ['apple-touch-icon.png'],
       manifest: {
         name: 'Bilingual Cyber',
         short_name: 'Bilingual Cyber',
