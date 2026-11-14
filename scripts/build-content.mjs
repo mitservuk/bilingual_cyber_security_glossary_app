@@ -25,11 +25,17 @@ export function loadContent() {
 
   const topicIds = new Set(taxonomy.topics.map((t) => t.id));
   const techIds = new Set(taxonomy.technology.map((t) => t.id));
+  const REGIONS = ['es', 'eu', 'uk', 'us', 'intl'];
   for (const c of taxonomy.certifications) {
     c.domains ??= [];
-    if (!c.name || !c.fullName) errors.push(`certification ${c.id}: name and fullName are required`);
-    if (!c.comingSoon && !c.domains.length) errors.push(`certification ${c.id}: needs domains, or comingSoon`);
+    if (!c.name || !c.issuer) errors.push(`certification ${c.id}: name and issuer are required`);
   }
+  taxonomy.frameworks ??= [];
+  for (const f of taxonomy.frameworks) {
+    if (!f.name || !f.summary) errors.push(`framework ${f.id}: name and summary are required`);
+    if (!REGIONS.includes(f.region)) errors.push(`framework ${f.id}: region must be one of ${REGIONS.join(', ')}`);
+  }
+  const frameworkIds = new Set(taxonomy.frameworks.map((f) => f.id));
   const certs = new Map(taxonomy.certifications.map((c) => [c.id, c]));
   const ids = new Set();
 
@@ -59,6 +65,8 @@ export function loadContent() {
       if (!cert) fail(`unknown certification "${c.cert}"`);
       else if (!cert.domains.some((d) => d.n === c.domain)) fail(`${c.cert} has no domain ${c.domain}`);
     }
+    for (const id of t.frameworks ?? []) if (!frameworkIds.has(id)) fail(`unknown framework "${id}"`);
+    if (t.headword && t.headword !== 'es') fail('headword can only be "es"');
     if (!STATUSES.includes(t.status)) fail(`status must be one of ${STATUSES.join(', ')}`);
     for (const s of t.sources ?? []) {
       if (!s.label || !s.url) fail('each source needs a label and a url');
@@ -71,6 +79,9 @@ export function loadContent() {
   }
   for (const t of terms) {
     for (const r of t.related ?? []) if (!ids.has(r)) errors.push(`${t.id}: related "${r}" does not exist`);
+  }
+  for (const f of taxonomy.frameworks) {
+    if (f.entry && !ids.has(f.entry)) errors.push(`framework ${f.id}: entry "${f.entry}" does not exist`);
   }
   if (errors.length) {
     throw new Error(`Content has ${errors.length} problem(s):\n  ${errors.join('\n  ')}`);

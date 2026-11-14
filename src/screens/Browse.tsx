@@ -1,11 +1,14 @@
 import { useState } from 'react';
-import { Empty, Segmented, TermList } from '../components/Common';
+import { Empty, TermList } from '../components/Common';
 import { BackIcon, ChevronIcon, DisclosureIcon } from '../components/Icons';
 import {
   type Axis,
   type Certification,
+  type Framework,
+  REGIONS,
   alphabetical,
   certifications,
+  frameworks,
   populated,
   technology,
   terms,
@@ -13,21 +16,19 @@ import {
   topics,
 } from '../data';
 import { goBack, href } from '../router';
-import { useStore } from '../store';
+import { toggleRegion, useStore } from '../store';
 
-// The tabs are alphabetical, like every other list in the app.
+// The categories are alphabetical, like every other list in the app.
 const AXES: { value: Axis; label: string }[] = [
   { value: 'cert', label: 'Certifications' },
+  { value: 'framework', label: 'Frameworks' },
   { value: 'tech', label: 'Technologies' },
   { value: 'topic', label: 'Topics' },
 ];
 
 const count = (n: number) => `${n} ${n === 1 ? 'term' : 'terms'}`;
 
-const monthYear = new Intl.DateTimeFormat('en-GB', { month: 'short', year: 'numeric', timeZone: 'UTC' });
-
-/** Turns an exam outline's version, such as "2026-08", into "Aug 2026". */
-const outlineDate = (outline: string) => monthYear.format(new Date(`${outline}-01T00:00:00Z`));
+const regionLabel = (f: Framework) => REGIONS.find((r) => r.id === f.region)?.label ?? '';
 
 let lastAxis: Axis = 'cert';
 
@@ -35,8 +36,8 @@ export function Browse({ axis: fromRoute }: { axis?: string }) {
   const axis = AXES.find((a) => a.value === fromRoute)?.value ?? lastAxis;
   lastAxis = axis;
 
-  // Switching tabs replaces the current history entry, so Back leaves Browse
-  // rather than stepping through every tab that was looked at.
+  // Switching category replaces the current history entry, so Back leaves
+  // Browse rather than stepping through every category that was looked at.
   const setAxis = (a: Axis) => window.location.replace(href(`/browse/${a}`));
 
   return (
@@ -44,11 +45,18 @@ export function Browse({ axis: fromRoute }: { axis?: string }) {
       <header className="title-block">
         <h1>Browse</h1>
       </header>
-      <Segmented label="Browse by" options={AXES} value={axis} onChange={setAxis} />
 
-      {axis === 'cert' ? (
-        <Certifications />
-      ) : (
+      <div className="pills" role="group" aria-label="Browse by">
+        {AXES.map((a) => (
+          <button key={a.value} type="button" aria-pressed={a.value === axis} onClick={() => setAxis(a.value)}>
+            {a.label}
+          </button>
+        ))}
+      </div>
+
+      {axis === 'cert' && <Certifications />}
+      {axis === 'framework' && <Frameworks />}
+      {(axis === 'topic' || axis === 'tech') && (
         <div className="card list">
           {populated(axis === 'topic' ? topics : technology, axis).map(({ item, count: n }) => (
             <a key={item.id} className="row" href={href(`/list/${axis}/${item.id}`)}>
@@ -68,31 +76,41 @@ export function Browse({ axis: fromRoute }: { axis?: string }) {
   );
 }
 
+/** Certifications grouped by the body that issues them, both in alphabetical order. */
 function Certifications() {
-  // Every certification starts closed, so the whole list is visible at once.
   const [open, setOpen] = useState<string | null>(null);
+  const issuers = [...new Set(certifications.map((c) => c.issuer))].sort((a, b) => a.localeCompare(b));
 
   return (
-    <div className="card list">
-      {certifications.map((cert) =>
-        cert.comingSoon ? (
-          <div key={cert.id} className="row cert">
-            <span className="row-text">
-              <span className="row-title">{cert.name}</span>
-              <span className="secondary small">{cert.fullName}</span>
-            </span>
-            <span className="pill soon">Coming soon</span>
+    <>
+      {issuers.map((issuer) => (
+        <section key={issuer} className="section">
+          <h2 className="group-title">{issuer}</h2>
+          <div className="card list">
+            {certifications
+              .filter((c) => c.issuer === issuer)
+              .map((cert) =>
+                cert.domains.length ? (
+                  <CertificationSection
+                    key={cert.id}
+                    cert={cert}
+                    open={open === cert.id}
+                    onToggle={() => setOpen(open === cert.id ? null : cert.id)}
+                  />
+                ) : (
+                  <div key={cert.id} className="row cert">
+                    <span className="row-text">
+                      <span className="row-title">{cert.name}</span>
+                      {cert.fullName && <span className="secondary small">{cert.fullName}</span>}
+                    </span>
+                    <span className="pill soon">Coming soon</span>
+                  </div>
+                ),
+              )}
           </div>
-        ) : (
-          <CertificationSection
-            key={cert.id}
-            cert={cert}
-            open={open === cert.id}
-            onToggle={() => setOpen(open === cert.id ? null : cert.id)}
-          />
-        ),
-      )}
-    </div>
+        </section>
+      ))}
+    </>
   );
 }
 
@@ -114,7 +132,7 @@ function CertificationSection({
             {cert.name}
             {cert.outline && <span className="outline"> ({outlineDate(cert.outline)})</span>}
           </span>
-          <span className="secondary small">{cert.fullName}</span>
+          {cert.fullName && <span className="secondary small">{cert.fullName}</span>}
         </span>
         <span className="row-meta">{count(termsFor('cert', cert.id).length)}</span>
         <DisclosureIcon open={open} />
@@ -139,10 +157,60 @@ function CertificationSection({
   );
 }
 
-/** A filtered list of terms: one category, one exam domain, or everything. */
+const monthYear = new Intl.DateTimeFormat('en-GB', { month: 'short', year: 'numeric', timeZone: 'UTC' });
+
+/** Turns an exam outline's version, such as "2026-08", into "Aug 2026". */
+const outlineDate = (outline: string) => monthYear.format(new Date(`${outline}-01T00:00:00Z`));
+
+/** Frameworks, narrowed by any regions that are ticked. None ticked shows them all. */
+function Frameworks() {
+  const { regions } = useStore();
+  const shown = frameworks.filter((f) => regions.length === 0 || regions.includes(f.region));
+
+  return (
+    <>
+      <div className="chips filter" role="group" aria-label="Regions">
+        {REGIONS.map((r) => (
+          <button key={r.id} type="button" aria-pressed={regions.includes(r.id)} onClick={() => toggleRegion(r.id)}>
+            {r.label}
+          </button>
+        ))}
+      </div>
+      <div className="card list">
+        {shown.map((f) => {
+          const n = termsFor('framework', f.id).length;
+          const body = (
+            <>
+              <span className="row-text">
+                <span className="row-title">{f.name}</span>
+                <span className="secondary small">
+                  {regionLabel(f)} · {f.summary}
+                </span>
+              </span>
+              {n ? <span className="row-meta">{n}</span> : <span className="pill soon">Coming soon</span>}
+              {n > 0 && <ChevronIcon />}
+            </>
+          );
+          return n ? (
+            <a key={f.id} className="row cert" href={href(`/list/framework/${f.id}`)}>
+              {body}
+            </a>
+          ) : (
+            <div key={f.id} className="row cert">
+              {body}
+            </div>
+          );
+        })}
+      </div>
+    </>
+  );
+}
+
+/** A filtered list of terms: one category, one exam domain, one framework, or everything. */
 export function TermsList({ axis, value, domain }: { axis?: Axis; value?: string; domain?: number }) {
   let title = 'All terms';
   let subtitle = '';
+  let summary = '';
   let list = terms;
 
   if (axis && value) {
@@ -152,6 +220,11 @@ export function TermsList({ axis, value, domain }: { axis?: Axis; value?: string
       const d = cert?.domains.find((x) => x.n === domain);
       title = d ? d.name : (cert?.name ?? value);
       subtitle = d ? `${cert?.name} · Domain ${d.n}` : '';
+    } else if (axis === 'framework') {
+      const framework = frameworks.find((f) => f.id === value);
+      title = framework?.name ?? value;
+      subtitle = framework ? regionLabel(framework) : '';
+      summary = [framework?.fullName, framework?.summary].filter(Boolean).join('. ');
     } else {
       const item = (axis === 'topic' ? topics : technology).find((t) => t.id === value);
       title = item?.en ?? value;
@@ -169,6 +242,7 @@ export function TermsList({ axis, value, domain }: { axis?: Axis; value?: string
       <header className="title-block">
         {subtitle && <div className="eyebrow">{subtitle}</div>}
         <h1 className="long">{title}</h1>
+        {summary && <p className="secondary summary">{summary}.</p>}
       </header>
       {list.length ? (
         <TermList terms={alphabetical(list)} />

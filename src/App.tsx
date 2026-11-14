@@ -41,6 +41,7 @@ export function App() {
   else if (segments[0] === 'saved') screen = <Saved />;
   else if (segments[0] === 'list' && segments[1] === 'all') screen = <TermsList />;
   else if (segments[0] === 'list' && segments[2]) {
+    // /list/<category>/<id>, with a domain number after a certification
     screen = (
       <TermsList
         axis={segments[1] as Axis}

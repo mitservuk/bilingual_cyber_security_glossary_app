@@ -130,7 +130,8 @@ button {
   letter-spacing: -0.4px;
 }
 
-.title-block h1.long {
+.title-block h1.long,
+.entry-title h1.long {
   font-size: 28px;
   line-height: 34px;
 }
@@ -365,6 +366,79 @@ button {
   font-weight: 600;
   color: var(--text-2);
   font-variant-numeric: tabular-nums;
+}
+
+/* Browse: the four categories as pills that scroll sideways on a narrow screen. */
+
+.pills {
+  display: flex;
+  gap: 8px;
+  margin: 0 -20px;
+  padding: 0 20px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.pills::-webkit-scrollbar {
+  display: none;
+}
+
+.pills button,
+.chips.filter button {
+  flex: none;
+  height: 44px;
+  padding: 0 16px;
+  border-radius: 22px;
+  background: var(--field);
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.pills button[aria-pressed='true'] {
+  background: var(--text);
+  color: var(--bg);
+  font-weight: 600;
+}
+
+/* The region filter: any number can be ticked. */
+
+.chips.filter {
+  gap: 8px;
+  margin-top: 0;
+}
+
+.chips.filter button {
+  height: 36px;
+  padding: 0 14px;
+  border-radius: 18px;
+  font-size: 14px;
+}
+
+.chips.filter button[aria-pressed='true'] {
+  background: var(--tint);
+  color: var(--tint-text);
+  font-weight: 600;
+}
+
+.section h2.group-title {
+  padding: 0 4px;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--text-2);
+}
+
+.summary {
+  margin-top: 6px;
+}
+
+.in-english {
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: 600;
 }
 
 /* Certifications: each one opens in place to show its numbered domains. */

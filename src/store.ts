@@ -1,5 +1,5 @@
 import { useSyncExternalStore } from 'react';
-import type { Lang } from './data';
+import type { Lang, Region } from './data';
 
 // Everything personal stays on the device. Storage can be unavailable (private
 // browsing, blocked site data), so every access is guarded and the app works
@@ -9,6 +9,8 @@ interface State {
   saved: string[];
   recent: string[];
   lang: Lang;
+  /** Regions ticked in the Frameworks filter. None ticked means all are shown. */
+  regions: Region[];
 }
 
 const KEY = 'bilingual-cyber.v1';
@@ -21,9 +23,10 @@ function load(): State {
       saved: Array.isArray(parsed.saved) ? parsed.saved : [],
       recent: Array.isArray(parsed.recent) ? parsed.recent : [],
       lang: parsed.lang === 'es' ? 'es' : 'en',
+      regions: Array.isArray(parsed.regions) ? parsed.regions : [],
     };
   } catch {
-    return { saved: [], recent: [], lang: 'en' };
+    return { saved: [], recent: [], lang: 'en', regions: [] };
   }
 }
 
@@ -56,3 +59,8 @@ export const addRecent = (id: string) => {
 };
 
 export const setLang = (lang: Lang) => set({ lang });
+
+export const toggleRegion = (region: Region) =>
+  set({
+    regions: state.regions.includes(region) ? state.regions.filter((r) => r !== region) : [...state.regions, region],
+  });

@@ -42,9 +42,10 @@ describe('search', () => {
 });
 
 describe('ordering', () => {
-  it('lists terms alphabetically', async () => {
-    const names = terms.map((t) => t.en.term.toLowerCase());
-    expect(names).toEqual([...names].sort((a, b) => a.localeCompare(b)));
+  it('lists terms alphabetically by the title they are shown under', async () => {
+    const { titleOf } = await import('./data');
+    const names = terms.map(titleOf);
+    expect(names).toEqual([...names].sort((a, b) => a.localeCompare(b, 'en', { sensitivity: 'base' })));
   });
 
   it('lists categories and certifications alphabetically', async () => {
@@ -53,7 +54,29 @@ describe('ordering', () => {
       const names = list.map((x) => x.item.en);
       expect(names).toEqual([...names].sort((a, b) => a.localeCompare(b)));
     }
-    expect(certifications.map((c) => c.name)).toEqual(['CCSP', 'CISSP', 'KCSA']);
+    const names = certifications.map((c) => c.name);
+    expect(names).toEqual([...names].sort((a, b) => a.localeCompare(b, 'en', { sensitivity: 'base' })));
+    expect(names).toContain('CCSP');
+  });
+
+  it('lists frameworks alphabetically, each with a region', async () => {
+    const { frameworks, REGIONS } = await import('./data');
+    const names = frameworks.map((f) => f.name);
+    expect(names).toEqual([...names].sort((a, b) => a.localeCompare(b, 'en', { sensitivity: 'base' })));
+    const regions = REGIONS.map((r) => r.id);
+    for (const f of frameworks) expect(regions).toContain(f.region);
+  });
+
+  it('gathers the terms that belong to a framework', async () => {
+    const { termsFor } = await import('./data');
+    expect(termsFor('framework', 'GDPR').map((t) => t.id)).toContain('law.data-controller');
+    expect(termsFor('framework', 'ENS').map((t) => t.id)).toEqual(['fw.ens']);
+  });
+
+  it('titles a Spanish-first entry in Spanish and finds it by its acronym', async () => {
+    const { getTerm, titleOf } = await import('./data');
+    expect(titleOf(getTerm('fw.ens')!)).toBe('Esquema Nacional de Seguridad');
+    expect(ids('ens')[0]).toBe('fw.ens');
   });
 
   it('keeps a certification\'s domains in numbered order', async () => {

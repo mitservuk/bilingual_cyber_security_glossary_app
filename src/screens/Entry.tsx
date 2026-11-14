@@ -10,7 +10,9 @@ import {
   alphabetical,
   certifications,
   formLabel,
+  frameworks,
   getTerm,
+  titleOf,
   topics,
 } from '../data';
 import { goBack } from '../router';
@@ -33,8 +35,12 @@ function categoryLine(term: Term, lang: Lang) {
   const parts: string[] = [];
   const topic = topics.find((t) => t.id === term.topics[0]);
   if (topic) parts.push(topic[lang]);
-  const c = term.curriculum[0];
+  const c = term.curriculum?.[0];
   if (c) parts.push(`${c.cert} ${lang === 'es' ? 'Dominio' : 'Domain'} ${c.domain}`);
+  for (const id of term.frameworks ?? []) {
+    const framework = frameworks.find((f) => f.id === id);
+    if (framework) parts.push(framework.name);
+  }
   return parts.join(' · ');
 }
 
@@ -68,7 +74,11 @@ export function Entry({ id }: { id: string }) {
 
   const isSaved = saved.includes(term.id);
   const related = alphabetical(term.related.flatMap((r) => getTerm(r) ?? []));
-  const cert = term.curriculum[0] && certifications.find((c) => c.id === term.curriculum[0].cert);
+  const certId = term.curriculum?.[0]?.cert;
+  const cert = certId ? certifications.find((c) => c.id === certId) : undefined;
+  // A Spanish concept with no real English name is titled in Spanish.
+  const spanishFirst = term.headword === 'es';
+  const acronym = spanishFirst ? term.es.acronym : term.en.acronym;
 
   return (
     <main className="screen entry">
@@ -86,12 +96,13 @@ export function Entry({ id }: { id: string }) {
 
       <header className="entry-head">
         <div className="entry-title">
-          <h1>
-            {term.en.term}
-            {term.en.acronym && <span className="acronym"> ({term.en.acronym})</span>}
+          <h1 lang={spanishFirst ? 'es' : undefined} className={titleOf(term).length > 22 ? 'long' : undefined}>
+            {titleOf(term)}
+            {acronym && <span className="acronym"> ({acronym})</span>}
           </h1>
           <Segmented label="Definition language" options={LANGS} value={lang} onChange={setLang} compact />
         </div>
+        {spanishFirst && <div className="in-english">In English: {term.en.term}</div>}
         {term.en.expansion && <div className="secondary">{term.en.expansion}</div>}
         <div className="secondary" lang={lang}>
           {categoryLine(term, lang)}

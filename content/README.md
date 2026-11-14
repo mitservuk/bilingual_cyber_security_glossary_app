@@ -8,6 +8,7 @@ files; nothing about a term is stored anywhere else.
 
 ```yaml
 - id: sec.firewall              # namespaced, never reused or renamed
+  headword: es                  # optional: a Spanish concept, titled in Spanish
   en:
     term: firewall
     acronym: ...                # optional, e.g. DLP for data loss prevention
@@ -34,8 +35,9 @@ files; nothing about a term is stored anywhere else.
     watchOut: ...               # optional: false friends, gender traps, variants
   topics: [network]             # what it is (the 20 security domains)
   technology: [networking]      # where it lives (aws, azure, gcp, kubernetes, ...)
-  curriculum:                   # which exam outlines cover it
+  curriculum:                   # optional: which exam outlines cover it
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+  frameworks: [ENS]             # optional: frameworks whose vocabulary it belongs to
   related: [sec.log]            # ids of other entries
   sources:
     - label: ...
@@ -65,6 +67,19 @@ Sources come in two strengths. A source with `found` and `checked` was
 fetched on that date and contains that text. A source with only a `lead`
 carries text that a web search attributed to the URL; the page itself has not
 been read, so it is a pointer for checking, not evidence.
+
+## Certifications and frameworks
+
+`content/taxonomy.yaml` lists them. A certification with no `domains` yet, or
+a framework with no terms, shows in the app as "coming soon".
+
+A term joins a framework through `frameworks`, and only when it is part of that
+framework's own vocabulary. A general term such as encryption does not belong
+to every framework that mentions it.
+
+`headword: es` is for Spanish concepts that have no real English name, such as
+the Esquema Nacional de Seguridad. The Spanish form becomes the title, it is
+listed alphabetically under it, and `en.term` is shown as the English gloss.
 
 ## Who uses a form
 
