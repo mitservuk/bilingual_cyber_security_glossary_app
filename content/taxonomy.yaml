@@ -1,0 +1,54 @@
+# Names for the three browse axes. Terms refer to these by id.
+
+topics:
+  - { id: grc, en: Governance and risk, es: Gobierno y riesgo }
+  - { id: architecture, en: Architecture, es: Arquitectura }
+  - { id: asset, en: Asset management, es: Gestión de activos }
+  - { id: iam, en: Identity and access, es: Identidad y acceso }
+  - { id: authn, en: Authentication, es: Autenticación }
+  - { id: authz, en: Authorization, es: Autorización }
+  - { id: crypto, en: Cryptography, es: Criptografía }
+  - { id: secrets, en: Secrets management, es: Gestión de secretos }
+  - { id: data, en: Data security, es: Seguridad de los datos }
+  - { id: network, en: Network security, es: Seguridad de redes }
+  - { id: hardening, en: Hardening, es: Bastionado }
+  - { id: appsec, en: Application security, es: Seguridad de aplicaciones }
+  - { id: supplychain, en: Supply chain, es: Cadena de suministro }
+  - { id: vulnmgmt, en: Vulnerability management, es: Gestión de vulnerabilidades }
+  - { id: threat, en: Threats, es: Amenazas }
+  - { id: detection, en: Logging and detection, es: Registro y detección }
+  - { id: assessment, en: Assessment and testing, es: Evaluación y pruebas }
+  - { id: incident, en: Incident response and recovery, es: Respuesta a incidentes y recuperación }
+  - { id: human, en: Human factors, es: Factor humano }
+  - { id: physical, en: Physical security, es: Seguridad física }
+
+technology:
+  - { id: cloud-general, en: Cloud, es: Nube }
+  - { id: aws, en: AWS, es: AWS }
+  - { id: azure, en: Azure, es: Azure }
+  - { id: gcp, en: Google Cloud, es: Google Cloud }
+  - { id: kubernetes, en: Kubernetes, es: Kubernetes }
+  - { id: containers-oci, en: Containers, es: Contenedores }
+  - { id: ci-cd, en: CI/CD, es: CI/CD }
+  - { id: iac, en: Infrastructure as code, es: Infraestructura como código }
+  - { id: networking, en: Networking, es: Redes }
+  - { id: linux-kernel, en: Linux, es: Linux }
+  - { id: service-mesh, en: Service mesh, es: Malla de servicios }
+  - { id: serverless, en: Serverless, es: Serverless }
+  - { id: ai-ml, en: AI and machine learning, es: IA y aprendizaje automático }
+  - { id: endpoint, en: Endpoints, es: Puestos de trabajo }
+  - { id: identity-platforms, en: Identity platforms, es: Plataformas de identidad }
+
+certifications:
+  - id: CCSP
+    name: CCSP
+    issuer: ISC2
+    outline: "2026-08"
+    outlineLabel: ISC2 exam outline of 1 August 2026
+    domains:
+      - { n: 1, name: "Cloud Concepts, Architecture and Design", weight: 17 }
+      - { n: 2, name: "Cloud Data Security", weight: 20 }
+      - { n: 3, name: "Cloud Platform & Infrastructure Security", weight: 17 }
+      - { n: 4, name: "Cloud Application Security", weight: 16 }
+      - { n: 5, name: "Cloud Security Operations", weight: 17 }
+      - { n: 6, name: "Legal, Risk and Compliance", weight: 13 }
