@@ -37,7 +37,7 @@ export function App() {
 
   let screen;
   if (segments[0] === 'term' && segments[1]) screen = <Entry key={segments[1]} id={segments[1]} />;
-  else if (segments[0] === 'browse') screen = <Browse />;
+  else if (segments[0] === 'browse') screen = <Browse axis={segments[1]} />;
   else if (segments[0] === 'saved') screen = <Saved />;
   else if (segments[0] === 'list' && segments[1] === 'all') screen = <TermsList />;
   else if (segments[0] === 'list' && segments[2]) {
@@ -53,6 +53,7 @@ export function App() {
   return (
     <>
       {screen}
+      <div className="tab-fade" aria-hidden="true" />
       <nav className="tab-bar" aria-label="Main">
         {TABS.map(({ id, label, path, icon: TabIcon }) => (
           <a key={id} href={href(path)} aria-current={tab === id ? 'page' : undefined}>

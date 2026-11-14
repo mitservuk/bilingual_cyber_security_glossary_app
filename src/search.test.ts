@@ -40,3 +40,25 @@ describe('search', () => {
     expect(ids('zzzz')).toEqual([]);
   });
 });
+
+describe('ordering', () => {
+  it('lists terms alphabetically', async () => {
+    const names = terms.map((t) => t.en.term.toLowerCase());
+    expect(names).toEqual([...names].sort((a, b) => a.localeCompare(b)));
+  });
+
+  it('lists categories and certifications alphabetically', async () => {
+    const { certifications, populated, topics, technology } = await import('./data');
+    for (const list of [populated(topics, 'topic'), populated(technology, 'tech')]) {
+      const names = list.map((x) => x.item.en);
+      expect(names).toEqual([...names].sort((a, b) => a.localeCompare(b)));
+    }
+    expect(certifications.map((c) => c.name)).toEqual(['CCSP', 'CISSP', 'KCSA']);
+  });
+
+  it('keeps a certification\'s domains in numbered order', async () => {
+    const { certifications } = await import('./data');
+    const ccsp = certifications.find((c) => c.id === 'CCSP')!;
+    expect(ccsp.domains.map((d) => d.n)).toEqual([1, 2, 3, 4, 5, 6]);
+  });
+});
