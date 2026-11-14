@@ -1,10 +1,11 @@
 # Pilot entries: 25 CCSP terms, written to settle the entry format.
 # Format is described in content/README.md.
 #
-# Every entry is status: draft. The Spanish usage was written from general
-# knowledge and has NOT been checked against the sources listed. Each `lead`
-# is text that a web search attributed to that URL; none of the pages was
-# opened and read. Treat leads as places to check, not as evidence.
+# Sources come in two strengths:
+#   found + checked  the page was fetched on that date and contains that text.
+#   lead             text a web search attributed to the URL; the page itself
+#                    could not be opened. A place to check, not evidence.
+# An entry is `sourced` only when every form and note rests on checked sources.
 
 - id: cloud.cloud-computing
   en:
@@ -26,6 +27,16 @@
         kind: noun
         note: >-
           The everyday short form. "En la nube" is "in the cloud".
+      - text: cloud computing
+        article: el
+        kind: noun
+        note: >-
+          The English term is also used as it stands, including in vendor
+          documentation written for Spain.
+      - text: informática en la nube
+        article: la
+        kind: noun
+        note: Microsoft's wording in its Spanish documentation.
       - text: cloud
         article: el
         kind: noun
@@ -54,6 +65,18 @@
     - label: "Esquema Nacional de Seguridad (RD 311/2022), medida op.nub.1"
       url: "https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191"
       lead: "Los sistemas que suministran un servicio en la nube a organismos del sector público deberán cumplir con el conjunto de medidas de seguridad"
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/learn/what-is-cloud-computing?hl=es"
+      found: ["cloud computing"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-identity-access-management-iam"
+      found: ["informática en la nube"]
+      checked: 2026-11-14
+    - label: "Oracle España"
+      url: "https://www.oracle.com/es/cloud/what-is-iaas/"
+      found: ["computación en la nube"]
+      checked: 2026-11-14
   status: draft
 
 - id: cloud.shared-responsibility
@@ -92,7 +115,19 @@
     - label: "CCN-STIC 499, Arquitecturas de seguridad cloud"
       url: "https://www.ccn-cert.cni.es/pdf/guias/series-ccn-stic/guias-de-acceso-publico-ccn-stic/6807-ccn-stic-499-arquitecturas-de-seguridad-cloud/file.html"
       lead: "modelo de responsabilidad compartida en el que pueden existir diferentes actores con diferentes responsabilidades"
-  status: draft
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/learn/what-is-cloud-security?hl=es"
+      found: ["modelos de responsabilidad compartida"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-cloud-security"
+      found: ["modelo de responsabilidad compartida"]
+      checked: 2026-11-14
+    - label: "Oracle España"
+      url: "https://www.oracle.com/es/security/cloud-security/what-is-cloud-security/"
+      found: ["responsabilidad compartida entre el proveedor de la nube y el cliente"]
+      checked: 2026-11-14
+  status: sourced
 
 - id: cloud.multitenancy
   en:
@@ -104,36 +139,40 @@
   es:
     verdict: both
     forms:
-      - text: multi-tenant
+      - text: multiinquilino
         kind: adjective
         primary: true
         note: >-
-          The English adjective is widely kept: "una arquitectura
-          multi-tenant". Each customer's space is "el tenant".
+          The wording of Microsoft and Oracle in Spanish, where a tenant is
+          "un inquilino": "una arquitectura multiinquilino".
+      - text: multicliente
+        kind: adjective
+        note: Google Cloud's wording on its pages for Spain.
       - text: tenencia múltiple
         article: la
         kind: noun
         register: formal
         note: The translated noun, found in official Spanish guidance.
-      - text: multiinquilino
+      - text: multi-tenant
         kind: adjective
+        register: informal
         note: >-
-          A translated adjective seen in vendor documentation, where "tenant"
-          becomes "inquilino".
+          The English adjective, kept in conversation, with "el tenant" for
+          each customer's space. Not yet backed by a source.
     definition: >-
       Arquitectura en la que una misma instancia del servicio atiende a varios
       clientes sobre una infraestructura compartida, aislados entre sí de forma
       lógica.
     examples:
       - es: >-
-          En un entorno multi-tenant, el aislamiento entre clientes es
+          En un entorno multiinquilino, el aislamiento entre clientes es
           fundamental.
         en: >-
           In a multi-tenant environment, isolation between customers is
           essential.
     watchOut: >-
-      There is no single settled translation. Expect to meet all three forms,
-      and expect "tenant" itself to stay in English in conversation.
+      There is no settled translation: each vendor and the official guidance
+      use a different one. Recognise all of them.
   topics: [architecture]
   technology: [cloud-general]
   curriculum:
@@ -143,6 +182,14 @@
     - label: "CCN-STIC 499, Arquitecturas de seguridad cloud"
       url: "https://www.ccn-cert.cni.es/pdf/guias/series-ccn-stic/guias-de-acceso-publico-ccn-stic/6807-ccn-stic-499-arquitecturas-de-seguridad-cloud/file.html"
       lead: "La tenencia múltiple y la compartición de recursos son características inherentes de la computación en la nube."
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-cloud-security"
+      found: ["multiinquilino"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/learn/what-is-a-virtual-machine?hl=es"
+      found: ["multicliente"]
+      checked: 2026-11-14
   status: draft
 
 - id: cloud.iaas
@@ -162,8 +209,7 @@
         kind: noun
         primary: true
         note: >-
-          The expansion is translated; the acronym IaaS stays as it is and is
-          what people actually say.
+          The expansion is translated; the acronym IaaS stays as it is.
     definition: >-
       Modelo de servicio en la nube en el que el proveedor ofrece cómputo,
       almacenamiento y red virtualizados, y el cliente gestiona todo lo demás
@@ -183,7 +229,15 @@
     - label: "CCN-STIC 823, Seguridad en entornos cloud"
       url: "https://www.ccn-cert.cni.es/es/800-guia-esquema-nacional-de-seguridad/541-ccn-stic-823-seguridad-en-entornos-cloud/file.html"
       lead: "las soluciones IaaS proporcionan una infraestructura, por norma general virtualizada, en la que el cliente es responsable del software que esa infraestructura soportará"
-  status: draft
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/learn/what-is-iaas?hl=es"
+      found: ["infraestructura como servicio", "plataforma como servicio", "software como servicio"]
+      checked: 2026-11-14
+    - label: "Oracle España"
+      url: "https://www.oracle.com/es/cloud/what-is-iaas/"
+      found: ["infraestructura como servicio"]
+      checked: 2026-11-14
+  status: sourced
 
 - id: sec.encryption
   en:
@@ -206,9 +260,10 @@
         kind: verb
         register: informal
         note: >-
-          Also heard in speech, with the noun la encriptación. The RAE
-          dictionary lists encriptar as a synonym of cifrar, but formal
-          writing prefers cifrado.
+          Also heard in speech, with the nouns la encriptación and el
+          encriptado. The RAE dictionary lists encriptar as a synonym of
+          cifrar, and Google Cloud's pages for Spain use encriptado alongside
+          cifrado, but formal writing prefers cifrado.
     definition: >-
       Transformación de los datos mediante un algoritmo y una clave, de modo
       que solo quien tenga la clave correcta pueda leerlos.
@@ -233,6 +288,10 @@
     - label: "Esquema Nacional de Seguridad (RD 311/2022), medida mp.com.2"
       url: "https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191"
       lead: "Se cifrará toda la información transmitida."
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/learn/what-is-encryption?hl=es"
+      found: ["cifrado", "encriptado"]
+      checked: 2026-11-14
   status: draft
 
 - id: sec.data-at-rest
@@ -277,6 +336,10 @@
     - label: "CCN-STIC 499, Arquitecturas de seguridad cloud"
       url: "https://www.ccn-cert.cni.es/pdf/guias/series-ccn-stic/guias-de-acceso-publico-ccn-stic/6807-ccn-stic-499-arquitecturas-de-seguridad-cloud/file.html"
       lead: "Todos los productos o servicios de cifrado en reposo deberán estar incluidos en el CPSTIC"
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-data-security"
+      found: ["en reposo y en tránsito"]
+      checked: 2026-11-14
   status: draft
 
 - id: sec.key-management
@@ -295,6 +358,13 @@
         primary: true
         note: >-
           A key management service keeps its English acronym: "el KMS".
+      - text: administración de claves
+        article: la
+        kind: noun
+        note: >-
+          Microsoft's wording. Its Spanish documentation says administración
+          and administrar where Google, Oracle and official Spanish guidance
+          say gestión and gestionar.
       - text: rotación de claves
         article: la
         kind: noun
@@ -321,6 +391,18 @@
     - label: "Esquema Nacional de Seguridad (RD 311/2022), medida op.exp.10"
       url: "https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191"
       lead: "Protección de claves criptográficas"
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/learn/what-is-encryption?hl=es"
+      found: ["gestión de claves"]
+      checked: 2026-11-14
+    - label: "Oracle España"
+      url: "https://www.oracle.com/es/security/cloud-security/what-is-cloud-security/"
+      found: ["gestión de claves"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-email-encryption"
+      found: ["administración de claves"]
+      checked: 2026-11-14
   status: draft
 
 - id: sec.tokenization
@@ -352,7 +434,15 @@
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
   related: [sec.encryption, sec.dlp, law.personal-data]
-  sources: []
+  sources:
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/security/products/dlp?hl=es"
+      found: ["tokenización"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-data-security"
+      found: ["tokenización"]
+      checked: 2026-11-14
   status: draft
 
 - id: sec.dlp
@@ -400,6 +490,14 @@
     - label: "CCN-STIC 140, Anexo E.4: Sistemas de prevención de fugas de datos"
       url: "https://www.ccn-cert.cni.es/es/pdf/guias/series-ccn-stic/guias-de-acceso-publico-ccn-stic/3965-guia-140-anexo-e-4-sistemas-de-prevencion-de-fugas-de-datos/file"
       lead: "impiden y evitan la transferencia de datos no autorizados y la fuga de información con nivel alto de confidencialidad"
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-data-loss-prevention-dlp"
+      found: ["prevención de pérdida de datos"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/learn/what-is-cloud-security?hl=es"
+      found: ["prevención de la pérdida de datos"]
+      checked: 2026-11-14
   status: draft
 
 - id: cloud.hypervisor
@@ -437,6 +535,10 @@
     - label: "CCN-STIC 887D, Guía de configuración segura multi-cuenta AWS"
       url: "https://www.ccn-cert.cni.es/es/800-guia-esquema-nacional-de-seguridad/5876-ccn-stic-887d-guia-de-configuracion-segura-multi-cuenta-aws/file.html"
       lead: "Un hipervisor o monitor de máquina virtual es una capa de software para realizar una virtualización de hardware"
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/learn/what-is-a-virtual-machine?hl=es"
+      found: ["hipervisor", "máquina host"]
+      checked: 2026-11-14
   status: draft
 
 - id: cloud.virtual-machine
@@ -473,6 +575,10 @@
     - label: "INCIBE, Guía de buenas prácticas de ciberseguridad en redes privadas 5G: glosario"
       url: "https://www.incibe.es/sites/default/files/2025-12/INCIBE&ULE_GuiaBuenasPracticasCiberseguridadRedesPrivadas5G.pdf"
       lead: "Máquina virtual: Emulación por software de un sistema informático completo."
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/learn/what-is-a-virtual-machine?hl=es"
+      found: ["máquina virtual"]
+      checked: 2026-11-14
   status: draft
 
 - id: sec.disaster-recovery
@@ -494,6 +600,10 @@
         note: >-
           The plan is "el plan de recuperación ante desastres". The acronyms
           DR, RTO and RPO stay in English.
+      - text: recuperación tras fallos
+        article: la
+        kind: noun
+        note: Google Cloud's wording on its pages for Spain.
       - text: continuidad de negocio
         article: la
         kind: noun
@@ -511,8 +621,10 @@
       - es: El plan de recuperación ante desastres se prueba dos veces al año.
         en: The disaster recovery plan is tested twice a year.
     watchOut: >-
-      In full, RTO is "tiempo objetivo de recuperación" and RPO is "punto
-      objetivo de recuperación", but in conversation people use the acronyms.
+      Use the acronyms RTO and RPO. Their Spanish expansions are not settled:
+      Google writes "objetivo de tiempo de recuperación" and "objetivo de
+      punto de recuperación", while Spanish official tooling puts the words in
+      a different order.
   topics: [incident]
   technology: []
   curriculum:
@@ -525,6 +637,18 @@
     - label: "CCN, ayuda de PILAR: continuidad"
       url: "https://www.ccn-cert.cni.es/publico/herramientas/Pilar-5.4.8/Pilar_5.4.8/bcm_es/topics/6.html"
       lead: "RTO Tiempo objetivo de recuperación"
+    - label: "Oracle España"
+      url: "https://www.oracle.com/es/cloud/backup-and-disaster-recovery/"
+      found: ["recuperación ante desastres"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-data-security"
+      found: ["recuperación ante desastres"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/learn/what-is-disaster-recovery?hl=es"
+      found: ["recuperación tras fallos", "objetivo de tiempo de recuperación", "objetivo de punto de recuperación"]
+      checked: 2026-11-14
   status: draft
 
 - id: sec.firewall
@@ -550,7 +674,8 @@
         kind: noun
         plural: los firewalls
         note: >-
-          Very common in speech, and kept in vendor product names.
+          The English word. Microsoft and Oracle use it throughout their
+          Spanish documentation; Google's pages for Spain say cortafuegos.
     definition: >-
       Sistema que filtra el tráfico de red entre zonas con distinto nivel de
       confianza según unas reglas definidas.
@@ -575,6 +700,18 @@
     - label: "INCIBE, guía sectorial de turismo y ocio"
       url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia-turismo-ocio.pdf"
       lead: "Un firewall puede ser implementado tanto por software como por hardware."
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/security/products/firewall?hl=es"
+      found: ["servicio de cortafuegos"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-network-security"
+      found: ["los firewalls controlan"]
+      checked: 2026-11-14
+    - label: "Oracle España"
+      url: "https://www.oracle.com/es/security/cloud-security/"
+      found: ["servicio de firewall"]
+      checked: 2026-11-14
   status: draft
 
 - id: sec.sdlc
@@ -595,7 +732,8 @@
         primary: true
         note: >-
           The acronym SDLC stays in English. The word software is not
-          translated: "el software".
+          translated: "el software". Also written "ciclo de vida del
+          desarrollo de software".
     definition: >-
       Secuencia de fases por las que pasa la creación de un software, desde
       los requisitos hasta el mantenimiento.
@@ -615,6 +753,14 @@
     - label: "CCN-STIC 812, Seguridad en entornos y aplicaciones web"
       url: "https://www.ccn-cert.cni.es/es/series-ccn-stic/800-guia-esquema-nacional-de-seguridad/522-ccn-stic-812-seguridad-en-entornos-y-app-web/file"
       lead: "incluir todos los aspectos de seguridad en el ciclo de vida de desarrollo de software (SDLC)"
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/use-cases/ai-sdlc?hl=es"
+      found: ["ciclo de vida de desarrollo de software"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-application-security"
+      found: ["ciclo de vida del desarrollo de software"]
+      checked: 2026-11-14
   status: draft
 
 - id: sec.sandbox
@@ -632,6 +778,10 @@
         primary: true
         note: >-
           Kept in English, including in official Spanish guidance.
+      - text: espacio aislado
+        article: el
+        kind: noun
+        note: Microsoft's translation in its Spanish documentation.
       - text: entorno aislado
         article: el
         kind: noun
@@ -658,6 +808,14 @@
     - label: "INCIBE-CERT, blog: actuación frente a ciberincidentes"
       url: "https://www.incibe.es/incibe-cert/blog/lista-compra-actuacion-frente-ciberincidentes-gestion-y-resiliencia"
       lead: "Sandbox: entorno en el cual se puede ejecutar de forma aislada un código o aplicación sospechosa sin afectar al entorno de explotación."
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/discover/what-is-containerization?hl=es"
+      found: ["sandbox"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-email-security"
+      found: ["espacio aislado", "sandboxing"]
+      checked: 2026-11-14
   status: draft
 
 - id: sec.threat-modelling
@@ -701,6 +859,10 @@
     - label: "INCIBE, diccionario de controles C4V (borrador)"
       url: "https://www.incibe.es/sites/default/files/paginas/publicaciones/ensi/ensi_c4v_02_diccionario-controles_borrador.pdf"
       lead: "Modelado de amenazas/Análisis de riesgos."
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-application-security"
+      found: ["modelado de amenazas"]
+      checked: 2026-11-14
   status: draft
 
 - id: sec.api
@@ -731,9 +893,9 @@
       - es: La API está protegida con autenticación OAuth 2.0.
         en: The API is protected with OAuth 2.0 authentication.
     watchOut: >-
-      The RAE's rule is that acronyms do not take an -s in writing (las API).
-      You will nevertheless see "las APIs" everywhere, and in speech the
-      plural is pronounced with the s.
+      The RAE's rule is that acronyms do not take an -s in writing, and
+      Microsoft follows it (las API). Google writes "las APIs", which is also
+      how the plural is said aloud.
   topics: [appsec]
   technology: []
   curriculum:
@@ -746,6 +908,14 @@
     - label: "INCIBE, Guía de buenas prácticas de ciberseguridad en redes privadas 5G: glosario"
       url: "https://www.incibe.es/sites/default/files/2025-12/INCIBE&ULE_GuiaBuenasPracticasCiberseguridadRedesPrivadas5G.pdf"
       lead: "API (Application Programming Interface / Interfaz de Programación de Aplicaciones)"
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/discover/what-is-api-development?hl=es"
+      found: ["interfaz de programación de aplicaciones", "APIs"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-application-security"
+      found: ["las API"]
+      checked: 2026-11-14
   status: draft
 
 - id: sec.incident-response
@@ -763,7 +933,8 @@
         primary: true
         note: >-
           The team is "el equipo de respuesta a incidentes". The acronyms
-          CSIRT and CERT stay in English.
+          CSIRT and CERT stay in English. Also written "respuesta ante
+          incidentes".
       - text: gestión de incidentes
         article: la
         kind: noun
@@ -797,6 +968,14 @@
     - label: "CCN-STIC 401, Glosario y abreviaturas: Gestión de incidentes"
       url: "https://www.ccn-cert.cni.es/es/series-ccn-stic/guias/glosario-de-terminos.html"
       lead: "Procesos para la detección, notificación, evaluación, respuesta, tratamiento, y aprendizaje de incidentes de seguridad de información."
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/discover/what-is-incident-response?hl=es"
+      found: ["respuesta a incidentes"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-incident-response"
+      found: ["respuesta a incidentes"]
+      checked: 2026-11-14
   status: draft
 
 - id: sec.patch-management
@@ -823,6 +1002,12 @@
         note: >-
           To patch. Everyday engineering usage; formal documents say "aplicar
           parches" or "aplicar actualizaciones de seguridad".
+      - text: revisiones
+        article: las
+        kind: noun
+        note: >-
+          Microsoft's word for patches in its Spanish documentation:
+          "administración de revisiones" is patch management.
     definition: >-
       Identificación, prueba y despliegue controlado de las actualizaciones
       que corrigen vulnerabilidades o defectos del software.
@@ -841,6 +1026,18 @@
     - label: "Diccionario de la lengua española (RAE): parchear"
       url: "https://dle.rae.es/parchear"
       lead: "Poner parches."
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/discover/what-is-virtual-desktop-infrastructure-vdi?hl=es"
+      found: ["aplicar parches"]
+      checked: 2026-11-14
+    - label: "Oracle España"
+      url: "https://www.oracle.com/es/security/cloud-security/"
+      found: ["aplicación de parches"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-endpoint-security"
+      found: ["administración de revisiones"]
+      checked: 2026-11-14
   status: draft
 
 - id: sec.log
@@ -888,6 +1085,18 @@
     - label: "INCIBE, Taxonomía de soluciones de ciberseguridad"
       url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/taxonomia_ciberseguridad.pdf"
       lead: "Son herramientas de gestión y análisis de logs, para la protección de activos e información frente a amenazas."
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/discover/what-is-log-analytics?hl=es"
+      found: ["los registros"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-siem"
+      found: ["registros"]
+      checked: 2026-11-14
+    - label: "Oracle España"
+      url: "https://www.oracle.com/es/security/cloud-security/cloud-guard/"
+      found: ["logs"]
+      checked: 2026-11-14
   status: draft
 
 - id: sec.backup
@@ -1082,19 +1291,21 @@
   es:
     verdict: translated
     forms:
-      - text: análisis de riesgos
-        article: el
-        kind: noun
-        primary: true
-        note: >-
-          The term used by Spain's national security framework (ENS) and its
-          public-sector methodology, MAGERIT. The safest choice in Spain.
       - text: evaluación de riesgos
         article: la
         kind: noun
+        primary: true
         note: >-
-          Common as a general translation. In the ISO vocabulary it has the
-          narrower meaning of "risk evaluation", the step after analysis.
+          The direct translation, used by Google, Microsoft and Oracle in
+          Spanish. In the ISO vocabulary it has the narrower meaning of "risk
+          evaluation", the step after analysis.
+      - text: análisis de riesgos
+        article: el
+        kind: noun
+        note: >-
+          The term used by Spain's national security framework (ENS) and its
+          public-sector methodology, MAGERIT. Expect it in public-sector
+          work.
       - text: apreciación del riesgo
         article: la
         kind: noun
@@ -1106,7 +1317,7 @@
       Identificación de las amenazas y vulnerabilidades de un activo y
       estimación de la probabilidad y el impacto del daño.
     examples:
-      - es: Antes de migrar a la nube hay que hacer un análisis de riesgos.
+      - es: Antes de migrar a la nube hay que hacer una evaluación de riesgos.
         en: Before migrating to the cloud, a risk assessment has to be done.
     watchOut: >-
       Three Spanish terms compete for this one English term, and standards
@@ -1127,4 +1338,16 @@
     - label: "MAGERIT v3, Libro I: Método"
       url: "https://www.ccn-cert.cni.es/documentos-publicos/1789-magerit-libro-i-metodo/file.html"
       lead: "Proceso sistemático para estimar la magnitud de los riesgos a que está expuesta una Organización."
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/discover/incident-response-plan-template?hl=es"
+      found: ["evaluación de riesgos"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-incident-response"
+      found: ["evaluación de riesgos"]
+      checked: 2026-11-14
+    - label: "Oracle España"
+      url: "https://www.oracle.com/es/cloud/multicloud/what-is-multicloud/"
+      found: ["evaluación de riesgos"]
+      checked: 2026-11-14
   status: draft

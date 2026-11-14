@@ -38,7 +38,11 @@ files; nothing about a term is stored anywhere else.
   sources:
     - label: ...
       url: ...
-      lead: ...                 # optional: text a search attributed to the URL
+      found: ["..."]            # text confirmed present in the fetched page
+      checked: 2026-11-14       # the date it was fetched
+    - label: ...
+      url: ...
+      lead: ...                 # text a search attributed to a page not yet read
   status: draft                 # draft | sourced | verified
 ```
 
@@ -50,15 +54,15 @@ files; nothing about a term is stored anywhere else.
 
 ## Status
 
-- `draft`: written from general knowledge. Sources, if listed, have not been
-  opened and read.
-- `sourced`: every form and note has been checked against a listed source
-  that was actually read.
+- `draft`: at least one form or note still rests on general knowledge or on
+  a lead.
+- `sourced`: every form and note rests on a checked source.
 - `verified`: additionally confirmed by a native-speaking professional.
 
-A `lead` is text that a web search attributed to a URL. It is a pointer for
-checking, not evidence. An entry moves to `sourced` only when the page itself
-has been read.
+Sources come in two strengths. A source with `found` and `checked` was
+fetched on that date and contains that text. A source with only a `lead`
+carries text that a web search attributed to the URL; the page itself has not
+been read, so it is a pointer for checking, not evidence.
 
 ## ID prefixes
 
