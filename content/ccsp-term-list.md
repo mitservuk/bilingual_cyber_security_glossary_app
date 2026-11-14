@@ -1,6 +1,6 @@
 # CCSP term list
 
-The working list for completing CCSP: 25 terms are written and 379 are proposed, 404 in all.
+The working list for completing CCSP: 97 terms are written and 307 are proposed, 404 in all.
 
 This is a proposal to review, trim and add to before the entries are written.
 
@@ -14,27 +14,7 @@ exam touches it in several.
 
 ## 1. Cloud Concepts, Architecture and Design
 
-76 terms: 4 written, 72 proposed.
-
-**Written:** cloud computing, shared responsibility model, multitenancy, infrastructure as a service (IaaS).
-
-**Roles** (6): cloud service provider (CSP), cloud service customer, cloud service broker, cloud service partner, cloud auditor, regulator.
-
-**Essential characteristics** (6): on-demand self-service, broad network access, resource pooling, rapid elasticity, measured service, scalability.
-
-**Service and deployment models** (7): platform as a service (PaaS), software as a service (SaaS), public cloud, private cloud, hybrid cloud, community cloud, multi-cloud.
-
-**Building blocks and related technology** (11): virtualization, container, orchestration, microservices, serverless computing, edge computing, confidential computing, Internet of Things (IoT), blockchain, quantum computing, DevSecOps.
-
-**Shared considerations** (8): interoperability, portability, reversibility, resiliency, availability, vendor lock-in, service level agreement (SLA), governance.
-
-**Security concepts** (17): confidentiality, integrity, defence in depth, least privilege, separation of duties, zero trust, identity and access management (IAM), access control, cloud access security broker (CASB), media sanitization, cryptographic erasure, security baseline, traffic inspection, geofencing, isolation, ephemeral computing, secure by design.
-
-**Design** (5): business impact analysis (BIA), cost-benefit analysis, return on investment (ROI), reference architecture, Well-Architected Framework.
-
-**Evaluating providers** (4): Common Criteria, FIPS 140-3, CSA STAR, ISO/IEC 27017.
-
-**Artificial intelligence** (8): artificial intelligence (AI), machine learning, large language model (LLM), training data, data set, model, data science, AI ethics.
+76 terms, all written.
 
 ## 2. Cloud Data Security
 

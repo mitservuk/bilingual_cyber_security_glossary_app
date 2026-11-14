@@ -32,7 +32,7 @@ VERDICTS = {"translated", "english-kept", "both"}
 STATUSES = {"draft", "sourced", "verified"}
 KINDS = {"noun", "verb", "adjective"}
 REGISTERS = {"formal", "informal"}
-USED_BY = {"official", "engineers", "google", "microsoft", "oracle", "aws"}
+USED_BY = {"official", "eu", "engineers", "google", "microsoft", "oracle", "aws"}
 
 
 def normalise(text):

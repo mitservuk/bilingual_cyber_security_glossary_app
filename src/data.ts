@@ -97,6 +97,7 @@ export function spanishSummary(t: Term) {
 /** Where a Spanish form was seen in use, from sources that were read. */
 export const SEEN_IN_LABEL: Record<string, string> = {
   official: 'Spanish government',
+  eu: 'EU law',
   engineers: 'Blogs and job ads',
   google: 'Google docs',
   microsoft: 'Microsoft docs',
