@@ -18,8 +18,6 @@ import { useStore } from '../store';
 
 const search = createSearch(terms);
 
-const today = new Intl.DateTimeFormat('en-GB', { weekday: 'long', day: 'numeric', month: 'long' });
-
 export function Home() {
   const [query, setQuery] = useState('');
   const { recent } = useStore();
@@ -28,9 +26,9 @@ export function Home() {
 
   return (
     <main className="screen">
-      <header className="title-block">
-        <div className="eyebrow">{today.format(new Date())}</div>
-        <h1>{searching ? 'Search' : 'Today'}</h1>
+      <header className="brand">
+        <img src="icon-192.png" alt="" width="40" height="40" />
+        <h1>Bilingual Cyber</h1>
       </header>
 
       <div className="search-field">

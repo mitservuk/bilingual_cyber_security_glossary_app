@@ -24,6 +24,11 @@ const AXES: { value: Axis; label: string }[] = [
 
 const count = (n: number) => `${n} ${n === 1 ? 'term' : 'terms'}`;
 
+const monthYear = new Intl.DateTimeFormat('en-GB', { month: 'short', year: 'numeric', timeZone: 'UTC' });
+
+/** Turns an exam outline's version, such as "2026-08", into "Aug 2026". */
+const outlineDate = (outline: string) => monthYear.format(new Date(`${outline}-01T00:00:00Z`));
+
 let lastAxis: Axis = 'cert';
 
 export function Browse({ axis: fromRoute }: { axis?: string }) {
@@ -64,9 +69,8 @@ export function Browse({ axis: fromRoute }: { axis?: string }) {
 }
 
 function Certifications() {
-  // With a single certification available there is nothing to choose, so it starts open.
-  const available = certifications.filter((c) => !c.comingSoon);
-  const [open, setOpen] = useState<string | null>(available.length === 1 ? available[0].id : null);
+  // Every certification starts closed, so the whole list is visible at once.
+  const [open, setOpen] = useState<string | null>(null);
 
   return (
     <div className="card list">
@@ -106,7 +110,10 @@ function CertificationSection({
     <div className="cert-section">
       <button type="button" className="row cert" aria-expanded={open} aria-controls={panel} onClick={onToggle}>
         <span className="row-text">
-          <span className="row-title">{cert.name}</span>
+          <span className="row-title">
+            {cert.name}
+            {cert.outline && <span className="outline"> ({outlineDate(cert.outline)})</span>}
+          </span>
           <span className="secondary small">{cert.fullName}</span>
         </span>
         <span className="row-meta">{count(termsFor('cert', cert.id).length)}</span>
@@ -126,7 +133,6 @@ function CertificationSection({
               <ChevronIcon />
             </a>
           ))}
-          {cert.outlineLabel && <p className="footnote domains-note">{cert.outlineLabel}</p>}
         </div>
       )}
     </div>
