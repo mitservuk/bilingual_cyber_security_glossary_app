@@ -38,20 +38,10 @@ technology:
   - { id: ai-ml, en: AI and machine learning, es: IA y aprendizaje automático }
   - { id: endpoint, en: Endpoints, es: Puestos de trabajo }
   - { id: identity-platforms, en: Identity platforms, es: Plataformas de identidad }
-
-# A certification with `comingSoon: true` is listed in the app but has no
-# domains or terms yet.
+# Exams a professional studies for. One with no `domains` yet is listed in the
+# app as "coming soon". Names and codes change often and need confirming
+# against each issuer before they are relied on.
 certifications:
-  - id: CISSP
-    name: CISSP
-    fullName: Certified Information Systems Security Professional
-    issuer: ISC2
-    comingSoon: true
-  - id: KCSA
-    name: KCSA
-    fullName: Kubernetes and Cloud Native Security Associate
-    issuer: The Linux Foundation
-    comingSoon: true
   - id: CCSP
     name: CCSP
     fullName: Certified Cloud Security Professional
@@ -65,3 +55,134 @@ certifications:
       - { n: 4, name: "Cloud Application Security", weight: 16 }
       - { n: 5, name: "Cloud Security Operations", weight: 17 }
       - { n: 6, name: "Legal, Risk and Compliance", weight: 13 }
+  - { id: CC, name: "CC", fullName: "Certified in Cybersecurity", issuer: "ISC2" }
+  - { id: SSCP, name: "SSCP", fullName: "Systems Security Certified Practitioner", issuer: "ISC2" }
+  - { id: CISSP, name: "CISSP", fullName: "Certified Information Systems Security Professional", issuer: "ISC2" }
+  - { id: CGRC, name: "CGRC", fullName: "Certified in Governance, Risk and Compliance", issuer: "ISC2" }
+  - { id: CSSLP, name: "CSSLP", fullName: "Certified Secure Software Lifecycle Professional", issuer: "ISC2" }
+  - { id: CISA, name: "CISA", fullName: "Certified Information Systems Auditor", issuer: "ISACA" }
+  - { id: CISM, name: "CISM", fullName: "Certified Information Security Manager", issuer: "ISACA" }
+  - { id: CRISC, name: "CRISC", fullName: "Certified in Risk and Information Systems Control", issuer: "ISACA" }
+  - { id: CGEIT, name: "CGEIT", fullName: "Certified in the Governance of Enterprise IT", issuer: "ISACA" }
+  - { id: CDPSE, name: "CDPSE", fullName: "Certified Data Privacy Solutions Engineer", issuer: "ISACA" }
+  - { id: SECURITY-PLUS, name: "Security+", issuer: "CompTIA" }
+  - { id: CYSA-PLUS, name: "CySA+", fullName: "Cybersecurity Analyst", issuer: "CompTIA" }
+  - { id: PENTEST-PLUS, name: "PenTest+", issuer: "CompTIA" }
+  - { id: SECURITYX, name: "SecurityX", fullName: "Formerly CASP+", issuer: "CompTIA" }
+  - { id: CLOUD-PLUS, name: "Cloud+", issuer: "CompTIA" }
+  - { id: CEH, name: "CEH", fullName: "Certified Ethical Hacker", issuer: "EC-Council" }
+  - { id: OSCP, name: "OSCP", fullName: "OffSec Certified Professional", issuer: "OffSec" }
+  - { id: GSEC, name: "GSEC", fullName: "Security Essentials", issuer: "GIAC (SANS)" }
+  - { id: GCIH, name: "GCIH", fullName: "Certified Incident Handler", issuer: "GIAC (SANS)" }
+  - { id: GCIA, name: "GCIA", fullName: "Certified Intrusion Analyst", issuer: "GIAC (SANS)" }
+  - { id: GPEN, name: "GPEN", fullName: "Penetration Tester", issuer: "GIAC (SANS)" }
+  - { id: GWAPT, name: "GWAPT", fullName: "Web Application Penetration Tester", issuer: "GIAC (SANS)" }
+  - { id: GCFA, name: "GCFA", fullName: "Certified Forensic Analyst", issuer: "GIAC (SANS)" }
+  - { id: GMON, name: "GMON", fullName: "Continuous Monitoring", issuer: "GIAC (SANS)" }
+  - { id: GDSA, name: "GDSA", fullName: "Defensible Security Architecture", issuer: "GIAC (SANS)" }
+  - { id: GSLC, name: "GSLC", fullName: "Security Leadership", issuer: "GIAC (SANS)" }
+  - { id: GSTRT, name: "GSTRT", fullName: "Strategic Planning, Policy and Leadership", issuer: "GIAC (SANS)" }
+  - { id: GCLD, name: "GCLD", fullName: "Cloud Security Essentials", issuer: "GIAC (SANS)" }
+  - { id: GPCS, name: "GPCS", fullName: "Public Cloud Security", issuer: "GIAC (SANS)" }
+  - { id: GCSA, name: "GCSA", fullName: "Cloud Security Automation", issuer: "GIAC (SANS)" }
+  - { id: GCTD, name: "GCTD", fullName: "Cloud Threat Detection", issuer: "GIAC (SANS)" }
+  - { id: GCPN, name: "GCPN", fullName: "Cloud Penetration Tester", issuer: "GIAC (SANS)" }
+  - { id: GCFR, name: "GCFR", fullName: "Cloud Forensics Responder", issuer: "GIAC (SANS)" }
+  - { id: GICSP, name: "GICSP", fullName: "Global Industrial Cyber Security Professional", issuer: "GIAC (SANS)" }
+  - { id: SABSA-SCF, name: "SABSA Foundation", fullName: "SABSA Chartered Security Architect, Foundation (SCF)", issuer: "The SABSA Institute" }
+  - { id: SABSA-SCP, name: "SABSA Practitioner", fullName: "SABSA Chartered Security Architect, Practitioner (SCP)", issuer: "The SABSA Institute" }
+  - { id: SABSA-SCM, name: "SABSA Master", fullName: "SABSA Chartered Security Architect, Master (SCM)", issuer: "The SABSA Institute" }
+  - { id: CCSK, name: "CCSK", fullName: "Certificate of Cloud Security Knowledge", issuer: "Cloud Security Alliance" }
+  - { id: CCZT, name: "CCZT", fullName: "Certificate of Competence in Zero Trust", issuer: "Cloud Security Alliance" }
+  - { id: AWS-CLOUD-PRACTITIONER, name: "Cloud Practitioner", issuer: "AWS" }
+  - { id: AWS-SA-ASSOCIATE, name: "Solutions Architect, Associate", issuer: "AWS" }
+  - { id: AWS-SA-PROFESSIONAL, name: "Solutions Architect, Professional", issuer: "AWS" }
+  - { id: AWS-SECURITY-SPECIALTY, name: "Security, Specialty", issuer: "AWS" }
+  - { id: AZ-900, name: "AZ-900", fullName: "Azure Fundamentals", issuer: "Microsoft" }
+  - { id: SC-900, name: "SC-900", fullName: "Security, Compliance and Identity Fundamentals", issuer: "Microsoft" }
+  - { id: AZ-104, name: "AZ-104", fullName: "Azure Administrator", issuer: "Microsoft" }
+  - { id: AZ-500, name: "AZ-500", fullName: "Azure Security Engineer", issuer: "Microsoft" }
+  - { id: AZ-305, name: "AZ-305", fullName: "Azure Solutions Architect", issuer: "Microsoft" }
+  - { id: SC-200, name: "SC-200", fullName: "Security Operations Analyst", issuer: "Microsoft" }
+  - { id: SC-300, name: "SC-300", fullName: "Identity and Access Administrator", issuer: "Microsoft" }
+  - { id: SC-100, name: "SC-100", fullName: "Cybersecurity Architect", issuer: "Microsoft" }
+  - { id: GCP-CDL, name: "Cloud Digital Leader", issuer: "Google Cloud" }
+  - { id: GCP-ACE, name: "Associate Cloud Engineer", issuer: "Google Cloud" }
+  - { id: GCP-PCA, name: "Professional Cloud Architect", issuer: "Google Cloud" }
+  - { id: GCP-PCSE, name: "Professional Cloud Security Engineer", issuer: "Google Cloud" }
+  - { id: KCNA, name: "KCNA", fullName: "Kubernetes and Cloud Native Associate", issuer: "The Linux Foundation" }
+  - { id: KCSA, name: "KCSA", fullName: "Kubernetes and Cloud Native Security Associate", issuer: "The Linux Foundation" }
+  - { id: CKA, name: "CKA", fullName: "Certified Kubernetes Administrator", issuer: "The Linux Foundation" }
+  - { id: CKAD, name: "CKAD", fullName: "Certified Kubernetes Application Developer", issuer: "The Linux Foundation" }
+  - { id: CKS, name: "CKS", fullName: "Certified Kubernetes Security Specialist", issuer: "The Linux Foundation" }
+  - { id: TERRAFORM-ASSOCIATE, name: "Terraform Associate", issuer: "HashiCorp" }
+  - { id: VAULT-ASSOCIATE, name: "Vault Associate", issuer: "HashiCorp" }
+  - { id: CIPP-E, name: "CIPP/E", fullName: "Certified Information Privacy Professional, Europe", issuer: "IAPP" }
+  - { id: CIPM, name: "CIPM", fullName: "Certified Information Privacy Manager", issuer: "IAPP" }
+  - { id: CIPT, name: "CIPT", fullName: "Certified Information Privacy Technologist", issuer: "IAPP" }
+  - { id: ITIL-4-FOUNDATION, name: "ITIL 4 Foundation", issuer: "PeopleCert" }
+  - { id: ISO-27001-LA, name: "ISO/IEC 27001 Lead Auditor", issuer: "Accredited training bodies" }
+  - { id: ISO-27001-LI, name: "ISO/IEC 27001 Lead Implementer", issuer: "Accredited training bodies" }
+  - { id: TOGAF-CERT, name: "TOGAF", issuer: "The Open Group" }
+
+# Laws, regulations, standards and frameworks. `region` is where each one
+# originates: es, eu, uk, us or intl. `entry` is the id of the glossary term
+# that describes the framework itself, where there is one. A term joins a
+# framework by listing its id under `frameworks`.
+frameworks:
+  - { id: ENS, name: "ENS", fullName: "Esquema Nacional de Seguridad", summary: "National security framework for the public sector and its suppliers", region: es, entry: fw.ens }
+  - { id: ENI, name: "ENI", fullName: "Esquema Nacional de Interoperabilidad", summary: "National interoperability framework for the public sector", region: es }
+  - { id: LOPDGDD, name: "LOPDGDD", fullName: "Ley Orgánica de Protección de Datos Personales y garantía de los derechos digitales", summary: "The Spanish data protection law that sits alongside the GDPR", region: es }
+  - { id: LEY-PIC, name: "Ley PIC", fullName: "Ley de protección de las infraestructuras críticas", summary: "Protection of critical infrastructure", region: es }
+  - { id: MAGERIT, name: "MAGERIT", summary: "The public sector's risk analysis and management methodology", region: es }
+  - { id: CCN-STIC, name: "CCN-STIC guides", summary: "Security guidance from the national cryptology centre", region: es }
+  - { id: GDPR, name: "GDPR", fullName: "General Data Protection Regulation", summary: "Data protection across the EU. RGPD in Spanish", region: eu, entry: fw.gdpr }
+  - { id: NIS2, name: "NIS2", summary: "Security of network and information systems", region: eu }
+  - { id: DORA, name: "DORA", fullName: "Digital Operational Resilience Act", summary: "Digital operational resilience in financial services", region: eu }
+  - { id: CRA, name: "Cyber Resilience Act", summary: "Security of products with digital elements", region: eu }
+  - { id: AI-ACT, name: "AI Act", summary: "Regulation of artificial intelligence", region: eu }
+  - { id: DATA-ACT, name: "Data Act", summary: "Access to data and switching between data services", region: eu }
+  - { id: EIDAS, name: "eIDAS", summary: "Electronic identification and trust services", region: eu }
+  - { id: EU-CSA, name: "EU Cybersecurity Act", summary: "European cybersecurity certification schemes, including EUCC and EUCS", region: eu }
+  - { id: UK-GDPR, name: "UK GDPR and Data Protection Act 2018", summary: "Data protection in the United Kingdom", region: uk }
+  - { id: UK-NIS, name: "NIS Regulations 2018", summary: "Security of network and information systems", region: uk }
+  - { id: CYBER-ESSENTIALS, name: "Cyber Essentials", summary: "Baseline certification scheme", region: uk }
+  - { id: NCSC-CAF, name: "NCSC Cyber Assessment Framework", summary: "Assessment framework for essential services", region: uk }
+  - { id: NCSC-CLOUD, name: "NCSC Cloud Security Principles", summary: "Guidance for choosing and using cloud services", region: uk }
+  - { id: NIST-CSF, name: "NIST Cybersecurity Framework", summary: "Outcome-based security framework, version 2.0", region: us }
+  - { id: NIST-800-53, name: "NIST SP 800-53", summary: "Catalogue of security and privacy controls", region: us }
+  - { id: NIST-800-171, name: "NIST SP 800-171", summary: "Protecting controlled unclassified information", region: us }
+  - { id: NIST-800-207, name: "NIST SP 800-207", summary: "Zero trust architecture", region: us }
+  - { id: NIST-RMF, name: "NIST Risk Management Framework", summary: "Risk management process, SP 800-37", region: us }
+  - { id: NIST-AI-RMF, name: "NIST AI Risk Management Framework", summary: "Managing the risks of artificial intelligence", region: us }
+  - { id: FEDRAMP, name: "FedRAMP", summary: "Cloud authorisation for federal use", region: us }
+  - { id: CMMC, name: "CMMC", fullName: "Cybersecurity Maturity Model Certification", summary: "Defence supply-chain security certification", region: us }
+  - { id: HIPAA, name: "HIPAA and HITECH", summary: "Protection of health information", region: us }
+  - { id: SOX, name: "Sarbanes-Oxley Act", fullName: "SOX", summary: "Controls over financial reporting", region: us }
+  - { id: GLBA, name: "GLBA", fullName: "Gramm-Leach-Bliley Act", summary: "Financial privacy", region: us }
+  - { id: CCPA, name: "CCPA and CPRA", summary: "California privacy law", region: us }
+  - { id: NERC-CIP, name: "NERC CIP", summary: "Critical infrastructure protection in the electricity sector", region: us }
+  - { id: FIPS-140-3, name: "FIPS 140-3", summary: "Validation of cryptographic modules", region: us, entry: fw.fips-140-3 }
+  - { id: ISO-27001, name: "ISO/IEC 27001 and 27002", summary: "Information security management and controls", region: intl }
+  - { id: ISO-27005, name: "ISO/IEC 27005", summary: "Information security risk management", region: intl }
+  - { id: ISO-27017, name: "ISO/IEC 27017", summary: "Security controls for cloud services", region: intl, entry: fw.iso-27017 }
+  - { id: ISO-27018, name: "ISO/IEC 27018", summary: "Personal data in public clouds", region: intl }
+  - { id: ISO-27701, name: "ISO/IEC 27701", summary: "Privacy information management", region: intl }
+  - { id: ISO-22301, name: "ISO 22301", summary: "Business continuity management", region: intl }
+  - { id: ISO-20000, name: "ISO/IEC 20000-1", summary: "IT service management", region: intl }
+  - { id: ISO-31000, name: "ISO 31000", summary: "Risk management", region: intl }
+  - { id: ISO-42001, name: "ISO/IEC 42001", summary: "Management systems for artificial intelligence", region: intl }
+  - { id: PCI-DSS, name: "PCI DSS", fullName: "Payment Card Industry Data Security Standard", summary: "Protection of payment card data", region: intl }
+  - { id: SOC-2, name: "SOC 2", summary: "Assurance reports on service organisations, under SSAE 18 and ISAE 3402", region: intl }
+  - { id: CSA-CCM, name: "CSA Cloud Controls Matrix and STAR", summary: "Cloud controls and provider assurance", region: intl, entry: fw.csa-star }
+  - { id: CIS, name: "CIS Controls and Benchmarks", summary: "Prioritised controls and hardening baselines", region: intl }
+  - { id: COBIT, name: "COBIT", summary: "Governance of enterprise IT", region: intl }
+  - { id: ITIL, name: "ITIL", summary: "IT service management practice", region: intl }
+  - { id: COSO, name: "COSO", summary: "Internal control and enterprise risk", region: intl }
+  - { id: COMMON-CRITERIA, name: "Common Criteria", summary: "Security evaluation of IT products", region: intl, entry: fw.common-criteria }
+  - { id: MITRE-ATTACK, name: "MITRE ATT&CK", summary: "Adversary tactics and techniques", region: intl }
+  - { id: OWASP, name: "OWASP Top 10, ASVS and SAMM", summary: "Application security references", region: intl }
+  - { id: SLSA, name: "SLSA", summary: "Integrity levels for the software supply chain", region: intl }
+  - { id: SABSA, name: "SABSA", summary: "Security architecture method", region: intl }
+  - { id: TOGAF, name: "TOGAF", summary: "Enterprise architecture method", region: intl }
+  - { id: WELL-ARCHITECTED, name: "Well-Architected Frameworks", summary: "The cloud providers' own design guidance", region: intl, entry: fw.well-architected-framework }

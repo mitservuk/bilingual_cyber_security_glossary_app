@@ -4,6 +4,7 @@ import { ClearIcon, SearchIcon } from '../components/Icons';
 import {
   certifications,
   formLabel,
+  frameworks,
   getTerm,
   populated,
   primaryForm,
@@ -73,10 +74,10 @@ function Modules({ recent }: { recent: string[] }) {
   const form = primaryForm(word);
   const example = word.es.examples[0];
   const recentTerms = recent.flatMap((id) => getTerm(id) ?? []).slice(0, 3);
-  // Fixed entry points into the glossary, in alphabetical order.
+  // The four ways into the glossary, in alphabetical order.
   const tiles = [
-    { label: 'All terms', count: terms.length, path: '/list/all' },
     { label: 'Certifications', count: certifications.length, path: '/browse/cert' },
+    { label: 'Frameworks', count: frameworks.length, path: '/browse/framework' },
     { label: 'Technologies', count: populated(technology, 'tech').length, path: '/browse/tech' },
     { label: 'Topics', count: populated(topics, 'topic').length, path: '/browse/topic' },
   ];
@@ -113,7 +114,10 @@ function Modules({ recent }: { recent: string[] }) {
       )}
 
       <section className="section">
-        <h2>Browse</h2>
+        <div className="section-head">
+          <h2>Browse</h2>
+          <a href={href('/list/all')}>All {terms.length} terms</a>
+        </div>
         <div className="tiles">
           {tiles.map((tile) => (
             <a key={tile.path} className="tile" href={href(tile.path)}>

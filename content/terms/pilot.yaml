@@ -1440,6 +1440,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 6 }
+  frameworks: [GDPR]
   related: [law.data-controller, law.personal-data]
   sources:
     - label: "EUR-Lex, Reglamento (UE) 2016/679: síntesis"
@@ -1492,6 +1493,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 6 }
+  frameworks: [GDPR]
   related: [fw.gdpr, law.personal-data, cloud.shared-responsibility]
   sources:
     - label: "Reglamento (UE) 2016/679, artículo 4, apartados 7 y 8"
@@ -1538,6 +1540,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 6 }
+  frameworks: [GDPR]
   related: [fw.gdpr, law.data-controller, sec.dlp]
   sources:
     - label: "Reglamento (UE) 2016/679, artículo 4, apartado 1"

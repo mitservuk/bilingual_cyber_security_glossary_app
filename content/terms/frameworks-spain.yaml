@@ -1,0 +1,58 @@
+# Spanish frameworks and their own vocabulary.
+# These are Spanish concepts with no real English name, so they are
+# Spanish-first: `headword: es` puts the Spanish form in the title.
+# Format is described in content/README.md.
+
+- id: fw.ens
+  headword: es
+  en:
+    term: National Security Framework
+    definition: >-
+      Spain's mandatory security framework for public-sector information
+      systems and for the private companies that supply them. It sets basic
+      principles, minimum requirements and a catalogue of security measures,
+      applied according to the category of the system: BÁSICA, MEDIA or ALTA.
+  es:
+    verdict: translated
+    acronym: ENS
+    forms:
+      - text: Esquema Nacional de Seguridad
+        article: el
+        kind: noun
+        primary: true
+        usedBy: [official, engineers, google]
+        note: Regulated by Real Decreto 311/2022.
+      - text: ENS
+        article: el
+        kind: noun
+        usedBy: [official, engineers, google]
+        note: >-
+          The acronym is the everyday form: "el ENS", "conformidad con el
+          ENS".
+    definition: >-
+      Marco obligatorio que fija los principios, los requisitos y las medidas
+      de seguridad de los sistemas de información del sector público español
+      y de sus proveedores.
+    examples:
+      - es: Para trabajar con la Administración necesitamos la certificación de conformidad con el ENS.
+        en: To work with the public administration we need certification of conformity with the ENS.
+    watchOut: >-
+      Esquema here means a framework or scheme, not a diagram.
+  topics: [grc]
+  technology: []
+  frameworks: [ENS]
+  related: [sec.risk-assessment, sec.least-privilege, sec.separation-of-duties, fw.gdpr]
+  sources:
+    - label: "Real Decreto 311/2022, por el que se regula el Esquema Nacional de Seguridad"
+      url: "https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191"
+      found: ["por el que se regula el Esquema Nacional de Seguridad", "conformidad con el ENS", "categoría ALTA"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/security/compliance/ens?hl=es"
+      found: ["Esquema Nacional de Seguridad (ENS)", "los requisitos definidos en el ENS"]
+      checked: 2026-11-14
+    - label: "Tecnoempleo, oferta de empleo en España"
+      url: "https://www.tecnoempleo.com/consultor-normativa-ciberseguridad-gmv/iso-27001-ens/rf-97cc1e7a629fc36a1043"
+      found: ["el Esquema Nacional de Seguridad (ENS)"]
+      checked: 2026-11-14
+  status: sourced

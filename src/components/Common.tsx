@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { type Term, spanishSummary } from '../data';
+import { type Term, spanishSummary, titleOf } from '../data';
 import { href } from '../router';
 import { canSpeak, speak } from '../speech';
 import { ChevronIcon, SpeakerIcon } from './Icons';
@@ -7,12 +7,21 @@ import { ChevronIcon, SpeakerIcon } from './Icons';
 export function TermRow({ term }: { term: Term }) {
   return (
     <a className="row" href={href(`/term/${term.id}`)}>
-      <span className="row-text">
-        <span className="row-title">{term.en.term}</span>
-        <span className="row-es" lang="es">
-          {spanishSummary(term)}
+      {term.headword === 'es' ? (
+        <span className="row-text">
+          <span className="row-title" lang="es">
+            {titleOf(term)}
+          </span>
+          <span className="secondary">{term.en.term}</span>
         </span>
-      </span>
+      ) : (
+        <span className="row-text">
+          <span className="row-title">{term.en.term}</span>
+          <span className="row-es" lang="es">
+            {spanishSummary(term)}
+          </span>
+        </span>
+      )}
       <ChevronIcon />
     </a>
   );

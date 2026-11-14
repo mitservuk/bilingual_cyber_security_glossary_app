@@ -4413,6 +4413,7 @@
   technology: [cloud-general, aws, azure]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+  frameworks: [WELL-ARCHITECTED]
   related: [cloud.reference-architecture, sec.secure-by-design, cloud.shared-responsibility]
   sources:
     - label: "Paradigma Digital, blog"
@@ -4477,6 +4478,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+  frameworks: [COMMON-CRITERIA]
   related: [fw.fips-140-3, fw.iso-27017, fw.csa-star]
   sources:
     - label: "Orden PRE/2740/2007, Reglamento de Evaluación y Certificación de la Seguridad de las TI"
@@ -4550,6 +4552,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+  frameworks: [FIPS-140-3]
   related: [fw.common-criteria, sec.key-management, sec.encryption]
   sources:
     - label: "Google Cloud, páginas para España"
@@ -4603,6 +4606,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+  frameworks: [CSA-CCM]
   related: [fw.iso-27017, fw.common-criteria, cloud.service-provider, cloud.auditor]
   sources:
     - label: "Google Cloud, páginas para España"
@@ -4655,6 +4659,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+  frameworks: [ISO-27017]
   related: [fw.csa-star, fw.common-criteria, cloud.service-provider, cloud.shared-responsibility]
   sources:
     - label: "Google Cloud, páginas para España"
