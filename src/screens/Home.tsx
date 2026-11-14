@@ -57,7 +57,7 @@ export function Home() {
 
       {searching ? (
         results.length ? (
-          <TermList terms={results} showVerdict />
+          <TermList terms={results} />
         ) : (
           <Empty title="No matches">Nothing matches “{query.trim()}” yet. Try the English or the Spanish word.</Empty>
         )

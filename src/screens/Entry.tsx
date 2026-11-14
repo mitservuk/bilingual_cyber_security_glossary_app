@@ -6,8 +6,7 @@ import {
   type Lang,
   type Source,
   type Term,
-  USED_BY_LABEL,
-  VERDICT_LABEL,
+  SEEN_IN_LABEL,
   alphabetical,
   certifications,
   formLabel,
@@ -103,10 +102,7 @@ export function Entry({ id }: { id: string }) {
       </header>
 
       <section className="section">
-        <div className="section-head">
-          <h2>In Spain</h2>
-          <span className="secondary">{VERDICT_LABEL[term.es.verdict]}</span>
-        </div>
+        <h2>In Spain</h2>
         <div className="card forms">
           {term.es.forms.map((f) => (
             <div key={f.text} className={f.primary ? 'form primary' : 'form'}>
@@ -117,10 +113,11 @@ export function Entry({ id }: { id: string }) {
                 {formDetail(f) && <div className="secondary">{formDetail(f)}</div>}
                 {f.note && <p className="note">{f.note}</p>}
                 {f.usedBy && (
-                  <div className="chips" aria-label="Used by">
+                  <div className="chips">
+                    <span className="chips-label">Seen in</span>
                     {f.usedBy.map((u) => (
                       <span key={u} className="chip">
-                        {USED_BY_LABEL[u] ?? u}
+                        {SEEN_IN_LABEL[u] ?? u}
                       </span>
                     ))}
                   </div>
@@ -196,6 +193,10 @@ function Sources({ term }: { term: Term }) {
         </span>
       </summary>
       <p className="note sources-explain">{status.explain}</p>
+      <p className="note sources-explain">
+        “Seen in” shows where each Spanish form was found in use: Spanish government guidance such as INCIBE,
+        engineering blogs and job adverts from Spain, or a vendor’s documentation written for Spain.
+      </p>
       {term.sources.map((s) => (
         <SourceRow key={s.url + s.label} source={s} />
       ))}

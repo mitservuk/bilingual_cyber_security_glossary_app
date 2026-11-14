@@ -1,10 +1,10 @@
 import type { ReactNode } from 'react';
-import { type Term, VERDICT_LABEL, spanishSummary } from '../data';
+import { type Term, spanishSummary } from '../data';
 import { href } from '../router';
 import { canSpeak, speak } from '../speech';
 import { ChevronIcon, SpeakerIcon } from './Icons';
 
-export function TermRow({ term, showVerdict = false }: { term: Term; showVerdict?: boolean }) {
+export function TermRow({ term }: { term: Term }) {
   return (
     <a className="row" href={href(`/term/${term.id}`)}>
       <span className="row-text">
@@ -13,17 +13,16 @@ export function TermRow({ term, showVerdict = false }: { term: Term; showVerdict
           {spanishSummary(term)}
         </span>
       </span>
-      {showVerdict && <span className="row-meta">{VERDICT_LABEL[term.es.verdict]}</span>}
       <ChevronIcon />
     </a>
   );
 }
 
-export function TermList({ terms, showVerdict }: { terms: Term[]; showVerdict?: boolean }) {
+export function TermList({ terms }: { terms: Term[] }) {
   return (
     <div className="card list">
       {terms.map((t) => (
-        <TermRow key={t.id} term={t} showVerdict={showVerdict} />
+        <TermRow key={t.id} term={t} />
       ))}
     </div>
   );

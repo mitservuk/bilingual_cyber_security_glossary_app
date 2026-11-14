@@ -651,6 +651,16 @@ button.row {
   margin-top: 4px;
 }
 
+.chips {
+  align-items: center;
+}
+
+.chips-label {
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--text-2);
+}
+
 .chip,
 .pill {
   padding: 3px 9px;
