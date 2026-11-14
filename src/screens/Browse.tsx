@@ -171,7 +171,7 @@ export function TermsList({ axis, value, domain }: { axis?: Axis; value?: string
         <h1 className="long">{title}</h1>
       </header>
       {list.length ? (
-        <TermList terms={alphabetical(list)} showVerdict />
+        <TermList terms={alphabetical(list)} />
       ) : (
         <Empty title="Nothing here yet">No terms have been added to this category.</Empty>
       )}
@@ -188,7 +188,7 @@ export function Saved() {
         <h1>Saved</h1>
       </header>
       {list.length ? (
-        <TermList terms={list} showVerdict />
+        <TermList terms={list} />
       ) : (
         <Empty title="No saved terms">Tap the bookmark on any term to keep it here. Saved terms stay on this device.</Empty>
       )}

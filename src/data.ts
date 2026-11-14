@@ -94,19 +94,14 @@ export function spanishSummary(t: Term) {
     .join(' · ');
 }
 
-export const VERDICT_LABEL: Record<Verdict, string> = {
-  translated: 'Translated',
-  'english-kept': 'English kept',
-  both: 'Both in use',
-};
-
-export const USED_BY_LABEL: Record<string, string> = {
-  official: 'Official guidance',
-  engineers: 'Engineers',
-  google: 'Google',
-  microsoft: 'Microsoft',
-  oracle: 'Oracle',
-  aws: 'AWS',
+/** Where a Spanish form was seen in use, from sources that were read. */
+export const SEEN_IN_LABEL: Record<string, string> = {
+  official: 'Spanish government',
+  engineers: 'Blogs and job ads',
+  google: 'Google docs',
+  microsoft: 'Microsoft docs',
+  oracle: 'Oracle docs',
+  aws: 'AWS docs',
 };
 
 export type Axis = 'topic' | 'tech' | 'cert';
