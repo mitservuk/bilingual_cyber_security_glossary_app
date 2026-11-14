@@ -61,7 +61,7 @@ certifications:
     domains:
       - { n: 1, name: "Cloud Concepts, Architecture and Design", weight: 17 }
       - { n: 2, name: "Cloud Data Security", weight: 20 }
-      - { n: 3, name: "Cloud Platform & Infrastructure Security", weight: 17 }
+      - { n: 3, name: "Cloud Platform and Infrastructure Security", weight: 17 }
       - { n: 4, name: "Cloud Application Security", weight: 16 }
       - { n: 5, name: "Cloud Security Operations", weight: 17 }
       - { n: 6, name: "Legal, Risk and Compliance", weight: 13 }

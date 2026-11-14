@@ -195,7 +195,8 @@ function Sources({ term }: { term: Term }) {
       <p className="note sources-explain">{status.explain}</p>
       <p className="note sources-explain">
         “Seen in” shows where each Spanish form was found in use: Spanish government guidance such as INCIBE,
-        engineering blogs and job adverts from Spain, or a vendor’s documentation written for Spain.
+        the Spanish text of EU law, engineering blogs and job adverts from Spain, or a vendor’s documentation
+        written for Spain.
       </p>
       {term.sources.map((s) => (
         <SourceRow key={s.url + s.label} source={s} />

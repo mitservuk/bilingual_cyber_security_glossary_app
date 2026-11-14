@@ -12,7 +12,7 @@ const VERDICTS = ['translated', 'english-kept', 'both'];
 const STATUSES = ['draft', 'sourced', 'verified'];
 const KINDS = ['noun', 'verb', 'adjective'];
 const REGISTERS = ['formal', 'informal'];
-const USED_BY = ['official', 'engineers', 'google', 'microsoft', 'oracle', 'aws'];
+const USED_BY = ['official', 'eu', 'engineers', 'google', 'microsoft', 'oracle', 'aws'];
 
 export function loadContent() {
   const taxonomy = read('content/taxonomy.yaml');

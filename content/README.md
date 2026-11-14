@@ -69,12 +69,17 @@ been read, so it is a pointer for checking, not evidence.
 ## Who uses a form
 
 `usedBy` records where a form was seen, and only from sources that were read:
-`official` (Spanish public guidance such as INCIBE), `engineers` (Spain-based
+`official` (Spanish public bodies and Spanish law, such as INCIBE, the AEPD and
+the BOE), `eu` (the official Spanish text of EU law), `engineers` (Spain-based
 engineering blogs and job adverts), and the vendors `google`, `microsoft`,
 `oracle` and `aws` (their documentation for Spain).
 
+Run `python3 scripts/check_sources.py content/terms/*.yaml` to re-read every
+checked source and confirm each `found` text is still on its page.
+
 ## ID prefixes
 
-`sec.` security concepts · `cloud.` cloud concepts · `law.` legal terms ·
-`fw.` frameworks, standards and regulations. Later: `aws.`, `azure.`, `gcp.`,
-`k8s.`, `tool.`, `attack.`.
+`sec.` security concepts · `cloud.` cloud concepts · `grc.` governance, risk
+and business terms · `ai.` artificial intelligence · `tech.` other technology ·
+`law.` legal terms · `fw.` frameworks, standards and regulations. Later:
+`aws.`, `azure.`, `gcp.`, `k8s.`, `tool.`, `attack.`.
