@@ -23,6 +23,8 @@ files; nothing about a term is stored anywhere else.
         primary: true           # exactly one form per entry
         plural: los cortafuegos # optional, when not obvious
         register: formal        # optional: formal | informal; omitted = neutral
+        usedBy: [official, google]  # optional: who was seen using this form
+        headline: true          # optional: also show this form beside the term in lists
         note: ...               # optional, in English
     say: ...                    # optional: how an acronym or loanword is spoken
     definition: ...             # one line in Spanish
@@ -63,6 +65,13 @@ Sources come in two strengths. A source with `found` and `checked` was
 fetched on that date and contains that text. A source with only a `lead`
 carries text that a web search attributed to the URL; the page itself has not
 been read, so it is a pointer for checking, not evidence.
+
+## Who uses a form
+
+`usedBy` records where a form was seen, and only from sources that were read:
+`official` (Spanish public guidance such as INCIBE), `engineers` (Spain-based
+engineering blogs and job adverts), and the vendors `google`, `microsoft`,
+`oracle` and `aws` (their documentation for Spain).
 
 ## ID prefixes
 

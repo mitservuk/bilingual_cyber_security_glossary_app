@@ -18,6 +18,7 @@
     verdict: both
     forms:
       - text: computación en la nube
+        usedBy: [official, oracle]
         article: la
         kind: noun
         primary: true
@@ -28,16 +29,20 @@
         note: >-
           The everyday short form. "En la nube" is "in the cloud".
       - text: cloud computing
+        usedBy: [google]
         article: el
         kind: noun
         note: >-
           The English term is also used as it stands, including in vendor
           documentation written for Spain.
       - text: informática en la nube
+        usedBy: [microsoft]
         article: la
         kind: noun
         note: Microsoft's wording in its Spanish documentation.
       - text: cloud
+        usedBy: [engineers]
+        headline: true
         article: el
         kind: noun
         note: >-
@@ -106,6 +111,7 @@
     verdict: translated
     forms:
       - text: modelo de responsabilidad compartida
+        usedBy: [engineers, google, microsoft, oracle]
         article: el
         kind: noun
         primary: true
@@ -160,17 +166,21 @@
     verdict: both
     forms:
       - text: multi-tenant
+        usedBy: [engineers]
         kind: adjective
         primary: true
         note: >-
           The English adjective is what Spain-based engineering blogs write:
           "un escenario multi-tenant". Each customer's space is "el tenant".
       - text: multiinquilino
+        usedBy: [microsoft]
+        headline: true
         kind: adjective
         note: >-
           Microsoft's wording in its Spanish documentation, where a tenant is
           "un inquilino".
       - text: multicliente
+        usedBy: [google]
         kind: adjective
         note: Google Cloud's wording on its pages for Spain.
       - text: tenencia múltiple
@@ -237,6 +247,7 @@
     acronym: IaaS
     forms:
       - text: infraestructura como servicio
+        usedBy: [google, oracle]
         article: la
         kind: noun
         primary: true
@@ -281,6 +292,7 @@
     verdict: translated
     forms:
       - text: cifrado
+        usedBy: [official, engineers, google]
         article: el
         kind: noun
         primary: true
@@ -289,6 +301,7 @@
         kind: verb
         note: To encrypt. The opposite is descifrar.
       - text: encriptar
+        usedBy: [google]
         kind: verb
         register: informal
         note: >-
@@ -348,6 +361,7 @@
     verdict: translated
     forms:
       - text: datos en reposo
+        usedBy: [microsoft]
         article: los
         kind: noun
         primary: true
@@ -397,12 +411,14 @@
     acronym: KMS
     forms:
       - text: gestión de claves
+        usedBy: [engineers, google, oracle]
         article: la
         kind: noun
         primary: true
         note: >-
           A key management service keeps its English acronym: "el KMS".
       - text: administración de claves
+        usedBy: [microsoft]
         article: la
         kind: noun
         note: >-
@@ -468,10 +484,12 @@
     verdict: translated
     forms:
       - text: tokenización
+        usedBy: [google, microsoft]
         article: la
         kind: noun
         primary: true
       - text: token
+        usedBy: [engineers]
         article: el
         kind: noun
         note: Kept from English. Plural los tokens.
@@ -522,6 +540,7 @@
     acronym: DLP
     forms:
       - text: prevención de pérdida de datos
+        usedBy: [official, microsoft, google]
         article: la
         kind: noun
         primary: true
@@ -579,6 +598,7 @@
     verdict: translated
     forms:
       - text: hipervisor
+        usedBy: [official, engineers, google]
         article: el
         kind: noun
         primary: true
@@ -630,6 +650,7 @@
     acronym: VM
     forms:
       - text: máquina virtual
+        usedBy: [engineers, google]
         article: la
         kind: noun
         primary: true
@@ -677,6 +698,7 @@
     acronym: DR
     forms:
       - text: recuperación ante desastres
+        usedBy: [official, engineers, microsoft, oracle]
         article: la
         kind: noun
         primary: true
@@ -684,6 +706,7 @@
           The plan is "el plan de recuperación ante desastres". The acronyms
           DR, RTO and RPO stay in English.
       - text: recuperación tras fallos
+        usedBy: [google]
         article: la
         kind: noun
         note: Google Cloud's wording on its pages for Spain.
@@ -692,6 +715,7 @@
         kind: noun
         note: Business continuity, the wider discipline it belongs to.
       - text: plan de contingencia
+        usedBy: [official]
         article: el
         kind: noun
         register: formal
@@ -757,6 +781,7 @@
     verdict: both
     forms:
       - text: cortafuegos
+        usedBy: [official, google]
         article: el
         kind: noun
         primary: true
@@ -766,6 +791,8 @@
           The term in official guidance and formal documents, and the one the
           RAE recommends.
       - text: firewall
+        usedBy: [engineers, microsoft, oracle]
+        headline: true
         article: el
         kind: noun
         plural: los firewalls
@@ -840,6 +867,7 @@
     acronym: SDLC
     forms:
       - text: ciclo de vida de desarrollo de software
+        usedBy: [engineers, google, microsoft]
         article: el
         kind: noun
         primary: true
@@ -890,12 +918,14 @@
     verdict: english-kept
     forms:
       - text: sandbox
+        usedBy: [official, google]
         article: el
         kind: noun
         primary: true
         note: >-
           Kept in English, including in official Spanish guidance.
       - text: espacio aislado
+        usedBy: [microsoft]
         article: el
         kind: noun
         note: Microsoft's translation in its Spanish documentation.
@@ -959,10 +989,13 @@
     verdict: both
     forms:
       - text: modelado de amenazas
+        usedBy: [engineers, microsoft]
         article: el
         kind: noun
         primary: true
       - text: threat modeling
+        usedBy: [engineers]
+        headline: true
         article: el
         kind: noun
         note: >-
@@ -1020,6 +1053,7 @@
     acronym: API
     forms:
       - text: API
+        usedBy: [engineers, google, microsoft]
         article: la
         kind: noun
         primary: true
@@ -1082,6 +1116,7 @@
     verdict: translated
     forms:
       - text: respuesta a incidentes
+        usedBy: [engineers, google, microsoft]
         article: la
         kind: noun
         primary: true
@@ -1090,6 +1125,7 @@
           CSIRT and CERT stay in English. Also written "respuesta ante
           incidentes".
       - text: gestión de incidentes
+        usedBy: [engineers]
         article: la
         kind: noun
         register: formal
@@ -1154,20 +1190,24 @@
     verdict: translated
     forms:
       - text: gestión de parches
+        usedBy: [engineers]
         article: la
         kind: noun
         primary: true
       - text: parche
+        usedBy: [official]
         article: el
         kind: noun
         note: A patch. INCIBE's glossary lists it as "parche de seguridad".
       - text: parchear
+        usedBy: [official, engineers]
         kind: verb
         note: >-
           To patch. Used in engineering blogs and by INCIBE-CERT: "una
           vulnerabilidad que no ha sido parcheada". The fuller phrase is
           "aplicar parches".
       - text: revisiones
+        usedBy: [microsoft]
         article: las
         kind: noun
         note: >-
@@ -1231,6 +1271,7 @@
     verdict: both
     forms:
       - text: registro
+        usedBy: [google, microsoft]
         article: el
         kind: noun
         primary: true
@@ -1239,6 +1280,8 @@
           The term in formal documents: "registro de actividad" (activity
           log), "registro de auditoría" (audit log).
       - text: log
+        usedBy: [official, engineers, oracle]
+        headline: true
         article: el
         kind: noun
         plural: los logs
@@ -1308,6 +1351,7 @@
     verdict: both
     forms:
       - text: copia de seguridad
+        usedBy: [official, engineers]
         article: la
         kind: noun
         primary: true
@@ -1315,6 +1359,8 @@
           The standard term, and the one the RAE recommends. To take one is
           "hacer una copia de seguridad".
       - text: backup
+        usedBy: [engineers]
+        headline: true
         article: el
         kind: noun
         plural: los backups
@@ -1510,6 +1556,7 @@
     verdict: translated
     forms:
       - text: análisis de riesgos
+        usedBy: [official, engineers]
         article: el
         kind: noun
         primary: true
@@ -1518,6 +1565,7 @@
           of Spain's national security framework (ENS) and its methodology,
           MAGERIT.
       - text: evaluación de riesgos
+        usedBy: [engineers, google, microsoft, oracle]
         article: la
         kind: noun
         note: >-
