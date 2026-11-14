@@ -72,6 +72,14 @@ export const ChevronIcon = () => (
   </span>
 );
 
+export const DisclosureIcon = ({ open }: { open: boolean }) => (
+  <span className={open ? 'chevron disclosure open' : 'chevron disclosure'}>
+    <Icon size={14} weight={2.6}>
+      <path d="M5 9l7 7 7-7" />
+    </Icon>
+  </span>
+);
+
 export const SpeakerIcon = ({ size }: P) => (
   <Icon size={size}>
     <path d="M4 9.5v5h3.5L12 18V6L7.5 9.5H4z" />

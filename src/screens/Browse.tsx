@@ -1,26 +1,38 @@
 import { useState } from 'react';
 import { Empty, Segmented, TermList } from '../components/Common';
-import { BackIcon, ChevronIcon } from '../components/Icons';
-import { type Axis, certifications, populated, technology, terms, termsFor, topics } from '../data';
+import { BackIcon, ChevronIcon, DisclosureIcon } from '../components/Icons';
+import {
+  type Axis,
+  type Certification,
+  alphabetical,
+  certifications,
+  populated,
+  technology,
+  terms,
+  termsFor,
+  topics,
+} from '../data';
 import { goBack, href } from '../router';
 import { useStore } from '../store';
 
+// The tabs are alphabetical, like every other list in the app.
 const AXES: { value: Axis; label: string }[] = [
-  { value: 'topic', label: 'Topic' },
-  { value: 'tech', label: 'Technology' },
-  { value: 'cert', label: 'Certification' },
+  { value: 'cert', label: 'Certifications' },
+  { value: 'tech', label: 'Technologies' },
+  { value: 'topic', label: 'Topics' },
 ];
 
 const count = (n: number) => `${n} ${n === 1 ? 'term' : 'terms'}`;
 
-let lastAxis: Axis = 'topic';
+let lastAxis: Axis = 'cert';
 
-export function Browse() {
-  const [axis, setAxisState] = useState<Axis>(lastAxis);
-  const setAxis = (a: Axis) => {
-    lastAxis = a;
-    setAxisState(a);
-  };
+export function Browse({ axis: fromRoute }: { axis?: string }) {
+  const axis = AXES.find((a) => a.value === fromRoute)?.value ?? lastAxis;
+  lastAxis = axis;
+
+  // Switching tabs replaces the current history entry, so Back leaves Browse
+  // rather than stepping through every tab that was looked at.
+  const setAxis = (a: Axis) => window.location.replace(href(`/browse/${a}`));
 
   return (
     <main className="screen">
@@ -30,29 +42,7 @@ export function Browse() {
       <Segmented label="Browse by" options={AXES} value={axis} onChange={setAxis} />
 
       {axis === 'cert' ? (
-        certifications.map((cert) => (
-          <section key={cert.id} className="section">
-            <div className="section-head">
-              <h2>{cert.name}</h2>
-              <span className="secondary">{count(termsFor('cert', cert.id).length)}</span>
-            </div>
-            <div className="card list">
-              {cert.domains.map((d) => (
-                <a key={d.n} className="row" href={href(`/list/cert/${cert.id}/${d.n}`)}>
-                  <span className="badge">{d.n}</span>
-                  <span className="row-text">
-                    <span className="row-title compact">{d.name}</span>
-                    <span className="secondary small">
-                      {d.weight}% of exam · {count(termsFor('cert', cert.id, d.n).length)}
-                    </span>
-                  </span>
-                  <ChevronIcon />
-                </a>
-              ))}
-            </div>
-            <p className="footnote">{cert.outlineLabel}</p>
-          </section>
-        ))
+        <Certifications />
       ) : (
         <div className="card list">
           {populated(axis === 'topic' ? topics : technology, axis).map(({ item, count: n }) => (
@@ -70,6 +60,76 @@ export function Browse() {
         </div>
       )}
     </main>
+  );
+}
+
+function Certifications() {
+  // With a single certification available there is nothing to choose, so it starts open.
+  const available = certifications.filter((c) => !c.comingSoon);
+  const [open, setOpen] = useState<string | null>(available.length === 1 ? available[0].id : null);
+
+  return (
+    <div className="card list">
+      {certifications.map((cert) =>
+        cert.comingSoon ? (
+          <div key={cert.id} className="row cert">
+            <span className="row-text">
+              <span className="row-title">{cert.name}</span>
+              <span className="secondary small">{cert.fullName}</span>
+            </span>
+            <span className="pill soon">Coming soon</span>
+          </div>
+        ) : (
+          <CertificationSection
+            key={cert.id}
+            cert={cert}
+            open={open === cert.id}
+            onToggle={() => setOpen(open === cert.id ? null : cert.id)}
+          />
+        ),
+      )}
+    </div>
+  );
+}
+
+function CertificationSection({
+  cert,
+  open,
+  onToggle,
+}: {
+  cert: Certification;
+  open: boolean;
+  onToggle: () => void;
+}) {
+  const panel = `domains-${cert.id}`;
+  return (
+    <div className="cert-section">
+      <button type="button" className="row cert" aria-expanded={open} aria-controls={panel} onClick={onToggle}>
+        <span className="row-text">
+          <span className="row-title">{cert.name}</span>
+          <span className="secondary small">{cert.fullName}</span>
+        </span>
+        <span className="row-meta">{count(termsFor('cert', cert.id).length)}</span>
+        <DisclosureIcon open={open} />
+      </button>
+      {open && (
+        <div id={panel} className="domains">
+          {cert.domains.map((d) => (
+            <a key={d.n} className="row" href={href(`/list/cert/${cert.id}/${d.n}`)}>
+              <span className="badge">{d.n}</span>
+              <span className="row-text">
+                <span className="row-title compact">{d.name}</span>
+                <span className="secondary small">
+                  {d.weight}% of exam · {count(termsFor('cert', cert.id, d.n).length)}
+                </span>
+              </span>
+              <ChevronIcon />
+            </a>
+          ))}
+          {cert.outlineLabel && <p className="footnote domains-note">{cert.outlineLabel}</p>}
+        </div>
+      )}
+    </div>
   );
 }
 
@@ -105,7 +165,7 @@ export function TermsList({ axis, value, domain }: { axis?: Axis; value?: string
         <h1 className="long">{title}</h1>
       </header>
       {list.length ? (
-        <TermList terms={list} showVerdict />
+        <TermList terms={alphabetical(list)} showVerdict />
       ) : (
         <Empty title="Nothing here yet">No terms have been added to this category.</Empty>
       )}
@@ -115,7 +175,7 @@ export function TermsList({ axis, value, domain }: { axis?: Axis; value?: string
 
 export function Saved() {
   const { saved } = useStore();
-  const list = saved.flatMap((id) => terms.find((t) => t.id === id) ?? []);
+  const list = alphabetical(saved.flatMap((id) => terms.find((t) => t.id === id) ?? []));
   return (
     <main className="screen">
       <header className="title-block">

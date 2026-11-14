@@ -1,7 +1,17 @@
 import { useMemo, useState } from 'react';
 import { Empty, SpeakButton, TermList } from '../components/Common';
-import { ChevronIcon, ClearIcon, SearchIcon } from '../components/Icons';
-import { formLabel, getTerm, populated, primaryForm, terms, topics, wordOfTheDay } from '../data';
+import { ClearIcon, SearchIcon } from '../components/Icons';
+import {
+  certifications,
+  formLabel,
+  getTerm,
+  populated,
+  primaryForm,
+  technology,
+  terms,
+  topics,
+  wordOfTheDay,
+} from '../data';
 import { href } from '../router';
 import { createSearch } from '../search';
 import { useStore } from '../store';
@@ -65,7 +75,13 @@ function Modules({ recent }: { recent: string[] }) {
   const form = primaryForm(word);
   const example = word.es.examples[0];
   const recentTerms = recent.flatMap((id) => getTerm(id) ?? []).slice(0, 3);
-  const categories = populated(topics, 'topic').slice(0, 4);
+  // Fixed entry points into the glossary, in alphabetical order.
+  const tiles = [
+    { label: 'All terms', count: terms.length, path: '/list/all' },
+    { label: 'Certifications', count: certifications.length, path: '/browse/cert' },
+    { label: 'Technologies', count: populated(technology, 'tech').length, path: '/browse/tech' },
+    { label: 'Topics', count: populated(topics, 'topic').length, path: '/browse/topic' },
+  ];
 
   return (
     <>
@@ -99,29 +115,16 @@ function Modules({ recent }: { recent: string[] }) {
       )}
 
       <section className="section">
-        <div className="section-head">
-          <h2>Categories</h2>
-          <a href={href('/browse')}>See all</a>
-        </div>
+        <h2>Browse</h2>
         <div className="tiles">
-          {categories.map(({ item, count }) => (
-            <a key={item.id} className="tile" href={href(`/list/topic/${item.id}`)}>
-              <span className="tile-title">{item.en}</span>
-              <span className="secondary small">
-                {count} {count === 1 ? 'term' : 'terms'}
-              </span>
+          {tiles.map((tile) => (
+            <a key={tile.path} className="tile" href={href(tile.path)}>
+              <span className="tile-title">{tile.label}</span>
+              <span className="tile-count">{tile.count}</span>
             </a>
           ))}
         </div>
       </section>
-
-      <a className="card row solo" href={href('/list/all')}>
-        <span className="row-text">
-          <span className="row-title">All terms</span>
-        </span>
-        <span className="row-meta">{terms.length}</span>
-        <ChevronIcon />
-      </a>
     </>
   );
 }

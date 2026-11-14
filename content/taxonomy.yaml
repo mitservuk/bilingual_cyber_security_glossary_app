@@ -39,9 +39,22 @@ technology:
   - { id: endpoint, en: Endpoints, es: Puestos de trabajo }
   - { id: identity-platforms, en: Identity platforms, es: Plataformas de identidad }
 
+# A certification with `comingSoon: true` is listed in the app but has no
+# domains or terms yet.
 certifications:
+  - id: CISSP
+    name: CISSP
+    fullName: Certified Information Systems Security Professional
+    issuer: ISC2
+    comingSoon: true
+  - id: KCSA
+    name: KCSA
+    fullName: Kubernetes and Cloud Native Security Associate
+    issuer: The Linux Foundation
+    comingSoon: true
   - id: CCSP
     name: CCSP
+    fullName: Certified Cloud Security Professional
     issuer: ISC2
     outline: "2026-08"
     outlineLabel: ISC2 exam outline of 1 August 2026

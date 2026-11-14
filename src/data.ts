@@ -53,9 +53,11 @@ export interface Named {
 export interface Certification {
   id: string;
   name: string;
+  fullName: string;
   issuer: string;
-  outline: string;
-  outlineLabel: string;
+  comingSoon?: boolean;
+  outline?: string;
+  outlineLabel?: string;
   domains: { n: number; name: string; weight: number }[];
 }
 
@@ -71,7 +73,11 @@ const content = raw as unknown as Content;
 export const terms = content.terms;
 export const topics = content.topics;
 export const technology = content.technology;
-export const certifications = content.certifications;
+
+const byName = (a: string, b: string) => a.localeCompare(b, 'en', { sensitivity: 'base' });
+
+/** Alphabetical. Domains inside a certification keep their numbered order. */
+export const certifications = [...content.certifications].sort((a, b) => byName(a.name, b.name));
 
 const byId = new Map(terms.map((t) => [t.id, t]));
 export const getTerm = (id: string) => byId.get(id);
@@ -113,13 +119,15 @@ export function termsFor(axis: Axis, value: string, domain?: number): Term[] {
   );
 }
 
-/** Categories that have at least one term, with their counts, largest first. */
+/** Categories that have at least one term, with their counts, in alphabetical order. */
 export function populated(list: Named[], axis: 'topic' | 'tech') {
   return list
     .map((item) => ({ item, count: termsFor(axis, item.id).length }))
     .filter((x) => x.count > 0)
-    .sort((a, b) => b.count - a.count || a.item.en.localeCompare(b.item.en));
+    .sort((a, b) => byName(a.item.en, b.item.en));
 }
+
+export const alphabetical = (list: Term[]) => [...list].sort((a, b) => byName(a.en.term, b.en.term));
 
 /** The same term for everyone on a given day, chosen without a server. */
 export function wordOfTheDay(now = new Date()): Term {

@@ -16,15 +16,20 @@ const USED_BY = ['official', 'engineers', 'google', 'microsoft', 'oracle', 'aws'
 
 export function loadContent() {
   const taxonomy = read('content/taxonomy.yaml');
+  const errors = [];
   const termsDir = join(root, 'content/terms');
   const terms = readdirSync(termsDir)
     .filter((f) => f.endsWith('.yaml'))
     .sort()
     .flatMap((f) => parse(readFileSync(join(termsDir, f), 'utf8')) ?? []);
 
-  const errors = [];
   const topicIds = new Set(taxonomy.topics.map((t) => t.id));
   const techIds = new Set(taxonomy.technology.map((t) => t.id));
+  for (const c of taxonomy.certifications) {
+    c.domains ??= [];
+    if (!c.name || !c.fullName) errors.push(`certification ${c.id}: name and fullName are required`);
+    if (!c.comingSoon && !c.domains.length) errors.push(`certification ${c.id}: needs domains, or comingSoon`);
+  }
   const certs = new Map(taxonomy.certifications.map((c) => [c.id, c]));
   const ids = new Set();
 

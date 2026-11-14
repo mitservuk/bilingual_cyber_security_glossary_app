@@ -8,6 +8,7 @@ import {
   type Term,
   USED_BY_LABEL,
   VERDICT_LABEL,
+  alphabetical,
   certifications,
   formLabel,
   getTerm,
@@ -67,7 +68,7 @@ export function Entry({ id }: { id: string }) {
   }
 
   const isSaved = saved.includes(term.id);
-  const related = term.related.flatMap((r) => getTerm(r) ?? []);
+  const related = alphabetical(term.related.flatMap((r) => getTerm(r) ?? []));
   const cert = term.curriculum[0] && certifications.find((c) => c.id === term.curriculum[0].cert);
 
   return (
@@ -166,7 +167,7 @@ export function Entry({ id }: { id: string }) {
 
       <Sources term={term} />
 
-      {cert && <p className="footnote">{cert.outlineLabel}</p>}
+      {cert?.outlineLabel && <p className="footnote">{cert.outlineLabel}</p>}
     </main>
   );
 }

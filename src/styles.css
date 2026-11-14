@@ -1,6 +1,7 @@
 :root {
   color-scheme: light dark;
   --bg: #f2f2f7;
+  --bg-clear: rgba(242, 242, 247, 0);
   --card: #ffffff;
   --text: #1c1c1e;
   --text-2: #636366;
@@ -16,15 +17,17 @@
   --ok-bg: #dff5e7;
   --ok: #17603a;
   --segment-on: #ffffff;
-  --bar: rgba(255, 255, 255, 0.86);
-  --bar-ring: rgba(0, 0, 0, 0.05);
-  --bar-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  --bar: #ffffff;
+  --bar-ring: rgba(0, 0, 0, 0.06);
+  --bar-shadow: 0 8px 28px rgba(0, 0, 0, 0.16);
+  --neutral-bg: #e9e9ee;
   --lift: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #000000;
+    --bg-clear: rgba(0, 0, 0, 0);
     --card: #1c1c1e;
     --text: #ffffff;
     --text-2: #a1a1a6;
@@ -40,9 +43,10 @@
     --ok-bg: #12351f;
     --ok: #6ee7a0;
     --segment-on: #48484a;
-    --bar: rgba(28, 28, 30, 0.9);
-    --bar-ring: rgba(255, 255, 255, 0.12);
-    --bar-shadow: none;
+    --bar: #2c2c2e;
+    --bar-ring: rgba(255, 255, 255, 0.16);
+    --bar-shadow: 0 8px 28px rgba(0, 0, 0, 0.7);
+    --neutral-bg: #2c2c2e;
     --lift: none;
   }
 }
@@ -315,20 +319,73 @@ button {
 
 .tile {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 2px;
-  min-height: 66px;
-  padding: 10px 14px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 64px;
+  padding: 10px 16px;
   border-radius: 18px;
   background: var(--card);
   color: var(--text);
 }
 
 .tile-title {
+  min-width: 0;
   font-size: 16px;
   line-height: 21px;
   font-weight: 600;
+}
+
+.tile-count {
+  flex: none;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-2);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Certifications: each one opens in place to show its numbered domains. */
+
+button.row {
+  width: 100%;
+  text-align: left;
+}
+
+.row.cert {
+  min-height: 66px;
+}
+
+.cert-section + .cert-section,
+.cert-section + .row,
+.row + .cert-section {
+  border-top: 1px solid var(--separator);
+}
+
+.disclosure.open {
+  transform: rotate(180deg);
+}
+
+.domains {
+  border-top: 1px solid var(--separator);
+}
+
+.domains .row {
+  padding-left: 16px;
+}
+
+.domains .row + .row {
+  border-top: 1px solid var(--separator);
+}
+
+.domains-note {
+  padding: 10px 16px 14px;
+  border-top: 1px solid var(--separator);
+}
+
+.pill.soon {
+  flex: none;
+  background: var(--neutral-bg);
+  color: var(--text-2);
 }
 
 /* Controls */
@@ -678,6 +735,19 @@ button {
 
 /* Tab bar */
 
+/* Fades the page out before it reaches the bar, so text never sits behind the
+   buttons. It reaches below the screen edge to cover the strip that Safari
+   leaves visible under its own toolbar. */
+.tab-fade {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: -200px;
+  height: calc(env(safe-area-inset-bottom) + 330px);
+  background: linear-gradient(to bottom, var(--bg-clear), var(--bg) 46px);
+  pointer-events: none;
+}
+
 .tab-bar {
   position: fixed;
   left: 50%;
@@ -690,8 +760,6 @@ button {
   height: 64px;
   padding: 6px;
   background: var(--bar);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
   border-radius: 32px;
   box-shadow:
     var(--bar-shadow),
@@ -721,5 +789,9 @@ button {
   .segmented button,
   .tab-bar a {
     transition: background-color 0.15s ease;
+  }
+
+  .disclosure {
+    transition: transform 0.15s ease;
   }
 }
