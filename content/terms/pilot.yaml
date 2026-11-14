@@ -436,9 +436,9 @@
       - es: La rotación de claves se hace automáticamente cada noventa días.
         en: Key rotation happens automatically every ninety days.
     watchOut: >-
-      A cryptographic key is una clave, not una llave. In Spain, llave is the
-      physical key for a door; llave for cryptographic keys is Latin American
-      usage.
+      A cryptographic key is normally una clave. Llave is the physical key for
+      a door; it is sometimes used for cryptographic and API keys too, more
+      often in Latin America.
   topics: [crypto]
   technology: []
   curriculum:

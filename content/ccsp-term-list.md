@@ -1,6 +1,6 @@
 # CCSP term list
 
-The working list for completing CCSP: 97 terms are written and 307 are proposed, 404 in all.
+The working list for completing CCSP: 156 terms are written and 248 are proposed, 404 in all.
 
 This is a proposal to review, trim and add to before the entries are written.
 
@@ -18,25 +18,7 @@ exam touches it in several.
 
 ## 2. Cloud Data Security
 
-64 terms: 5 written, 59 proposed.
-
-**Written:** encryption, data at rest, key management, tokenization, data loss prevention (DLP).
-
-**Data lifecycle** (3): data lifecycle, data dispersion, data flow.
-
-**Storage** (7): object storage, block storage, file storage, ephemeral storage, long-term storage, raw storage, volume storage.
-
-**Cryptography** (16): symmetric encryption, asymmetric encryption, hashing, digital signature, digital certificate, public key infrastructure (PKI), certificate authority (CA), hardware security module (HSM), key rotation, bring your own key (BYOK), envelope encryption, homomorphic encryption, Transport Layer Security (TLS), data in transit, data in use, certificate revocation.
-
-**Obfuscation** (4): data masking, data obfuscation, anonymization, pseudonymization.
-
-**Discovery and classification** (11): data discovery, structured data, unstructured data, semi-structured data, data classification, data labelling, data mapping, sensitive data, personally identifiable information (PII), protected health information (PHI), cardholder data.
-
-**Rights and retention** (6): information rights management (IRM), digital rights management (DRM), data retention, data deletion, data archiving, legal hold.
-
-**Accountability** (6): auditability, traceability, accountability, non-repudiation, chain of custody, geolocation.
-
-**Ownership and exposure** (6): data sovereignty, data residency, data breach, data owner, data custodian, secrets management.
+64 terms, all written.
 
 ## 3. Cloud Platform and Infrastructure Security
 

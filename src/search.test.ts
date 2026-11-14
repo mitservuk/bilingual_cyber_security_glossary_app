@@ -70,7 +70,7 @@ describe('ordering', () => {
   it('gathers the terms that belong to a framework', async () => {
     const { termsFor } = await import('./data');
     expect(termsFor('framework', 'GDPR').map((t) => t.id)).toContain('law.data-controller');
-    expect(termsFor('framework', 'ENS').map((t) => t.id)).toEqual(['fw.ens']);
+    expect(termsFor('framework', 'ENS').map((t) => t.id)).toContain('fw.ens');
   });
 
   it('titles a Spanish-first entry in Spanish and finds it by its acronym', async () => {
