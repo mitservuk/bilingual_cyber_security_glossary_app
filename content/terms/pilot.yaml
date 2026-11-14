@@ -40,10 +40,9 @@
       - text: cloud
         article: el
         kind: noun
-        register: informal
         note: >-
-          The English word, common in speech and in marketing: "migrar al
-          cloud". Often used as an adjective too: "servicios cloud".
+          The English word, common in engineering blogs and job adverts: "dar
+          el salto al cloud". Also used as an adjective: "seguridad cloud".
     definition: >-
       Prestación de recursos informáticos como servicios bajo demanda a través
       de la red.
@@ -51,8 +50,8 @@
       - es: Vamos a migrar la aplicación a la nube el próximo trimestre.
         en: We're going to migrate the application to the cloud next quarter.
     watchOut: >-
-      Nube is feminine (la nube), but the English word is used as a masculine
-      noun (el cloud).
+      Nube is feminine (la nube). The English word is usually masculine (el
+      cloud), though "la cloud" also appears.
   topics: [architecture]
   technology: [cloud-general]
   curriculum:
@@ -61,7 +60,8 @@
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad"
       url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
-      lead: "El término cloud computing o computación en la nube se refiere a un paradigma que permite ofrecer servicios de computación a través de una red"
+      found: ["cloud computing o computación en la nube"]
+      checked: 2026-11-14
     - label: "Esquema Nacional de Seguridad (RD 311/2022), medida op.nub.1"
       url: "https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191"
       lead: "Los sistemas que suministran un servicio en la nube a organismos del sector público deberán cumplir con el conjunto de medidas de seguridad"
@@ -77,7 +77,23 @@
       url: "https://www.oracle.com/es/cloud/what-is-iaas/"
       found: ["computación en la nube"]
       checked: 2026-11-14
-  status: draft
+    - label: "Adictos al Trabajo (Autentia)"
+      url: "https://www.adictosaltrabajo.com/2018/10/16/desplegando-nuestra-aplicacion-en-google-cloud/"
+      found: ["desplegar nuestra aplicación en un cloud"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/techbiz/podcast-security-foundations/"
+      found: ["dar el salto al cloud"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/techbiz/control-acceso-cloud-mucho-mas-seguro-propio-datacenter/"
+      found: ["la cloud pública"]
+      checked: 2026-11-14
+    - label: "Tecnoempleo, oferta de empleo en España"
+      url: "https://www.tecnoempleo.com/cloud-security-specialist-aws-panel-sistemas-infor/iam/rf-01a81e64f21d93ff4e46"
+      found: ["seguridad cloud"]
+      checked: 2026-11-14
+  status: sourced
 
 - id: cloud.shared-responsibility
   en:
@@ -127,6 +143,10 @@
       url: "https://www.oracle.com/es/security/cloud-security/what-is-cloud-security/"
       found: ["responsabilidad compartida entre el proveedor de la nube y el cliente"]
       checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/techbiz/8-razones-las-tus-desarrollos-estan-mas-seguros-cloud/"
+      found: ["modelo de responsabilidad compartida"]
+      checked: 2026-11-14
   status: sourced
 
 - id: cloud.multitenancy
@@ -139,12 +159,17 @@
   es:
     verdict: both
     forms:
-      - text: multiinquilino
+      - text: multi-tenant
         kind: adjective
         primary: true
         note: >-
-          The wording of Microsoft and Oracle in Spanish, where a tenant is
-          "un inquilino": "una arquitectura multiinquilino".
+          The English adjective is what Spain-based engineering blogs write:
+          "un escenario multi-tenant". Each customer's space is "el tenant".
+      - text: multiinquilino
+        kind: adjective
+        note: >-
+          Microsoft's wording in its Spanish documentation, where a tenant is
+          "un inquilino".
       - text: multicliente
         kind: adjective
         note: Google Cloud's wording on its pages for Spain.
@@ -153,26 +178,21 @@
         kind: noun
         register: formal
         note: The translated noun, found in official Spanish guidance.
-      - text: multi-tenant
-        kind: adjective
-        register: informal
-        note: >-
-          The English adjective, kept in conversation, with "el tenant" for
-          each customer's space. Not yet backed by a source.
     definition: >-
       Arquitectura en la que una misma instancia del servicio atiende a varios
       clientes sobre una infraestructura compartida, aislados entre sí de forma
       lógica.
     examples:
       - es: >-
-          En un entorno multiinquilino, el aislamiento entre clientes es
+          En un entorno multi-tenant, el aislamiento entre clientes es
           fundamental.
         en: >-
           In a multi-tenant environment, isolation between customers is
           essential.
     watchOut: >-
-      There is no settled translation: each vendor and the official guidance
-      use a different one. Recognise all of them.
+      Practitioners keep the English, while each vendor's documentation uses a
+      different translation. Say multi-tenant; recognise the others when you
+      read them.
   topics: [architecture]
   technology: [cloud-general]
   curriculum:
@@ -189,6 +209,18 @@
     - label: "Google Cloud, páginas para España"
       url: "https://cloud.google.com/learn/what-is-a-virtual-machine?hl=es"
       found: ["multicliente"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/arquitecturas-eda-en-que-consisten-que-tener-en-cuenta/"
+      found: ["escenario multi-tenant"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/podcast-webassembly-fuera-navegador-wasi-y-component-model/"
+      found: ["sistemas multi-tenant"]
+      checked: 2026-11-14
+    - label: "Tecnoempleo, oferta de empleo en España"
+      url: "https://www.tecnoempleo.com/administrador-mo365-azure-michael-page/microsoft-365-microsoft-entra-id/rf-ba87109282e6a3c6bb4f"
+      found: ["tenant Microsoft 365"]
       checked: 2026-11-14
   status: draft
 
@@ -291,6 +323,18 @@
     - label: "Google Cloud, páginas para España"
       url: "https://cloud.google.com/learn/what-is-encryption?hl=es"
       found: ["cifrado", "encriptado"]
+      checked: 2026-11-14
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["Cifrado", "Proceso de codificación de información"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/diferencias-cifrado-hashing-codificacion-ofuscacion"
+      found: ["El cifrado de datos es el proceso"]
+      checked: 2026-11-14
+    - label: "Genbeta"
+      url: "https://www.genbeta.com/actualidad/anunciaron-que-gmail-tendra-cifrado-extremo-a-extremo-definicion-expertos-no-coincide-google"
+      found: ["permanece encriptado"]
       checked: 2026-11-14
   status: draft
 
@@ -403,6 +447,14 @@
       url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-email-encryption"
       found: ["administración de claves"]
       checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/techbiz/control-acceso-cloud-mucho-mas-seguro-propio-datacenter/"
+      found: ["Gestión de claves"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/evaluacion-proveedores-cloud-quantum-readiness-auditoria"
+      found: ["gestión de claves"]
+      checked: 2026-11-14
   status: draft
 
 - id: sec.tokenization
@@ -443,7 +495,19 @@
       url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-data-security"
       found: ["tokenización"]
       checked: 2026-11-14
-  status: draft
+    - label: "Xataka"
+      url: "https://www.xataka.com/n/alberto-lopez-director-ciberseguridad-soluciones-digitales-mastercard-espana-biometria-ofrece-mejor-experiencia-compra-para-cliente-mantiene-altos-estandares-seguridad"
+      found: ["tokenización"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/ataque-a-los-sistemas-de-soporte-de-otka-ficheros-har-y-tokens-de-sesion"
+      found: ["tokens de sesión"]
+      checked: 2026-11-14
+    - label: "Adictos al Trabajo (Autentia)"
+      url: "https://www.adictosaltrabajo.com/2018/11/13/desplegar-en-k8s-desde-gitlab-ci/"
+      found: ["token de acceso"]
+      checked: 2026-11-14
+  status: sourced
 
 - id: sec.dlp
   en:
@@ -486,7 +550,8 @@
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad: DLP"
       url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
-      lead: "herramientas que sirven para prevenir las fugas o pérdidas de información"
+      found: ["prevención de la pérdida de datos"]
+      checked: 2026-11-14
     - label: "CCN-STIC 140, Anexo E.4: Sistemas de prevención de fugas de datos"
       url: "https://www.ccn-cert.cni.es/es/pdf/guias/series-ccn-stic/guias-de-acceso-publico-ccn-stic/3965-guia-140-anexo-e-4-sistemas-de-prevencion-de-fugas-de-datos/file"
       lead: "impiden y evitan la transferencia de datos no autorizados y la fuga de información con nivel alto de confidencialidad"
@@ -497,6 +562,10 @@
     - label: "Google Cloud, páginas para España"
       url: "https://cloud.google.com/learn/what-is-cloud-security?hl=es"
       found: ["prevención de la pérdida de datos"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/redefiniendo-seguridad-nube-con-sase"
+      found: ["DLP"]
       checked: 2026-11-14
   status: draft
 
@@ -539,7 +608,15 @@
       url: "https://cloud.google.com/learn/what-is-a-virtual-machine?hl=es"
       found: ["hipervisor", "máquina host"]
       checked: 2026-11-14
-  status: draft
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/glosario-terminos-cloud-computing"
+      found: ["Hipervisor"]
+      checked: 2026-11-14
+    - label: "INCIBE-CERT, blog"
+      url: "https://www.incibe.es/incibe-cert/blog/esxiargs-acciones-de-respuesta-y-recuperacion"
+      found: ["hipervisores"]
+      checked: 2026-11-14
+  status: sourced
 
 - id: cloud.virtual-machine
   en:
@@ -557,9 +634,7 @@
         kind: noun
         primary: true
         plural: las máquinas virtuales
-        note: >-
-          The English acronym VM is commonly kept and takes the feminine:
-          "una VM".
+        note: The English abbreviation VM is kept.
     definition: >-
       Emulación por software de un ordenador completo, con su propio sistema
       operativo, que se ejecuta sobre hardware compartido.
@@ -579,7 +654,15 @@
       url: "https://cloud.google.com/learn/what-is-a-virtual-machine?hl=es"
       found: ["máquina virtual"]
       checked: 2026-11-14
-  status: draft
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/glosario-terminos-cloud-computing"
+      found: ["una máquina virtual o VM"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/virtualizacion-contenedores-kubernetes-despliegue-networking/"
+      found: ["máquinas virtuales"]
+      checked: 2026-11-14
+  status: sourced
 
 - id: sec.disaster-recovery
   en:
@@ -633,7 +716,8 @@
   sources:
     - label: "INCIBE, Guía de gestión de crisis"
       url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_gestion_de_crisis.pdf"
-      lead: "deberían contar con un plan de continuidad de negocio y un plan de recuperación ante desastres"
+      found: ["plan de recuperación ante desastres"]
+      checked: 2026-11-14
     - label: "CCN, ayuda de PILAR: continuidad"
       url: "https://www.ccn-cert.cni.es/publico/herramientas/Pilar-5.4.8/Pilar_5.4.8/bcm_es/topics/6.html"
       lead: "RTO Tiempo objetivo de recuperación"
@@ -648,6 +732,18 @@
     - label: "Google Cloud, páginas para España"
       url: "https://cloud.google.com/learn/what-is-disaster-recovery?hl=es"
       found: ["recuperación tras fallos", "objetivo de tiempo de recuperación", "objetivo de punto de recuperación"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/glosario-terminos-cloud-computing"
+      found: ["Recuperación ante desastres"]
+      checked: 2026-11-14
+    - label: "Tecnoempleo, oferta de empleo en España"
+      url: "https://www.tecnoempleo.com/platform-engineer-cloud-ai-infra-michael-page/aws-iam/rf-f1cc1297a268d30b6e45"
+      found: ["disaster recovery"]
+      checked: 2026-11-14
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["Plan de contingencia"]
       checked: 2026-11-14
   status: draft
 
@@ -674,8 +770,9 @@
         kind: noun
         plural: los firewalls
         note: >-
-          The English word. Microsoft and Oracle use it throughout their
-          Spanish documentation; Google's pages for Spain say cortafuegos.
+          The English word, usual in engineering blogs and job adverts.
+          Microsoft and Oracle use it in their Spanish documentation;
+          Google's pages for Spain say cortafuegos.
     definition: >-
       Sistema que filtra el tráfico de red entre zonas con distinto nivel de
       confianza según unas reglas definidas.
@@ -711,6 +808,22 @@
     - label: "Oracle España"
       url: "https://www.oracle.com/es/security/cloud-security/"
       found: ["servicio de firewall"]
+      checked: 2026-11-14
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["Cortafuegos", "Sinónimo: Firewall"]
+      checked: 2026-11-14
+    - label: "INCIBE-CERT, blog"
+      url: "https://www.incibe.es/incibe-cert/blog/bastionado-sistemas-el-caso-linux"
+      found: ["Se debería utilizar un firewall"]
+      checked: 2026-11-14
+    - label: "Tecnoempleo, oferta de empleo en España"
+      url: "https://www.tecnoempleo.com/administrador-a-de-seguridad-perimetral-100-en-rem/checkpoint-firewall/rf-8ac4uf852x6076dee64b"
+      found: ["los firewalls"]
+      checked: 2026-11-14
+    - label: "Genbeta"
+      url: "https://www.genbeta.com/linux/mejores-cortafuegos-para-proteger-tu-equipo-linux"
+      found: ["cortafuegos", "firewall de Linux"]
       checked: 2026-11-14
   status: draft
 
@@ -761,7 +874,11 @@
       url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-application-security"
       found: ["ciclo de vida del desarrollo de software"]
       checked: 2026-11-14
-  status: draft
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/devsecops-7-factores-clave-para-implementar-la-seguridad-en-devops"
+      found: ["ciclo de vida del desarrollo de software (SDLC)"]
+      checked: 2026-11-14
+  status: sourced
 
 - id: sec.sandbox
   en:
@@ -798,7 +915,8 @@
         en: >-
           The file is first run in a sandbox to analyse its behaviour.
     watchOut: >-
-      The literal translation "caja de arena" is not used.
+      The literal translation "caja de arena" appears only as an occasional
+      gloss, not as the working term.
   topics: [hardening, appsec]
   technology: []
   curriculum:
@@ -815,6 +933,18 @@
     - label: "Microsoft Security, es-ES"
       url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-email-security"
       found: ["espacio aislado", "sandboxing"]
+      checked: 2026-11-14
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["Sandbox"]
+      checked: 2026-11-14
+    - label: "Genbeta"
+      url: "https://www.genbeta.com/windows/windows-10-tendra-modo-sandbox-para-probar-ejecutables-ambiente-aislado-seguro"
+      found: ["se queda en el sandbox"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/sandbox-de-ia-entornos-seguros-para-evaluacion-y-proteccion-modelos-de-inteligencia-artificial"
+      found: ["cajas de arena"]
       checked: 2026-11-14
   status: draft
 
@@ -835,9 +965,9 @@
       - text: threat modeling
         article: el
         kind: noun
-        register: informal
         note: >-
-          The English term is also used as it stands: "hacer threat modeling".
+          The English term is also used as it stands, with the American
+          spelling.
     definition: >-
       Análisis estructurado de los activos, los puntos de entrada y los
       límites de confianza de un sistema para identificar ataques posibles.
@@ -863,7 +993,19 @@
       url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-application-security"
       found: ["modelado de amenazas"]
       checked: 2026-11-14
-  status: draft
+    - label: "El Lado del Mal"
+      url: "https://www.elladodelmal.com/2026/07/ia-generativa-reglas-deterministas-e.html"
+      found: ["El modelado de amenazas identifica"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/ssdlc-la-clave-para-un-software-blindado"
+      found: ["Modelado de Amenazas"]
+      checked: 2026-11-14
+    - label: "El Lado del Mal"
+      url: "https://www.elladodelmal.com/2019/02/secdevops-una-explicacion-en-cinco.html"
+      found: ["Threat Modeling"]
+      checked: 2026-11-14
+  status: sourced
 
 - id: sec.api
   en:
@@ -915,6 +1057,18 @@
     - label: "Microsoft Security, es-ES"
       url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-application-security"
       found: ["las API"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/aws-guardduty-luchas-amenzas/"
+      found: ["llamadas a la API"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/adopcion-cloud-publica-infraestructura-como-codigo"
+      found: ["mediante las API"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/techbiz/8-razones-las-tus-desarrollos-estan-mas-seguros-cloud/"
+      found: ["las APIs"]
       checked: 2026-11-14
   status: draft
 
@@ -976,6 +1130,18 @@
       url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-incident-response"
       found: ["respuesta a incidentes"]
       checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/ssdlc-la-clave-para-un-software-blindado"
+      found: ["respuesta a incidentes"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/techbiz/podcast-seguridad-aws-desafios-soluciones/"
+      found: ["respuesta ante incidentes"]
+      checked: 2026-11-14
+    - label: "Tecnoempleo, oferta de empleo en España"
+      url: "https://www.tecnoempleo.com/analista-respuesta-nivel-3-ciberseguridad-cajamar-/cisa-cism/rf-f85b15f662a533a34e47"
+      found: ["gestión de incidentes"]
+      checked: 2026-11-14
   status: draft
 
 - id: sec.patch-management
@@ -994,14 +1160,13 @@
       - text: parche
         article: el
         kind: noun
-        note: >-
-          A patch. To apply one is "aplicar un parche".
+        note: A patch. INCIBE's glossary lists it as "parche de seguridad".
       - text: parchear
         kind: verb
-        register: informal
         note: >-
-          To patch. Everyday engineering usage; formal documents say "aplicar
-          parches" or "aplicar actualizaciones de seguridad".
+          To patch. Used in engineering blogs and by INCIBE-CERT: "una
+          vulnerabilidad que no ha sido parcheada". The fuller phrase is
+          "aplicar parches".
       - text: revisiones
         article: las
         kind: noun
@@ -1038,7 +1203,23 @@
       url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-endpoint-security"
       found: ["administración de revisiones"]
       checked: 2026-11-14
-  status: draft
+    - label: "Tecnoempleo, oferta de empleo en España"
+      url: "https://www.tecnoempleo.com/ingeniero-a-de-seguridad-cloud-100-en-remoto/cloud-seguridad-unix/rf-c96a05bbeo7fcs751a1b"
+      found: ["Gestión de parches"]
+      checked: 2026-11-14
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["Parche de seguridad"]
+      checked: 2026-11-14
+    - label: "INCIBE-CERT, blog"
+      url: "https://www.incibe.es/incibe-cert/blog/bastionado-sistemas-el-caso-linux"
+      found: ["no ha sido parcheada"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/zerologon-parchea-o-muere"
+      found: ["parchea o muere"]
+      checked: 2026-11-14
+  status: sourced
 
 - id: sec.log
   en:
@@ -1062,7 +1243,8 @@
         kind: noun
         plural: los logs
         note: >-
-          The English word, standard in day-to-day engineering speech.
+          The English word, standard in engineering blogs, job adverts and
+          INCIBE's own guidance.
     definition: >-
       Registro cronológico de los eventos que genera un sistema o una
       aplicación.
@@ -1084,7 +1266,8 @@
       lead: "se registrarán las actividades en el sistema, de forma que se genere un registro de auditoría"
     - label: "INCIBE, Taxonomía de soluciones de ciberseguridad"
       url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/taxonomia_ciberseguridad.pdf"
-      lead: "Son herramientas de gestión y análisis de logs, para la protección de activos e información frente a amenazas."
+      found: ["análisis de logs"]
+      checked: 2026-11-14
     - label: "Google Cloud, páginas para España"
       url: "https://cloud.google.com/discover/what-is-log-analytics?hl=es"
       found: ["los registros"]
@@ -1096,6 +1279,22 @@
     - label: "Oracle España"
       url: "https://www.oracle.com/es/security/cloud-security/cloud-guard/"
       found: ["logs"]
+      checked: 2026-11-14
+    - label: "INCIBE-CERT, blog"
+      url: "https://www.incibe.es/incibe-cert/blog/bastionado-sistemas-el-caso-linux"
+      found: ["se guarden los logs"]
+      checked: 2026-11-14
+    - label: "Adictos al Trabajo (Autentia)"
+      url: "https://adictosaltrabajo.com/2021/04/13/monitorizar-aplicaciones-en-un-cluster-de-kubernetes/"
+      found: ["enviar los logs a CloudWatch"]
+      checked: 2026-11-14
+    - label: "Tecnoempleo, oferta de empleo en España"
+      url: "https://www.tecnoempleo.com/ingeniero-a-de-seguridad-cloud-100-en-remoto/cloud-seguridad-unix/rf-c96a05bbeo7fcs751a1b"
+      found: ["Gestión de logs"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/techbiz/8-razones-las-tus-desarrollos-estan-mas-seguros-cloud/"
+      found: ["registros de actividad"]
       checked: 2026-11-14
   status: draft
 
@@ -1119,9 +1318,8 @@
         article: el
         kind: noun
         plural: los backups
-        register: informal
         note: >-
-          The English word, very common in speech: "hacer un backup".
+          The English word, common in practitioner writing and job adverts.
     definition: >-
       Copia de los datos que se guarda aparte del original para poder
       restaurarlos en caso de pérdida, corrupción o ataque.
@@ -1140,6 +1338,26 @@
     - label: "Diccionario panhispánico de dudas (RAE): copia de seguridad"
       url: "https://www.rae.es/dpd/copia%20de%20seguridad"
       lead: "especialmente en América, (copia de) resguardo o respaldo"
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["Copia de seguridad", "Backup"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/copias-seguridad-continuidad-negocio-ciberresiliencia"
+      found: ["Las copias de seguridad"]
+      checked: 2026-11-14
+    - label: "INCIBE-CERT, blog"
+      url: "https://www.incibe.es/incibe-cert/blog/bastionado-sistemas-el-caso-linux"
+      found: ["Realizar una copia de seguridad"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/backup-empresarial-continuidad-negocio-proteger-datos"
+      found: ["el backup ha sido una práctica habitual"]
+      checked: 2026-11-14
+    - label: "Tecnoempleo, oferta de empleo en España"
+      url: "https://www.tecnoempleo.com/administrador-sistemas-linux-rhel-vmware-baoss/intel-red-hat-satellite/rf-59231cd0e2ca33f1e04c"
+      found: ["administración de backups"]
+      checked: 2026-11-14
   status: draft
 
 - id: fw.gdpr
@@ -1291,21 +1509,22 @@
   es:
     verdict: translated
     forms:
-      - text: evaluación de riesgos
-        article: la
-        kind: noun
-        primary: true
-        note: >-
-          The direct translation, used by Google, Microsoft and Oracle in
-          Spanish. In the ISO vocabulary it has the narrower meaning of "risk
-          evaluation", the step after analysis.
       - text: análisis de riesgos
         article: el
         kind: noun
+        primary: true
         note: >-
-          The term used by Spain's national security framework (ENS) and its
-          public-sector methodology, MAGERIT. Expect it in public-sector
-          work.
+          What Spanish job adverts and INCIBE call the activity, and the term
+          of Spain's national security framework (ENS) and its methodology,
+          MAGERIT.
+      - text: evaluación de riesgos
+        article: la
+        kind: noun
+        note: >-
+          The direct translation, used by Google, Microsoft and Oracle in
+          Spanish and also seen in practitioner writing. In the ISO
+          vocabulary it has the narrower meaning of "risk evaluation", the
+          step after analysis.
       - text: apreciación del riesgo
         article: la
         kind: noun
@@ -1317,7 +1536,7 @@
       Identificación de las amenazas y vulnerabilidades de un activo y
       estimación de la probabilidad y el impacto del daño.
     examples:
-      - es: Antes de migrar a la nube hay que hacer una evaluación de riesgos.
+      - es: Antes de migrar a la nube hay que hacer un análisis de riesgos.
         en: Before migrating to the cloud, a risk assessment has to be done.
     watchOut: >-
       Three Spanish terms compete for this one English term, and standards
@@ -1348,6 +1567,22 @@
       checked: 2026-11-14
     - label: "Oracle España"
       url: "https://www.oracle.com/es/cloud/multicloud/what-is-multicloud/"
+      found: ["evaluación de riesgos"]
+      checked: 2026-11-14
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["Análisis de riesgos"]
+      checked: 2026-11-14
+    - label: "Tecnoempleo, oferta de empleo en España"
+      url: "https://www.tecnoempleo.com/senior-security-engineer-squad-ciberseguridad/ciberseguridad-criptografia/rf-1f8e1ffc024e73c7d240"
+      found: ["análisis de riesgos"]
+      checked: 2026-11-14
+    - label: "Tecnoempleo, oferta de empleo en España"
+      url: "https://www.tecnoempleo.com/consultor-normativa-ciberseguridad-gmv/iso-27001-ens/rf-97cc1e7a629fc36a1043"
+      found: ["análisis y gestión de riesgos"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/backup-empresarial-continuidad-negocio-proteger-datos"
       found: ["evaluación de riesgos"]
       checked: 2026-11-14
   status: draft
