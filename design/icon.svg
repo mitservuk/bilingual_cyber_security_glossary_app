@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<rect width="512" height="512" fill="#4F46E5"/>
+<path d="M256 104 L384 148 V256 C384 334 330 388 256 416 C182 388 128 334 128 256 V148 Z" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="28" stroke-linejoin="round"/>
+<text x="256" y="338" text-anchor="middle" font-family="Inter Display, Inter, sans-serif" font-weight="900" font-size="220" fill="#4F46E5">ñ</text>
+</svg>

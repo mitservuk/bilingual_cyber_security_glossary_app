@@ -10,10 +10,10 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['icon.svg', 'apple-touch-icon.png'],
+      includeAssets: ['apple-touch-icon.png'],
       manifest: {
-        name: 'Glosario',
-        short_name: 'Glosario',
+        name: 'Bilingual Cyber',
+        short_name: 'Bilingual Cyber',
         description: 'Cloud and cyber security terms in English, and how they are actually said in Spain.',
         lang: 'en',
         display: 'standalone',

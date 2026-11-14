@@ -11,7 +11,7 @@ interface State {
   lang: Lang;
 }
 
-const KEY = 'glosario.v1';
+const KEY = 'bilingual-cyber.v1';
 const RECENT_MAX = 8;
 
 function load(): State {
