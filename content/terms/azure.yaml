@@ -1,0 +1,1737 @@
+# Microsoft Azure: platform concepts and services.
+# Format is described in content/README.md. These entries were written from
+# working knowledge of usage in Spain; each `found` text was then located in a
+# page already downloaded for earlier entries and confirmed with
+# scripts/check_sources.py. Forms with no usedBy have not been seen in a source.
+
+- id: azure.tenant
+  en:
+    term: tenant
+    definition: In Azure, a dedicated instance of Microsoft Entra ID representing one organisation,
+      holding its users, groups and applications.
+  es:
+    verdict: translated
+    forms:
+      - text: inquilino
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - engineers
+        note: Microsoft's translation, as in id. de inquilino.
+      - text: tenant
+        article: el
+        kind: noun
+        headline: true
+        usedBy:
+          - microsoft
+        note: What engineers actually say.
+    definition: En Azure, instancia dedicada de Microsoft Entra ID que representa a una organización,
+      con sus usuarios, grupos y aplicaciones.
+    examples:
+      - es: Las dos empresas del grupo tienen tenants separados.
+        en: The two companies in the group have separate tenants.
+  topics:
+    - iam
+    - architecture
+  technology:
+    - azure
+  related:
+    - azure.entra-id
+    - azure.subscription
+    - cloud.multitenancy
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/architecture/guide/multitenant/considerations/tenancy-models
+      found:
+        - un inquilino Primero
+      checked: 2026-11-14
+    - label: Telefónica Tech, glosario de términos de cloud computing
+      url: https://telefonicatech.com/blog/glosario-terminos-cloud-computing
+      found:
+        - único inquilino
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/entra/identity-platform/v2-oauth2-auth-code-flow
+      found:
+        - tenant
+      checked: 2026-11-14
+  status: sourced
+
+- id: azure.subscription
+  en:
+    term: subscription
+    definition: In Azure, the billing and access boundary that contains resource groups and
+      resources.
+  es:
+    verdict: translated
+    forms:
+      - text: suscripción
+        article: la
+        kind: noun
+        primary: true
+        plural: las suscripciones
+        usedBy:
+          - microsoft
+          - engineers
+    definition: En Azure, unidad de facturación y de control de acceso que contiene grupos
+      de recursos y recursos.
+    examples:
+      - es: Producción y desarrollo están en suscripciones distintas.
+        en: Production and development are in different subscriptions.
+  topics:
+    - architecture
+    - grc
+  technology:
+    - azure
+  related:
+    - azure.resource-group
+    - azure.management-group
+    - azure.tenant
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/security/fundamentals/isolation-choices
+      found:
+        - suscripción de Azure
+      checked: 2026-11-14
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/kubernetes-multi-cluster-rhacm-glsb-haproxy/
+      found:
+        - necesita una suscripción distinta
+      checked: 2026-11-14
+  status: sourced
+
+- id: azure.management-group
+  en:
+    term: management group
+    definition: A container above subscriptions used to apply policy and access control to
+      many subscriptions at once.
+  es:
+    verdict: translated
+    forms:
+      - text: grupo de administración
+        article: el
+        kind: noun
+        primary: true
+        plural: los grupos de administración
+        usedBy:
+          - microsoft
+    definition: Contenedor situado por encima de las suscripciones para aplicar directivas
+      y control de acceso a muchas a la vez.
+    examples:
+      - es: La directiva se asigna en el grupo de administración raíz.
+        en: The policy is assigned at the root management group.
+  topics:
+    - grc
+    - architecture
+  technology:
+    - azure
+  related:
+    - azure.subscription
+    - azure.policy
+    - azure.landing-zone
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/security/benchmark/azure/mcsb-v2-asset-management
+      found:
+        - grupo de administración
+      checked: 2026-11-14
+  status: sourced
+
+- id: azure.resource-group
+  en:
+    term: resource group
+    definition: A logical container for Azure resources that share a life cycle, permissions
+      and policy.
+  es:
+    verdict: translated
+    forms:
+      - text: grupo de recursos
+        article: el
+        kind: noun
+        primary: true
+        plural: los grupos de recursos
+        usedBy:
+          - microsoft
+          - aws
+      - text: resource group
+        article: el
+        kind: noun
+        register: informal
+        note: Heard in speech, often shortened to RG.
+    definition: Contenedor lógico de recursos de Azure que comparten ciclo de vida, permisos
+      y directivas.
+    examples:
+      - es: Borra el grupo de recursos y se eliminará todo lo que contiene.
+        en: Delete the resource group and everything in it will be removed.
+  topics:
+    - architecture
+    - asset
+  technology:
+    - azure
+  related:
+    - azure.subscription
+    - azure.resource-lock
+    - azure.tag
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/architecture/example-scenario/forensics/
+      found:
+        - grupo de recursos
+      checked: 2026-11-14
+    - label: AWS, páginas en español
+      url: https://aws.amazon.com/es/what-is/load-balancing/
+      found:
+        - grupo de recursos
+      checked: 2026-11-14
+  status: sourced
+
+- id: azure.entra-id
+  en:
+    term: Microsoft Entra ID
+    definition: Microsoft's cloud identity and access management service, formerly Azure Active
+      Directory.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Microsoft Entra ID
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - engineers
+      - text: Azure AD
+        kind: noun
+        usedBy:
+          - microsoft
+        note: The old name, still what many people say.
+      - text: directorio activo
+        article: el
+        kind: noun
+        usedBy:
+          - official
+        note: On-premises Active Directory, often just el AD.
+    say: ID is said the Spanish way, 'i-de', or as in English.
+    definition: Servicio de gestión de identidades y accesos en la nube de Microsoft, antes
+      llamado Azure Active Directory.
+    examples:
+      - es: Los usuarios se sincronizan del directorio activo local a Microsoft Entra ID.
+        en: Users are synchronised from on-premises Active Directory to Microsoft Entra ID.
+  topics:
+    - iam
+    - authn
+  technology:
+    - azure
+    - identity-platforms
+  related:
+    - azure.tenant
+    - azure.conditional-access
+    - sec.idp
+    - sec.sso
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/entra/standards/pci-dss-guidance
+      found:
+        - Microsoft Entra ID
+      checked: 2026-11-14
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/guerra-de-nubes-aws-azure-gcp/
+      found:
+        - Microsoft Entra ID
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/architecture/guide/
+      found:
+        - de Azure AD
+      checked: 2026-11-14
+    - label: INCIBE-CERT, blog
+      url: https://www.incibe.es/incibe-cert/blog/sistemas-pam-un-escudo-para-la-proteccion-de-accesos
+      found:
+        - con directorio activo
+      checked: 2026-11-14
+  status: sourced
+
+- id: azure.conditional-access
+  en:
+    term: Conditional Access
+    definition: Entra ID policies that allow, block or add requirements to a sign-in depending
+      on user, device, location and risk.
+  es:
+    verdict: translated
+    forms:
+      - text: acceso condicional
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - engineers
+      - text: directiva de acceso condicional
+        article: la
+        kind: noun
+        usedBy:
+          - microsoft
+        note: A Conditional Access policy.
+    definition: Directivas de Entra ID que permiten, bloquean o añaden requisitos a un inicio
+      de sesión según el usuario, el dispositivo, la ubicación y el riesgo.
+    examples:
+      - es: El acceso condicional exige MFA fuera de la red corporativa.
+        en: Conditional Access requires MFA outside the corporate network.
+  topics:
+    - authz
+    - authn
+  technology:
+    - azure
+    - identity-platforms
+  related:
+    - azure.entra-id
+    - sec.mfa
+    - sec.zero-trust
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/entra/identity/conditional-access/concept-assignment-network
+      found:
+        - de acceso condicional
+        - Directiva de acceso condicional
+      checked: 2026-11-14
+    - label: Tecnoempleo, oferta de empleo en España
+      url: https://www.tecnoempleo.com/senior-cybersecurity-engineer-devoteam/defender-xdr-entra-id/rf-3f90124ce21af3ecac4a
+      found:
+        - Acceso Condicional
+      checked: 2026-11-14
+  status: sourced
+
+- id: azure.managed-identity
+  en:
+    term: managed identity
+    definition: An identity that Azure creates and rotates for a resource so that it can authenticate
+      to other services without stored credentials.
+  es:
+    verdict: translated
+    forms:
+      - text: identidad administrada
+        article: la
+        kind: noun
+        primary: true
+        plural: las identidades administradas
+        usedBy:
+          - microsoft
+      - text: managed identity
+        article: la
+        kind: noun
+        register: informal
+        usedBy:
+          - microsoft
+    definition: Identidad que Azure crea y rota para un recurso, de modo que pueda autenticarse
+      ante otros servicios sin credenciales guardadas.
+    examples:
+      - es: La función accede al almacén de claves con su identidad administrada.
+        en: The function accesses the key vault with its managed identity.
+  topics:
+    - iam
+    - secrets
+  technology:
+    - azure
+    - identity-platforms
+  related:
+    - azure.service-principal
+    - sec.service-account
+    - azure.key-vault
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/container-apps/storage-mounts
+      found:
+        - una identidad administrada asignada
+        - activa Managed Identity for
+      checked: 2026-11-14
+  status: sourced
+
+- id: azure.service-principal
+  en:
+    term: service principal
+    definition: The identity of an application within a tenant, to which roles and permissions
+      are granted.
+  es:
+    verdict: translated
+    forms:
+      - text: entidad de servicio
+        article: la
+        kind: noun
+        primary: true
+        plural: las entidades de servicio
+      - text: service principal
+        article: el
+        kind: noun
+        headline: true
+        note: Very often kept in English.
+      - text: registro de aplicaciones
+        article: el
+        kind: noun
+        usedBy:
+          - microsoft
+        note: App registration, where it is created.
+    definition: Identidad de una aplicación dentro de un inquilino, a la que se conceden roles
+      y permisos.
+    examples:
+      - es: El pipeline se autentica con una entidad de servicio.
+        en: The pipeline authenticates with a service principal.
+  topics:
+    - iam
+  technology:
+    - azure
+    - identity-platforms
+  related:
+    - azure.managed-identity
+    - sec.service-account
+    - azure.entra-id
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/entra/identity-platform/v2-oauth2-auth-code-flow
+      found:
+        - registro de aplicaciones
+      checked: 2026-11-14
+  status: draft
+
+- id: azure.pim
+  en:
+    term: Privileged Identity Management
+    acronym: PIM
+    definition: The Entra ID service that makes privileged roles eligible instead of permanent,
+      activated on request for a limited time.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Privileged Identity Management
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+      - text: PIM
+        kind: noun
+        headline: true
+        usedBy:
+          - microsoft
+    say: PIM is said as a word, 'pim'.
+    definition: Servicio de Entra ID que hace que los roles con privilegios sean elegibles
+      en lugar de permanentes y se activen bajo petición por tiempo limitado.
+    examples:
+      - es: Para ser administrador global hay que activar el rol en PIM.
+        en: To be a global administrator you have to activate the role in PIM.
+  topics:
+    - authz
+    - iam
+  technology:
+    - azure
+    - identity-platforms
+  related:
+    - sec.pam
+    - sec.just-in-time
+    - azure.rbac
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/azure-sovereign-clouds/sovereignty-implementation
+      found:
+        - Privileged Identity Management
+      checked: 2026-11-14
+    - label: Microsoft Security, es-ES
+      url: https://www.microsoft.com/es-es/security/business/security-101/what-is-privileged-access-management-pam
+      found:
+        - con PIM La
+      checked: 2026-11-14
+  status: sourced
+
+- id: azure.rbac
+  en:
+    term: Azure RBAC
+    definition: 'Azure''s authorisation system: role assignments grant a principal a role
+      at a scope.'
+  es:
+    verdict: both
+    forms:
+      - text: RBAC de Azure
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+      - text: asignación de roles
+        article: la
+        kind: noun
+        usedBy:
+          - microsoft
+        note: A role assignment.
+      - text: ámbito
+        article: el
+        kind: noun
+        usedBy:
+          - microsoft
+        note: 'Scope: where the assignment applies.'
+    definition: 'Sistema de autorización de Azure: una asignación concede un rol a una identidad
+      en un ámbito.'
+    examples:
+      - es: Tiene el rol de Colaborador en el ámbito del grupo de recursos.
+        en: They have the Contributor role at the scope of the resource group.
+    watchOut: 'The built-in roles are translated in the portal: Propietario, Colaborador and
+      Lector for Owner, Contributor and Reader.'
+  topics:
+    - authz
+  technology:
+    - azure
+    - identity-platforms
+  related:
+    - sec.rbac
+    - azure.pim
+    - azure.policy
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/security/benchmark/azure/mcsb-v2-asset-management
+      found:
+        - RBAC de Azure
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/container-apps/storage-mounts
+      found:
+        - asignación de roles
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/purview/retention
+      found:
+        - el ámbito de
+      checked: 2026-11-14
+  status: sourced
+
+- id: azure.policy
+  en:
+    term: Azure Policy
+    definition: The service that enforces and audits rules on resources, such as allowed regions
+      or mandatory encryption.
+  es:
+    verdict: both
+    forms:
+      - text: Azure Policy
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+      - text: directiva
+        article: la
+        kind: noun
+        plural: las directivas
+        usedBy:
+          - microsoft
+        note: Microsoft's word for a policy. An initiative is una iniciativa.
+    definition: Servicio que aplica y audita reglas sobre los recursos, como las regiones
+      permitidas o el cifrado obligatorio.
+    examples:
+      - es: Una directiva de Azure Policy impide crear recursos fuera de Europa.
+        en: An Azure Policy definition prevents resources being created outside Europe.
+    watchOut: Microsoft translates policy as directiva. Most Spanish speakers would say política,
+      and engineers often just say policy.
+  topics:
+    - grc
+    - hardening
+  technology:
+    - azure
+  related:
+    - azure.management-group
+    - grc.policy
+    - azure.defender-for-cloud
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/security/benchmark/azure/mcsb-v2-asset-management
+      found:
+        - de Azure Policy
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/purview/retention
+      found:
+        - la directiva de
+      checked: 2026-11-14
+  status: sourced
+
+- id: azure.landing-zone
+  en:
+    term: landing zone
+    definition: A pre-built, governed cloud environment with networking, identity and policy
+      in place, ready for workloads to move in.
+  es:
+    verdict: both
+    forms:
+      - text: zona de aterrizaje
+        article: la
+        kind: noun
+        primary: true
+        plural: las zonas de aterrizaje
+        usedBy:
+          - microsoft
+          - aws
+      - text: landing zone
+        article: la
+        kind: noun
+        headline: true
+        usedBy:
+          - microsoft
+    definition: Entorno de nube ya preparado y gobernado, con red, identidad y directivas,
+      listo para recibir cargas de trabajo.
+    examples:
+      - es: Antes de migrar hay que desplegar la landing zone.
+        en: Before migrating, the landing zone has to be deployed.
+  topics:
+    - architecture
+    - grc
+  technology:
+    - azure
+    - gcp
+    - aws
+    - cloud-general
+  related:
+    - azure.management-group
+    - cloud.reference-architecture
+    - fw.well-architected-framework
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/azure-sovereign-clouds/sovereignty-implementation
+      found:
+        - zona de aterrizaje
+        - Sovereign Landing Zone
+      checked: 2026-11-14
+    - label: AWS, páginas en español
+      url: https://aws.amazon.com/es/what-is/etl/
+      found:
+        - zona de aterrizaje
+      checked: 2026-11-14
+  status: sourced
+
+- id: azure.virtual-network
+  en:
+    term: virtual network
+    acronym: VNet
+    definition: Azure's private network in the cloud, divided into subnets.
+  es:
+    verdict: translated
+    forms:
+      - text: red virtual
+        article: la
+        kind: noun
+        primary: true
+        plural: las redes virtuales
+        usedBy:
+          - microsoft
+          - google
+      - text: VNet
+        article: la
+        kind: noun
+        headline: true
+        usedBy:
+          - microsoft
+      - text: subred
+        article: la
+        kind: noun
+        usedBy:
+          - microsoft
+        note: A subnet.
+    definition: Red privada de Azure en la nube, dividida en subredes.
+    examples:
+      - es: Las dos redes virtuales están conectadas por emparejamiento.
+        en: The two virtual networks are connected by peering.
+  topics:
+    - network
+  technology:
+    - azure
+    - networking
+  related:
+    - cloud.virtual-network
+    - azure.nsg
+    - azure.private-endpoint
+    - cloud.vpc
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/cloud-adoption-framework/ready/azure-best-practices/perimeter-networks
+      found:
+        - una red virtual central
+      checked: 2026-11-14
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/discover/what-is-a-private-cloud?hl=es
+      found:
+        - una red virtual personalizada
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/container-apps/storage-mounts
+      found:
+        - una VNet personalizada
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/networking/design-guide/azure-firewall
+      found:
+        - una subred dedicada
+      checked: 2026-11-14
+  status: sourced
+
+- id: azure.nsg
+  en:
+    term: network security group
+    acronym: NSG
+    definition: A set of rules that allow or deny traffic to and from Azure subnets and network
+      interfaces.
+  es:
+    verdict: translated
+    forms:
+      - text: grupo de seguridad de red
+        article: el
+        kind: noun
+        primary: true
+        plural: los grupos de seguridad de red
+        usedBy:
+          - microsoft
+          - oracle
+      - text: NSG
+        article: el
+        kind: noun
+        headline: true
+        usedBy:
+          - microsoft
+    say: 'NSG is spelled out: ene-ese-ge.'
+    definition: Conjunto de reglas que permiten o deniegan el tráfico hacia y desde subredes
+      e interfaces de red de Azure.
+    examples:
+      - es: El NSG solo permite el puerto 443 desde internet.
+        en: The NSG only allows port 443 from the internet.
+  topics:
+    - network
+  technology:
+    - azure
+    - networking
+  related:
+    - sec.security-group
+    - azure.virtual-network
+    - azure.firewall
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/container-apps/storage-mounts
+      found:
+        - grupo de seguridad de red
+      checked: 2026-11-14
+    - label: Oracle España
+      url: https://www.oracle.com/es/cloud/networking/virtual-cloud-network/
+      found:
+        - grupo de seguridad de red
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/networking/design-guide/azure-firewall
+      found:
+        - de NSG basadas
+      checked: 2026-11-14
+  status: sourced
+
+- id: azure.private-endpoint
+  en:
+    term: private endpoint
+    definition: A network interface with a private IP that connects a virtual network to a
+      platform service without crossing the internet.
+  es:
+    verdict: translated
+    forms:
+      - text: punto de conexión privado
+        article: el
+        kind: noun
+        primary: true
+        plural: los puntos de conexión privados
+        usedBy:
+          - microsoft
+      - text: private endpoint
+        article: el
+        kind: noun
+        headline: true
+        usedBy:
+          - microsoft
+        note: The usual word in speech.
+    definition: Interfaz de red con IP privada que conecta una red virtual con un servicio
+      de plataforma sin pasar por internet.
+    examples:
+      - es: La cuenta de almacenamiento solo es accesible por su private endpoint.
+        en: The storage account is reachable only through its private endpoint.
+    watchOut: Microsoft translates endpoint as punto de conexión. Engineers say endpoint.
+  topics:
+    - network
+  technology:
+    - azure
+    - networking
+  related:
+    - azure.virtual-network
+    - azure.storage-account
+    - sec.network-segmentation
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/ai-foundry/concepts/foundry-models-overview
+      found:
+        - punto de conexión privado
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/azure-sovereign-clouds/sovereignty-implementation
+      found:
+        - Private Endpoint
+      checked: 2026-11-14
+  status: sourced
+
+- id: azure.firewall
+  en:
+    term: Azure Firewall
+    definition: Microsoft's managed, stateful network firewall service for virtual networks.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Azure Firewall
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - engineers
+    definition: Servicio gestionado de cortafuegos de red con estado de Microsoft para redes
+      virtuales.
+    examples:
+      - es: Todo el tráfico saliente pasa por Azure Firewall en la red central.
+        en: All outbound traffic goes through Azure Firewall in the hub network.
+  topics:
+    - network
+  technology:
+    - azure
+    - networking
+  related:
+    - sec.firewall
+    - azure.nsg
+    - sec.ngfw
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/networking/design-guide/azure-firewall
+      found:
+        - Azure Firewall
+      checked: 2026-11-14
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/guerra-de-nubes-aws-azure-gcp/
+      found:
+        - Manager Azure Firewall Manager
+      checked: 2026-11-14
+  status: sourced
+
+- id: azure.bastion
+  en:
+    term: Azure Bastion
+    definition: A managed service for reaching virtual machines over RDP and SSH from the
+      portal without exposing them to the internet.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Azure Bastion
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - engineers
+    definition: Servicio gestionado para acceder a máquinas virtuales por RDP y SSH desde
+      el portal sin exponerlas a internet.
+    examples:
+      - es: Los administradores se conectan a las máquinas mediante Azure Bastion.
+        en: Administrators connect to the machines through Azure Bastion.
+  topics:
+    - network
+    - hardening
+  technology:
+    - azure
+    - networking
+  related:
+    - sec.bastion-host
+    - sec.jump-box
+    - sec.rdp
+    - sec.ssh
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/bastion/tutorial-create-host-portal
+      found:
+        - de Azure Bastion desde
+      checked: 2026-11-14
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/guerra-de-nubes-aws-azure-gcp/
+      found:
+        - GCP Azure Bastion Servicio
+      checked: 2026-11-14
+  status: sourced
+
+- id: azure.expressroute
+  en:
+    term: ExpressRoute
+    definition: A private, dedicated connection between an organisation's network and Azure
+      that does not use the public internet.
+  es:
+    verdict: english-kept
+    forms:
+      - text: ExpressRoute
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - engineers
+      - text: circuito de ExpressRoute
+        article: el
+        kind: noun
+    definition: Conexión privada y dedicada entre la red de una organización y Azure que no
+      pasa por la internet pública.
+    examples:
+      - es: El CPD se conecta a Azure por un circuito de ExpressRoute.
+        en: The data centre connects to Azure over an ExpressRoute circuit.
+  topics:
+    - network
+  technology:
+    - azure
+    - networking
+  related:
+    - sec.vpn
+    - cloud.hybrid-cloud
+    - azure.virtual-network
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/cloud-adoption-framework/ready/azure-best-practices/perimeter-networks
+      found:
+        - Azure ExpressRoute en
+      checked: 2026-11-14
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/comparativa-servicios-cloud-aws-azure-gcp/
+      found:
+        - Connect ExpressRoute Cloud
+      checked: 2026-11-14
+  status: sourced
+
+- id: azure.front-door
+  en:
+    term: Azure Front Door
+    definition: Microsoft's global entry point for web applications, combining load balancing,
+      content delivery and a web application firewall.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Azure Front Door
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+    definition: Punto de entrada global de Microsoft para aplicaciones web, con equilibrio
+      de carga, entrega de contenido y cortafuegos de aplicaciones web.
+    examples:
+      - es: El WAF se aplica en Azure Front Door, antes de llegar a la aplicación.
+        en: The WAF is applied at Azure Front Door, before traffic reaches the application.
+  topics:
+    - network
+    - appsec
+  technology:
+    - azure
+    - networking
+  related:
+    - cloud.cdn
+    - sec.waf
+    - cloud.load-balancer
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/frontdoor/front-door-overview
+      found:
+        - Azure Front Door
+      checked: 2026-11-14
+  status: sourced
+
+- id: azure.storage-account
+  en:
+    term: storage account
+    definition: The Azure resource that holds blobs, files, queues and tables under one namespace
+      and set of access settings.
+  es:
+    verdict: translated
+    forms:
+      - text: cuenta de almacenamiento
+        article: la
+        kind: noun
+        primary: true
+        plural: las cuentas de almacenamiento
+        usedBy:
+          - microsoft
+      - text: storage account
+        article: la
+        kind: noun
+        register: informal
+    definition: Recurso de Azure que agrupa blobs, archivos, colas y tablas bajo un mismo
+      espacio de nombres y una misma configuración de acceso.
+    examples:
+      - es: La cuenta de almacenamiento tenía habilitado el acceso público.
+        en: The storage account had public access enabled.
+  topics:
+    - data
+  technology:
+    - azure
+  related:
+    - azure.blob-storage
+    - cloud.object-storage
+    - azure.private-endpoint
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/container-apps/storage-mounts
+      found:
+        - cuenta de almacenamiento
+      checked: 2026-11-14
+  status: sourced
+
+- id: azure.blob-storage
+  en:
+    term: Blob Storage
+    definition: Azure's object storage service; blobs are kept in containers inside a storage
+      account.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Blob Storage
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - engineers
+      - text: blob
+        article: el
+        kind: noun
+        plural: los blobs
+        usedBy:
+          - microsoft
+      - text: contenedor
+        article: el
+        kind: noun
+        usedBy:
+          - microsoft
+        note: A blob container, not a Docker one.
+    definition: Servicio de almacenamiento de objetos de Azure; los blobs se guardan en contenedores
+      dentro de una cuenta de almacenamiento.
+    examples:
+      - es: Las copias de seguridad se guardan en Blob Storage con inmutabilidad.
+        en: The backups are kept in Blob Storage with immutability.
+  topics:
+    - data
+  technology:
+    - azure
+  related:
+    - azure.storage-account
+    - cloud.object-storage
+    - sec.immutable-backup
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/storage/common/storage-introduction
+      found:
+        - Blob Storage Azure
+      checked: 2026-11-14
+    - label: Adictos al Trabajo (Autentia)
+      url: https://adictosaltrabajo.com/2025/02/14/sistemas-de-recoleccion-de-logs-en-alta-disponibilidad-optimizacion-y-beneficios/
+      found:
+        - Azure Blob Storage
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/storage/blobs/access-tiers-overview
+      found:
+        - de BLOB de
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/container-apps/storage-mounts
+      found:
+        - de contenedor tiene
+      checked: 2026-11-14
+  status: sourced
+
+- id: azure.key-vault
+  en:
+    term: Azure Key Vault
+    definition: Microsoft's managed service for storing keys, secrets and certificates.
+  es:
+    verdict: both
+    forms:
+      - text: Azure Key Vault
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+      - text: almacén de claves
+        article: el
+        kind: noun
+        usedBy:
+          - microsoft
+        note: Microsoft's translation of key vault.
+      - text: Key Vault
+        article: el
+        kind: noun
+        headline: true
+        usedBy:
+          - microsoft
+    definition: Servicio gestionado de Microsoft para guardar claves, secretos y certificados.
+    examples:
+      - es: La cadena de conexión está en Key Vault, no en el código.
+        en: The connection string is in Key Vault, not in the code.
+  topics:
+    - secrets
+    - crypto
+  technology:
+    - azure
+  related:
+    - sec.key-management
+    - sec.secrets-management
+    - sec.hsm
+    - azure.managed-identity
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/security/fundamentals/encryption-atrest
+      found:
+        - Azure Key Vault
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/key-vault/certificates/about-certificates
+      found:
+        - almacén de claves
+        - Azure Key Vault
+      checked: 2026-11-14
+  status: sourced
+
+- id: azure.defender-for-cloud
+  en:
+    term: Microsoft Defender for Cloud
+    definition: Microsoft's cloud security posture management and workload protection product,
+      covering Azure and other clouds.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Microsoft Defender for Cloud
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+      - text: puntuación de seguridad
+        article: la
+        kind: noun
+        usedBy:
+          - microsoft
+        note: Secure score, its headline measure.
+    definition: Producto de Microsoft para la gestión de la postura de seguridad en la nube
+      y la protección de cargas de trabajo, en Azure y en otras nubes.
+    examples:
+      - es: Defender for Cloud recomienda activar el cifrado de los discos.
+        en: Defender for Cloud recommends enabling disk encryption.
+  topics:
+    - detection
+    - hardening
+  technology:
+    - azure
+  related:
+    - sec.cnapp
+    - sec.misconfiguration
+    - azure.policy
+    - azure.sentinel
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/security/benchmark/azure/security-baselines-overview
+      found:
+        - Microsoft Defender for Cloud
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/security/benchmark/azure/mcsb-v2-asset-management
+      found:
+        - puntuación de seguridad
+      checked: 2026-11-14
+  status: sourced
+
+- id: azure.sentinel
+  en:
+    term: Microsoft Sentinel
+    definition: Microsoft's cloud-native SIEM and SOAR service.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Microsoft Sentinel
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - engineers
+      - text: regla de análisis
+        article: la
+        kind: noun
+        note: An analytics rule, its detections.
+    definition: Servicio SIEM y SOAR nativo de la nube de Microsoft.
+    examples:
+      - es: Los registros de Entra ID se envían a Microsoft Sentinel.
+        en: The Entra ID logs are sent to Microsoft Sentinel.
+  topics:
+    - detection
+    - incident
+  technology:
+    - azure
+  related:
+    - sec.siem
+    - sec.soar
+    - azure.log-analytics
+    - sec.playbook
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/security/benchmark/azure/mcsb-v2-asset-management
+      found:
+        - de Microsoft Sentinel
+      checked: 2026-11-14
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/guerra-de-nubes-aws-azure-gcp/
+      found:
+        - Macie Microsoft Sentinel Attestation
+      checked: 2026-11-14
+  status: sourced
+
+- id: azure.log-analytics
+  en:
+    term: Log Analytics workspace
+    definition: The Azure Monitor store where logs are collected and queried with the Kusto
+      query language.
+  es:
+    verdict: translated
+    forms:
+      - text: área de trabajo de Log Analytics
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+        note: Feminine, but takes el before the stressed a.
+      - text: workspace
+        article: el
+        kind: noun
+        register: informal
+    definition: Almacén de Azure Monitor donde se recogen los registros y se consultan con
+      el lenguaje KQL.
+    examples:
+      - es: Todos los registros de diagnóstico van al mismo área de trabajo de Log Analytics.
+        en: All the diagnostic logs go to the same Log Analytics workspace.
+  topics:
+    - detection
+  technology:
+    - azure
+  related:
+    - azure.monitor
+    - azure.sentinel
+    - sec.log-management
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/networking/design-guide/azure-firewall
+      found:
+        - Área de trabajo de Log Analytics
+      checked: 2026-11-14
+  status: sourced
+
+- id: azure.monitor
+  en:
+    term: Azure Monitor
+    definition: Azure's service for collecting metrics and logs from resources and raising
+      alerts on them.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Azure Monitor
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - engineers
+      - text: registro de actividad
+        article: el
+        kind: noun
+        usedBy:
+          - microsoft
+        note: 'The activity log: who did what to which resource.'
+    definition: Servicio de Azure que recoge métricas y registros de los recursos y genera
+      alertas a partir de ellos.
+    examples:
+      - es: Azure Monitor avisa cuando la CPU supera el 90 %.
+        en: Azure Monitor raises an alert when CPU goes above 90%.
+  topics:
+    - detection
+  technology:
+    - azure
+  related:
+    - sec.monitoring
+    - azure.log-analytics
+    - sec.alert
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/security/benchmark/azure/mcsb-v2-asset-management
+      found:
+        - de Azure Monitor
+        - registro de actividad
+      checked: 2026-11-14
+    - label: Adictos al Trabajo (Autentia)
+      url: https://adictosaltrabajo.com/2025/02/14/sistemas-de-recoleccion-de-logs-en-alta-disponibilidad-optimizacion-y-beneficios/
+      found:
+        - Microsoft Azure Monitor
+      checked: 2026-11-14
+  status: sourced
+
+- id: azure.aks
+  en:
+    term: Azure Kubernetes Service
+    acronym: AKS
+    definition: Microsoft's managed Kubernetes service.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Azure Kubernetes Service
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - engineers
+      - text: AKS
+        kind: noun
+        headline: true
+        usedBy:
+          - microsoft
+    say: 'AKS is spelled out: a-ka-ese.'
+    definition: Servicio gestionado de Kubernetes de Microsoft.
+    examples:
+      - es: El clúster de AKS usa identidades administradas para acceder al registro.
+        en: The AKS cluster uses managed identities to access the registry.
+  topics:
+    - architecture
+  technology:
+    - azure
+    - kubernetes
+  related:
+    - tech.kubernetes
+    - cloud.cluster
+    - gcp.gke
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/architecture/guide/technology-choices/compute-decision-tree
+      found:
+        - Azure Kubernetes Service
+        - AKS
+      checked: 2026-11-14
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/comparativa-servicios-cloud-aws-azure-gcp/
+      found:
+        - Azure Kubernetes Service
+      checked: 2026-11-14
+  status: sourced
+
+- id: azure.app-service
+  en:
+    term: Azure App Service
+    definition: Microsoft's platform service for hosting web applications and APIs without
+      managing servers.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Azure App Service
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+      - text: aplicación web
+        article: la
+        kind: noun
+        usedBy:
+          - microsoft
+        note: A web app, the resource you create.
+    definition: Servicio de plataforma de Microsoft para alojar aplicaciones web y API sin
+      administrar servidores.
+    examples:
+      - es: La web corporativa está alojada en Azure App Service.
+        en: The corporate website is hosted on Azure App Service.
+  topics:
+    - architecture
+    - appsec
+  technology:
+    - azure
+  related:
+    - cloud.paas
+    - azure.functions
+    - tech.managed-service
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/architecture/guide/technology-choices/compute-decision-tree
+      found:
+        - Azure App Service
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/architecture/patterns/federated-identity
+      found:
+        - aplicación web
+      checked: 2026-11-14
+  status: sourced
+
+- id: azure.functions
+  en:
+    term: Azure Functions
+    definition: Microsoft's serverless service for running code in response to events.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Azure Functions
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - official
+      - text: función
+        article: la
+        kind: noun
+        plural: las funciones
+        note: A single function; the app that holds them is una aplicación de funciones.
+    definition: Servicio sin servidor de Microsoft para ejecutar código en respuesta a eventos.
+    examples:
+      - es: Una función de Azure Functions procesa cada fichero que llega.
+        en: An Azure Functions function processes each file that arrives.
+  topics:
+    - architecture
+  technology:
+    - azure
+    - serverless
+  related:
+    - cloud.serverless
+    - azure.app-service
+    - gcp.cloud-functions
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/architecture/guide/technology-choices/compute-decision-tree
+      found:
+        - Azure Functions
+      checked: 2026-11-14
+    - label: INCIBE-CERT, blog
+      url: https://www.incibe.es/incibe-cert/blog/seguridad-de-las-api
+      found:
+        - Azure Functions
+      checked: 2026-11-14
+  status: sourced
+
+- id: azure.arm-template
+  en:
+    term: ARM template
+    definition: A declarative file describing Azure resources for Azure Resource Manager to
+      deploy; Bicep is the more readable language that compiles to it.
+  es:
+    verdict: translated
+    forms:
+      - text: plantilla de ARM
+        article: la
+        kind: noun
+        primary: true
+        plural: las plantillas de ARM
+        usedBy:
+          - microsoft
+      - text: Bicep
+        kind: noun
+        usedBy:
+          - microsoft
+        note: The newer language, kept as a name.
+    say: ARM is said as a word, 'arm'.
+    definition: Fichero declarativo que describe recursos de Azure para que Azure Resource
+      Manager los despliegue.
+    examples:
+      - es: La red se despliega con una plantilla de ARM desde el pipeline.
+        en: The network is deployed with an ARM template from the pipeline.
+  topics:
+    - architecture
+    - hardening
+  technology:
+    - azure
+    - iac
+  related:
+    - tech.iac
+    - tech.deployment
+    - azure.resource-group
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/container-apps/storage-mounts
+      found:
+        - plantilla de ARM
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/frontdoor/front-door-overview
+      found:
+        - Bicep
+      checked: 2026-11-14
+  status: sourced
+
+- id: azure.resource-lock
+  en:
+    term: resource lock
+    definition: A setting that stops a resource being deleted or changed by accident, whatever
+      the user's permissions.
+  es:
+    verdict: translated
+    forms:
+      - text: bloqueo de recursos
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+      - text: bloqueo
+        article: el
+        kind: noun
+        usedBy:
+          - microsoft
+    definition: Ajuste que impide borrar o modificar un recurso por accidente, sean cuales
+      sean los permisos del usuario.
+    examples:
+      - es: El grupo de recursos de producción tiene un bloqueo de eliminación.
+        en: The production resource group has a delete lock.
+  topics:
+    - hardening
+    - asset
+  technology:
+    - azure
+  related:
+    - azure.resource-group
+    - azure.policy
+    - sec.integrity
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/security/benchmark/azure/mcsb-v2-asset-management
+      found:
+        - bloqueo de recursos
+        - del bloqueo
+      checked: 2026-11-14
+  status: sourced
+
+- id: azure.tag
+  en:
+    term: tag
+    definition: A name and value attached to a cloud resource to record its owner, environment
+      or cost centre.
+  es:
+    verdict: translated
+    forms:
+      - text: etiqueta
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - official
+      - text: etiquetar
+        kind: verb
+        usedBy:
+          - microsoft
+      - text: tag
+        article: el
+        kind: noun
+        register: informal
+    definition: Nombre y valor que se asocian a un recurso de nube para registrar su responsable,
+      su entorno o su centro de coste.
+    examples:
+      - es: Todos los recursos deben llevar la etiqueta del responsable.
+        en: Every resource must carry the owner tag.
+  topics:
+    - asset
+    - grc
+  technology:
+    - azure
+    - aws
+    - cloud-general
+  related:
+    - sec.data-labelling
+    - grc.asset-inventory
+    - azure.resource-group
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/purview/retention
+      found:
+        - una etiqueta de
+        - etiquetar
+      checked: 2026-11-14
+    - label: INCIBE, Guía de implantación y buenas prácticas de DNSSEC
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/incibe_guia_de_implantacion_y_buenas_practicas_de_dnssec.pdf
+      found:
+        - una etiqueta de
+      checked: 2026-11-14
+  status: sourced
+
+- id: azure.availability-set
+  en:
+    term: availability set
+    definition: A grouping that spreads virtual machines across separate hardware in one data
+      centre so that a single failure does not take them all down.
+  es:
+    verdict: translated
+    forms:
+      - text: conjunto de disponibilidad
+        article: el
+        kind: noun
+        primary: true
+      - text: conjunto de escalado
+        article: el
+        kind: noun
+        usedBy:
+          - microsoft
+        note: A scale set, the related grouping for scaling out.
+    definition: Agrupación que reparte las máquinas virtuales por hardware distinto de un
+      centro de datos para que un fallo no las detenga todas.
+    examples:
+      - es: Las dos máquinas del servicio están en un conjunto de disponibilidad.
+        en: The service's two machines are in an availability set.
+  topics:
+    - architecture
+  technology:
+    - azure
+  related:
+    - cloud.availability-zone
+    - sec.high-availability
+    - sec.redundancy
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/reliability/concept-redundancy-replication-backup
+      found:
+        - conjunto de escalado
+      checked: 2026-11-14
+  status: draft
+
+- id: azure.purview
+  en:
+    term: Microsoft Purview
+    definition: Microsoft's family of data governance, classification and compliance tools.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Microsoft Purview
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - engineers
+      - text: etiqueta de confidencialidad
+        article: la
+        kind: noun
+        usedBy:
+          - microsoft
+        note: A sensitivity label, its main classification mechanism.
+    definition: Familia de herramientas de Microsoft para el gobierno, la clasificación y
+      el cumplimiento de los datos.
+    examples:
+      - es: Purview aplica etiquetas de confidencialidad a los documentos.
+        en: Purview applies sensitivity labels to documents.
+  topics:
+    - data
+    - grc
+  technology:
+    - azure
+  related:
+    - sec.data-classification
+    - sec.dlp
+    - sec.data-labelling
+    - grc.data-steward
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/purview/data-governance-roles-permissions
+      found:
+        - en Microsoft Purview
+      checked: 2026-11-14
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/guerra-de-nubes-aws-azure-gcp/
+      found:
+        - Factory Microsoft Purview Data
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/purview/sensitivity-labels
+      found:
+        - etiqueta de confidencialidad
+      checked: 2026-11-14
+  status: sourced
+
+- id: azure.devops
+  en:
+    term: Azure DevOps
+    definition: Microsoft's suite for source control, pipelines, work tracking and package
+      feeds.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Azure DevOps
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - engineers
+      - text: conexión de servicio
+        article: la
+        kind: noun
+        usedBy:
+          - microsoft
+        note: A service connection, the credential a pipeline deploys with.
+    definition: Conjunto de herramientas de Microsoft para control de código, pipelines, seguimiento
+      del trabajo y paquetes.
+    examples:
+      - es: El despliegue se lanza desde un pipeline de Azure DevOps.
+        en: The deployment is launched from an Azure DevOps pipeline.
+  topics:
+    - appsec
+    - supplychain
+  technology:
+    - azure
+    - ci-cd
+  related:
+    - tech.ci-cd
+    - tech.pipeline
+    - tech.code-repository
+    - azure.service-principal
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/azure-sovereign-clouds/sovereignty-implementation
+      found:
+        - como Azure DevOps
+      checked: 2026-11-14
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/guerra-de-nubes-aws-azure-gcp/
+      found:
+        - CodeBuild Azure DevOps Cloud
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/virtual-network/virtual-networks-overview
+      found:
+        - conexión de servicio
+      checked: 2026-11-14
+  status: sourced
+
+- id: azure.arc
+  en:
+    term: Azure Arc
+    definition: A service that brings servers and clusters running outside Azure under Azure's
+      management, policy and monitoring.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Azure Arc
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - engineers
+    definition: Servicio que pone bajo la administración, las directivas y la supervisión
+      de Azure servidores y clústeres que se ejecutan fuera de Azure.
+    examples:
+      - es: Los servidores del CPD se gestionan con Azure Arc.
+        en: The data centre's servers are managed with Azure Arc.
+  topics:
+    - architecture
+    - grc
+  technology:
+    - azure
+  related:
+    - cloud.hybrid-cloud
+    - cloud.multi-cloud
+    - azure.policy
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/security/benchmark/azure/mcsb-v2-asset-management
+      found:
+        - Implemente Azure Arc para
+      checked: 2026-11-14
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/guerra-de-nubes-aws-azure-gcp/
+      found:
+        - Azure Arc
+      checked: 2026-11-14
+  status: sourced

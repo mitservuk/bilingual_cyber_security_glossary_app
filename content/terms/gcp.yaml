@@ -1,0 +1,1639 @@
+# Google Cloud: platform concepts and services.
+# Format is described in content/README.md. These entries were written from
+# working knowledge of usage in Spain; each `found` text was then located in a
+# page already downloaded for earlier entries and confirmed with
+# scripts/check_sources.py. Forms with no usedBy have not been seen in a source.
+
+- id: gcp.project
+  en:
+    term: project
+    definition: In Google Cloud, the container that holds resources and is the unit of billing,
+      quotas and access control.
+  es:
+    verdict: translated
+    forms:
+      - text: proyecto
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - google
+          - engineers
+      - text: ID de proyecto
+        article: el
+        kind: noun
+        usedBy:
+          - google
+        note: The project ID, its unique name.
+    definition: En Google Cloud, contenedor que agrupa los recursos y es la unidad de facturación,
+      cuotas y control de acceso.
+    examples:
+      - es: Cada entorno tiene su propio proyecto de Google Cloud.
+        en: Each environment has its own Google Cloud project.
+  topics:
+    - architecture
+    - grc
+  technology:
+    - gcp
+  related:
+    - gcp.folder
+    - gcp.organization
+    - azure.subscription
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/compute?hl=es
+      found:
+        - para tu proyecto
+        - ID de proyecto
+      checked: 2026-11-14
+    - label: Telefónica Tech, blog
+      url: https://telefonicatech.com/blog/ataques-cadena-suministro-dependencias-seguridad-software
+      found:
+        - si tu proyecto necesita
+      checked: 2026-11-14
+  status: sourced
+
+- id: gcp.organization
+  en:
+    term: organization
+    definition: The root of the Google Cloud resource hierarchy, representing the company
+      and owning all its folders and projects.
+  es:
+    verdict: translated
+    forms:
+      - text: organización
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - google
+          - official
+      - text: jerarquía de recursos
+        article: la
+        kind: noun
+        note: The resource hierarchy it sits at the top of.
+    definition: Raíz de la jerarquía de recursos de Google Cloud, que representa a la empresa
+      y contiene todas sus carpetas y proyectos.
+    examples:
+      - es: Las políticas se heredan desde la organización hasta los proyectos.
+        en: Policies are inherited from the organization down to the projects.
+  topics:
+    - architecture
+    - grc
+  technology:
+    - gcp
+  related:
+    - gcp.folder
+    - gcp.project
+    - gcp.org-policy
+    - azure.tenant
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/security/products/firewall?hl=es
+      found:
+        - nivel de organización
+      checked: 2026-11-14
+    - label: AEPD, Orientaciones sobre IA agéntica
+      url: https://www.aepd.es/guias/orientaciones-ia-agentica.pdf
+      found:
+        - políticas de la organización
+      checked: 2026-11-14
+  status: sourced
+
+- id: gcp.folder
+  en:
+    term: folder
+    definition: A grouping level between the organization and projects, used to apply access
+      and policy to several projects.
+  es:
+    verdict: translated
+    forms:
+      - text: carpeta
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - google
+    definition: Nivel de agrupación entre la organización y los proyectos, para aplicar accesos
+      y políticas a varios proyectos.
+    examples:
+      - es: Los proyectos de producción están en una carpeta aparte.
+        en: The production projects are in a separate folder.
+  topics:
+    - architecture
+    - grc
+  technology:
+    - gcp
+  related:
+    - gcp.organization
+    - gcp.project
+    - azure.management-group
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/security/products/firewall?hl=es
+      found:
+        - de organización, carpeta
+      checked: 2026-11-14
+  status: sourced
+
+- id: gcp.org-policy
+  en:
+    term: organization policy
+    definition: Constraints set centrally on what can be configured in Google Cloud, such
+      as allowed locations or banning public IPs.
+  es:
+    verdict: translated
+    forms:
+      - text: política de la organización
+        article: la
+        kind: noun
+        primary: true
+        plural: las políticas de la organización
+        usedBy:
+          - official
+          - aws
+      - text: restricción
+        article: la
+        kind: noun
+        note: A constraint, the individual rule.
+    definition: Restricciones fijadas de forma centralizada sobre lo que puede configurarse
+      en Google Cloud, como las ubicaciones permitidas.
+    examples:
+      - es: Una política de la organización impide crear máquinas con IP pública.
+        en: An organization policy prevents machines being created with a public IP.
+    watchOut: Google translates policy as política, where Microsoft says directiva.
+  topics:
+    - grc
+    - hardening
+  technology:
+    - gcp
+  related:
+    - gcp.organization
+    - azure.policy
+    - grc.policy
+  sources:
+    - label: INCIBE, Guía de implantación y buenas prácticas de DNSSEC
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/incibe_guia_de_implantacion_y_buenas_practicas_de_dnssec.pdf
+      found:
+        - política de la organización
+      checked: 2026-11-14
+    - label: AWS, documentación en español
+      url: https://docs.aws.amazon.com/es_es/config/latest/developerguide/operational-best-practices-for-pci-dss.html
+      found:
+        - política de la organización
+      checked: 2026-11-14
+  status: sourced
+
+- id: gcp.iam
+  en:
+    term: Cloud IAM
+    definition: 'Google Cloud''s access system: an allow policy binds principals to roles
+      on a resource.'
+  es:
+    verdict: both
+    forms:
+      - text: IAM
+        kind: noun
+        primary: true
+        usedBy:
+          - google
+          - official
+      - text: política de permisos
+        article: la
+        kind: noun
+        note: An allow policy.
+      - text: principal
+        article: el
+        kind: noun
+        note: 'A principal: the user, group or service account. Google''s older docs say miembro.'
+      - text: rol
+        article: el
+        kind: noun
+        plural: los roles
+        usedBy:
+          - google
+    say: 'IAM is spelled out the English way, ''ai-am'', or in Spanish: i-a-eme.'
+    definition: 'Sistema de acceso de Google Cloud: una política de permisos vincula principales
+      con roles sobre un recurso.'
+    examples:
+      - es: Evita los roles básicos de IAM y usa roles predefinidos.
+        en: Avoid the basic IAM roles and use predefined roles.
+  topics:
+    - authz
+    - iam
+  technology:
+    - gcp
+    - identity-platforms
+  related:
+    - sec.iam
+    - sec.rbac
+    - gcp.service-account
+    - azure.rbac
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/learn/what-is-cloud-security?hl=es
+      found:
+        - IAM
+      checked: 2026-11-14
+    - label: INCIBE-CERT, blog
+      url: https://www.incibe.es/incibe-cert/blog/seguridad-de-las-api
+      found:
+        - en IAM en
+      checked: 2026-11-14
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/discover/incident-response-plan-template?hl=es
+      found:
+        - cada rol definido
+      checked: 2026-11-14
+  status: sourced
+
+- id: gcp.service-account
+  en:
+    term: service account
+    definition: In Google Cloud, an identity for a workload, which is both a principal that
+      is granted roles and a resource that others can impersonate.
+  es:
+    verdict: translated
+    forms:
+      - text: cuenta de servicio
+        article: la
+        kind: noun
+        primary: true
+        plural: las cuentas de servicio
+        usedBy:
+          - engineers
+          - microsoft
+      - text: clave de cuenta de servicio
+        article: la
+        kind: noun
+        note: A service account key, the long-lived credential to avoid.
+    definition: En Google Cloud, identidad de una carga de trabajo, que recibe roles y que
+      otros pueden suplantar con permiso.
+    examples:
+      - es: 'No descargues claves de cuentas de servicio: usa la federación de identidades.'
+        en: 'Do not download service account keys: use identity federation.'
+  topics:
+    - iam
+    - secrets
+  technology:
+    - gcp
+    - identity-platforms
+  related:
+    - sec.service-account
+    - gcp.workload-identity
+    - gcp.iam
+    - azure.managed-identity
+  sources:
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/aws-guardduty-luchas-amenzas/
+      found:
+        - cuenta de servicio
+      checked: 2026-11-14
+    - label: Microsoft Security, es-ES
+      url: https://www.microsoft.com/es-es/security/business/security-101/what-is-application-security
+      found:
+        - cuenta de servicio
+      checked: 2026-11-14
+  status: sourced
+
+- id: gcp.workload-identity
+  en:
+    term: Workload Identity Federation
+    definition: Letting workloads outside Google Cloud exchange their own identity tokens
+      for short-lived Google credentials, with no service account keys.
+  es:
+    verdict: translated
+    forms:
+      - text: federación de identidades de cargas de trabajo
+        article: la
+        kind: noun
+        primary: true
+      - text: Workload Identity
+        kind: noun
+        headline: true
+        usedBy:
+          - engineers
+        note: The English name is common in speech.
+    definition: Mecanismo por el que cargas de trabajo externas canjean sus propios tokens
+      de identidad por credenciales de Google de corta duración, sin claves de cuentas de
+      servicio.
+    examples:
+      - es: El pipeline se autentica mediante la federación de identidades de cargas de trabajo.
+        en: The pipeline authenticates through Workload Identity Federation.
+  topics:
+    - iam
+    - authn
+  technology:
+    - gcp
+    - identity-platforms
+  related:
+    - sec.federated-identity
+    - gcp.service-account
+    - sec.openid-connect
+  sources:
+    - label: Tecnoempleo, oferta de empleo en España
+      url: https://www.tecnoempleo.com/sre-gcp-kubernetes-terraform-grupo-ns/devops-linux/rf-983c15f0e240b3bf084c
+      found:
+        - Workload Identity
+      checked: 2026-11-14
+  status: draft
+
+- id: gcp.cloud-storage
+  en:
+    term: Cloud Storage
+    definition: Google Cloud's object storage service; objects are kept in buckets.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Cloud Storage
+        kind: noun
+        primary: true
+        usedBy:
+          - google
+          - official
+      - text: bucket
+        article: el
+        kind: noun
+        headline: true
+        plural: los buckets
+        usedBy:
+          - google
+        note: Kept in English by Google and by engineers. Segmento appears in older translations.
+    say: Bucket is pronounced 'báquet'.
+    definition: Servicio de almacenamiento de objetos de Google Cloud; los objetos se guardan
+      en buckets.
+    examples:
+      - es: El bucket era público y exponía datos de clientes.
+        en: The bucket was public and exposed customer data.
+  topics:
+    - data
+  technology:
+    - gcp
+  related:
+    - cloud.object-storage
+    - azure.blob-storage
+    - sec.misconfiguration
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/learn/what-is-cloud-storage?hl=es
+      found:
+        - es Cloud Storage
+      checked: 2026-11-14
+    - label: Red.es, Resolución de 9 de junio de 2014 (BOE-A-2014-6641)
+      url: https://www.boe.es/diario_boe/txt.php?id=BOE-A-2014-6641
+      found:
+        - Google Cloud Storage
+      checked: 2026-11-14
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/use-cases/ai-sdlc?hl=es
+      found:
+        - bucket
+      checked: 2026-11-14
+  status: sourced
+
+- id: gcp.compute-engine
+  en:
+    term: Compute Engine
+    definition: Google Cloud's virtual machine service.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Compute Engine
+        kind: noun
+        primary: true
+        usedBy:
+          - google
+          - engineers
+      - text: instancia
+        article: la
+        kind: noun
+        plural: las instancias
+        usedBy:
+          - google
+        note: A VM instance.
+    definition: Servicio de máquinas virtuales de Google Cloud.
+    examples:
+      - es: Las instancias de Compute Engine no tienen IP pública.
+        en: The Compute Engine instances have no public IP.
+  topics:
+    - architecture
+  technology:
+    - gcp
+  related:
+    - cloud.virtual-machine
+    - cloud.compute
+    - cloud.iaas
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/compute?hl=es
+      found:
+        - Compute Engine
+        - una instancia de
+      checked: 2026-11-14
+    - label: Tecnoempleo, oferta de empleo en España
+      url: https://www.tecnoempleo.com/google-cloud-architect-devoteam/gcp-compute-engine/rf-8e211669d2d3c31cb74e
+      found:
+        - Compute Engine
+      checked: 2026-11-14
+  status: sourced
+
+- id: gcp.gke
+  en:
+    term: Google Kubernetes Engine
+    acronym: GKE
+    definition: Google Cloud's managed Kubernetes service.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Google Kubernetes Engine
+        kind: noun
+        primary: true
+        usedBy:
+          - google
+          - engineers
+      - text: GKE
+        kind: noun
+        headline: true
+        usedBy:
+          - google
+    say: 'GKE is spelled out: ge-ka-e.'
+    definition: Servicio gestionado de Kubernetes de Google Cloud.
+    examples:
+      - es: El clúster de GKE es privado y solo se administra desde la red interna.
+        en: The GKE cluster is private and administered only from the internal network.
+  topics:
+    - architecture
+  technology:
+    - gcp
+    - kubernetes
+  related:
+    - tech.kubernetes
+    - cloud.cluster
+    - azure.aks
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/compute?hl=es
+      found:
+        - Google Kubernetes Engine
+      checked: 2026-11-14
+    - label: Tecnoempleo, oferta de empleo en España
+      url: https://www.tecnoempleo.com/sre-gcp-kubernetes-terraform-grupo-ns/devops-linux/rf-983c15f0e240b3bf084c
+      found:
+        - Google Kubernetes Engine
+      checked: 2026-11-14
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/discover/what-is-container-orchestration?hl=es
+      found:
+        - GKE
+      checked: 2026-11-14
+  status: sourced
+
+- id: gcp.cloud-run
+  en:
+    term: Cloud Run
+    definition: Google Cloud's serverless platform for running containers that scale with
+      demand, down to zero.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Cloud Run
+        kind: noun
+        primary: true
+        usedBy:
+          - google
+          - engineers
+    definition: Plataforma sin servidor de Google Cloud para ejecutar contenedores que escalan
+      con la demanda, hasta cero.
+    examples:
+      - es: La API se ejecuta en Cloud Run y solo admite tráfico interno.
+        en: The API runs on Cloud Run and accepts internal traffic only.
+  topics:
+    - architecture
+  technology:
+    - gcp
+    - serverless
+    - containers-oci
+  related:
+    - cloud.serverless
+    - cloud.container
+    - gcp.cloud-functions
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/serverless?hl=es
+      found:
+        - Probar Cloud Run Crea
+      checked: 2026-11-14
+    - label: Tecnoempleo, oferta de empleo en España
+      url: https://www.tecnoempleo.com/google-cloud-architect-devoteam/gcp-compute-engine/rf-8e211669d2d3c31cb74e
+      found:
+        - Cloud Run
+      checked: 2026-11-14
+  status: sourced
+
+- id: gcp.cloud-functions
+  en:
+    term: Cloud Functions
+    definition: Google Cloud's service for running single functions in response to events,
+      now part of Cloud Run.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Cloud Functions
+        kind: noun
+        primary: true
+        usedBy:
+          - google
+          - official
+      - text: Cloud Run Functions
+        kind: noun
+        usedBy:
+          - google
+        note: The current name.
+    definition: Servicio de Google Cloud para ejecutar funciones en respuesta a eventos, hoy
+      integrado en Cloud Run.
+    examples:
+      - es: Una función de Cloud Functions redimensiona cada imagen subida.
+        en: A Cloud Functions function resizes each uploaded image.
+  topics:
+    - architecture
+  technology:
+    - gcp
+    - serverless
+  related:
+    - cloud.serverless
+    - gcp.cloud-run
+    - azure.functions
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/security/compliance/csa?hl=es
+      found:
+        - Filestore Cloud Functions Cloud
+      checked: 2026-11-14
+    - label: INCIBE-CERT, blog
+      url: https://www.incibe.es/incibe-cert/blog/seguridad-de-las-api
+      found:
+        - Google Cloud Functions
+      checked: 2026-11-14
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/serverless?hl=es
+      found:
+        - Cloud Run functions
+      checked: 2026-11-14
+  status: sourced
+
+- id: gcp.vpc
+  en:
+    term: VPC network
+    definition: Google Cloud's virtual network, which is global and holds regional subnets.
+  es:
+    verdict: translated
+    forms:
+      - text: red de VPC
+        article: la
+        kind: noun
+        primary: true
+        plural: las redes de VPC
+        usedBy:
+          - google
+          - aws
+      - text: VPC
+        article: la
+        kind: noun
+        headline: true
+        usedBy:
+          - google
+      - text: VPC compartida
+        article: la
+        kind: noun
+        usedBy:
+          - google
+        note: 'Shared VPC: one network used by several projects.'
+    say: 'VPC is spelled out: uve-pe-ce.'
+    definition: Red virtual de Google Cloud, de ámbito global y con subredes regionales.
+    examples:
+      - es: Los proyectos de servicio usan la VPC compartida del proyecto host.
+        en: The service projects use the host project's Shared VPC.
+  topics:
+    - network
+  technology:
+    - gcp
+    - networking
+  related:
+    - cloud.vpc
+    - gcp.firewall-rules
+    - azure.virtual-network
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/vpc?hl=es
+      found:
+        - Red de VPC
+        - VPC
+        - VPC compartida Configura
+      checked: 2026-11-14
+    - label: AWS, páginas en español
+      url: https://aws.amazon.com/es/network-firewall/
+      found:
+        - red de VPC
+      checked: 2026-11-14
+  status: sourced
+
+- id: gcp.firewall-rules
+  en:
+    term: firewall rules
+    definition: Rules on a VPC network that allow or deny traffic to and from instances, by
+      tag or service account.
+  es:
+    verdict: translated
+    forms:
+      - text: reglas de cortafuegos
+        article: las
+        kind: noun
+        primary: true
+        usedBy:
+          - google
+          - official
+        note: Google's Spain-Spanish documentation says cortafuegos.
+      - text: reglas de firewall
+        article: las
+        kind: noun
+        usedBy:
+          - official
+        note: Just as common, and what the Latin American documentation says.
+    definition: Reglas de una red de VPC que permiten o deniegan el tráfico hacia y desde
+      las instancias.
+    examples:
+      - es: Una regla de cortafuegos demasiado abierta dejaba el puerto 22 accesible desde
+          internet.
+        en: An over-permissive firewall rule left port 22 reachable from the internet.
+  topics:
+    - network
+  technology:
+    - gcp
+    - networking
+  related:
+    - sec.firewall
+    - gcp.vpc
+    - azure.nsg
+    - sec.security-group
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/security/products/firewall?hl=es
+      found:
+        - reglas de cortafuegos
+      checked: 2026-11-14
+    - label: INCIBE, Protocolos y seguridad de red en infraestructuras SCI
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/incibe_protocolos_seguridad_red_sci.pdf
+      found:
+        - reglas de cortafuegos
+      checked: 2026-11-14
+    - label: INCIBE-CERT, blog
+      url: https://www.incibe.es/incibe-cert/blog/medidas-de-ciberseguridad-desde-una-perspectiva-global
+      found:
+        - reglas de firewall
+      checked: 2026-11-14
+  status: sourced
+
+- id: gcp.vpc-service-controls
+  en:
+    term: VPC Service Controls
+    definition: Perimeters around Google Cloud services that block data from moving out to
+      unauthorised networks or projects.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Controles de Servicio de VPC
+        article: los
+        kind: noun
+        primary: true
+        usedBy:
+          - google
+        note: Google's translated product name.
+      - text: VPC Service Controls
+        kind: noun
+        headline: true
+        usedBy:
+          - engineers
+      - text: perímetro de servicio
+        article: el
+        kind: noun
+        usedBy:
+          - microsoft
+        note: A service perimeter.
+    definition: Perímetros en torno a los servicios de Google Cloud que impiden que los datos
+      salgan a redes o proyectos no autorizados.
+    examples:
+      - es: BigQuery está dentro de un perímetro de servicio para evitar la exfiltración.
+        en: BigQuery is inside a service perimeter to prevent exfiltration.
+  topics:
+    - network
+    - data
+  technology:
+    - gcp
+    - networking
+  related:
+    - sec.egress-monitoring
+    - sec.dlp
+    - gcp.bigquery
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/security/compliance/pci-dss?hl=es
+      found:
+        - Controles de Servicio de VPC
+      checked: 2026-11-14
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/guerra-de-nubes-aws-azure-gcp/
+      found:
+        - VPC Service Controls
+      checked: 2026-11-14
+    - label: Microsoft Security, es-ES
+      url: https://www.microsoft.com/es-es/security/business/security-101/what-is-network-security
+      found:
+        - perímetro de servicio
+      checked: 2026-11-14
+  status: sourced
+
+- id: gcp.cloud-armor
+  en:
+    term: Cloud Armor
+    definition: Google Cloud's DDoS protection and web application firewall service.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Cloud Armor
+        kind: noun
+        primary: true
+        usedBy:
+          - google
+          - engineers
+      - text: política de seguridad
+        article: la
+        kind: noun
+        usedBy:
+          - google
+        note: A Cloud Armor security policy, its set of rules.
+    definition: Servicio de Google Cloud de protección frente a DDoS y cortafuegos de aplicaciones
+      web.
+    examples:
+      - es: Cloud Armor bloquea las peticiones de los países no permitidos.
+        en: Cloud Armor blocks requests from countries that are not allowed.
+  topics:
+    - network
+    - appsec
+  technology:
+    - gcp
+    - networking
+  related:
+    - sec.waf
+    - sec.ddos
+    - cloud.load-balancer
+    - azure.front-door
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/security/products/armor?hl=es
+      found:
+        - de Cloud Armor
+        - política de seguridad
+      checked: 2026-11-14
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/guerra-de-nubes-aws-azure-gcp/
+      found:
+        - Firewall Cloud Armor Panel
+      checked: 2026-11-14
+  status: sourced
+
+- id: gcp.iap
+  en:
+    term: Identity-Aware Proxy
+    acronym: IAP
+    definition: A Google Cloud service that puts identity and context checks in front of applications
+      and VMs, replacing a VPN.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Identity-Aware Proxy
+        kind: noun
+        primary: true
+        usedBy:
+          - google
+          - engineers
+      - text: IAP
+        kind: noun
+        headline: true
+        usedBy:
+          - google
+    say: 'IAP is spelled out: i-a-pe.'
+    definition: Servicio de Google Cloud que antepone comprobaciones de identidad y contexto
+      a las aplicaciones y máquinas virtuales, en lugar de una VPN.
+    examples:
+      - es: El acceso por SSH a las instancias se hace a través de IAP.
+        en: SSH access to the instances goes through IAP.
+  topics:
+    - authz
+    - network
+  technology:
+    - gcp
+    - identity-platforms
+  related:
+    - sec.zero-trust
+    - sec.bastion-host
+    - azure.bastion
+    - azure.conditional-access
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/discover/what-is-virtual-desktop-infrastructure-vdi?hl=es
+      found:
+        - como Identity-Aware Proxy
+        - IAP
+      checked: 2026-11-14
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/guerra-de-nubes-aws-azure-gcp/
+      found:
+        - Identity-Aware Proxy
+      checked: 2026-11-14
+  status: sourced
+
+- id: gcp.cloud-kms
+  en:
+    term: Cloud KMS
+    expansion: Cloud Key Management Service
+    definition: Google Cloud's service for creating and using cryptographic keys, including
+      customer-managed keys for other services.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Cloud KMS
+        kind: noun
+        primary: true
+        usedBy:
+          - google
+          - engineers
+      - text: clave de encriptado gestionada por el cliente
+        article: la
+        kind: noun
+        note: CMEK. Google's documentation says encriptado where Spain would say cifrado.
+      - text: llavero de claves
+        article: el
+        kind: noun
+        note: A key ring.
+    say: 'KMS is spelled out: ka-eme-ese.'
+    definition: Servicio de Google Cloud para crear y usar claves criptográficas, incluidas
+      las gestionadas por el cliente para otros servicios.
+    examples:
+      - es: Los discos se cifran con una clave de Cloud KMS gestionada por el cliente.
+        en: The disks are encrypted with a customer-managed Cloud KMS key.
+  topics:
+    - crypto
+    - secrets
+  technology:
+    - gcp
+  related:
+    - sec.key-management
+    - sec.byok
+    - sec.hsm
+    - azure.key-vault
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/security/products/security-key-management?hl=es
+      found:
+        - de Cloud KMS
+      checked: 2026-11-14
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/techbiz/control-acceso-cloud-mucho-mas-seguro-propio-datacenter/
+      found:
+        - como Cloud KMS
+      checked: 2026-11-14
+  status: sourced
+
+- id: gcp.secret-manager
+  en:
+    term: Secret Manager
+    definition: Google Cloud's service for storing API keys, passwords and other secrets with
+      versioning and access control.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Secret Manager
+        kind: noun
+        primary: true
+        usedBy:
+          - google
+          - engineers
+      - text: secreto
+        article: el
+        kind: noun
+        plural: los secretos
+        usedBy:
+          - google
+    definition: Servicio de Google Cloud para guardar claves de API, contraseñas y otros secretos
+      con versiones y control de acceso.
+    examples:
+      - es: La contraseña de la base de datos se lee de Secret Manager al arrancar.
+        en: The database password is read from Secret Manager at start-up.
+  topics:
+    - secrets
+  technology:
+    - gcp
+  related:
+    - sec.secrets-management
+    - azure.key-vault
+    - gcp.cloud-kms
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/security/products/secret-manager?hl=es
+      found:
+        - Secret Manager
+        - un secreto Características
+      checked: 2026-11-14
+    - label: Tecnoempleo, oferta de empleo en España
+      url: https://www.tecnoempleo.com/sre-gcp-kubernetes-terraform-grupo-ns/devops-linux/rf-983c15f0e240b3bf084c
+      found:
+        - Secret Manager
+      checked: 2026-11-14
+  status: sourced
+
+- id: gcp.scc
+  en:
+    term: Security Command Center
+    acronym: SCC
+    definition: Google Cloud's security posture and threat detection service, which reports
+      findings across an organization.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Security Command Center
+        kind: noun
+        primary: true
+        usedBy:
+          - google
+          - engineers
+      - text: resultado
+        article: el
+        kind: noun
+        plural: los resultados
+        note: A finding. Hallazgo is the word auditors and other tools use.
+    definition: Servicio de Google Cloud de postura de seguridad y detección de amenazas,
+      que informa de los resultados de toda la organización.
+    examples:
+      - es: Security Command Center detectó un bucket público.
+        en: Security Command Center detected a public bucket.
+  topics:
+    - detection
+    - hardening
+  technology:
+    - gcp
+  related:
+    - sec.cnapp
+    - sec.misconfiguration
+    - azure.defender-for-cloud
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/security/products/sensitive-data-protection?hl=es
+      found:
+        - Security Command Center
+      checked: 2026-11-14
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/guerra-de-nubes-aws-azure-gcp/
+      found:
+        - Security Command Center
+      checked: 2026-11-14
+  status: sourced
+
+- id: gcp.secops
+  en:
+    term: Google Security Operations
+    definition: Google's cloud SIEM and SOAR platform, formerly Chronicle.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Google Security Operations
+        kind: noun
+        primary: true
+        usedBy:
+          - google
+      - text: Google SecOps
+        kind: noun
+        headline: true
+        usedBy:
+          - google
+      - text: Chronicle
+        kind: noun
+        usedBy:
+          - google
+        note: The former name, still widely used.
+    definition: Plataforma SIEM y SOAR en la nube de Google, antes llamada Chronicle.
+    examples:
+      - es: El SOC investiga las alertas en Google SecOps.
+        en: The SOC investigates alerts in Google SecOps.
+  topics:
+    - detection
+    - incident
+  technology:
+    - gcp
+  related:
+    - sec.siem
+    - sec.soar
+    - azure.sentinel
+    - sec.soc
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/security/compliance/iso-27017?hl=es
+      found:
+        - Google Security Operations
+      checked: 2026-11-14
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/security?hl=es
+      found:
+        - con Google SecOps Ver
+      checked: 2026-11-14
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/security/compliance/hipaa-compliance?hl=es
+      found:
+        - Migrate Chronicle Chronicle
+      checked: 2026-11-14
+  status: sourced
+
+- id: gcp.cloud-logging
+  en:
+    term: Cloud Logging
+    definition: Google Cloud's log collection and query service, including the audit logs
+      of administrative and data access.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Cloud Logging
+        kind: noun
+        primary: true
+        usedBy:
+          - google
+      - text: registros de auditoría
+        article: los
+        kind: noun
+        usedBy:
+          - google
+        note: Cloud Audit Logs.
+      - text: receptor
+        article: el
+        kind: noun
+        note: A sink, which routes logs elsewhere. Engineers say sink.
+    definition: Servicio de Google Cloud de recogida y consulta de registros, incluidos los
+      de auditoría de la actividad administrativa y del acceso a datos.
+    examples:
+      - es: Los registros de auditoría se exportan de Cloud Logging al SIEM.
+        en: The audit logs are exported from Cloud Logging to the SIEM.
+  topics:
+    - detection
+  technology:
+    - gcp
+  related:
+    - sec.log
+    - sec.log-management
+    - azure.monitor
+    - sec.traceability
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/cdn?hl=es
+      found:
+        - con Cloud Logging
+      checked: 2026-11-14
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/security/products/secret-manager?hl=es
+      found:
+        - Registros de auditoría
+      checked: 2026-11-14
+  status: sourced
+
+- id: gcp.bigquery
+  en:
+    term: BigQuery
+    definition: Google Cloud's serverless data warehouse for analysing very large data sets
+      with SQL.
+  es:
+    verdict: english-kept
+    forms:
+      - text: BigQuery
+        kind: noun
+        primary: true
+        usedBy:
+          - google
+          - engineers
+      - text: conjunto de datos
+        article: el
+        kind: noun
+        usedBy:
+          - google
+        note: A dataset, the container for tables.
+      - text: almacén de datos
+        article: el
+        kind: noun
+        usedBy:
+          - google
+        note: A data warehouse.
+    say: Pronounced 'big-cueri'.
+    definition: Almacén de datos sin servidor de Google Cloud para analizar con SQL conjuntos
+      de datos muy grandes.
+    examples:
+      - es: Los datos personales de BigQuery están enmascarados por columna.
+        en: The personal data in BigQuery is masked by column.
+  topics:
+    - data
+  technology:
+    - gcp
+  related:
+    - ai.data-set
+    - sec.data-masking
+    - gcp.vpc-service-controls
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/security/products/sensitive-data-protection?hl=es
+      found:
+        - para BigQuery analizando
+        - conjunto de datos
+        - almacén de datos
+      checked: 2026-11-14
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/techbiz/la-union-hace-la-fuerza-rpa-big-data/
+      found:
+        - Google BigQuery
+      checked: 2026-11-14
+  status: sourced
+
+- id: gcp.pubsub
+  en:
+    term: Pub/Sub
+    definition: 'Google Cloud''s messaging service: publishers send messages to topics and
+      subscribers receive them.'
+  es:
+    verdict: english-kept
+    forms:
+      - text: Pub/Sub
+        kind: noun
+        primary: true
+        usedBy:
+          - google
+          - engineers
+      - text: tema
+        article: el
+        kind: noun
+        note: A topic. A subscription is una suscripción.
+    say: 'Said as in English: ''pab-sab''.'
+    definition: 'Servicio de mensajería de Google Cloud: los publicadores envían mensajes
+      a temas y los suscriptores los reciben.'
+    examples:
+      - es: Cada cambio de configuración publica un mensaje en Pub/Sub.
+        en: Each configuration change publishes a message to Pub/Sub.
+  topics:
+    - architecture
+  technology:
+    - gcp
+  related:
+    - cloud.microservices
+    - sec.event-correlation
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/discover/what-is-serverless-computing?hl=es
+      found:
+        - de Pub/Sub cada
+      checked: 2026-11-14
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/comparativa-servicios-cloud-aws-azure-gcp/
+      found:
+        - Cloud Pub/Sub Servicio
+      checked: 2026-11-14
+  status: sourced
+
+- id: gcp.cloud-sql
+  en:
+    term: Cloud SQL
+    definition: Google Cloud's managed service for MySQL, PostgreSQL and SQL Server databases.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Cloud SQL
+        kind: noun
+        primary: true
+        usedBy:
+          - google
+          - engineers
+      - text: base de datos gestionada
+        article: la
+        kind: noun
+        note: A managed database, generically.
+    say: SQL is spelled out, ese-cu-ele, or said 'sícuel'.
+    definition: Servicio gestionado de Google Cloud para bases de datos MySQL, PostgreSQL
+      y SQL Server.
+    examples:
+      - es: La instancia de Cloud SQL solo tiene IP privada.
+        en: The Cloud SQL instance has a private IP only.
+  topics:
+    - data
+    - architecture
+  technology:
+    - gcp
+  related:
+    - tech.managed-service
+    - cloud.paas
+    - sec.dam
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/serverless?hl=es
+      found:
+        - servidor Cloud SQL
+      checked: 2026-11-14
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/guerra-de-nubes-aws-azure-gcp/
+      found:
+        - Edge Cloud SQL Cloud
+      checked: 2026-11-14
+  status: sourced
+
+- id: gcp.interconnect
+  en:
+    term: Cloud Interconnect
+    definition: A dedicated private connection between an organisation's network and Google
+      Cloud.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Cloud Interconnect
+        kind: noun
+        primary: true
+        usedBy:
+          - google
+          - engineers
+      - text: interconexión dedicada
+        article: la
+        kind: noun
+        usedBy:
+          - google
+        note: Dedicated Interconnect, in Google's translation.
+    definition: Conexión privada y dedicada entre la red de una organización y Google Cloud.
+    examples:
+      - es: El tráfico entre el CPD y Google Cloud va por Cloud Interconnect.
+        en: Traffic between the data centre and Google Cloud goes over Cloud Interconnect.
+  topics:
+    - network
+  technology:
+    - gcp
+    - networking
+  related:
+    - azure.expressroute
+    - cloud.hybrid-cloud
+    - sec.vpn
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/security/compliance/csa?hl=es
+      found:
+        - Cloud Interconnect Cloud
+      checked: 2026-11-14
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/comparativa-servicios-cloud-aws-azure-gcp/
+      found:
+        - ExpressRoute Cloud Interconnect Balanceo
+      checked: 2026-11-14
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/vpc?hl=es
+      found:
+        - una interconexión dedicada
+      checked: 2026-11-14
+  status: sourced
+
+- id: gcp.artifact-registry
+  en:
+    term: Artifact Registry
+    definition: Google Cloud's store for container images and language packages, with vulnerability
+      scanning.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Artifact Registry
+        kind: noun
+        primary: true
+        usedBy:
+          - google
+          - engineers
+      - text: registro de contenedores
+        article: el
+        kind: noun
+        usedBy:
+          - google
+        note: A container registry, generically.
+      - text: artefacto
+        article: el
+        kind: noun
+        usedBy:
+          - google
+        note: A build artefact.
+    definition: Almacén de Google Cloud para imágenes de contenedor y paquetes, con análisis
+      de vulnerabilidades.
+    examples:
+      - es: Solo se despliegan imágenes del Artifact Registry corporativo.
+        en: Only images from the corporate Artifact Registry are deployed.
+  topics:
+    - supplychain
+    - appsec
+  technology:
+    - gcp
+    - containers-oci
+  related:
+    - cloud.container
+    - sec.software-supply-chain
+    - gcp.binary-authorization
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/discover/what-is-containerization?hl=es
+      found:
+        - como Artifact Registry de
+        - registro de contenedores
+        - mismo artefacto de
+      checked: 2026-11-14
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/guerra-de-nubes-aws-azure-gcp/
+      found:
+        - Registry Artifact Registry Contenedores
+      checked: 2026-11-14
+  status: sourced
+
+- id: gcp.binary-authorization
+  en:
+    term: Binary Authorization
+    definition: A Google Cloud control that lets only signed, approved container images be
+      deployed.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Binary Authorization
+        kind: noun
+        primary: true
+      - text: autorización binaria
+        article: la
+        kind: noun
+        usedBy:
+          - google
+        note: Google's translated name.
+      - text: atestación
+        article: la
+        kind: noun
+        usedBy:
+          - google
+        note: 'An attestation: the signed statement that an image passed a check.'
+    definition: Control de Google Cloud que solo permite desplegar imágenes de contenedor
+      firmadas y aprobadas.
+    examples:
+      - es: Binary Authorization rechaza las imágenes que no ha firmado el pipeline.
+        en: Binary Authorization rejects images the pipeline has not signed.
+  topics:
+    - supplychain
+    - appsec
+  technology:
+    - gcp
+    - containers-oci
+    - kubernetes
+  frameworks:
+    - SLSA
+  related:
+    - gcp.artifact-registry
+    - sec.digital-signature
+    - sec.software-supply-chain
+    - grc.attestation
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/discover/what-is-container-orchestration?hl=es
+      found:
+        - Autorización binaria Un
+      checked: 2026-11-14
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/security/products/security-key-management?hl=es
+      found:
+        - Atestación de
+      checked: 2026-11-14
+  status: draft
+
+- id: gcp.cloud-build
+  en:
+    term: Cloud Build
+    definition: Google Cloud's managed build and continuous integration service.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Cloud Build
+        kind: noun
+        primary: true
+        usedBy:
+          - google
+          - engineers
+      - text: compilación
+        article: la
+        kind: noun
+        usedBy:
+          - google
+        note: A build. Engineers say la build.
+    definition: Servicio gestionado de compilación e integración continua de Google Cloud.
+    examples:
+      - es: Cloud Build compila la imagen y la sube al registro.
+        en: Cloud Build builds the image and pushes it to the registry.
+  topics:
+    - appsec
+    - supplychain
+  technology:
+    - gcp
+    - ci-cd
+  related:
+    - tech.ci-cd
+    - tech.pipeline
+    - gcp.artifact-registry
+    - azure.devops
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/discover/what-is-serverless-computing?hl=es
+      found:
+        - de Cloud Build monitoriza
+      checked: 2026-11-14
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/comparativa-servicios-cloud-aws-azure-gcp/
+      found:
+        - Services Cloud Build Interfaz
+      checked: 2026-11-14
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/learn/what-is-cloud-native?hl=es
+      found:
+        - la compilación
+      checked: 2026-11-14
+  status: sourced
+
+- id: gcp.vertex-ai
+  en:
+    term: Vertex AI
+    definition: Google Cloud's platform for building, tuning and serving machine learning
+      and generative AI models.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Vertex AI
+        kind: noun
+        primary: true
+        usedBy:
+          - google
+          - engineers
+    say: AI is usually said the English way here, 'ei-ai', though IA is the Spanish acronym.
+    definition: Plataforma de Google Cloud para crear, ajustar y servir modelos de aprendizaje
+      automático e IA generativa.
+    examples:
+      - es: El modelo se despliega en un punto final de Vertex AI.
+        en: The model is deployed to a Vertex AI endpoint.
+  topics:
+    - architecture
+  technology:
+    - gcp
+    - ai-ml
+  related:
+    - ai.machine-learning
+    - ai.model
+    - ai.llm
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/security/compliance/csa?hl=es
+      found:
+        - en Vertex AI Config
+      checked: 2026-11-14
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/guerra-de-nubes-aws-azure-gcp/
+      found:
+        - Search Vertex AI Search
+      checked: 2026-11-14
+  status: sourced
+
+- id: gcp.assured-workloads
+  en:
+    term: Assured Workloads
+    definition: A Google Cloud service that applies controls for a compliance regime, such
+      as data location and personnel access, to a folder.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Assured Workloads
+        kind: noun
+        primary: true
+        usedBy:
+          - google
+          - engineers
+      - text: nube soberana
+        article: la
+        kind: noun
+        usedBy:
+          - engineers
+        note: Sovereign cloud, the need it answers in Europe.
+    definition: Servicio de Google Cloud que aplica a una carpeta los controles de un régimen
+      de cumplimiento, como la ubicación de los datos y el acceso del personal.
+    examples:
+      - es: Los datos del cliente público se alojan en una carpeta de Assured Workloads.
+        en: The public-sector customer's data is hosted in an Assured Workloads folder.
+  topics:
+    - grc
+    - data
+  technology:
+    - gcp
+  related:
+    - law.data-sovereignty
+    - law.data-residency
+    - grc.regulatory-compliance
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/compute?hl=es
+      found:
+        - con Assured Workloads
+      checked: 2026-11-14
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/guerra-de-nubes-aws-azure-gcp/
+      found:
+        - Center Assured Workloads Protección
+      checked: 2026-11-14
+    - label: Telefónica Tech, blog
+      url: https://telefonicatech.com/blog/que-es-nube-soberana
+      found:
+        - la nube soberana
+      checked: 2026-11-14
+  status: sourced
+
+- id: gcp.confidential-vm
+  en:
+    term: Confidential VM
+    definition: A Google Cloud virtual machine whose memory is encrypted by the processor,
+      so that data stays protected while in use.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Confidential VM
+        article: la
+        kind: noun
+        primary: true
+      - text: máquina virtual confidencial
+        article: la
+        kind: noun
+        usedBy:
+          - google
+    definition: Máquina virtual de Google Cloud cuya memoria cifra el procesador, de modo
+      que los datos siguen protegidos mientras se usan.
+    examples:
+      - es: El tratamiento de datos sanitarios se ejecuta en máquinas virtuales confidenciales.
+        en: The health data processing runs on Confidential VMs.
+  topics:
+    - crypto
+    - architecture
+  technology:
+    - gcp
+  related:
+    - cloud.confidential-computing
+    - sec.data-in-use
+    - cloud.virtual-machine
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/security/products/confidential-computing?hl=es
+      found:
+        - máquina virtual confidencial
+      checked: 2026-11-14
+  status: draft
+
+- id: gcp.billing-account
+  en:
+    term: billing account
+    definition: The Google Cloud account that pays for the usage of the projects linked to
+      it.
+  es:
+    verdict: translated
+    forms:
+      - text: cuenta de facturación
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+      - text: cuota
+        article: la
+        kind: noun
+        usedBy:
+          - google
+        note: 'A quota: the limit on how much of a resource a project may use.'
+    definition: Cuenta de Google Cloud que paga el consumo de los proyectos vinculados a ella.
+    examples:
+      - es: Una alerta de presupuesto en la cuenta de facturación detectó el minado de criptomonedas.
+        en: A budget alert on the billing account caught the cryptocurrency mining.
+  topics:
+    - grc
+  technology:
+    - gcp
+  related:
+    - gcp.project
+    - cloud.measured-service
+    - gcp.organization
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/ai-foundry/concepts/foundry-models-overview
+      found:
+        - cuenta de facturación
+      checked: 2026-11-14
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/compute?hl=es
+      found:
+        - mayor cuota para
+      checked: 2026-11-14
+  status: sourced
