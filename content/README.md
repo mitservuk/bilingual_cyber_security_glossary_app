@@ -69,6 +69,18 @@ fetched on that date and contains that text. A source with only a `lead`
 carries text that a web search attributed to the URL; the page itself has not
 been read, so it is a pointer for checking, not evidence.
 
+## Where to look, in order
+
+1. INCIBE's glossary of cyber security terms. If the word is there, start
+   from it.
+2. For a technical word, the Spanish documentation of Microsoft Azure and
+   Google Cloud, then AWS and Oracle. For a legal, risk or framework word, the
+   law or the framework itself: the BOE, the Spanish text of EU law, the ENS.
+3. Spain-based engineering blogs and job adverts, mainly to see whether the
+   English word is kept in everyday use.
+
+One confirmed sighting of the main form is enough. Two is plenty.
+
 ## Certifications and frameworks
 
 `content/taxonomy.yaml` lists them. A certification with no `domains` yet, or

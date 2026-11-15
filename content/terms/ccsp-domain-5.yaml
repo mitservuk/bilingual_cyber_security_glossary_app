@@ -19,8 +19,8 @@
         kind: noun
         primary: true
         usedBy:
-          - eu
           - microsoft
+          - eu
         note: The name used in Windows and Azure in Spanish.
       - text: TPM
         article: el
@@ -53,16 +53,16 @@
     - cloud.confidential-computing
     - sec.key-management
   sources:
-    - label: Reglamento de Ejecución (UE) 2024/482 (EUCC), en el BOE
-      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-80181
-      found:
-        - módulo de plataforma segura
-      checked: 2026-11-14
     - label: Microsoft Learn, es-ES
       url: https://learn.microsoft.com/es-es/azure/databox/data-box-security
       found:
         - Módulo de plataforma segura
         - TPM
+      checked: 2026-11-14
+    - label: Reglamento de Ejecución (UE) 2024/482 (EUCC), en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-80181
+      found:
+        - módulo de plataforma segura
       checked: 2026-11-14
   status: sourced
 
@@ -135,14 +135,14 @@
         primary: true
         plural: los hosts
         usedBy:
-          - official
           - microsoft
+          - google
         note: The English word is the everyday term among engineers.
       - text: anfitrión
         article: el
         kind: noun
         usedBy:
-          - official
+          - microsoft
         note: The Spanish word, common in translated documentation, often as equipo anfitrión
           or servidor anfitrión.
     say: 'Host is said as in English, with an audible h: ''jost''.'
@@ -165,16 +165,20 @@
     - cloud.virtual-machine
     - sec.bastion-host
   sources:
-    - label: INCIBE, blog para empresas
-      url: https://www.incibe.es/empresas/blog/virtualizacion-puede-ser-solucion-tus-problemas
-      found:
-        - como host
-        - de anfitrión se
-      checked: 2026-11-14
     - label: Microsoft Learn, es-ES
       url: https://learn.microsoft.com/es-es/azure/security/fundamentals/isolation-choices
       found:
         - de host
+      checked: 2026-11-14
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/learn/what-is-a-virtual-machine?hl=es
+      found:
+        - del host
+      checked: 2026-11-14
+    - label: Microsoft Security, es-ES
+      url: https://www.microsoft.com/es-es/security/business/security-101/what-is-container-security
+      found:
+        - sistema anfitrión
       checked: 2026-11-14
   status: sourced
 
@@ -192,8 +196,8 @@
         primary: true
         plural: los clústeres
         usedBy:
-          - official
           - microsoft
+          - google
         note: The adapted spelling with an accent is the standard one.
       - text: cluster
         article: el
@@ -218,14 +222,13 @@
     - sec.high-availability
     - cloud.orchestration
   sources:
-    - label: INCIBE y Universidad de León, Guía de buenas prácticas de ciberseguridad para
-        redes privadas 5G
-      url: https://www.incibe.es/sites/default/files/2025-12/INCIBE&ULE_GuiaBuenasPracticasCiberseguridadRedesPrivadas5G.pdf
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/architecture/guide/technology-choices/compute-decision-tree
       found:
         - un clúster de
       checked: 2026-11-14
-    - label: Microsoft Learn, es-ES
-      url: https://learn.microsoft.com/es-es/azure/architecture/guide/technology-choices/compute-decision-tree
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/discover/what-is-container-orchestration?hl=es
       found:
         - un clúster de
       checked: 2026-11-14
@@ -344,7 +347,7 @@
         article: la
         kind: noun
         usedBy:
-          - official
+          - microsoft
         note: The noun form, used for the principle itself.
       - text: seguro de forma predeterminada
         kind: adjective
@@ -380,15 +383,10 @@
       found:
         - seguras por defecto
       checked: 2026-11-14
-    - label: INCIBE y Universidad de León, Guía de buenas prácticas de ciberseguridad para
-        redes privadas 5G
-      url: https://www.incibe.es/sites/default/files/2025-12/INCIBE&ULE_GuiaBuenasPracticasCiberseguridadRedesPrivadas5G.pdf
-      found:
-        - seguridad por defecto
-      checked: 2026-11-14
     - label: Microsoft Learn, es-ES
       url: https://learn.microsoft.com/es-es/security/benchmark/azure/mcsb-v2-asset-management
       found:
+        - seguridad por defecto
         - seguro de forma predeterminada
       checked: 2026-11-14
   status: sourced
@@ -506,7 +504,7 @@
         primary: true
         usedBy:
           - official
-          - eu
+          - microsoft
       - text: acceder en remoto
         kind: verb
         register: informal
@@ -532,15 +530,15 @@
     - sec.bastion-host
     - sec.mfa
   sources:
-    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
-      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
       found:
-        - acceso remoto
+        - conseguir acceso remoto al
       checked: 2026-11-14
-    - label: BOE, Directiva (UE) 2022/2555 (NIS 2)
-      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81963
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/cloud-adoption-framework/ready/azure-best-practices/perimeter-networks
       found:
-        - el acceso remoto amplio
+        - Acceso remoto
       checked: 2026-11-14
   status: sourced
 
@@ -582,10 +580,10 @@
     - sec.jump-box
     - sec.asymmetric-encryption
   sources:
-    - label: INCIBE-CERT, blog
-      url: https://www.incibe.es/incibe-cert/blog/bastionado-sistemas-el-caso-linux
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
       found:
-        - como SSH
+        - de SSH
       checked: 2026-11-14
     - label: Microsoft Learn, es-ES
       url: https://learn.microsoft.com/es-es/azure/bastion/tutorial-create-host-portal
@@ -615,7 +613,7 @@
         kind: noun
         headline: true
         usedBy:
-          - official
+          - microsoft
         note: The acronym is what people say.
       - text: Escritorio remoto
         article: el
@@ -648,10 +646,10 @@
       found:
         - Protocolo de escritorio remoto
       checked: 2026-11-14
-    - label: Real Decreto 43/2021, de seguridad de las redes y sistemas de información (BOE)
-      url: https://www.boe.es/diario_boe/txt.php?id=BOE-A-2021-1192
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/bastion/tutorial-create-host-portal
       found:
-        - RDP
+        - RDP para
       checked: 2026-11-14
     - label: Microsoft Learn, es-ES
       url: https://learn.microsoft.com/es-es/entra/standards/pci-dss-guidance
@@ -736,7 +734,6 @@
         primary: true
         usedBy:
           - official
-          - engineers
       - text: extensiones de seguridad del DNS
         article: las
         kind: noun
@@ -762,15 +759,15 @@
     - sec.integrity
     - sec.mitm
   sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - DNSSEC
+      checked: 2026-11-14
     - label: INCIBE, Guía de implantación y buenas prácticas de DNSSEC
       url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/incibe_guia_de_implantacion_y_buenas_practicas_de_dnssec.pdf
       found:
         - de DNSSEC
-      checked: 2026-11-14
-    - label: Paradigma Digital, blog
-      url: https://www.paradigmadigital.com/dev/novedades-aws-re-invent-2021/
-      found:
-        - sobre DNSSEC
       checked: 2026-11-14
   status: sourced
 
@@ -788,8 +785,8 @@
         kind: noun
         primary: true
         usedBy:
-          - official
           - microsoft
+          - aws
       - text: protocolo de configuración dinámica de host
         article: el
         kind: noun
@@ -814,11 +811,6 @@
     - sec.vlan
     - cloud.virtual-network
   sources:
-    - label: INCIBE, Guía de implantación y buenas prácticas de DNSSEC
-      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/incibe_guia_de_implantacion_y_buenas_practicas_de_dnssec.pdf
-      found:
-        - protocolo DHCP
-      checked: 2026-11-14
     - label: Microsoft Learn, es-ES
       url: https://learn.microsoft.com/es-es/azure/security/fundamentals/isolation-choices
       found:
@@ -827,6 +819,7 @@
     - label: AWS, documentación en español
       url: https://docs.aws.amazon.com/es_es/vpc/latest/userguide/vpc-security-groups.html
       found:
+        - DHCP
         - Protocolo de configuración dinámica de host
       checked: 2026-11-14
   status: sourced
@@ -901,7 +894,6 @@
         primary: true
         usedBy:
           - official
-          - engineers
         note: The term preferred in Spain, used in the CCN-STIC guides. The verb is bastionar.
       - text: hardening
         article: el
@@ -941,15 +933,15 @@
     - sec.bastion-host
     - sec.misconfiguration
   sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - Bastionado
+      checked: 2026-11-14
     - label: INCIBE-CERT, blog
       url: https://www.incibe.es/incibe-cert/blog/bastionado-sistemas-el-caso-linux
       found:
         - Bastionado de
-      checked: 2026-11-14
-    - label: Tecnoempleo, oferta de empleo en España
-      url: https://www.tecnoempleo.com/ingeniero-a-de-seguridad-cloud-100-en-remoto/cloud-seguridad-unix/rf-c96a05bbeo7fcs751a1b
-      found:
-        - de bastionado para
       checked: 2026-11-14
     - label: INCIBE-CERT, blog
       url: https://www.incibe.es/incibe-cert/blog/configuraciones-seguras-en-dispositivos-industriales
@@ -976,13 +968,13 @@
         kind: noun
         primary: true
         usedBy:
-          - official
           - google
+          - official
       - text: gestión de configuraciones
         article: la
         kind: noun
         usedBy:
-          - official
+          - oracle
     definition: Registro y control de la configuración de los sistemas para que coincidan
       con el estado previsto.
     examples:
@@ -1006,17 +998,21 @@
     - tech.change-management
     - tech.scm
   sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/discover/what-is-container-orchestration?hl=es
+      found:
+        - Gestión de la configuración
+      checked: 2026-11-14
     - label: INCIBE y Universidad de León, Guía de buenas prácticas de ciberseguridad para
         redes privadas 5G
       url: https://www.incibe.es/sites/default/files/2025-12/INCIBE&ULE_GuiaBuenasPracticasCiberseguridadRedesPrivadas5G.pdf
       found:
         - Gestión de la configuración
-        - gestión de configuraciones
       checked: 2026-11-14
-    - label: Google Cloud, páginas para España
-      url: https://cloud.google.com/discover/what-is-container-orchestration?hl=es
+    - label: Oracle España
+      url: https://www.oracle.com/es/cloud/cloud-native/container-engine-kubernetes/what-is-kubernetes/
       found:
-        - Gestión de la configuración
+        - Gestión de configuraciones
       checked: 2026-11-14
   status: sourced
 
@@ -1033,8 +1029,8 @@
         kind: noun
         primary: true
         usedBy:
+          - microsoft
           - official
-          - eu
       - text: gestión del cambio
         article: la
         kind: noun
@@ -1045,7 +1041,7 @@
         article: el
         kind: noun
         usedBy:
-          - official
+          - microsoft
     definition: Proceso para solicitar, evaluar, aprobar y registrar los cambios en los sistemas.
     examples:
       - es: Todo cambio en producción pasa por el comité de gestión de cambios.
@@ -1065,17 +1061,17 @@
     - tech.maintenance-window
     - tech.rollback
   sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/security/benchmark/azure/mcsb-v2-asset-management
+      found:
+        - gestión de cambios
+        - control de cambios
+      checked: 2026-11-14
     - label: INCIBE y Universidad de León, Guía de buenas prácticas de ciberseguridad para
         redes privadas 5G
       url: https://www.incibe.es/sites/default/files/2025-12/INCIBE&ULE_GuiaBuenasPracticasCiberseguridadRedesPrivadas5G.pdf
       found:
         - Gestión de cambios
-        - control de cambios
-      checked: 2026-11-14
-    - label: Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE
-      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81962
-      found:
-        - gestión de cambios
       checked: 2026-11-14
     - label: AWS, páginas en español
       url: https://aws.amazon.com/es/what-is/multicloud/
@@ -1097,8 +1093,8 @@
         kind: noun
         primary: true
         usedBy:
-          - official
           - google
+          - official
       - text: gestión de releases
         article: la
         kind: noun
@@ -1129,14 +1125,14 @@
     - tech.ci-cd
     - tech.version-control
   sources:
-    - label: INCIBE y Universidad de León, Guía de buenas prácticas de ciberseguridad para
-        redes privadas 5G
-      url: https://www.incibe.es/sites/default/files/2025-12/INCIBE&ULE_GuiaBuenasPracticasCiberseguridadRedesPrivadas5G.pdf
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/discover/what-is-api-development?hl=es
       found:
         - gestión de versiones
       checked: 2026-11-14
-    - label: Google Cloud, páginas para España
-      url: https://cloud.google.com/discover/what-is-api-development?hl=es
+    - label: INCIBE y Universidad de León, Guía de buenas prácticas de ciberseguridad para
+        redes privadas 5G
+      url: https://www.incibe.es/sites/default/files/2025-12/INCIBE&ULE_GuiaBuenasPracticasCiberseguridadRedesPrivadas5G.pdf
       found:
         - gestión de versiones
       checked: 2026-11-14
@@ -1156,11 +1152,11 @@
         primary: true
         usedBy:
           - official
-          - eu
+          - microsoft
       - text: desplegar
         kind: verb
         usedBy:
-          - official
+          - microsoft
       - text: implementación
         article: la
         kind: noun
@@ -1187,26 +1183,21 @@
     - tech.rollback
     - tech.release-management
   sources:
-    - label: INCIBE, Guía de implantación y buenas prácticas de DNSSEC
-      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/incibe_guia_de_implantacion_y_buenas_practicas_de_dnssec.pdf
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
       found:
-        - el despliegue de
+        - un despliegue de
+        - Implementación completa
       checked: 2026-11-14
-    - label: Reglamento (UE) 2024/1689 de Inteligencia Artificial, en el BOE
-      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81079
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/security/fundamentals/secrets-best-practices
       found:
-        - el despliegue
+        - despliegue continuo
       checked: 2026-11-14
-    - label: Real Decreto 145/2026, curso de especialización en Recursos y servicios en la
-        nube (BOE)
-      url: https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-4673
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/container-apps/storage-mounts
       found:
-        - en desplegar
-      checked: 2026-11-14
-    - label: AEPD, Gestión del riesgo y evaluación de impacto en tratamientos de datos personales
-      url: https://www.aepd.es/guias/gestion-riesgo-y-evaluacion-impacto-en-tratamientos-datos-personales.pdf
-      found:
-        - Implementación de
+        - de desplegar la
       checked: 2026-11-14
   status: sourced
 
@@ -1232,7 +1223,7 @@
       - text: revertir
         kind: verb
         usedBy:
-          - official
+          - microsoft
       - text: vuelta atrás
         article: la
         kind: noun
@@ -1262,10 +1253,10 @@
       found:
         - el rollback return
       checked: 2026-11-14
-    - label: INCIBE, Guía de implantación y buenas prácticas de DNSSEC
-      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/incibe_guia_de_implantacion_y_buenas_practicas_de_dnssec.pdf
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/reliability/concept-business-continuity-high-availability-disaster-recovery
       found:
-        - necesario revertir el
+        - Revertir
       checked: 2026-11-14
     - label: Xataka
       url: https://www.xataka.com/n/alberto-lopez-director-ciberseguridad-soluciones-digitales-mastercard-espana-biometria-ofrece-mejor-experiencia-compra-para-cliente-mantiene-altos-estandares-seguridad
@@ -1287,8 +1278,8 @@
         kind: noun
         primary: true
         usedBy:
-          - official
           - microsoft
+          - google
       - text: parada programada
         article: la
         kind: noun
@@ -1310,13 +1301,13 @@
     - tech.change-management
     - sec.availability
   sources:
-    - label: INCIBE-CERT, blog
-      url: https://www.incibe.es/incibe-cert/blog/sistemas-pam-un-escudo-para-la-proteccion-de-accesos
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/reliability/concept-failover-failback
       found:
         - ventana de mantenimiento
       checked: 2026-11-14
-    - label: Microsoft Learn, es-ES
-      url: https://learn.microsoft.com/es-es/azure/reliability/concept-failover-failback
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/learn/what-is-cloud-native?hl=es
       found:
         - ventana de mantenimiento
       checked: 2026-11-14
@@ -1520,8 +1511,8 @@
         kind: noun
         primary: true
         usedBy:
-          - official
           - microsoft
+          - google
     definition: Ciclo permanente de medir el funcionamiento de los servicios y controles y
       mejorarlos.
     examples:
@@ -1542,15 +1533,15 @@
     - fw.iso-20000
     - sec.post-incident-review
   sources:
-    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
-      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
-      found:
-        - de mejora continua adaptativa
-      checked: 2026-11-14
     - label: Microsoft Learn, es-ES
       url: https://learn.microsoft.com/es-es/azure/well-architected/security/principles
       found:
         - la mejora continua
+      checked: 2026-11-14
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/learn/what-is-machine-learning?hl=es
+      found:
+        - Mejora continua Si
       checked: 2026-11-14
   status: sourced
 
@@ -1808,7 +1799,7 @@
         primary: true
         usedBy:
           - official
-          - eu
+          - microsoft
       - text: monitorizar
         kind: verb
         usedBy:
@@ -1838,21 +1829,16 @@
     - sec.log
     - tech.performance-monitoring
   sources:
-    - label: INCIBE y Universidad de León, Guía de buenas prácticas de ciberseguridad para
-        redes privadas 5G
-      url: https://www.incibe.es/sites/default/files/2025-12/INCIBE&ULE_GuiaBuenasPracticasCiberseguridadRedesPrivadas5G.pdf
-      found:
-        - de monitorización de
-      checked: 2026-11-14
-    - label: Reglamento de Ejecución (UE) 2025/2532, en el BOE
-      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2025-81960
-      found:
-        - monitorización criptográficos
-      checked: 2026-11-14
     - label: INCIBE, Glosario de términos de ciberseguridad (2021)
       url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
       found:
+        - monitorización de
         - para monitorizar
+      checked: 2026-11-14
+    - label: Microsoft Security, es-ES
+      url: https://www.microsoft.com/es-es/security/business/security-101/what-is-container-security
+      found:
+        - la monitorización de
       checked: 2026-11-14
   status: sourced
 
@@ -1868,12 +1854,12 @@
         kind: noun
         primary: true
         usedBy:
-          - official
-          - eu
+          - microsoft
+          - google
       - text: alertar
         kind: verb
         usedBy:
-          - official
+          - microsoft
     definition: Aviso que se genera cuando la monitorización detecta algo que puede requerir
       atención.
     examples:
@@ -1894,20 +1880,20 @@
     - sec.event-correlation
     - sec.escalation
   sources:
-    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
-      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/networking/design-guide/azure-firewall
       found:
-        - Recibir alerta Texto
+        - Solo alerta
       checked: 2026-11-14
-    - label: BOE, Directiva (UE) 2022/2555 (NIS 2)
-      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81963
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/discover/incident-response-plan-template?hl=es
       found:
-        - de alerta temprana
+        - de alerta
       checked: 2026-11-14
-    - label: AEPD, Guía de privacidad desde el diseño
-      url: https://www.aepd.es/guias/guia-privacidad-desde-diseno.pdf
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/architecture/example-scenario/forensics/
       found:
-        - Alertar
+        - alertar sobre
       checked: 2026-11-14
   status: sourced
 
@@ -1926,8 +1912,8 @@
         kind: noun
         primary: true
         usedBy:
-          - official
           - microsoft
+          - aws
       - text: SOC
         article: el
         kind: noun
@@ -1964,16 +1950,15 @@
     - sec.monitoring
     - sec.threat-intelligence
   sources:
-    - label: INCIBE y Universidad de León, Guía de buenas prácticas de ciberseguridad para
-        redes privadas 5G
-      url: https://www.incibe.es/sites/default/files/2025-12/INCIBE&ULE_GuiaBuenasPracticasCiberseguridadRedesPrivadas5G.pdf
-      found:
-        - Centro de Operaciones de Seguridad
-      checked: 2026-11-14
     - label: Microsoft Learn, es-ES
       url: https://learn.microsoft.com/es-es/azure/architecture/example-scenario/forensics/
       found:
         - Centro de Operaciones de Seguridad
+      checked: 2026-11-14
+    - label: AWS Well-Architected Framework, es_ES
+      url: https://docs.aws.amazon.com/es_es/wellarchitected/latest/security-pillar/sec_incident_response_run_game_days.html
+      found:
+        - centro de operaciones de seguridad
       checked: 2026-11-14
     - label: INCIBE, Glosario de términos de ciberseguridad (2021)
       url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
@@ -2004,7 +1989,7 @@
         plural: los SIEM
         usedBy:
           - official
-          - eu
+          - microsoft
         note: Always the acronym in practice.
       - text: gestión de eventos e información de seguridad
         article: la
@@ -2039,22 +2024,16 @@
     - sec.event-correlation
     - sec.log
   sources:
-    - label: INCIBE-CERT, blog
-      url: https://www.incibe.es/incibe-cert/blog/big-data-ia-y-analitica-predictiva-del-dato-inteligencia-ciberseguridad
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
       found:
         - SIEM
+        - gestión de eventos e información de seguridad
       checked: 2026-11-14
-    - label: Reglamento (UE) 2024/2847 (Reglamento de Ciberresiliencia), texto en español
-        publicado en el BOE
-      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81720
+    - label: Microsoft Security, es-ES
+      url: https://www.microsoft.com/es-es/security/business/security-101/what-is-siem
       found:
-        - SIEM
-      checked: 2026-11-14
-    - label: INCIBE y Universidad de León, Guía de buenas prácticas de ciberseguridad para
-        redes privadas 5G
-      url: https://www.incibe.es/sites/default/files/2025-12/INCIBE&ULE_GuiaBuenasPracticasCiberseguridadRedesPrivadas5G.pdf
-      found:
-        - Gestión de Eventos e Información de Seguridad
+        - es SIEM
       checked: 2026-11-14
     - label: Microsoft Learn, es-ES
       url: https://learn.microsoft.com/es-es/security/benchmark/azure/mcsb-v2-asset-management
@@ -2189,12 +2168,12 @@
         kind: noun
         primary: true
         usedBy:
-          - official
           - microsoft
+          - official
       - text: correlacionar
         kind: verb
         usedBy:
-          - official
+          - microsoft
         note: Engineers also say correlar.
     definition: Relación de eventos de distintas fuentes para reconocer que forman parte de
       un mismo incidente o ataque.
@@ -2213,20 +2192,16 @@
     - sec.alert
     - sec.log
   sources:
-    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
-      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
-      found:
-        - correlación de eventos
-      checked: 2026-11-14
     - label: Microsoft Security, es-ES
       url: https://www.microsoft.com/es-es/security/business/security-101/what-is-siem
       found:
         - correlación de eventos
+        - correlacionar
       checked: 2026-11-14
-    - label: INCIBE-CERT, blog
-      url: https://www.incibe.es/incibe-cert/blog/big-data-ia-y-analitica-predictiva-del-dato-inteligencia-ciberseguridad
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
       found:
-        - defensores correlacionar eventos
+        - correlación de eventos
       checked: 2026-11-14
   status: sourced
 
@@ -2243,8 +2218,8 @@
         kind: noun
         primary: true
         usedBy:
-          - official
           - microsoft
+          - google
       - text: ciberinteligencia
         article: la
         kind: noun
@@ -2255,11 +2230,13 @@
         article: la
         kind: noun
         usedBy:
-          - eu
+          - microsoft
         note: Microsoft's wording.
       - text: threat intelligence
         article: la
         kind: noun
+        usedBy:
+          - google
         note: Kept in English in team and product names.
     definition: Información analizada sobre los atacantes, sus métodos y su infraestructura,
       que sirve para anticipar y detectar ataques.
@@ -2282,25 +2259,26 @@
     - sec.apt
     - sec.soc
   sources:
-    - label: INCIBE-CERT, blog
-      url: https://www.incibe.es/incibe-cert/blog/iot-protocolos-comunicacion-ataques-y-recomendaciones
-      found:
-        - Inteligencia de amenazas
-      checked: 2026-11-14
     - label: Microsoft Learn, es-ES
       url: https://learn.microsoft.com/es-es/azure/networking/design-guide/azure-firewall
       found:
         - inteligencia de amenazas
+        - inteligencia sobre amenazas
+      checked: 2026-11-14
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/security/products/firewall?hl=es
+      found:
+        - Inteligencia de amenazas
       checked: 2026-11-14
     - label: Telefónica Tech, Techiepedia
       url: https://telefonicatech.com/techiepedia/superficie-de-ataque
       found:
         - la ciberinteligencia ayudan
       checked: 2026-11-14
-    - label: Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE
-      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81962
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/security?hl=es
       found:
-        - inteligencia sobre amenazas
+        - Google Threat Intelligence combina
       checked: 2026-11-14
   status: sourced
 
@@ -2397,10 +2375,10 @@
       found:
         - evaluación de vulnerabilidades
       checked: 2026-11-14
-    - label: INCIBE, Taxonomía de soluciones de ciberseguridad
-      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/taxonomia_ciberseguridad.pdf
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
       found:
-        - análisis de vulnerabilidades
+        - Análisis de vulnerabilidades
       checked: 2026-11-14
   status: sourced
 
@@ -2417,8 +2395,8 @@
         kind: noun
         primary: true
         usedBy:
-          - official
-          - eu
+          - microsoft
+          - oracle
     definition: Ciclo continuo de detección, priorización, corrección y verificación de las
       vulnerabilidades de los sistemas.
     examples:
@@ -2438,16 +2416,15 @@
     - sec.vulnerability-scan
     - sec.vulnerability-assessment
   sources:
-    - label: INCIBE y Universidad de León, Guía de buenas prácticas de ciberseguridad para
-        redes privadas 5G
-      url: https://www.incibe.es/sites/default/files/2025-12/INCIBE&ULE_GuiaBuenasPracticasCiberseguridadRedesPrivadas5G.pdf
-      found:
-        - Gestión de vulnerabilidades
-      checked: 2026-11-14
-    - label: Reglamento de Ejecución (UE) 2024/482 (EUCC), en el BOE
-      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-80181
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/well-architected/security/secure-development-lifecycle
       found:
         - gestión de vulnerabilidades
+      checked: 2026-11-14
+    - label: Oracle España
+      url: https://www.oracle.com/es/security/cloud-security/
+      found:
+        - Gestión de vulnerabilidades
       checked: 2026-11-14
   status: sourced
 
@@ -2497,21 +2474,16 @@
     - law.e-discovery
     - sec.incident-response
   sources:
-    - label: INCIBE, Toma de evidencias en entornos Windows
-      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/incibe_toma_evidencias_analisis_forense.pdf
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
       found:
-        - análisis forense digital
-        - AL ANÁLISIS FORENSE
+        - Análisis forense digital
+        - Informática forense
       checked: 2026-11-14
     - label: Microsoft Learn, es-ES
       url: https://learn.microsoft.com/es-es/azure/architecture/example-scenario/forensics/
       found:
         - análisis forense digital
-      checked: 2026-11-14
-    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
-      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
-      found:
-        - Informática forense
       checked: 2026-11-14
   status: sourced
 
@@ -2535,7 +2507,7 @@
         article: la
         kind: noun
         usedBy:
-          - official
+          - microsoft
       - text: prueba
         article: la
         kind: noun
@@ -2561,20 +2533,16 @@
     - sec.forensic-image
     - grc.audit
   sources:
-    - label: INCIBE, Toma de evidencias en entornos Windows
-      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/incibe_toma_evidencias_analisis_forense.pdf
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
       found:
-        - crimen Evidencia Sospechosos
+        - toda evidencia que
       checked: 2026-11-14
     - label: Microsoft Learn, es-ES
       url: https://learn.microsoft.com/es-es/azure/architecture/example-scenario/forensics/
       found:
         - proporcionar evidencia digital
-      checked: 2026-11-14
-    - label: Ley Orgánica 3/2018 (LOPDGDD)
-      url: https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673
-      found:
-        - conste evidencia digital
+        - proporcionar evidencia digital que
       checked: 2026-11-14
   status: sourced
 
@@ -2677,8 +2645,8 @@
         kind: noun
         primary: true
         usedBy:
-          - official
-          - eu
+          - microsoft
+          - google
       - text: contener
         kind: verb
     definition: Fase de la respuesta a incidentes que impide que el ataque se extienda, por
@@ -2699,13 +2667,13 @@
     - sec.isolation
     - sec.restore
   sources:
-    - label: INCIBE, Guía de gestión de crisis
-      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_gestion_de_crisis.pdf
+    - label: Microsoft Security, es-ES
+      url: https://www.microsoft.com/es-es/security/business/security-101/what-is-incident-response
       found:
-        - interna Contención
+        - Contención de
       checked: 2026-11-14
-    - label: Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE
-      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81962
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/discover/incident-response-plan-template?hl=es
       found:
         - contención
       checked: 2026-11-14
@@ -2724,12 +2692,12 @@
         kind: noun
         primary: true
         usedBy:
-          - official
           - google
+          - official
       - text: erradicar
         kind: verb
         usedBy:
-          - official
+          - microsoft
     definition: Fase de la respuesta a incidentes en la que se elimina la causa, como el malware
       o las cuentas comprometidas.
     examples:
@@ -2749,16 +2717,20 @@
     - sec.malware
     - sec.restore
   sources:
-    - label: INCIBE, Guía de gestión de crisis
-      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_gestion_de_crisis.pdf
-      found:
-        - erradicación Identificación
-        - comunicación erradicar el
-      checked: 2026-11-14
     - label: Google Cloud, páginas para España
       url: https://cloud.google.com/discover/incident-response-plan-template?hl=es
       found:
         - erradicación
+      checked: 2026-11-14
+    - label: INCIBE, Guía de gestión de crisis
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_gestion_de_crisis.pdf
+      found:
+        - erradicación Identificación
+      checked: 2026-11-14
+    - label: Microsoft Security, es-ES
+      url: https://www.microsoft.com/es-es/security/business/security-101/what-is-incident-response
+      found:
+        - erradicar amenazas
       checked: 2026-11-14
   status: sourced
 
@@ -2846,7 +2818,7 @@
         article: las
         kind: noun
         usedBy:
-          - official
+          - microsoft
         note: The name most often given to the session and its report.
       - text: post mortem
         article: el
@@ -2875,10 +2847,10 @@
       found:
         - revisión posterior al incidente
       checked: 2026-11-14
-    - label: INCIBE, Guía de gestión de crisis
-      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_gestion_de_crisis.pdf
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/well-architected/security/principles
       found:
-        - Lecciones aprendidas
+        - las lecciones aprendidas de
       checked: 2026-11-14
   status: sourced
 
@@ -2956,7 +2928,7 @@
         article: el
         kind: noun
         usedBy:
-          - official
+          - microsoft
         note: The nearest plain Spanish term.
       - text: manual de operaciones
         article: el
@@ -2990,10 +2962,10 @@
       found:
         - un runbook de
       checked: 2026-11-14
-    - label: AEPD, Orientaciones sobre IA agéntica
-      url: https://www.aepd.es/guias/orientaciones-ia-agentica.pdf
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/well-architected/security/principles
       found:
-        - un procedimiento operativo estándar
+        - el procedimiento operativo estándar
       checked: 2026-11-14
     - label: Microsoft Learn, es-ES
       url: https://learn.microsoft.com/es-es/azure/reliability/concept-business-continuity-high-availability-disaster-recovery
@@ -3126,11 +3098,11 @@
         primary: true
         usedBy:
           - official
-          - eu
+          - microsoft
       - text: restaurar
         kind: verb
         usedBy:
-          - official
+          - microsoft
       - text: recuperación
         article: la
         kind: noun
@@ -3157,25 +3129,21 @@
     - sec.rto
     - sec.rpo
   sources:
-    - label: INCIBE, Taxonomía de soluciones de ciberseguridad
-      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/taxonomia_ciberseguridad.pdf
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
       found:
-        - de restauración en
+        - una restauración ordenada
+        - de recuperación
       checked: 2026-11-14
-    - label: Reglamento (UE) 2024/1689 de Inteligencia Artificial, en el BOE
-      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81079
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/reliability/concept-business-continuity-high-availability-disaster-recovery
       found:
-        - restauración de
+        - la restauración de
       checked: 2026-11-14
-    - label: AEPD, Gestión del riesgo y evaluación de impacto en tratamientos de datos personales
-      url: https://www.aepd.es/guias/gestion-riesgo-y-evaluacion-impacto-en-tratamientos-datos-personales.pdf
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/reliability/concept-redundancy-replication-backup
       found:
-        - de restaurar la
-      checked: 2026-11-14
-    - label: INCIBE, Guía de gestión de crisis
-      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_gestion_de_crisis.pdf
-      found:
-        - de recuperación ante
+        - para restaurar los
       checked: 2026-11-14
   status: sourced
 
@@ -3201,7 +3169,7 @@
         headline: true
         plural: los snapshots
         usedBy:
-          - official
+          - aws
         note: What engineers say. Sometimes feminine, la snapshot.
     definition: Copia de un disco, volumen o máquina virtual en un momento concreto, que permite
       devolverlo a ese estado.
@@ -3233,9 +3201,9 @@
       found:
         - instantáneas de origen
       checked: 2026-11-14
-    - label: BOE, Resolución de 26 de diciembre de 2024 (convenio NubeSARA)
-      url: https://www.boe.es/boe/dias/2025/01/03/pdfs/BOE-A-2025-131.pdf
+    - label: AWS, documentación en español
+      url: https://docs.aws.amazon.com/es_es/config/latest/developerguide/operational-best-practices-for-pci-dss.html
       found:
-        - mediante snapshot
+        - snapshot
       checked: 2026-11-14
   status: sourced

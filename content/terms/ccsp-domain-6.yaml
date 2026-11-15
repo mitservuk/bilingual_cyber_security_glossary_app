@@ -157,10 +157,10 @@
       found:
         - la legislación de
       checked: 2026-11-14
-    - label: Real Decreto 738/2015, artículo 4
-      url: https://www.boe.es/buscar/act.php?id=BOE-A-2015-8646
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
       found:
-        - referida normativa estableció
+        - la normativa de
       checked: 2026-11-14
   status: sourced
 
@@ -178,7 +178,6 @@
         primary: true
         usedBy:
           - official
-          - eu
         note: An EU regulation, or secondary legislation in Spain. The GDPR is el Reglamento
           General de Protección de Datos.
       - text: regulación
@@ -213,21 +212,17 @@
     - grc.regulator
     - grc.regulatory-compliance
   sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - el reglamento europeo
+        - regulación de
+        - la normativa de
+      checked: 2026-11-14
     - label: Ley Orgánica 3/2018 (LOPDGDD)
       url: https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673
       found:
         - del Reglamento
-      checked: 2026-11-14
-    - label: Reglamento (UE) 2024/1689 de Inteligencia Artificial, en el BOE
-      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81079
-      found:
-        - Reglamento
-      checked: 2026-11-14
-    - label: Real Decreto 738/2015, artículo 4
-      url: https://www.boe.es/buscar/act.php?id=BOE-A-2015-8646
-      found:
-        - esta regulación se
-        - referida normativa estableció
       checked: 2026-11-14
   status: sourced
 
@@ -245,7 +240,6 @@
         primary: true
         usedBy:
           - official
-          - eu
       - text: contratar
         kind: verb
         usedBy:
@@ -268,16 +262,16 @@
     - law.sow
     - law.liability
   sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - un contrato escrito
+      checked: 2026-11-14
     - label: AEPD, Inspección sectorial de oficio sobre servicios de cloud computing en el
         sector educativo
       url: https://www.aepd.es/guias/inspeccion-cloud-educacion.pdf
       found:
         - un contrato
-      checked: 2026-11-14
-    - label: BOE, Reglamento (UE) 2023/2854 (Reglamento de Datos)
-      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2023-81895
-      found:
-        - del contrato de
       checked: 2026-11-14
     - label: AEPD, Guía para clientes que contraten servicios de cloud computing
       url: https://www.aepd.es/guias/guia-cloud-clientes.pdf
@@ -363,7 +357,6 @@
         primary: true
         usedBy:
           - official
-          - eu
       - text: propiedad industrial
         article: la
         kind: noun
@@ -389,15 +382,15 @@
     - sec.drm
     - law.contract
   sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - de propiedad intelectual
+      checked: 2026-11-14
     - label: INCIBE, Toma de evidencias en entornos Windows
       url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/incibe_toma_evidencias_analisis_forense.pdf
       found:
         - la propiedad intelectual
-      checked: 2026-11-14
-    - label: BOE, Reglamento (UE) 2023/2854 (Reglamento de Datos)
-      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2023-81895
-      found:
-        - de propiedad intelectual
       checked: 2026-11-14
     - label: Real Decreto 959/2022, programa UNICO I+D Cloud (BOE)
       url: https://www.boe.es/diario_boe/txt.php?id=BOE-A-2022-18817
@@ -420,7 +413,6 @@
         primary: true
         usedBy:
           - official
-          - eu
       - text: intimidad
         article: la
         kind: noun
@@ -446,20 +438,16 @@
     - law.privacy-by-design
     - fw.gdpr
   sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - Privacidad
+        - la intimidad
+      checked: 2026-11-14
     - label: AEPD, Guía de privacidad desde el diseño
       url: https://www.aepd.es/guias/guia-privacidad-desde-diseno.pdf
       found:
         - de Privacidad desde
-      checked: 2026-11-14
-    - label: BOE, Directiva (UE) 2022/2555 (NIS 2)
-      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81963
-      found:
-        - privacidad por
-      checked: 2026-11-14
-    - label: Ley Orgánica 3/2018 (LOPDGDD)
-      url: https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673
-      found:
-        - la intimidad personal
       checked: 2026-11-14
   status: sourced
 
@@ -477,7 +465,6 @@
         primary: true
         usedBy:
           - official
-          - eu
       - text: protección de datos personales
         article: la
         kind: noun
@@ -507,16 +494,16 @@
     - law.dpo
     - law.supervisory-authority
   sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - protección de datos
+        - Protección de Datos Personales
+      checked: 2026-11-14
     - label: Ley Orgánica 3/2018 (LOPDGDD)
       url: https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673
       found:
         - Protección de Datos
-        - Protección de Datos Personales
-      checked: 2026-11-14
-    - label: Reglamento (UE) 2016/679 (RGPD), texto en español publicado en el BOE
-      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2016-80807
-      found:
-        - protección de datos
       checked: 2026-11-14
   status: sourced
 
@@ -534,7 +521,6 @@
         plural: los interesados
         usedBy:
           - official
-          - eu
         note: The GDPR's term in Spanish. The feminine is la interesada.
       - text: afectado
         article: el
@@ -572,20 +558,16 @@
     - law.right-to-erasure
     - grc.stakeholder
   sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - del interesado
+        - el afectado no
+      checked: 2026-11-14
     - label: AEPD, Adecuación al RGPD de tratamientos que incorporan inteligencia artificial
       url: https://www.aepd.es/guias/adecuacion-rgpd-ia.pdf
       found:
         - el interesado
-      checked: 2026-11-14
-    - label: Reglamento (UE) 2016/679 (RGPD), texto en español publicado en el BOE
-      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2016-80807
-      found:
-        - el interesado no
-      checked: 2026-11-14
-    - label: Ley Orgánica 3/2018 (LOPDGDD)
-      url: https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673
-      found:
-        - del afectado
       checked: 2026-11-14
     - label: AEPD, Inspección sectorial de oficio sobre servicios de cloud computing en el
         sector educativo
@@ -609,7 +591,6 @@
         primary: true
         usedBy:
           - official
-          - eu
       - text: consentir
         kind: verb
         usedBy:
@@ -635,15 +616,15 @@
     - law.personal-data
     - law.data-controller
   sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - sin consentimiento del
+      checked: 2026-11-14
     - label: AEPD, resolución PS/00176/2022
       url: https://www.aepd.es/documento/ps-00176-2022.pdf
       found:
         - de consentimiento
-      checked: 2026-11-14
-    - label: Reglamento (UE) 2016/679 (RGPD), texto en español publicado en el BOE
-      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2016-80807
-      found:
-        - El consentimiento debe
       checked: 2026-11-14
     - label: AEPD, Gestión del riesgo y evaluación de impacto en tratamientos de datos personales
       url: https://www.aepd.es/guias/gestion-riesgo-y-evaluacion-impacto-en-tratamientos-datos-personales.pdf
@@ -1045,10 +1026,10 @@
       found:
         - derecho de supresión
       checked: 2026-11-14
-    - label: AEPD, Guía de protección de datos por defecto
-      url: https://www.aepd.es/guias/guia-proteccion-datos-por-defecto.pdf
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
       found:
-        - derecho al olvido
+        - Derecho al olvido
       checked: 2026-11-14
   status: sourced
 
@@ -1207,7 +1188,6 @@
         primary: true
         usedBy:
           - official
-          - eu
       - text: auditar
         kind: verb
         usedBy:
@@ -1232,13 +1212,13 @@
     - grc.audit-report
     - sec.auditability
   sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - Auditoría de
+      checked: 2026-11-14
     - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
       url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
-      found:
-        - auditoría
-      checked: 2026-11-14
-    - label: Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE
-      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81962
       found:
         - auditoría
       checked: 2026-11-14
@@ -1655,7 +1635,6 @@
         primary: true
         usedBy:
           - official
-          - eu
       - text: certificar
         kind: verb
         usedBy:
@@ -1683,17 +1662,17 @@
     - fw.iso-27001
     - fw.ens
   sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - de certificación
+        - para certificar la
+      checked: 2026-11-14
     - label: Orden PRE/2740/2007, Reglamento de Evaluación y Certificación de la Seguridad
         de las TI
       url: https://www.boe.es/buscar/pdf/2007/BOE-A-2007-16830-consolidado.pdf
       found:
         - Certificación de
-        - quieran certificar la
-      checked: 2026-11-14
-    - label: Reglamento de Ejecución (UE) 2024/482 (EUCC), en el BOE
-      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-80181
-      found:
-        - de certificación de
       checked: 2026-11-14
   status: sourced
 
@@ -1807,7 +1786,6 @@
         primary: true
         usedBy:
           - official
-          - google
       - text: SGSI
         article: el
         kind: noun
@@ -1843,20 +1821,16 @@
     - grc.audit-scope
     - tech.continual-improvement
   sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - Sistema de Gestión de la seguridad de la Información
+        - SGSI
+      checked: 2026-11-14
     - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
       url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
       found:
         - Sistema de gestión de la seguridad de la información
-      checked: 2026-11-14
-    - label: Google Cloud, páginas para España
-      url: https://cloud.google.com/security/compliance/iso-27017?hl=es
-      found:
-        - sistema de gestión de la seguridad de la información
-      checked: 2026-11-14
-    - label: INCIBE, Taxonomía de soluciones de ciberseguridad
-      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/taxonomia_ciberseguridad.pdf
-      found:
-        - normativa SGSI
       checked: 2026-11-14
     - label: AEPD, Gestión del riesgo y evaluación de impacto en tratamientos de datos personales
       url: https://www.aepd.es/guias/gestion-riesgo-y-evaluacion-impacto-en-tratamientos-datos-personales.pdf
@@ -1879,7 +1853,6 @@
         primary: true
         usedBy:
           - official
-          - eu
       - text: política de seguridad
         article: la
         kind: noun
@@ -1909,15 +1882,16 @@
     - grc.guideline
     - grc.governance
   sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - políticas de seguridad
+        - Política de seguridad
+      checked: 2026-11-14
     - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
       url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
       found:
         - política de seguridad
-      checked: 2026-11-14
-    - label: Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE
-      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81962
-      found:
-        - políticas de seguridad
       checked: 2026-11-14
   status: sourced
 
@@ -1935,7 +1909,6 @@
         primary: true
         usedBy:
           - official
-          - eu
         note: 'The word for a published standard: la norma ISO/IEC 27001, una norma UNE.'
       - text: estándar
         article: el
@@ -1968,20 +1941,16 @@
     - grc.guideline
     - fw.iso-27001
   sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - la norma ISO
+        - la normativa de
+      checked: 2026-11-14
     - label: Esquema Nacional de Interoperabilidad (RD 4/2010)
       url: https://www.boe.es/buscar/act.php?id=BOE-A-2010-1331
       found:
         - las normas técnicas de
-      checked: 2026-11-14
-    - label: Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE
-      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81962
-      found:
-        - las normas técnicas de
-      checked: 2026-11-14
-    - label: Real Decreto 738/2015, artículo 4
-      url: https://www.boe.es/buscar/act.php?id=BOE-A-2015-8646
-      found:
-        - referida normativa estableció
       checked: 2026-11-14
   status: sourced
 
@@ -1999,7 +1968,6 @@
         primary: true
         usedBy:
           - official
-          - eu
       - text: procedimiento operativo
         article: el
         kind: noun
@@ -2023,16 +1991,16 @@
     - grc.guideline
     - sec.runbook
   sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - políticas y procedimientos
+      checked: 2026-11-14
     - label: Orden PRE/2740/2007, Reglamento de Evaluación y Certificación de la Seguridad
         de las TI
       url: https://www.boe.es/buscar/pdf/2007/BOE-A-2007-16830-consolidado.pdf
       found:
         - Los Procedimientos Operativos de
-      checked: 2026-11-14
-    - label: BOE, Directiva (UE) 2022/2555 (NIS 2)
-      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81963
-      found:
-        - políticas y procedimientos
       checked: 2026-11-14
     - label: AEPD, Orientaciones sobre IA agéntica
       url: https://www.aepd.es/guias/orientaciones-ia-agentica.pdf
@@ -2090,15 +2058,11 @@
       found:
         - como directriz general
       checked: 2026-11-14
-    - label: INCIBE, Guía de implantación y buenas prácticas de DNSSEC
-      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/incibe_guia_de_implantacion_y_buenas_practicas_de_dnssec.pdf
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
       found:
-        - Guía de
-      checked: 2026-11-14
-    - label: AEPD, Orientaciones para la validación de sistemas criptográficos
-      url: https://www.aepd.es/guias/orientaciones-criptografia-aepd-isms-apep.pdf
-      found:
-        - Recomendación en
+        - Una guía de
+        - por recomendación de
       checked: 2026-11-14
   status: sourced
 
@@ -2166,8 +2130,8 @@
       found:
         - controles de seguridad
       checked: 2026-11-14
-    - label: INCIBE, Protocolos y seguridad de red en infraestructuras SCI
-      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/incibe_protocolos_seguridad_red_sci.pdf
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
       found:
         - medida de seguridad
       checked: 2026-11-14
@@ -2231,7 +2195,6 @@
       url: https://www.aepd.es/guias/gestion-riesgo-y-evaluacion-impacto-en-tratamientos-datos-personales.pdf
       found:
         - al cumplimiento por
-        - Cumplir
       checked: 2026-11-14
     - label: Reglamento (UE) 2024/1689 de Inteligencia Artificial, en el BOE
       url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81079
@@ -2242,6 +2205,11 @@
       url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
       found:
         - la conformidad
+      checked: 2026-11-14
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - para cumplir los
       checked: 2026-11-14
   status: sourced
 
@@ -2537,7 +2505,6 @@
         primary: true
         usedBy:
           - official
-          - eu
       - text: ciberriesgo
         article: el
         kind: noun
@@ -2563,15 +2530,15 @@
     - grc.impact
     - sec.risk-assessment
   sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - Riesgo
+      checked: 2026-11-14
     - label: AEPD, Gestión del riesgo y evaluación de impacto en tratamientos de datos personales
       url: https://www.aepd.es/guias/gestion-riesgo-y-evaluacion-impacto-en-tratamientos-datos-personales.pdf
       found:
         - del riesgo
-      checked: 2026-11-14
-    - label: Reglamento (UE) 2024/1689 de Inteligencia Artificial, en el BOE
-      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81079
-      found:
-        - alto riesgo al
       checked: 2026-11-14
     - label: Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE
       url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81962
@@ -2849,10 +2816,14 @@
       found:
         - mitigación del riesgo
       checked: 2026-11-14
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - pudiéndose mitigar este
+      checked: 2026-11-14
     - label: AEPD, Gestión del riesgo y evaluación de impacto en tratamientos de datos personales
       url: https://www.aepd.es/guias/gestion-riesgo-y-evaluacion-impacto-en-tratamientos-datos-personales.pdf
       found:
-        - para mitigar el
         - reducción del riesgo
       checked: 2026-11-14
   status: sourced
@@ -3167,7 +3138,6 @@
         primary: true
         usedBy:
           - official
-          - eu
       - text: probabilidad de ocurrencia
         article: la
         kind: noun
@@ -3191,20 +3161,16 @@
     - grc.risk
     - sec.risk-assessment
   sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - la probabilidad de
+        - probabilidad de ocurrencia
+      checked: 2026-11-14
     - label: AEPD, Gestión del riesgo y evaluación de impacto en tratamientos de datos personales
       url: https://www.aepd.es/guias/gestion-riesgo-y-evaluacion-impacto-en-tratamientos-datos-personales.pdf
       found:
         - La probabilidad de
-      checked: 2026-11-14
-    - label: Reglamento (UE) 2024/1689 de Inteligencia Artificial, en el BOE
-      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81079
-      found:
-        - consiguiente probabilidad de
-      checked: 2026-11-14
-    - label: INCIBE, Guía de gestión de crisis
-      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_gestion_de_crisis.pdf
-      found:
-        - probabilidad de ocurrencia
       checked: 2026-11-14
   status: sourced
 
@@ -3222,7 +3188,6 @@
         primary: true
         usedBy:
           - official
-          - eu
       - text: impactar
         kind: verb
         usedBy:
@@ -3245,15 +3210,15 @@
     - grc.risk
     - grc.bia
   sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - Impacto
+      checked: 2026-11-14
     - label: AEPD, Gestión del riesgo y evaluación de impacto en tratamientos de datos personales
       url: https://www.aepd.es/guias/gestion-riesgo-y-evaluacion-impacto-en-tratamientos-datos-personales.pdf
       found:
         - de impacto en
-      checked: 2026-11-14
-    - label: Reglamento (UE) 2024/1689 de Inteligencia Artificial, en el BOE
-      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81079
-      found:
-        - de impacto relativa
       checked: 2026-11-14
     - label: INCIBE, blog para empresas
       url: https://www.incibe.es/empresas/blog/fases-plan-continuidad-negocio
@@ -3805,7 +3770,6 @@
         primary: true
         usedBy:
           - official
-          - microsoft
         note: Feminine because it is la norma.
       - text: ISO 27001
         article: la
@@ -3836,15 +3800,15 @@
     - grc.certification
     - fw.ens
   sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - norma ISO/IEC 27001
+      checked: 2026-11-14
     - label: 'INCIBE, blog: Primeros pasos para clasificar la información de tu organización'
       url: https://www.incibe.es/protege-tu-empresa/blog/primeros-pasos-clasificar-informacion-tu-organizacion
       found:
         - estándar ISO/IEC 27001
-      checked: 2026-11-14
-    - label: Microsoft Learn, es-ES
-      url: https://learn.microsoft.com/es-es/azure/azure-sovereign-clouds/sovereignty-implementation
-      found:
-        - ISO/IEC 27001
       checked: 2026-11-14
     - label: INCIBE-CERT, blog
       url: https://www.incibe.es/incibe-cert/blog/maximizando-la-seguridad-en-la-nube-el-rol-esencial-de-los-casb
@@ -3920,7 +3884,6 @@
         primary: true
         usedBy:
           - official
-          - microsoft
         note: Used as a bare name or as el estándar PCI DSS or la norma PCI DSS.
       - text: Norma de Seguridad de Datos de la Industria de Tarjetas de Pago
         article: la
@@ -3948,16 +3911,16 @@
     - sec.tokenization
     - sec.network-segmentation
   sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - PCI DSS
+      checked: 2026-11-14
     - label: 'INCIBE, blog: Si manejas información de tarjetas bancarias, este artículo te
         interesa'
       url: https://www.incibe.es/empresas/blog/si-manejas-informacion-tarjetas-bancarias-este-articulo-te-interesa
       found:
         - estándar PCI DSS
-      checked: 2026-11-14
-    - label: Microsoft Learn, es-ES
-      url: https://learn.microsoft.com/es-es/entra/standards/pci-dss-guidance
-      found:
-        - PCI DSS
       checked: 2026-11-14
   status: sourced
 
