@@ -17,6 +17,13 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   </head>
   <body>
+    <script>
+      // Apply a chosen light or dark theme before anything is drawn.
+      try {
+        var t = JSON.parse(localStorage.getItem('bilingual-cyber.v1') || '{}').theme;
+        if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

@@ -1,5 +1,5 @@
-import { useMemo, useState } from 'react';
-import { Empty, SearchField, TermList } from '../components/Common';
+import { useState } from 'react';
+import { Empty, TermList } from '../components/Common';
 import { BackIcon, ChevronIcon, DisclosureIcon } from '../components/Icons';
 import {
   type Axis,
@@ -16,64 +16,32 @@ import {
   topics,
 } from '../data';
 import { goBack, href } from '../router';
-import { createSearch } from '../search';
 import { toggleRegion, useStore } from '../store';
 
-// The categories are alphabetical, like every other list in the app.
-const AXES: { value: Axis; label: string }[] = [
-  { value: 'cert', label: 'Certifications' },
-  { value: 'framework', label: 'Frameworks' },
-  { value: 'tech', label: 'Technologies' },
-  { value: 'topic', label: 'Topics' },
-];
+const TITLES: Record<Axis, string> = {
+  cert: 'Certifications',
+  framework: 'Frameworks',
+  tech: 'Technologies',
+  topic: 'Topics',
+};
 
 const count = (n: number) => `${n} ${n === 1 ? 'term' : 'terms'}`;
 
 const regionLabel = (f: Framework) => REGIONS.find((r) => r.id === f.region)?.label ?? '';
 
-/** Browse shows either every term or one of the four categories. */
-type View = Axis | 'all';
-
-const search = createSearch(terms);
-
-// Remembered while the app is open, so coming back from an entry returns to
-// the same view and the same search.
-let lastView: View = 'all';
-let lastQuery = '';
-
-export function Browse({ view: fromRoute }: { view?: string }) {
-  const axis: View = fromRoute === 'all' ? 'all' : (AXES.find((a) => a.value === fromRoute)?.value ?? lastView);
-  lastView = axis;
-
-  // Switching view replaces the current history entry, so Back leaves Browse
-  // rather than stepping through every view that was looked at.
-  const setAxis = (a: View) => window.location.replace(href(`/browse/${a}`));
-
+/** One of the four categories, opened from Home: everything in it, each item leading to its terms. */
+export function Category({ axis }: { axis: Axis }) {
   return (
     <main className="screen">
+      <div className="top-bar">
+        <button type="button" className="round" aria-label="Back" onClick={goBack}>
+          <BackIcon size={20} />
+        </button>
+      </div>
       <header className="title-block">
-        <h1>Browse</h1>
+        <h1>{TITLES[axis]}</h1>
       </header>
 
-      <div className="browse-nav">
-        <div className="pills">
-          <button type="button" aria-pressed={axis === 'all'} onClick={() => setAxis('all')}>
-            All terms <span className="count">{terms.length}</span>
-          </button>
-        </div>
-        <div className="pills" role="group" aria-labelledby="browse-by">
-          <span id="browse-by" className="by-label">
-            By
-          </span>
-          {AXES.map((a) => (
-            <button key={a.value} type="button" aria-pressed={a.value === axis} onClick={() => setAxis(a.value)}>
-              {a.label}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {axis === 'all' && <AllTerms />}
       {axis === 'cert' && <Certifications />}
       {axis === 'framework' && <Frameworks />}
       {(axis === 'topic' || axis === 'tech') && (
@@ -96,34 +64,16 @@ export function Browse({ view: fromRoute }: { view?: string }) {
   );
 }
 
-/** Every term from A to Z, narrowed as you type. */
-function AllTerms() {
-  const [query, setQuery] = useState(lastQuery);
-  lastQuery = query;
-  const searching = query.trim().length > 0;
-  const results = useMemo(() => (searching ? search(query) : terms), [query, searching]);
-
-  return (
-    <>
-      <SearchField
-        id="browse-q"
-        label="Search all terms in English or Spanish"
-        placeholder={`Search all ${terms.length} terms`}
-        value={query}
-        onChange={setQuery}
-      />
-      {results.length ? (
-        <TermList terms={results} />
-      ) : (
-        <Empty title="No matches">Nothing matches “{query.trim()}” yet. Try the English or the Spanish word.</Empty>
-      )}
-    </>
-  );
-}
+// Which certification is unfolded, kept so that coming back from a domain finds it still open.
+let lastOpen: string | null = null;
 
 /** Certifications grouped by the body that issues them, both in alphabetical order. */
 function Certifications() {
-  const [open, setOpen] = useState<string | null>(null);
+  const [open, setOpenState] = useState(lastOpen);
+  const setOpen = (id: string | null) => {
+    lastOpen = id;
+    setOpenState(id);
+  };
   const issuers = [...new Set(certifications.map((c) => c.issuer))].sort((a, b) => a.localeCompare(b));
 
   return (

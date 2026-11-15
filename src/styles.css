@@ -24,8 +24,10 @@
   --lift: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
+/* Dark follows the device unless Settings forces one or the other. */
+
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme='light']) {
     --bg: #000000;
     --bg-clear: rgba(0, 0, 0, 0);
     --card: #1c1c1e;
@@ -49,6 +51,36 @@
     --neutral-bg: #2c2c2e;
     --lift: none;
   }
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #000000;
+  --bg-clear: rgba(0, 0, 0, 0);
+  --card: #1c1c1e;
+  --text: #ffffff;
+  --text-2: #a1a1a6;
+  --separator: #38383a;
+  --field: #1c1c1e;
+  --accent: #a3a0ff;
+  --on-accent: #000000;
+  --tint: #343352;
+  --tint-text: #c9c7ff;
+  --chevron: #636366;
+  --warn-bg: #3d2e0a;
+  --warn: #ffd60a;
+  --ok-bg: #12351f;
+  --ok: #6ee7a0;
+  --segment-on: #48484a;
+  --bar: #2c2c2e;
+  --bar-ring: rgba(255, 255, 255, 0.16);
+  --bar-shadow: 0 8px 28px rgba(0, 0, 0, 0.7);
+  --neutral-bg: #2c2c2e;
+  --lift: none;
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
 }
 
 * {
@@ -368,45 +400,8 @@ button {
   font-variant-numeric: tabular-nums;
 }
 
-/* Browse: "All terms" on its own line, then the four categories after "By".
-   The category pills scroll sideways on a narrow screen. */
+/* Filter chips: the regions on Frameworks, and the categories in the Terms filter. */
 
-.browse-nav {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.by-label {
-  flex: none;
-  align-self: center;
-  margin-right: 2px;
-  font-size: 15px;
-  color: var(--text-2);
-}
-
-.pills .count {
-  margin-left: 4px;
-  font-weight: 500;
-  opacity: 0.65;
-  font-variant-numeric: tabular-nums;
-}
-
-.pills {
-  display: flex;
-  gap: 8px;
-  margin: 0 -20px;
-  padding: 0 20px;
-  overflow-x: auto;
-  scrollbar-width: none;
-  -webkit-overflow-scrolling: touch;
-}
-
-.pills::-webkit-scrollbar {
-  display: none;
-}
-
-.pills button,
 .chips.filter button {
   flex: none;
   height: 44px;
@@ -416,12 +411,6 @@ button {
   font-size: 15px;
   font-weight: 500;
   white-space: nowrap;
-}
-
-.pills button[aria-pressed='true'] {
-  background: var(--text);
-  color: var(--bg);
-  font-weight: 600;
 }
 
 /* The region filter: any number can be ticked. */
@@ -879,7 +868,7 @@ button.row {
   transform: translateX(-50%);
   width: min(342px, calc(100vw - 48px));
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 4px;
   height: 64px;
   padding: 6px;
@@ -917,5 +906,218 @@ button.row {
 
   .disclosure {
     transition: transform 0.15s ease;
+  }
+}
+
+/* Terms: search with a filter button beside it */
+
+.search-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-row .search-field {
+  flex: 1;
+  min-width: 0;
+}
+
+.search-row input {
+  min-width: 0;
+}
+
+.filter-button {
+  position: relative;
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--field);
+  color: var(--text);
+}
+
+.filter-button.on {
+  background: var(--tint);
+  color: var(--tint-text);
+}
+
+.badge-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 9px;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-size: 11px;
+  line-height: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.active-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: -8px;
+}
+
+.active-filters button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 34px;
+  padding: 0 10px 0 13px;
+  border-radius: 17px;
+  background: var(--tint);
+  color: var(--tint-text);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.result-count {
+  margin-left: auto;
+  font-size: 14px;
+  color: var(--text-2);
+  font-variant-numeric: tabular-nums;
+}
+
+/* The filter sheet slides over everything, tab bar included. */
+
+.sheet-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.36);
+}
+
+.sheet {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  max-width: 560px;
+  max-height: 88dvh;
+  padding: 10px 20px calc(env(safe-area-inset-bottom) + 20px);
+  border-radius: 28px 28px 0 0;
+  background: var(--bg);
+  outline: none;
+}
+
+.sheet-grabber {
+  align-self: center;
+  width: 36px;
+  height: 5px;
+  border-radius: 3px;
+  background: var(--field);
+}
+
+.sheet-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 44px;
+}
+
+.sheet-head h2 {
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+.link {
+  min-height: 44px;
+  padding: 0 4px;
+  color: var(--accent);
+  font-size: 16px;
+}
+
+.sheet-body {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.sheet-body h3,
+.settings h2 {
+  margin: 0 0 8px;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: var(--text-2);
+}
+
+.sheet-body .chips.filter {
+  flex-wrap: wrap;
+}
+
+.sheet-body .chips.filter button {
+  background: var(--card);
+}
+
+.sheet-body .chips.filter button[aria-pressed='true'] {
+  background: var(--tint);
+}
+
+.sheet-body .chips.filter button.more {
+  background: none;
+  color: var(--accent);
+}
+
+.sheet-done {
+  flex: none;
+  height: 50px;
+  border-radius: 14px;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-size: 17px;
+  font-weight: 600;
+}
+
+/* Settings */
+
+.settings h2 {
+  margin-left: 4px;
+}
+
+.setting {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px 16px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .sheet-backdrop {
+    animation: fade-in 0.18s ease;
+  }
+
+  .sheet {
+    animation: slide-up 0.24s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
   }
 }
