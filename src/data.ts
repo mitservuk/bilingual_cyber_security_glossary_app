@@ -61,7 +61,7 @@ export interface Certification {
   outline?: string;
   outlineLabel?: string;
   /** Empty until the exam's structure has been loaded; the app then shows "coming soon". */
-  domains: { n: number; name: string; weight: number }[];
+  domains: { n: number; name: string; weight?: number | string }[];
 }
 
 export type Region = 'es' | 'eu' | 'uk' | 'us' | 'intl';

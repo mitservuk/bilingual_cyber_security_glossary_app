@@ -36,6 +36,10 @@
     - grc
   technology:
     - aws
+  curriculum:
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 2 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
   related:
     - aws.organizations
     - azure.subscription
@@ -89,6 +93,9 @@
     - architecture
   technology:
     - aws
+  curriculum:
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 1 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 6 }
   related:
     - aws.account
     - aws.control-tower
@@ -142,6 +149,9 @@
     - architecture
   technology:
     - aws
+  curriculum:
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 1 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 6 }
   related:
     - azure.landing-zone
     - aws.organizations
@@ -208,6 +218,10 @@
   technology:
     - aws
     - identity-platforms
+  curriculum:
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 1 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 4 }
   related:
     - sec.iam
     - gcp.iam
@@ -264,6 +278,10 @@
   technology:
     - aws
     - identity-platforms
+  curriculum:
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 1 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 4 }
   related:
     - sec.sso
     - sec.federated-identity
@@ -319,6 +337,10 @@
     - data
   technology:
     - aws
+  curriculum:
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 5 }
   related:
     - cloud.object-storage
     - gcp.cloud-storage
@@ -367,6 +389,10 @@
     - architecture
   technology:
     - aws
+  curriculum:
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 2 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
   related:
     - cloud.virtual-machine
     - gcp.compute-engine
@@ -426,6 +452,10 @@
   technology:
     - aws
     - networking
+  curriculum:
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 1 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
   related:
     - cloud.vpc
     - sec.security-group
@@ -483,6 +513,10 @@
   technology:
     - aws
     - serverless
+  curriculum:
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 2 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
   related:
     - cloud.serverless
     - azure.functions
@@ -530,6 +564,10 @@
   technology:
     - aws
     - kubernetes
+  curriculum:
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 2 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
   related:
     - tech.kubernetes
     - azure.aks
@@ -578,6 +616,10 @@
     - architecture
   technology:
     - aws
+  curriculum:
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 5 }
   related:
     - gcp.cloud-sql
     - tech.managed-service
@@ -638,6 +680,10 @@
     - secrets
   technology:
     - aws
+  curriculum:
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 5 }
   related:
     - sec.key-management
     - gcp.cloud-kms
@@ -691,6 +737,10 @@
     - secrets
   technology:
     - aws
+  curriculum:
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 5 }
   related:
     - sec.secrets-management
     - gcp.secret-manager
@@ -738,6 +788,10 @@
     - detection
   technology:
     - aws
+  curriculum:
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 3 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 1 }
   related:
     - sec.log
     - sec.traceability
@@ -782,6 +836,10 @@
     - detection
   technology:
     - aws
+  curriculum:
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 3 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 1 }
   related:
     - sec.monitoring
     - azure.monitor
@@ -829,6 +887,10 @@
     - threat
   technology:
     - aws
+  curriculum:
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 3 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 1 }
   related:
     - aws.security-hub
     - azure.defender-for-cloud
@@ -871,6 +933,10 @@
     - hardening
   technology:
     - aws
+  curriculum:
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 3 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 1 }
   related:
     - sec.cnapp
     - aws.guardduty
@@ -919,6 +985,10 @@
     - grc
   technology:
     - aws
+  curriculum:
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
   related:
     - tech.configuration-management
     - sec.misconfiguration
@@ -977,6 +1047,10 @@
   technology:
     - aws
     - networking
+  curriculum:
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 1 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
   related:
     - sec.waf
     - sec.ddos
@@ -1014,6 +1088,10 @@
     - data
   technology:
     - aws
+  curriculum:
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 5 }
   related:
     - sec.data-discovery
     - sec.data-classification
@@ -1050,6 +1128,9 @@
     - vulnmgmt
   technology:
     - aws
+  curriculum:
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 3 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
   related:
     - sec.vulnerability-scan
     - sec.vulnerability-management
@@ -1104,6 +1185,10 @@
   technology:
     - aws
     - iac
+  curriculum:
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 2 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
   related:
     - tech.iac
     - azure.arm-template
@@ -1154,6 +1239,10 @@
   technology:
     - aws
     - networking
+  curriculum:
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 1 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
   related:
     - azure.expressroute
     - gcp.interconnect
@@ -1196,6 +1285,10 @@
   technology:
     - aws
     - networking
+  curriculum:
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 1 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
   related:
     - cloud.cdn
     - aws.waf-shield
@@ -1237,6 +1330,9 @@
     - assessment
   technology:
     - aws
+  curriculum:
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 1 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 6 }
   related:
     - grc.soc-2-report
     - grc.attestation
@@ -1281,6 +1377,10 @@
   technology:
     - aws
     - ai-ml
+  curriculum:
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 2 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
   related:
     - ai.llm
     - ai.model

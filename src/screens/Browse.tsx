@@ -75,7 +75,9 @@ function Certifications() {
     lastOpen = id;
     setOpenState(id);
   };
-  const issuers = [...new Set(certifications.map((c) => c.issuer))].sort((a, b) => a.localeCompare(b));
+  // Only exams whose outline has been loaded are listed; the rest wait in content/BACKLOG.md.
+  const live = certifications.filter((c) => c.domains.length > 0);
+  const issuers = [...new Set(live.map((c) => c.issuer))].sort((a, b) => a.localeCompare(b));
 
   return (
     <>
@@ -83,26 +85,16 @@ function Certifications() {
         <section key={issuer} className="section">
           <h2 className="group-title">{issuer}</h2>
           <div className="card list">
-            {certifications
+            {live
               .filter((c) => c.issuer === issuer)
-              .map((cert) =>
-                cert.domains.length ? (
-                  <CertificationSection
-                    key={cert.id}
-                    cert={cert}
-                    open={open === cert.id}
-                    onToggle={() => setOpen(open === cert.id ? null : cert.id)}
-                  />
-                ) : (
-                  <div key={cert.id} className="row cert">
-                    <span className="row-text">
-                      <span className="row-title">{cert.name}</span>
-                      {cert.fullName && <span className="secondary small">{cert.fullName}</span>}
-                    </span>
-                    <span className="pill soon">Coming soon</span>
-                  </div>
-                ),
-              )}
+              .map((cert) => (
+                <CertificationSection
+                  key={cert.id}
+                  cert={cert}
+                  open={open === cert.id}
+                  onToggle={() => setOpen(open === cert.id ? null : cert.id)}
+                />
+              ))}
           </div>
         </section>
       ))}
@@ -135,13 +127,17 @@ function CertificationSection({
       </button>
       {open && (
         <div id={panel} className="domains">
-          {cert.domains.map((d) => (
+          {/* A domain with no terms yet is left out. */}
+          {cert.domains
+            .filter((d) => termsFor('cert', cert.id, d.n).length > 0)
+            .map((d) => (
             <a key={d.n} className="row" href={href(`/list/cert/${cert.id}/${d.n}`)}>
               <span className="badge">{d.n}</span>
               <span className="row-text">
                 <span className="row-title compact">{d.name}</span>
                 <span className="secondary small">
-                  {d.weight}% of exam · {count(termsFor('cert', cert.id, d.n).length)}
+                  {d.weight ? `${d.weight}% of exam · ` : ''}
+                  {count(termsFor('cert', cert.id, d.n).length)}
                 </span>
               </span>
               <ChevronIcon />
@@ -156,48 +152,45 @@ function CertificationSection({
 const monthYear = new Intl.DateTimeFormat('en-GB', { month: 'short', year: 'numeric', timeZone: 'UTC' });
 
 /** Turns an exam outline's version, such as "2026-08", into "Aug 2026". */
-const outlineDate = (outline: string) => monthYear.format(new Date(`${outline}-01T00:00:00Z`));
+const outlineDate = (outline: string) =>
+  /^\d{4}-\d{2}$/.test(outline) ? monthYear.format(new Date(`${outline}-01T00:00:00Z`)) : outline;
 
 /** Frameworks, narrowed by any regions that are ticked. None ticked shows them all. */
 function Frameworks() {
   const { regions } = useStore();
-  const shown = frameworks.filter((f) => regions.length === 0 || regions.includes(f.region));
+  // Only frameworks that have terms are listed; the rest wait in content/BACKLOG.md.
+  const live = frameworks.map((f) => ({ f, n: termsFor('framework', f.id).length })).filter(({ n }) => n > 0);
+  const shown = live.filter(({ f }) => regions.length === 0 || regions.includes(f.region));
+  // A region is offered only if it has something to show.
+  const offered = REGIONS.filter((r) => live.some(({ f }) => f.region === r.id));
 
   return (
     <>
       <div className="chips filter" role="group" aria-label="Regions">
-        {REGIONS.map((r) => (
+        {offered.map((r) => (
           <button key={r.id} type="button" aria-pressed={regions.includes(r.id)} onClick={() => toggleRegion(r.id)}>
             {r.label}
           </button>
         ))}
       </div>
-      <div className="card list">
-        {shown.map((f) => {
-          const n = termsFor('framework', f.id).length;
-          const body = (
-            <>
+      {shown.length ? (
+        <div className="card list">
+          {shown.map(({ f, n }) => (
+            <a key={f.id} className="row cert" href={href(`/list/framework/${f.id}`)}>
               <span className="row-text">
                 <span className="row-title">{f.name}</span>
                 <span className="secondary small">
                   {regionLabel(f)} · {f.summary}
                 </span>
               </span>
-              {n ? <span className="row-meta">{n}</span> : <span className="pill soon">Coming soon</span>}
-              {n > 0 && <ChevronIcon />}
-            </>
-          );
-          return n ? (
-            <a key={f.id} className="row cert" href={href(`/list/framework/${f.id}`)}>
-              {body}
+              <span className="row-meta">{n}</span>
+              <ChevronIcon />
             </a>
-          ) : (
-            <div key={f.id} className="row cert">
-              {body}
-            </div>
-          );
-        })}
-      </div>
+          ))}
+        </div>
+      ) : (
+        <Empty title="Nothing here yet">No frameworks from the chosen regions have terms yet.</Empty>
+      )}
     </>
   );
 }

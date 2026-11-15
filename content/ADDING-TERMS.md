@@ -28,9 +28,17 @@ the Spanish. A term that exists and also belongs to the new category is tagged
 - A framework that now has an entry of its own gets `entry: <id>`.
 - A new technology or topic is added to its list.
 
-To file existing terms under a new exam, add a second line to their
-`curriculum`. Doing this by rule from each term's first topic is acceptable;
-say so in the pull request.
+To file existing terms under a new exam, use `scripts/file_under_exam.py`,
+which adds the exam to each term's `curriculum` by rule from the term's first
+topic:
+
+```bash
+python3 scripts/file_under_exam.py --cert AZ-500 --outline 2026-01 --vendor azure \
+  --map iam=1,authn=1,authz=1,network=2,data=3,detection=4
+```
+
+It is a first pass, not a judgement term by term. Say so in the pull request,
+and note it in `BACKLOG.md`.
 
 ## 3. Write the drafts
 
@@ -38,7 +46,7 @@ Write `drafts/<name>.yaml` (the folder is not committed). A draft is an entry
 as described in `README.md`, without `sources`, `status` or `usedBy`.
 
 - Ids take the prefix for their kind: `sec.`, `cloud.`, `grc.`, `law.`, `fw.`,
-  `tech.`, `ai.`, `azure.`, `gcp.`, `aws.`, `ens.`. Add a prefix for a new platform.
+  `tech.`, `ai.`, `azure.`, `gcp.`, `aws.`, `wiz.`, `ens.`. Add a prefix for a new platform.
 - A Spanish concept with no real English name gets `headword: es`.
 - Give the form people in Spain actually use as `primary`, then the
   alternatives: the vendor's translation, the English word if engineers keep

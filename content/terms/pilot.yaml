@@ -62,6 +62,14 @@
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
     - { cert: CISSP, outline: "2027-04", domain: 3 }
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 1 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 2 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 1 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related: [cloud.iaas, cloud.shared-responsibility, cloud.multitenancy]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad"
@@ -134,6 +142,14 @@
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
     - { cert: CISSP, outline: "2027-04", domain: 3 }
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 1 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 2 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 1 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related: [cloud.cloud-computing, cloud.iaas]
   sources:
     - label: "CCN-STIC 499, Arquitecturas de seguridad cloud"
@@ -210,6 +226,14 @@
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
     - { cert: CISSP, outline: "2027-04", domain: 3 }
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 1 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 2 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 1 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related: [cloud.cloud-computing, cloud.hypervisor]
   sources:
     - label: "CCN-STIC 499, Arquitecturas de seguridad cloud"
@@ -271,6 +295,14 @@
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
     - { cert: CISSP, outline: "2027-04", domain: 3 }
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 1 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 2 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 1 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related: [cloud.cloud-computing, cloud.shared-responsibility, cloud.virtual-machine]
   sources:
     - label: "CCN-STIC 823, Seguridad en entornos cloud"
@@ -629,6 +661,14 @@
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
     - { cert: CISSP, outline: "2027-04", domain: 3 }
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 3 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 3 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related: [cloud.virtual-machine, cloud.multitenancy]
   sources:
     - label: "CCN-STIC 887D, Guía de configuración segura multi-cuenta AWS"
@@ -677,6 +717,14 @@
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
     - { cert: CISSP, outline: "2027-04", domain: 3 }
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 1 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 2 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 1 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related: [cloud.hypervisor, cloud.iaas]
   sources:
     - label: "INCIBE, Guía de buenas prácticas de ciberseguridad en redes privadas 5G: glosario"
@@ -826,6 +874,14 @@
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
     - { cert: CISSP, outline: "2027-04", domain: 4 }
+    - { cert: AZ-500, outline: "2026-01", domain: 2 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 3 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 1 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 2 }
+    - { cert: GCP-PCSE, outline: "current", domain: 2 }
   related: [sec.log, sec.api]
   sources:
     - label: "Diccionario panhispánico de dudas (RAE): cortafuegos"
@@ -903,6 +959,13 @@
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
     - { cert: CISSP, outline: "2027-04", domain: 8 }
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 4 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 5 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related: [sec.threat-modelling, sec.sandbox]
   sources:
     - label: "CCN-STIC 812, Seguridad en entornos y aplicaciones web"

@@ -35,6 +35,9 @@
     - grc
   technology:
     - gcp
+  curriculum:
+    - { cert: GCP-PCA, outline: "current", domain: 1 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related:
     - gcp.folder
     - gcp.organization
@@ -82,6 +85,9 @@
     - grc
   technology:
     - gcp
+  curriculum:
+    - { cert: GCP-PCA, outline: "current", domain: 1 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related:
     - gcp.folder
     - gcp.project
@@ -124,6 +130,9 @@
     - grc
   technology:
     - gcp
+  curriculum:
+    - { cert: GCP-PCA, outline: "current", domain: 1 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related:
     - gcp.organization
     - gcp.project
@@ -167,6 +176,9 @@
     - hardening
   technology:
     - gcp
+  curriculum:
+    - { cert: GCP-PCA, outline: "current", domain: 3 }
+    - { cert: GCP-PCSE, outline: "current", domain: 5 }
   related:
     - gcp.organization
     - azure.policy
@@ -224,6 +236,9 @@
   technology:
     - gcp
     - identity-platforms
+  curriculum:
+    - { cert: GCP-PCA, outline: "current", domain: 3 }
+    - { cert: GCP-PCSE, outline: "current", domain: 1 }
   related:
     - sec.iam
     - sec.rbac
@@ -278,6 +293,9 @@
   technology:
     - gcp
     - identity-platforms
+  curriculum:
+    - { cert: GCP-PCA, outline: "current", domain: 3 }
+    - { cert: GCP-PCSE, outline: "current", domain: 1 }
   related:
     - sec.service-account
     - gcp.workload-identity
@@ -326,6 +344,9 @@
   technology:
     - gcp
     - identity-platforms
+  curriculum:
+    - { cert: GCP-PCA, outline: "current", domain: 3 }
+    - { cert: GCP-PCSE, outline: "current", domain: 1 }
   related:
     - sec.federated-identity
     - gcp.service-account
@@ -369,6 +390,9 @@
     - data
   technology:
     - gcp
+  curriculum:
+    - { cert: GCP-PCA, outline: "current", domain: 3 }
+    - { cert: GCP-PCSE, outline: "current", domain: 3 }
   related:
     - cloud.object-storage
     - azure.blob-storage
@@ -419,6 +443,9 @@
     - architecture
   technology:
     - gcp
+  curriculum:
+    - { cert: GCP-PCA, outline: "current", domain: 1 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related:
     - cloud.virtual-machine
     - cloud.compute
@@ -466,6 +493,9 @@
   technology:
     - gcp
     - kubernetes
+  curriculum:
+    - { cert: GCP-PCA, outline: "current", domain: 1 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related:
     - tech.kubernetes
     - cloud.cluster
@@ -513,6 +543,9 @@
     - gcp
     - serverless
     - containers-oci
+  curriculum:
+    - { cert: GCP-PCA, outline: "current", domain: 1 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related:
     - cloud.serverless
     - cloud.container
@@ -559,6 +592,9 @@
   technology:
     - gcp
     - serverless
+  curriculum:
+    - { cert: GCP-PCA, outline: "current", domain: 1 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related:
     - cloud.serverless
     - gcp.cloud-run
@@ -618,6 +654,9 @@
   technology:
     - gcp
     - networking
+  curriculum:
+    - { cert: GCP-PCA, outline: "current", domain: 2 }
+    - { cert: GCP-PCSE, outline: "current", domain: 2 }
   related:
     - cloud.vpc
     - gcp.firewall-rules
@@ -670,6 +709,9 @@
   technology:
     - gcp
     - networking
+  curriculum:
+    - { cert: GCP-PCA, outline: "current", domain: 2 }
+    - { cert: GCP-PCSE, outline: "current", domain: 2 }
   related:
     - sec.firewall
     - gcp.vpc
@@ -730,6 +772,9 @@
   technology:
     - gcp
     - networking
+  curriculum:
+    - { cert: GCP-PCA, outline: "current", domain: 2 }
+    - { cert: GCP-PCSE, outline: "current", domain: 2 }
   related:
     - sec.egress-monitoring
     - sec.dlp
@@ -782,6 +827,9 @@
   technology:
     - gcp
     - networking
+  curriculum:
+    - { cert: GCP-PCA, outline: "current", domain: 2 }
+    - { cert: GCP-PCSE, outline: "current", domain: 2 }
   related:
     - sec.waf
     - sec.ddos
@@ -833,6 +881,9 @@
   technology:
     - gcp
     - identity-platforms
+  curriculum:
+    - { cert: GCP-PCA, outline: "current", domain: 3 }
+    - { cert: GCP-PCSE, outline: "current", domain: 1 }
   related:
     - sec.zero-trust
     - sec.bastion-host
@@ -886,6 +937,9 @@
     - secrets
   technology:
     - gcp
+  curriculum:
+    - { cert: GCP-PCA, outline: "current", domain: 3 }
+    - { cert: GCP-PCSE, outline: "current", domain: 3 }
   related:
     - sec.key-management
     - sec.byok
@@ -933,6 +987,9 @@
     - secrets
   technology:
     - gcp
+  curriculum:
+    - { cert: GCP-PCA, outline: "current", domain: 3 }
+    - { cert: GCP-PCSE, outline: "current", domain: 3 }
   related:
     - sec.secrets-management
     - azure.key-vault
@@ -981,6 +1038,9 @@
     - hardening
   technology:
     - gcp
+  curriculum:
+    - { cert: GCP-PCA, outline: "current", domain: 6 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related:
     - sec.cnapp
     - sec.misconfiguration
@@ -1029,6 +1089,9 @@
     - incident
   technology:
     - gcp
+  curriculum:
+    - { cert: GCP-PCA, outline: "current", domain: 6 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related:
     - sec.siem
     - sec.soar
@@ -1084,6 +1147,9 @@
     - detection
   technology:
     - gcp
+  curriculum:
+    - { cert: GCP-PCA, outline: "current", domain: 6 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related:
     - sec.log
     - sec.log-management
@@ -1138,6 +1204,9 @@
     - data
   technology:
     - gcp
+  curriculum:
+    - { cert: GCP-PCA, outline: "current", domain: 3 }
+    - { cert: GCP-PCSE, outline: "current", domain: 3 }
   related:
     - ai.data-set
     - sec.data-masking
@@ -1185,6 +1254,9 @@
     - architecture
   technology:
     - gcp
+  curriculum:
+    - { cert: GCP-PCA, outline: "current", domain: 1 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related:
     - cloud.microservices
     - sec.event-correlation
@@ -1229,6 +1301,9 @@
     - architecture
   technology:
     - gcp
+  curriculum:
+    - { cert: GCP-PCA, outline: "current", domain: 3 }
+    - { cert: GCP-PCSE, outline: "current", domain: 3 }
   related:
     - tech.managed-service
     - cloud.paas
@@ -1275,6 +1350,9 @@
   technology:
     - gcp
     - networking
+  curriculum:
+    - { cert: GCP-PCA, outline: "current", domain: 2 }
+    - { cert: GCP-PCSE, outline: "current", domain: 2 }
   related:
     - azure.expressroute
     - cloud.hybrid-cloud
@@ -1334,6 +1412,9 @@
   technology:
     - gcp
     - containers-oci
+  curriculum:
+    - { cert: GCP-PCA, outline: "current", domain: 5 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related:
     - cloud.container
     - sec.software-supply-chain
@@ -1388,6 +1469,9 @@
     - gcp
     - containers-oci
     - kubernetes
+  curriculum:
+    - { cert: GCP-PCA, outline: "current", domain: 5 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   frameworks:
     - SLSA
   related:
@@ -1437,6 +1521,9 @@
   technology:
     - gcp
     - ci-cd
+  curriculum:
+    - { cert: GCP-PCA, outline: "current", domain: 5 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related:
     - tech.ci-cd
     - tech.pipeline
@@ -1485,6 +1572,9 @@
   technology:
     - gcp
     - ai-ml
+  curriculum:
+    - { cert: GCP-PCA, outline: "current", domain: 1 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related:
     - ai.machine-learning
     - ai.model
@@ -1532,6 +1622,9 @@
     - data
   technology:
     - gcp
+  curriculum:
+    - { cert: GCP-PCA, outline: "current", domain: 3 }
+    - { cert: GCP-PCSE, outline: "current", domain: 5 }
   related:
     - law.data-sovereignty
     - law.data-residency
@@ -1581,6 +1674,9 @@
     - architecture
   technology:
     - gcp
+  curriculum:
+    - { cert: GCP-PCA, outline: "current", domain: 3 }
+    - { cert: GCP-PCSE, outline: "current", domain: 3 }
   related:
     - cloud.confidential-computing
     - sec.data-in-use
@@ -1621,6 +1717,9 @@
     - grc
   technology:
     - gcp
+  curriculum:
+    - { cert: GCP-PCA, outline: "current", domain: 3 }
+    - { cert: GCP-PCSE, outline: "current", domain: 5 }
   related:
     - gcp.project
     - cloud.measured-service

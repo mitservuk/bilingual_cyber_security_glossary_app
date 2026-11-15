@@ -1,0 +1,963 @@
+# Wiz and the cloud security categories it covers.
+# Format is described in content/README.md. These entries were written from
+# working knowledge of usage in Spain; each `found` text was then located in a
+# page the glossary already cites and confirmed with scripts/check_sources.py.
+# Forms with no usedBy have not been seen in a source.
+
+- id: wiz.wiz
+  en:
+    term: Wiz
+    definition: A cloud security platform that scans cloud environments without agents and
+      correlates misconfigurations, vulnerabilities, identities, data and exposure on a single
+      graph.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Wiz
+        kind: noun
+        primary: true
+        usedBy:
+          - google
+    say: Said as in English, 'güis'.
+    definition: Plataforma de seguridad en la nube que analiza los entornos sin agentes y
+      relaciona en un único grafo configuraciones inseguras, vulnerabilidades, identidades,
+      datos y exposición.
+    examples:
+      - es: Hemos conectado las tres nubes a Wiz para tener una visión única del riesgo.
+        en: We have connected all three clouds to Wiz to get a single view of risk.
+  topics:
+    - detection
+    - hardening
+  technology:
+    - wiz
+    - cloud-general
+  related:
+    - sec.cnapp
+    - sec.cspm
+    - wiz.security-graph
+    - wiz.toxic-combination
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/security?hl=es
+      found:
+        - Wiz Google
+      checked: 2026-11-15
+  status: sourced
+
+- id: wiz.security-graph
+  en:
+    term: Security Graph
+    definition: Wiz's graph database of every cloud resource and the relationships between
+      them, which its queries and risk analysis run on.
+  es:
+    verdict: both
+    forms:
+      - text: Security Graph
+        article: el
+        kind: noun
+        primary: true
+      - text: grafo de seguridad
+        article: el
+        kind: noun
+    definition: Base de datos en grafo de Wiz con todos los recursos de la nube y sus relaciones,
+      sobre la que se ejecutan sus consultas y su análisis de riesgos.
+    examples:
+      - es: Una consulta en el Security Graph muestra qué máquinas expuestas tienen acceso
+          a datos sensibles.
+        en: A Security Graph query shows which exposed machines have access to sensitive data.
+  topics:
+    - detection
+    - asset
+  technology:
+    - wiz
+  related:
+    - wiz.wiz
+    - wiz.attack-path
+    - grc.asset-inventory
+  sources: []
+  status: draft
+
+- id: wiz.toxic-combination
+  en:
+    term: toxic combination
+    definition: Several individually tolerable weaknesses that together create a real path
+      to compromise, such as a public machine with a critical vulnerability and a high-privilege
+      role.
+  es:
+    verdict: translated
+    forms:
+      - text: combinación tóxica
+        article: la
+        kind: noun
+        primary: true
+        plural: las combinaciones tóxicas
+    definition: Conjunto de debilidades que por separado serían tolerables pero que juntas
+      abren un camino real de compromiso.
+    examples:
+      - es: 'Exposición a internet, vulnerabilidad crítica y permisos de administrador: una
+          combinación tóxica.'
+        en: 'Internet exposure, a critical vulnerability and administrator permissions: a
+          toxic combination.'
+  topics:
+    - threat
+    - vulnmgmt
+  technology:
+    - wiz
+    - cloud-general
+  related:
+    - wiz.attack-path
+    - wiz.issue
+    - sec.misconfiguration
+    - sec.attack-surface
+  sources: []
+  status: draft
+
+- id: wiz.attack-path
+  en:
+    term: attack path
+    definition: The chain of steps an attacker could take from an entry point to a valuable
+      asset, through exposures, vulnerabilities and permissions.
+  es:
+    verdict: translated
+    forms:
+      - text: ruta de ataque
+        article: la
+        kind: noun
+        primary: true
+        plural: las rutas de ataque
+      - text: camino de ataque
+        article: el
+        kind: noun
+      - text: movimiento lateral
+        article: el
+        kind: noun
+        usedBy:
+          - microsoft
+        note: Lateral movement, the hops along the path.
+    definition: Cadena de pasos que un atacante podría seguir desde un punto de entrada hasta
+      un activo valioso, a través de exposiciones, vulnerabilidades y permisos.
+    examples:
+      - es: La herramienta dibuja la ruta de ataque desde internet hasta la base de datos.
+        en: The tool draws the attack path from the internet to the database.
+  topics:
+    - threat
+  technology:
+    - wiz
+    - cloud-general
+  related:
+    - wiz.toxic-combination
+    - sec.attack-surface
+    - sec.privilege-escalation
+    - sec.threat-modelling
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/security/benchmark/azure/mcsb-v2-asset-management
+      found:
+        - el movimiento lateral
+      checked: 2026-11-15
+  status: draft
+
+- id: wiz.issue
+  en:
+    term: issue
+    definition: 'In Wiz, a prioritised risk raised when a control matches: one item to fix,
+      with its context, severity and owner.'
+  es:
+    verdict: both
+    forms:
+      - text: issue
+        article: el
+        kind: noun
+        primary: true
+        plural: los issues
+        usedBy:
+          - official
+        note: Kept in English, masculine. Some teams say la issue.
+      - text: incidencia
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: The nearest Spanish word, as used for tickets.
+      - text: hallazgo
+        article: el
+        kind: noun
+        note: 'A finding: the raw detection, before it is prioritised into an issue.'
+    definition: 'En Wiz, riesgo priorizado que se genera cuando se cumple un control: un elemento
+      que corregir, con su contexto, su gravedad y su responsable.'
+    examples:
+      - es: Tenemos doce issues críticos abiertos en producción.
+        en: We have twelve critical issues open in production.
+  topics:
+    - vulnmgmt
+    - detection
+  technology:
+    - wiz
+  related:
+    - wiz.control
+    - sec.remediation
+    - wiz.toxic-combination
+  sources:
+    - label: AEPD, Adecuación al RGPD de tratamientos que incorporan inteligencia artificial
+      url: https://www.aepd.es/guias/adecuacion-rgpd-ia.pdf
+      found:
+        - issue
+      checked: 2026-11-15
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - incidencia
+      checked: 2026-11-15
+  status: sourced
+
+- id: wiz.control
+  en:
+    term: control
+    definition: In Wiz, a saved graph query that defines a risk; when resources match it,
+      an issue is opened.
+  es:
+    verdict: translated
+    forms:
+      - text: control
+        article: el
+        kind: noun
+        primary: true
+        plural: los controles
+      - text: regla de configuración de nube
+        article: la
+        kind: noun
+        note: 'A cloud configuration rule: the simpler check of one resource''s settings.'
+    definition: En Wiz, consulta guardada sobre el grafo que define un riesgo; cuando hay
+      recursos que la cumplen, se abre un issue.
+    examples:
+      - es: Hemos creado un control para detectar buckets públicos con datos personales.
+        en: We have created a control to detect public buckets containing personal data.
+    watchOut: Not the same as a control in a framework such as ISO 27001, though Wiz maps
+      its controls to those.
+  topics:
+    - detection
+    - grc
+  technology:
+    - wiz
+  related:
+    - wiz.issue
+    - grc.control
+    - wiz.security-graph
+  sources: []
+  status: draft
+
+- id: wiz.agentless-scanning
+  en:
+    term: agentless scanning
+    definition: Assessing workloads through the cloud provider's APIs and disk snapshots,
+      with nothing installed on the machines themselves.
+  es:
+    verdict: translated
+    forms:
+      - text: análisis sin agentes
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - oracle
+      - text: escaneo sin agentes
+        article: el
+        kind: noun
+        note: Escaneo is the everyday word for a scan.
+      - text: agentless
+        kind: adjective
+        usedBy:
+          - engineers
+        note: Used as a label in English.
+    definition: Evaluación de las cargas de trabajo mediante las API del proveedor de nube
+      e instantáneas de disco, sin instalar nada en las máquinas.
+    examples:
+      - es: El análisis sin agentes cubre todas las máquinas desde el primer día.
+        en: Agentless scanning covers every machine from day one.
+  topics:
+    - vulnmgmt
+    - detection
+  technology:
+    - wiz
+    - cloud-general
+  related:
+    - sec.vulnerability-scan
+    - sec.snapshot
+    - wiz.sensor
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/security/benchmark/azure/mcsb-v2-asset-management
+      found:
+        - detección sin agente de
+      checked: 2026-11-15
+    - label: Oracle España
+      url: https://www.oracle.com/es/security/database-security/audit-vault-database-firewall/
+      found:
+        - auditoría sin agentes
+      checked: 2026-11-15
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/techbiz/iac-infraestructura-como-codigo/
+      found:
+        - agentless
+      checked: 2026-11-15
+  status: sourced
+
+- id: wiz.sensor
+  en:
+    term: runtime sensor
+    definition: A lightweight agent, in Wiz's case eBPF-based, that watches workloads as they
+      run to detect threats and confirm which vulnerabilities are actually loaded.
+  es:
+    verdict: translated
+    forms:
+      - text: sensor de ejecución
+        article: el
+        kind: noun
+        primary: true
+      - text: sensor
+        article: el
+        kind: noun
+      - text: Wiz Sensor
+        article: el
+        kind: noun
+    definition: Agente ligero que observa las cargas de trabajo mientras se ejecutan para
+      detectar amenazas y confirmar qué vulnerabilidades están realmente cargadas.
+    examples:
+      - es: El sensor detectó una shell inversa en un contenedor.
+        en: The sensor detected a reverse shell in a container.
+  topics:
+    - detection
+  technology:
+    - wiz
+    - containers-oci
+    - kubernetes
+  related:
+    - tech.runtime
+    - sec.edr
+    - wiz.cdr
+    - wiz.agentless-scanning
+  sources: []
+  status: draft
+
+- id: sec.cspm
+  en:
+    term: cloud security posture management
+    acronym: CSPM
+    definition: Continuously checking cloud configuration against best practice and compliance
+      rules, and flagging what is misconfigured.
+  es:
+    verdict: both
+    forms:
+      - text: gestión de la postura de seguridad en la nube
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+      - text: CSPM
+        article: el
+        kind: noun
+        headline: true
+        usedBy:
+          - microsoft
+      - text: administración de la posición de seguridad en la nube
+        article: la
+        kind: noun
+        usedBy:
+          - microsoft
+        note: 'Microsoft''s translation: posición for posture, administración for management.'
+    say: 'CSPM is spelled out: ce-ese-pe-eme.'
+    definition: Comprobación continua de la configuración de la nube frente a buenas prácticas
+      y normas de cumplimiento, señalando lo que está mal configurado.
+    examples:
+      - es: El CSPM avisa de cada grupo de seguridad abierto a internet.
+        en: The CSPM flags every security group open to the internet.
+    watchOut: Posture is postura among engineers; Microsoft's documentation says posición.
+  topics:
+    - hardening
+    - detection
+  technology:
+    - cloud-general
+    - wiz
+  curriculum:
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 3 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 3 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
+  related:
+    - sec.cnapp
+    - sec.misconfiguration
+    - azure.defender-for-cloud
+    - wiz.wiz
+  sources:
+    - label: Microsoft Security, es-ES
+      url: https://www.microsoft.com/es-es/security/business/security-101/what-is-a-data-breach
+      found:
+        - posición de seguridad en la nube
+      checked: 2026-11-15
+    - label: Microsoft Security, es-ES
+      url: https://www.microsoft.com/es-es/security/business/security-101/what-is-cloud-security
+      found:
+        - CSPM
+        - administración de la posición de seguridad en la nube
+      checked: 2026-11-15
+  status: sourced
+
+- id: sec.cwpp
+  en:
+    term: cloud workload protection platform
+    acronym: CWPP
+    definition: Tooling that protects the workloads themselves, such as virtual machines,
+      containers and functions, from vulnerabilities and runtime threats.
+  es:
+    verdict: both
+    forms:
+      - text: plataforma de protección de cargas de trabajo en la nube
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - oracle
+      - text: CWPP
+        article: la
+        kind: noun
+        headline: true
+        usedBy:
+          - microsoft
+      - text: carga de trabajo
+        article: la
+        kind: noun
+        plural: las cargas de trabajo
+        usedBy:
+          - microsoft
+        note: A workload.
+    definition: Herramientas que protegen las propias cargas de trabajo, como máquinas virtuales,
+      contenedores y funciones, frente a vulnerabilidades y amenazas en ejecución.
+    examples:
+      - es: La CWPP analiza las imágenes de contenedor antes de desplegarlas.
+        en: The CWPP scans container images before they are deployed.
+  topics:
+    - hardening
+    - vulnmgmt
+  technology:
+    - cloud-general
+    - wiz
+  curriculum:
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 3 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 3 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
+  related:
+    - sec.cnapp
+    - sec.cspm
+    - cloud.container
+  sources:
+    - label: Microsoft Security, es-ES
+      url: https://www.microsoft.com/es-es/security/business/security-101/what-is-a-data-breach
+      found:
+        - protección de cargas de trabajo en la nube
+        - CWPP
+      checked: 2026-11-15
+    - label: Oracle España
+      url: https://www.oracle.com/es/security/cloud-security/cloud-guard/
+      found:
+        - protección de cargas de trabajo en la nube
+      checked: 2026-11-15
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/well-architected/what-is-well-architected-framework
+      found:
+        - carga de trabajo
+      checked: 2026-11-15
+  status: sourced
+
+- id: sec.ciem
+  en:
+    term: cloud infrastructure entitlement management
+    acronym: CIEM
+    definition: Analysing who and what can do what across cloud accounts, to find and remove
+      excessive permissions.
+  es:
+    verdict: both
+    forms:
+      - text: gestión de derechos de infraestructura en la nube
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+      - text: CIEM
+        article: el
+        kind: noun
+        headline: true
+        usedBy:
+          - microsoft
+      - text: permisos excesivos
+        article: los
+        kind: noun
+        usedBy:
+          - microsoft
+        note: Excessive permissions, what it hunts for.
+    say: CIEM is said as a word, 'siem', which is why people often spell it out to avoid confusion
+      with SIEM.
+    definition: Análisis de quién y qué puede hacer qué en las cuentas de nube, para localizar
+      y retirar permisos excesivos.
+    examples:
+      - es: El CIEM detectó un rol sin uso con permisos de administrador.
+        en: The CIEM found an unused role with administrator permissions.
+  topics:
+    - iam
+    - authz
+  technology:
+    - cloud-general
+    - wiz
+    - identity-platforms
+  curriculum:
+    - { cert: AZ-500, outline: "2026-01", domain: 1 }
+    - { cert: AZ-305, outline: "2026-04", domain: 1 }
+    - { cert: SC-100, outline: "2026-10", domain: 2 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 1 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 4 }
+    - { cert: GCP-PCA, outline: "current", domain: 3 }
+    - { cert: GCP-PCSE, outline: "current", domain: 1 }
+  related:
+    - sec.least-privilege
+    - sec.access-review
+    - sec.iam
+    - sec.cnapp
+  sources:
+    - label: Microsoft Security, es-ES
+      url: https://www.microsoft.com/es-es/security/business/security-101/what-is-cloud-security
+      found:
+        - derechos de infraestructura en la nube
+        - CIEM
+      checked: 2026-11-15
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/security/benchmark/azure/mcsb-v2-asset-management
+      found:
+        - con permisos excesivos de
+      checked: 2026-11-15
+  status: sourced
+
+- id: sec.dspm
+  en:
+    term: data security posture management
+    acronym: DSPM
+    definition: Discovering where sensitive data sits in the cloud, who can reach it and whether
+      it is properly protected.
+  es:
+    verdict: both
+    forms:
+      - text: gestión de la postura de seguridad de los datos
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+      - text: DSPM
+        article: el
+        kind: noun
+        headline: true
+        usedBy:
+          - microsoft
+    say: 'DSPM is spelled out: de-ese-pe-eme.'
+    definition: Localización de los datos sensibles en la nube, de quién puede acceder a ellos
+      y de si están bien protegidos.
+    examples:
+      - es: El DSPM encontró datos de clientes en un bucket de pruebas.
+        en: The DSPM found customer data in a test bucket.
+  topics:
+    - data
+  technology:
+    - cloud-general
+    - wiz
+  curriculum:
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: AZ-305, outline: "2026-04", domain: 2 }
+    - { cert: SC-100, outline: "2026-10", domain: 4 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 5 }
+    - { cert: GCP-PCA, outline: "current", domain: 3 }
+    - { cert: GCP-PCSE, outline: "current", domain: 3 }
+  related:
+    - sec.data-discovery
+    - sec.data-classification
+    - sec.dlp
+    - sec.cspm
+  sources:
+    - label: Microsoft Security, es-ES
+      url: https://www.microsoft.com/es-es/security/business/security-101/what-is-data-security
+      found:
+        - posición de seguridad de los datos
+      checked: 2026-11-15
+    - label: Microsoft Security, es-ES
+      url: https://www.microsoft.com/es-es/security/business/security-101/what-is-data-loss-prevention-dlp
+      found:
+        - DSPM
+      checked: 2026-11-15
+  status: sourced
+
+- id: sec.kspm
+  en:
+    term: Kubernetes security posture management
+    acronym: KSPM
+    definition: Checking the configuration of Kubernetes clusters and workloads against hardening
+      benchmarks.
+  es:
+    verdict: both
+    forms:
+      - text: gestión de la postura de seguridad de Kubernetes
+        article: la
+        kind: noun
+        primary: true
+      - text: KSPM
+        article: el
+        kind: noun
+        headline: true
+    definition: Comprobación de la configuración de los clústeres y las cargas de trabajo
+      de Kubernetes frente a guías de bastionado.
+    examples:
+      - es: El KSPM marca los pods que se ejecutan como root.
+        en: The KSPM flags pods running as root.
+  topics:
+    - hardening
+  technology:
+    - kubernetes
+    - wiz
+  curriculum:
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 3 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 3 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
+  related:
+    - tech.kubernetes
+    - sec.cspm
+    - sec.hardening
+    - fw.cis-controls
+  sources: []
+  status: draft
+
+- id: sec.ai-spm
+  en:
+    term: AI security posture management
+    acronym: AI-SPM
+    definition: Finding the AI services, models and training data in an environment and the
+      risks in how they are configured and exposed.
+  es:
+    verdict: both
+    forms:
+      - text: gestión de la postura de seguridad de la IA
+        article: la
+        kind: noun
+        primary: true
+      - text: AI-SPM
+        article: el
+        kind: noun
+        headline: true
+        usedBy:
+          - microsoft
+      - text: IA en la sombra
+        article: la
+        kind: noun
+        note: 'Shadow AI: models and services in use without the security team''s knowledge.'
+    definition: Localización de los servicios, modelos y datos de entrenamiento de IA de un
+      entorno y de los riesgos de su configuración y exposición.
+    examples:
+      - es: El AI-SPM descubrió un modelo desplegado con una clave de API expuesta.
+        en: The AI-SPM discovered a model deployed with an exposed API key.
+  topics:
+    - hardening
+    - data
+  technology:
+    - ai-ml
+    - cloud-general
+    - wiz
+  curriculum:
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 3 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 3 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
+  related:
+    - ai.model
+    - ai.training-data
+    - sec.cspm
+    - ai.model-poisoning
+  sources:
+    - label: Microsoft Security, es-ES
+      url: https://www.microsoft.com/es-es/security/business/security-101/what-is-cloud-security
+      found:
+        - AI-SPM
+      checked: 2026-11-15
+  status: draft
+
+- id: wiz.cdr
+  en:
+    term: cloud detection and response
+    acronym: CDR
+    definition: Detecting and investigating attacks in progress in the cloud from audit logs,
+      network activity and runtime signals.
+  es:
+    verdict: both
+    forms:
+      - text: detección y respuesta en la nube
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+      - text: CDR
+        article: el
+        kind: noun
+        headline: true
+        usedBy:
+          - microsoft
+    say: 'CDR is spelled out: ce-de-erre.'
+    definition: Detección e investigación de ataques en curso en la nube a partir de los registros
+      de auditoría, la actividad de red y las señales en ejecución.
+    examples:
+      - es: El CDR relacionó el robo de la clave con la creación de un usuario administrador.
+        en: The CDR linked the stolen key to the creation of an administrator user.
+  topics:
+    - detection
+    - incident
+  technology:
+    - cloud-general
+    - wiz
+  related:
+    - sec.edr
+    - sec.siem
+    - wiz.sensor
+    - sec.threat-hunting
+  sources:
+    - label: Microsoft Security, es-ES
+      url: https://www.microsoft.com/es-es/security/business/security-101/what-is-cloud-security
+      found:
+        - Detección y respuesta en la nube
+        - CDR
+      checked: 2026-11-15
+  status: sourced
+
+- id: wiz.code-scanning
+  en:
+    term: code-to-cloud
+    definition: Tracing a risk found in a running cloud resource back to the code and pipeline
+      that created it, and scanning that code before deployment.
+  es:
+    verdict: both
+    forms:
+      - text: del código a la nube
+        kind: adjective
+        primary: true
+      - text: code-to-cloud
+        kind: adjective
+        headline: true
+      - text: análisis de infraestructura como código
+        article: el
+        kind: noun
+        usedBy:
+          - microsoft
+        note: IaC scanning, the pre-deployment half.
+    definition: Seguimiento de un riesgo detectado en un recurso en ejecución hasta el código
+      y el pipeline que lo crearon, y análisis de ese código antes del despliegue.
+    examples:
+      - es: La trazabilidad del código a la nube indica qué repositorio hay que corregir.
+        en: Code-to-cloud tracing shows which repository needs fixing.
+  topics:
+    - appsec
+    - supplychain
+  technology:
+    - wiz
+    - iac
+    - ci-cd
+  related:
+    - sec.shift-left
+    - tech.iac
+    - tech.pipeline
+    - sec.sast
+  sources:
+    - label: Microsoft Security, es-ES
+      url: https://www.microsoft.com/es-es/security/business/security-101/what-is-devsecops
+      found:
+        - análisis de infraestructura como código
+      checked: 2026-11-15
+  status: draft
+
+- id: wiz.admission-controller
+  en:
+    term: admission controller
+    definition: A Kubernetes component that checks each request to create or change a resource
+      against policy and can reject it.
+  es:
+    verdict: translated
+    forms:
+      - text: controlador de admisión
+        article: el
+        kind: noun
+        primary: true
+        plural: los controladores de admisión
+      - text: admission controller
+        article: el
+        kind: noun
+        headline: true
+    definition: Componente de Kubernetes que comprueba frente a las políticas cada petición
+      de crear o modificar un recurso y puede rechazarla.
+    examples:
+      - es: El controlador de admisión bloquea las imágenes sin firmar.
+        en: The admission controller blocks unsigned images.
+  topics:
+    - hardening
+    - authz
+  technology:
+    - kubernetes
+    - wiz
+  related:
+    - tech.kubernetes
+    - gcp.binary-authorization
+    - sec.kspm
+  sources: []
+  status: draft
+
+- id: wiz.connector
+  en:
+    term: connector
+    definition: The read-only integration through which a security platform reaches a cloud
+      account, subscription or project to scan it.
+  es:
+    verdict: translated
+    forms:
+      - text: conector
+        article: el
+        kind: noun
+        primary: true
+        plural: los conectores
+        usedBy:
+          - microsoft
+          - oracle
+    definition: Integración de solo lectura con la que una plataforma de seguridad accede
+      a una cuenta, suscripción o proyecto de nube para analizarlo.
+    examples:
+      - es: Falta desplegar el conector en la organización de Google Cloud.
+        en: The connector still has to be deployed in the Google Cloud organization.
+  topics:
+    - architecture
+  technology:
+    - wiz
+    - cloud-general
+  related:
+    - wiz.wiz
+    - sec.least-privilege
+    - sec.service-account
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/purview/ediscovery-overview
+      found:
+        - conectores de datos
+      checked: 2026-11-15
+    - label: Oracle España
+      url: https://www.oracle.com/es/cloud/multicloud/what-is-multicloud/
+      found:
+        - conectores de datos
+      checked: 2026-11-15
+  status: sourced
+
+- id: wiz.exposure
+  en:
+    term: internet exposure
+    definition: The state of a resource being reachable from the public internet, validated
+      in Wiz by analysing the actual network path.
+  es:
+    verdict: translated
+    forms:
+      - text: exposición a internet
+        article: la
+        kind: noun
+        primary: true
+      - text: expuesto a internet
+        kind: adjective
+        usedBy:
+          - microsoft
+      - text: exposición pública
+        article: la
+        kind: noun
+        usedBy:
+          - microsoft
+    definition: Situación de un recurso al que se puede llegar desde la internet pública.
+    examples:
+      - es: Prioriza las vulnerabilidades de las máquinas expuestas a internet.
+        en: Prioritise the vulnerabilities on machines exposed to the internet.
+  topics:
+    - network
+    - threat
+  technology:
+    - wiz
+    - cloud-general
+  related:
+    - sec.attack-surface
+    - wiz.attack-path
+    - sec.misconfiguration
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/well-architected/security/data-classification
+      found:
+        - expuestas a Internet
+      checked: 2026-11-15
+    - label: Microsoft Security, es-ES
+      url: https://www.microsoft.com/es-es/security/business/security-101/what-is-devsecops
+      found:
+        - la exposición pública
+      checked: 2026-11-15
+  status: draft
+
+- id: wiz.project
+  en:
+    term: project
+    definition: In Wiz, a grouping of cloud resources by team, application or business unit,
+      used to scope what each user sees and owns.
+  es:
+    verdict: translated
+    forms:
+      - text: proyecto
+        article: el
+        kind: noun
+        primary: true
+      - text: responsable
+        article: el
+        kind: noun
+        note: The owner of a project or an issue.
+    definition: En Wiz, agrupación de recursos de nube por equipo, aplicación o unidad de
+      negocio, que delimita lo que ve y gestiona cada usuario.
+    examples:
+      - es: Cada equipo de producto solo ve los issues de su proyecto.
+        en: Each product team sees only the issues in its project.
+    watchOut: Do not confuse it with a Google Cloud project, which is a real container of
+      resources.
+  topics:
+    - grc
+    - asset
+  technology:
+    - wiz
+  related:
+    - gcp.project
+    - wiz.issue
+    - grc.data-owner
+  sources: []
+  status: draft
