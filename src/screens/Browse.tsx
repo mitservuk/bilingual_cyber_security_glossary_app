@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Empty, TermList } from '../components/Common';
+import { useMemo, useState } from 'react';
+import { Empty, SearchField, TermList } from '../components/Common';
 import { BackIcon, ChevronIcon, DisclosureIcon } from '../components/Icons';
 import {
   type Axis,
@@ -16,6 +16,7 @@ import {
   topics,
 } from '../data';
 import { goBack, href } from '../router';
+import { createSearch } from '../search';
 import { toggleRegion, useStore } from '../store';
 
 // The categories are alphabetical, like every other list in the app.
@@ -30,15 +31,23 @@ const count = (n: number) => `${n} ${n === 1 ? 'term' : 'terms'}`;
 
 const regionLabel = (f: Framework) => REGIONS.find((r) => r.id === f.region)?.label ?? '';
 
-let lastAxis: Axis = 'cert';
+/** Browse shows either every term or one of the four categories. */
+type View = Axis | 'all';
 
-export function Browse({ axis: fromRoute }: { axis?: string }) {
-  const axis = AXES.find((a) => a.value === fromRoute)?.value ?? lastAxis;
-  lastAxis = axis;
+const search = createSearch(terms);
 
-  // Switching category replaces the current history entry, so Back leaves
-  // Browse rather than stepping through every category that was looked at.
-  const setAxis = (a: Axis) => window.location.replace(href(`/browse/${a}`));
+// Remembered while the app is open, so coming back from an entry returns to
+// the same view and the same search.
+let lastView: View = 'all';
+let lastQuery = '';
+
+export function Browse({ view: fromRoute }: { view?: string }) {
+  const axis: View = fromRoute === 'all' ? 'all' : (AXES.find((a) => a.value === fromRoute)?.value ?? lastView);
+  lastView = axis;
+
+  // Switching view replaces the current history entry, so Back leaves Browse
+  // rather than stepping through every view that was looked at.
+  const setAxis = (a: View) => window.location.replace(href(`/browse/${a}`));
 
   return (
     <main className="screen">
@@ -46,14 +55,25 @@ export function Browse({ axis: fromRoute }: { axis?: string }) {
         <h1>Browse</h1>
       </header>
 
-      <div className="pills" role="group" aria-label="Browse by">
-        {AXES.map((a) => (
-          <button key={a.value} type="button" aria-pressed={a.value === axis} onClick={() => setAxis(a.value)}>
-            {a.label}
+      <div className="browse-nav">
+        <div className="pills">
+          <button type="button" aria-pressed={axis === 'all'} onClick={() => setAxis('all')}>
+            All terms <span className="count">{terms.length}</span>
           </button>
-        ))}
+        </div>
+        <div className="pills" role="group" aria-labelledby="browse-by">
+          <span id="browse-by" className="by-label">
+            By
+          </span>
+          {AXES.map((a) => (
+            <button key={a.value} type="button" aria-pressed={a.value === axis} onClick={() => setAxis(a.value)}>
+              {a.label}
+            </button>
+          ))}
+        </div>
       </div>
 
+      {axis === 'all' && <AllTerms />}
       {axis === 'cert' && <Certifications />}
       {axis === 'framework' && <Frameworks />}
       {(axis === 'topic' || axis === 'tech') && (
@@ -73,6 +93,31 @@ export function Browse({ axis: fromRoute }: { axis?: string }) {
         </div>
       )}
     </main>
+  );
+}
+
+/** Every term from A to Z, narrowed as you type. */
+function AllTerms() {
+  const [query, setQuery] = useState(lastQuery);
+  lastQuery = query;
+  const searching = query.trim().length > 0;
+  const results = useMemo(() => (searching ? search(query) : terms), [query, searching]);
+
+  return (
+    <>
+      <SearchField
+        id="browse-q"
+        label="Search all terms in English or Spanish"
+        placeholder={`Search all ${terms.length} terms`}
+        value={query}
+        onChange={setQuery}
+      />
+      {results.length ? (
+        <TermList terms={results} />
+      ) : (
+        <Empty title="No matches">Nothing matches “{query.trim()}” yet. Try the English or the Spanish word.</Empty>
+      )}
+    </>
   );
 }
 
@@ -206,30 +251,27 @@ function Frameworks() {
   );
 }
 
-/** A filtered list of terms: one category, one exam domain, one framework, or everything. */
-export function TermsList({ axis, value, domain }: { axis?: Axis; value?: string; domain?: number }) {
-  let title = 'All terms';
+/** The terms in one category, one exam domain or one framework. */
+export function TermsList({ axis, value, domain }: { axis: Axis; value: string; domain?: number }) {
+  let title: string;
   let subtitle = '';
   let summary = '';
-  let list = terms;
+  const list = termsFor(axis, value, domain);
 
-  if (axis && value) {
-    list = termsFor(axis, value, domain);
-    if (axis === 'cert') {
-      const cert = certifications.find((c) => c.id === value);
-      const d = cert?.domains.find((x) => x.n === domain);
-      title = d ? d.name : (cert?.name ?? value);
-      subtitle = d ? `${cert?.name} · Domain ${d.n}` : '';
-    } else if (axis === 'framework') {
-      const framework = frameworks.find((f) => f.id === value);
-      title = framework?.name ?? value;
-      subtitle = framework ? regionLabel(framework) : '';
-      summary = [framework?.fullName, framework?.summary].filter(Boolean).join('. ');
-    } else {
-      const item = (axis === 'topic' ? topics : technology).find((t) => t.id === value);
-      title = item?.en ?? value;
-      subtitle = item?.es ?? '';
-    }
+  if (axis === 'cert') {
+    const cert = certifications.find((c) => c.id === value);
+    const d = cert?.domains.find((x) => x.n === domain);
+    title = d ? d.name : (cert?.name ?? value);
+    subtitle = d ? `${cert?.name} · Domain ${d.n}` : '';
+  } else if (axis === 'framework') {
+    const framework = frameworks.find((f) => f.id === value);
+    title = framework?.name ?? value;
+    subtitle = framework ? regionLabel(framework) : '';
+    summary = [framework?.fullName, framework?.summary].filter(Boolean).join('. ');
+  } else {
+    const item = (axis === 'topic' ? topics : technology).find((t) => t.id === value);
+    title = item?.en ?? value;
+    subtitle = item?.es ?? '';
   }
 
   return (

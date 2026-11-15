@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import { type Term, spanishSummary, titleOf } from '../data';
 import { href } from '../router';
 import { canSpeak, speak } from '../speech';
-import { ChevronIcon, SpeakerIcon } from './Icons';
+import { ChevronIcon, ClearIcon, SearchIcon, SpeakerIcon } from './Icons';
 
 export function TermRow({ term }: { term: Term }) {
   return (
@@ -33,6 +33,46 @@ export function TermList({ terms }: { terms: Term[] }) {
       {terms.map((t) => (
         <TermRow key={t.id} term={t} />
       ))}
+    </div>
+  );
+}
+
+export function SearchField({
+  id,
+  label,
+  placeholder,
+  value,
+  onChange,
+}: {
+  id: string;
+  label: string;
+  placeholder: string;
+  value: string;
+  onChange: (v: string) => void;
+}) {
+  return (
+    <div className="search-field">
+      <SearchIcon size={18} />
+      <label className="visually-hidden" htmlFor={id}>
+        {label}
+      </label>
+      <input
+        id={id}
+        type="search"
+        inputMode="search"
+        autoComplete="off"
+        autoCorrect="off"
+        autoCapitalize="none"
+        spellCheck={false}
+        placeholder={placeholder}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+      />
+      {value.trim().length > 0 && (
+        <button type="button" className="clear" aria-label="Clear search" onClick={() => onChange('')}>
+          <ClearIcon size={14} />
+        </button>
+      )}
     </div>
   );
 }

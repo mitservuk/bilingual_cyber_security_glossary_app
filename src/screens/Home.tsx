@@ -1,11 +1,9 @@
 import { useMemo, useState } from 'react';
-import { Empty, SpeakButton, TermList } from '../components/Common';
-import { ClearIcon, SearchIcon } from '../components/Icons';
+import { Empty, SearchField, SpeakButton, TermList } from '../components/Common';
 import {
   certifications,
   formLabel,
   frameworks,
-  getTerm,
   populated,
   primaryForm,
   technology,
@@ -15,13 +13,11 @@ import {
 } from '../data';
 import { href } from '../router';
 import { createSearch } from '../search';
-import { useStore } from '../store';
 
 const search = createSearch(terms);
 
 export function Home() {
   const [query, setQuery] = useState('');
-  const { recent } = useStore();
   const results = useMemo(() => search(query), [query]);
   const searching = query.trim().length > 0;
 
@@ -32,29 +28,13 @@ export function Home() {
         <h1>Bilingual Cyber</h1>
       </header>
 
-      <div className="search-field">
-        <SearchIcon size={18} />
-        <label className="visually-hidden" htmlFor="q">
-          Search terms in English or Spanish
-        </label>
-        <input
-          id="q"
-          type="search"
-          inputMode="search"
-          autoComplete="off"
-          autoCorrect="off"
-          autoCapitalize="none"
-          spellCheck={false}
-          placeholder="Search in English or Spanish"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-        />
-        {searching && (
-          <button type="button" className="clear" aria-label="Clear search" onClick={() => setQuery('')}>
-            <ClearIcon size={14} />
-          </button>
-        )}
-      </div>
+      <SearchField
+        id="q"
+        label="Search terms in English or Spanish"
+        placeholder="Search in English or Spanish"
+        value={query}
+        onChange={setQuery}
+      />
 
       {searching ? (
         results.length ? (
@@ -63,17 +43,16 @@ export function Home() {
           <Empty title="No matches">Nothing matches “{query.trim()}” yet. Try the English or the Spanish word.</Empty>
         )
       ) : (
-        <Modules recent={recent} />
+        <Modules />
       )}
     </main>
   );
 }
 
-function Modules({ recent }: { recent: string[] }) {
+function Modules() {
   const word = wordOfTheDay();
   const form = primaryForm(word);
   const example = word.es.examples[0];
-  const recentTerms = recent.flatMap((id) => getTerm(id) ?? []).slice(0, 3);
   // The four ways into the glossary, in alphabetical order.
   const tiles = [
     { label: 'Certifications', count: certifications.length, path: '/browse/cert' },
@@ -106,17 +85,10 @@ function Modules({ recent }: { recent: string[] }) {
         </div>
       </section>
 
-      {recentTerms.length > 0 && (
-        <section className="section">
-          <h2>Recent</h2>
-          <TermList terms={recentTerms} />
-        </section>
-      )}
-
       <section className="section">
         <div className="section-head">
           <h2>Browse</h2>
-          <a href={href('/list/all')}>All {terms.length} terms</a>
+          <a href={href('/browse/all')}>All {terms.length} terms</a>
         </div>
         <div className="tiles">
           {tiles.map((tile) => (

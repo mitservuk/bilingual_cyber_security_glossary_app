@@ -18,7 +18,7 @@ function tabFor(segments: string[]): Tab | null {
   if (segments.length === 0) return 'home';
   if (segments[0] === 'browse') return 'browse';
   if (segments[0] === 'saved') return 'saved';
-  if (segments[0] === 'list') return segments[1] === 'all' ? 'home' : 'browse';
+  if (segments[0] === 'list') return 'browse';
   return null;
 }
 
@@ -37,9 +37,9 @@ export function App() {
 
   let screen;
   if (segments[0] === 'term' && segments[1]) screen = <Entry key={segments[1]} id={segments[1]} />;
-  else if (segments[0] === 'browse') screen = <Browse axis={segments[1]} />;
+  else if (segments[0] === 'browse') screen = <Browse view={segments[1]} />;
   else if (segments[0] === 'saved') screen = <Saved />;
-  else if (segments[0] === 'list' && segments[1] === 'all') screen = <TermsList />;
+  else if (segments[0] === 'list' && segments[1] === 'all') screen = <Browse view="all" />;
   else if (segments[0] === 'list' && segments[2]) {
     // /list/<category>/<id>, with a domain number after a certification
     screen = (
