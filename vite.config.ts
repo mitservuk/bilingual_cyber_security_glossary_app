@@ -1,11 +1,25 @@
+import { execSync } from 'node:child_process';
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
 
 // A relative base lets the same build run from any folder, including a
 // GitHub Pages project site, without knowing the repository name.
+// Shown in Settings so it is clear which build a device is running.
+function commit() {
+  try {
+    return execSync('git rev-parse --short HEAD', { stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim();
+  } catch {
+    return 'unknown';
+  }
+}
+
 export default defineConfig({
   base: './',
+  define: {
+    __BUILD_COMMIT__: JSON.stringify(commit()),
+    __BUILD_TIME__: JSON.stringify(new Date().toISOString()),
+  },
   plugins: [
     react(),
     VitePWA({
