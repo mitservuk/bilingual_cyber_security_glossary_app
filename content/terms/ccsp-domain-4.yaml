@@ -1,0 +1,3804 @@
+# CCSP Domain 4: Cloud Application Security.
+# Format is described in content/README.md. Every `found` text was confirmed
+# on its page with scripts/check_sources.py when these entries were written.
+
+- id: tech.agile
+  en:
+    term: agile
+    definition: >-
+      An iterative approach to software development that delivers working
+      increments in short cycles, takes feedback continuously and adapts the
+      plan as requirements change.
+  es:
+    verdict: both
+    forms:
+      - text: metodologías ágiles
+        usedBy: [engineers]
+        article: las
+        kind: noun
+        primary: true
+        note: >-
+          The usual Spanish wording, normally in the plural. The adjective is
+          ágil (plural ágiles): "desarrollo ágil de software".
+      - text: agile
+        usedBy: [engineers]
+        headline: true
+        kind: noun
+        note: >-
+          The English word, used after a noun ("un equipo agile") and on its
+          own with no article ("cambiar a agile").
+      - text: agilismo
+        usedBy: [engineers]
+        article: el
+        kind: noun
+        note: >-
+          The agile movement as a whole: "el agilismo se ha extendido".
+    definition: >-
+      Forma de desarrollar software en ciclos cortos, entregando partes que
+      funcionan y adaptando el plan a los cambios.
+    examples:
+      - es: El equipo trabaja con metodologías ágiles desde hace dos años.
+        en: The team has been working with agile methods for two years.
+  topics: [appsec]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [tech.waterfall, sec.sdlc, tech.devops]
+  sources:
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/como-transformar-una-compania-xiii-metodologia-agile-de-ejecucion-de-proyectos"
+      found: ["metodologías ágiles de gestión de proyectos"]
+      checked: 2026-11-14
+    - label: "Adictos al Trabajo (Autentia)"
+      url: "https://www.adictosaltrabajo.com/2019/06/06/arquitectura-software-y-metodologias-agiles-realmente-son-compatibles/"
+      found: ["arquitectura software y metodologías ágiles"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/techbiz/analista-funcional-como-adaptar-trabajo-equipo-agile/"
+      found: ["un equipo agile"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/quiero-empresa-sea-agil-donde-empiezo/"
+      found: ["cambiar a agile"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/techbiz/agile-ha-muerto/"
+      found: ["el agilismo se ha extendido", "desarrollo ágil de software"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: tech.waterfall
+  en:
+    term: waterfall
+    definition: >-
+      A sequential development model in which each phase (requirements,
+      design, build, test, release) is completed before the next begins, with
+      little room to revisit earlier decisions.
+  es:
+    verdict: both
+    forms:
+      - text: en cascada
+        usedBy: [engineers]
+        kind: adjective
+        primary: true
+        note: >-
+          Follows a noun: "el desarrollo en cascada", "el ciclo de vida en
+          cascada", "fases en cascada". AWS's Spanish pages say "el modelo de
+          cascada".
+      - text: waterfall
+        usedBy: [engineers]
+        headline: true
+        article: el
+        kind: noun
+        note: >-
+          The English word, used after a noun ("una metodología waterfall") or
+          on its own, with or without the article ("nacieron con waterfall",
+          "el waterfall de siempre"). Adictos al Trabajo gives the two
+          together: "en cascada o waterfall".
+    definition: >-
+      Modelo de desarrollo secuencial en el que cada fase se termina antes de
+      empezar la siguiente.
+    examples:
+      - es: El proyecto antiguo se hizo con un modelo en cascada.
+        en: The old project was done with a waterfall model.
+  topics: [appsec]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [tech.agile, sec.sdlc, tech.functional-requirement]
+  sources:
+    - label: "Adictos al Trabajo (Autentia)"
+      url: "https://www.adictosaltrabajo.com/2019/12/18/testing-en-un-mundo-agile/"
+      found: ["el ciclo de vida en cascada o waterfall", "el waterfall de siempre"]
+      checked: 2026-11-14
+    - label: "Adictos al Trabajo (Autentia)"
+      url: "https://www.adictosaltrabajo.com/2012/03/21/agil-grandes-organizaciones/"
+      found: ["el desarrollo en cascada"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/como-transformar-una-compania-xiii-metodologia-agile-de-ejecucion-de-proyectos"
+      found: ["fases en cascada"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/techbiz/analista-funcional-como-adaptar-trabajo-equipo-agile/"
+      found: ["una metodología waterfall"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/quiero-empresa-sea-agil-donde-empiezo/"
+      found: ["nacieron con waterfall"]
+      checked: 2026-11-14
+    - label: "AWS, páginas en español"
+      url: "https://aws.amazon.com/es/what-is/sdlc/"
+      found: ["el modelo de cascada"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: tech.devops
+  en:
+    term: DevOps
+    expansion: development and operations
+    definition: >-
+      A way of working that brings software development and IT operations
+      together in one team or shared process, relying on automation and
+      continuous delivery to release changes quickly and reliably.
+  es:
+    verdict: english-kept
+    forms:
+      - text: DevOps
+        usedBy: [engineers, google, microsoft, aws]
+        kind: noun
+        primary: true
+        note: >-
+          Kept in English and normally written without an article, after a
+          noun or a preposition: "una cultura DevOps", "prácticas de DevOps".
+          It also names the job: "el perfil DevOps".
+    definition: >-
+      Forma de trabajo que une a los equipos de desarrollo y de operaciones y
+      automatiza la entrega del software.
+    examples:
+      - es: Buscamos un ingeniero con experiencia en DevOps y en Kubernetes.
+        en: We're looking for an engineer with experience in DevOps and Kubernetes.
+  topics: [appsec]
+  technology: [ci-cd]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [tech.devsecops, tech.ci-cd, tech.pipeline, tech.iac]
+  sources:
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/devops-como-ha-evolucionado-desvirtuado/"
+      found: ["el término devops", "el perfil devops"]
+      checked: 2026-11-14
+    - label: "Tecnoempleo, oferta de empleo en España"
+      url: "https://www.tecnoempleo.com/aws-cloud-devops-engineer-remoto-sector-seguros-pa/terraform-ci-cd/rf-6c6311c1128393f20a46"
+      found: ["buenas prácticas DevOps y DevSecOps"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/devops/what-is-devops"
+      found: ["una cultura devops", "prácticas de devops"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/devops?hl=es"
+      found: ["prácticas de devops"]
+      checked: 2026-11-14
+    - label: "AWS, páginas en español"
+      url: "https://aws.amazon.com/es/devops/what-is-devops/"
+      found: ["modelo de devops"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: tech.ci-cd
+  en:
+    term: continuous integration and delivery
+    acronym: CI/CD
+    definition: >-
+      The practice of merging code changes frequently into a shared branch,
+      where each one is built and tested automatically (CI), and of keeping
+      every validated build ready to release, or releasing it automatically
+      (CD).
+  es:
+    verdict: both
+    acronym: CI/CD
+    forms:
+      - text: CI/CD
+        usedBy: [engineers, microsoft, aws]
+        article: el
+        kind: noun
+        primary: true
+        note: >-
+          The English acronym is the working term, usually after a noun or a
+          preposition ("un pipeline de CI/CD", "técnicas de CI/CD") and
+          masculine when it takes an article: "el código que llegue al
+          CI/CD".
+      - text: integración continua y entrega continua
+        usedBy: [microsoft]
+        headline: true
+        article: la
+        kind: noun
+        note: >-
+          The expansion as Microsoft writes it. AWS and Google shorten it to
+          "integración y entrega continuas".
+      - text: despliegue continuo
+        usedBy: [engineers]
+        article: el
+        kind: noun
+        note: >-
+          Continuous deployment, the other reading of CD. Engineers say
+          despliegue; Microsoft's documentation says "implementación
+          continua".
+    definition: >-
+      Práctica de integrar los cambios de código con frecuencia, probarlos de
+      forma automática y dejarlos listos para publicar.
+    examples:
+      - es: El pipeline de CI/CD ejecuta las pruebas en cada cambio de código.
+        en: The CI/CD pipeline runs the tests on every code change.
+  topics: [appsec]
+  technology: [ci-cd]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [tech.pipeline, tech.devops, tech.devsecops, tech.version-control]
+  sources:
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/validar-apis-pipeline-ci-cd-1-2/"
+      found: ["un pipeline de ci/cd"]
+      checked: 2026-11-14
+    - label: "Adictos al Trabajo (Autentia)"
+      url: "https://www.adictosaltrabajo.com/2026/02/11/autoescalado-de-runners-en-gitlab-ci-escalando-pipelines-de-forma-eficiente/"
+      found: ["técnicas de ci/cd"]
+      checked: 2026-11-14
+    - label: "Adictos al Trabajo (Autentia)"
+      url: "https://www.adictosaltrabajo.com/2022/03/17/guia-rapida-ci-cd-con-github-actions-y-netlify-para-ingenieros-de-front-end/"
+      found: ["integración continua", "entrega continua", "despliegue continuo"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/devsecops-7-factores-clave-para-implementar-la-seguridad-en-devops"
+      found: ["el código que llegue al ci/cd"]
+      checked: 2026-11-14
+    - label: "Tecnoempleo, oferta de empleo en España"
+      url: "https://www.tecnoempleo.com/auditor-it-aplicaciones-devsecops-michael-page/ci-cd-sdlc/rf-ad651bfe725c3388f843"
+      found: ["pipelines de integración y despliegue continuo (ci/cd)"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/devops/what-is-devops"
+      found: ["integración continua y entrega continua (ci/cd)"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/azure/architecture/guide/architecture-styles/microservices"
+      found: ["integración continua e implementación continua (ci/cd)"]
+      checked: 2026-11-14
+    - label: "AWS, páginas en español"
+      url: "https://aws.amazon.com/es/what-is/iac/"
+      found: ["integración y entrega continuas (ci/cd)"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/devops?hl=es"
+      found: ["integración y entrega continuas"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: tech.pipeline
+  en:
+    term: pipeline
+    definition: >-
+      An automated sequence of stages (build, test, security scanning,
+      deployment) that every code change passes through on its way to
+      production.
+  es:
+    verdict: both
+    forms:
+      - text: pipeline
+        usedBy: [engineers, microsoft]
+        article: el
+        kind: noun
+        primary: true
+        plural: los pipelines
+        note: >-
+          The English word, masculine, is what engineering blogs and job
+          adverts write: "un pipeline de Jenkins", "pipelines CI/CD".
+          Microsoft's documentation uses it now and then.
+      - text: canalización
+        usedBy: [microsoft, aws]
+        headline: true
+        article: la
+        kind: noun
+        plural: las canalizaciones
+        note: >-
+          The translation in Microsoft's and AWS's Spanish documentation:
+          "canalizaciones de CI/CD".
+      - text: flujo de procesamiento
+        usedBy: [google]
+        article: el
+        kind: noun
+        note: >-
+          Google Cloud's wording on its pages for Spain: "flujos de
+          procesamiento de CI/CD".
+    definition: >-
+      Secuencia automatizada de pasos (compilación, pruebas, análisis de
+      seguridad y despliegue) por la que pasa cada cambio de código.
+    examples:
+      - es: El pipeline ha fallado en la fase de pruebas.
+        en: The pipeline has failed at the test stage.
+    watchOut: >-
+      Each vendor translates it differently, while engineers keep the English
+      word. Say pipeline; recognise the others when you read them.
+  topics: [appsec]
+  technology: [ci-cd]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [tech.ci-cd, tech.devops, sec.sast, tech.iac]
+  sources:
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/pipelines-de-jenkins-evolucion-continuous-delivery/"
+      found: ["un pipeline de jenkins", "el pipeline del proyecto"]
+      checked: 2026-11-14
+    - label: "Adictos al Trabajo (Autentia)"
+      url: "https://www.adictosaltrabajo.com/2026/02/11/autoescalado-de-runners-en-gitlab-ci-escalando-pipelines-de-forma-eficiente/"
+      found: ["ejecución de los pipelines"]
+      checked: 2026-11-14
+    - label: "Tecnoempleo, oferta de empleo en España"
+      url: "https://www.tecnoempleo.com/aws-cloud-devops-engineer-remoto-sector-seguros-pa/terraform-ci-cd/rf-6c6311c1128393f20a46"
+      found: ["pipelines ci/cd"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-devsecops"
+      found: ["canalizaciones de ci/cd", "la canalización bloquea la publicación"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/azure/security/fundamentals/secrets-best-practices"
+      found: ["pipelines de integración continua/despliegue continuo (ci/cd)"]
+      checked: 2026-11-14
+    - label: "AWS, páginas en español"
+      url: "https://aws.amazon.com/es/what-is/iac/"
+      found: ["canalizaciones de integración y entrega continuas"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/discover/containers-vs-vms?hl=es"
+      found: ["flujos de procesamiento de ci/cd"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/learn/what-is-hybrid-cloud?hl=es"
+      found: ["un flujo de procesamiento automatizado de ci/cd"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: tech.iac
+  en:
+    term: infrastructure as code
+    acronym: IaC
+    definition: >-
+      Defining and provisioning infrastructure (networks, servers, policies)
+      through version-controlled, machine-readable files instead of manual
+      configuration, so that environments are repeatable and changes can be
+      reviewed and tested.
+  es:
+    verdict: both
+    acronym: IaC
+    forms:
+      - text: infraestructura como código
+        usedBy: [engineers, google, microsoft, aws]
+        article: la
+        kind: noun
+        primary: true
+        note: >-
+          The translation is in general use, often with the English in
+          brackets: "infraestructura como código, o Infrastructure as Code
+          (IaC)".
+      - text: IaC
+        usedBy: [engineers, microsoft, aws]
+        headline: true
+        article: la
+        kind: noun
+        note: >-
+          The English acronym, feminine like "la infraestructura": "en qué
+          consiste la IaC".
+    definition: >-
+      Definición y despliegue de la infraestructura mediante ficheros de
+      código versionados, en lugar de configurarla a mano.
+    examples:
+      - es: Toda la red se despliega con infraestructura como código.
+        en: The whole network is deployed with infrastructure as code.
+  topics: [architecture]
+  technology: [iac]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [tech.devops, tech.pipeline, tech.version-control, sec.misconfiguration]
+  sources:
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/adopcion-cloud-publica-infraestructura-como-codigo"
+      found: ["infraestructura como código, o infrastructure as code (iac)"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/iac-nube-aws-cdk-python/"
+      found: ["en qué consiste la iac", "desplegar la infraestructura como código"]
+      checked: 2026-11-14
+    - label: "Tecnoempleo, oferta de empleo en España"
+      url: "https://www.tecnoempleo.com/aws-cloud-devops-engineer-remoto-sector-seguros-pa/terraform-ci-cd/rf-6c6311c1128393f20a46"
+      found: ["infraestructura como código con terraform"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/devops/deliver/what-is-infrastructure-as-code"
+      found: ["la infraestructura como código (iac)"]
+      checked: 2026-11-14
+    - label: "AWS, páginas en español"
+      url: "https://aws.amazon.com/es/what-is/iac/"
+      found: ["¿qué es la infraestructura como código?", "el papel de la iac en devops"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/learn/what-is-hybrid-cloud?hl=es"
+      found: ["infraestructura como código"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.secure-coding
+  en:
+    term: secure coding
+    definition: >-
+      Writing software according to rules that prevent common classes of
+      vulnerability, such as validating input, handling memory and errors
+      safely and keeping secrets out of the code.
+  es:
+    verdict: translated
+    forms:
+      - text: programación segura
+        usedBy: [official, engineers, microsoft]
+        article: la
+        kind: noun
+        primary: true
+        note: >-
+          The wording of the ENS, which asks for "normas de programación
+          segura" as part of a secure development method (mp.sw.1).
+      - text: desarrollo seguro
+        usedBy: [official, eu, engineers]
+        article: el
+        kind: noun
+        note: >-
+          Secure development, the wider label for the whole lifecycle and not
+          only the code: "metodología de desarrollo seguro", "buenas prácticas
+          de desarrollo seguro".
+      - text: codificación segura
+        usedBy: [microsoft, aws]
+        article: la
+        kind: noun
+        note: >-
+          The literal translation, found in Microsoft's and AWS's Spanish
+          documentation.
+    definition: >-
+      Forma de escribir el código siguiendo normas que evitan las
+      vulnerabilidades más habituales.
+    examples:
+      - es: Todos los desarrolladores reciben formación en programación segura.
+        en: All developers receive training in secure coding.
+    watchOut: >-
+      Codificación also means encoding: Microsoft itself describes
+      encryption as "la codificación segura de los datos". Programación
+      avoids the ambiguity.
+  topics: [appsec]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [sec.sdlc, sec.code-review, sec.sast, sec.secure-by-design]
+  sources:
+    - label: "Esquema Nacional de Seguridad (RD 311/2022), medida mp.sw.1"
+      url: "https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191"
+      found: ["normas de programación segura", "metodología de desarrollo seguro"]
+      checked: 2026-11-14
+    - label: "Directiva (UE) 2022/2555 (NIS 2), texto en español"
+      url: "https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81963"
+      found: ["procedimientos de desarrollo seguro"]
+      checked: 2026-11-14
+    - label: "Adictos al Trabajo (Autentia)"
+      url: "https://www.adictosaltrabajo.com/2024/11/27/buscando-vulnerabilidades-en-el-codigo-con-kiuwan/"
+      found: ["prácticas de programación seguras"]
+      checked: 2026-11-14
+    - label: "Tecnoempleo, oferta de empleo en España"
+      url: "https://www.tecnoempleo.com/auditor-it-aplicaciones-devsecops-michael-page/ci-cd-sdlc/rf-ad651bfe725c3388f843"
+      found: ["buenas prácticas de desarrollo seguro"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-application-security"
+      found: ["principios de programación segura", "la codificación segura"]
+      checked: 2026-11-14
+    - label: "AWS, documentación en español"
+      url: "https://docs.aws.amazon.com/es_es/config/latest/developerguide/operational-best-practices-for-pci-dss.html"
+      found: ["prácticas de codificación segura"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/azure/security/fundamentals/encryption-atrest"
+      found: ["el cifrado es la codificación segura de los datos"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.code-review
+  en:
+    term: code review
+    definition: >-
+      Examination of source code by someone other than its author, by hand or
+      with tool support, to find defects and security weaknesses before the
+      change is merged.
+  es:
+    verdict: both
+    forms:
+      - text: revisión de código
+        usedBy: [engineers, microsoft, aws]
+        article: la
+        kind: noun
+        primary: true
+        plural: las revisiones de código
+      - text: code review
+        usedBy: [engineers]
+        headline: true
+        article: la
+        kind: noun
+        plural: las code reviews
+        note: >-
+          The English term is common among developers. Its gender varies:
+          Paradigma writes "las code reviews", Adictos al Trabajo "el code
+          review".
+      - text: auditoría de código
+        usedBy: [official, engineers]
+        article: la
+        kind: noun
+        note: >-
+          A formal security review of the code. In the ENS it is a
+          reinforcement of measure mp.sw.2, headed "inspección de código
+          fuente": "se realizará una auditoría de código fuente".
+    definition: >-
+      Examen del código fuente por parte de otra persona, o con herramientas,
+      para encontrar errores y fallos de seguridad antes de integrarlo.
+    examples:
+      - es: Ningún cambio llega a producción sin una revisión de código.
+        en: No change reaches production without a code review.
+  topics: [appsec, assessment]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [sec.secure-coding, sec.sast, tech.version-control, sec.white-box-testing]
+  sources:
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/ssdlc-la-clave-para-un-software-blindado"
+      found: ["revisiones de código: revisiones humanas"]
+      checked: 2026-11-14
+    - label: "Tecnoempleo, oferta de empleo en España"
+      url: "https://www.tecnoempleo.com/auditor-it-aplicaciones-devsecops-michael-page/ci-cd-sdlc/rf-ad651bfe725c3388f843"
+      found: ["gestión de vulnerabilidades y revisión de código"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/techbiz/iac-infraestructura-como-codigo/"
+      found: ["las code reviews"]
+      checked: 2026-11-14
+    - label: "Adictos al Trabajo (Autentia)"
+      url: "https://www.adictosaltrabajo.com/2019/03/14/lgtm-ver-vulnerabilidades-en-el-codigo/"
+      found: ["el code review automático"]
+      checked: 2026-11-14
+    - label: "Esquema Nacional de Seguridad (RD 311/2022), medida mp.sw.2"
+      url: "https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191"
+      found: ["inspección de código fuente", "se realizará una auditoría de código fuente"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/devsecops-vs-ssdlc-cual-es-la-mejor-estrategia-para-desarrollo-seguro"
+      found: ["auditorías de código"]
+      checked: 2026-11-14
+    - label: "Adictos al Trabajo (Autentia)"
+      url: "https://www.adictosaltrabajo.com/2016/03/07/introduccion-a-owasp/"
+      found: ["una auditoría de código"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-application-security"
+      found: ["revisiones de código y análisis estático"]
+      checked: 2026-11-14
+    - label: "AWS, páginas en español"
+      url: "https://aws.amazon.com/es/what-is/sdlc/"
+      found: ["revisión de código"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: tech.version-control
+  en:
+    term: version control
+    definition: >-
+      Recording every change to source code and other files in a repository,
+      with its author and history, so that changes can be compared, reviewed,
+      merged and reverted.
+  es:
+    verdict: translated
+    forms:
+      - text: control de versiones
+        usedBy: [official, engineers, microsoft, aws]
+        article: el
+        kind: noun
+        primary: true
+        note: >-
+          The tool is "un sistema de control de versiones". Job adverts name
+          the products in brackets: "control de versiones (Git, Bitbucket)".
+      - text: versionado
+        usedBy: [engineers]
+        article: el
+        kind: noun
+        note: >-
+          Versioning: giving successive versions to code, APIs or events, as
+          in "evolución y versionado de eventos".
+      - text: control de código fuente
+        usedBy: [aws]
+        article: el
+        kind: noun
+        note: AWS's rendering of "source control" on its Spanish pages.
+    definition: >-
+      Registro de todos los cambios del código en un repositorio, con su
+      autor y su historial, para poder compararlos, revisarlos y deshacerlos.
+    examples:
+      - es: Todo el código de infraestructura está en el control de versiones.
+        en: All the infrastructure code is in version control.
+  topics: [appsec]
+  technology: [ci-cd]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [tech.scm, tech.iac, sec.code-review, tech.ci-cd]
+  sources:
+    - label: "Orden TAS/1478/2005, temario de oposiciones (BOE)"
+      url: "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2005-8610"
+      found: ["control de versiones. control de cambios"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/pipelines-de-jenkins-evolucion-continuous-delivery/"
+      found: ["ventajas: control de versiones"]
+      checked: 2026-11-14
+    - label: "Tecnoempleo, oferta de empleo en España"
+      url: "https://www.tecnoempleo.com/arquitecto-seguridad-ia-generativa-ust/aws-cloudformation/rf-603b1ce89244d34ca147"
+      found: ["control de versiones (git, bitbucket)"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/arquitecturas-eda-en-que-consisten-que-tener-en-cuenta/"
+      found: ["evolución y versionado de eventos"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/devops/develop/git/what-is-version-control"
+      found: ["¿qué es el control de versiones?", "el sistema de control de versiones"]
+      checked: 2026-11-14
+    - label: "AWS, páginas en español"
+      url: "https://aws.amazon.com/es/what-is/configuration-management/"
+      found: ["los sistemas de control de versiones (vcs)"]
+      checked: 2026-11-14
+    - label: "AWS, páginas en español"
+      url: "https://aws.amazon.com/es/devops/source-control/"
+      found: ["¿qué es el control de código fuente?"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: tech.scm
+  en:
+    term: software configuration management
+    acronym: SCM
+    definition: >-
+      The discipline of identifying, versioning and controlling changes to
+      the components of a software system (code, build scripts, configuration
+      and documentation) so that any release can be reproduced and audited.
+  es:
+    verdict: translated
+    forms:
+      - text: gestión de la configuración del software
+        usedBy: [official]
+        article: la
+        kind: noun
+        primary: true
+        note: >-
+          The name of the discipline in a public-sector IT exam syllabus
+          published in the BOE, which breaks it down into "identificación de
+          la configuración, control de versiones, control de cambios".
+      - text: gestión de la configuración
+        usedBy: [engineers]
+        article: la
+        kind: noun
+        note: >-
+          The short form. The ENS has a measure with a similar name, "gestión
+          de la configuración de seguridad" (op.exp.3), which concerns the
+          security configuration of systems.
+      - text: administración de la configuración
+        usedBy: [aws]
+        article: la
+        kind: noun
+        note: AWS's wording on its Spanish pages.
+    definition: >-
+      Disciplina que identifica y controla los cambios de todos los
+      componentes de un software para poder reproducir y auditar cualquier
+      versión.
+    examples:
+      - es: >-
+          Con una buena gestión de la configuración del software podemos
+          reconstruir cualquier versión.
+        en: >-
+          With good software configuration management we can rebuild any
+          version.
+  topics: [appsec]
+  technology: [ci-cd]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [tech.version-control, tech.iac, sec.security-baseline]
+  sources:
+    - label: "Orden TAS/1478/2005, temario de oposiciones (BOE)"
+      url: "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2005-8610"
+      found: ["gestión de la configuración del software: identificación de la configuración. control de versiones. control de cambios"]
+      checked: 2026-11-14
+    - label: "Adictos al Trabajo (Autentia)"
+      url: "https://www.adictosaltrabajo.com/2013/04/25/control-y-aseguramiento-de-calidad-del-software/"
+      found: ["gestión de la configuración y técnicas de xp"]
+      checked: 2026-11-14
+    - label: "Esquema Nacional de Seguridad (RD 311/2022), medida op.exp.3"
+      url: "https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191"
+      found: ["gestión de la configuración de seguridad [op.exp.3]"]
+      checked: 2026-11-14
+    - label: "AWS, páginas en español"
+      url: "https://aws.amazon.com/es/what-is/configuration-management/"
+      found: ["administración de la configuración del software"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: tech.functional-requirement
+  en:
+    term: functional requirement
+    definition: >-
+      A statement of what a system must do: a behaviour, function or output
+      it has to provide to its users or to other systems.
+  es:
+    verdict: translated
+    forms:
+      - text: requisitos funcionales
+        usedBy: [official, engineers, microsoft]
+        article: los
+        kind: noun
+        primary: true
+        note: >-
+          Normally met in the plural; one is "un requisito funcional". Often
+          paired with its opposite: "requisitos funcionales y no funcionales".
+      - text: requerimientos funcionales
+        usedBy: [official, engineers]
+        article: los
+        kind: noun
+        note: >-
+          A variant also seen in Spain. The AEPD gives both: "los requisitos o
+          requerimientos funcionales".
+    definition: >-
+      Descripción de lo que un sistema debe hacer: las funciones y
+      comportamientos que tiene que ofrecer.
+    examples:
+      - es: El documento recoge los requisitos funcionales de la nueva aplicación.
+        en: The document sets out the functional requirements of the new application.
+  topics: [appsec]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [tech.non-functional-requirement, sec.sdlc, sec.abuse-case]
+  sources:
+    - label: "AEPD, Gestión del riesgo y evaluación de impacto en tratamientos de datos personales"
+      url: "https://www.aepd.es/guias/gestion-riesgo-y-evaluacion-impacto-en-tratamientos-datos-personales.pdf"
+      found: ["requisitos funcionales y no funcionales"]
+      checked: 2026-11-14
+    - label: "AEPD, Guía de privacidad desde el diseño"
+      url: "https://www.aepd.es/guias/guia-privacidad-desde-diseno.pdf"
+      found: ["requisitos o requerimientos funcionales"]
+      checked: 2026-11-14
+    - label: "Adictos al Trabajo (Autentia)"
+      url: "https://www.adictosaltrabajo.com/2010/05/05/rm/"
+      found: ["requisitos funcionales"]
+      checked: 2026-11-14
+    - label: "Tecnoempleo, oferta de empleo en España"
+      url: "https://www.tecnoempleo.com/arquitecto-soluciones-serem/kafka-devops/rf-96e91aeda2fbe341d548"
+      found: ["requisitos funcionales y no funcionales"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/como-transformar-una-companiaiii-profundizando-en-la-arquitectura-de-referencia"
+      found: ["los requerimientos funcionales"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/azure/architecture/guide/"
+      found: ["requisitos funcionales y no funcionales"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: tech.non-functional-requirement
+  en:
+    term: non-functional requirement
+    definition: >-
+      A requirement on how well a system must work rather than on what it
+      does: availability, performance, security, scalability,
+      maintainability and similar quality attributes.
+  es:
+    verdict: translated
+    forms:
+      - text: requisitos no funcionales
+        usedBy: [official, engineers]
+        article: los
+        kind: noun
+        primary: true
+        note: >-
+          Normally met in the plural. Security requirements count among them:
+          the AEPD writes "uno de esos requisitos no funcionales son los
+          requisitos de seguridad". Adictos al Trabajo glosses them as
+          "atributos de calidad".
+    definition: >-
+      Requisito sobre cómo debe funcionar un sistema y no sobre lo que hace:
+      disponibilidad, rendimiento, seguridad o escalabilidad.
+    examples:
+      - es: La disponibilidad y la seguridad son requisitos no funcionales.
+        en: Availability and security are non-functional requirements.
+  topics: [appsec]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [tech.functional-requirement, sec.availability, sec.sdlc]
+  sources:
+    - label: "AEPD, Gestión del riesgo y evaluación de impacto en tratamientos de datos personales"
+      url: "https://www.aepd.es/guias/gestion-riesgo-y-evaluacion-impacto-en-tratamientos-datos-personales.pdf"
+      found: ["requisitos no funcionales son los requisitos de seguridad"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/diseno-soluciones-arquitectura-la-arquitectura-funcional/"
+      found: ["los requisitos no funcionales asociados a los casos de uso"]
+      checked: 2026-11-14
+    - label: "Adictos al Trabajo (Autentia)"
+      url: "https://www.adictosaltrabajo.com/2019/06/06/arquitectura-software-y-metodologias-agiles-realmente-son-compatibles/"
+      found: ["atributos de calidad (requisitos no funcionales)"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.sast
+  en:
+    term: static application security testing
+    acronym: SAST
+    definition: >-
+      Analysing an application's source code, bytecode or binaries without
+      running it, to find coding flaws such as injection points or unsafe
+      functions early in development.
+  es:
+    verdict: both
+    acronym: SAST
+    forms:
+      - text: SAST
+        usedBy: [engineers, microsoft, aws]
+        article: el
+        kind: noun
+        primary: true
+        plural: los SAST
+        note: >-
+          The English acronym is the working term, often paired with its
+          sibling: "SAST y DAST". Telefónica Tech calls the tools "los SAST".
+      - text: análisis estático de código
+        usedBy: [engineers]
+        headline: true
+        article: el
+        kind: noun
+        note: >-
+          The usual Spanish description: "SAST o análisis estático de código".
+          Also written "análisis de código estático", as INCIBE-CERT does.
+      - text: pruebas de seguridad de aplicaciones estáticas
+        usedBy: [microsoft, aws]
+        article: las
+        kind: noun
+        note: >-
+          The word-for-word expansion in Microsoft's and AWS's Spanish pages.
+    definition: >-
+      Análisis del código fuente de una aplicación, sin ejecutarla, para
+      encontrar fallos de seguridad.
+    examples:
+      - es: Hemos integrado una herramienta SAST en el pipeline.
+        en: We've integrated a SAST tool into the pipeline.
+  topics: [appsec, assessment]
+  technology: [ci-cd]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [sec.dast, sec.iast, sec.sca, sec.code-review]
+  sources:
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/iast-nuevo-enfoque-deteccion-vulnerabilidades"
+      found: ["sast o análisis estático de código"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/devsecops-7-factores-clave-para-implementar-la-seguridad-en-devops"
+      found: ["la puesta a punto de los sast", "tipo sast y dast"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/seguridad-apis-vulnerabilidades/"
+      found: ["herramientas de análisis estático de código"]
+      checked: 2026-11-14
+    - label: "INCIBE-CERT, blog"
+      url: "https://www.incibe.es/incibe-cert/blog/fuzzing-y-testing-sistemas-control-industrial"
+      found: ["herramientas de análisis de código estático"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-application-security"
+      found: ["pruebas de seguridad de aplicaciones estáticas (sast)", "las herramientas de sast"]
+      checked: 2026-11-14
+    - label: "AWS, páginas en español"
+      url: "https://aws.amazon.com/es/what-is/devsecops/"
+      found: ["pruebas de seguridad de aplicaciones estáticas (sast)"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.dast
+  en:
+    term: dynamic application security testing
+    acronym: DAST
+    definition: >-
+      Testing a running application from the outside, by sending it crafted
+      requests and observing the responses, to find vulnerabilities that only
+      show at run time.
+  es:
+    verdict: both
+    acronym: DAST
+    forms:
+      - text: DAST
+        usedBy: [engineers, microsoft, aws]
+        article: el
+        kind: noun
+        primary: true
+        note: >-
+          The English acronym is the working term, often paired with its
+          sibling: "SAST y DAST".
+      - text: análisis dinámico
+        usedBy: [engineers]
+        headline: true
+        article: el
+        kind: noun
+        note: >-
+          The usual Spanish description: "DAST o análisis dinámico".
+      - text: pruebas de seguridad de aplicaciones dinámicas
+        usedBy: [microsoft, aws]
+        article: las
+        kind: noun
+        note: >-
+          The word-for-word expansion in Microsoft's and AWS's Spanish pages.
+    definition: >-
+      Análisis de una aplicación en ejecución, desde fuera, para encontrar
+      vulnerabilidades que solo aparecen cuando está funcionando.
+    examples:
+      - es: Lanzamos un análisis DAST contra el entorno de preproducción.
+        en: We run a DAST scan against the pre-production environment.
+  topics: [appsec, assessment]
+  technology: [ci-cd]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [sec.sast, sec.iast, sec.black-box-testing, sec.penetration-test]
+  sources:
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/iast-nuevo-enfoque-deteccion-vulnerabilidades"
+      found: ["dast o análisis dinámico", "el análisis dinámico, dast"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/devsecops-7-factores-clave-para-implementar-la-seguridad-en-devops"
+      found: ["tipo sast y dast"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-application-security"
+      found: ["pruebas de seguridad de aplicaciones dinámicas (dast)", "herramientas de dast"]
+      checked: 2026-11-14
+    - label: "AWS, páginas en español"
+      url: "https://aws.amazon.com/es/what-is/devsecops/"
+      found: ["pruebas de seguridad de aplicaciones dinámicas (dast)"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.iast
+  en:
+    term: interactive application security testing
+    acronym: IAST
+    definition: >-
+      Instrumenting an application from the inside while it runs, usually
+      during functional tests, so that vulnerabilities are detected with
+      knowledge of both the code being executed and the requests that reach
+      it.
+  es:
+    verdict: english-kept
+    acronym: IAST
+    forms:
+      - text: IAST
+        usedBy: [engineers, microsoft, aws]
+        article: el
+        kind: noun
+        primary: true
+        note: >-
+          The English acronym is the working term, with the English expansion
+          in brackets: "un IAST (Interactive Application Security Testing)",
+          "las herramientas IAST".
+      - text: pruebas de seguridad de aplicaciones interactivas
+        usedBy: [microsoft, aws]
+        article: las
+        kind: noun
+        note: >-
+          The word-for-word expansion in Microsoft's and AWS's Spanish pages.
+    definition: >-
+      Análisis de seguridad que observa la aplicación desde dentro mientras
+      se ejecuta, combinando el enfoque estático y el dinámico.
+    examples:
+      - es: Las herramientas IAST generan menos falsos positivos.
+        en: IAST tools produce fewer false positives.
+  topics: [appsec, assessment]
+  technology: [ci-cd]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [sec.sast, sec.dast, sec.sca]
+  sources:
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/devsecops-7-factores-clave-para-implementar-la-seguridad-en-devops"
+      found: ["un iast (interactive application security testing", "las herramientas iast"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/iast-nuevo-enfoque-deteccion-vulnerabilidades"
+      found: ["interactive application security testing (iast)"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-application-security"
+      found: ["pruebas de seguridad de aplicaciones interactivas (iast)"]
+      checked: 2026-11-14
+    - label: "AWS, páginas en español"
+      url: "https://aws.amazon.com/es/what-is/devsecops/"
+      found: ["pruebas de seguridad de aplicaciones interactivas (iast)"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.sca
+  en:
+    term: software composition analysis
+    acronym: SCA
+    definition: >-
+      Automated identification of the open-source and third-party components
+      in an application, with their versions, in order to flag known
+      vulnerabilities and licence problems in those dependencies.
+  es:
+    verdict: both
+    acronym: SCA
+    forms:
+      - text: SCA
+        usedBy: [engineers, aws]
+        article: el
+        kind: noun
+        primary: true
+        note: >-
+          The English acronym is the working term, listed next to its
+          siblings: "SAST, SCA".
+      - text: análisis de composición de software
+        usedBy: [microsoft]
+        headline: true
+        article: el
+        kind: noun
+        note: >-
+          Microsoft's wording. AWS writes "análisis de la composición del
+          software" and Adictos al Trabajo shortens it to "análisis de
+          composición".
+    definition: >-
+      Análisis automático de los componentes de terceros y de código abierto
+      de una aplicación para detectar vulnerabilidades conocidas y problemas
+      de licencias.
+    examples:
+      - es: El SCA ha detectado una dependencia con una vulnerabilidad crítica.
+        en: The SCA has found a dependency with a critical vulnerability.
+  topics: [appsec, supplychain]
+  technology: [ci-cd]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [sec.sast, sec.sbom, tech.dependency, sec.software-supply-chain]
+  sources:
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/devsecops-vs-ssdlc-cual-es-la-mejor-estrategia-para-desarrollo-seguro"
+      found: ["incluye sast, sca"]
+      checked: 2026-11-14
+    - label: "Adictos al Trabajo (Autentia)"
+      url: "https://www.adictosaltrabajo.com/2024/11/27/buscando-vulnerabilidades-en-el-codigo-con-kiuwan/"
+      found: ["análisis de composición (sca)", "software composition analysis (sca)"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-devsecops"
+      found: ["análisis de composición de software"]
+      checked: 2026-11-14
+    - label: "AWS, páginas en español"
+      url: "https://aws.amazon.com/es/what-is/devsecops/"
+      found: ["el análisis de la composición del software (sca)"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.penetration-test
+  en:
+    term: penetration test
+    definition: >-
+      An authorised, simulated attack on a system, in which testers actively
+      exploit weaknesses to show what a real attacker could achieve and how
+      far they could get.
+  es:
+    verdict: both
+    forms:
+      - text: prueba de penetración
+        usedBy: [official, engineers, microsoft, aws]
+        article: la
+        kind: noun
+        primary: true
+        plural: las pruebas de penetración
+        note: >-
+          The term in the ENS and in INCIBE's glossary, which files it under
+          the headword "Pentest".
+      - text: pentesting
+        usedBy: [official, engineers]
+        headline: true
+        article: el
+        kind: noun
+        note: >-
+          The activity, kept in English; the ENS adds it in brackets after the
+          Spanish term. One test is "un pentest" and the people who do it are
+          "pentesters".
+      - text: test de intrusión
+        usedBy: [official, engineers]
+        article: el
+        kind: noun
+        note: >-
+          Another established name, also as "prueba de intrusión". INCIBE
+          lists the options together: "test de penetración, test de
+          intrusión, pen test o pentesting".
+    definition: >-
+      Ataque simulado y autorizado contra un sistema para comprobar hasta
+      dónde podría llegar un atacante real.
+    examples:
+      - es: Antes del lanzamiento contratamos una prueba de penetración externa.
+        en: Before the launch we commission an external penetration test.
+  topics: [assessment]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [sec.vulnerability-scan, sec.black-box-testing, sec.white-box-testing, sec.exploit]
+  sources:
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["Pentest", "Una prueba de penetración es un ataque", "Sinónimo: Prueba de penetración"]
+      checked: 2026-11-14
+    - label: "Esquema Nacional de Seguridad (RD 311/2022)"
+      url: "https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191"
+      found: ["auditoría de pruebas de penetración", "pentesting"]
+      checked: 2026-11-14
+    - label: "INCIBE, blog para empresas"
+      url: "https://www.incibe.es/protege-tu-empresa/blog/el-pentesting-auditando-seguridad-tus-sistemas"
+      found: ["¿qué es el pentesting?", "test de penetración, test de intrusión, pen test o pentesting"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/automatizacion-pentest-y-red-team-la-triada-para-gestionar-vulnerabilidades"
+      found: ["realizar una prueba de penetración", "un pentest"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/que-es-pentesting-security-assessment-ciberseguridad"
+      found: ["pruebas de intrusión (pentesting)", "pentesters"]
+      checked: 2026-11-14
+    - label: "El Lado del Mal"
+      url: "https://www.elladodelmal.com/2007/02/test-de-intrusion-i-de-vi.html"
+      found: ["un test de intrusión"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-application-security"
+      found: ["pruebas de penetración"]
+      checked: 2026-11-14
+    - label: "AWS, páginas en español"
+      url: "https://aws.amazon.com/es/what-is/sdlc/"
+      found: ["pruebas de penetración"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.vulnerability-scan
+  en:
+    term: vulnerability scan
+    definition: >-
+      An automated sweep of systems, networks or applications that compares
+      what it finds against known vulnerabilities and misconfigurations,
+      without attempting to exploit them.
+  es:
+    verdict: translated
+    forms:
+      - text: análisis de vulnerabilidades
+        usedBy: [official, engineers, microsoft]
+        article: el
+        kind: noun
+        primary: true
+        plural: los análisis de vulnerabilidades
+        note: >-
+          The wording of the ENS (op.mon.3), of INCIBE's catalogue of
+          security services and of job adverts.
+      - text: escaneo de vulnerabilidades
+        usedBy: [official]
+        article: el
+        kind: noun
+        note: >-
+          The headword in INCIBE's glossary, closer to the English. The tool
+          is "un escáner de vulnerabilidades", plural "escáneres".
+    definition: >-
+      Búsqueda automatizada de vulnerabilidades conocidas en sistemas, redes
+      o aplicaciones, sin llegar a explotarlas.
+    examples:
+      - es: Hacemos un análisis de vulnerabilidades de todos los servidores cada semana.
+        en: We run a vulnerability scan of all the servers every week.
+    watchOut: >-
+      Análisis does not change in the plural: un análisis, dos análisis.
+  topics: [vulnmgmt, assessment]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [sec.penetration-test, sec.vulnerability, sec.patch-management, sec.dast]
+  sources:
+    - label: "Esquema Nacional de Seguridad (RD 311/2022), medida op.mon.3"
+      url: "https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191"
+      found: ["[op.mon.3.r6.2] análisis de vulnerabilidades"]
+      checked: 2026-11-14
+    - label: "INCIBE, Taxonomía de soluciones de ciberseguridad"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/taxonomia_ciberseguridad.pdf"
+      found: ["análisis de vulnerabilidades"]
+      checked: 2026-11-14
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["Escaneo de vulnerabilidades"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/automatizacion-pentest-y-red-team-la-triada-para-gestionar-vulnerabilidades"
+      found: ["análisis de vulnerabilidades por año"]
+      checked: 2026-11-14
+    - label: "Tecnoempleo, oferta de empleo en España"
+      url: "https://www.tecnoempleo.com/ingeniero-devops-arelance/github-github-actions/rf-3d6e13907271636d364e"
+      found: ["análisis de vulnerabilidades en los pipelines"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-application-security"
+      found: ["automatiza el análisis de vulnerabilidades"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-container-security"
+      found: ["escáneres de vulnerabilidades"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.fuzzing
+  en:
+    term: fuzzing
+    definition: >-
+      Feeding a program, protocol or API large volumes of random, malformed
+      or unexpected input and watching for crashes or other abnormal
+      behaviour that reveals exploitable defects.
+  es:
+    verdict: english-kept
+    forms:
+      - text: fuzzing
+        usedBy: [official, engineers]
+        article: el
+        kind: noun
+        primary: true
+        note: >-
+          Kept in English: "técnicas de fuzzing", "hacer fuzzing". The tool is
+          "un fuzzer". INCIBE-CERT defines it as a set of "pruebas de caja
+          negra".
+    definition: >-
+      Técnica de pruebas que envía a un programa datos aleatorios, inválidos
+      o malformados para provocar fallos y descubrir vulnerabilidades.
+    examples:
+      - es: Encontramos el fallo haciendo fuzzing sobre la API.
+        en: We found the bug by fuzzing the API.
+  topics: [assessment, appsec]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [sec.dast, sec.black-box-testing, sec.vulnerability, sec.buffer-overflow]
+  sources:
+    - label: "INCIBE-CERT, blog"
+      url: "https://www.incibe.es/incibe-cert/blog/fuzzing-y-testing-sistemas-control-industrial"
+      found: ["técnicas de fuzzing", "pruebas de caja negra", "un fuzzer"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/encontramos-cinco-vulnerabilidades-router-dlink-859"
+      found: ["utilizamos técnicas de fuzzing"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/antivirus-windows-defender-ciberseguridad"
+      found: ["hacer fuzzing en linux"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.abuse-case
+  en:
+    term: abuse case
+    definition: >-
+      A scenario, written alongside the use cases, that describes how an
+      attacker or a malicious user could deliberately misuse a feature, and
+      from which security requirements and tests are derived.
+  es:
+    verdict: translated
+    forms:
+      - text: caso de abuso
+        article: el
+        kind: noun
+        primary: true
+        plural: los casos de abuso
+        note: >-
+          Built on "caso de uso" (use case), which is the established term.
+          No checked source in Spain uses "caso de abuso" yet, so treat it as
+          a working translation.
+    definition: >-
+      Escenario que describe cómo un atacante podría usar de forma maliciosa
+      una función del sistema, y del que se derivan requisitos de seguridad.
+    examples:
+      - es: Para cada caso de uso escribimos también un caso de abuso.
+        en: For each use case we also write an abuse case.
+    watchOut: >-
+      Outside a design discussion, "un caso de abuso" reads first as a case
+      of abuse against a person. Make the software context clear.
+  topics: [appsec, threat]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [sec.threat-modelling, tech.functional-requirement, fw.stride, sec.sdlc]
+  sources:
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/diseno-soluciones-arquitectura-la-arquitectura-funcional/"
+      found: ["identificar los casos de uso"]
+      checked: 2026-11-14
+  status: draft
+
+- id: tech.qa
+  en:
+    term: quality assurance
+    acronym: QA
+    definition: >-
+      The planned activities (reviews, testing, process checks) that give
+      confidence a product meets its requirements before release; in software
+      teams, also the name of the testing role or team.
+  es:
+    verdict: both
+    acronym: QA
+    forms:
+      - text: QA
+        usedBy: [engineers]
+        article: el
+        kind: noun
+        primary: true
+        note: >-
+          The English acronym names both the activity and the people who do
+          it: "el equipo de QA", "los de QA", and "el QA" for the person in
+          that role. A tester is "un tester".
+      - text: aseguramiento de la calidad
+        usedBy: [eu, engineers]
+        headline: true
+        article: el
+        kind: noun
+        note: >-
+          The expansion in engineering blogs and job adverts, and in the
+          Spanish text of the EU AI Act.
+      - text: garantía de calidad
+        usedBy: [official, engineers]
+        article: la
+        kind: noun
+        note: >-
+          The other translation: "actividades de garantía de calidad del
+          software" in a public-sector IT exam syllabus published in the BOE.
+    definition: >-
+      Conjunto de actividades planificadas (revisiones, pruebas, controles)
+      que dan confianza en que un producto cumple sus requisitos.
+    examples:
+      - es: El equipo de QA valida cada versión antes de pasarla a producción.
+        en: The QA team validates each release before it goes to production.
+    watchOut: >-
+      "Control de calidad" is quality control, a different step: Adictos al
+      Trabajo sets out "control de la calidad, aseguramiento de la calidad y
+      calidad total" as three separate things.
+  topics: [assessment, appsec]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [sec.sdlc, tech.functional-requirement, sec.black-box-testing, sec.code-review]
+  sources:
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/6-claves-calidad-software/"
+      found: ["el equipo de qa", "el qa es la cabeza visible"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/qa-pruebas-para-asegurar-la-calidad-de"
+      found: ["qa: pruebas para asegurar la calidad", "un tester"]
+      checked: 2026-11-14
+    - label: "Adictos al Trabajo (Autentia)"
+      url: "https://www.adictosaltrabajo.com/2019/12/18/testing-en-un-mundo-agile/"
+      found: ["los de qa no han probado bien"]
+      checked: 2026-11-14
+    - label: "Adictos al Trabajo (Autentia)"
+      url: "https://www.adictosaltrabajo.com/2013/04/25/control-y-aseguramiento-de-calidad-del-software/"
+      found: ["control de la calidad, aseguramiento de la calidad y calidad total"]
+      checked: 2026-11-14
+    - label: "Tecnoempleo, oferta de empleo en España"
+      url: "https://www.tecnoempleo.com/lider-trazabilidad-calidad-datos-cajamar-tecnologi/azure-sql/rf-5cfb10bf5228e3ff1741"
+      found: ["aseguramiento de la calidad y mejora continua"]
+      checked: 2026-11-14
+    - label: "Reglamento (UE) 2024/1689 (Reglamento de IA), texto en español"
+      url: "https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81079"
+      found: ["el aseguramiento de la calidad"]
+      checked: 2026-11-14
+    - label: "Orden TAS/1478/2005, temario de oposiciones (BOE)"
+      url: "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2005-8610"
+      found: ["actividades de garantía de calidad del software"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/por-que-ia-generativa-no-quitar-trabajo-qa/"
+      found: ["la garantía de calidad"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.black-box-testing
+  en:
+    term: black-box testing
+    definition: >-
+      Testing a system from the outside with no knowledge of its source code,
+      design or credentials, judging it only by how it responds to inputs, as
+      an external attacker or end user would.
+  es:
+    verdict: translated
+    forms:
+      - text: pruebas de caja negra
+        usedBy: [official, engineers]
+        article: las
+        kind: noun
+        primary: true
+        note: >-
+          The same label attaches to audits and pentests: El Lado del Mal
+          writes "auditoría de caja negra", and the ENS speaks of "auditorías
+          continuas de seguridad de «caja negra»" for web applications
+          (mp.s.2). The halfway case is "de caja gris".
+    definition: >-
+      Pruebas que se hacen desde fuera, sin conocer el código ni el diseño
+      interno del sistema.
+    examples:
+      - es: En las pruebas de caja negra el auditor no tiene acceso al código fuente.
+        en: In black-box testing the auditor has no access to the source code.
+  topics: [assessment]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [sec.white-box-testing, sec.penetration-test, sec.dast, sec.fuzzing]
+  sources:
+    - label: "INCIBE-CERT, blog"
+      url: "https://www.incibe.es/incibe-cert/blog/fuzzing-y-testing-sistemas-control-industrial"
+      found: ["pruebas de caja negra"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/qa-pruebas-para-asegurar-la-calidad-de"
+      found: ["pruebas de caja negra"]
+      checked: 2026-11-14
+    - label: "El Lado del Mal"
+      url: "https://www.elladodelmal.com/2007/02/test-de-intrusion-i-de-vi.html"
+      found: ["auditoría de caja negra"]
+      checked: 2026-11-14
+    - label: "Esquema Nacional de Seguridad (RD 311/2022), medida mp.s.2"
+      url: "https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191"
+      found: ["auditorías continuas de seguridad de «caja negra»"]
+      checked: 2026-11-14
+    - label: "INCIBE, blog para empresas"
+      url: "https://www.incibe.es/protege-tu-empresa/blog/el-pentesting-auditando-seguridad-tus-sistemas"
+      found: ["de caja negra: si no dispone de información", "de caja gris"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.white-box-testing
+  en:
+    term: white-box testing
+    definition: >-
+      Testing with full knowledge of the system's internals (source code,
+      architecture, configuration and often credentials), so that logic paths
+      and code-level flaws can be examined directly.
+  es:
+    verdict: translated
+    forms:
+      - text: pruebas de caja blanca
+        usedBy: [official, engineers]
+        article: las
+        kind: noun
+        primary: true
+        note: >-
+          The same label attaches to audits: El Lado del Mal writes
+          "auditorías de caja blanca", and the ENS speaks of "auditorías de
+          seguridad de «caja blanca»" for web applications (mp.s.2).
+          Telefónica Tech describes SAST as "también llamado de caja blanca".
+    definition: >-
+      Pruebas que se hacen conociendo el interior del sistema: el código
+      fuente, la arquitectura y la configuración.
+    examples:
+      - es: Para las pruebas de caja blanca damos al auditor acceso al código fuente.
+        en: For white-box testing we give the auditor access to the source code.
+  topics: [assessment]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [sec.black-box-testing, sec.sast, sec.code-review, sec.penetration-test]
+  sources:
+    - label: "INCIBE-CERT, blog"
+      url: "https://www.incibe.es/incibe-cert/blog/fuzzing-y-testing-sistemas-control-industrial"
+      found: ["realizar pruebas de caja blanca"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/qa-pruebas-para-asegurar-la-calidad-de"
+      found: ["pruebas de caja blanca"]
+      checked: 2026-11-14
+    - label: "El Lado del Mal"
+      url: "https://www.elladodelmal.com/2007/02/test-de-intrusion-i-de-vi.html"
+      found: ["auditorías de caja blanca"]
+      checked: 2026-11-14
+    - label: "Esquema Nacional de Seguridad (RD 311/2022), medida mp.s.2"
+      url: "https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191"
+      found: ["auditorías de seguridad de «caja blanca»"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/iast-nuevo-enfoque-deteccion-vulnerabilidades"
+      found: ["también llamado de caja blanca"]
+      checked: 2026-11-14
+    - label: "INCIBE, blog para empresas"
+      url: "https://www.incibe.es/protege-tu-empresa/blog/el-pentesting-auditando-seguridad-tus-sistemas"
+      found: ["de caja blanca: si disponen de toda la información"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: fw.stride
+  en:
+    term: STRIDE
+    expansion: >-
+      Spoofing, Tampering, Repudiation, Information disclosure, Denial of
+      service, Elevation of privilege
+    definition: >-
+      A threat-classification model from Microsoft that sorts threats into six
+      categories, each the violation of one security property. It is normally
+      applied element by element to a data flow diagram during threat
+      modelling.
+  es:
+    verdict: english-kept
+    forms:
+      - text: STRIDE
+        usedBy: [engineers, microsoft, aws]
+        kind: noun
+        primary: true
+        note: >-
+          Kept as a name after another noun, as in "el modelo STRIDE" or "las
+          categorías STRIDE". Microsoft's Spanish pages give the six
+          categories as suplantación, manipulación, rechazo, divulgación de
+          información, denegación de servicio and elevación de privilegios.
+    definition: >-
+      Modelo de Microsoft que clasifica las amenazas de un sistema en seis
+      categorías y que se usa en el modelado de amenazas.
+    examples:
+      - es: Usamos STRIDE para clasificar las amenazas de cada componente.
+        en: We use STRIDE to classify the threats to each component.
+    watchOut: >-
+      The R, repudiation, is "rechazo" in Microsoft's Spanish pages and
+      "repudio" in AWS's.
+  topics: [threat, appsec]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [sec.threat-modelling, fw.dread, fw.pasta, sec.non-repudiation]
+  sources:
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/azure/security/develop/threat-modeling-tool-threats"
+      found: ["usa el modelo STRIDE", "Suplantación", "Manipulación", "Rechazo", "Divulgación de información", "Denegación de servicio", "Elevación de privilegios"]
+      checked: 2026-11-14
+    - label: "AWS Well-Architected Framework, es_ES"
+      url: "https://docs.aws.amazon.com/es_es/wellarchitected/latest/security-pillar/sec_securely_operate_threat_model.html"
+      found: ["como STRIDE", "suplantación de identidad, manipulación, repudio, divulgación de información, denegación de servicio y elevación de privilegios"]
+      checked: 2026-11-14
+    - label: "El Lado del Mal"
+      url: "https://www.elladodelmal.com/2026/07/ia-generativa-reglas-deterministas-e.html"
+      found: ["categorías STRIDE"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: fw.owasp-top-10
+  en:
+    term: OWASP Top 10
+    definition: >-
+      OWASP's awareness document ranking the ten most critical categories of
+      web application security risk, revised every few years from contributed
+      vulnerability data and a community survey.
+  es:
+    verdict: english-kept
+    forms:
+      - text: OWASP Top 10
+        usedBy: [official, engineers, microsoft]
+        article: el
+        kind: noun
+        primary: true
+        note: >-
+          The English name is kept and takes el, as in "las 10 medidas del
+          OWASP Top 10" on INCIBE-CERT's blog.
+      - text: top 10 de OWASP
+        usedBy: [engineers]
+        article: el
+        kind: noun
+        note: The same name in Spanish word order, as Telefónica Tech's blog writes it.
+    definition: >-
+      Documento de OWASP que recoge los diez riesgos de seguridad más críticos
+      de las aplicaciones web y que se actualiza cada pocos años.
+    examples:
+      - es: La auditoría web cubre todas las categorías del OWASP Top 10.
+        en: The web audit covers every category in the OWASP Top 10.
+  topics: [appsec]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  frameworks: [OWASP]
+  related: [fw.owasp-asvs, fw.owasp-api-top-10, fw.cwe-top-25, sec.injection]
+  sources:
+    - label: "INCIBE-CERT, blog"
+      url: "https://www.incibe.es/incibe-cert/blog/owasp-publica-el-top-10-2017-riesgos-seguridad-aplicaciones-web"
+      found: ["del OWASP Top 10"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/novedades-ranking-owasp-2021"
+      found: ["El top 10 de OWASP es un ranking"]
+      checked: 2026-11-14
+    - label: "Tecnoempleo, oferta de empleo en España"
+      url: "https://www.tecnoempleo.com/ingeniero-ciberseguridad-waf-dam-gmv/imperva-cloud-waf-http/rf-fe851f60821a83fd0447"
+      found: ["amenazas OWASP Top 10"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/azure/security/develop/secure-design"
+      found: ["OWASP Top 10 aborda los riesgos"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: fw.dread
+  en:
+    term: DREAD
+    expansion: >-
+      Damage, Reproducibility, Exploitability, Affected users, Discoverability
+    definition: >-
+      A threat-rating scheme, originally from Microsoft, that scores each
+      threat on five criteria and averages them to rank threats for
+      mitigation. It is often paired with STRIDE and is widely criticised as
+      subjective.
+  es:
+    verdict: english-kept
+    forms:
+      - text: DREAD
+        usedBy: [microsoft]
+        kind: noun
+        primary: true
+        note: >-
+          Kept as a name after another noun, as in "el enfoque DREAD".
+    definition: >-
+      Método para puntuar cada amenaza según cinco criterios y así decidir
+      cuáles hay que mitigar primero.
+    examples:
+      - es: Hemos puntuado cada amenaza con DREAD para decidir las prioridades.
+        en: We have scored each threat with DREAD to decide the priorities.
+  topics: [threat, appsec]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [sec.threat-modelling, fw.stride, fw.pasta, sec.risk-assessment]
+  sources:
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/windows-hardware/drivers/driversecurity/threat-modeling-for-drivers"
+      found: ["El enfoque DREAD", "DREAD es un acrónimo"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: fw.pasta
+  en:
+    term: PASTA
+    expansion: Process for Attack Simulation and Threat Analysis
+    definition: >-
+      A seven-stage, risk-centric threat-modelling methodology that starts
+      from business objectives and works through decomposition, threat and
+      vulnerability analysis and attack simulation to a risk and impact
+      analysis.
+  es:
+    verdict: english-kept
+    forms:
+      - text: PASTA
+        kind: noun
+        primary: true
+    definition: >-
+      Metodología de modelado de amenazas en siete fases, centrada en el
+      riesgo, que parte de los objetivos de negocio y simula los ataques.
+    examples:
+      - es: El equipo de seguridad aplica la metodología PASTA en los proyectos críticos.
+        en: The security team applies the PASTA methodology to critical projects.
+    watchOut: >-
+      In Spain "pasta" is also colloquial for money, so write the acronym in
+      capitals and name it with a noun: "la metodología PASTA".
+  topics: [threat, appsec]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [sec.threat-modelling, fw.stride, fw.dread, sec.risk-assessment]
+  sources: []
+  status: draft
+
+- id: fw.owasp-asvs
+  en:
+    term: OWASP ASVS
+    expansion: OWASP Application Security Verification Standard
+    definition: >-
+      OWASP's catalogue of testable security requirements for web applications
+      and services, graded into verification levels. It serves as a basis for
+      security requirements, testing and procurement.
+  es:
+    verdict: english-kept
+    acronym: ASVS
+    forms:
+      - text: ASVS
+        usedBy: [engineers]
+        kind: noun
+        primary: true
+        note: >-
+          The acronym is kept and named with its owner, as in "ASVS de
+          OWASP" on Paradigma Digital's blog.
+    definition: >-
+      Estándar de OWASP con requisitos de seguridad verificables para
+      aplicaciones web, organizados por niveles.
+    examples:
+      - es: Los requisitos de seguridad del proyecto se basan en el ASVS de OWASP.
+        en: The project's security requirements are based on the OWASP ASVS.
+  topics: [appsec, assessment]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  frameworks: [OWASP]
+  related: [fw.owasp-top-10, sec.secure-coding, sec.sdlc, tech.non-functional-requirement]
+  sources:
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/cara-oculta-ia-10-vulnerabilidades-no-debes-ignorar-y-como-mitigarlas/"
+      found: ["ASVS de OWASP"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: fw.owasp-api-top-10
+  en:
+    term: OWASP API Security Top 10
+    definition: >-
+      OWASP's list of the ten most critical security risks specific to APIs,
+      headed by broken object level authorisation. It is maintained separately
+      from the web application Top 10.
+  es:
+    verdict: english-kept
+    forms:
+      - text: OWASP API Security Top 10
+        usedBy: [official]
+        article: el
+        kind: noun
+        primary: true
+        note: >-
+          INCIBE-CERT keeps the English name. Microsoft's Spanish
+          documentation paraphrases it as "las 10 principales amenazas de
+          seguridad de las API de OWASP".
+    definition: >-
+      Lista de OWASP con los diez riesgos de seguridad más importantes de las
+      API.
+    examples:
+      - es: Revisamos cada API nueva con el OWASP API Security Top 10.
+        en: We review every new API against the OWASP API Security Top 10.
+  topics: [appsec]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  frameworks: [OWASP]
+  related: [fw.owasp-top-10, sec.api, sec.api-gateway, sec.broken-access-control]
+  sources:
+    - label: "INCIBE-CERT, blog"
+      url: "https://www.incibe.es/incibe-cert/blog/seguridad-de-las-api"
+      found: ["basados en el OWASP API Security"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/azure/api-management/mitigate-owasp-api-threats"
+      found: ["las 10 principales amenazas de seguridad de las API de OWASP"]
+      checked: 2026-11-14
+  status: draft
+
+- id: fw.owasp-llm-top-10
+  en:
+    term: OWASP Top 10 for LLM Applications
+    definition: >-
+      OWASP's list of the ten most critical security risks in applications
+      built on large language models, such as prompt injection, sensitive
+      information disclosure and excessive agency.
+  es:
+    verdict: english-kept
+    forms:
+      - text: OWASP Top 10 for LLMs
+        usedBy: [engineers]
+        article: el
+        kind: noun
+        primary: true
+        note: >-
+          The short English name, as written on Paradigma Digital's blog, on
+          El Lado del Mal and in a Spanish job advert.
+      - text: OWASP Top 10 para LLM Apps
+        usedBy: [engineers]
+        article: el
+        kind: noun
+        note: A half-translated variant used on El Lado del Mal.
+    definition: >-
+      Lista de OWASP con los diez riesgos de seguridad más importantes de las
+      aplicaciones basadas en modelos de lenguaje (LLM).
+    examples:
+      - es: Antes de publicar el chatbot lo revisamos con el OWASP Top 10 for LLMs.
+        en: Before releasing the chatbot we review it against the OWASP Top 10 for LLMs.
+  topics: [appsec]
+  technology: [ai-ml]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  frameworks: [OWASP]
+  related: [ai.llm, fw.owasp-top-10, sec.injection]
+  sources:
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/que-es-prompt-hacking-como-evitarlo/"
+      found: ["OWASP Top 10 For LLMs"]
+      checked: 2026-11-14
+    - label: "El Lado del Mal"
+      url: "https://www.elladodelmal.com/2023/06/owasp-top-10-for-large-language-model.html"
+      found: ["OWASP TOP 10 for LLMs"]
+      checked: 2026-11-14
+    - label: "El Lado del Mal"
+      url: "https://www.elladodelmal.com/2023/10/los-10-problemas-de-seguridad-mas.html"
+      found: ["OWASP Top 10 para LLM Apps"]
+      checked: 2026-11-14
+    - label: "Tecnoempleo, oferta de empleo en España"
+      url: "https://www.tecnoempleo.com/pentester-senior-gmv/mitre-att-ck-pentesting/rf-405f17c9621ce3f45c46"
+      found: ["OWASP Top 10 for LLMs"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: fw.cwe-top-25
+  en:
+    term: CWE Top 25
+    expansion: CWE Top 25 Most Dangerous Software Weaknesses
+    definition: >-
+      The yearly ranking of the 25 most dangerous software weakness types in
+      MITRE's Common Weakness Enumeration, scored from the frequency and
+      severity of the published vulnerabilities mapped to each weakness.
+  es:
+    verdict: english-kept
+    forms:
+      - text: CWE Top 25
+        usedBy: [official]
+        article: el
+        kind: noun
+        primary: true
+        note: >-
+          INCIBE-CERT keeps the English name and glosses it as "las 25
+          debilidades de software más peligrosas". A weakness in the CWE
+          sense is una debilidad.
+    definition: >-
+      Lista anual de las 25 debilidades de software más peligrosas del
+      catálogo CWE (Common Weakness Enumeration).
+    examples:
+      - es: El analizador de código detecta las debilidades del CWE Top 25.
+        en: The code analyser detects the weaknesses in the CWE Top 25.
+  topics: [appsec, vulnmgmt]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [fw.owasp-top-10, sec.vulnerability, sec.sast, sec.buffer-overflow]
+  sources:
+    - label: "INCIBE-CERT, bitácora de ciberseguridad"
+      url: "https://www.incibe.es/incibe-cert/publicaciones/bitacora-de-seguridad/2022-cwe-top-25-las-debilidades-software-mas-peligrosas"
+      found: ["respecto al CWE Top 25 de 2021", "las 25 debilidades de software más peligrosas"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/ocho-siglas-relacionadas-con-las_31"
+      found: ["top 25 de las debilidades más peligrosas", "lista de tipos de debilidades de software"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.injection
+  en:
+    term: injection
+    definition: >-
+      A class of vulnerability in which untrusted input is passed to an
+      interpreter and executed as part of a command or query. SQL, operating
+      system command and LDAP injection are common variants.
+  es:
+    verdict: translated
+    forms:
+      - text: inyección
+        usedBy: [official, engineers]
+        article: la
+        kind: noun
+        primary: true
+        plural: las inyecciones
+        note: >-
+          The Spanish name of the OWASP category, as in "ataques de
+          inyección" and "vulnerabilidades de inyección".
+      - text: inyección de código
+        usedBy: [official]
+        article: la
+        kind: noun
+        note: >-
+          Code injection. This is the headword in INCIBE's glossary, and
+          INCIBE-CERT also uses it for the class as a whole.
+    definition: >-
+      Tipo de vulnerabilidad en el que datos no fiables llegan a un intérprete
+      y se ejecutan como parte de un comando o de una consulta.
+    examples:
+      - es: Validar los datos de entrada evita muchos ataques de inyección.
+        en: Validating input data prevents many injection attacks.
+    watchOut: >-
+      Spelt with y, not j: inyección, inyectar.
+  topics: [appsec, vulnmgmt]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [sec.sql-injection, sec.xss, fw.owasp-top-10, sec.waf]
+  sources:
+    - label: "INCIBE-CERT, blog"
+      url: "https://www.incibe.es/incibe-cert/blog/owasp-publica-el-top-10-2017-riesgos-seguridad-aplicaciones-web"
+      found: ["ataques de inyección", "ataques de inyección de código"]
+      checked: 2026-11-14
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["Inyección de código"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/novedades-ranking-owasp-2021"
+      found: ["vulnerabilidades de inyección"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/seguridad-apis-vulnerabilidades/"
+      found: ["A1:2017 - Inyección"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.sql-injection
+  en:
+    term: SQL injection
+    definition: >-
+      An injection attack in which crafted input alters the SQL statement an
+      application sends to its database, letting the attacker read or modify
+      data or bypass authentication.
+  es:
+    verdict: both
+    forms:
+      - text: inyección SQL
+        usedBy: [official, engineers, oracle]
+        article: la
+        kind: noun
+        primary: true
+        plural: las inyecciones SQL
+      - text: SQL Injection
+        usedBy: [official, engineers]
+        headline: true
+        article: el
+        kind: noun
+        note: >-
+          INCIBE's glossary lists the English name as a synonym, and El Lado
+          del Mal uses it as it stands and shortens it to SQLi.
+      - text: inyección de código SQL
+        usedBy: [microsoft]
+        article: la
+        kind: noun
+        note: The wording in Microsoft's Spanish documentation.
+    definition: >-
+      Ataque que introduce código SQL en los datos de entrada de una
+      aplicación para leer o modificar su base de datos.
+    examples:
+      - es: El formulario de acceso era vulnerable a inyección SQL.
+        en: The login form was vulnerable to SQL injection.
+  topics: [appsec, vulnmgmt]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [sec.injection, sec.waf, sec.dam, sec.secure-coding]
+  sources:
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["Inyección SQL", "Sinónimo: SQL Injection"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/novedades-ranking-owasp-2021"
+      found: ["una inyección SQL"]
+      checked: 2026-11-14
+    - label: "El Lado del Mal"
+      url: "https://www.elladodelmal.com/2020/08/algunos-consejos-de-seguridad-para.html"
+      found: ["de SQL Injection"]
+      checked: 2026-11-14
+    - label: "El Lado del Mal"
+      url: "https://www.elladodelmal.com/2019/02/secdevops-una-explicacion-en-cinco.html"
+      found: ["SQLi"]
+      checked: 2026-11-14
+    - label: "Oracle España"
+      url: "https://www.oracle.com/es/security/database-security/"
+      found: ["ataques de inyección SQL"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/azure/well-architected/security/secure-development-lifecycle"
+      found: ["inyección de código SQL"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.xss
+  en:
+    term: cross-site scripting
+    acronym: XSS
+    definition: >-
+      A vulnerability in which a web application includes untrusted input in
+      a page without proper encoding, so that an attacker's script runs in the
+      victim's browser in the context of the site. It may be stored,
+      reflected or DOM-based.
+  es:
+    verdict: both
+    acronym: XSS
+    forms:
+      - text: cross-site scripting
+        usedBy: [official, engineers]
+        article: el
+        kind: noun
+        primary: true
+        note: >-
+          Engineers write the English name or just the acronym, as in
+          "ataques XSS".
+      - text: secuencias de comandos en sitios cruzados
+        usedBy: [official]
+        headline: true
+        article: las
+        kind: noun
+        register: formal
+        note: >-
+          The translation in INCIBE's glossary, which lists the term under
+          XSS.
+      - text: scripting entre sitios
+        usedBy: [microsoft, aws]
+        article: el
+        kind: noun
+        note: >-
+          The vendors' wording. AWS's documentation also writes "secuencias
+          de comandos entre sitios".
+    definition: >-
+      Vulnerabilidad web que permite a un atacante ejecutar su propio código
+      en el navegador de otros usuarios de un sitio.
+    examples:
+      - es: La auditoría ha encontrado un fallo de cross-site scripting (XSS) en el buscador.
+        en: The audit has found a cross-site scripting (XSS) flaw in the search box.
+    watchOut: >-
+      INCIBE, Microsoft and AWS each translate the name differently, so the
+      acronym XSS is the safe choice.
+  topics: [appsec, vulnmgmt]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [sec.injection, sec.csrf, sec.waf]
+  sources:
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["Sinónimo: Secuencias de comandos en sitios cruzados", "ataque XSS"]
+      checked: 2026-11-14
+    - label: "INCIBE, blog para empresas"
+      url: "https://www.incibe.es/empresas/blog/top-10-vulnerabilidades-web-2021"
+      found: ["el Cross-site Scripting forma parte"]
+      checked: 2026-11-14
+    - label: "El Lado del Mal"
+      url: "https://www.elladodelmal.com/2020/08/algunos-consejos-de-seguridad-para.html"
+      found: ["ataques de Cross-Site Scripting", "ataques XSS"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-application-security"
+      found: ["Scripting entre sitios (XSS)"]
+      checked: 2026-11-14
+    - label: "AWS, documentación en español"
+      url: "https://docs.aws.amazon.com/es_es/waf/latest/developerguide/aws-managed-rule-groups-baseline.html"
+      found: ["ataques de scripting entre sitios", "secuencias de comandos entre sitios (XSS)"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.csrf
+  en:
+    term: cross-site request forgery
+    acronym: CSRF
+    definition: >-
+      An attack that causes a victim's browser to send an unwanted request to
+      a site where the victim is already authenticated, so the site carries
+      out an action the user did not intend.
+  es:
+    verdict: both
+    acronym: CSRF
+    forms:
+      - text: cross-site request forgery
+        usedBy: [engineers]
+        article: el
+        kind: noun
+        primary: true
+        note: >-
+          Engineers write the English name or just the acronym, as in "un
+          ataque CSRF" and "un token anti-CSRF".
+      - text: falsificación de petición en sitios cruzados
+        usedBy: [official]
+        headline: true
+        article: la
+        kind: noun
+        register: formal
+        note: >-
+          The translation in INCIBE's glossary, which lists the term under
+          CSRF. Adictos al Trabajo writes it in the plural, "falsificación de
+          peticiones en sitios cruzados".
+      - text: falsificación de solicitud entre sitios
+        usedBy: [microsoft]
+        article: la
+        kind: noun
+        note: Microsoft's wording.
+    definition: >-
+      Ataque que hace que el navegador de un usuario autenticado envíe a un
+      sitio web una petición que el usuario no quería hacer.
+    examples:
+      - es: Cada formulario lleva un token para evitar ataques de cross-site request forgery (CSRF).
+        en: Every form carries a token to prevent cross-site request forgery (CSRF) attacks.
+    watchOut: >-
+      "Request" is petición in INCIBE's translation and solicitud in
+      Microsoft's. Both are used for an HTTP request.
+  topics: [appsec, vulnmgmt]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [sec.xss, sec.ssrf, sec.authentication]
+  sources:
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["CSRF", "falsificación de petición en sitios cruzados"]
+      checked: 2026-11-14
+    - label: "El Lado del Mal"
+      url: "https://www.elladodelmal.com/2020/08/algunos-consejos-de-seguridad-para.html"
+      found: ["Cross-Site Request Forgery (CSRF)", "ataque CSRF", "Anti-CSRF"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/que-es-prompt-hacking-como-evitarlo/"
+      found: ["CSRF (Cross-Site Request Forgery)"]
+      checked: 2026-11-14
+    - label: "Adictos al Trabajo (Autentia)"
+      url: "https://www.adictosaltrabajo.com/2016/03/07/introduccion-a-owasp/"
+      found: ["Falsificación de peticiones en sitios cruzados"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-application-security"
+      found: ["Falsificación de solicitud entre sitios (CSRF)"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.ssrf
+  en:
+    term: server-side request forgery
+    acronym: SSRF
+    definition: >-
+      A vulnerability in which an attacker makes a server issue requests to a
+      destination of the attacker's choosing, typically to reach internal
+      services or a cloud metadata endpoint that are not exposed directly.
+  es:
+    verdict: both
+    acronym: SSRF
+    forms:
+      - text: server-side request forgery
+        usedBy: [official, engineers]
+        article: el
+        kind: noun
+        primary: true
+        note: >-
+          Engineers write the English name or just the acronym, as in
+          "explotar un SSRF". INCIBE-CERT's blog also uses the English name.
+      - text: falsificación de solicitudes del lado del servidor
+        usedBy: [official]
+        headline: true
+        article: la
+        kind: noun
+        register: formal
+        note: >-
+          INCIBE-CERT's wording for the OWASP category. Its vulnerability
+          database labels CWE-918 "falsificación de solicitud en servidor"
+          and also writes "falsificación de petición del lado del servidor".
+    definition: >-
+      Vulnerabilidad que permite a un atacante hacer que un servidor envíe
+      peticiones a otros sistemas, por ejemplo a servicios internos.
+    examples:
+      - es: Un fallo de server-side request forgery (SSRF) permitía acceder a la red interna.
+        en: A server-side request forgery (SSRF) flaw gave access to the internal network.
+  topics: [appsec, vulnmgmt]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [sec.csrf, sec.network-segmentation, fw.owasp-top-10]
+  sources:
+    - label: "INCIBE-CERT, bitácora de ciberseguridad"
+      url: "https://www.incibe.es/incibe-cert/publicaciones/bitacora-de-seguridad/owasp-publica-el-top-10-2021-riesgos-seguridad-aplicaciones"
+      found: ["falsificación de solicitudes del lado del servidor"]
+      checked: 2026-11-14
+    - label: "INCIBE-CERT, base de datos de vulnerabilidades"
+      url: "https://www.incibe.es/incibe-cert/alerta-temprana/vulnerabilidades/cve-2026-27739"
+      found: ["Falsificación de solicitud en servidor (SSRF)", "falsificación de petición del lado del servidor (SSRF)"]
+      checked: 2026-11-14
+    - label: "INCIBE-CERT, blog"
+      url: "https://www.incibe.es/incibe-cert/blog/seguridad-de-las-api"
+      found: ["Server-Side Request Forgery (SSRF)"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/que-es-prompt-hacking-como-evitarlo/"
+      found: ["SSRF (Server-Side Request Forgery)"]
+      checked: 2026-11-14
+    - label: "El Lado del Mal"
+      url: "https://www.elladodelmal.com/2015/04/ssrf-server-side-request-forgery-xspa.html"
+      found: ["explotar un SSRF"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.broken-access-control
+  en:
+    term: broken access control
+    definition: >-
+      The class of weakness in which an application fails to enforce what an
+      authenticated user is allowed to do, so that users can act outside
+      their intended permissions. It is the first category of the OWASP Top
+      10 of 2021.
+  es:
+    verdict: both
+    forms:
+      - text: pérdida del control de acceso
+        usedBy: [official]
+        article: la
+        kind: noun
+        primary: true
+        note: INCIBE's Spanish name for the OWASP category.
+      - text: Broken Access Control
+        usedBy: [engineers]
+        headline: true
+        article: el
+        kind: noun
+        note: >-
+          Telefónica Tech's blog and El Lado del Mal keep the English name of
+          the category.
+      - text: control de acceso fallido
+        usedBy: [engineers]
+        article: el
+        kind: noun
+        note: Paradigma Digital's rendering of the 2017 category.
+    definition: >-
+      Fallo por el que una aplicación no aplica bien los permisos y deja que
+      un usuario haga cosas para las que no tiene autorización.
+    examples:
+      - es: La pérdida del control de acceso es el primer riesgo de la lista de OWASP de 2021.
+        en: Broken access control is the first risk on the 2021 OWASP list.
+  topics: [appsec, authz]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  frameworks: [OWASP]
+  related: [sec.access-control, sec.authorization, sec.least-privilege, fw.owasp-top-10]
+  sources:
+    - label: "INCIBE, blog para empresas"
+      url: "https://www.incibe.es/empresas/blog/top-10-vulnerabilidades-web-2021"
+      found: ["Pérdida del control de acceso"]
+      checked: 2026-11-14
+    - label: "INCIBE-CERT, bitácora de ciberseguridad"
+      url: "https://www.incibe.es/incibe-cert/publicaciones/bitacora-de-seguridad/owasp-publica-el-top-10-2021-riesgos-seguridad-aplicaciones"
+      found: ["la pérdida del control de acceso"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/novedades-ranking-owasp-2021"
+      found: ["A01:2021-Broken Access Control"]
+      checked: 2026-11-14
+    - label: "El Lado del Mal"
+      url: "https://www.elladodelmal.com/2017/04/publicada-owasp-top-ten-2017-release.html"
+      found: ["Broken Access Control"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/seguridad-apis-vulnerabilidades/"
+      found: ["A5:2017 - Control de acceso fallido"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.insecure-deserialization
+  en:
+    term: insecure deserialization
+    definition: >-
+      A vulnerability in which an application rebuilds objects from untrusted
+      serialised data without validating it, which can lead to remote code
+      execution, privilege escalation or tampering with application logic.
+  es:
+    verdict: translated
+    forms:
+      - text: deserialización insegura
+        usedBy: [official, engineers]
+        article: la
+        kind: noun
+        primary: true
+        note: >-
+          The Spanish name that INCIBE-CERT and Paradigma Digital give the
+          2017 OWASP category.
+      - text: deserialización de datos no confiables
+        usedBy: [official]
+        article: la
+        kind: noun
+        note: >-
+          The name of CWE-502 in INCIBE-CERT's vulnerability database.
+          Microsoft writes "deserialización de datos que no son de
+          confianza".
+    definition: >-
+      Vulnerabilidad que aparece cuando una aplicación reconstruye objetos a
+      partir de datos serializados que no son de confianza.
+    examples:
+      - es: El servidor tenía una vulnerabilidad de deserialización insegura.
+        en: The server had an insecure deserialization vulnerability.
+  topics: [appsec, vulnmgmt]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  frameworks: [OWASP]
+  related: [sec.injection, fw.owasp-top-10, sec.exploit]
+  sources:
+    - label: "INCIBE-CERT, blog"
+      url: "https://www.incibe.es/incibe-cert/blog/owasp-publica-el-top-10-2017-riesgos-seguridad-aplicaciones-web"
+      found: ["Deserialización insegura"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/seguridad-apis-vulnerabilidades/"
+      found: ["Deserialización Insegura"]
+      checked: 2026-11-14
+    - label: "INCIBE-CERT, base de datos de vulnerabilidades"
+      url: "https://www.incibe.es/incibe-cert/alerta-temprana/vulnerabilidades/cve-2023-5391"
+      found: ["CWE-502 Deserialización de datos no confiables"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/dotnet/standard/serialization/binaryformatter-security-guide"
+      found: ["Deserialización de datos que no son de confianza"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.buffer-overflow
+  en:
+    term: buffer overflow
+    definition: >-
+      A memory-safety flaw in which a program writes more data to a buffer
+      than it can hold, overwriting adjacent memory. An attacker can use it
+      to crash the program or to execute arbitrary code.
+  es:
+    verdict: both
+    forms:
+      - text: desbordamiento de búfer
+        usedBy: [official, microsoft]
+        article: el
+        kind: noun
+        primary: true
+        plural: los desbordamientos de búfer
+        note: >-
+          The headword in INCIBE's glossary and the wording of INCIBE-CERT's
+          security advisories.
+      - text: buffer overflow
+        usedBy: [official, engineers]
+        headline: true
+        article: el
+        kind: noun
+        note: >-
+          INCIBE's glossary gives the English name as a synonym, and El Lado
+          del Mal uses it as it stands.
+    definition: >-
+      Fallo de programación por el que un programa escribe en un búfer más
+      datos de los que caben y sobrescribe la memoria contigua.
+    examples:
+      - es: El parche corrige un desbordamiento de búfer en el servidor web.
+        en: The patch fixes a buffer overflow in the web server.
+    watchOut: >-
+      The Spanish spelling is búfer, with an accent and one f. Engineers
+      often keep the English spelling, as in "desbordamiento de buffer" on El
+      Lado del Mal.
+  topics: [appsec, vulnmgmt]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [sec.exploit, sec.vulnerability, fw.cwe-top-25, sec.fuzzing]
+  sources:
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["Desbordamiento de búfer", "Sinónimo: Buffer overflow"]
+      checked: 2026-11-14
+    - label: "INCIBE-CERT, avisos de seguridad"
+      url: "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/desbordamiento-de-bufer-en-squid"
+      found: ["Desbordamiento de búfer en Squid"]
+      checked: 2026-11-14
+    - label: "El Lado del Mal"
+      url: "https://www.elladodelmal.com/2022/03/como-crear-un-bug-de-buffer-overflow.html"
+      found: ["vulnerable a Buffer Overflow", "Desbordamiento de Buffer"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-application-security"
+      found: ["desbordamientos de búfer"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.software-supply-chain
+  en:
+    term: software supply chain
+    definition: >-
+      Everything that goes into building and delivering software: source code,
+      third-party and open-source components, build tools, pipelines, registries
+      and the people and suppliers behind them. Compromising any link can
+      compromise every downstream consumer.
+  es:
+    verdict: translated
+    forms:
+      - text: cadena de suministro de software
+        usedBy: [official, google, microsoft]
+        article: la
+        kind: noun
+        primary: true
+        note: >-
+          INCIBE writes both "de software" and "del software" in the same guide.
+      - text: cadena de suministro
+        usedBy: [official, eu, engineers]
+        article: la
+        kind: noun
+        note: >-
+          The short form, once the context is clear. It is the wording of the ENS
+          measure op.ext.3 and of NIS 2. A supply chain attack is "un ataque a la
+          cadena de suministro".
+    definition: >-
+      Conjunto de código, componentes de terceros, herramientas y proveedores que
+      intervienen en la construcción y la entrega de un software.
+    examples:
+      - es: Tenemos que proteger la cadena de suministro de software desde el primer commit.
+        en: We need to protect the software supply chain from the first commit.
+  topics: [supplychain]
+  technology: [ci-cd]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  frameworks: [SLSA]
+  related: [sec.sbom, tech.dependency, tech.third-party-software, sec.sca]
+  sources:
+    - label: "INCIBE, Guía de buenas prácticas de ciberseguridad en redes privadas 5G"
+      url: "https://www.incibe.es/sites/default/files/2025-12/INCIBE&ULE_GuiaBuenasPracticasCiberseguridadRedesPrivadas5G.pdf"
+      found: ["la seguridad de la cadena de suministro de software", "riesgos en la cadena de suministro del software"]
+      checked: 2026-11-14
+    - label: "Esquema Nacional de Seguridad (RD 311/2022), medida op.ext.3"
+      url: "https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191"
+      found: ["Protección de la cadena de suministro [op.ext.3]"]
+      checked: 2026-11-14
+    - label: "Directiva (UE) 2022/2555 (NIS 2), texto en español publicado en el BOE"
+      url: "https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81963"
+      found: ["la seguridad de la cadena de suministro"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/ataques-cadena-suministro-dependencias-seguridad-software"
+      found: ["los ataques a la cadena de suministro"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-devsecops"
+      found: ["proteger la cadena de suministro de software"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/devops?hl=es"
+      found: ["Seguridad de la cadena de suministro de software"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.sbom
+  en:
+    term: software bill of materials
+    acronym: SBOM
+    definition: >-
+      A formal, machine-readable inventory of the components, libraries and
+      dependencies that make up a piece of software, and of how they relate to
+      each other. The usual formats are SPDX and CycloneDX.
+  es:
+    verdict: both
+    acronym: SBOM
+    forms:
+      - text: SBOM
+        usedBy: [official, eu, engineers]
+        article: el
+        kind: noun
+        primary: true
+        plural: los SBOM
+        note: >-
+          The English acronym is what INCIBE-CERT and practitioners write: "un
+          SBOM", "los SBOM".
+      - text: lista de materiales de software
+        usedBy: [official, engineers]
+        headline: true
+        article: la
+        kind: noun
+        note: The translation given by INCIBE-CERT and by El lado del mal when they expand the acronym.
+      - text: nomenclatura de materiales de los programas informáticos
+        usedBy: [eu]
+        article: la
+        kind: noun
+        register: formal
+        note: >-
+          The term defined in the Spanish text of the Cyber Resilience Act, which
+          keeps the acronym but makes it feminine: "las SBOM".
+    definition: >-
+      Inventario formal de los componentes, bibliotecas y dependencias de un
+      software y de las relaciones entre ellos.
+    examples:
+      - es: El proveedor tiene que entregar un SBOM con cada versión.
+        en: The supplier has to deliver an SBOM with each release.
+    watchOut: >-
+      The ENS asks for the same thing without the name: its reinforcement "Lista
+      de componentes software" requires "una relación formal de los componentes
+      software de terceros".
+  topics: [supplychain]
+  technology: [ci-cd]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  frameworks: [CRA]
+  related: [sec.software-supply-chain, sec.sca, tech.dependency, tech.third-party-software]
+  sources:
+    - label: "INCIBE-CERT, blog"
+      url: "https://www.incibe.es/incibe-cert/blog/conociendo-los-sbom-su-funcion-en-la-ciberseguridad-industrial-y-desafios-actuales"
+      found: ["Los SBOM consisten en un registro detallado"]
+      checked: 2026-11-14
+    - label: "INCIBE-CERT, Estudio: SBOM en entornos industriales (2026)"
+      url: "https://www.incibe.es/sites/default/files/2026-05/INCIBE-CERT_ESTUDIO_SBOM%20EN%20ENTORNOS%20INDUSTRIALES_v1.0.pdf"
+      found: ["un SBOM (Software Bill of Materials o lista de materiales de software)"]
+      checked: 2026-11-14
+    - label: "Reglamento (UE) 2024/2847 (Reglamento de Ciberresiliencia), texto en español publicado en el BOE"
+      url: "https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81720"
+      found: ["«nomenclatura de materiales de los programas informáticos»: registro formal", "(SBOM, por sus siglas en inglés)", "la confidencialidad de las SBOM"]
+      checked: 2026-11-14
+    - label: "El lado del mal"
+      url: "https://www.elladodelmal.com/2022/04/docker-lista-de-materiales-de-software.html"
+      found: ["Lista de Materiales de Software o Software Bill Of Materials (SBOM)", "generar el SBOM en este formato"]
+      checked: 2026-11-14
+    - label: "Esquema Nacional de Seguridad (RD 311/2022), refuerzo op.exp.1.r4"
+      url: "https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191"
+      found: ["Refuerzo R4-Lista de componentes software", "una relación formal de los componentes software de terceros"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: tech.open-source-software
+  en:
+    term: open-source software
+    definition: >-
+      Software whose source code is published under a licence that lets anyone
+      use, study, modify and redistribute it.
+  es:
+    verdict: both
+    forms:
+      - text: software de código abierto
+        usedBy: [eu, engineers, aws]
+        article: el
+        kind: noun
+        primary: true
+        note: >-
+          Also used as a plain modifier, as INCIBE-CERT does: "un sistema de código
+          abierto".
+      - text: open source
+        usedBy: [engineers]
+        headline: true
+        kind: adjective
+        note: >-
+          The English term, placed after the noun: "proyectos open source", "es
+          totalmente open source".
+      - text: software libre
+        usedBy: [official, engineers]
+        article: el
+        kind: noun
+        note: >-
+          Strictly "free software", but in everyday use it covers open source as
+          well. Telefónica Tech's glossary files it under "Open source".
+      - text: programas informáticos libres y de código abierto
+        usedBy: [eu]
+        article: los
+        kind: noun
+        register: formal
+        note: The wording of the Spanish text of the Cyber Resilience Act.
+    definition: >-
+      Software cuyo código fuente se publica con una licencia que permite usarlo,
+      modificarlo y redistribuirlo libremente.
+    examples:
+      - es: Usamos mucho software de código abierto en producción.
+        en: We use a lot of open-source software in production.
+    watchOut: >-
+      Libre means free as in freedom, not free of charge. Software that costs
+      nothing is "software gratuito", and Telefónica Tech's glossary warns against
+      confusing the two.
+  topics: [supplychain, appsec]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [law.software-licence, tech.third-party-software, tech.dependency, sec.sca]
+  sources:
+    - label: "Directiva (UE) 2022/2555 (NIS 2), texto en español publicado en el BOE"
+      url: "https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81963"
+      found: ["promover el uso de software de código abierto"]
+      checked: 2026-11-14
+    - label: "Reglamento (UE) 2024/2847 (Reglamento de Ciberresiliencia), texto en español publicado en el BOE"
+      url: "https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81720"
+      found: ["programas informáticos libres y de código abierto"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/blockchain-y-ciberseguridad-una-breve-aproximacion"
+      found: ["el software de código abierto"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, glosario de términos de cloud computing"
+      url: "https://telefonicatech.com/blog/glosario-terminos-cloud-computing"
+      found: ["Open source: el software libre no debe ser confundido con el software gratuito o freeware"]
+      checked: 2026-11-14
+    - label: "Adictos al Trabajo (Autentia)"
+      url: "https://www.adictosaltrabajo.com/2019/03/14/lgtm-ver-vulnerabilidades-en-el-codigo/"
+      found: ["proyectos open source"]
+      checked: 2026-11-14
+    - label: "Adictos al Trabajo (Autentia)"
+      url: "https://adictosaltrabajo.com/2017/10/02/nomad-despliegue-y-supervision-sencilla-de-aplicaciones/"
+      found: ["es totalmente open source"]
+      checked: 2026-11-14
+    - label: "INCIBE-CERT, blog"
+      url: "https://www.incibe.es/incibe-cert/blog/sistemas-pam-un-escudo-para-la-proteccion-de-accesos"
+      found: ["un sistema de código abierto"]
+      checked: 2026-11-14
+    - label: "INCIBE, guía de toma de evidencias y análisis forense (2014)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/incibe_toma_evidencias_analisis_forense.pdf"
+      found: ["software libre y gratuito"]
+      checked: 2026-11-14
+    - label: "AWS, páginas en español"
+      url: "https://aws.amazon.com/es/what-is/open-source/"
+      found: ["¿Qué es el software de código abierto?"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: tech.third-party-software
+  en:
+    term: third-party software
+    definition: >-
+      Software, libraries or components produced by someone other than the
+      organisation that uses or ships them, whether commercial or open source.
+  es:
+    verdict: translated
+    forms:
+      - text: software de terceros
+        usedBy: [official]
+        article: el
+        kind: noun
+        primary: true
+        note: >-
+          Terceros is always plural here. The ENS says "componentes software de
+          terceros".
+      - text: componentes de terceros
+        usedBy: [eu, engineers]
+        article: los
+        kind: noun
+        note: >-
+          Third-party components, the usual wording when talking about what is
+          built into a product. It is the Cyber Resilience Act's term.
+      - text: librerías de terceros
+        usedBy: [engineers]
+        article: las
+        kind: noun
+        note: Third-party libraries, as developers say it.
+    definition: >-
+      Software, bibliotecas o componentes que no ha desarrollado la propia
+      organización que los usa o los distribuye.
+    examples:
+      - es: Hay que revisar las vulnerabilidades del software de terceros antes de cada despliegue.
+        en: Third-party software has to be checked for vulnerabilities before each deployment.
+    watchOut: >-
+      Developers call a code library "una librería", which in ordinary Spanish is
+      a bookshop. Microsoft's Spanish pages write "bibliotecas de terceros".
+  topics: [supplychain]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [tech.dependency, tech.open-source-software, sec.software-supply-chain, sec.sca]
+  sources:
+    - label: "INCIBE-CERT, Estudio: SBOM en entornos industriales (2026)"
+      url: "https://www.incibe.es/sites/default/files/2026-05/INCIBE-CERT_ESTUDIO_SBOM%20EN%20ENTORNOS%20INDUSTRIALES_v1.0.pdf"
+      found: ["identificar el software de terceros"]
+      checked: 2026-11-14
+    - label: "Esquema Nacional de Seguridad (RD 311/2022), refuerzo op.exp.1.r4"
+      url: "https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191"
+      found: ["los componentes software de terceros empleados en el despliegue del sistema"]
+      checked: 2026-11-14
+    - label: "Reglamento (UE) 2024/2847 (Reglamento de Ciberresiliencia), texto en español publicado en el BOE"
+      url: "https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81720"
+      found: ["los componentes de terceros presentes en el producto"]
+      checked: 2026-11-14
+    - label: "Adictos al Trabajo (Autentia)"
+      url: "https://www.adictosaltrabajo.com/2024/11/27/buscando-vulnerabilidades-en-el-codigo-con-kiuwan/"
+      found: ["Uso de componentes de terceros"]
+      checked: 2026-11-14
+    - label: "Adictos al Trabajo (Autentia)"
+      url: "https://adictosaltrabajo.com/2016/11/10/criptografia-y-seguridad/"
+      found: ["utilizar librerías de terceros"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-container-security"
+      found: ["código y bibliotecas de terceros"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: tech.dependency
+  en:
+    term: dependency
+    definition: >-
+      An external package, library or service that a piece of software needs in
+      order to build or run. Dependencies bring their own (transitive)
+      dependencies, which is where much supply-chain risk hides.
+  es:
+    verdict: translated
+    forms:
+      - text: dependencia
+        usedBy: [official, engineers, aws]
+        article: la
+        kind: noun
+        primary: true
+        plural: las dependencias
+        note: >-
+          The dependency tree is "el árbol de dependencias"; a package manager is
+          "un gestor de paquetes" or "un gestor de dependencias".
+    definition: >-
+      Paquete, biblioteca o servicio externo que un software necesita para
+      compilarse o ejecutarse.
+    examples:
+      - es: Esta dependencia tiene una vulnerabilidad crítica y hay que actualizarla.
+        en: This dependency has a critical vulnerability and needs updating.
+    watchOut: >-
+      Dependencia also means reliance in general. The Cyber Resilience Act's
+      "dependencias críticas" are critical reliances on products and suppliers,
+      not code packages.
+  topics: [supplychain, appsec]
+  technology: [ci-cd]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [tech.third-party-software, sec.sbom, sec.sca, sec.software-supply-chain]
+  sources:
+    - label: "INCIBE-CERT, blog"
+      url: "https://www.incibe.es/incibe-cert/blog/conociendo-los-sbom-su-funcion-en-la-ciberseguridad-industrial-y-desafios-actuales"
+      found: ["componentes, bibliotecas y dependencias de código"]
+      checked: 2026-11-14
+    - label: "Real Decreto 145/2026, curso de especialización en recursos y servicios en la nube"
+      url: "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-4673"
+      found: ["usando los gestores de dependencias"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/ataques-cadena-suministro-dependencias-seguridad-software"
+      found: ["infectar una dependencia de software", "el árbol de dependencias", "un gestor de paquetes"]
+      checked: 2026-11-14
+    - label: "AWS, páginas en español"
+      url: "https://aws.amazon.com/es/what-is/containerization/"
+      found: ["las dependencias de la biblioteca"]
+      checked: 2026-11-14
+    - label: "Reglamento (UE) 2024/2847 (Reglamento de Ciberresiliencia), texto en español publicado en el BOE"
+      url: "https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81720"
+      found: ["dependencias críticas de las entidades esenciales"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: law.software-licence
+  en:
+    term: software licence
+    definition: >-
+      The legal terms under which the rights holder allows others to use, copy,
+      modify or redistribute software. Open-source licences attach conditions
+      that have to be tracked as a compliance matter.
+  es:
+    verdict: translated
+    forms:
+      - text: licencia de software
+        usedBy: [official, engineers, aws]
+        article: la
+        kind: noun
+        primary: true
+      - text: licencia de código abierto
+        usedBy: [official, eu]
+        article: la
+        kind: noun
+        note: >-
+          An open-source licence. The Cyber Resilience Act says "licencia libre y
+          de código abierto".
+      - text: acuerdo de licencia
+        usedBy: [official]
+        article: el
+        kind: noun
+        note: >-
+          The licence agreement. INCIBE's glossary names the two parties as "el
+          licenciante" (licensor) and "el licenciatario" (licensee).
+    definition: >-
+      Condiciones legales con las que el titular de los derechos permite usar,
+      copiar, modificar o redistribuir un software.
+    examples:
+      - es: Antes de usar esta biblioteca, revisa su licencia de software.
+        en: Before using this library, check its software licence.
+    watchOut: >-
+      Spanish has one spelling, licencia, for the British noun licence and the
+      American license.
+  topics: [grc, supplychain]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [tech.open-source-software, tech.third-party-software, sec.sca, sec.sbom]
+  sources:
+    - label: "BOE, Resolución de 26 de diciembre de 2024 (convenio NubeSARA)"
+      url: "https://www.boe.es/boe/dias/2025/01/03/pdfs/BOE-A-2025-131.pdf"
+      found: ["cualquier otra licencia de software"]
+      checked: 2026-11-14
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["Acuerdo de licencia", "(licenciante)", "(licenciatario)"]
+      checked: 2026-11-14
+    - label: "INCIBE, Guía de implantación y buenas prácticas de DNSSEC"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/incibe_guia_de_implantacion_y_buenas_practicas_de_dnssec.pdf"
+      found: ["disponible con licencia de código abierto"]
+      checked: 2026-11-14
+    - label: "Reglamento (UE) 2024/1689 de Inteligencia Artificial, en el BOE"
+      url: "https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81079"
+      found: ["una licencia de código abierto"]
+      checked: 2026-11-14
+    - label: "Reglamento (UE) 2024/2847 (Reglamento de Ciberresiliencia), texto en español publicado en el BOE"
+      url: "https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81720"
+      found: ["una licencia libre y de código abierto"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/el-gobierno-del-almacenamiento-como-palanca-de-la-innovacion"
+      found: ["auditorías anuales de licencias de software"]
+      checked: 2026-11-14
+    - label: "AWS, páginas en español"
+      url: "https://aws.amazon.com/es/what-is/open-source/"
+      found: ["licencias de software de código abierto"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.waf
+  en:
+    term: web application firewall
+    acronym: WAF
+    definition: >-
+      A layer-7 control placed in front of web applications and APIs that
+      inspects HTTP traffic and blocks attacks such as injection and cross-site
+      scripting, using signatures, rules and behavioural models.
+  es:
+    verdict: both
+    acronym: WAF
+    forms:
+      - text: WAF
+        usedBy: [official, engineers, google, microsoft]
+        article: el
+        kind: noun
+        primary: true
+        plural: los WAF
+        note: >-
+          The acronym is the everyday name: "un WAF". INCIBE-CERT and a 2026 royal
+          decree both gloss it in English, "WAF (Web Application Firewall)".
+      - text: cortafuegos de aplicaciones web
+        usedBy: [official, google]
+        headline: true
+        article: el
+        kind: noun
+        plural: los cortafuegos de aplicaciones web
+        note: The expansion in INCIBE's guidance for businesses and on Google's pages for Spain.
+      - text: firewall de aplicaciones web
+        usedBy: [engineers, microsoft, aws]
+        article: el
+        kind: noun
+        note: The expansion used by Telefónica Tech, Microsoft and AWS.
+    say: Said as a word, "uaf".
+    definition: >-
+      Control de capa 7 que se coloca delante de las aplicaciones web y las API
+      para inspeccionar el tráfico HTTP y bloquear ataques.
+    examples:
+      - es: Hemos puesto un WAF delante de la aplicación para bloquear las inyecciones SQL.
+        en: We have put a WAF in front of the application to block SQL injection.
+  topics: [appsec, network]
+  technology: [networking]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [sec.firewall, sec.api-gateway, sec.sql-injection, fw.owasp-top-10]
+  sources:
+    - label: "INCIBE, blog para empresas"
+      url: "https://www.incibe.es/protege-tu-empresa/blog/protege-tu-escaparate-internet"
+      found: ["cortafuegos de aplicaciones web"]
+      checked: 2026-11-14
+    - label: "INCIBE-CERT, blog"
+      url: "https://www.incibe.es/incibe-cert/blog/medidas-de-ciberseguridad-desde-una-perspectiva-global"
+      found: ["instalar un WAF (Web Application Firewall)"]
+      checked: 2026-11-14
+    - label: "Real Decreto 145/2026, curso de especialización en recursos y servicios en la nube"
+      url: "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-4673"
+      found: ["utilizando herramientas WAF"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/waf-gestionado-en-red-ciberseguridad"
+      found: ["Qué es un WAF y por qué necesitas uno", "Firewall de Aplicaciones Web (WAF)"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/security/products/armor?hl=es"
+      found: ["cortafuegos de aplicaciones web (WAF)"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/azure/web-application-firewall/overview"
+      found: ["firewall de aplicaciones web", "Un WAF también proporciona"]
+      checked: 2026-11-14
+    - label: "AWS, páginas en español"
+      url: "https://aws.amazon.com/es/waf/"
+      found: ["Firewall de aplicaciones web"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.api-gateway
+  en:
+    term: API gateway
+    definition: >-
+      A single entry point placed in front of a set of APIs or microservices that
+      routes requests and centralises cross-cutting controls such as
+      authentication, authorisation, rate limiting, TLS termination and logging.
+  es:
+    verdict: both
+    forms:
+      - text: API gateway
+        usedBy: [official, engineers]
+        article: el
+        kind: noun
+        primary: true
+        note: >-
+          Engineers keep the English, and make it masculine even though API on its
+          own is feminine: "el API Gateway", "un API Gateway".
+      - text: puerta de enlace de API
+        usedBy: [microsoft, oracle]
+        headline: true
+        article: la
+        kind: noun
+        note: >-
+          The vendors' translation. "Puerta de enlace" is the standard Spanish for
+          a network gateway and has its own entry in INCIBE's glossary.
+      - text: pasarela de API
+        usedBy: [microsoft]
+        article: la
+        kind: noun
+        note: A second translation, found alongside the first in Microsoft's documentation.
+    definition: >-
+      Punto de entrada único que se sitúa delante de un conjunto de API o
+      microservicios para enrutar las peticiones y centralizar controles como la
+      autenticación o la limitación de peticiones.
+    examples:
+      - es: El API gateway valida el token antes de pasar la petición al microservicio.
+        en: The API gateway validates the token before passing the request to the microservice.
+  topics: [appsec, architecture]
+  technology: [networking]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [sec.api, sec.waf, cloud.microservices, sec.oauth]
+  sources:
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/patrones-arquitectura-microservicios-saga-api-gateway-service-discovery/"
+      found: ["el API Gateway actúa como intermediario"]
+      checked: 2026-11-14
+    - label: "El lado del mal"
+      url: "https://www.elladodelmal.com/2025/12/que-hacer-para-desplegar-inteligencia.html"
+      found: ["un API Gateway con reglas"]
+      checked: 2026-11-14
+    - label: "INCIBE-CERT, blog"
+      url: "https://www.incibe.es/incibe-cert/blog/seguridad-en-arquitectura-de-microservicios"
+      found: ["servicios como API Gateway"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/azure/architecture/microservices/design/gateway"
+      found: ["Una puerta de enlace de API puede ayudar", "servir como pasarela de API"]
+      checked: 2026-11-14
+    - label: "Oracle España"
+      url: "https://www.oracle.com/es/security/cloud-security/"
+      found: ["la puerta de enlace de API"]
+      checked: 2026-11-14
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["Puerta de enlace"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.dam
+  en:
+    term: database activity monitoring
+    acronym: DAM
+    definition: >-
+      Tooling that captures and analyses database activity (queries, logins,
+      privilege use and schema changes) independently of the database's own
+      logs, to detect misuse and support audit.
+  es:
+    verdict: translated
+    acronym: DAM
+    forms:
+      - text: monitorización de la actividad de bases de datos
+        article: la
+        kind: noun
+        primary: true
+        note: >-
+          Built on monitorización, the word INCIBE uses for monitoring tools. No
+          Spanish public-body or engineering source using the full phrase was
+          found.
+      - text: supervisión de la actividad de las bases de datos
+        usedBy: [oracle]
+        article: la
+        kind: noun
+        note: Oracle's wording on its pages for Spain.
+    definition: >-
+      Herramientas que registran y analizan la actividad de las bases de datos
+      (consultas, accesos, uso de privilegios) para detectar usos indebidos y
+      facilitar la auditoría.
+    examples:
+      - es: La monitorización de la actividad de bases de datos detectó una consulta anómala.
+        en: Database activity monitoring detected an anomalous query.
+    watchOut: >-
+      In Spain the verb is monitorizar and the noun monitorización. Monitorear and
+      monitoreo are Latin American, yet they turn up on vendor pages served to
+      Spain: Oracle's says "monitorea la actividad de las bases de datos".
+  topics: [data, detection]
+  technology: []
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [sec.log, sec.auditability, sec.sql-injection, sec.dlp]
+  sources:
+    - label: "Oracle España"
+      url: "https://www.oracle.com/es/security/database-security/"
+      found: ["Supervisión de la actividad de las bases de datos"]
+      checked: 2026-11-14
+    - label: "Oracle España"
+      url: "https://www.oracle.com/es/security/database-security/audit-vault-database-firewall/"
+      found: ["monitorea la actividad de las bases de datos"]
+      checked: 2026-11-14
+    - label: "INCIBE, Taxonomía de soluciones de ciberseguridad"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/taxonomia_ciberseguridad.pdf"
+      found: ["Herramientas de monitorización"]
+      checked: 2026-11-14
+  status: draft
+
+- id: cloud.application-virtualization
+  en:
+    term: application virtualization
+    definition: >-
+      Packaging an application so that it runs isolated from the underlying
+      operating system, typically streamed or delivered from a central server
+      instead of being installed on each device.
+  es:
+    verdict: translated
+    forms:
+      - text: virtualización de aplicaciones
+        usedBy: [official, microsoft, aws]
+        article: la
+        kind: noun
+        primary: true
+        note: >-
+          INCIBE lists it next to "virtualización de escritorio" (desktop
+          virtualisation).
+    definition: >-
+      Técnica que permite ejecutar una aplicación aislada del sistema operativo
+      del equipo, normalmente servida desde un servidor central en lugar de
+      instalada en cada dispositivo.
+    examples:
+      - es: Con la virtualización de aplicaciones no hace falta instalar el programa en cada portátil.
+        en: With application virtualization there is no need to install the program on every laptop.
+  topics: [architecture]
+  technology: [endpoint]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [cloud.virtualization, cloud.container, sec.sandbox, sec.isolation]
+  sources:
+    - label: "INCIBE, blog para empresas"
+      url: "https://www.incibe.es/empresas/blog/virtualizacion-puede-ser-solucion-tus-problemas"
+      found: ["Virtualización de aplicaciones", "Virtualización de escritorio"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/microsoft-desktop-optimization-pack/app-v/appv-for-windows"
+      found: ["Virtualización de aplicaciones (App-V)"]
+      checked: 2026-11-14
+    - label: "AWS, páginas en español"
+      url: "https://aws.amazon.com/es/what-is/virtualization/"
+      found: ["La virtualización de aplicaciones extrae las funciones"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.xml-firewall
+  en:
+    term: XML firewall
+    definition: >-
+      An application-layer gateway that validates, filters and transforms XML and
+      SOAP messages, enforcing schema checks, message-level security and
+      protection against XML-based attacks before requests reach a web service.
+  es:
+    verdict: both
+    forms:
+      - text: firewall XML
+        article: el
+        kind: noun
+        primary: true
+        note: >-
+          Not found in any of the Spanish sources checked. The term is rare
+          today; this form follows the pattern of "firewall de aplicaciones web",
+          with the qualifier after the noun.
+      - text: cortafuegos XML
+        article: el
+        kind: noun
+        register: formal
+        plural: los cortafuegos XML
+        note: >-
+          The same compound built on cortafuegos, the word INCIBE's glossary
+          gives for firewall. Also without a source of its own.
+    definition: >-
+      Pasarela de capa de aplicación que valida y filtra los mensajes XML y SOAP
+      antes de que lleguen a un servicio web.
+    examples:
+      - es: El firewall XML rechaza los mensajes SOAP que no cumplen el esquema.
+        en: The XML firewall rejects SOAP messages that do not comply with the schema.
+  topics: [appsec, network]
+  technology: [networking]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [sec.waf, sec.api-gateway, sec.firewall, sec.api]
+  sources:
+    - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
+      found: ["Cortafuegos", "Sinónimo: Firewall"]
+      checked: 2026-11-14
+  status: draft
+
+- id: tech.docker
+  en:
+    term: Docker
+    definition: >-
+      The container platform that popularised packaging an application and its
+      dependencies as a portable image, built from a Dockerfile and run as an
+      isolated container on a shared kernel.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Docker
+        usedBy: [official, engineers, microsoft, aws]
+        kind: noun
+        primary: true
+        note: >-
+          Used as a bare name, with no article: "Docker es una plataforma de
+          software", "contenedores como Docker".
+      - text: contenedor de Docker
+        usedBy: [microsoft, aws]
+        article: el
+        kind: noun
+        plural: los contenedores de Docker
+        note: 'Paradigma drops the preposition: "contenedores Docker".'
+      - text: imagen de Docker
+        usedBy: [engineers, microsoft, aws]
+        article: la
+        kind: noun
+        plural: las imágenes de Docker
+        note: 'A Docker image. Also without the preposition: "imagen Docker".'
+      - text: dockerizar
+        usedBy: [engineers]
+        kind: verb
+        register: informal
+        note: >-
+          To package an application as a Docker image: "dockerizar una
+          aplicación".
+    definition: >-
+      Plataforma de contenedores que empaqueta una aplicación y sus dependencias
+      en una imagen portable.
+    examples:
+      - es: Cada microservicio tiene su propia imagen de Docker.
+        en: Each microservice has its own Docker image.
+  topics: [architecture, appsec]
+  technology: [containers-oci]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [cloud.container, tech.kubernetes, cloud.orchestration, cloud.microservices]
+  sources:
+    - label: "INCIBE-CERT, blog"
+      url: "https://www.incibe.es/incibe-cert/blog/seguridad-en-arquitectura-de-microservicios"
+      found: ["contenedores como Docker"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/techbiz/comparativa-de-plataformas-y-tecnologias-cloud/"
+      found: ["basadas en contenedores Docker"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/pipelines-de-jenkins-evolucion-continuous-delivery/"
+      found: ["construcción de imagen Docker"]
+      checked: 2026-11-14
+    - label: "El lado del mal"
+      url: "https://www.elladodelmal.com/2022/04/docker-lista-de-materiales-de-software.html"
+      found: ["una imagen de Docker"]
+      checked: 2026-11-14
+    - label: "Adictos al Trabajo (Autentia)"
+      url: "https://adictosaltrabajo.com/2020/02/25/dockeriza-tu-api-explicado-para-principiantes/"
+      found: ["aprender a dockerizar una aplicación"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/dotnet/architecture/microservices/container-docker-introduction/docker-defined"
+      found: ["Los contenedores de Docker se pueden ejecutar en cualquier lugar", "imágenes de Docker"]
+      checked: 2026-11-14
+    - label: "AWS, páginas en español"
+      url: "https://aws.amazon.com/es/docker/"
+      found: ["Docker es una plataforma de software", "Un contenedor de Docker es una imagen de Docker instanciada"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: tech.kubernetes
+  en:
+    term: Kubernetes
+    definition: >-
+      The open-source container orchestration platform that schedules,
+      scales and heals containerised workloads across a cluster of nodes,
+      driven by declarative configuration.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Kubernetes
+        usedBy: [official, engineers, google, aws]
+        kind: noun
+        primary: true
+        note: >-
+          Used as a bare name, with no article, and treated as masculine: Google
+          writes "lo publicamos como software libre".
+      - text: clúster de Kubernetes
+        usedBy: [official, engineers, google, aws]
+        article: el
+        kind: noun
+        plural: los clústeres de Kubernetes
+        note: Engineers also write it without the accent and without the preposition, "cluster Kubernetes".
+      - text: pod
+        usedBy: [engineers, google, aws]
+        article: el
+        kind: noun
+        plural: los pods
+        note: 'Kept in English: "si un pod falla". Node, by contrast, is translated: "nodo".'
+      - text: K8s
+        usedBy: [engineers, google]
+        kind: noun
+        note: 'The written abbreviation: "desplegar en K8s".'
+    say: Said as it is written, with Spanish vowels, "ku-ber-NE-tes".
+    definition: >-
+      Plataforma de código abierto para la orquestación de contenedores, que
+      despliega, escala y recupera cargas de trabajo en un clúster de nodos.
+    examples:
+      - es: Hemos desplegado la aplicación en un clúster de Kubernetes con tres nodos.
+        en: We have deployed the application on a three-node Kubernetes cluster.
+    watchOut: >-
+      The Spanish spelling is clúster, with an accent, and its plural is
+      clústeres. Many engineers write "cluster" as in English.
+  topics: [architecture]
+  technology: [kubernetes, containers-oci]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [cloud.orchestration, cloud.container, tech.docker, cloud.microservices]
+  sources:
+    - label: "INCIBE, Guía de buenas prácticas de ciberseguridad en redes privadas 5G"
+      url: "https://www.incibe.es/sites/default/files/2025-12/INCIBE&ULE_GuiaBuenasPracticasCiberseguridadRedesPrivadas5G.pdf"
+      found: ["un clúster de Kubernetes", "orquestadores como Kubernetes"]
+      checked: 2026-11-14
+    - label: "Adictos al Trabajo (Autentia)"
+      url: "https://adictosaltrabajo.com/2018/09/27/kubernetes-en-local-con-microk8s/"
+      found: ["un clúster de Kubernetes"]
+      checked: 2026-11-14
+    - label: "Adictos al Trabajo (Autentia)"
+      url: "https://www.adictosaltrabajo.com/2018/11/13/desplegar-en-k8s-desde-gitlab-ci/"
+      found: ["Desplegar en K8s desde GitLab CI"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/kubernetes-almacenamiento-persistencia-datos/"
+      found: ["Un pod representa un conjunto de contenedores"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/probando-linkerd-el-pionero-de-los-services-mesh/"
+      found: ["un cluster Kubernetes básico"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/kubernetes-multi-cluster-rhacm-glsb-haproxy/"
+      found: ["los clústeres de Kubernetes"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/learn/what-is-kubernetes?hl=es"
+      found: ["¿Qué es un clúster de Kubernetes?", "lo publicamos como software libre", "está formado por nodos", "si un pod falla", 'se usa a veces la abreviatura "K8s"']
+      checked: 2026-11-14
+    - label: "AWS, páginas en español"
+      url: "https://aws.amazon.com/es/kubernetes/"
+      found: ["Un clúster de Kubernetes es una agrupación lógica", "se ejecutarán los pods"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.federated-identity
+  en:
+    term: federated identity
+    definition: >-
+      An arrangement in which separate organisations or security domains agree
+      to trust each other's authentication, so that an identity issued by one
+      identity provider is accepted by the services of another.
+  es:
+    verdict: translated
+    forms:
+      - text: identidad federada
+        usedBy: [official, engineers, microsoft]
+        article: la
+        kind: noun
+        primary: true
+        plural: las identidades federadas
+      - text: federación de identidades
+        usedBy: [engineers, microsoft, aws]
+        article: la
+        kind: noun
+        note: >-
+          Identity federation, the arrangement itself. Job adverts pair it with
+          SSO: "single sign-on (SSO) y federación de identidades".
+      - text: federar
+        usedBy: [engineers]
+        kind: verb
+        note: 'To federate: "federar usuarios con Amazon Connect".'
+    definition: >-
+      Modelo en el que varias organizaciones o dominios confían en la
+      autenticación de los demás, de modo que la identidad emitida por un
+      proveedor de identidad se acepta en los servicios de otro.
+    examples:
+      - es: Con la identidad federada, los empleados entran en la aplicación con su cuenta corporativa.
+        en: With federated identity, employees sign in to the application with their corporate account.
+  topics: [iam, authn]
+  technology: [identity-platforms]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [sec.idp, sec.sso, sec.saml, sec.iam]
+  sources:
+    - label: "AEPD, Guía de privacidad desde el diseño"
+      url: "https://www.aepd.es/guias/guia-privacidad-desde-diseno.pdf"
+      found: ["identidad federada"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/la-revolucion-de-la-identidad-digital-de-la-centralizacion-a-la-soberania-de-tus-datos"
+      found: ["surgió el concepto de identidad federada"]
+      checked: 2026-11-14
+    - label: "Tecnoempleo, oferta de empleo en España"
+      url: "https://www.tecnoempleo.com/cloud-solution-architect-gcp-grupo-ns/google-cloud-platform/rf-1bbe1410a26e03eeea4f"
+      found: ["Conocimientos de identidad federada"]
+      checked: 2026-11-14
+    - label: "Tecnoempleo, oferta de empleo en España"
+      url: "https://www.tecnoempleo.com/arquitecto-it-autenticacion-hibrido/oauth2-openid-saml-jwt-ciberseguridad-/rf-107e16f472754307354c"
+      found: ["single sign-on (SSO) y federación de identidades"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/servicio-contact-center-nube/"
+      found: ["federar usuarios con Amazon Connect"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/azure/architecture/patterns/federated-identity"
+      found: ["Patrón de identidad federada"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/entra/fundamentals/identity-fundamental-concepts"
+      found: ["Federación de identidades"]
+      checked: 2026-11-14
+    - label: "AWS Well-Architected Framework, es_ES"
+      url: "https://docs.aws.amazon.com/es_es/wellarchitected/latest/framework/sec-iam.html"
+      found: ["federación de identidades"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.idp
+  en:
+    term: identity provider
+    acronym: IdP
+    definition: >-
+      The system that authenticates users and issues the assertions or tokens
+      about their identity on which other applications (service providers or
+      relying parties) rely.
+  es:
+    verdict: both
+    acronym: IdP
+    forms:
+      - text: proveedor de identidad
+        usedBy: [official, engineers]
+        article: el
+        kind: noun
+        primary: true
+        plural: los proveedores de identidad
+        note: The singular "identidad" is what INCIBE-CERT, Paradigma and Telefónica Tech write.
+      - text: proveedor de identidades
+        usedBy: [microsoft, aws]
+        article: el
+        kind: noun
+        note: >-
+          Microsoft and AWS put identity in the plural. The other side of the
+          exchange is "el proveedor de servicios (SP)".
+      - text: IdP
+        usedBy: [official, engineers, microsoft]
+        headline: true
+        article: el
+        kind: noun
+        plural: los IdP
+        note: 'The English acronym is kept: "el IdP", "un IdP de confianza".'
+    say: IdP is said letter by letter, "i-de-pe".
+    definition: >-
+      Sistema que autentica a los usuarios y emite las aserciones o los tokens
+      sobre su identidad en los que confían otras aplicaciones.
+    examples:
+      - es: La aplicación delega la autenticación en el proveedor de identidad de la empresa.
+        en: The application delegates authentication to the company's identity provider.
+  topics: [iam, authn]
+  technology: [identity-platforms]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [sec.federated-identity, sec.sso, sec.saml, sec.openid-connect]
+  sources:
+    - label: "INCIBE-CERT, blog"
+      url: "https://www.incibe.es/incibe-cert/blog/seguridad-en-arquitectura-de-microservicios"
+      found: ["un único proveedor de identidad", "la configuración del IdP"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/administracion-centralizada-grupos-usuarios-keycloak-azuread/"
+      found: ["proveedor de identidad (con las siglas IdP en inglés)"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/securizando-tus-arquitecturas-de-microservicios-con-istio/"
+      found: ["contactando con el IdP"]
+      checked: 2026-11-14
+    - label: "Telefónica Tech, blog"
+      url: "https://telefonicatech.com/blog/ataque-a-los-sistemas-de-soporte-de-otka-ficheros-har-y-tokens-de-sesion"
+      found: ["proveedores de identidad y autenticación"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/entra/architecture/auth-saml"
+      found: ["un proveedor de identidades (IdP) y un proveedor de servicios", "El proveedor de servicios (SP)"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/azure/architecture/patterns/federated-identity"
+      found: ["en un IdP de confianza"]
+      checked: 2026-11-14
+    - label: "AWS, páginas en español"
+      url: "https://aws.amazon.com/es/what-is/sso/"
+      found: ["proveedor de identidades (IdP)"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.sso
+  en:
+    term: single sign-on
+    acronym: SSO
+    definition: >-
+      Authenticating once with an identity provider and then reaching several
+      independent applications without signing in again to each one.
+  es:
+    verdict: both
+    acronym: SSO
+    forms:
+      - text: inicio de sesión único
+        usedBy: [official, google, microsoft, aws]
+        article: el
+        kind: noun
+        primary: true
+        note: 'The Spanish term in INCIBE-CERT''s posts and vendor documentation, normally followed by "(SSO)".'
+      - text: SSO
+        usedBy: [official, engineers, microsoft, aws]
+        headline: true
+        article: el
+        kind: noun
+        note: 'The acronym is the everyday name. Job adverts list it bare: "SSO y MFA".'
+      - text: single sign-on
+        usedBy: [official, engineers]
+        article: el
+        kind: noun
+        note: >-
+          The English term written out. INCIBE's product taxonomy has a category
+          called "Herramientas Single Sign-On".
+    say: Said letter by letter, "ese-ese-o".
+    definition: >-
+      Mecanismo que permite autenticarse una sola vez y acceder después a varias
+      aplicaciones sin volver a iniciar sesión en cada una.
+    examples:
+      - es: Con el inicio de sesión único, entras una vez y accedes a todas las aplicaciones.
+        en: With single sign-on, you sign in once and get into all the applications.
+  topics: [authn, iam]
+  technology: [identity-platforms]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [sec.federated-identity, sec.idp, sec.saml, sec.mfa]
+  sources:
+    - label: "INCIBE-CERT, blog"
+      url: "https://www.incibe.es/incibe-cert/blog/seguridad-en-arquitectura-de-microservicios"
+      found: ["habilitar el inicio de sesión único"]
+      checked: 2026-11-14
+    - label: "INCIBE-CERT, blog"
+      url: "https://www.incibe.es/incibe-cert/blog/sistemas-pam-un-escudo-para-la-proteccion-de-accesos"
+      found: ["sistemas SSO (Single Sign-On)"]
+      checked: 2026-11-14
+    - label: "INCIBE, Taxonomía de soluciones de ciberseguridad"
+      url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/taxonomia_ciberseguridad.pdf"
+      found: ["Herramientas Single Sign-On"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/patrones-arquitectura-microservicios-seguridad-con-jwt/"
+      found: ["usar Single Sign-On (SSO)"]
+      checked: 2026-11-14
+    - label: "Tecnoempleo, oferta de empleo en España"
+      url: "https://www.tecnoempleo.com/365-expert-ingeniero-workplace-michael-page/microsoft-365-intune/rf-6e3e18b8c256230b8549"
+      found: ["SSO y MFA"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/entra/identity/enterprise-apps/what-is-single-sign-on"
+      found: ["El inicio de sesión único (SSO) permite a los usuarios iniciar sesión una vez", "El SSO importa a dos audiencias"]
+      checked: 2026-11-14
+    - label: "AWS, páginas en español"
+      url: "https://aws.amazon.com/es/what-is/sso/"
+      found: ["¿Qué es el SSO?", "inicio de sesión único"]
+      checked: 2026-11-14
+    - label: "Google Cloud, páginas para España"
+      url: "https://cloud.google.com/learn/what-is-zero-trust?hl=es"
+      found: ["el inicio de sesión único"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.oauth
+  en:
+    term: OAuth
+    expansion: Open Authorization
+    definition: >-
+      An open standard for delegated authorisation. A resource owner lets a
+      client application obtain a scoped, time-limited access token from an
+      authorisation server instead of handing over credentials. The current
+      version is OAuth 2.0.
+  es:
+    verdict: english-kept
+    forms:
+      - text: OAuth
+        usedBy: [official, engineers, microsoft]
+        kind: noun
+        primary: true
+        note: >-
+          Used as a bare name and described as a protocol, a standard or a
+          framework: "OAuth es un framework de autorización". Adverts and
+          INCIBE-CERT write the version without a space, "OAuth2".
+      - text: token de acceso
+        usedBy: [official, engineers, microsoft]
+        article: el
+        kind: noun
+        plural: los tokens de acceso
+        note: 'The access token. Paradigma also leaves it in English: "los access token".'
+      - text: servidor de autorización
+        usedBy: [official, engineers, microsoft]
+        article: el
+        kind: noun
+        note: The authorisation server.
+      - text: scope
+        usedBy: [engineers]
+        article: el
+        kind: noun
+        plural: los scopes
+        note: 'Engineers keep the English word. Microsoft translates it: "ámbitos".'
+    definition: >-
+      Estándar abierto de autorización delegada, con el que una aplicación obtiene
+      un token de acceso limitado sin conocer las credenciales del usuario.
+    examples:
+      - es: La API solo acepta peticiones con un token de acceso válido de OAuth 2.0.
+        en: The API only accepts requests with a valid OAuth 2.0 access token.
+    watchOut: >-
+      OAuth is about autorización, not autenticación. The two words are as easy
+      to mix up in Spanish as in English, and Microsoft's page spells it out:
+      "Open Authorization (no de Open Authentication)".
+  topics: [authz, iam]
+  technology: [identity-platforms]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [sec.openid-connect, sec.authorization, sec.api, sec.idp]
+  sources:
+    - label: "INCIBE-CERT, blog"
+      url: "https://www.incibe.es/incibe-cert/blog/seguridad-en-arquitectura-de-microservicios"
+      found: ["OAuth2 introduce un servidor de autorización central", "que emite tokens de acceso", "desde el token de acceso"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/oauth-2-0-equilibrio-y-usabilidad-en-la-securizacion-de-apis/"
+      found: ["OAuth es un framework de autorización", "el token de acceso", "el servidor de autorización", "Los access token", "Los scopes son una lista"]
+      checked: 2026-11-14
+    - label: "Tecnoempleo, oferta de empleo en España"
+      url: "https://www.tecnoempleo.com/arquitecto-it-autenticacion-hibrido/oauth2-openid-saml-jwt-ciberseguridad-/rf-107e16f472754307354c"
+      found: ["gestión de protocolos OAuth2"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-oauth"
+      found: ["OAuth es un protocolo de estándar abierto", "Un token de acceso es un fragmento de datos", "Open Authorization (no de Open Authentication"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/entra/identity-platform/v2-oauth2-auth-code-flow"
+      found: ["una lista separada por espacios de ámbitos", "el servidor de autorización"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.openid-connect
+  en:
+    term: OpenID Connect
+    acronym: OIDC
+    definition: >-
+      An identity layer on top of OAuth 2.0 that adds authentication. The
+      identity provider issues a signed ID token describing the user and how
+      they were authenticated, alongside the OAuth access token.
+  es:
+    verdict: english-kept
+    acronym: OIDC
+    forms:
+      - text: OpenID Connect
+        usedBy: [official, engineers, microsoft]
+        kind: noun
+        primary: true
+        note: 'Used as a bare name: "OpenID Connect es un protocolo de autenticación".'
+      - text: OIDC
+        usedBy: [official, engineers, microsoft]
+        kind: noun
+        note: 'The acronym, used the same way: "en el caso de OIDC".'
+      - text: ID token
+        usedBy: [official]
+        article: el
+        kind: noun
+        note: INCIBE-CERT leaves the token's name in English.
+      - text: token de identificador
+        usedBy: [microsoft]
+        article: el
+        kind: noun
+        note: >-
+          Microsoft's translation of ID token in its developer documentation. Its
+          security pages also say "token de identidad" and "token de
+          identificación".
+    definition: >-
+      Capa de identidad sobre OAuth 2.0 que añade la autenticación del usuario
+      mediante un ID token firmado.
+    examples:
+      - es: Usamos OpenID Connect para autenticar a los usuarios en la aplicación web.
+        en: We use OpenID Connect to authenticate users in the web application.
+    watchOut: >-
+      Microsoft's Spanish pages call the relying party "el usuario de confianza",
+      which reads like "the trusted user". It means the application that relies
+      on the identity provider, not a person.
+  topics: [authn, iam]
+  technology: [identity-platforms]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [sec.oauth, sec.idp, sec.sso, sec.authentication]
+  sources:
+    - label: "INCIBE-CERT, blog"
+      url: "https://www.incibe.es/incibe-cert/blog/seguridad-en-arquitectura-de-microservicios"
+      found: ["OpenID Connect (OIDC) añade un mecanismo para autenticar a los usuarios", "mediante un ID token", "OIDC proporciona un modelo estándar"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/oauth-2-0-equilibrio-y-usabilidad-en-la-securizacion-de-apis/"
+      found: ["OpenID Connect es un protocolo de autenticación de usuarios"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/administracion-centralizada-grupos-usuarios-keycloak-azuread/"
+      found: ["En el caso de OIDC"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/entra/identity-platform/v2-protocols-oidc"
+      found: ["OpenID Connect (OIDC)", "un token de seguridad denominado token de identificador"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-openid-connect-oidc"
+      found: ["OpenID Connect (OIDC) es un protocolo de autenticación de identidad", "un token de identidad", "tokens de identificación", "Los usuarios de confianza son las aplicaciones"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.saml
+  en:
+    term: SAML
+    expansion: Security Assertion Markup Language
+    definition: >-
+      An XML-based open standard for exchanging authentication and authorisation
+      assertions between an identity provider and a service provider. It
+      underpins much enterprise single sign-on and federation.
+  es:
+    verdict: english-kept
+    acronym: SAML
+    forms:
+      - text: SAML
+        usedBy: [official, engineers, microsoft]
+        kind: noun
+        primary: true
+        note: >-
+          Used as a bare name, with the expansion left in English: "Security
+          Assertion Markup Language (SAML)". Also written with its version:
+          "SAML2", "SAML 2.0".
+      - text: aserción de SAML
+        usedBy: [microsoft]
+        article: la
+        kind: noun
+        plural: las aserciones de SAML
+        note: 'A SAML assertion. Paradigma says simply "una aserción".'
+      - text: lenguaje de marcado de aserción de seguridad
+        usedBy: [microsoft]
+        article: el
+        kind: noun
+        register: formal
+        note: >-
+          The translated expansion, on one of Microsoft's security pages.
+          Microsoft's developer documentation leaves the expansion in English.
+    definition: >-
+      Estándar abierto basado en XML para intercambiar aserciones de autenticación
+      y autorización entre un proveedor de identidad y un proveedor de servicios.
+    examples:
+      - es: El inicio de sesión único con el proveedor de identidad está configurado con SAML.
+        en: Single sign-on with the identity provider is configured with SAML.
+  topics: [authn, iam]
+  technology: [identity-platforms]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [sec.sso, sec.idp, sec.federated-identity, sec.openid-connect]
+  sources:
+    - label: "INCIBE-CERT, aviso de vulnerabilidad"
+      url: "https://www.incibe.es/incibe-cert/alerta-temprana/vulnerabilidades/cve-2025-46572"
+      found: ["los protocolos WS-Fed y SAML2"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/administracion-centralizada-grupos-usuarios-keycloak-azuread/"
+      found: ["Security Assertion Markup Language (SAML)", "En el caso de SAML", "manda una aserción a la aplicación"]
+      checked: 2026-11-14
+    - label: "Paradigma Digital, blog"
+      url: "https://www.paradigmadigital.com/dev/servicio-contact-center-nube/"
+      found: ["SAML 2.0"]
+      checked: 2026-11-14
+    - label: "Tecnoempleo, oferta de empleo en España"
+      url: "https://www.tecnoempleo.com/arquitecto-it-autenticacion-hibrido/oauth2-openid-saml-jwt-ciberseguridad-/rf-107e16f472754307354c"
+      found: ["gestión de SAML para single sign-on (SSO)"]
+      checked: 2026-11-14
+    - label: "Microsoft Learn, es-ES"
+      url: "https://learn.microsoft.com/es-es/entra/architecture/auth-saml"
+      found: ["Security Assertion Markup Language (SAML) es un estándar abierto", "aserción de SAML"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-identity-access-management-iam"
+      found: ["Lenguaje de marcado de aserción de seguridad (SAML)"]
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.pam
+  en:
+    term: privileged access management
+    acronym: PAM
+    definition: >-
+      The controls and tooling that secure, broker and record the use of
+      accounts with elevated rights: credential vaulting and rotation,
+      just-in-time elevation and session monitoring.
+  es:
+    verdict: both
+    acronym: PAM
+    forms:
+      - text: gestión de accesos privilegiados
+        usedBy: [official, eu, engineers]
+        article: la
+        kind: noun
+        primary: true
+        note: >-
+          The wording of INCIBE-CERT, of the Cyber Resilience Act and of Spanish
+          job adverts.
+      - text: PAM
+        usedBy: [official, engineers, microsoft]
+        headline: true
+        article: el
+        kind: noun
+        plural: los PAM
+        note: >-
+          The English acronym, mostly used as a label on another noun: "sistemas
+          PAM", "soluciones PAM", "arquitecto PAM".
+      - text: cuentas privilegiadas
+        usedBy: [official, engineers]
+        article: las
+        kind: noun
+        note: Privileged accounts.
+      - text: administración del acceso con privilegios
+        usedBy: [microsoft]
+        article: la
+        kind: noun
+        note: >-
+          Microsoft's wording, where a privileged account is "una cuenta con
+          privilegios". Microsoft says administración where Spanish sources say
+          gestión, as it does for IAM.
+    say: Said as a word, "pam".
+    definition: >-
+      Conjunto de controles y herramientas que protegen, registran y limitan el
+      uso de las cuentas con privilegios elevados.
+    examples:
+      - es: Vamos a implantar una solución de gestión de accesos privilegiados para los administradores.
+        en: We are going to roll out a privileged access management solution for the administrators.
+  topics: [iam, authz]
+  technology: [identity-platforms]
+  curriculum:
+    - { cert: CCSP, outline: "2026-08", domain: 4 }
+  related: [sec.iam, sec.least-privilege, sec.secrets-management, sec.bastion-host]
+  sources:
+    - label: "INCIBE-CERT, blog"
+      url: "https://www.incibe.es/incibe-cert/blog/sistemas-pam-un-escudo-para-la-proteccion-de-accesos"
+      found: ["la gestión de accesos privilegiados", "Los sistemas PAM", "los PAM pueden ayudar", "cuentas privilegiadas"]
+      checked: 2026-11-14
+    - label: "Reglamento (UE) 2024/2847 (Reglamento de Ciberresiliencia), texto en español publicado en el BOE"
+      url: "https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81720"
+      found: ["gestión de accesos privilegiados"]
+      checked: 2026-11-14
+    - label: "Tecnoempleo, oferta de empleo en España"
+      url: "https://www.tecnoempleo.com/consultor-ciberseguridad-pam-arelance/one-identity-safeguard/rf-f6d610f0f21043b9674b"
+      found: ["gestión de accesos privilegiados (Privileged Access Management)", "soluciones PAM", "gestión de cuentas privilegiadas"]
+      checked: 2026-11-14
+    - label: "Tecnoempleo, oferta de empleo en España"
+      url: "https://www.tecnoempleo.com/arquitecto-pam-remoto/privileged-access-management-pam-cyberark-cibersegur/rf-414011cb92640358734e"
+      found: ["Arquitecto PAM"]
+      checked: 2026-11-14
+    - label: "Microsoft Security, es-ES"
+      url: "https://www.microsoft.com/es-es/security/business/security-101/what-is-privileged-access-management-pam"
+      found: ["la administración del acceso con privilegios", "cuentas con privilegios", "¿Qué es PAM?"]
+      checked: 2026-11-14
+  status: sourced

@@ -1,6 +1,6 @@
 # CCSP term list
 
-The working list for completing CCSP: 209 terms are written and 195 are proposed, 404 in all.
+The working list for completing CCSP: 268 terms are written and 136 are proposed, 404 in all.
 
 This is a proposal to review, trim and add to before the entries are written.
 
@@ -26,23 +26,7 @@ exam touches it in several.
 
 ## 4. Cloud Application Security
 
-63 terms: 4 written, 59 proposed.
-
-**Written:** software development lifecycle (SDLC), sandbox, threat modelling, API.
-
-**Development methods** (10): agile, waterfall, DevOps, continuous integration and delivery (CI/CD), pipeline, infrastructure as code (IaC), secure coding, code review, version control, software configuration management.
-
-**Requirements and testing** (13): functional requirement, non-functional requirement, static application security testing (SAST), dynamic application security testing (DAST), interactive application security testing (IAST), software composition analysis (SCA), penetration test, vulnerability scan, fuzzing, abuse case, quality assurance (QA), black-box testing, white-box testing.
-
-**Threat models and references** (8): STRIDE, OWASP Top 10, DREAD, PASTA, OWASP ASVS, OWASP API Security Top 10, OWASP Top 10 for LLM Applications, CWE Top 25.
-
-**Vulnerabilities** (8): injection, SQL injection, cross-site scripting (XSS), cross-site request forgery (CSRF), server-side request forgery (SSRF), broken access control, insecure deserialization, buffer overflow.
-
-**Software supply chain** (6): software supply chain, software bill of materials (SBOM), open-source software, third-party software, dependency, software licence.
-
-**Application architecture** (7): web application firewall (WAF), API gateway, database activity monitoring (DAM), application virtualization, XML firewall, Docker, Kubernetes.
-
-**Identity** (7): federated identity, identity provider (IdP), single sign-on (SSO), OAuth, OpenID Connect, SAML, privileged access management (PAM).
+63 terms, all written.
 
 ## 5. Cloud Security Operations
 
