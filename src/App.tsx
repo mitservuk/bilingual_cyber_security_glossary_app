@@ -1,24 +1,37 @@
 import { useEffect, useRef } from 'react';
-import { BookmarkIcon, GridIcon, HomeIcon } from './components/Icons';
+import { BookmarkIcon, GearIcon, HomeIcon, ListIcon } from './components/Icons';
 import type { Axis } from './data';
 import { href, useRoute } from './router';
-import { Browse, Saved, TermsList } from './screens/Browse';
+import { Category, Saved, TermsList } from './screens/Browse';
 import { Entry } from './screens/Entry';
 import { Home } from './screens/Home';
+import { Settings } from './screens/Settings';
+import { Terms } from './screens/Terms';
 
-type Tab = 'home' | 'browse' | 'saved';
+type Tab = 'home' | 'terms' | 'saved' | 'settings';
 
 const TABS: { id: Tab; label: string; path: string; icon: typeof HomeIcon }[] = [
   { id: 'home', label: 'Home', path: '/', icon: HomeIcon },
-  { id: 'browse', label: 'Browse', path: '/browse', icon: GridIcon },
+  { id: 'terms', label: 'Terms', path: '/terms', icon: ListIcon },
   { id: 'saved', label: 'Saved', path: '/saved', icon: BookmarkIcon },
+  { id: 'settings', label: 'Settings', path: '/settings', icon: GearIcon },
 ];
+
+const AXES: Axis[] = ['cert', 'framework', 'tech', 'topic'];
+
+/** Addresses from before Terms had its own tab. */
+const isAllTerms = (segments: string[]) =>
+  segments[0] === 'terms' ||
+  (segments[0] === 'list' && segments[1] === 'all') ||
+  (segments[0] === 'browse' && !AXES.includes(segments[1] as Axis));
 
 function tabFor(segments: string[]): Tab | null {
   if (segments.length === 0) return 'home';
-  if (segments[0] === 'browse') return 'browse';
+  if (isAllTerms(segments)) return 'terms';
   if (segments[0] === 'saved') return 'saved';
-  if (segments[0] === 'list') return 'browse';
+  if (segments[0] === 'settings') return 'settings';
+  // The categories and their lists are reached from the tiles on Home.
+  if (segments[0] === 'browse' || segments[0] === 'list') return 'home';
   return null;
 }
 
@@ -37,9 +50,10 @@ export function App() {
 
   let screen;
   if (segments[0] === 'term' && segments[1]) screen = <Entry key={segments[1]} id={segments[1]} />;
-  else if (segments[0] === 'browse') screen = <Browse view={segments[1]} />;
+  else if (isAllTerms(segments)) screen = <Terms />;
+  else if (segments[0] === 'browse') screen = <Category axis={segments[1] as Axis} />;
   else if (segments[0] === 'saved') screen = <Saved />;
-  else if (segments[0] === 'list' && segments[1] === 'all') screen = <Browse view="all" />;
+  else if (segments[0] === 'settings') screen = <Settings />;
   else if (segments[0] === 'list' && segments[2]) {
     // /list/<category>/<id>, with a domain number after a certification
     screen = (

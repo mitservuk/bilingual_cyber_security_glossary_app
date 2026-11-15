@@ -88,7 +88,7 @@ function Modules() {
       <section className="section">
         <div className="section-head">
           <h2>Browse</h2>
-          <a href={href('/browse/all')}>All {terms.length} terms</a>
+          <a href={href('/terms')}>All {terms.length} terms</a>
         </div>
         <div className="tiles">
           {tiles.map((tile) => (

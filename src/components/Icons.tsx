@@ -33,12 +33,25 @@ export const HomeIcon = ({ size }: P) => (
   </Icon>
 );
 
-export const GridIcon = ({ size }: P) => (
+export const ListIcon = ({ size }: P) => (
   <Icon size={size}>
-    <rect x="4" y="4" width="7" height="7" rx="2" />
-    <rect x="13" y="4" width="7" height="7" rx="2" />
-    <rect x="4" y="13" width="7" height="7" rx="2" />
-    <rect x="13" y="13" width="7" height="7" rx="2" />
+    <path d="M9 6h11M9 12h11M9 18h11" />
+    <path d="M4.5 6h.01M4.5 12h.01M4.5 18h.01" strokeWidth={2.6} />
+  </Icon>
+);
+
+export const GearIcon = ({ size }: P) => (
+  <Icon size={size} weight={2.2}>
+    <g transform="translate(1.8 1.8) scale(0.85)">
+      <circle cx="12" cy="12" r="3" />
+      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+    </g>
+  </Icon>
+);
+
+export const FilterIcon = ({ size }: P) => (
+  <Icon size={size} weight={2.2}>
+    <path d="M4 7h16M7 12h10M10 17h4" />
   </Icon>
 );
 
