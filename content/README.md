@@ -1,5 +1,7 @@
 # Content format
 
+To add a batch of terms, follow [ADDING-TERMS.md](ADDING-TERMS.md).
+
 Terms live in YAML files under `content/terms/`. One entry is one English
 term with its Spanish usage in Spain (es-ES). The app is built from these
 files; nothing about a term is stored anywhere else.
