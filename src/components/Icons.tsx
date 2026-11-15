@@ -49,6 +49,19 @@ export const GearIcon = ({ size }: P) => (
   </Icon>
 );
 
+export const CardsIcon = ({ size }: P) => (
+  <Icon size={size}>
+    <rect x="3" y="7" width="14" height="13" rx="2.5" />
+    <path d="M7 4h11.5A2.5 2.5 0 0 1 21 6.5V16" />
+  </Icon>
+);
+
+export const PlayIcon = ({ size = 20 }: P) => (
+  <svg aria-hidden="true" width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M8 5v14l11-7z" />
+  </svg>
+);
+
 export const FilterIcon = ({ size }: P) => (
   <Icon size={size} weight={2.2}>
     <path d="M4 7h16M7 12h10M10 17h4" />

@@ -11,8 +11,10 @@ import {
   topics,
   wordOfTheDay,
 } from '../data';
+import { PlayIcon } from '../components/Icons';
 import { href } from '../router';
 import { createSearch } from '../search';
+import { useStore } from '../store';
 
 const search = createSearch(terms);
 
@@ -61,8 +63,25 @@ function Modules() {
     { label: 'Topics', count: populated(topics, 'topic').length, path: '/browse/topic' },
   ];
 
+  const { deck, known } = useStore();
+  const knownInDeck = deck ? deck.ids.filter((id) => known.includes(id)).length : 0;
+
   return (
     <>
+      {deck && deck.ids.length > 0 && (
+        <a className="study-card" href={href('/study')}>
+          <span className="study-card-text">
+            <b>Continue studying</b>
+            <span>
+              {deck.title} · {knownInDeck} of {deck.ids.length} known
+            </span>
+          </span>
+          <span className="study-card-go">
+            <PlayIcon />
+          </span>
+        </a>
+      )}
+
       <section className="card wotd" aria-labelledby="wotd">
         <h2 id="wotd" className="label accent">
           Word of the day

@@ -17,6 +17,7 @@ import {
 } from '../data';
 import { goBack, href } from '../router';
 import { toggleRegion, useStore } from '../store';
+import { StudyButton } from './Study';
 
 const TITLES: Record<Axis, string> = {
   cert: 'Certifications',
@@ -236,6 +237,7 @@ export function TermsList({ axis, value, domain }: { axis: Axis; value: string; 
         <h1 className="long">{title}</h1>
         {summary && <p className="secondary summary">{summary}.</p>}
       </header>
+      <StudyButton title={subtitle && axis === 'cert' ? `${subtitle}` : title} terms={list} />
       {list.length ? (
         <TermList terms={alphabetical(list)} />
       ) : (
@@ -253,6 +255,7 @@ export function Saved() {
       <header className="title-block">
         <h1>Saved</h1>
       </header>
+      <StudyButton title="Saved terms" terms={list} />
       {list.length ? (
         <TermList terms={list} />
       ) : (
