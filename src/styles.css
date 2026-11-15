@@ -1121,3 +1121,8 @@ button.row {
     transform: translateY(100%);
   }
 }
+
+.build-id {
+  font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+  user-select: all;
+}

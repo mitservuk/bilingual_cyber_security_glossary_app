@@ -13,6 +13,15 @@ const LANGS: { value: Lang; label: string }[] = [
   { value: 'es', label: 'Spanish' },
 ];
 
+const builtAt = new Intl.DateTimeFormat('en-GB', {
+  day: 'numeric',
+  month: 'short',
+  year: 'numeric',
+  hour: '2-digit',
+  minute: '2-digit',
+  timeZone: 'UTC',
+}).format(new Date(__BUILD_TIME__));
+
 const sourced = terms.filter((t) => t.status !== 'draft').length;
 
 export function Settings() {
@@ -49,6 +58,24 @@ export function Settings() {
             provider’s documentation for Spain. The rest are marked Draft.
           </p>
           <p className="secondary small">Saved terms and these settings stay on this device.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Version</h2>
+        <div className="card list">
+          <div className="row">
+            <span className="row-text">
+              <span className="row-title regular">Built</span>
+            </span>
+            <span className="row-meta">{builtAt} UTC</span>
+          </div>
+          <div className="row">
+            <span className="row-text">
+              <span className="row-title regular">Build</span>
+            </span>
+            <span className="row-meta build-id">{__BUILD_COMMIT__}</span>
+          </div>
         </div>
       </section>
     </main>
