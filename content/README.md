@@ -58,15 +58,28 @@ files; nothing about a term is stored anywhere else.
 
 ## Status
 
-- `draft`: at least one form or note still rests on general knowledge or on
-  a lead.
-- `sourced`: every form and note rests on a checked source.
+- `draft`: the main Spanish form has not yet been found in a checked source.
+- `sourced`: the main Spanish form was found in at least one checked source.
+  Alternative forms and notes may rest on working knowledge of usage in Spain;
+  a form carries `usedBy` only where it was actually seen.
 - `verified`: additionally confirmed by a native-speaking professional.
 
 Sources come in two strengths. A source with `found` and `checked` was
 fetched on that date and contains that text. A source with only a `lead`
 carries text that a web search attributed to the URL; the page itself has not
 been read, so it is a pointer for checking, not evidence.
+
+## Where to look, in order
+
+1. INCIBE's glossary of cyber security terms. If the word is there, start
+   from it.
+2. For a technical word, the Spanish documentation of Microsoft Azure and
+   Google Cloud, then AWS and Oracle. For a legal, risk or framework word, the
+   law or the framework itself: the BOE, the Spanish text of EU law, the ENS.
+3. Spain-based engineering blogs and job adverts, mainly to see whether the
+   English word is kept in everyday use.
+
+One confirmed sighting of the main form is enough. Two is plenty.
 
 ## Certifications and frameworks
 

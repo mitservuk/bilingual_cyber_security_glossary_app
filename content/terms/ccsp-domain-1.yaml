@@ -363,7 +363,7 @@
       url: "https://aws.amazon.com/es/compliance/soc-faqs/"
       found: ["la opinión del auditor externo"]
       checked: 2026-11-14
-  status: draft
+  status: sourced
 
 - id: grc.regulator
   en:
@@ -3608,7 +3608,7 @@
       url: "https://www.xataka.com/tecnologiazen/donde-van-los-datos-que-borras-en-tu-movil-y-como-te-los-pueden-recuperar-sin-quererlo"
       found: ["borrado seguro"]
       checked: 2026-11-14
-  status: draft
+  status: sourced
 
 - id: sec.cryptographic-erasure
   en:
@@ -3657,7 +3657,7 @@
       url: "https://www.incibe.es/ed2026/talento-hacker/blog/este-es-el-rol-del-experto-en-ciberseguridad-en-el-borrado-seguro-de-datos"
       found: ["Eliminación criptográfica", "cifrar los datos y destruir la clave de descifrado"]
       checked: 2026-11-14
-  status: draft
+  status: sourced
 
 - id: sec.security-baseline
   en:
@@ -3993,7 +3993,7 @@
       url: "https://aws.amazon.com/es/blogs/aws-spanish/gestion-automatica-de-recursos-efimeros-para-pruebas-usando-tecnologia-sin-servidor/"
       found: ["recursos efímeros"]
       checked: 2026-11-14
-  status: draft
+  status: sourced
 
 - id: sec.secure-by-design
   en:
@@ -4235,7 +4235,7 @@
       url: "https://learn.microsoft.com/es-es/azure/cloud-adoption-framework/strategy/inform/cost-efficiency"
       found: ["relación costo-beneficio"]
       checked: 2026-11-14
-  status: draft
+  status: sourced
 
 - id: grc.roi
   en:

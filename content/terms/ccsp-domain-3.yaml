@@ -47,7 +47,7 @@
       url: "https://learn.microsoft.com/es-es/security/privileged-access-workstations/privileged-access-access-model"
       found: ["creando un plano de gestión", "Plano de administración"]
       checked: 2026-11-14
-  status: draft
+  status: sourced
 
 - id: cloud.control-plane
   en:
@@ -1246,7 +1246,7 @@
       url: "https://docs.aws.amazon.com/es_es/whitepapers/latest/saas-architecture-fundamentals/tenant-isolation.html"
       found: ["Esto es lo que denominamos aislamiento de inquilinos"]
       checked: 2026-11-14
-  status: draft
+  status: sourced
 
 - id: sec.network-segmentation
   en:

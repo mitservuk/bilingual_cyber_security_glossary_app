@@ -691,7 +691,7 @@
       url: "https://cloud.google.com/learn/what-is-object-storage?hl=es"
       found: ["un gran volumen de datos"]
       checked: 2026-11-14
-  status: draft
+  status: sourced
 
 - id: law.data-sovereignty
   en:
@@ -2119,7 +2119,7 @@
       url: "https://docs.aws.amazon.com/es_es/kms/latest/developerguide/kms-cryptography.html"
       found: ["El cifrado de sobres es la práctica de cifrar los datos", "Cifrado de sobre"]
       checked: 2026-11-14
-  status: draft
+  status: sourced
 
 - id: sec.homomorphic-encryption
   en:
@@ -3284,7 +3284,7 @@
       url: "https://www.aepd.es/guias/gestion-riesgo-y-evaluacion-impacto-en-tratamientos-datos-personales.pdf"
       found: ["registro de actividades de tratamiento con el contenido mínimo que exige el artículo 30 del RGPD"]
       checked: 2026-11-14
-  status: draft
+  status: sourced
 
 - id: sec.sensitive-data
   en:
@@ -3491,7 +3491,7 @@
       url: "https://docs.aws.amazon.com/es_es/macie/latest/user/what-is-macie.html"
       found: ["información de identificación personal (PII)"]
       checked: 2026-11-14
-  status: draft
+  status: sourced
 
 - id: law.phi
   en:
@@ -4145,7 +4145,7 @@
       url: "https://www.boe.es/buscar/doc.php?id=BOE-A-2015-10725"
       found: ["Artículo 588 octies. Orden de conservación de datos", "durante un periodo máximo de noventa días"]
       checked: 2026-11-14
-  status: draft
+  status: sourced
 
 - id: sec.auditability
   en:

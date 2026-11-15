@@ -1,0 +1,3209 @@
+# CCSP Domain 5: Cloud Security Operations.
+# Format is described in content/README.md. These entries were written from
+# working knowledge of usage in Spain; each `found` text was then located in a
+# page already downloaded for earlier entries and confirmed with
+# scripts/check_sources.py. Forms with no usedBy have not been seen in a source.
+
+- id: sec.tpm
+  en:
+    term: trusted platform module
+    acronym: TPM
+    definition: A tamper-resistant chip, or its virtual equivalent, that stores keys and measures
+      the boot sequence so a machine can prove it started in a known state.
+  es:
+    verdict: both
+    acronym: TPM
+    forms:
+      - text: módulo de plataforma segura
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - eu
+        note: The name used in Windows and Azure in Spanish.
+      - text: TPM
+        article: el
+        kind: noun
+        headline: true
+        usedBy:
+          - microsoft
+        note: What people say day to day.
+      - text: módulo de plataforma de confianza
+        article: el
+        kind: noun
+        note: A more literal translation that also circulates.
+    say: 'TPM is spelled out in Spanish: te-pe-eme.'
+    definition: Chip resistente a manipulaciones que guarda claves y mide el arranque para
+      demostrar que el equipo se ha iniciado en un estado conocido.
+    examples:
+      - es: Las máquinas virtuales de producción llevan un TPM virtual para el arranque medido.
+        en: The production virtual machines have a virtual TPM for measured boot.
+  topics:
+    - crypto
+    - hardening
+  technology:
+    - endpoint
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - sec.hsm
+    - cloud.confidential-computing
+    - sec.key-management
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/databox/data-box-security
+      found:
+        - Módulo de plataforma segura
+        - TPM
+      checked: 2026-11-14
+    - label: Reglamento de Ejecución (UE) 2024/482 (EUCC), en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-80181
+      found:
+        - módulo de plataforma segura
+      checked: 2026-11-14
+  status: sourced
+
+- id: cloud.guest-os
+  en:
+    term: guest operating system
+    definition: The operating system that runs inside a virtual machine, on top of the hypervisor.
+  es:
+    verdict: translated
+    forms:
+      - text: sistema operativo invitado
+        article: el
+        kind: noun
+        primary: true
+        plural: los sistemas operativos invitados
+        usedBy:
+          - microsoft
+          - google
+      - text: SO invitado
+        article: el
+        kind: noun
+        register: informal
+        usedBy:
+          - google
+        note: SO is the usual abbreviation of sistema operativo.
+    definition: Sistema operativo que se ejecuta dentro de una máquina virtual, por encima
+      del hipervisor.
+    examples:
+      - es: El cliente es responsable de parchear el sistema operativo invitado.
+        en: The customer is responsible for patching the guest operating system.
+  topics:
+    - architecture
+    - hardening
+  technology:
+    - cloud-general
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - cloud.virtual-machine
+    - cloud.hypervisor
+    - cloud.host
+    - cloud.shared-responsibility
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/dotnet/architecture/microservices/container-docker-introduction/docker-defined
+      found:
+        - sistema operativo invitado
+      checked: 2026-11-14
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/discover/containers-vs-vms?hl=es
+      found:
+        - sistema operativo invitado
+        - un SO invitado completo
+      checked: 2026-11-14
+  status: sourced
+
+- id: cloud.host
+  en:
+    term: host
+    definition: The physical machine whose hardware is shared out to virtual machines or containers;
+      more loosely, any computer on a network.
+  es:
+    verdict: both
+    forms:
+      - text: host
+        article: el
+        kind: noun
+        primary: true
+        plural: los hosts
+        usedBy:
+          - microsoft
+          - google
+        note: The English word is the everyday term among engineers.
+      - text: anfitrión
+        article: el
+        kind: noun
+        usedBy:
+          - microsoft
+        note: The Spanish word, common in translated documentation, often as equipo anfitrión
+          or servidor anfitrión.
+    say: 'Host is said as in English, with an audible h: ''jost''.'
+    definition: Máquina física cuyos recursos se reparten entre máquinas virtuales o contenedores;
+      por extensión, cualquier equipo conectado a una red.
+    examples:
+      - es: Si el host se cae, las máquinas virtuales se reinician en otro nodo.
+        en: If the host goes down, the virtual machines restart on another node.
+  topics:
+    - architecture
+  technology:
+    - cloud-general
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - cloud.guest-os
+    - cloud.hypervisor
+    - cloud.virtual-machine
+    - sec.bastion-host
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/security/fundamentals/isolation-choices
+      found:
+        - de host
+      checked: 2026-11-14
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/learn/what-is-a-virtual-machine?hl=es
+      found:
+        - del host
+      checked: 2026-11-14
+    - label: Microsoft Security, es-ES
+      url: https://www.microsoft.com/es-es/security/business/security-101/what-is-container-security
+      found:
+        - sistema anfitrión
+      checked: 2026-11-14
+  status: sourced
+
+- id: cloud.cluster
+  en:
+    term: cluster
+    definition: A group of machines that work together and are managed as one system, so that
+      work can be spread across them and survive the loss of a node.
+  es:
+    verdict: translated
+    forms:
+      - text: clúster
+        article: el
+        kind: noun
+        primary: true
+        plural: los clústeres
+        usedBy:
+          - microsoft
+          - google
+        note: The adapted spelling with an accent is the standard one.
+      - text: cluster
+        article: el
+        kind: noun
+        note: Often written without the accent, as in English.
+    say: Pronounced 'clúster', stressed on the first syllable.
+    definition: Conjunto de máquinas que trabajan juntas y se gestionan como un único sistema.
+    examples:
+      - es: Hemos desplegado un clúster de Kubernetes con tres nodos.
+        en: We have deployed a Kubernetes cluster with three nodes.
+  topics:
+    - architecture
+  technology:
+    - cloud-general
+    - kubernetes
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - tech.kubernetes
+    - sec.high-availability
+    - cloud.orchestration
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/architecture/guide/technology-choices/compute-decision-tree
+      found:
+        - un clúster de
+      checked: 2026-11-14
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/discover/what-is-container-orchestration?hl=es
+      found:
+        - un clúster de
+      checked: 2026-11-14
+  status: sourced
+
+- id: tech.capacity-management
+  en:
+    term: capacity management
+    definition: Making sure that compute, storage and network capacity matches current and
+      forecast demand at an acceptable cost.
+  es:
+    verdict: translated
+    forms:
+      - text: gestión de la capacidad
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+      - text: gestión de capacidad
+        article: la
+        kind: noun
+        note: The same term without the article, equally common.
+    definition: Proceso que asegura que la capacidad de cómputo, almacenamiento y red cubre
+      la demanda actual y prevista con un coste razonable.
+    examples:
+      - es: La gestión de la capacidad evita quedarse sin recursos en los picos de demanda.
+        en: Capacity management avoids running out of resources at peak demand.
+  topics:
+    - architecture
+  technology:
+    - cloud-general
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  frameworks:
+    - ITIL
+  related:
+    - cloud.scalability
+    - cloud.rapid-elasticity
+    - tech.performance-monitoring
+  sources:
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - gestión de la capacidad
+      checked: 2026-11-14
+    - label: BOE, Directiva (UE) 2022/2555 (NIS 2)
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81963
+      found:
+        - gestión de la capacidad
+      checked: 2026-11-14
+  status: sourced
+
+- id: tech.performance-monitoring
+  en:
+    term: performance monitoring
+    definition: Continuously measuring how systems behave, such as response time, throughput
+      and resource use, to spot degradation before users do.
+  es:
+    verdict: translated
+    forms:
+      - text: monitorización del rendimiento
+        article: la
+        kind: noun
+        primary: true
+      - text: supervisión del rendimiento
+        article: la
+        kind: noun
+        usedBy:
+          - microsoft
+        note: The wording usual in Microsoft documentation.
+    definition: Medición continua del comportamiento de los sistemas, como tiempos de respuesta
+      y uso de recursos, para detectar degradaciones.
+    examples:
+      - es: La monitorización del rendimiento mostró un cuello de botella en la base de datos.
+        en: Performance monitoring showed a bottleneck in the database.
+    watchOut: Rendimiento is performance in the technical sense. Monitoreo del rendimiento
+      is the Latin American form.
+  topics:
+    - detection
+  technology:
+    - cloud-general
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - sec.monitoring
+    - tech.capacity-management
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/architecture/guide/architecture-styles/microservices
+      found:
+        - supervisión del rendimiento
+      checked: 2026-11-14
+  status: draft
+
+- id: sec.secure-by-default
+  en:
+    term: secure by default
+    definition: The principle that a product ships with its safest settings switched on, so
+      that staying secure takes no extra work.
+  es:
+    verdict: translated
+    forms:
+      - text: seguro por defecto
+        kind: adjective
+        primary: true
+        usedBy:
+          - eu
+          - engineers
+      - text: seguridad por defecto
+        article: la
+        kind: noun
+        usedBy:
+          - microsoft
+        note: The noun form, used for the principle itself.
+      - text: seguro de forma predeterminada
+        kind: adjective
+        usedBy:
+          - microsoft
+        note: Microsoft's rendering; predeterminado is its standard word for default.
+    definition: Principio según el cual un producto se entrega con su configuración más segura
+      ya activada.
+    examples:
+      - es: 'El servicio es seguro por defecto: el cifrado viene activado.'
+        en: 'The service is secure by default: encryption comes switched on.'
+  topics:
+    - hardening
+    - architecture
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - sec.secure-by-design
+    - sec.security-baseline
+    - sec.misconfiguration
+  sources:
+    - label: Reglamento (UE) 2024/2847 (Reglamento de Ciberresiliencia), texto en español
+        publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81720
+      found:
+        - segura por defecto
+      checked: 2026-11-14
+    - label: Telefónica Tech, blog
+      url: https://telefonicatech.com/blog/programadores-saludables-desayunan-cereales-criptograficos
+      found:
+        - seguras por defecto
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/security/benchmark/azure/mcsb-v2-asset-management
+      found:
+        - seguridad por defecto
+        - seguro de forma predeterminada
+      checked: 2026-11-14
+  status: sourced
+
+- id: cloud.type-1-hypervisor
+  en:
+    term: type 1 hypervisor
+    definition: A hypervisor that runs directly on the hardware with no host operating system
+      beneath it, as cloud providers use.
+  es:
+    verdict: translated
+    forms:
+      - text: hipervisor de tipo 1
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - aws
+      - text: hipervisor bare metal
+        article: el
+        kind: noun
+        usedBy:
+          - aws
+        note: Bare metal is kept in English.
+      - text: hipervisor nativo
+        article: el
+        kind: noun
+    definition: Hipervisor que se ejecuta directamente sobre el hardware, sin sistema operativo
+      anfitrión.
+    examples:
+      - es: Los proveedores de nube utilizan hipervisores de tipo 1.
+        en: Cloud providers use type 1 hypervisors.
+  topics:
+    - architecture
+  technology:
+    - cloud-general
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - cloud.hypervisor
+    - cloud.type-2-hypervisor
+    - sec.vm-escape
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/virtualization/hyper-v-on-windows/about/
+      found:
+        - hipervisor de tipo 1
+      checked: 2026-11-14
+    - label: AWS, páginas en español
+      url: https://aws.amazon.com/es/what-is/virtualization/
+      found:
+        - Hipervisor de tipo 1
+        - hipervisor bare metal
+      checked: 2026-11-14
+  status: sourced
+
+- id: cloud.type-2-hypervisor
+  en:
+    term: type 2 hypervisor
+    definition: A hypervisor that runs as an application on top of an ordinary operating system,
+      as on a developer's laptop.
+  es:
+    verdict: translated
+    forms:
+      - text: hipervisor de tipo 2
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - aws
+      - text: hipervisor alojado
+        article: el
+        kind: noun
+        usedBy:
+          - aws
+    definition: Hipervisor que se ejecuta como una aplicación sobre un sistema operativo convencional.
+    examples:
+      - es: VirtualBox es un hipervisor de tipo 2 muy usado en entornos de pruebas.
+        en: VirtualBox is a type 2 hypervisor widely used in test environments.
+  topics:
+    - architecture
+  technology:
+    - cloud-general
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - cloud.hypervisor
+    - cloud.type-1-hypervisor
+    - cloud.host
+  sources:
+    - label: AWS, páginas en español
+      url: https://aws.amazon.com/es/what-is/virtualization/
+      found:
+        - Hipervisor de tipo 2
+        - como hipervisor alojado
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.remote-access
+  en:
+    term: remote access
+    definition: Connecting to a system or network from somewhere else, typically over the
+      internet, which needs strong authentication and an encrypted channel.
+  es:
+    verdict: translated
+    forms:
+      - text: acceso remoto
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - microsoft
+      - text: acceder en remoto
+        kind: verb
+        register: informal
+        note: En remoto is the everyday way to say remotely.
+    definition: Conexión a un sistema o a una red desde otra ubicación, normalmente a través
+      de internet.
+    examples:
+      - es: El acceso remoto a los servidores exige VPN y doble factor.
+        en: Remote access to the servers requires a VPN and two-factor authentication.
+  topics:
+    - network
+    - iam
+  technology:
+    - networking
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - sec.vpn
+    - sec.ssh
+    - sec.rdp
+    - sec.bastion-host
+    - sec.mfa
+  sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - conseguir acceso remoto al
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/cloud-adoption-framework/ready/azure-best-practices/perimeter-networks
+      found:
+        - Acceso remoto
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.ssh
+  en:
+    term: Secure Shell
+    acronym: SSH
+    definition: A protocol for logging in to and running commands on a remote machine over
+      an encrypted channel, normally authenticated with a key pair.
+  es:
+    verdict: english-kept
+    forms:
+      - text: SSH
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - microsoft
+        note: 'Never translated. Used as a noun and loosely as a verb: conectarse por SSH.'
+    say: 'Spelled out: ese-ese-hache.'
+    definition: Protocolo para iniciar sesión y ejecutar comandos en una máquina remota a
+      través de un canal cifrado.
+    examples:
+      - es: Solo se permite la conexión por SSH con clave pública desde el bastión.
+        en: SSH connections are only allowed with a public key from the bastion.
+  topics:
+    - network
+    - authn
+  technology:
+    - networking
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - sec.remote-access
+    - sec.bastion-host
+    - sec.jump-box
+    - sec.asymmetric-encryption
+  sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - de SSH
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/bastion/tutorial-create-host-portal
+      found:
+        - usar SSH
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.rdp
+  en:
+    term: Remote Desktop Protocol
+    acronym: RDP
+    definition: Microsoft's protocol for controlling a Windows machine's graphical desktop
+      over the network; a frequent target when exposed to the internet.
+  es:
+    verdict: both
+    acronym: RDP
+    forms:
+      - text: protocolo de escritorio remoto
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+      - text: RDP
+        article: el
+        kind: noun
+        headline: true
+        usedBy:
+          - microsoft
+        note: The acronym is what people say.
+      - text: Escritorio remoto
+        article: el
+        kind: noun
+        usedBy:
+          - microsoft
+        note: The name of the Windows feature itself.
+    say: 'Spelled out: erre-de-pe.'
+    definition: Protocolo de Microsoft para controlar el escritorio gráfico de un equipo Windows
+      a través de la red.
+    examples:
+      - es: Nunca expongas el RDP directamente a internet.
+        en: Never expose RDP directly to the internet.
+  topics:
+    - network
+  technology:
+    - networking
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - sec.remote-access
+    - sec.ssh
+    - sec.bastion-host
+    - sec.ransomware
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/azure-resource-manager/management/control-plane-and-data-plane
+      found:
+        - Protocolo de escritorio remoto
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/bastion/tutorial-create-host-portal
+      found:
+        - RDP para
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/entra/standards/pci-dss-guidance
+      found:
+        - escritorio remoto
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.vlan
+  en:
+    term: virtual LAN
+    acronym: VLAN
+    definition: A logical network carved out of a physical switch infrastructure so that groups
+      of devices are separated as if they were on different switches.
+  es:
+    verdict: both
+    acronym: VLAN
+    forms:
+      - text: VLAN
+        article: la
+        kind: noun
+        primary: true
+        plural: las VLAN
+        usedBy:
+          - official
+          - microsoft
+        note: Feminine, because it is a red.
+      - text: red de área local virtual
+        article: la
+        kind: noun
+        register: formal
+        usedBy:
+          - official
+    say: 'Said as a word: ''be-lan''.'
+    definition: Red lógica creada sobre una infraestructura de conmutadores para separar grupos
+      de equipos.
+    examples:
+      - es: Los servidores de pago están en una VLAN aparte.
+        en: The payment servers are on a separate VLAN.
+  topics:
+    - network
+  technology:
+    - networking
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - sec.network-segmentation
+    - sec.microsegmentation
+    - cloud.virtual-network
+  sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - VLAN
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/security/fundamentals/isolation-choices
+      found:
+        - de VLAN Cada
+      checked: 2026-11-14
+    - label: INCIBE y Universidad de León, Guía de buenas prácticas de ciberseguridad para
+        redes privadas 5G
+      url: https://www.incibe.es/sites/default/files/2025-12/INCIBE&ULE_GuiaBuenasPracticasCiberseguridadRedesPrivadas5G.pdf
+      found:
+        - Red de Área Local Virtual
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.dnssec
+  en:
+    term: DNSSEC
+    expansion: Domain Name System Security Extensions
+    definition: Extensions that digitally sign DNS records so a resolver can check that an
+      answer is authentic and unaltered.
+  es:
+    verdict: english-kept
+    forms:
+      - text: DNSSEC
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: extensiones de seguridad del DNS
+        article: las
+        kind: noun
+        register: formal
+        note: The descriptive name, used when explaining the acronym.
+    say: 'Spelled out up to the S, then ''sec'': de-ene-ese-sec.'
+    definition: Extensiones que firman digitalmente los registros DNS para comprobar que una
+      respuesta es auténtica y no ha sido alterada.
+    examples:
+      - es: Hemos activado DNSSEC en la zona para evitar la suplantación de respuestas.
+        en: We have enabled DNSSEC on the zone to prevent forged answers.
+  topics:
+    - network
+    - crypto
+  technology:
+    - networking
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - sec.digital-signature
+    - sec.integrity
+    - sec.mitm
+  sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - DNSSEC
+      checked: 2026-11-14
+    - label: INCIBE, Guía de implantación y buenas prácticas de DNSSEC
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/incibe_guia_de_implantacion_y_buenas_practicas_de_dnssec.pdf
+      found:
+        - de DNSSEC
+      checked: 2026-11-14
+  status: sourced
+
+- id: tech.dhcp
+  en:
+    term: DHCP
+    expansion: Dynamic Host Configuration Protocol
+    definition: The protocol that hands out IP addresses and network settings to devices automatically
+      when they join a network.
+  es:
+    verdict: english-kept
+    forms:
+      - text: DHCP
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - aws
+      - text: protocolo de configuración dinámica de host
+        article: el
+        kind: noun
+        register: formal
+        usedBy:
+          - aws
+    say: 'Spelled out: de-hache-ce-pe.'
+    definition: Protocolo que asigna automáticamente direcciones IP y parámetros de red a
+      los equipos que se conectan.
+    examples:
+      - es: El servidor DHCP asigna las direcciones de la red de invitados.
+        en: The DHCP server assigns the addresses on the guest network.
+  topics:
+    - network
+  technology:
+    - networking
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - sec.vlan
+    - cloud.virtual-network
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/security/fundamentals/isolation-choices
+      found:
+        - tráfico DHCP
+      checked: 2026-11-14
+    - label: AWS, documentación en español
+      url: https://docs.aws.amazon.com/es_es/vpc/latest/userguide/vpc-security-groups.html
+      found:
+        - DHCP
+        - Protocolo de configuración dinámica de host
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.jump-box
+  en:
+    term: jump box
+    definition: A hardened machine that administrators log in to first and from which they
+      reach systems on a protected network; also called a jump server.
+  es:
+    verdict: both
+    forms:
+      - text: servidor de salto
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: máquina de salto
+        article: la
+        kind: noun
+      - text: jump box
+        article: el
+        kind: noun
+        headline: true
+        usedBy:
+          - microsoft
+        note: Also jump server or jump host, all kept in English.
+    definition: Equipo bastionado al que los administradores se conectan primero para llegar
+      desde él a los sistemas de una red protegida.
+    examples:
+      - es: A la red de gestión solo se entra a través del servidor de salto.
+        en: The management network can only be reached through the jump box.
+  topics:
+    - network
+    - hardening
+  technology:
+    - networking
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - sec.bastion-host
+    - sec.ssh
+    - sec.rdp
+    - sec.pam
+  sources:
+    - label: INCIBE-CERT, blog
+      url: https://www.incibe.es/incibe-cert/blog/sistemas-pam-un-escudo-para-la-proteccion-de-accesos
+      found:
+        - servidor de salto
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/networking/design-guide/azure-firewall
+      found:
+        - un jump box sin
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.hardening
+  en:
+    term: hardening
+    definition: Reducing a system's attack surface by removing what it does not need and tightening
+      its configuration against a baseline.
+  es:
+    verdict: both
+    forms:
+      - text: bastionado
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+        note: The term preferred in Spain, used in the CCN-STIC guides. The verb is bastionar.
+      - text: hardening
+        article: el
+        kind: noun
+        headline: true
+        note: Very common in speech and in job adverts.
+      - text: securización
+        article: la
+        kind: noun
+        register: informal
+        usedBy:
+          - official
+        note: Industry jargon, with the verb securizar. Not in the dictionary, but widely
+          used.
+      - text: fortificación
+        article: la
+        kind: noun
+        usedBy:
+          - official
+    definition: Reducción de la superficie de ataque de un sistema eliminando lo innecesario
+      y reforzando su configuración.
+    examples:
+      - es: Aplicamos la guía de bastionado antes de pasar el servidor a producción.
+        en: We apply the hardening guide before moving the server into production.
+    watchOut: Endurecimiento is the literal translation and is mostly Latin American. In Spain
+      say bastionado or hardening.
+  topics:
+    - hardening
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - sec.security-baseline
+    - sec.attack-surface
+    - sec.bastion-host
+    - sec.misconfiguration
+  sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - Bastionado
+      checked: 2026-11-14
+    - label: INCIBE-CERT, blog
+      url: https://www.incibe.es/incibe-cert/blog/bastionado-sistemas-el-caso-linux
+      found:
+        - Bastionado de
+      checked: 2026-11-14
+    - label: INCIBE-CERT, blog
+      url: https://www.incibe.es/incibe-cert/blog/configuraciones-seguras-en-dispositivos-industriales
+      found:
+        - la securización de
+      checked: 2026-11-14
+    - label: INCIBE-CERT, blog
+      url: https://www.incibe.es/incibe-cert/blog/medidas-de-ciberseguridad-desde-una-perspectiva-global
+      found:
+        - la fortificación
+      checked: 2026-11-14
+  status: sourced
+
+- id: tech.configuration-management
+  en:
+    term: configuration management
+    definition: Keeping an accurate record of how systems are configured and controlling changes
+      to it, so that every system matches its intended state.
+  es:
+    verdict: translated
+    forms:
+      - text: gestión de la configuración
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - google
+          - official
+      - text: gestión de configuraciones
+        article: la
+        kind: noun
+        usedBy:
+          - oracle
+    definition: Registro y control de la configuración de los sistemas para que coincidan
+      con el estado previsto.
+    examples:
+      - es: La gestión de la configuración detecta cualquier desviación respecto a la línea
+          base.
+        en: Configuration management detects any drift from the baseline.
+  topics:
+    - hardening
+    - asset
+  technology:
+    - iac
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  frameworks:
+    - ITIL
+  related:
+    - sec.security-baseline
+    - tech.iac
+    - tech.change-management
+    - tech.scm
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/discover/what-is-container-orchestration?hl=es
+      found:
+        - Gestión de la configuración
+      checked: 2026-11-14
+    - label: INCIBE y Universidad de León, Guía de buenas prácticas de ciberseguridad para
+        redes privadas 5G
+      url: https://www.incibe.es/sites/default/files/2025-12/INCIBE&ULE_GuiaBuenasPracticasCiberseguridadRedesPrivadas5G.pdf
+      found:
+        - Gestión de la configuración
+      checked: 2026-11-14
+    - label: Oracle España
+      url: https://www.oracle.com/es/cloud/cloud-native/container-engine-kubernetes/what-is-kubernetes/
+      found:
+        - Gestión de configuraciones
+      checked: 2026-11-14
+  status: sourced
+
+- id: tech.change-management
+  en:
+    term: change management
+    definition: The process for requesting, assessing, approving and recording changes to
+      systems so that they do not cause outages or weaken security.
+  es:
+    verdict: translated
+    forms:
+      - text: gestión de cambios
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - official
+      - text: gestión del cambio
+        article: la
+        kind: noun
+        usedBy:
+          - aws
+        note: Also used, though it more often means organisational change.
+      - text: control de cambios
+        article: el
+        kind: noun
+        usedBy:
+          - microsoft
+    definition: Proceso para solicitar, evaluar, aprobar y registrar los cambios en los sistemas.
+    examples:
+      - es: Todo cambio en producción pasa por el comité de gestión de cambios.
+        en: Every change to production goes through the change management board.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  frameworks:
+    - ITIL
+  related:
+    - tech.release-management
+    - tech.configuration-management
+    - tech.maintenance-window
+    - tech.rollback
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/security/benchmark/azure/mcsb-v2-asset-management
+      found:
+        - gestión de cambios
+        - control de cambios
+      checked: 2026-11-14
+    - label: INCIBE y Universidad de León, Guía de buenas prácticas de ciberseguridad para
+        redes privadas 5G
+      url: https://www.incibe.es/sites/default/files/2025-12/INCIBE&ULE_GuiaBuenasPracticasCiberseguridadRedesPrivadas5G.pdf
+      found:
+        - Gestión de cambios
+      checked: 2026-11-14
+    - label: AWS, páginas en español
+      url: https://aws.amazon.com/es/what-is/multicloud/
+      found:
+        - gestión del cambio
+      checked: 2026-11-14
+  status: sourced
+
+- id: tech.release-management
+  en:
+    term: release management
+    definition: Planning, building, testing and scheduling new versions of software or services
+      so that they reach production in a controlled way.
+  es:
+    verdict: translated
+    forms:
+      - text: gestión de versiones
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - google
+          - official
+      - text: gestión de releases
+        article: la
+        kind: noun
+        register: informal
+        note: Release is often kept in English by development teams.
+      - text: gestión de entregas
+        article: la
+        kind: noun
+    definition: Planificación, construcción, prueba y programación de las nuevas versiones
+      para que lleguen a producción de forma controlada.
+    examples:
+      - es: La gestión de versiones coordina qué cambios entran en cada entrega.
+        en: Release management coordinates which changes go into each release.
+  topics:
+    - grc
+    - appsec
+  technology:
+    - ci-cd
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  frameworks:
+    - ITIL
+  related:
+    - tech.change-management
+    - tech.deployment
+    - tech.ci-cd
+    - tech.version-control
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/discover/what-is-api-development?hl=es
+      found:
+        - gestión de versiones
+      checked: 2026-11-14
+    - label: INCIBE y Universidad de León, Guía de buenas prácticas de ciberseguridad para
+        redes privadas 5G
+      url: https://www.incibe.es/sites/default/files/2025-12/INCIBE&ULE_GuiaBuenasPracticasCiberseguridadRedesPrivadas5G.pdf
+      found:
+        - gestión de versiones
+      checked: 2026-11-14
+  status: sourced
+
+- id: tech.deployment
+  en:
+    term: deployment
+    definition: Putting software or infrastructure into an environment where it runs, and
+      the act of doing so.
+  es:
+    verdict: translated
+    forms:
+      - text: despliegue
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - microsoft
+      - text: desplegar
+        kind: verb
+        usedBy:
+          - microsoft
+      - text: implementación
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: The word Microsoft and AWS documentation use for deployment.
+    definition: Puesta en marcha de software o infraestructura en un entorno donde se ejecuta.
+    examples:
+      - es: El despliegue en producción se hace los martes por la mañana.
+        en: Deployment to production happens on Tuesday mornings.
+    watchOut: In vendor documentation implementación usually means deployment, not implementation.
+      Engineers in Spain say despliegue, and informally deploy.
+  topics:
+    - appsec
+  technology:
+    - ci-cd
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - tech.ci-cd
+    - tech.pipeline
+    - tech.rollback
+    - tech.release-management
+  sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - un despliegue de
+        - Implementación completa
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/security/fundamentals/secrets-best-practices
+      found:
+        - despliegue continuo
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/container-apps/storage-mounts
+      found:
+        - de desplegar la
+      checked: 2026-11-14
+  status: sourced
+
+- id: tech.rollback
+  en:
+    term: rollback
+    definition: Returning a system to its previous working version or state after a change
+      goes wrong.
+  es:
+    verdict: both
+    forms:
+      - text: rollback
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - engineers
+        note: 'The usual word among engineers: hacer rollback.'
+      - text: reversión
+        article: la
+        kind: noun
+        note: The Spanish term in documentation.
+      - text: revertir
+        kind: verb
+        usedBy:
+          - microsoft
+      - text: vuelta atrás
+        article: la
+        kind: noun
+        usedBy:
+          - engineers
+        note: Plain Spanish, common in change plans as plan de vuelta atrás.
+    definition: Vuelta de un sistema a su versión o estado anterior después de un cambio fallido.
+    examples:
+      - es: Si falla la migración, hacemos rollback a la versión anterior.
+        en: If the migration fails, we roll back to the previous version.
+  topics:
+    - incident
+  technology:
+    - ci-cd
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - tech.deployment
+    - tech.change-management
+    - sec.restore
+    - sec.snapshot
+  sources:
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/patrones-arquitectura-microservicios-saga-api-gateway-service-discovery/
+      found:
+        - el rollback return
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/reliability/concept-business-continuity-high-availability-disaster-recovery
+      found:
+        - Revertir
+      checked: 2026-11-14
+    - label: Xataka
+      url: https://www.xataka.com/n/alberto-lopez-director-ciberseguridad-soluciones-digitales-mastercard-espana-biometria-ofrece-mejor-experiencia-compra-para-cliente-mantiene-altos-estandares-seguridad
+      found:
+        - sin vuelta atrás
+      checked: 2026-11-14
+  status: sourced
+
+- id: tech.maintenance-window
+  en:
+    term: maintenance window
+    definition: An agreed period, usually at a quiet time, during which changes and patching
+      may be carried out and some disruption is accepted.
+  es:
+    verdict: translated
+    forms:
+      - text: ventana de mantenimiento
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - google
+      - text: parada programada
+        article: la
+        kind: noun
+        note: A planned outage, when the service really goes down.
+    definition: Periodo acordado, normalmente de baja actividad, en el que se pueden aplicar
+      cambios y parches.
+    examples:
+      - es: Los parches se aplican en la ventana de mantenimiento del domingo.
+        en: Patches are applied in Sunday's maintenance window.
+  topics:
+    - vulnmgmt
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - sec.patch-management
+    - tech.change-management
+    - sec.availability
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/reliability/concept-failover-failback
+      found:
+        - ventana de mantenimiento
+      checked: 2026-11-14
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/learn/what-is-cloud-native?hl=es
+      found:
+        - ventana de mantenimiento
+      checked: 2026-11-14
+  status: sourced
+
+- id: cloud.immutable-infrastructure
+  en:
+    term: immutable infrastructure
+    definition: An approach in which servers are never modified after deployment; a change
+      means building a new image and replacing the old instances.
+  es:
+    verdict: translated
+    forms:
+      - text: infraestructura inmutable
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+    definition: 'Enfoque en el que los servidores no se modifican una vez desplegados: cada
+      cambio se hace sustituyéndolos por instancias nuevas.'
+    examples:
+      - es: 'Con infraestructura inmutable no se parchea el servidor: se sustituye por una
+          imagen nueva.'
+        en: 'With immutable infrastructure you do not patch the server: you replace it with
+          a new image.'
+  topics:
+    - architecture
+    - hardening
+  technology:
+    - iac
+    - containers-oci
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - tech.iac
+    - cloud.container
+    - cloud.ephemeral-computing
+    - sec.patch-management
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/architecture/guide/
+      found:
+        - código Infraestructura inmutable
+      checked: 2026-11-14
+  status: sourced
+
+- id: fw.itil
+  en:
+    term: ITIL
+    expansion: Information Technology Infrastructure Library
+    definition: A widely adopted body of practice for IT service management, covering how
+      services are designed, changed, operated and improved.
+  es:
+    verdict: english-kept
+    forms:
+      - text: ITIL
+        kind: noun
+        primary: true
+        note: 'Used without an article: trabajamos con ITIL.'
+    say: Said as a word, 'ítil'.
+    definition: Conjunto de buenas prácticas para la gestión de servicios de TI.
+    examples:
+      - es: El equipo de operaciones sigue las prácticas de ITIL para la gestión de incidencias.
+        en: The operations team follows ITIL practices for incident management.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  frameworks:
+    - ITIL
+  related:
+    - fw.iso-20000
+    - tech.change-management
+    - tech.problem-management
+    - fw.cobit
+  sources: []
+  status: draft
+
+- id: tech.problem-management
+  en:
+    term: problem management
+    definition: The practice of finding and removing the underlying causes of incidents so
+      that they stop recurring.
+  es:
+    verdict: translated
+    forms:
+      - text: gestión de problemas
+        article: la
+        kind: noun
+        primary: true
+    definition: Práctica que busca y elimina las causas de fondo de las incidencias para que
+      no se repitan.
+    examples:
+      - es: La gestión de problemas investiga por qué se repite la misma incidencia.
+        en: Problem management investigates why the same incident keeps happening.
+    watchOut: In ITIL an incident is an incidencia or incidente and a problem is its underlying
+      cause. Spanish keeps the same distinction.
+  topics:
+    - incident
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  frameworks:
+    - ITIL
+  related:
+    - fw.itil
+    - sec.root-cause-analysis
+    - sec.incident-response
+  sources: []
+  status: draft
+
+- id: tech.service-level-management
+  en:
+    term: service level management
+    definition: Agreeing service targets with customers and then measuring and reporting whether
+      they are met.
+  es:
+    verdict: translated
+    forms:
+      - text: gestión de niveles de servicio
+        article: la
+        kind: noun
+        primary: true
+      - text: gestión del nivel de servicio
+        article: la
+        kind: noun
+    definition: Práctica que acuerda con el cliente los objetivos de servicio y mide y comunica
+      si se cumplen.
+    examples:
+      - es: La gestión de niveles de servicio revisa cada mes el cumplimiento de los ANS.
+        en: Service level management reviews compliance with the SLAs every month.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  frameworks:
+    - ITIL
+  related:
+    - grc.sla
+    - fw.itil
+    - tech.availability-management
+  sources: []
+  status: draft
+
+- id: tech.availability-management
+  en:
+    term: availability management
+    definition: Making sure services are available as much as the business has agreed it needs,
+      by designing out single points of failure and measuring uptime.
+  es:
+    verdict: translated
+    forms:
+      - text: gestión de la disponibilidad
+        article: la
+        kind: noun
+        primary: true
+    definition: Práctica que asegura que los servicios están disponibles en la medida acordada
+      con el negocio.
+    examples:
+      - es: La gestión de la disponibilidad identificó un punto único de fallo en el balanceador.
+        en: Availability management identified a single point of failure in the load balancer.
+  topics:
+    - architecture
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  frameworks:
+    - ITIL
+  related:
+    - sec.availability
+    - sec.high-availability
+    - grc.sla
+    - sec.redundancy
+  sources: []
+  status: draft
+
+- id: tech.continual-improvement
+  en:
+    term: continual improvement
+    definition: The ongoing cycle of measuring how services and controls perform and making
+      them better, central to ITIL and to ISO management systems.
+  es:
+    verdict: translated
+    forms:
+      - text: mejora continua
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - google
+    definition: Ciclo permanente de medir el funcionamiento de los servicios y controles y
+      mejorarlos.
+    examples:
+      - es: La mejora continua es un requisito de la norma, no una opción.
+        en: Continual improvement is a requirement of the standard, not an option.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  frameworks:
+    - ITIL
+    - ISO-27001
+  related:
+    - fw.itil
+    - fw.iso-20000
+    - sec.post-incident-review
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/well-architected/security/principles
+      found:
+        - la mejora continua
+      checked: 2026-11-14
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/learn/what-is-machine-learning?hl=es
+      found:
+        - Mejora continua Si
+      checked: 2026-11-14
+  status: sourced
+
+- id: tech.continuity-management
+  en:
+    term: continuity management
+    definition: Planning and rehearsing how services will keep running, or be brought back,
+      after a serious disruption.
+  es:
+    verdict: translated
+    forms:
+      - text: gestión de la continuidad
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - engineers
+      - text: gestión de la continuidad del servicio
+        article: la
+        kind: noun
+        note: ITIL's fuller name.
+      - text: gestión de la continuidad del negocio
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: The business-wide discipline, as in ISO 22301.
+    definition: Planificación y ensayo de cómo se mantendrán o recuperarán los servicios tras
+      una interrupción grave.
+    examples:
+      - es: La gestión de la continuidad incluye pruebas anuales del plan de recuperación.
+        en: Continuity management includes yearly tests of the recovery plan.
+  topics:
+    - incident
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  frameworks:
+    - ITIL
+    - ISO-22301
+  related:
+    - sec.business-continuity
+    - sec.bcp
+    - sec.disaster-recovery
+    - grc.bia
+  sources:
+    - label: INCIBE, Guía de gestión de crisis
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_gestion_de_crisis.pdf
+      found:
+        - Gestión de la Continuidad
+        - Gestión de la Continuidad del Negocio
+      checked: 2026-11-14
+    - label: Telefónica Tech, blog
+      url: https://telefonicatech.com/blog/copias-seguridad-continuidad-negocio-ciberresiliencia
+      found:
+        - gestión de la continuidad
+      checked: 2026-11-14
+  status: sourced
+
+- id: fw.cobit
+  en:
+    term: COBIT
+    expansion: Control Objectives for Information and Related Technologies
+    definition: ISACA's framework for the governance and management of enterprise IT, used
+      to link IT controls to business goals.
+  es:
+    verdict: english-kept
+    forms:
+      - text: COBIT
+        kind: noun
+        primary: true
+        usedBy:
+          - engineers
+    say: Said as a word, 'cóbit'.
+    definition: Marco de ISACA para el gobierno y la gestión de las tecnologías de la información
+      en la empresa.
+    examples:
+      - es: La auditoría interna utiliza COBIT como marco de referencia.
+        en: Internal audit uses COBIT as its reference framework.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  frameworks:
+    - COBIT
+  related:
+    - fw.itil
+    - fw.coso
+    - grc.governance
+  sources:
+    - label: Tecnoempleo, oferta de empleo en España
+      url: https://www.tecnoempleo.com/auditor-it-aplicaciones-devsecops-michael-page/ci-cd-sdlc/rf-ad651bfe725c3388f843
+      found:
+        - COBIT
+      checked: 2026-11-14
+  status: sourced
+
+- id: fw.cis-controls
+  en:
+    term: CIS Controls
+    definition: A prioritised set of security safeguards published by the Center for Internet
+      Security, alongside its hardening benchmarks.
+  es:
+    verdict: both
+    forms:
+      - text: controles CIS
+        article: los
+        kind: noun
+        primary: true
+      - text: CIS Controls
+        article: los
+        kind: noun
+        usedBy:
+          - microsoft
+        note: The English name is also kept as it is.
+      - text: controles de seguridad críticos de CIS
+        article: los
+        kind: noun
+        register: formal
+    say: CIS is said as a word, 'cis'.
+    definition: Conjunto priorizado de medidas de seguridad publicado por el Center for Internet
+      Security.
+    examples:
+      - es: Hemos empezado por el primer grupo de implementación de los controles CIS.
+        en: We have started with the first implementation group of the CIS Controls.
+  topics:
+    - grc
+    - hardening
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  frameworks:
+    - CIS
+  related:
+    - sec.security-baseline
+    - sec.hardening
+    - grc.control
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/security/benchmark/azure/mcsb-v2-asset-management
+      found:
+        - Cis Controls
+      checked: 2026-11-14
+  status: draft
+
+- id: fw.coso
+  en:
+    term: COSO
+    expansion: Committee of Sponsoring Organizations of the Treadway Commission
+    definition: The body whose internal control and enterprise risk frameworks are the usual
+      yardstick for financial reporting controls, including under Sarbanes-Oxley.
+  es:
+    verdict: english-kept
+    forms:
+      - text: COSO
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+        note: Usually as el marco COSO or el informe COSO.
+    say: Said as a word, 'coso'.
+    definition: Organización cuyos marcos de control interno y de gestión de riesgos son la
+      referencia habitual para el control de la información financiera.
+    examples:
+      - es: El sistema de control interno se basa en el marco COSO.
+        en: The internal control system is based on the COSO framework.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  frameworks:
+    - COSO
+  related:
+    - fw.cobit
+    - fw.sox
+    - grc.internal-audit
+  sources:
+    - label: 'INCIBE, Gestión de riesgos: una guía de aproximación para el empresario'
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_ciberseguridad_gestion_riesgos_metad.pdf
+      found:
+        - COSO
+      checked: 2026-11-14
+  status: sourced
+
+- id: fw.iso-20000
+  en:
+    term: ISO/IEC 20000-1
+    definition: The international standard setting requirements for an IT service management
+      system, against which organisations can be certified.
+  es:
+    verdict: english-kept
+    forms:
+      - text: ISO/IEC 20000-1
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - aws
+        note: Feminine because it is la norma. In speech simply la ISO 20000.
+      - text: ISO 20000
+        article: la
+        kind: noun
+        usedBy:
+          - aws
+    say: ISO is said as a word, 'iso', and the number as veinte mil.
+    definition: Norma internacional que establece los requisitos de un sistema de gestión
+      de servicios de TI.
+    examples:
+      - es: El proveedor está certificado en la ISO 20000.
+        en: The provider is certified to ISO 20000.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  frameworks:
+    - ISO-20000
+  related:
+    - fw.itil
+    - fw.iso-27001
+    - grc.certification
+  sources:
+    - label: AWS, páginas en español
+      url: https://aws.amazon.com/es/compliance/programs/
+      found:
+        - ISO 20000 ISO
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.monitoring
+  en:
+    term: monitoring
+    definition: Continuously watching systems, networks and logs for faults, unusual behaviour
+      and signs of attack.
+  es:
+    verdict: translated
+    forms:
+      - text: monitorización
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - microsoft
+      - text: monitorizar
+        kind: verb
+        usedBy:
+          - official
+      - text: supervisión
+        article: la
+        kind: noun
+        note: Used in Microsoft documentation, and the word the ENS uses in vigilancia y supervisión.
+    definition: Observación continua de sistemas, redes y registros para detectar fallos,
+      comportamientos anómalos e indicios de ataque.
+    examples:
+      - es: La monitorización continua detectó el acceso fuera de horario.
+        en: Continuous monitoring detected the out-of-hours access.
+    watchOut: Monitoreo and monitorear are Latin American and appear in some vendor documentation.
+      In Spain say monitorización and monitorizar.
+  topics:
+    - detection
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - sec.alert
+    - sec.siem
+    - sec.soc
+    - sec.log
+    - tech.performance-monitoring
+  sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - monitorización de
+        - para monitorizar
+      checked: 2026-11-14
+    - label: Microsoft Security, es-ES
+      url: https://www.microsoft.com/es-es/security/business/security-101/what-is-container-security
+      found:
+        - la monitorización de
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.alert
+  en:
+    term: alert
+    definition: A notification raised when monitoring detects something that may need attention.
+  es:
+    verdict: translated
+    forms:
+      - text: alerta
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - google
+      - text: alertar
+        kind: verb
+        usedBy:
+          - microsoft
+    definition: Aviso que se genera cuando la monitorización detecta algo que puede requerir
+      atención.
+    examples:
+      - es: El SIEM generó una alerta por varios intentos fallidos de inicio de sesión.
+        en: The SIEM raised an alert for several failed sign-in attempts.
+    watchOut: 'Alerta is feminine: la alerta, una alerta. Alarma also exists but suggests
+      something more urgent.'
+  topics:
+    - detection
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - sec.monitoring
+    - sec.siem
+    - sec.event-correlation
+    - sec.escalation
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/networking/design-guide/azure-firewall
+      found:
+        - Solo alerta
+      checked: 2026-11-14
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/discover/incident-response-plan-template?hl=es
+      found:
+        - de alerta
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/architecture/example-scenario/forensics/
+      found:
+        - alertar sobre
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.soc
+  en:
+    term: security operations centre
+    acronym: SOC
+    definition: The team and facility that monitor an organisation's systems around the clock,
+      investigate alerts and coordinate the response to incidents.
+  es:
+    verdict: both
+    acronym: SOC
+    forms:
+      - text: centro de operaciones de seguridad
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - aws
+      - text: SOC
+        article: el
+        kind: noun
+        headline: true
+        usedBy:
+          - official
+        note: 'The acronym is what everyone says, and what job adverts ask for: analista de
+          SOC.'
+      - text: centro de operaciones de ciberseguridad
+        article: el
+        kind: noun
+        usedBy:
+          - official
+        note: The public sector's wording, shortened to COCS.
+    say: SOC is said as a word, 'soc'.
+    definition: Equipo e instalación que vigilan los sistemas de forma continua, investigan
+      las alertas y coordinan la respuesta a incidentes.
+    examples:
+      - es: El SOC trabaja en turnos de 24x7.
+        en: The SOC works shifts around the clock.
+    watchOut: SOC also names the SOC 2 audit report, which is unrelated.
+  topics:
+    - detection
+    - incident
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - sec.siem
+    - sec.soar
+    - sec.incident-response
+    - sec.monitoring
+    - sec.threat-intelligence
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/architecture/example-scenario/forensics/
+      found:
+        - Centro de Operaciones de Seguridad
+      checked: 2026-11-14
+    - label: AWS Well-Architected Framework, es_ES
+      url: https://docs.aws.amazon.com/es_es/wellarchitected/latest/security-pillar/sec_incident_response_run_game_days.html
+      found:
+        - centro de operaciones de seguridad
+      checked: 2026-11-14
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - SOC
+      checked: 2026-11-14
+    - label: BOE, Resolución de 26 de diciembre de 2024 (convenio NubeSARA)
+      url: https://www.boe.es/boe/dias/2025/01/03/pdfs/BOE-A-2025-131.pdf
+      found:
+        - Centro de Operaciones de Ciberseguridad
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.siem
+  en:
+    term: security information and event management
+    acronym: SIEM
+    definition: A platform that collects logs and events from across an estate, correlates
+      them and raises alerts on suspicious patterns.
+  es:
+    verdict: both
+    acronym: SIEM
+    forms:
+      - text: SIEM
+        article: el
+        kind: noun
+        primary: true
+        plural: los SIEM
+        usedBy:
+          - official
+          - microsoft
+        note: Always the acronym in practice.
+      - text: gestión de eventos e información de seguridad
+        article: la
+        kind: noun
+        register: formal
+        usedBy:
+          - official
+      - text: gestión de información y eventos de seguridad
+        article: la
+        kind: noun
+        register: formal
+        usedBy:
+          - microsoft
+        note: The same expansion in the other word order.
+    say: Said as a word, 'siem'.
+    definition: Plataforma que recoge registros y eventos de toda la infraestructura, los
+      correlaciona y genera alertas.
+    examples:
+      - es: Todos los registros de la nube se envían al SIEM.
+        en: All the cloud logs are sent to the SIEM.
+  topics:
+    - detection
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - sec.soc
+    - sec.soar
+    - sec.log-management
+    - sec.event-correlation
+    - sec.log
+  sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - SIEM
+        - gestión de eventos e información de seguridad
+      checked: 2026-11-14
+    - label: Microsoft Security, es-ES
+      url: https://www.microsoft.com/es-es/security/business/security-101/what-is-siem
+      found:
+        - es SIEM
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/security/benchmark/azure/mcsb-v2-asset-management
+      found:
+        - gestión de información y eventos de seguridad
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.soar
+  en:
+    term: security orchestration, automation and response
+    acronym: SOAR
+    definition: Tooling that automates the routine steps of handling alerts and incidents
+      by running playbooks across security products.
+  es:
+    verdict: both
+    acronym: SOAR
+    forms:
+      - text: SOAR
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - google
+      - text: orquestación, automatización y respuesta de seguridad
+        article: la
+        kind: noun
+        register: formal
+        usedBy:
+          - microsoft
+    say: Said as a word, 'soar'.
+    definition: Herramientas que automatizan los pasos rutinarios de la gestión de alertas
+      e incidentes mediante playbooks.
+    examples:
+      - es: El SOAR aísla el equipo automáticamente cuando se confirma la alerta.
+        en: The SOAR isolates the machine automatically once the alert is confirmed.
+  topics:
+    - detection
+    - incident
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - sec.siem
+    - sec.soc
+    - sec.playbook
+    - cloud.orchestration
+  sources:
+    - label: Microsoft Security, es-ES
+      url: https://www.microsoft.com/es-es/security/business/security-101/what-is-siem
+      found:
+        - SOAR
+        - orquestación, automatización y respuesta de seguridad
+      checked: 2026-11-14
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/security/compliance/csa?hl=es
+      found:
+        - Operations SOAR Google
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.log-management
+  en:
+    term: log management
+    definition: Collecting, centralising, protecting and retaining logs so that they can be
+      searched and relied on as a record of what happened.
+  es:
+    verdict: both
+    forms:
+      - text: gestión de registros
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - google
+      - text: gestión de logs
+        article: la
+        kind: noun
+        headline: true
+        usedBy:
+          - official
+        note: Log is kept in English in everyday speech.
+    definition: Recogida, centralización, protección y conservación de los registros para
+      poder consultarlos y confiar en ellos.
+    examples:
+      - es: La política de gestión de logs fija un año de conservación.
+        en: The log management policy sets one year of retention.
+  topics:
+    - detection
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - sec.log
+    - sec.siem
+    - sec.data-retention
+    - sec.traceability
+  sources:
+    - label: Microsoft Security, es-ES
+      url: https://www.microsoft.com/es-es/security/business/security-101/what-is-siem
+      found:
+        - gestión de registros
+      checked: 2026-11-14
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/discover/what-is-log-analytics?hl=es
+      found:
+        - Gestión de registros
+      checked: 2026-11-14
+    - label: AEPD, Orientaciones para la validación de sistemas criptográficos
+      url: https://www.aepd.es/guias/orientaciones-criptografia-aepd-isms-apep.pdf
+      found:
+        - gestión de logs
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.event-correlation
+  en:
+    term: event correlation
+    definition: Linking separate events from different sources to recognise that together
+      they amount to a single incident or attack.
+  es:
+    verdict: translated
+    forms:
+      - text: correlación de eventos
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - official
+      - text: correlacionar
+        kind: verb
+        usedBy:
+          - microsoft
+        note: Engineers also say correlar.
+    definition: Relación de eventos de distintas fuentes para reconocer que forman parte de
+      un mismo incidente o ataque.
+    examples:
+      - es: La correlación de eventos relacionó el inicio de sesión con la descarga masiva.
+        en: Event correlation linked the sign-in to the mass download.
+  topics:
+    - detection
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - sec.siem
+    - sec.alert
+    - sec.log
+  sources:
+    - label: Microsoft Security, es-ES
+      url: https://www.microsoft.com/es-es/security/business/security-101/what-is-siem
+      found:
+        - correlación de eventos
+        - correlacionar
+      checked: 2026-11-14
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - correlación de eventos
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.threat-intelligence
+  en:
+    term: threat intelligence
+    definition: Analysed information about attackers, their methods and their infrastructure,
+      used to anticipate and detect attacks.
+  es:
+    verdict: both
+    forms:
+      - text: inteligencia de amenazas
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - google
+      - text: ciberinteligencia
+        article: la
+        kind: noun
+        usedBy:
+          - engineers
+        note: A common one-word alternative in Spain.
+      - text: inteligencia sobre amenazas
+        article: la
+        kind: noun
+        usedBy:
+          - microsoft
+        note: Microsoft's wording.
+      - text: threat intelligence
+        article: la
+        kind: noun
+        usedBy:
+          - google
+        note: Kept in English in team and product names.
+    definition: Información analizada sobre los atacantes, sus métodos y su infraestructura,
+      que sirve para anticipar y detectar ataques.
+    examples:
+      - es: El equipo de inteligencia de amenazas comparte indicadores con el SOC.
+        en: The threat intelligence team shares indicators with the SOC.
+  topics:
+    - threat
+    - detection
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  frameworks:
+    - MITRE-ATTACK
+  related:
+    - sec.ioc
+    - sec.threat
+    - sec.apt
+    - sec.soc
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/networking/design-guide/azure-firewall
+      found:
+        - inteligencia de amenazas
+        - inteligencia sobre amenazas
+      checked: 2026-11-14
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/security/products/firewall?hl=es
+      found:
+        - Inteligencia de amenazas
+      checked: 2026-11-14
+    - label: Telefónica Tech, Techiepedia
+      url: https://telefonicatech.com/techiepedia/superficie-de-ataque
+      found:
+        - la ciberinteligencia ayudan
+      checked: 2026-11-14
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/security?hl=es
+      found:
+        - Google Threat Intelligence combina
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.ioc
+  en:
+    term: indicator of compromise
+    acronym: IoC
+    definition: An observable trace, such as a file hash, IP address or domain, suggesting
+      that a system has been breached.
+  es:
+    verdict: translated
+    acronym: IoC
+    forms:
+      - text: indicador de compromiso
+        article: el
+        kind: noun
+        primary: true
+        plural: los indicadores de compromiso
+        usedBy:
+          - oracle
+      - text: IoC
+        article: el
+        kind: noun
+        headline: true
+        plural: los IoC
+        note: The English acronym is kept.
+    say: 'IoC is spelled out: i-o-ce.'
+    definition: Rastro observable, como un hash, una dirección IP o un dominio, que indica
+      que un sistema puede haber sido comprometido.
+    examples:
+      - es: Hemos buscado los indicadores de compromiso del aviso en todos los equipos.
+        en: We have searched every machine for the indicators of compromise in the advisory.
+  topics:
+    - detection
+    - threat
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - sec.threat-intelligence
+    - sec.malware
+    - sec.digital-forensics
+  sources:
+    - label: Oracle España
+      url: https://www.oracle.com/es/security/cloud-security/
+      found:
+        - indicador de compromiso
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.vulnerability-assessment
+  en:
+    term: vulnerability assessment
+    definition: A systematic review that identifies and ranks the weaknesses in a system,
+      without going on to exploit them as a penetration test would.
+  es:
+    verdict: translated
+    forms:
+      - text: evaluación de vulnerabilidades
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+      - text: análisis de vulnerabilidades
+        article: el
+        kind: noun
+        usedBy:
+          - official
+        note: Just as common, and also used for the scan itself.
+    definition: Revisión sistemática que identifica y prioriza las debilidades de un sistema
+      sin llegar a explotarlas.
+    examples:
+      - es: La evaluación de vulnerabilidades trimestral encontró doce fallos críticos.
+        en: The quarterly vulnerability assessment found twelve critical flaws.
+  topics:
+    - vulnmgmt
+    - assessment
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - sec.vulnerability
+    - sec.vulnerability-scan
+    - sec.penetration-test
+    - sec.vulnerability-management
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/security/benchmark/azure/mcsb-v2-asset-management
+      found:
+        - evaluación de vulnerabilidades
+      checked: 2026-11-14
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - Análisis de vulnerabilidades
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.vulnerability-management
+  en:
+    term: vulnerability management
+    definition: The continuous cycle of finding, prioritising, fixing and verifying vulnerabilities
+      across an organisation's systems.
+  es:
+    verdict: translated
+    forms:
+      - text: gestión de vulnerabilidades
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - oracle
+    definition: Ciclo continuo de detección, priorización, corrección y verificación de las
+      vulnerabilidades de los sistemas.
+    examples:
+      - es: El programa de gestión de vulnerabilidades fija plazos de corrección según la
+          criticidad.
+        en: The vulnerability management programme sets fix deadlines by severity.
+  topics:
+    - vulnmgmt
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - sec.vulnerability
+    - sec.patch-management
+    - sec.vulnerability-scan
+    - sec.vulnerability-assessment
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/well-architected/security/secure-development-lifecycle
+      found:
+        - gestión de vulnerabilidades
+      checked: 2026-11-14
+    - label: Oracle España
+      url: https://www.oracle.com/es/security/cloud-security/
+      found:
+        - Gestión de vulnerabilidades
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.digital-forensics
+  en:
+    term: digital forensics
+    definition: Collecting, preserving and analysing digital evidence in a way that would
+      stand up in court, to establish what happened in an incident.
+  es:
+    verdict: translated
+    forms:
+      - text: análisis forense digital
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - microsoft
+      - text: informática forense
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: The name of the discipline.
+      - text: análisis forense
+        article: el
+        kind: noun
+        usedBy:
+          - official
+        note: The short form used day to day; un forense is the investigation, or the person.
+    definition: Recogida, conservación y análisis de evidencias digitales con garantías legales
+      para determinar qué ocurrió en un incidente.
+    examples:
+      - es: Tras la intrusión se encargó un análisis forense de los servidores afectados.
+        en: After the intrusion, a forensic analysis of the affected servers was commissioned.
+  topics:
+    - incident
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - sec.evidence
+    - sec.chain-of-custody
+    - sec.forensic-image
+    - law.e-discovery
+    - sec.incident-response
+  sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - Análisis forense digital
+        - Informática forense
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/architecture/example-scenario/forensics/
+      found:
+        - análisis forense digital
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.evidence
+  en:
+    term: evidence
+    definition: 'Data or records that support a conclusion: in forensics, material that can
+      be presented in legal proceedings; in audit, proof that a control operates.'
+  es:
+    verdict: translated
+    forms:
+      - text: evidencia
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - microsoft
+        note: 'Countable in Spanish: una evidencia, las evidencias.'
+      - text: evidencia digital
+        article: la
+        kind: noun
+        usedBy:
+          - microsoft
+      - text: prueba
+        article: la
+        kind: noun
+        note: The legal term for evidence in court. Prueba electrónica is electronic evidence.
+    definition: Datos o registros que respaldan una conclusión, ya sea ante un tribunal o
+      en una auditoría.
+    examples:
+      - es: El auditor pidió evidencias de que las copias de seguridad se prueban.
+        en: The auditor asked for evidence that the backups are tested.
+    watchOut: In court the word is prueba. Evidencia is normal in forensics and audit, where
+      it is used in the plural far more than in English.
+  topics:
+    - incident
+    - assessment
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - sec.chain-of-custody
+    - sec.digital-forensics
+    - sec.forensic-image
+    - grc.audit
+  sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - toda evidencia que
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/architecture/example-scenario/forensics/
+      found:
+        - proporcionar evidencia digital
+        - proporcionar evidencia digital que
+      checked: 2026-11-14
+  status: sourced
+
+- id: law.e-discovery
+  en:
+    term: e-discovery
+    definition: Identifying, preserving and handing over electronically stored information
+      that is relevant to litigation or an investigation.
+  es:
+    verdict: both
+    forms:
+      - text: e-discovery
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - engineers
+        note: Usually kept in English, also written eDiscovery as in Microsoft's product.
+      - text: descubrimiento electrónico
+        article: el
+        kind: noun
+        note: The literal translation, used to explain the term.
+    definition: Identificación, conservación y entrega de la información electrónica relevante
+      para un litigio o una investigación.
+    examples:
+      - es: El contrato debe aclarar cómo ayuda el proveedor en un proceso de e-discovery.
+        en: The contract must make clear how the provider helps in an e-discovery process.
+    watchOut: Discovery is a feature of US and UK litigation. Spanish civil procedure has
+      no direct equivalent, which is why the English word is kept.
+  topics:
+    - grc
+    - incident
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - law.legal-hold
+    - sec.digital-forensics
+    - sec.evidence
+    - sec.chain-of-custody
+  sources:
+    - label: Telefónica Tech, blog
+      url: https://telefonicatech.com/blog/data-swamp-data-lake-gobierno-calidad-dato
+      found:
+        - e-discovery se
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.forensic-image
+  en:
+    term: forensic image
+    definition: An exact bit-for-bit copy of a disk or memory, verified with a hash, so that
+      analysis never touches the original.
+  es:
+    verdict: translated
+    forms:
+      - text: imagen forense
+        article: la
+        kind: noun
+        primary: true
+      - text: copia forense
+        article: la
+        kind: noun
+      - text: clonado forense
+        article: el
+        kind: noun
+        note: The act of making the copy.
+    definition: Copia exacta, bit a bit, de un disco o de la memoria, verificada con un hash,
+      para analizar sin tocar el original.
+    examples:
+      - es: Antes de apagar la máquina se obtuvo una imagen forense del disco.
+        en: Before the machine was switched off, a forensic image of the disk was taken.
+  topics:
+    - incident
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - sec.digital-forensics
+    - sec.chain-of-custody
+    - sec.hashing
+    - sec.snapshot
+  sources: []
+  status: draft
+
+- id: sec.containment
+  en:
+    term: containment
+    definition: The stage of incident response that stops an attack spreading, for example
+      by isolating affected systems or disabling accounts.
+  es:
+    verdict: translated
+    forms:
+      - text: contención
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - google
+      - text: contener
+        kind: verb
+    definition: Fase de la respuesta a incidentes que impide que el ataque se extienda, por
+      ejemplo aislando los sistemas afectados.
+    examples:
+      - es: La primera medida de contención fue aislar el servidor de la red.
+        en: The first containment measure was to isolate the server from the network.
+  topics:
+    - incident
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - sec.incident-response
+    - sec.eradication
+    - sec.isolation
+    - sec.restore
+  sources:
+    - label: Microsoft Security, es-ES
+      url: https://www.microsoft.com/es-es/security/business/security-101/what-is-incident-response
+      found:
+        - Contención de
+      checked: 2026-11-14
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/discover/incident-response-plan-template?hl=es
+      found:
+        - contención
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.eradication
+  en:
+    term: eradication
+    definition: The stage of incident response that removes the cause of an incident, such
+      as malware, backdoors and compromised accounts.
+  es:
+    verdict: translated
+    forms:
+      - text: erradicación
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - google
+          - official
+      - text: erradicar
+        kind: verb
+        usedBy:
+          - microsoft
+    definition: Fase de la respuesta a incidentes en la que se elimina la causa, como el malware
+      o las cuentas comprometidas.
+    examples:
+      - es: Tras la contención llega la erradicación del malware.
+        en: After containment comes the eradication of the malware.
+    watchOut: 'Written with double r: erradicación.'
+  topics:
+    - incident
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - sec.incident-response
+    - sec.containment
+    - sec.malware
+    - sec.restore
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/discover/incident-response-plan-template?hl=es
+      found:
+        - erradicación
+      checked: 2026-11-14
+    - label: INCIBE, Guía de gestión de crisis
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_gestion_de_crisis.pdf
+      found:
+        - erradicación Identificación
+      checked: 2026-11-14
+    - label: Microsoft Security, es-ES
+      url: https://www.microsoft.com/es-es/security/business/security-101/what-is-incident-response
+      found:
+        - erradicar amenazas
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.root-cause-analysis
+  en:
+    term: root cause analysis
+    acronym: RCA
+    definition: Working back from an incident or failure to the underlying reason it happened,
+      so that the fix prevents a repeat.
+  es:
+    verdict: translated
+    forms:
+      - text: análisis de causa raíz
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - engineers
+      - text: análisis de la causa raíz
+        article: el
+        kind: noun
+        usedBy:
+          - microsoft
+      - text: RCA
+        article: el
+        kind: noun
+        usedBy:
+          - google
+        note: The English acronym is used informally.
+    definition: Investigación que parte de un incidente o fallo hasta llegar a la razón de
+      fondo que lo provocó.
+    examples:
+      - es: El análisis de causa raíz apuntó a un certificado caducado.
+        en: The root cause analysis pointed to an expired certificate.
+  topics:
+    - incident
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - tech.problem-management
+    - sec.post-incident-review
+    - sec.incident-response
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/well-architected/security/principles
+      found:
+        - análisis de causa raíz
+      checked: 2026-11-14
+    - label: Tecnoempleo, oferta de empleo en España
+      url: https://www.tecnoempleo.com/sre-gcp-kubernetes-terraform-grupo-ns/devops-linux/rf-983c15f0e240b3bf084c
+      found:
+        - análisis de causa raíz
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/well-architected/reliability/disaster-recovery
+      found:
+        - análisis de la causa raíz
+      checked: 2026-11-14
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/discover/what-is-log-analytics?hl=es
+      found:
+        - RCA acelerados
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.post-incident-review
+  en:
+    term: post-incident review
+    definition: The meeting and report after an incident that record what happened, what worked
+      and what must change; also called lessons learned.
+  es:
+    verdict: translated
+    forms:
+      - text: revisión posterior al incidente
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - google
+      - text: lecciones aprendidas
+        article: las
+        kind: noun
+        usedBy:
+          - microsoft
+        note: The name most often given to the session and its report.
+      - text: post mortem
+        article: el
+        kind: noun
+        register: informal
+        note: Engineering teams' term, also written postmortem.
+    definition: Reunión e informe posteriores a un incidente que recogen qué ocurrió, qué
+      funcionó y qué hay que cambiar.
+    examples:
+      - es: En la sesión de lecciones aprendidas se acordó automatizar el aislamiento.
+        en: In the lessons-learned session it was agreed to automate isolation.
+  topics:
+    - incident
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - sec.incident-response
+    - sec.root-cause-analysis
+    - tech.continual-improvement
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/discover/what-is-incident-response?hl=es
+      found:
+        - revisión posterior al incidente
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/well-architected/security/principles
+      found:
+        - las lecciones aprendidas de
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.playbook
+  en:
+    term: playbook
+    definition: A documented set of steps for responding to a particular type of incident,
+      increasingly automated by a SOAR platform.
+  es:
+    verdict: both
+    forms:
+      - text: playbook
+        article: el
+        kind: noun
+        primary: true
+        plural: los playbooks
+        usedBy:
+          - microsoft
+      - text: guía de actuación
+        article: la
+        kind: noun
+        note: A plain Spanish description.
+      - text: cuaderno de estrategias
+        article: el
+        kind: noun
+        usedBy:
+          - microsoft
+        note: Microsoft's translation, as in Sentinel. Hardly anyone says it.
+    definition: Conjunto documentado de pasos para responder a un tipo concreto de incidente.
+    examples:
+      - es: Tenemos un playbook para los casos de phishing.
+        en: We have a playbook for phishing cases.
+  topics:
+    - incident
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - sec.runbook
+    - sec.soar
+    - sec.incident-response
+    - sec.tabletop-exercise
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/security/operations/incident-response-planning
+      found:
+        - de los playbooks de
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/azure-sovereign-clouds/sovereignty-implementation
+      found:
+        - Cuaderno de estrategias
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.runbook
+  en:
+    term: runbook
+    definition: Step-by-step operating instructions for a routine task or a known fault, written
+      so that whoever is on call can follow them.
+  es:
+    verdict: both
+    forms:
+      - text: runbook
+        article: el
+        kind: noun
+        primary: true
+        plural: los runbooks
+        usedBy:
+          - microsoft
+          - aws
+      - text: procedimiento operativo
+        article: el
+        kind: noun
+        usedBy:
+          - microsoft
+        note: The nearest plain Spanish term.
+      - text: manual de operaciones
+        article: el
+        kind: noun
+        usedBy:
+          - microsoft
+    definition: Instrucciones paso a paso para una tarea rutinaria o un fallo conocido, pensadas
+      para quien esté de guardia.
+    examples:
+      - es: El runbook explica cómo reiniciar el servicio sin perder datos.
+        en: The runbook explains how to restart the service without losing data.
+  topics:
+    - incident
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - sec.playbook
+    - grc.procedure
+    - sec.incident-response
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/architecture/example-scenario/forensics/
+      found:
+        - Hybrid Runbook Worker
+      checked: 2026-11-14
+    - label: AWS, documentación en español (es_es)
+      url: https://docs.aws.amazon.com/es_es/whitepapers/latest/aws-security-incident-response-guide/shared-responsibility.html
+      found:
+        - un runbook de
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/well-architected/security/principles
+      found:
+        - el procedimiento operativo estándar
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/reliability/concept-business-continuity-high-availability-disaster-recovery
+      found:
+        - manual de operaciones
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.escalation
+  en:
+    term: escalation
+    definition: Passing an incident to a more senior or more specialised person or team when
+      it cannot be resolved at the current level.
+  es:
+    verdict: translated
+    forms:
+      - text: escalado
+        article: el
+        kind: noun
+        primary: true
+        note: As in escalado de incidencias.
+      - text: escalar
+        kind: verb
+        note: 'To escalate: hay que escalar la incidencia.'
+      - text: escalamiento
+        article: el
+        kind: noun
+        note: A variant, more common in Latin America.
+    definition: Traspaso de un incidente a una persona o equipo de mayor nivel o especialización
+      cuando no puede resolverse en el nivel actual.
+    examples:
+      - es: El procedimiento de escalado indica a quién llamar fuera de horario.
+        en: The escalation procedure says who to call out of hours.
+    watchOut: Privilege escalation is escalada de privilegios, with escalada. Escalado also
+      means scaling, as in escalado automático.
+  topics:
+    - incident
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - sec.incident-response
+    - sec.alert
+    - sec.soc
+  sources: []
+  status: draft
+
+- id: grc.stakeholder
+  en:
+    term: stakeholder
+    definition: Any person or group with an interest in, or affected by, a project, system
+      or decision.
+  es:
+    verdict: both
+    forms:
+      - text: parte interesada
+        article: la
+        kind: noun
+        primary: true
+        plural: las partes interesadas
+        usedBy:
+          - eu
+          - microsoft
+        note: The term used in ISO standards in Spanish.
+      - text: stakeholder
+        article: el
+        kind: noun
+        headline: true
+        plural: los stakeholders
+        usedBy:
+          - engineers
+        note: Very common in business speech.
+      - text: grupo de interés
+        article: el
+        kind: noun
+        plural: los grupos de interés
+        usedBy:
+          - microsoft
+    definition: Persona o grupo que tiene interés en un proyecto, sistema o decisión, o que
+      se ve afectado por él.
+    examples:
+      - es: Hay que informar del incidente a todas las partes interesadas.
+        en: All the stakeholders must be told about the incident.
+    watchOut: Do not confuse with el interesado, which is the data subject under the GDPR.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - grc.governance
+    - law.data-subject
+  sources:
+    - label: Reglamento (UE) 2024/1689 de Inteligencia Artificial, en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81079
+      found:
+        - cualquier parte interesada
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/well-architected/what-is-well-architected-framework
+      found:
+        - parte interesada empresarial
+      checked: 2026-11-14
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/techbiz/gobierno-del-dato-desafios-factores-clave/
+      found:
+        - cualquier stakeholder involucrado
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/windows/win32/api/nvme/ns-nvme-nvme_identify_controller_data
+      found:
+        - Grupo de interés
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.restore
+  en:
+    term: restore
+    definition: Bringing data or a system back from a backup or snapshot to a working state.
+  es:
+    verdict: translated
+    forms:
+      - text: restauración
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - microsoft
+      - text: restaurar
+        kind: verb
+        usedBy:
+          - microsoft
+      - text: recuperación
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: Recovery; the broader word, often used interchangeably.
+    definition: Devolución de los datos o de un sistema a un estado operativo a partir de
+      una copia de seguridad o una instantánea.
+    examples:
+      - es: Probamos la restauración de las copias de seguridad cada trimestre.
+        en: We test restoring the backups every quarter.
+  topics:
+    - incident
+    - data
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - sec.backup
+    - sec.snapshot
+    - sec.disaster-recovery
+    - sec.rto
+    - sec.rpo
+  sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - una restauración ordenada
+        - de recuperación
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/reliability/concept-business-continuity-high-availability-disaster-recovery
+      found:
+        - la restauración de
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/reliability/concept-redundancy-replication-backup
+      found:
+        - para restaurar los
+      checked: 2026-11-14
+  status: sourced
+
+- id: sec.snapshot
+  en:
+    term: snapshot
+    definition: A point-in-time copy of a disk, volume or virtual machine that can be used
+      to restore it to that moment.
+  es:
+    verdict: both
+    forms:
+      - text: instantánea
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - google
+        note: The term in the cloud providers' Spanish consoles and documentation.
+      - text: snapshot
+        article: el
+        kind: noun
+        headline: true
+        plural: los snapshots
+        usedBy:
+          - aws
+        note: What engineers say. Sometimes feminine, la snapshot.
+    definition: Copia de un disco, volumen o máquina virtual en un momento concreto, que permite
+      devolverlo a ese estado.
+    examples:
+      - es: Haz una instantánea del volumen antes de actualizar.
+        en: Take a snapshot of the volume before upgrading.
+  topics:
+    - data
+    - incident
+  technology:
+    - cloud-general
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 5
+  related:
+    - sec.backup
+    - sec.restore
+    - sec.forensic-image
+    - cloud.volume-storage
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/architecture/example-scenario/forensics/
+      found:
+        - almacena instantáneas de disco
+      checked: 2026-11-14
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/compute?hl=es
+      found:
+        - instantáneas de origen
+      checked: 2026-11-14
+    - label: AWS, documentación en español
+      url: https://docs.aws.amazon.com/es_es/config/latest/developerguide/operational-best-practices-for-pci-dss.html
+      found:
+        - snapshot
+      checked: 2026-11-14
+  status: sourced

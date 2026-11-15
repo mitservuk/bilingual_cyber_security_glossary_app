@@ -19,8 +19,8 @@ import { goBack } from '../router';
 import { addRecent, setLang, toggleSaved, useStore } from '../store';
 
 const STATUS: Record<Term['status'], { label: string; explain: string }> = {
-  draft: { label: 'Draft', explain: 'Parts of this entry have not yet been checked against a source.' },
-  sourced: { label: 'Sourced', explain: 'Every form and note here is backed by a source that was read.' },
+  draft: { label: 'Draft', explain: 'The main Spanish form has not yet been found in a source that was read.' },
+  sourced: { label: 'Sourced', explain: 'The main Spanish form was found in a source that was read. Other forms and notes may rest on working knowledge.' },
   verified: { label: 'Verified', explain: 'Sourced, and confirmed by a native-speaking professional.' },
 };
 

@@ -1,0 +1,4217 @@
+# CCSP Domain 6: Legal, Risk and Compliance.
+# Format is described in content/README.md. These entries were written from
+# working knowledge of usage in Spain; each `found` text was then located in a
+# page already downloaded for earlier entries and confirmed with
+# scripts/check_sources.py. Forms with no usedBy have not been seen in a source.
+
+- id: law.jurisdiction
+  en:
+    term: jurisdiction
+    definition: The authority of a country's courts and regulators over a matter, and by extension
+      the territory where a given law applies.
+  es:
+    verdict: translated
+    forms:
+      - text: jurisdicción
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+    definition: Potestad de los tribunales y autoridades de un país sobre un asunto y, por
+      extensión, territorio donde se aplica una ley.
+    examples:
+      - es: Los datos se alojan en una jurisdicción de la Unión Europea.
+        en: The data is hosted in a European Union jurisdiction.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - law.applicable-law
+    - law.data-sovereignty
+    - law.data-residency
+  sources:
+    - label: Ley Orgánica 3/2018 (LOPDGDD)
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673
+      found:
+        - la jurisdicción contencioso
+      checked: 2026-11-14
+    - label: BOE, Directiva (UE) 2022/2555 (NIS 2)
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81963
+      found:
+        - bajo jurisdicción de
+      checked: 2026-11-14
+  status: sourced
+
+- id: law.applicable-law
+  en:
+    term: applicable law
+    definition: The body of law that governs a contract or a situation, which in cloud services
+      may differ from the law of the place where data sits.
+  es:
+    verdict: translated
+    forms:
+      - text: ley aplicable
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: legislación aplicable
+        article: la
+        kind: noun
+        usedBy:
+          - official
+      - text: derecho aplicable
+        article: el
+        kind: noun
+        register: formal
+        usedBy:
+          - eu
+        note: The lawyer's term, as in EU instruments.
+    definition: Conjunto de normas que rige un contrato o una situación.
+    examples:
+      - es: El contrato fija la ley aplicable y los tribunales competentes.
+        en: The contract sets the applicable law and the competent courts.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - law.jurisdiction
+    - law.contract
+    - law.legislation
+  sources:
+    - label: AEPD, Orientaciones para prestadores de servicios de cloud computing (2018; marcada
+        como obsoleta)
+      url: https://www.aepd.es/guias/guia-cloud-prestadores.pdf
+      found:
+        - LA LEY APLICABLE
+      checked: 2026-11-14
+    - label: INCIBE, Taxonomía de soluciones de ciberseguridad
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/taxonomia_ciberseguridad.pdf
+      found:
+        - la legislación aplicable
+      checked: 2026-11-14
+    - label: Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81962
+      found:
+        - el Derecho aplicable en
+      checked: 2026-11-14
+  status: sourced
+
+- id: law.legislation
+  en:
+    term: legislation
+    definition: The laws enacted by a parliament or other law-making body, taken together.
+  es:
+    verdict: translated
+    forms:
+      - text: legislación
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+      - text: normativa
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: 'Broader and extremely common in Spain: all the rules that apply, whether laws,
+          regulations or standards.'
+    definition: Conjunto de leyes aprobadas por un parlamento u otro órgano legislativo.
+    examples:
+      - es: La legislación española de protección de datos complementa el RGPD.
+        en: Spanish data protection legislation supplements the GDPR.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - law.regulation
+    - law.applicable-law
+    - grc.regulatory-compliance
+  sources:
+    - label: Orden PRE/2740/2007, Reglamento de Evaluación y Certificación de la Seguridad
+        de las TI
+      url: https://www.boe.es/buscar/pdf/2007/BOE-A-2007-16830-consolidado.pdf
+      found:
+        - LEGISLACIÓN CONSOLIDADA
+      checked: 2026-11-14
+    - label: Reglamento (UE) 2024/2847 (Reglamento de Ciberresiliencia), texto en español
+        publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81720
+      found:
+        - la legislación de
+      checked: 2026-11-14
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - la normativa de
+      checked: 2026-11-14
+  status: sourced
+
+- id: law.regulation
+  en:
+    term: regulation
+    definition: A binding rule made by a government or regulator; in the EU, a legal act that
+      applies directly in every member state.
+  es:
+    verdict: translated
+    forms:
+      - text: reglamento
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+        note: An EU regulation, or secondary legislation in Spain. The GDPR is el Reglamento
+          General de Protección de Datos.
+      - text: regulación
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: 'Regulation as an activity or as the rules on a sector: la regulación financiera.'
+      - text: normativa
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: The everyday catch-all for the rules that apply.
+    definition: Norma obligatoria dictada por un gobierno o un regulador; en la UE, acto legislativo
+      de aplicación directa en todos los Estados miembros.
+    examples:
+      - es: Un reglamento europeo se aplica directamente, sin transposición.
+        en: A European regulation applies directly, without transposition.
+    watchOut: An EU Regulation is a Reglamento and an EU Directive is a Directiva. Do not
+      translate an EU Regulation as regulación.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - law.legislation
+    - fw.gdpr
+    - grc.regulator
+    - grc.regulatory-compliance
+  sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - el reglamento europeo
+        - regulación de
+        - la normativa de
+      checked: 2026-11-14
+    - label: Ley Orgánica 3/2018 (LOPDGDD)
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673
+      found:
+        - del Reglamento
+      checked: 2026-11-14
+  status: sourced
+
+- id: law.contract
+  en:
+    term: contract
+    definition: A legally binding agreement; for cloud services, the document that fixes responsibilities,
+      service levels and what happens to data.
+  es:
+    verdict: translated
+    forms:
+      - text: contrato
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: contratar
+        kind: verb
+        usedBy:
+          - official
+        note: 'To contract or to take out a service: contratar un servicio en la nube.'
+    definition: Acuerdo jurídicamente vinculante que fija las obligaciones de las partes.
+    examples:
+      - es: El contrato con el proveedor de nube incluye el acuerdo de nivel de servicio.
+        en: The contract with the cloud provider includes the service level agreement.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - grc.sla
+    - law.msa
+    - law.sow
+    - law.liability
+  sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - un contrato escrito
+      checked: 2026-11-14
+    - label: AEPD, Inspección sectorial de oficio sobre servicios de cloud computing en el
+        sector educativo
+      url: https://www.aepd.es/guias/inspeccion-cloud-educacion.pdf
+      found:
+        - un contrato
+      checked: 2026-11-14
+    - label: AEPD, Guía para clientes que contraten servicios de cloud computing
+      url: https://www.aepd.es/guias/guia-cloud-clientes.pdf
+      found:
+        - de contratar servicios
+      checked: 2026-11-14
+  status: sourced
+
+- id: law.liability
+  en:
+    term: liability
+    definition: Legal responsibility for harm or loss, including the obligation to pay compensation;
+      contracts commonly cap it.
+  es:
+    verdict: translated
+    forms:
+      - text: responsabilidad
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+      - text: responsabilidad civil
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: Civil liability, the term used in insurance.
+      - text: limitación de responsabilidad
+        article: la
+        kind: noun
+        usedBy:
+          - engineers
+        note: A limitation of liability clause.
+    definition: Obligación legal de responder por un daño o una pérdida, incluida la de indemnizar.
+    examples:
+      - es: El contrato limita la responsabilidad del proveedor al importe anual del servicio.
+        en: The contract limits the provider's liability to the annual fee for the service.
+    watchOut: Responsabilidad covers both responsibility and liability. Context, or an adjective
+      such as civil or legal, tells them apart.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - law.contract
+    - sec.accountability
+    - grc.cyber-insurance
+    - cloud.shared-responsibility
+  sources:
+    - label: AEPD, Gestión del riesgo y evaluación de impacto en tratamientos de datos personales
+      url: https://www.aepd.es/guias/gestion-riesgo-y-evaluacion-impacto-en-tratamientos-datos-personales.pdf
+      found:
+        - de responsabilidad civil
+      checked: 2026-11-14
+    - label: BOE, Directiva (UE) 2022/2555 (NIS 2)
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81963
+      found:
+        - en responsabilidad civil
+      checked: 2026-11-14
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/techbiz/ia-responsabilidad-civil-desarrollo-proyectos/
+      found:
+        - limitación de responsabilidad
+      checked: 2026-11-14
+  status: sourced
+
+- id: law.intellectual-property
+  en:
+    term: intellectual property
+    definition: Legal rights over creations of the mind, such as software, designs, inventions
+      and brands.
+  es:
+    verdict: translated
+    forms:
+      - text: propiedad intelectual
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: propiedad industrial
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: Patents, trade marks and designs, which Spanish law treats separately.
+    definition: Derechos legales sobre las creaciones intelectuales, como el software, los
+      diseños, las invenciones y las marcas.
+    examples:
+      - es: El código fuente está protegido por la propiedad intelectual.
+        en: The source code is protected by intellectual property rights.
+    watchOut: In Spanish law propiedad intelectual strictly means copyright. Patents and trade
+      marks are propiedad industrial.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - law.software-licence
+    - sec.drm
+    - law.contract
+  sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - de propiedad intelectual
+      checked: 2026-11-14
+    - label: INCIBE, Toma de evidencias en entornos Windows
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/incibe_toma_evidencias_analisis_forense.pdf
+      found:
+        - la propiedad intelectual
+      checked: 2026-11-14
+    - label: Real Decreto 959/2022, programa UNICO I+D Cloud (BOE)
+      url: https://www.boe.es/diario_boe/txt.php?id=BOE-A-2022-18817
+      found:
+        - de propiedad industrial
+      checked: 2026-11-14
+  status: sourced
+
+- id: law.privacy
+  en:
+    term: privacy
+    definition: A person's right to control information about themselves and to be free from
+      unwarranted intrusion.
+  es:
+    verdict: translated
+    forms:
+      - text: privacidad
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: intimidad
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: 'The word in the Spanish Constitution: el derecho a la intimidad.'
+    definition: Derecho de una persona a controlar la información sobre sí misma y a no sufrir
+      intromisiones injustificadas.
+    examples:
+      - es: La política de privacidad explica qué datos se recogen y para qué.
+        en: The privacy policy explains what data is collected and why.
+  topics:
+    - data
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - law.data-protection
+    - law.personal-data
+    - law.privacy-by-design
+    - fw.gdpr
+  sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - Privacidad
+        - la intimidad
+      checked: 2026-11-14
+    - label: AEPD, Guía de privacidad desde el diseño
+      url: https://www.aepd.es/guias/guia-privacidad-desde-diseno.pdf
+      found:
+        - de Privacidad desde
+      checked: 2026-11-14
+  status: sourced
+
+- id: law.data-protection
+  en:
+    term: data protection
+    definition: The body of law and practice governing how personal data may be collected,
+      used, stored and shared.
+  es:
+    verdict: translated
+    forms:
+      - text: protección de datos
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: protección de datos personales
+        article: la
+        kind: noun
+        register: formal
+        usedBy:
+          - official
+    definition: Conjunto de normas y prácticas que regulan cómo se pueden recoger, usar, conservar
+      y comunicar los datos personales.
+    examples:
+      - es: La Agencia Española de Protección de Datos vela por el cumplimiento del RGPD.
+        en: The Spanish Data Protection Agency oversees compliance with the GDPR.
+  topics:
+    - data
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  frameworks:
+    - GDPR
+    - LOPDGDD
+  related:
+    - law.privacy
+    - law.personal-data
+    - fw.gdpr
+    - law.dpo
+    - law.supervisory-authority
+  sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - protección de datos
+        - Protección de Datos Personales
+      checked: 2026-11-14
+    - label: Ley Orgánica 3/2018 (LOPDGDD)
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673
+      found:
+        - Protección de Datos
+      checked: 2026-11-14
+  status: sourced
+
+- id: law.data-subject
+  en:
+    term: data subject
+    definition: The identified or identifiable living person that personal data is about.
+  es:
+    verdict: translated
+    forms:
+      - text: interesado
+        article: el
+        kind: noun
+        primary: true
+        plural: los interesados
+        usedBy:
+          - official
+        note: The GDPR's term in Spanish. The feminine is la interesada.
+      - text: afectado
+        article: el
+        kind: noun
+        usedBy:
+          - official
+        note: Used alongside interesado in Spanish data protection law.
+      - text: titular de los datos
+        article: el
+        kind: noun
+        usedBy:
+          - official
+        note: The usual term in Latin America, also understood in Spain.
+    definition: Persona física identificada o identificable a la que se refieren los datos
+      personales.
+    examples:
+      - es: El interesado puede solicitar el acceso a sus datos en cualquier momento.
+        en: The data subject may request access to their data at any time.
+    watchOut: Interesado looks like 'interested party', but in data protection it means the
+      data subject. A stakeholder is una parte interesada.
+  topics:
+    - data
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  frameworks:
+    - GDPR
+  related:
+    - law.personal-data
+    - law.data-controller
+    - law.consent
+    - law.right-to-erasure
+    - grc.stakeholder
+  sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - del interesado
+        - el afectado no
+      checked: 2026-11-14
+    - label: AEPD, Adecuación al RGPD de tratamientos que incorporan inteligencia artificial
+      url: https://www.aepd.es/guias/adecuacion-rgpd-ia.pdf
+      found:
+        - el interesado
+      checked: 2026-11-14
+    - label: AEPD, Inspección sectorial de oficio sobre servicios de cloud computing en el
+        sector educativo
+      url: https://www.aepd.es/guias/inspeccion-cloud-educacion.pdf
+      found:
+        - titular de los datos
+      checked: 2026-11-14
+  status: sourced
+
+- id: law.consent
+  en:
+    term: consent
+    definition: A person's freely given, specific, informed and unambiguous agreement to the
+      processing of their personal data.
+  es:
+    verdict: translated
+    forms:
+      - text: consentimiento
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: consentir
+        kind: verb
+        usedBy:
+          - official
+        note: Dar or prestar el consentimiento is the more usual phrasing.
+    definition: Manifestación de voluntad libre, específica, informada e inequívoca por la
+      que una persona acepta el tratamiento de sus datos.
+    examples:
+      - es: El usuario puede retirar su consentimiento en cualquier momento.
+        en: The user may withdraw their consent at any time.
+  topics:
+    - data
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  frameworks:
+    - GDPR
+  related:
+    - law.data-subject
+    - law.personal-data
+    - law.data-controller
+  sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - sin consentimiento del
+      checked: 2026-11-14
+    - label: AEPD, resolución PS/00176/2022
+      url: https://www.aepd.es/documento/ps-00176-2022.pdf
+      found:
+        - de consentimiento
+      checked: 2026-11-14
+    - label: AEPD, Gestión del riesgo y evaluación de impacto en tratamientos de datos personales
+      url: https://www.aepd.es/guias/gestion-riesgo-y-evaluacion-impacto-en-tratamientos-datos-personales.pdf
+      found:
+        - Consentir
+      checked: 2026-11-14
+  status: sourced
+
+- id: law.dpo
+  en:
+    term: data protection officer
+    acronym: DPO
+    definition: The person an organisation appoints to advise on and monitor its compliance
+      with data protection law, and to be the contact for the regulator.
+  es:
+    verdict: translated
+    acronym: DPD
+    forms:
+      - text: delegado de protección de datos
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+        note: The feminine is la delegada de protección de datos.
+      - text: DPD
+        article: el
+        kind: noun
+        headline: true
+        usedBy:
+          - official
+        note: The Spanish acronym.
+      - text: DPO
+        article: el
+        kind: noun
+        usedBy:
+          - engineers
+        note: The English acronym is heard just as often in companies.
+    say: 'Both acronyms are spelled out: de-pe-de, de-pe-o.'
+    definition: Persona designada para asesorar y supervisar el cumplimiento de la normativa
+      de protección de datos y servir de contacto con la autoridad de control.
+    examples:
+      - es: Cualquier brecha debe comunicarse de inmediato al delegado de protección de datos.
+        en: Any breach must be reported to the data protection officer at once.
+  topics:
+    - data
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  frameworks:
+    - GDPR
+  related:
+    - law.data-protection
+    - law.supervisory-authority
+    - law.dpia
+    - fw.gdpr
+  sources:
+    - label: Ley Orgánica 3/2018 (LOPDGDD)
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673
+      found:
+        - delegado de protección de datos
+      checked: 2026-11-14
+    - label: Reglamento (UE) 2016/679 (RGPD), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2016-80807
+      found:
+        - delegado de protección de datos
+      checked: 2026-11-14
+    - label: AEPD, Gestión del riesgo y evaluación de impacto en tratamientos de datos personales
+      url: https://www.aepd.es/guias/gestion-riesgo-y-evaluacion-impacto-en-tratamientos-datos-personales.pdf
+      found:
+        - DPD
+      checked: 2026-11-14
+    - label: Telefónica Tech, blog
+      url: https://telefonicatech.com/blog/que-hemos-presentado-en-security-day_27
+      found:
+        - del DPO
+      checked: 2026-11-14
+  status: sourced
+
+- id: law.dpia
+  en:
+    term: data protection impact assessment
+    acronym: DPIA
+    definition: An assessment required before processing that is likely to put people's rights
+      at high risk, identifying the risks and the measures to reduce them.
+  es:
+    verdict: translated
+    acronym: EIPD
+    forms:
+      - text: evaluación de impacto relativa a la protección de datos
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+        note: The wording of the GDPR in Spanish.
+      - text: EIPD
+        article: la
+        kind: noun
+        headline: true
+        usedBy:
+          - official
+        note: The Spanish acronym, used by the AEPD.
+      - text: evaluación de impacto en la protección de datos
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: A slightly shorter variant.
+      - text: DPIA
+        article: la
+        kind: noun
+        note: The English acronym is common in multinational companies.
+    definition: Evaluación obligatoria antes de un tratamiento que probablemente entrañe un
+      alto riesgo para los derechos de las personas.
+    examples:
+      - es: Antes de lanzar el servicio hay que hacer una evaluación de impacto relativa a
+          la protección de datos.
+        en: A data protection impact assessment has to be done before the service is launched.
+  topics:
+    - data
+    - grc
+    - assessment
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  frameworks:
+    - GDPR
+  related:
+    - law.pia
+    - sec.risk-assessment
+    - law.dpo
+    - law.privacy-by-design
+  sources:
+    - label: AEPD, Gestión del riesgo y evaluación de impacto en tratamientos de datos personales
+      url: https://www.aepd.es/guias/gestion-riesgo-y-evaluacion-impacto-en-tratamientos-datos-personales.pdf
+      found:
+        - EVALUACIÓN DE IMPACTO RELATIVA A LA PROTECCIÓN DE DATOS
+        - EIPD
+      checked: 2026-11-14
+    - label: Reglamento (UE) 2016/679 (RGPD), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2016-80807
+      found:
+        - evaluación de impacto relativa a la protección de datos
+      checked: 2026-11-14
+    - label: AEPD, resolución PS/00176/2022
+      url: https://www.aepd.es/documento/ps-00176-2022.pdf
+      found:
+        - Evaluación de Impacto en la Protección de Datos
+      checked: 2026-11-14
+  status: sourced
+
+- id: law.privacy-by-design
+  en:
+    term: privacy by design
+    definition: Building data protection into a system from the earliest design stage instead
+      of adding it afterwards.
+  es:
+    verdict: translated
+    forms:
+      - text: privacidad desde el diseño
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+      - text: protección de datos desde el diseño
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: The GDPR's own wording, paired with protección de datos por defecto.
+    definition: Integración de la protección de datos en un sistema desde la primera fase
+      de su diseño.
+    examples:
+      - es: La privacidad desde el diseño obliga a pensar en los datos antes de escribir una
+          línea de código.
+        en: Privacy by design means thinking about the data before writing a line of code.
+  topics:
+    - data
+    - architecture
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  frameworks:
+    - GDPR
+  related:
+    - sec.secure-by-design
+    - law.dpia
+    - law.privacy
+    - sec.pseudonymization
+  sources:
+    - label: AEPD, Guía de privacidad desde el diseño
+      url: https://www.aepd.es/guias/guia-privacidad-desde-diseno.pdf
+      found:
+        - Privacidad desde el Diseño
+      checked: 2026-11-14
+    - label: Reglamento (UE) n.º 910/2014 (eIDAS), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2014-81822
+      found:
+        - privacidad desde el diseño
+      checked: 2026-11-14
+    - label: AEPD, Gestión del riesgo y evaluación de impacto en tratamientos de datos personales
+      url: https://www.aepd.es/guias/gestion-riesgo-y-evaluacion-impacto-en-tratamientos-datos-personales.pdf
+      found:
+        - protección de datos desde el diseño
+      checked: 2026-11-14
+  status: sourced
+
+- id: law.breach-notification
+  en:
+    term: data breach notification
+    definition: The duty to tell the regulator, and in serious cases the people affected,
+      about a personal data breach; under the GDPR within 72 hours.
+  es:
+    verdict: translated
+    forms:
+      - text: notificación de brechas de datos personales
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+        note: The AEPD's current wording.
+      - text: notificación de brechas de seguridad
+        article: la
+        kind: noun
+        usedBy:
+          - official
+      - text: notificación de una violación de la seguridad de los datos personales
+        article: la
+        kind: noun
+        register: formal
+        usedBy:
+          - eu
+        note: The GDPR's legal wording, where a breach is a violación de la seguridad.
+    definition: Obligación de comunicar una brecha de datos personales a la autoridad de control
+      y, en los casos graves, a los afectados.
+    examples:
+      - es: La notificación de la brecha a la AEPD debe hacerse en un plazo de 72 horas.
+        en: The breach must be notified to the AEPD within 72 hours.
+  topics:
+    - data
+    - incident
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  frameworks:
+    - GDPR
+  related:
+    - sec.data-breach
+    - law.supervisory-authority
+    - law.dpo
+    - sec.incident-response
+  sources:
+    - label: AEPD, Guía para la notificación de brechas de datos personales
+      url: https://www.aepd.es/guias/guia-brechas-seguridad.pdf
+      found:
+        - notificación de brechas de datos personales
+      checked: 2026-11-14
+    - label: AEPD, Notificación de brechas de datos personales a la autoridad de control
+      url: https://www.aepd.es/derechos-y-deberes/cumple-tus-deberes/medidas-de-cumplimiento/brechas-de-datos-personales-notificacion
+      found:
+        - Notificación de brechas de seguridad
+      checked: 2026-11-14
+    - label: Reglamento (UE) 2016/679 (RGPD), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2016-80807
+      found:
+        - Notificación de una violación de la seguridad de los datos personales
+      checked: 2026-11-14
+  status: sourced
+
+- id: law.international-transfer
+  en:
+    term: international data transfer
+    definition: Sending personal data to a country outside the European Economic Area, which
+      the GDPR allows only with specific safeguards.
+  es:
+    verdict: translated
+    forms:
+      - text: transferencia internacional de datos
+        article: la
+        kind: noun
+        primary: true
+        plural: las transferencias internacionales de datos
+        usedBy:
+          - official
+          - aws
+      - text: transferencia a un tercer país
+        article: la
+        kind: noun
+        usedBy:
+          - eu
+        note: The GDPR's phrase; a tercer país is any country outside the EEA.
+    definition: Envío de datos personales a un país situado fuera del Espacio Económico Europeo.
+    examples:
+      - es: Las transferencias internacionales de datos requieren cláusulas contractuales
+          tipo.
+        en: International data transfers require standard contractual clauses.
+  topics:
+    - data
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  frameworks:
+    - GDPR
+  related:
+    - law.data-residency
+    - law.data-sovereignty
+    - law.jurisdiction
+    - fw.gdpr
+  sources:
+    - label: Ley Orgánica 3/2018 (LOPDGDD)
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673
+      found:
+        - transferencia internacional de datos
+      checked: 2026-11-14
+    - label: AWS, páginas en español
+      url: https://aws.amazon.com/es/compliance/gdpr-center/
+      found:
+        - transferencia internacional de datos
+      checked: 2026-11-14
+    - label: Reglamento (UE) 2016/679 (RGPD), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2016-80807
+      found:
+        - transferencia a un tercer país
+      checked: 2026-11-14
+  status: sourced
+
+- id: law.right-to-erasure
+  en:
+    term: right to erasure
+    definition: A person's right to have their personal data deleted in certain circumstances;
+      also known as the right to be forgotten.
+  es:
+    verdict: translated
+    forms:
+      - text: derecho de supresión
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+        note: The GDPR's term.
+      - text: derecho al olvido
+        article: el
+        kind: noun
+        usedBy:
+          - official
+        note: The right to be forgotten, the popular name.
+    definition: Derecho de una persona a que se eliminen sus datos personales en determinadas
+      circunstancias.
+    examples:
+      - es: El cliente ha ejercido su derecho de supresión y hay que borrar sus datos.
+        en: The customer has exercised their right to erasure and their data must be deleted.
+    watchOut: 'The GDPR rights are known in Spain by the older acronym ARCO, now extended:
+      acceso, rectificación, supresión, oposición, limitación and portabilidad.'
+  topics:
+    - data
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  frameworks:
+    - GDPR
+  related:
+    - sec.data-deletion
+    - law.data-subject
+    - sec.cryptographic-erasure
+    - sec.data-retention
+  sources:
+    - label: AEPD, traducción del informe de ENISA «Ingeniería de la protección de datos»
+        (2022)
+      url: https://www.aepd.es/documento/enisa-ingenieria-de-la-proteccion-de-datos.pdf
+      found:
+        - derecho de supresión
+      checked: 2026-11-14
+    - label: Reglamento (UE) 2016/679 (RGPD), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2016-80807
+      found:
+        - derecho de supresión
+      checked: 2026-11-14
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - Derecho al olvido
+      checked: 2026-11-14
+  status: sourced
+
+- id: law.supervisory-authority
+  en:
+    term: supervisory authority
+    definition: The independent public body that enforces data protection law in a country;
+      in Spain, the AEPD.
+  es:
+    verdict: translated
+    forms:
+      - text: autoridad de control
+        article: la
+        kind: noun
+        primary: true
+        plural: las autoridades de control
+        usedBy:
+          - official
+          - eu
+        note: The GDPR's term.
+      - text: autoridad de protección de datos
+        article: la
+        kind: noun
+        usedBy:
+          - official
+    definition: Organismo público independiente que vela por el cumplimiento de la normativa
+      de protección de datos; en España, la AEPD.
+    examples:
+      - es: La empresa notificó la brecha a la autoridad de control.
+        en: The company notified the breach to the supervisory authority.
+    watchOut: Autoridad supervisora is a literal translation. For data protection the legal
+      term is autoridad de control.
+  topics:
+    - grc
+    - data
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  frameworks:
+    - GDPR
+  related:
+    - grc.regulator
+    - law.dpo
+    - law.breach-notification
+    - fw.gdpr
+  sources:
+    - label: AEPD, Gestión del riesgo y evaluación de impacto en tratamientos de datos personales
+      url: https://www.aepd.es/guias/gestion-riesgo-y-evaluacion-impacto-en-tratamientos-datos-personales.pdf
+      found:
+        - Autoridad de Control
+      checked: 2026-11-14
+    - label: Reglamento (UE) 2016/679 (RGPD), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2016-80807
+      found:
+        - autoridad de control
+      checked: 2026-11-14
+    - label: Ley Orgánica 3/2018 (LOPDGDD)
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673
+      found:
+        - autoridad de protección de datos
+      checked: 2026-11-14
+  status: sourced
+
+- id: law.pia
+  en:
+    term: privacy impact assessment
+    acronym: PIA
+    definition: An analysis of how a project or system affects people's privacy and how those
+      effects can be reduced; the general idea behind the GDPR's DPIA.
+  es:
+    verdict: translated
+    forms:
+      - text: evaluación de impacto en la privacidad
+        article: la
+        kind: noun
+        primary: true
+      - text: PIA
+        article: la
+        kind: noun
+        note: The English acronym is kept.
+      - text: evaluación de impacto de privacidad
+        article: la
+        kind: noun
+    definition: Análisis de cómo afecta un proyecto o un sistema a la privacidad de las personas
+      y de cómo reducir esos efectos.
+    examples:
+      - es: La evaluación de impacto en la privacidad recomendó seudonimizar los datos.
+        en: The privacy impact assessment recommended pseudonymising the data.
+    watchOut: In Spain people almost always mean the GDPR assessment and call it the EIPD.
+  topics:
+    - data
+    - grc
+    - assessment
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - law.dpia
+    - law.privacy
+    - sec.risk-assessment
+  sources: []
+  status: draft
+
+- id: fw.gapp
+  en:
+    term: Generally Accepted Privacy Principles
+    acronym: GAPP
+    definition: A set of ten privacy principles developed by the US and Canadian accountancy
+      institutes, the basis of the privacy criteria in SOC 2.
+  es:
+    verdict: both
+    forms:
+      - text: GAPP
+        article: los
+        kind: noun
+        primary: true
+      - text: principios de privacidad generalmente aceptados
+        article: los
+        kind: noun
+        register: formal
+    definition: Conjunto de diez principios de privacidad elaborado por los institutos de
+      auditores de Estados Unidos y Canadá.
+    examples:
+      - es: Los GAPP agrupan las buenas prácticas de privacidad en diez principios.
+        en: The GAPP group privacy good practice into ten principles.
+  topics:
+    - grc
+    - data
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - grc.soc-2-report
+    - law.privacy
+    - fw.ssae-18
+  sources: []
+  status: draft
+
+- id: grc.audit
+  en:
+    term: audit
+    definition: An independent, systematic examination of whether controls, processes or records
+      meet a defined standard.
+  es:
+    verdict: translated
+    forms:
+      - text: auditoría
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: auditar
+        kind: verb
+        usedBy:
+          - official
+    definition: Examen independiente y sistemático que comprueba si los controles, procesos
+      o registros cumplen una norma determinada.
+    examples:
+      - es: La auditoría del ENS se repite cada dos años.
+        en: The ENS audit is repeated every two years.
+  topics:
+    - assessment
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - grc.auditor
+    - grc.internal-audit
+    - grc.external-audit
+    - grc.audit-report
+    - sec.auditability
+  sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - Auditoría de
+      checked: 2026-11-14
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - auditoría
+      checked: 2026-11-14
+    - label: AEPD, Adecuación al RGPD de tratamientos que incorporan inteligencia artificial
+      url: https://www.aepd.es/guias/adecuacion-rgpd-ia.pdf
+      found:
+        - de auditar
+      checked: 2026-11-14
+  status: sourced
+
+- id: grc.auditor
+  en:
+    term: auditor
+    definition: The person or firm that carries out an audit and gives an opinion on what
+      they find.
+  es:
+    verdict: translated
+    forms:
+      - text: auditor
+        article: el
+        kind: noun
+        primary: true
+        plural: los auditores
+        usedBy:
+          - official
+          - eu
+        note: The feminine is la auditora.
+      - text: equipo auditor
+        article: el
+        kind: noun
+        usedBy:
+          - official
+    definition: Persona o entidad que realiza una auditoría y emite una opinión sobre lo que
+      encuentra.
+    examples:
+      - es: El auditor pidió acceso de solo lectura a la consola de la nube.
+        en: The auditor asked for read-only access to the cloud console.
+  topics:
+    - assessment
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - grc.audit
+    - cloud.auditor
+    - grc.audit-report
+  sources:
+    - label: Orden PRE/2740/2007, Reglamento de Evaluación y Certificación de la Seguridad
+        de las TI
+      url: https://www.boe.es/buscar/pdf/2007/BOE-A-2007-16830-consolidado.pdf
+      found:
+        - equipo auditor
+        - el equipo auditor
+      checked: 2026-11-14
+    - label: BOE, Directiva (UE) 2022/2555 (NIS 2)
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81963
+      found:
+        - un auditor cualificado
+      checked: 2026-11-14
+  status: sourced
+
+- id: grc.internal-audit
+  en:
+    term: internal audit
+    definition: An audit carried out by, or on behalf of, the organisation itself, reporting
+      to its own management or board.
+  es:
+    verdict: translated
+    forms:
+      - text: auditoría interna
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+    definition: Auditoría realizada por la propia organización, o en su nombre, que informa
+      a su dirección.
+    examples:
+      - es: La auditoría interna revisa los accesos privilegiados cada semestre.
+        en: Internal audit reviews privileged access every six months.
+  topics:
+    - assessment
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - grc.audit
+    - grc.external-audit
+    - fw.coso
+  sources:
+    - label: 'INCIBE, Cómo gestionar una fuga de información: una guía de aproximación para
+        el empresario'
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_ciberseguridad_gestion_fuga_informacion_0.pdf
+      found:
+        - auditoría interna
+      checked: 2026-11-14
+    - label: Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81962
+      found:
+        - auditoría interna periódicamente
+      checked: 2026-11-14
+  status: sourced
+
+- id: grc.external-audit
+  en:
+    term: external audit
+    definition: An audit carried out by an independent outside body, such as a certification
+      body or an accountancy firm.
+  es:
+    verdict: translated
+    forms:
+      - text: auditoría externa
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - google
+    definition: Auditoría realizada por una entidad independiente ajena a la organización.
+    examples:
+      - es: La auditoría externa de certificación está prevista para marzo.
+        en: The external certification audit is planned for March.
+  topics:
+    - assessment
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - grc.audit
+    - grc.internal-audit
+    - grc.certification
+    - grc.attestation
+  sources:
+    - label: INCIBE, Taxonomía de soluciones de ciberseguridad
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/taxonomia_ciberseguridad.pdf
+      found:
+        - Auditoría externa
+      checked: 2026-11-14
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/security/compliance/soc-2?hl=es
+      found:
+        - una auditoría externa de
+      checked: 2026-11-14
+  status: sourced
+
+- id: grc.audit-scope
+  en:
+    term: audit scope
+    definition: The systems, locations, processes and period that an audit covers, and by
+      implication what it leaves out.
+  es:
+    verdict: translated
+    forms:
+      - text: alcance de la auditoría
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - engineers
+      - text: alcance
+        article: el
+        kind: noun
+        note: Scope in general, as in el alcance del SGSI or fuera de alcance.
+    definition: Sistemas, ubicaciones, procesos y periodo que cubre una auditoría.
+    examples:
+      - es: El entorno de desarrollo queda fuera del alcance de la auditoría.
+        en: The development environment is outside the audit scope.
+  topics:
+    - assessment
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - grc.audit
+    - grc.audit-report
+    - grc.isms
+  sources:
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/techbiz/6-requisitos-clave-tratamiento-datos-personales-ia/
+      found:
+        - alcance de la auditoría
+      checked: 2026-11-14
+  status: sourced
+
+- id: grc.audit-report
+  en:
+    term: audit report
+    definition: The auditor's written account of what was examined, what was found and the
+      resulting opinion or list of nonconformities.
+  es:
+    verdict: translated
+    forms:
+      - text: informe de auditoría
+        article: el
+        kind: noun
+        primary: true
+        plural: los informes de auditoría
+        usedBy:
+          - official
+          - eu
+    definition: Documento en el que el auditor recoge lo examinado, los hallazgos y su opinión
+      o las no conformidades.
+    examples:
+      - es: El informe de auditoría recoge dos no conformidades menores.
+        en: The audit report records two minor nonconformities.
+    watchOut: A report is un informe in Spain. Reporte is Latin American.
+  topics:
+    - assessment
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - grc.audit
+    - grc.auditor
+    - grc.soc-2-report
+    - grc.gap-analysis
+  sources:
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - informe de auditoría
+      checked: 2026-11-14
+    - label: Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81962
+      found:
+        - informe de auditoría
+      checked: 2026-11-14
+  status: sourced
+
+- id: grc.gap-analysis
+  en:
+    term: gap analysis
+    definition: A comparison of where an organisation is against where a standard or target
+      says it should be, listing what is missing.
+  es:
+    verdict: both
+    forms:
+      - text: análisis GAP
+        article: el
+        kind: noun
+        primary: true
+        note: The usual name among consultants in Spain, with gap kept in English.
+      - text: análisis de brechas
+        article: el
+        kind: noun
+        usedBy:
+          - microsoft
+      - text: análisis diferencial
+        article: el
+        kind: noun
+        note: The fully Spanish term, used in public-sector guidance.
+    definition: Comparación entre la situación actual de una organización y la que exige una
+      norma o un objetivo, con la lista de lo que falta.
+    examples:
+      - es: Antes de certificarnos hicimos un análisis GAP frente a la ISO 27001.
+        en: Before certifying we did a gap analysis against ISO 27001.
+  topics:
+    - assessment
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - grc.audit
+    - sec.risk-assessment
+    - grc.certification
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/security/benchmark/azure/mcsb-v2-asset-management
+      found:
+        - análisis de brechas
+      checked: 2026-11-14
+  status: draft
+
+- id: grc.soc-2-report
+  en:
+    term: SOC 2 report
+    definition: An independent auditor's report on a service provider's controls for security,
+      availability, processing integrity, confidentiality and privacy.
+  es:
+    verdict: translated
+    forms:
+      - text: informe SOC 2
+        article: el
+        kind: noun
+        primary: true
+        plural: los informes SOC 2
+        usedBy:
+          - google
+          - aws
+      - text: informe SOC 2 de tipo 2
+        article: el
+        kind: noun
+        note: A type 2 report covers how the controls operated over a period; also written
+          Tipo II.
+    say: 'SOC is said as a word and the number in Spanish: ''soc dos''.'
+    definition: Informe de un auditor independiente sobre los controles de seguridad, disponibilidad,
+      integridad, confidencialidad y privacidad de un proveedor de servicios.
+    examples:
+      - es: Pedimos al proveedor su último informe SOC 2 de tipo 2.
+        en: We asked the provider for its latest SOC 2 type 2 report.
+  topics:
+    - assessment
+    - grc
+  technology:
+    - cloud-general
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  frameworks:
+    - SOC-2
+  related:
+    - fw.ssae-18
+    - fw.isae-3402
+    - grc.attestation
+    - grc.audit-report
+    - sec.soc
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/security/compliance/soc-2?hl=es
+      found:
+        - informe SOC 2
+      checked: 2026-11-14
+    - label: AWS, páginas en español
+      url: https://aws.amazon.com/es/compliance/soc-faqs/
+      found:
+        - informe SOC 2
+      checked: 2026-11-14
+  status: sourced
+
+- id: grc.attestation
+  en:
+    term: attestation
+    definition: A formal statement by an independent auditor that an organisation's description
+      of its controls is fair and that the controls work, as in a SOC report.
+  es:
+    verdict: translated
+    forms:
+      - text: atestación
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - aws
+        note: Also used in computing for proving the state of a device or workload.
+      - text: informe de aseguramiento
+        article: el
+        kind: noun
+        note: An assurance report, the Spanish auditing profession's term.
+    definition: Declaración formal de un auditor independiente sobre la descripción y el funcionamiento
+      de los controles de una organización.
+    examples:
+      - es: El proveedor publica sus informes de atestación en el portal de cumplimiento.
+        en: The provider publishes its attestation reports on the compliance portal.
+    watchOut: An attestation is an opinion on controls, not a certificate. Vendor documentation
+      in Spanish sometimes blurs the two by using certificación for both.
+  topics:
+    - assessment
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - grc.certification
+    - grc.soc-2-report
+    - fw.ssae-18
+    - grc.external-audit
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/security/benchmark/azure/mcsb-v2-asset-management
+      found:
+        - atestación de cumplimiento
+      checked: 2026-11-14
+    - label: AWS, páginas en español
+      url: https://aws.amazon.com/es/compliance/programs/
+      found:
+        - atestaciones de cumplimiento
+      checked: 2026-11-14
+  status: sourced
+
+- id: grc.certification
+  en:
+    term: certification
+    definition: Formal confirmation by an accredited body that an organisation, product or
+      person meets the requirements of a standard.
+  es:
+    verdict: translated
+    forms:
+      - text: certificación
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: certificar
+        kind: verb
+        usedBy:
+          - official
+      - text: certificado
+        article: el
+        kind: noun
+        note: The certificate itself, the document.
+    definition: Confirmación formal, por una entidad acreditada, de que una organización,
+      un producto o una persona cumple una norma.
+    examples:
+      - es: La empresa ha obtenido la certificación ISO 27001.
+        en: The company has obtained ISO 27001 certification.
+  topics:
+    - assessment
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - grc.attestation
+    - grc.external-audit
+    - fw.iso-27001
+    - fw.ens
+  sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - de certificación
+        - para certificar la
+      checked: 2026-11-14
+    - label: Orden PRE/2740/2007, Reglamento de Evaluación y Certificación de la Seguridad
+        de las TI
+      url: https://www.boe.es/buscar/pdf/2007/BOE-A-2007-16830-consolidado.pdf
+      found:
+        - Certificación de
+      checked: 2026-11-14
+  status: sourced
+
+- id: fw.ssae-18
+  en:
+    term: SSAE 18
+    expansion: Statement on Standards for Attestation Engagements No. 18
+    definition: The US auditing standard under which SOC 1, SOC 2 and SOC 3 reports are produced.
+  es:
+    verdict: english-kept
+    forms:
+      - text: SSAE 18
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - google
+        note: Usually as la norma SSAE 18.
+    say: 'Spelled out, with the number in Spanish: ese-ese-a-e dieciocho.'
+    definition: Norma de auditoría estadounidense con la que se elaboran los informes SOC.
+    examples:
+      - es: Los informes SOC se elaboran conforme a la norma SSAE 18.
+        en: SOC reports are produced in accordance with SSAE 18.
+  topics:
+    - assessment
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  frameworks:
+    - SOC-2
+  related:
+    - grc.soc-2-report
+    - fw.isae-3402
+    - grc.attestation
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/security/compliance/soc-2?hl=es
+      found:
+        - el SSAE 18 del
+      checked: 2026-11-14
+  status: sourced
+
+- id: fw.isae-3402
+  en:
+    term: ISAE 3402
+    expansion: International Standard on Assurance Engagements 3402
+    definition: The international standard for assurance reports on controls at a service
+      organisation, the global counterpart of the US SOC 1 report.
+  es:
+    verdict: english-kept
+    forms:
+      - text: ISAE 3402
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - google
+          - aws
+        note: Usually as la norma ISAE 3402 or un informe ISAE 3402.
+      - text: NIEA 3402
+        article: la
+        kind: noun
+        note: The official Spanish name, Norma Internacional de Encargos de Aseguramiento,
+          rarely used outside the auditing profession.
+    definition: Norma internacional para los informes de aseguramiento sobre los controles
+      de una organización de servicios.
+    examples:
+      - es: El centro de datos cuenta con un informe ISAE 3402 de tipo 2.
+        en: The data centre has an ISAE 3402 type 2 report.
+  topics:
+    - assessment
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - fw.ssae-18
+    - grc.soc-2-report
+    - grc.attestation
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/security/compliance/soc-2?hl=es
+      found:
+        - ISAE 3402 Kit
+      checked: 2026-11-14
+    - label: AWS, páginas en español
+      url: https://aws.amazon.com/es/compliance/soc-faqs/
+      found:
+        - informe ISAE 3402
+      checked: 2026-11-14
+  status: sourced
+
+- id: grc.isms
+  en:
+    term: information security management system
+    acronym: ISMS
+    definition: The policies, processes and controls an organisation uses to manage information
+      security risk in a systematic way, as defined by ISO/IEC 27001.
+  es:
+    verdict: translated
+    acronym: SGSI
+    forms:
+      - text: sistema de gestión de la seguridad de la información
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: SGSI
+        article: el
+        kind: noun
+        headline: true
+        usedBy:
+          - official
+        note: The Spanish acronym, always used in place of ISMS.
+      - text: sistema de gestión de seguridad de la información
+        article: el
+        kind: noun
+        usedBy:
+          - official
+        note: The same term without the second article.
+    say: 'SGSI is spelled out: ese-ge-ese-i.'
+    definition: Conjunto de políticas, procesos y controles con el que una organización gestiona
+      de forma sistemática los riesgos de seguridad de la información.
+    examples:
+      - es: El alcance del SGSI cubre todos los servicios en la nube.
+        en: The scope of the ISMS covers all the cloud services.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  frameworks:
+    - ISO-27001
+  related:
+    - fw.iso-27001
+    - grc.policy
+    - grc.control
+    - grc.audit-scope
+    - tech.continual-improvement
+  sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - Sistema de Gestión de la seguridad de la Información
+        - SGSI
+      checked: 2026-11-14
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - Sistema de gestión de la seguridad de la información
+      checked: 2026-11-14
+    - label: AEPD, Gestión del riesgo y evaluación de impacto en tratamientos de datos personales
+      url: https://www.aepd.es/guias/gestion-riesgo-y-evaluacion-impacto-en-tratamientos-datos-personales.pdf
+      found:
+        - sistema de gestión de seguridad de la información
+      checked: 2026-11-14
+  status: sourced
+
+- id: grc.policy
+  en:
+    term: policy
+    definition: A formal statement of management's intent and rules on a subject, which standards
+      and procedures then put into practice.
+  es:
+    verdict: translated
+    forms:
+      - text: política
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: política de seguridad
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: A security policy.
+      - text: directiva
+        article: la
+        kind: noun
+        note: Microsoft's word for a technical policy setting, as in directiva de grupo.
+    definition: Declaración formal de la dirección que fija la intención y las reglas sobre
+      una materia.
+    examples:
+      - es: La política de seguridad debe aprobarla la dirección.
+        en: The security policy must be approved by senior management.
+    watchOut: Política also means politics. An insurance policy is a póliza, not a política.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - grc.standard
+    - grc.procedure
+    - grc.guideline
+    - grc.governance
+  sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - políticas de seguridad
+        - Política de seguridad
+      checked: 2026-11-14
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - política de seguridad
+      checked: 2026-11-14
+  status: sourced
+
+- id: grc.standard
+  en:
+    term: standard
+    definition: A document setting mandatory, specific requirements, whether published by
+      a standards body such as ISO or written internally to support a policy.
+  es:
+    verdict: translated
+    forms:
+      - text: norma
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+        note: 'The word for a published standard: la norma ISO/IEC 27001, una norma UNE.'
+      - text: estándar
+        article: el
+        kind: noun
+        plural: los estándares
+        note: Also common, especially for technical and industry standards.
+      - text: normativa
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: The body of rules as a whole, internal or external.
+    definition: Documento que fija requisitos concretos y obligatorios, publicado por un organismo
+      de normalización o elaborado internamente.
+    examples:
+      - es: La norma exige revisar los accesos al menos una vez al año.
+        en: The standard requires access to be reviewed at least once a year.
+    watchOut: Normalización means standardisation, not normalisation. The Spanish standards
+      body is UNE.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - grc.policy
+    - grc.procedure
+    - grc.guideline
+    - fw.iso-27001
+  sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - la norma ISO
+        - la normativa de
+      checked: 2026-11-14
+    - label: Esquema Nacional de Interoperabilidad (RD 4/2010)
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2010-1331
+      found:
+        - las normas técnicas de
+      checked: 2026-11-14
+  status: sourced
+
+- id: grc.procedure
+  en:
+    term: procedure
+    definition: The documented step-by-step way of carrying out a task so that it is done
+      consistently and in line with policy.
+  es:
+    verdict: translated
+    forms:
+      - text: procedimiento
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: procedimiento operativo
+        article: el
+        kind: noun
+        usedBy:
+          - official
+    definition: Descripción documentada, paso a paso, de cómo realizar una tarea de forma
+      coherente con la política.
+    examples:
+      - es: El procedimiento de alta de usuarios exige la aprobación del responsable.
+        en: The user onboarding procedure requires the manager's approval.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - grc.policy
+    - grc.standard
+    - grc.guideline
+    - sec.runbook
+  sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - políticas y procedimientos
+      checked: 2026-11-14
+    - label: Orden PRE/2740/2007, Reglamento de Evaluación y Certificación de la Seguridad
+        de las TI
+      url: https://www.boe.es/buscar/pdf/2007/BOE-A-2007-16830-consolidado.pdf
+      found:
+        - Los Procedimientos Operativos de
+      checked: 2026-11-14
+    - label: AEPD, Orientaciones sobre IA agéntica
+      url: https://www.aepd.es/guias/orientaciones-ia-agentica.pdf
+      found:
+        - un procedimiento operativo estándar
+      checked: 2026-11-14
+  status: sourced
+
+- id: grc.guideline
+  en:
+    term: guideline
+    definition: A recommendation on how to meet a policy or standard; advisory, not mandatory.
+  es:
+    verdict: translated
+    forms:
+      - text: directriz
+        article: la
+        kind: noun
+        primary: true
+        plural: las directrices
+        usedBy:
+          - official
+      - text: guía
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: A guide or guidance document, such as the CCN-STIC guides.
+      - text: recomendación
+        article: la
+        kind: noun
+        usedBy:
+          - official
+    definition: Recomendación sobre cómo cumplir una política o una norma; orienta, pero no
+      obliga.
+    examples:
+      - es: Las directrices de la AEPD ayudan a interpretar el reglamento.
+        en: The AEPD's guidelines help in interpreting the regulation.
+    watchOut: Guía is feminine for a document, la guía. Do not confuse directriz with directiva,
+      which is an EU directive.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - grc.policy
+    - grc.standard
+    - grc.procedure
+  sources:
+    - label: AEPD, Gestión del riesgo y evaluación de impacto en tratamientos de datos personales
+      url: https://www.aepd.es/guias/gestion-riesgo-y-evaluacion-impacto-en-tratamientos-datos-personales.pdf
+      found:
+        - como directriz general
+      checked: 2026-11-14
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - Una guía de
+        - por recomendación de
+      checked: 2026-11-14
+  status: sourced
+
+- id: grc.control
+  en:
+    term: control
+    definition: A measure, whether technical, organisational or physical, that reduces a risk;
+      also called a safeguard or countermeasure.
+  es:
+    verdict: translated
+    forms:
+      - text: control
+        article: el
+        kind: noun
+        primary: true
+        plural: los controles
+        usedBy:
+          - official
+          - eu
+      - text: control de seguridad
+        article: el
+        kind: noun
+        usedBy:
+          - official
+      - text: medida de seguridad
+        article: la
+        kind: noun
+        plural: las medidas de seguridad
+        usedBy:
+          - official
+        note: The term the ENS and Spanish law use.
+      - text: salvaguarda
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: MAGERIT's word for a safeguard.
+    definition: Medida técnica, organizativa o física que reduce un riesgo.
+    examples:
+      - es: El anexo A de la ISO 27001 recoge 93 controles.
+        en: Annex A of ISO 27001 lists 93 controls.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  frameworks:
+    - ISO-27001
+  related:
+    - grc.risk-treatment
+    - grc.isms
+    - sec.defence-in-depth
+    - fw.cis-controls
+  sources:
+    - label: INCIBE y Universidad de León, Guía de buenas prácticas de ciberseguridad para
+        redes privadas 5G
+      url: https://www.incibe.es/sites/default/files/2025-12/INCIBE&ULE_GuiaBuenasPracticasCiberseguridadRedesPrivadas5G.pdf
+      found:
+        - control de seguridad
+      checked: 2026-11-14
+    - label: Reglamento (UE) 2024/1689 de Inteligencia Artificial, en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81079
+      found:
+        - controles de seguridad
+      checked: 2026-11-14
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - medida de seguridad
+      checked: 2026-11-14
+    - label: AEPD, Orientaciones para la validación de sistemas criptográficos
+      url: https://www.aepd.es/guias/orientaciones-criptografia-aepd-isms-apep.pdf
+      found:
+        - como salvaguarda que
+      checked: 2026-11-14
+  status: sourced
+
+- id: grc.compliance
+  en:
+    term: compliance
+    definition: Meeting the requirements that apply to an organisation, whether from law,
+      regulators, contracts or its own policies.
+  es:
+    verdict: both
+    forms:
+      - text: cumplimiento
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+      - text: compliance
+        article: el
+        kind: noun
+        headline: true
+        note: Widely used in Spanish companies for the function and the department.
+      - text: conformidad
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: Conformity with a standard, the word used by ISO and the ENS.
+      - text: cumplir
+        kind: verb
+        usedBy:
+          - official
+        note: 'To comply: cumplir el RGPD, cumplir con la norma.'
+    definition: Satisfacción de los requisitos que afectan a una organización, procedan de
+      la ley, de los reguladores, de los contratos o de sus propias políticas.
+    examples:
+      - es: El panel muestra el cumplimiento de cada cuenta frente a la política corporativa.
+        en: The dashboard shows each account's compliance with the corporate policy.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - grc.regulatory-compliance
+    - grc.grc
+    - grc.audit
+    - grc.governance
+  sources:
+    - label: AEPD, Gestión del riesgo y evaluación de impacto en tratamientos de datos personales
+      url: https://www.aepd.es/guias/gestion-riesgo-y-evaluacion-impacto-en-tratamientos-datos-personales.pdf
+      found:
+        - al cumplimiento por
+      checked: 2026-11-14
+    - label: Reglamento (UE) 2024/1689 de Inteligencia Artificial, en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81079
+      found:
+        - del cumplimiento del
+      checked: 2026-11-14
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - la conformidad
+      checked: 2026-11-14
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - para cumplir los
+      checked: 2026-11-14
+  status: sourced
+
+- id: grc.regulatory-compliance
+  en:
+    term: regulatory compliance
+    definition: Meeting the requirements set by laws and regulators, as distinct from internal
+      policy or contractual obligations.
+  es:
+    verdict: translated
+    forms:
+      - text: cumplimiento normativo
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - microsoft
+        note: The standard term in Spain, and the name of the corporate function.
+      - text: cumplimiento regulatorio
+        article: el
+        kind: noun
+        usedBy:
+          - engineers
+      - text: cumplimiento legal
+        article: el
+        kind: noun
+        usedBy:
+          - official
+    definition: Satisfacción de los requisitos que imponen las leyes y los reguladores.
+    examples:
+      - es: El responsable de cumplimiento normativo revisa los contratos con proveedores
+          de nube.
+        en: The head of regulatory compliance reviews the contracts with cloud providers.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - grc.compliance
+    - grc.regulator
+    - law.regulation
+    - law.legislation
+  sources:
+    - label: AEPD, Orientaciones sobre IA agéntica
+      url: https://www.aepd.es/guias/orientaciones-ia-agentica.pdf
+      found:
+        - de cumplimiento normativo
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/well-architected/security/establish-baseline
+      found:
+        - Cumplimiento normativo Una
+      checked: 2026-11-14
+    - label: Telefónica Tech, blog
+      url: https://telefonicatech.com/blog/microsegmentacion-la-respuesta-decisiva-frente-al-movimiento-lateral-de-los-atacantes
+      found:
+        - cumplimiento regulatorio La
+      checked: 2026-11-14
+    - label: INCIBE, Taxonomía de soluciones de ciberseguridad
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/taxonomia_ciberseguridad.pdf
+      found:
+        - Cumplimiento legal
+      checked: 2026-11-14
+  status: sourced
+
+- id: grc.due-diligence
+  en:
+    term: due diligence
+    definition: The investigation a prudent organisation carries out before a decision, such
+      as assessing a cloud provider before signing with it.
+  es:
+    verdict: both
+    forms:
+      - text: diligencia debida
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+        note: The term in Spanish and EU legal texts.
+      - text: due diligence
+        article: la
+        kind: noun
+        headline: true
+        usedBy:
+          - engineers
+        note: Kept in English in business, above all for company acquisitions.
+    definition: Investigación que una organización prudente realiza antes de tomar una decisión,
+      como evaluar a un proveedor antes de contratarlo.
+    examples:
+      - es: Antes de firmar hicimos la diligencia debida del proveedor de nube.
+        en: Before signing we carried out due diligence on the cloud provider.
+  topics:
+    - grc
+    - supplychain
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - grc.due-care
+    - grc.vendor-management
+    - grc.third-party-risk
+  sources:
+    - label: AEPD, Adecuación al RGPD de tratamientos que incorporan inteligencia artificial
+      url: https://www.aepd.es/guias/adecuacion-rgpd-ia.pdf
+      found:
+        - de diligencia debida
+      checked: 2026-11-14
+    - label: Reglamento (UE) 2024/2847 (Reglamento de Ciberresiliencia), texto en español
+        publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81720
+      found:
+        - la diligencia debida de
+      checked: 2026-11-14
+    - label: Telefónica Tech, blog
+      url: https://telefonicatech.com/blog/evaluacion-proveedores-cloud-quantum-readiness-auditoria
+      found:
+        - de due diligence
+      checked: 2026-11-14
+  status: sourced
+
+- id: grc.due-care
+  en:
+    term: due care
+    definition: Acting as a reasonable and prudent person would to protect assets; doing what
+      due diligence showed was needed, and keeping it up.
+  es:
+    verdict: translated
+    forms:
+      - text: debido cuidado
+        article: el
+        kind: noun
+        primary: true
+      - text: deber de diligencia
+        article: el
+        kind: noun
+        usedBy:
+          - official
+        note: The duty of care as Spanish law phrases it.
+    definition: Actuación propia de una persona razonable y prudente para proteger los activos.
+    examples:
+      - es: No aplicar un parche crítico durante meses demuestra falta del debido cuidado.
+        en: Leaving a critical patch unapplied for months shows a lack of due care.
+    watchOut: Spanish does not separate due care and due diligence as neatly as the exam does.
+      Both are often covered by diligencia debida.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - grc.due-diligence
+    - law.liability
+    - sec.accountability
+  sources:
+    - label: AEPD, Guía para clientes que contraten servicios de cloud computing
+      url: https://www.aepd.es/guias/guia-cloud-clientes.pdf
+      found:
+        - deber de diligencia
+      checked: 2026-11-14
+  status: draft
+
+- id: grc.grc
+  en:
+    term: governance, risk and compliance
+    acronym: GRC
+    definition: The joined-up management of how an organisation is directed, how it handles
+      risk and how it meets its obligations.
+  es:
+    verdict: both
+    acronym: GRC
+    forms:
+      - text: gobierno, riesgo y cumplimiento
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - engineers
+      - text: GRC
+        article: el
+        kind: noun
+        headline: true
+        usedBy:
+          - microsoft
+        note: The acronym is kept, as in consultor GRC or herramienta GRC.
+      - text: gobernanza, riesgo y cumplimiento
+        article: la
+        kind: noun
+        usedBy:
+          - microsoft
+    say: 'GRC is spelled out: ge-erre-ce.'
+    definition: Gestión coordinada de cómo se dirige una organización, cómo trata sus riesgos
+      y cómo cumple sus obligaciones.
+    examples:
+      - es: Buscan un consultor GRC con experiencia en el ENS y la ISO 27001.
+        en: They are looking for a GRC consultant with experience of the ENS and ISO 27001.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - grc.governance
+    - grc.risk-management
+    - grc.compliance
+  sources:
+    - label: Tecnoempleo, oferta de empleo en España
+      url: https://www.tecnoempleo.com/analista-seguridad-la-informacion-gmv/iso-iec-27001-ens/rf-533a1110520603e86148
+      found:
+        - Gobierno, Riesgo y Cumplimiento
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/azure-sovereign-clouds/sovereignty-implementation
+      found:
+        - GRC
+        - Gobernanza, riesgo y cumplimiento
+      checked: 2026-11-14
+  status: sourced
+
+- id: grc.data-steward
+  en:
+    term: data steward
+    definition: The person responsible day to day for the quality, meaning and correct use
+      of a set of data, on behalf of its owner.
+  es:
+    verdict: both
+    forms:
+      - text: data steward
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - engineers
+        note: Kept in English as a role name in Spanish data teams.
+      - text: administrador de datos
+        article: el
+        kind: noun
+        usedBy:
+          - microsoft
+        note: The translation used in Microsoft's data governance tools.
+    definition: Persona encargada en el día a día de la calidad, el significado y el uso correcto
+      de un conjunto de datos, en nombre de su propietario.
+    examples:
+      - es: El data steward valida las definiciones del catálogo de datos.
+        en: The data steward validates the definitions in the data catalogue.
+  topics:
+    - data
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - grc.data-owner
+    - grc.data-custodian
+    - sec.data-classification
+  sources:
+    - label: Telefónica Tech, blog
+      url: https://telefonicatech.com/blog/el-gobierno-del-dato-clave-de-una-empresa-data-driven
+      found:
+        - Data Steward Para
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/purview/data-governance-roles-permissions
+      found:
+        - Administrador de datos
+      checked: 2026-11-14
+  status: sourced
+
+- id: grc.risk
+  en:
+    term: risk
+    definition: The possibility that a threat exploits a vulnerability and causes harm, usually
+      expressed as a combination of likelihood and impact.
+  es:
+    verdict: translated
+    forms:
+      - text: riesgo
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: ciberriesgo
+        article: el
+        kind: noun
+        usedBy:
+          - eu
+        note: Cyber risk, written as one word.
+    definition: Posibilidad de que una amenaza aproveche una vulnerabilidad y cause un daño;
+      suele expresarse combinando probabilidad e impacto.
+    examples:
+      - es: El riesgo se calcula a partir de la probabilidad y el impacto.
+        en: Risk is calculated from likelihood and impact.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - sec.threat
+    - sec.vulnerability
+    - grc.likelihood
+    - grc.impact
+    - sec.risk-assessment
+  sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - Riesgo
+      checked: 2026-11-14
+    - label: AEPD, Gestión del riesgo y evaluación de impacto en tratamientos de datos personales
+      url: https://www.aepd.es/guias/gestion-riesgo-y-evaluacion-impacto-en-tratamientos-datos-personales.pdf
+      found:
+        - del riesgo
+      checked: 2026-11-14
+    - label: Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81962
+      found:
+        - el ciberriesgo sistémico
+      checked: 2026-11-14
+  status: sourced
+
+- id: grc.risk-management
+  en:
+    term: risk management
+    definition: The coordinated activity of identifying, assessing, treating and monitoring
+      risks.
+  es:
+    verdict: translated
+    forms:
+      - text: gestión de riesgos
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+      - text: gestión del riesgo
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: The singular form used in ISO 31000.
+    definition: Actividad coordinada de identificar, evaluar, tratar y vigilar los riesgos.
+    examples:
+      - es: La gestión de riesgos es la base del Esquema Nacional de Seguridad.
+        en: Risk management is the foundation of the National Security Framework.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  frameworks:
+    - ISO-31000
+    - MAGERIT
+  related:
+    - grc.risk
+    - sec.risk-assessment
+    - grc.risk-treatment
+    - grc.risk-register
+  sources:
+    - label: 'INCIBE, Gestión de riesgos: una guía de aproximación para el empresario'
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_ciberseguridad_gestion_riesgos_metad.pdf
+      found:
+        - Gestión de riesgos
+      checked: 2026-11-14
+    - label: BOE, Directiva (UE) 2022/2555 (NIS 2)
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81963
+      found:
+        - gestión de riesgos
+      checked: 2026-11-14
+    - label: AEPD, Gestión del riesgo y evaluación de impacto en tratamientos de datos personales
+      url: https://www.aepd.es/guias/gestion-riesgo-y-evaluacion-impacto-en-tratamientos-datos-personales.pdf
+      found:
+        - Gestión del riesgo
+      checked: 2026-11-14
+  status: sourced
+
+- id: grc.risk-appetite
+  en:
+    term: risk appetite
+    definition: The amount and kind of risk an organisation is willing to take on in pursuit
+      of its objectives.
+  es:
+    verdict: translated
+    forms:
+      - text: apetito de riesgo
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - engineers
+      - text: apetito al riesgo
+        article: el
+        kind: noun
+        usedBy:
+          - official
+    definition: Cantidad y tipo de riesgo que una organización está dispuesta a asumir para
+      lograr sus objetivos.
+    examples:
+      - es: El consejo ha definido un apetito de riesgo bajo para los datos de clientes.
+        en: The board has set a low risk appetite for customer data.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - grc.risk-tolerance
+    - grc.risk-acceptance
+    - grc.risk-profile
+  sources:
+    - label: INCIBE, Guía de gestión de crisis
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_gestion_de_crisis.pdf
+      found:
+        - apetito de riesgo
+      checked: 2026-11-14
+    - label: Tecnoempleo, oferta de empleo en España
+      url: https://www.tecnoempleo.com/tecnico-seguimiento-riesgo-tecnologico-cajamar-tec/teams-sharepoint/rf-e4221cd2f233c3ac2442
+      found:
+        - apetito de riesgo
+      checked: 2026-11-14
+    - label: 'INCIBE, Gestión de riesgos: una guía de aproximación para el empresario'
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_ciberseguridad_gestion_riesgos_metad.pdf
+      found:
+        - apetito al riesgo
+      checked: 2026-11-14
+  status: sourced
+
+- id: grc.risk-tolerance
+  en:
+    term: risk tolerance
+    definition: 'The acceptable variation around the risk appetite: how far actual risk may
+      deviate before action is needed.'
+  es:
+    verdict: translated
+    forms:
+      - text: tolerancia al riesgo
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+    definition: Desviación aceptable respecto al apetito de riesgo antes de que haya que actuar.
+    examples:
+      - es: Ese nivel de indisponibilidad supera nuestra tolerancia al riesgo.
+        en: That level of downtime exceeds our risk tolerance.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - grc.risk-appetite
+    - grc.risk-acceptance
+    - grc.kri
+  sources:
+    - label: AEPD, Gestión del riesgo y evaluación de impacto en tratamientos de datos personales
+      url: https://www.aepd.es/guias/gestion-riesgo-y-evaluacion-impacto-en-tratamientos-datos-personales.pdf
+      found:
+        - Tolerancia al riesgo
+      checked: 2026-11-14
+    - label: Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81962
+      found:
+        - tolerancia al riesgo
+      checked: 2026-11-14
+  status: sourced
+
+- id: grc.risk-treatment
+  en:
+    term: risk treatment
+    definition: 'Choosing and applying an option for dealing with a risk: mitigate, transfer,
+      avoid or accept.'
+  es:
+    verdict: translated
+    forms:
+      - text: tratamiento del riesgo
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: tratamiento de riesgos
+        article: el
+        kind: noun
+        usedBy:
+          - official
+      - text: plan de tratamiento de riesgos
+        article: el
+        kind: noun
+        usedBy:
+          - official
+        note: The risk treatment plan required by ISO 27001.
+    definition: 'Elección y aplicación de una opción para afrontar un riesgo: mitigarlo, transferirlo,
+      evitarlo o aceptarlo.'
+    examples:
+      - es: El plan de tratamiento del riesgo asigna un responsable a cada medida.
+        en: The risk treatment plan assigns an owner to each measure.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  frameworks:
+    - ISO-31000
+    - ISO-27001
+  related:
+    - grc.risk-mitigation
+    - grc.risk-transfer
+    - grc.risk-acceptance
+    - grc.risk-avoidance
+    - grc.control
+  sources:
+    - label: AEPD, Gestión del riesgo y evaluación de impacto en tratamientos de datos personales
+      url: https://www.aepd.es/guias/gestion-riesgo-y-evaluacion-impacto-en-tratamientos-datos-personales.pdf
+      found:
+        - tratamiento del riesgo
+      checked: 2026-11-14
+    - label: 'INCIBE, Gestión de riesgos: una guía de aproximación para el empresario'
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_ciberseguridad_gestion_riesgos_metad.pdf
+      found:
+        - tratamiento de riesgos
+      checked: 2026-11-14
+    - label: INCIBE, blog para empresas
+      url: https://www.incibe.es/empresas/blog/fases-plan-continuidad-negocio
+      found:
+        - plan de tratamiento de riesgos
+      checked: 2026-11-14
+  status: sourced
+
+- id: grc.risk-mitigation
+  en:
+    term: risk mitigation
+    definition: Reducing the likelihood or impact of a risk by applying controls.
+  es:
+    verdict: translated
+    forms:
+      - text: mitigación del riesgo
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+      - text: mitigar
+        kind: verb
+        usedBy:
+          - official
+      - text: reducción del riesgo
+        article: la
+        kind: noun
+        usedBy:
+          - official
+    definition: Reducción de la probabilidad o del impacto de un riesgo mediante la aplicación
+      de controles.
+    examples:
+      - es: El cifrado es una medida de mitigación del riesgo de fuga de datos.
+        en: Encryption is a measure that mitigates the risk of a data leak.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - grc.risk-treatment
+    - grc.control
+    - grc.residual-risk
+  sources:
+    - label: AEPD, Orientaciones sobre IA agéntica
+      url: https://www.aepd.es/guias/orientaciones-ia-agentica.pdf
+      found:
+        - mitigación del riesgo
+      checked: 2026-11-14
+    - label: Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81962
+      found:
+        - mitigación del riesgo
+      checked: 2026-11-14
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - pudiéndose mitigar este
+      checked: 2026-11-14
+    - label: AEPD, Gestión del riesgo y evaluación de impacto en tratamientos de datos personales
+      url: https://www.aepd.es/guias/gestion-riesgo-y-evaluacion-impacto-en-tratamientos-datos-personales.pdf
+      found:
+        - reducción del riesgo
+      checked: 2026-11-14
+  status: sourced
+
+- id: grc.risk-transfer
+  en:
+    term: risk transfer
+    definition: Passing the financial consequences of a risk to another party, typically through
+      insurance or a contract.
+  es:
+    verdict: translated
+    forms:
+      - text: transferencia del riesgo
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - eu
+      - text: transferir el riesgo
+        kind: verb
+        usedBy:
+          - official
+      - text: compartir el riesgo
+        kind: verb
+        note: Risk sharing, the wording ISO 31000 now prefers.
+    definition: Traslado de las consecuencias económicas de un riesgo a un tercero, normalmente
+      con un seguro o un contrato.
+    examples:
+      - es: Contratar un ciberseguro es una forma de transferencia del riesgo.
+        en: Taking out cyber insurance is a form of risk transfer.
+    watchOut: 'Responsibility cannot be transferred with the risk: the organisation remains
+      accountable to its customers and regulators.'
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - grc.risk-treatment
+    - grc.cyber-insurance
+    - grc.outsourcing
+  sources:
+    - label: Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81962
+      found:
+        - transferencia de riesgos
+      checked: 2026-11-14
+    - label: INCIBE, blog de empresas
+      url: https://www.incibe.es/empresas/blog/analisis-riesgos-pasos-sencillo
+      found:
+        - Transferir el riesgo
+      checked: 2026-11-14
+  status: sourced
+
+- id: grc.risk-acceptance
+  en:
+    term: risk acceptance
+    definition: A documented management decision to live with a risk without further treatment,
+      because it falls within appetite or costs too much to reduce.
+  es:
+    verdict: translated
+    forms:
+      - text: aceptación del riesgo
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - microsoft
+      - text: asumir el riesgo
+        kind: verb
+        usedBy:
+          - official
+        note: 'The natural verb: la dirección asume el riesgo.'
+    definition: Decisión documentada de la dirección de convivir con un riesgo sin aplicar
+      más medidas.
+    examples:
+      - es: La aceptación del riesgo debe firmarla el propietario del riesgo.
+        en: Risk acceptance must be signed off by the risk owner.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - grc.risk-treatment
+    - grc.residual-risk
+    - grc.risk-appetite
+  sources:
+    - label: 'INCIBE, Gestión de riesgos: una guía de aproximación para el empresario'
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_ciberseguridad_gestion_riesgos_metad.pdf
+      found:
+        - aceptación del riesgo
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/reliability/concept-business-continuity-high-availability-disaster-recovery
+      found:
+        - aceptación del riesgo
+      checked: 2026-11-14
+    - label: AEPD, Gestión del riesgo y evaluación de impacto en tratamientos de datos personales
+      url: https://www.aepd.es/guias/gestion-riesgo-y-evaluacion-impacto-en-tratamientos-datos-personales.pdf
+      found:
+        - asumir el riesgo
+      checked: 2026-11-14
+  status: sourced
+
+- id: grc.risk-avoidance
+  en:
+    term: risk avoidance
+    definition: Removing a risk altogether by not carrying out the activity that gives rise
+      to it.
+  es:
+    verdict: translated
+    forms:
+      - text: evitación del riesgo
+        article: la
+        kind: noun
+        primary: true
+      - text: evitar el riesgo
+        kind: verb
+        usedBy:
+          - official
+        note: The verb phrase is more natural than the noun.
+      - text: eliminación del riesgo
+        article: la
+        kind: noun
+    definition: Supresión total de un riesgo al renunciar a la actividad que lo origina.
+    examples:
+      - es: Decidimos evitar el riesgo y no almacenar datos de tarjetas.
+        en: We decided to avoid the risk and not store card data.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - grc.risk-treatment
+    - grc.risk-mitigation
+    - grc.risk-acceptance
+  sources:
+    - label: 'INCIBE, Gestión de riesgos: una guía de aproximación para el empresario'
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_ciberseguridad_gestion_riesgos_metad.pdf
+      found:
+        - Evitar el riesgo
+      checked: 2026-11-14
+  status: draft
+
+- id: grc.residual-risk
+  en:
+    term: residual risk
+    definition: The risk that remains after controls have been applied.
+  es:
+    verdict: translated
+    forms:
+      - text: riesgo residual
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+    definition: Riesgo que permanece después de aplicar los controles.
+    examples:
+      - es: La dirección debe aceptar formalmente el riesgo residual.
+        en: Senior management must formally accept the residual risk.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  frameworks:
+    - MAGERIT
+  related:
+    - grc.inherent-risk
+    - grc.risk-acceptance
+    - grc.risk-treatment
+  sources:
+    - label: AEPD, Gestión del riesgo y evaluación de impacto en tratamientos de datos personales
+      url: https://www.aepd.es/guias/gestion-riesgo-y-evaluacion-impacto-en-tratamientos-datos-personales.pdf
+      found:
+        - riesgo residual
+      checked: 2026-11-14
+    - label: Reglamento (UE) 2024/1689 de Inteligencia Artificial, en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81079
+      found:
+        - el riesgo residual general
+      checked: 2026-11-14
+  status: sourced
+
+- id: grc.inherent-risk
+  en:
+    term: inherent risk
+    definition: The level of risk before any controls are taken into account.
+  es:
+    verdict: translated
+    forms:
+      - text: riesgo inherente
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - aws
+      - text: riesgo potencial
+        article: el
+        kind: noun
+        usedBy:
+          - official
+        note: MAGERIT's term for risk before safeguards.
+      - text: riesgo intrínseco
+        article: el
+        kind: noun
+        usedBy:
+          - official
+    definition: Nivel de riesgo antes de tener en cuenta ningún control.
+    examples:
+      - es: El riesgo inherente es alto, pero los controles lo reducen a un nivel aceptable.
+        en: The inherent risk is high, but the controls bring it down to an acceptable level.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  frameworks:
+    - MAGERIT
+  related:
+    - grc.residual-risk
+    - grc.risk
+    - sec.risk-assessment
+  sources:
+    - label: AEPD, Gestión del riesgo y evaluación de impacto en tratamientos de datos personales
+      url: https://www.aepd.es/guias/gestion-riesgo-y-evaluacion-impacto-en-tratamientos-datos-personales.pdf
+      found:
+        - Riesgo inherente
+        - riesgo intrínseco
+      checked: 2026-11-14
+    - label: AWS, documentación en español
+      url: https://docs.aws.amazon.com/es_es/wellarchitected/latest/security-pillar/governance.html
+      found:
+        - el riesgo inherente
+      checked: 2026-11-14
+    - label: AEPD, Guía para la notificación de brechas de datos personales
+      url: https://www.aepd.es/guias/guia-brechas-seguridad.pdf
+      found:
+        - alto riesgo potencial
+      checked: 2026-11-14
+  status: sourced
+
+- id: grc.risk-register
+  en:
+    term: risk register
+    definition: The record of identified risks with their owners, ratings, treatments and
+      current status.
+  es:
+    verdict: translated
+    forms:
+      - text: registro de riesgos
+        article: el
+        kind: noun
+        primary: true
+      - text: mapa de riesgos
+        article: el
+        kind: noun
+        usedBy:
+          - engineers
+        note: A risk map; used loosely in Spain for the register and its heat-map view.
+    definition: Relación de los riesgos identificados con sus responsables, valoraciones,
+      tratamientos y estado.
+    examples:
+      - es: Hemos añadido la dependencia del proveedor al registro de riesgos.
+        en: We have added the dependency on the provider to the risk register.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - grc.risk-management
+    - grc.risk-treatment
+    - grc.risk-profile
+  sources:
+    - label: Tecnoempleo, oferta de empleo en España
+      url: https://www.tecnoempleo.com/tecnico-seguimiento-riesgo-tecnologico-cajamar-tec/teams-sharepoint/rf-e4221cd2f233c3ac2442
+      found:
+        - mapa de riesgos
+      checked: 2026-11-14
+  status: draft
+
+- id: grc.likelihood
+  en:
+    term: likelihood
+    definition: How probable it is that a risk event will happen, one of the two factors in
+      rating a risk.
+  es:
+    verdict: translated
+    forms:
+      - text: probabilidad
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: probabilidad de ocurrencia
+        article: la
+        kind: noun
+        register: formal
+        usedBy:
+          - official
+    definition: Grado de posibilidad de que un riesgo se materialice.
+    examples:
+      - es: La probabilidad es baja, pero el impacto sería muy alto.
+        en: The likelihood is low, but the impact would be very high.
+    watchOut: Spanish has one word, probabilidad, for both likelihood and probability.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - grc.impact
+    - grc.risk
+    - sec.risk-assessment
+  sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - la probabilidad de
+        - probabilidad de ocurrencia
+      checked: 2026-11-14
+    - label: AEPD, Gestión del riesgo y evaluación de impacto en tratamientos de datos personales
+      url: https://www.aepd.es/guias/gestion-riesgo-y-evaluacion-impacto-en-tratamientos-datos-personales.pdf
+      found:
+        - La probabilidad de
+      checked: 2026-11-14
+  status: sourced
+
+- id: grc.impact
+  en:
+    term: impact
+    definition: The harm a risk event would cause if it happened, whether financial, operational,
+      legal or reputational.
+  es:
+    verdict: translated
+    forms:
+      - text: impacto
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: impactar
+        kind: verb
+        usedBy:
+          - official
+        note: Common in business speech; afectar is the plainer verb.
+    definition: Daño que causaría un riesgo si se materializara, sea económico, operativo,
+      legal o reputacional.
+    examples:
+      - es: El impacto de una caída del servicio de pagos sería crítico.
+        en: The impact of an outage of the payments service would be critical.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - grc.likelihood
+    - grc.risk
+    - grc.bia
+  sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - Impacto
+      checked: 2026-11-14
+    - label: AEPD, Gestión del riesgo y evaluación de impacto en tratamientos de datos personales
+      url: https://www.aepd.es/guias/gestion-riesgo-y-evaluacion-impacto-en-tratamientos-datos-personales.pdf
+      found:
+        - de impacto en
+      checked: 2026-11-14
+    - label: INCIBE, blog para empresas
+      url: https://www.incibe.es/empresas/blog/fases-plan-continuidad-negocio
+      found:
+        - impactar directamente
+      checked: 2026-11-14
+  status: sourced
+
+- id: grc.kri
+  en:
+    term: key risk indicator
+    acronym: KRI
+    definition: A metric that gives early warning that exposure to a risk is rising.
+  es:
+    verdict: translated
+    forms:
+      - text: indicador clave de riesgo
+        article: el
+        kind: noun
+        primary: true
+        plural: los indicadores clave de riesgo
+      - text: KRI
+        article: el
+        kind: noun
+        headline: true
+        plural: los KRI
+        usedBy:
+          - engineers
+        note: The English acronym is kept, like KPI.
+    say: 'KRI is spelled out: ka-erre-i.'
+    definition: Métrica que avisa con antelación de que la exposición a un riesgo está aumentando.
+    examples:
+      - es: El porcentaje de sistemas sin parchear es uno de nuestros indicadores clave de
+          riesgo.
+        en: The percentage of unpatched systems is one of our key risk indicators.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - grc.risk-tolerance
+    - grc.risk-management
+    - sec.monitoring
+  sources:
+    - label: Tecnoempleo, oferta de empleo en España
+      url: https://www.tecnoempleo.com/project-manager-ciberseguridad-aubay/project-manager-nis2/rf-9b7d16f4422403e9b947
+      found:
+        - KRI del
+      checked: 2026-11-14
+  status: draft
+
+- id: grc.risk-profile
+  en:
+    term: risk profile
+    definition: The overall picture of the risks an organisation, service or supplier faces
+      and how serious they are.
+  es:
+    verdict: translated
+    forms:
+      - text: perfil de riesgo
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+    definition: Visión de conjunto de los riesgos que afronta una organización, un servicio
+      o un proveedor y de su gravedad.
+    examples:
+      - es: Mover la carga de trabajo a la nube cambia el perfil de riesgo de la empresa.
+        en: Moving the workload to the cloud changes the company's risk profile.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - grc.risk-appetite
+    - grc.risk-register
+    - grc.third-party-risk
+  sources:
+    - label: AEPD, Guía de privacidad desde el diseño
+      url: https://www.aepd.es/guias/guia-privacidad-desde-diseno.pdf
+      found:
+        - perfil de riesgo
+      checked: 2026-11-14
+    - label: Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81962
+      found:
+        - perfil de riesgo
+      checked: 2026-11-14
+  status: sourced
+
+- id: law.msa
+  en:
+    term: master service agreement
+    acronym: MSA
+    definition: The umbrella contract that sets the general terms between a customer and a
+      supplier, under which individual orders or statements of work are placed.
+  es:
+    verdict: both
+    forms:
+      - text: contrato marco de servicios
+        article: el
+        kind: noun
+        primary: true
+      - text: acuerdo marco de servicios
+        article: el
+        kind: noun
+      - text: MSA
+        article: el
+        kind: noun
+        headline: true
+        usedBy:
+          - engineers
+        note: The English acronym is common with international suppliers.
+      - text: contrato marco
+        article: el
+        kind: noun
+        note: The short form.
+    definition: Contrato general que fija las condiciones entre un cliente y un proveedor
+      y al amparo del cual se hacen los pedidos concretos.
+    examples:
+      - es: Las condiciones de responsabilidad están en el contrato marco de servicios.
+        en: The liability terms are in the master service agreement.
+  topics:
+    - grc
+    - supplychain
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - law.sow
+    - law.contract
+    - grc.sla
+    - law.liability
+  sources:
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/probando-linkerd-el-pionero-de-los-services-mesh/
+      found:
+        - MSA
+      checked: 2026-11-14
+  status: draft
+
+- id: law.sow
+  en:
+    term: statement of work
+    acronym: SOW
+    definition: The document that defines the specific work, deliverables, timescales and
+      price for one engagement under a master agreement.
+  es:
+    verdict: both
+    forms:
+      - text: declaración de trabajo
+        article: la
+        kind: noun
+        primary: true
+      - text: SOW
+        article: el
+        kind: noun
+        headline: true
+        note: The English acronym is very often kept.
+      - text: alcance de los trabajos
+        article: el
+        kind: noun
+        note: A more natural Spanish phrasing for the same document.
+    say: 'SOW is spelled out: ese-o-uve doble.'
+    definition: Documento que define los trabajos, los entregables, los plazos y el precio
+      de un encargo concreto dentro de un contrato marco.
+    examples:
+      - es: La migración se detalla en una declaración de trabajo aparte.
+        en: The migration is set out in a separate statement of work.
+  topics:
+    - grc
+    - supplychain
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - law.msa
+    - law.contract
+    - grc.sla
+  sources: []
+  status: draft
+
+- id: law.right-to-audit
+  en:
+    term: right to audit
+    definition: A contract clause that lets the customer, or its auditors and regulators,
+      inspect the supplier's controls.
+  es:
+    verdict: translated
+    forms:
+      - text: derecho de auditoría
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - eu
+          - engineers
+      - text: derecho a auditar
+        article: el
+        kind: noun
+      - text: cláusula de auditoría
+        article: la
+        kind: noun
+        note: The clause that grants it.
+    definition: Cláusula contractual que permite al cliente, a sus auditores o a los reguladores
+      inspeccionar los controles del proveedor.
+    examples:
+      - es: El contrato reconoce el derecho de auditoría del cliente y del regulador.
+        en: The contract grants the customer and the regulator the right to audit.
+  topics:
+    - grc
+    - supplychain
+  technology:
+    - cloud-general
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  frameworks:
+    - DORA
+  related:
+    - law.contract
+    - grc.audit
+    - grc.soc-2-report
+    - grc.vendor-management
+  sources:
+    - label: Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81962
+      found:
+        - derechos de acceso, inspección y auditoría
+      checked: 2026-11-14
+    - label: Telefónica Tech, blog
+      url: https://telefonicatech.com/blog/evaluacion-proveedores-cloud-quantum-readiness-auditoria
+      found:
+        - derechos de auditoría
+      checked: 2026-11-14
+  status: sourced
+
+- id: grc.vendor-management
+  en:
+    term: vendor management
+    definition: Selecting, contracting, monitoring and, when needed, leaving suppliers so
+      that they deliver what was agreed without adding unacceptable risk.
+  es:
+    verdict: translated
+    forms:
+      - text: gestión de proveedores
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - google
+      - text: gestión de terceros
+        article: la
+        kind: noun
+        note: Third-party management, the broader term.
+    definition: Selección, contratación, seguimiento y, llegado el caso, sustitución de los
+      proveedores para que cumplan lo acordado sin añadir riesgos inaceptables.
+    examples:
+      - es: La gestión de proveedores incluye revisar cada año sus certificaciones.
+        en: Vendor management includes reviewing their certifications every year.
+  topics:
+    - supplychain
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - grc.third-party-risk
+    - grc.due-diligence
+    - grc.outsourcing
+    - grc.sla
+  sources:
+    - label: INCIBE, Guía de gestión de crisis
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_gestion_de_crisis.pdf
+      found:
+        - gestión de proveedores
+      checked: 2026-11-14
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/discover/incident-response-plan-template?hl=es
+      found:
+        - gestión de proveedores
+      checked: 2026-11-14
+  status: sourced
+
+- id: grc.third-party-risk
+  en:
+    term: third-party risk
+    definition: The risk an organisation takes on through its suppliers, partners and their
+      own subcontractors.
+  es:
+    verdict: translated
+    forms:
+      - text: riesgo de terceros
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+      - text: gestión de riesgos de terceros
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: Third-party risk management, TPRM.
+      - text: riesgo de proveedores
+        article: el
+        kind: noun
+    definition: Riesgo que una organización asume a través de sus proveedores, socios y subcontratistas.
+    examples:
+      - es: DORA obliga a las entidades financieras a gestionar el riesgo de terceros de TIC.
+        en: DORA requires financial entities to manage ICT third-party risk.
+  topics:
+    - supplychain
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  frameworks:
+    - DORA
+  related:
+    - grc.vendor-management
+    - sec.software-supply-chain
+    - grc.due-diligence
+    - grc.outsourcing
+  sources:
+    - label: 'INCIBE, blog de empresas: ¿Qué es el reglamento DORA?'
+      url: https://www.incibe.es/empresas/blog/que-es-el-reglamento-dora
+      found:
+        - riesgo de terceros
+      checked: 2026-11-14
+    - label: Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81962
+      found:
+        - riesgo de terceros
+      checked: 2026-11-14
+    - label: Real Decreto 43/2021, de seguridad de las redes y sistemas de información (BOE)
+      url: https://www.boe.es/diario_boe/txt.php?id=BOE-A-2021-1192
+      found:
+        - Gestión de riesgos de terceros
+      checked: 2026-11-14
+  status: sourced
+
+- id: grc.outsourcing
+  en:
+    term: outsourcing
+    definition: Contracting an outside organisation to carry out a function that would otherwise
+      be done in-house.
+  es:
+    verdict: both
+    forms:
+      - text: externalización
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+        note: The term in Spain and in EU financial regulation.
+      - text: externalizar
+        kind: verb
+        usedBy:
+          - official
+      - text: outsourcing
+        article: el
+        kind: noun
+        headline: true
+        usedBy:
+          - official
+      - text: subcontratación
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: Subcontracting; overlaps in everyday use.
+    definition: Contratación de una organización externa para realizar una función que, de
+      otro modo, se haría internamente.
+    examples:
+      - es: La externalización del centro de datos no elimina la responsabilidad de la empresa.
+        en: Outsourcing the data centre does not remove the company's responsibility.
+    watchOut: Tercerización is the Latin American word. In Spain say externalización.
+  topics:
+    - supplychain
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - grc.vendor-management
+    - grc.third-party-risk
+    - grc.risk-transfer
+    - cloud.service-provider
+  sources:
+    - label: INCIBE, Taxonomía de soluciones de ciberseguridad
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/taxonomia_ciberseguridad.pdf
+      found:
+        - la externalización se
+        - empresas externalizar procesos
+        - Outsourcing de
+      checked: 2026-11-14
+    - label: Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81962
+      found:
+        - sobre externalización
+      checked: 2026-11-14
+    - label: Red.es, Resolución de 9 de junio de 2014 (BOE-A-2014-6641)
+      url: https://www.boe.es/diario_boe/txt.php?id=BOE-A-2014-6641
+      found:
+        - de subcontratación de
+      checked: 2026-11-14
+  status: sourced
+
+- id: grc.cyber-insurance
+  en:
+    term: cyber insurance
+    definition: Insurance that covers losses from cyber incidents, such as response costs,
+      business interruption and liability to third parties.
+  es:
+    verdict: translated
+    forms:
+      - text: ciberseguro
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - google
+      - text: seguro de ciberriesgos
+        article: el
+        kind: noun
+        note: The insurance industry's name for the product.
+      - text: póliza de ciberriesgo
+        article: la
+        kind: noun
+        note: The policy itself.
+    definition: Seguro que cubre las pérdidas derivadas de incidentes de ciberseguridad, como
+      los costes de respuesta, la interrupción del negocio y la responsabilidad frente a terceros.
+    examples:
+      - es: La aseguradora exige doble factor para renovar el ciberseguro.
+        en: The insurer requires two-factor authentication to renew the cyber insurance.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  related:
+    - grc.risk-transfer
+    - law.liability
+    - sec.ransomware
+  sources:
+    - label: INCIBE, blog para empresas
+      url: https://www.incibe.es/empresas/blog/mis-servicios-externos-siempre-ciberseguros
+      found:
+        - siempre ciberseguros
+      checked: 2026-11-14
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/discover/incident-response-plan-template?hl=es
+      found:
+        - de ciberseguros
+      checked: 2026-11-14
+  status: sourced
+
+- id: grc.exit-strategy
+  en:
+    term: exit strategy
+    definition: The plan for leaving a supplier or cloud service and moving data and workloads
+      elsewhere without unacceptable disruption.
+  es:
+    verdict: translated
+    forms:
+      - text: estrategia de salida
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - eu
+          - microsoft
+      - text: plan de salida
+        article: el
+        kind: noun
+        note: The detailed plan that puts the strategy into practice.
+    definition: Plan para abandonar a un proveedor o un servicio en la nube y trasladar los
+      datos y las cargas de trabajo sin una interrupción inaceptable.
+    examples:
+      - es: El regulador exige una estrategia de salida para cada servicio crítico en la nube.
+        en: The regulator requires an exit strategy for every critical cloud service.
+  topics:
+    - supplychain
+    - grc
+  technology:
+    - cloud-general
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  frameworks:
+    - DORA
+  related:
+    - cloud.vendor-lock-in
+    - cloud.reversibility
+    - cloud.portability
+    - grc.outsourcing
+  sources:
+    - label: BOE, Reglamento (UE) 2023/2854 (Reglamento de Datos)
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2023-81895
+      found:
+        - estrategia de salida
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/reliability/concept-business-continuity-high-availability-disaster-recovery
+      found:
+        - estrategia de salida
+      checked: 2026-11-14
+  status: sourced
+
+- id: fw.iso-27001
+  en:
+    term: ISO/IEC 27001
+    definition: The international standard that sets the requirements for an information security
+      management system, and the most widely held security certification.
+  es:
+    verdict: english-kept
+    forms:
+      - text: ISO/IEC 27001
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+        note: Feminine because it is la norma.
+      - text: ISO 27001
+        article: la
+        kind: noun
+        headline: true
+        usedBy:
+          - official
+        note: 'The everyday short form: estamos certificados en la ISO 27001.'
+    say: ISO is said as a word, 'iso', and the number as veintisiete mil uno.
+    definition: Norma internacional que establece los requisitos de un sistema de gestión
+      de la seguridad de la información.
+    examples:
+      - es: El proveedor está certificado en la ISO 27001 y en el ENS de categoría alta.
+        en: The provider is certified to ISO 27001 and to the high category of the ENS.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  frameworks:
+    - ISO-27001
+  related:
+    - grc.isms
+    - fw.iso-27017
+    - fw.iso-27018
+    - grc.certification
+    - fw.ens
+  sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - norma ISO/IEC 27001
+      checked: 2026-11-14
+    - label: 'INCIBE, blog: Primeros pasos para clasificar la información de tu organización'
+      url: https://www.incibe.es/protege-tu-empresa/blog/primeros-pasos-clasificar-informacion-tu-organizacion
+      found:
+        - estándar ISO/IEC 27001
+      checked: 2026-11-14
+    - label: INCIBE-CERT, blog
+      url: https://www.incibe.es/incibe-cert/blog/maximizando-la-seguridad-en-la-nube-el-rol-esencial-de-los-casb
+      found:
+        - norma ISO 27001 en
+      checked: 2026-11-14
+  status: sourced
+
+- id: fw.iso-27018
+  en:
+    term: ISO/IEC 27018
+    definition: A code of practice for protecting personal data processed by public cloud
+      providers acting as data processors.
+  es:
+    verdict: english-kept
+    forms:
+      - text: ISO/IEC 27018
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - google
+      - text: ISO 27018
+        article: la
+        kind: noun
+        usedBy:
+          - aws
+    definition: Código de prácticas para la protección de los datos personales que tratan
+      los proveedores de nube pública como encargados del tratamiento.
+    examples:
+      - es: La ISO 27018 se centra en los datos personales en la nube pública.
+        en: ISO 27018 focuses on personal data in the public cloud.
+  topics:
+    - grc
+    - data
+  technology:
+    - cloud-general
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  frameworks:
+    - ISO-27018
+  related:
+    - fw.iso-27001
+    - fw.iso-27017
+    - law.personal-data
+    - cloud.public-cloud
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/security/compliance/csa?hl=es
+      found:
+        - información ISO/IEC 27018 Más
+      checked: 2026-11-14
+    - label: AWS, páginas en español
+      url: https://aws.amazon.com/es/compliance/gdpr-center/
+      found:
+        - norma ISO 27018 contiene
+      checked: 2026-11-14
+  status: sourced
+
+- id: fw.pci-dss
+  en:
+    term: PCI DSS
+    expansion: Payment Card Industry Data Security Standard
+    definition: The card schemes' security standard that applies to every organisation that
+      stores, processes or transmits payment card data.
+  es:
+    verdict: english-kept
+    forms:
+      - text: PCI DSS
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+        note: Used as a bare name or as el estándar PCI DSS or la norma PCI DSS.
+      - text: Norma de Seguridad de Datos de la Industria de Tarjetas de Pago
+        article: la
+        kind: noun
+        register: formal
+        note: The official Spanish title, seldom used.
+    say: 'Spelled out: pe-ce-i de-ese-ese.'
+    definition: Norma de seguridad de las marcas de tarjetas que se aplica a toda organización
+      que almacena, procesa o transmite datos de tarjetas de pago.
+    examples:
+      - es: El entorno de pagos debe cumplir PCI DSS.
+        en: The payments environment must comply with PCI DSS.
+  topics:
+    - grc
+    - data
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  frameworks:
+    - PCI-DSS
+  related:
+    - law.cardholder-data
+    - sec.tokenization
+    - sec.network-segmentation
+  sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - PCI DSS
+      checked: 2026-11-14
+    - label: 'INCIBE, blog: Si manejas información de tarjetas bancarias, este artículo te
+        interesa'
+      url: https://www.incibe.es/empresas/blog/si-manejas-informacion-tarjetas-bancarias-este-articulo-te-interesa
+      found:
+        - estándar PCI DSS
+      checked: 2026-11-14
+  status: sourced
+
+- id: fw.hipaa
+  en:
+    term: HIPAA
+    expansion: Health Insurance Portability and Accountability Act
+    definition: The US law that sets rules for protecting patients' health information held
+      by healthcare providers, insurers and their suppliers.
+  es:
+    verdict: english-kept
+    forms:
+      - text: HIPAA
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - google
+        note: Usually as la ley HIPAA or la normativa HIPAA.
+      - text: Ley de Portabilidad y Responsabilidad de Seguros Médicos
+        article: la
+        kind: noun
+        register: formal
+        note: The usual Spanish rendering of the full title.
+    say: Said as a word, 'jipa'.
+    definition: Ley estadounidense que regula la protección de la información sanitaria de
+      los pacientes.
+    examples:
+      - es: Si tratamos datos de pacientes de Estados Unidos, se nos aplica la HIPAA.
+        en: If we process data on patients in the United States, HIPAA applies to us.
+  topics:
+    - grc
+    - data
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  frameworks:
+    - HIPAA
+  related:
+    - law.phi
+    - fw.hitech
+    - law.personal-data
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/compliance/regulatory/offering-hipaa-hitech
+      found:
+        - HIPAA
+      checked: 2026-11-14
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/security/compliance/hipaa-compliance?hl=es
+      found:
+        - la HIPAA
+      checked: 2026-11-14
+  status: sourced
+
+- id: fw.sox
+  en:
+    term: Sarbanes-Oxley Act
+    acronym: SOX
+    definition: The US law of 2002 that makes the management of listed companies answerable
+      for the accuracy of financial reports and for the controls behind them.
+  es:
+    verdict: both
+    forms:
+      - text: Ley Sarbanes-Oxley
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+      - text: SOX
+        article: la
+        kind: noun
+        headline: true
+        usedBy:
+          - microsoft
+        note: 'The acronym is the everyday name: controles SOX, auditoría SOX.'
+    say: SOX is said as a word, 'socs'.
+    definition: Ley estadounidense de 2002 que hace responsable a la dirección de las empresas
+      cotizadas de la exactitud de la información financiera y de sus controles.
+    examples:
+      - es: Los controles SOX incluyen la revisión de accesos al sistema contable.
+        en: The SOX controls include the review of access to the accounting system.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  frameworks:
+    - SOX
+  related:
+    - fw.coso
+    - grc.internal-audit
+    - sec.separation-of-duties
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/purview/retention
+      found:
+        - la ley Sarbanes-Oxley puede
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/security/benchmark/azure/mcsb-v2-asset-management
+      found:
+        - SOX
+      checked: 2026-11-14
+  status: sourced
+
+- id: fw.nist-csf
+  en:
+    term: NIST Cybersecurity Framework
+    acronym: CSF
+    definition: A voluntary framework from the US standards institute that organises cyber
+      security outcomes under the functions govern, identify, protect, detect, respond and
+      recover.
+  es:
+    verdict: both
+    forms:
+      - text: Marco de Ciberseguridad del NIST
+        article: el
+        kind: noun
+        primary: true
+      - text: NIST CSF
+        article: el
+        kind: noun
+        headline: true
+        usedBy:
+          - microsoft
+        note: The English short name is what people say.
+    say: NIST is said as a word, 'nist'.
+    definition: Marco voluntario del instituto de normalización de Estados Unidos que ordena
+      los resultados de ciberseguridad en las funciones gobernar, identificar, proteger, detectar,
+      responder y recuperar.
+    examples:
+      - es: Medimos la madurez con el Marco de Ciberseguridad del NIST.
+        en: We measure maturity with the NIST Cybersecurity Framework.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  frameworks:
+    - NIST-CSF
+  related:
+    - fw.iso-27001
+    - fw.cis-controls
+    - grc.risk-management
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/security/benchmark/azure/mcsb-v2-asset-management
+      found:
+        - NIST CSF
+      checked: 2026-11-14
+  status: draft
+
+- id: fw.csa-ccm
+  en:
+    term: Cloud Controls Matrix
+    acronym: CCM
+    definition: The Cloud Security Alliance's catalogue of cloud security controls, mapped
+      to the main standards and used as the basis of STAR assessments.
+  es:
+    verdict: both
+    forms:
+      - text: Cloud Controls Matrix
+        article: la
+        kind: noun
+        primary: true
+        note: The English name is normally kept, with la because it is a matriz.
+      - text: CCM
+        article: la
+        kind: noun
+        headline: true
+      - text: matriz de controles de la nube
+        article: la
+        kind: noun
+        note: A descriptive translation.
+    say: 'CCM is spelled out: ce-ce-eme.'
+    definition: Catálogo de controles de seguridad en la nube de la Cloud Security Alliance,
+      alineado con las principales normas.
+    examples:
+      - es: El cuestionario del proveedor sigue la Cloud Controls Matrix de la CSA.
+        en: The provider questionnaire follows the CSA's Cloud Controls Matrix.
+  topics:
+    - grc
+  technology:
+    - cloud-general
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  frameworks:
+    - CSA-CCM
+  related:
+    - fw.csa-star
+    - fw.iso-27017
+    - grc.control
+  sources: []
+  status: draft
+
+- id: fw.nerc-cip
+  en:
+    term: NERC CIP
+    expansion: North American Electric Reliability Corporation Critical Infrastructure Protection
+    definition: The mandatory cyber security standards for the bulk electricity system in
+      North America.
+  es:
+    verdict: english-kept
+    forms:
+      - text: NERC CIP
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+        note: Usually as las normas NERC CIP or los estándares NERC CIP.
+    say: 'Both parts are said as words: ''nerc cip''.'
+    definition: Normas obligatorias de ciberseguridad para el sistema eléctrico de América
+      del Norte.
+    examples:
+      - es: Las eléctricas con activos en Estados Unidos deben cumplir las normas NERC CIP.
+        en: Utilities with assets in the United States must comply with the NERC CIP standards.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  frameworks:
+    - NERC-CIP
+  related:
+    - fw.nist-csf
+    - grc.regulatory-compliance
+  sources:
+    - label: INCIBE-CERT, blog
+      url: https://www.incibe.es/incibe-cert/blog/el-punto-el-seguridad-y-ciberseguridad-convergen
+      found:
+        - NERC CIP
+      checked: 2026-11-14
+  status: sourced
+
+- id: fw.hitech
+  en:
+    term: HITECH Act
+    expansion: Health Information Technology for Economic and Clinical Health Act
+    definition: The US law of 2009 that strengthened HIPAA, extending it to suppliers and
+      adding breach notification duties and higher penalties.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Ley HITECH
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+      - text: HITECH
+        kind: noun
+        usedBy:
+          - microsoft
+    say: Said as in English, 'jai-tec'.
+    definition: Ley estadounidense de 2009 que reforzó la HIPAA, con obligaciones de notificación
+      de brechas y sanciones más altas.
+    examples:
+      - es: La Ley HITECH amplió las obligaciones de la HIPAA a los proveedores de servicios.
+        en: The HITECH Act extended HIPAA's obligations to service providers.
+  topics:
+    - grc
+    - data
+  technology: []
+  curriculum:
+    - cert: CCSP
+      outline: 2026-08
+      domain: 6
+  frameworks:
+    - HIPAA
+  related:
+    - fw.hipaa
+    - law.phi
+    - law.breach-notification
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/compliance/regulatory/offering-hipaa-hitech
+      found:
+        - la Ley HITECH La
+        - HITECH
+      checked: 2026-11-14
+  status: sourced
