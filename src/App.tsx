@@ -6,6 +6,7 @@ import { Category, Saved, TermsList } from './screens/Browse';
 import { Entry } from './screens/Entry';
 import { Home } from './screens/Home';
 import { Settings } from './screens/Settings';
+import { Study } from './screens/Study';
 import { Terms } from './screens/Terms';
 
 type Tab = 'home' | 'terms' | 'saved' | 'settings';
@@ -54,6 +55,7 @@ export function App() {
   else if (segments[0] === 'browse') screen = <Category axis={segments[1] as Axis} />;
   else if (segments[0] === 'saved') screen = <Saved />;
   else if (segments[0] === 'settings') screen = <Settings />;
+  else if (segments[0] === 'study') screen = <Study />;
   else if (segments[0] === 'list' && segments[2]) {
     // /list/<category>/<id>, with a domain number after a certification
     screen = (
@@ -68,15 +70,20 @@ export function App() {
   return (
     <>
       {screen}
-      <div className="tab-fade" aria-hidden="true" />
-      <nav className="tab-bar" aria-label="Main">
-        {TABS.map(({ id, label, path, icon: TabIcon }) => (
-          <a key={id} href={href(path)} aria-current={tab === id ? 'page' : undefined}>
-            <TabIcon size={22} />
-            <span>{label}</span>
-          </a>
-        ))}
-      </nav>
+      {/* A study session takes the whole screen. */}
+      {segments[0] !== 'study' && (
+        <>
+        <div className="tab-fade" aria-hidden="true" />
+        <nav className="tab-bar" aria-label="Main">
+          {TABS.map(({ id, label, path, icon: TabIcon }) => (
+            <a key={id} href={href(path)} aria-current={tab === id ? 'page' : undefined}>
+              <TabIcon size={22} />
+              <span>{label}</span>
+            </a>
+          ))}
+        </nav>
+        </>
+      )}
     </>
   );
 }

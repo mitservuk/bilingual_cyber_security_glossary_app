@@ -3,6 +3,7 @@ import { Empty, SearchField, TermList } from '../components/Common';
 import { ClearIcon, FilterIcon } from '../components/Icons';
 import { type Axis, type Term, certifications, frameworks, populated, technology, terms, termsFor, topics } from '../data';
 import { createSearch } from '../search';
+import { StudyButton } from './Study';
 
 const search = createSearch(terms);
 
@@ -126,6 +127,11 @@ export function Terms() {
           </span>
         </div>
       )}
+
+      <StudyButton
+        title={[...active.map((a) => a.label), ...(searching ? [`“${query.trim()}”`] : [])].join(' · ') || 'All terms'}
+        terms={results}
+      />
 
       {results.length ? (
         <TermList terms={results} />

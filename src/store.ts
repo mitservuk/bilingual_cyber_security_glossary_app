@@ -7,6 +7,14 @@ import type { Lang, Region } from './data';
 
 export type Theme = 'system' | 'light' | 'dark';
 
+export type StudyDirection = 'en-es' | 'es-en';
+
+/** A set of terms being studied as flashcards, named after the list it came from. */
+export interface Deck {
+  title: string;
+  ids: string[];
+}
+
 interface State {
   saved: string[];
   recent: string[];
@@ -15,6 +23,11 @@ interface State {
   regions: Region[];
   /** Light or dark, or whatever the device is set to. */
   theme: Theme;
+  /** The deck last studied, so Home can offer to carry on. */
+  deck: Deck | null;
+  /** Terms marked "Know it" on a flashcard. */
+  known: string[];
+  studyDirection: StudyDirection;
 }
 
 const KEY = 'bilingual-cyber.v1';
@@ -29,9 +42,12 @@ function load(): State {
       lang: parsed.lang === 'es' ? 'es' : 'en',
       regions: Array.isArray(parsed.regions) ? parsed.regions : [],
       theme: parsed.theme === 'light' || parsed.theme === 'dark' ? parsed.theme : 'system',
+      deck: parsed.deck && Array.isArray(parsed.deck.ids) ? { title: String(parsed.deck.title), ids: parsed.deck.ids } : null,
+      known: Array.isArray(parsed.known) ? parsed.known : [],
+      studyDirection: parsed.studyDirection === 'es-en' ? 'es-en' : 'en-es',
     };
   } catch {
-    return { saved: [], recent: [], lang: 'en', regions: [], theme: 'system' };
+    return { saved: [], recent: [], lang: 'en', regions: [], theme: 'system', deck: null, known: [], studyDirection: 'en-es' };
   }
 }
 
@@ -79,6 +95,15 @@ export const addRecent = (id: string) => {
 };
 
 export const setLang = (lang: Lang) => set({ lang });
+
+export const setDeck = (deck: Deck) => set({ deck });
+
+export const setStudyDirection = (studyDirection: StudyDirection) => set({ studyDirection });
+
+export const markKnown = (id: string, known: boolean) => {
+  if (state.known.includes(id) === known) return;
+  set({ known: known ? [...state.known, id] : state.known.filter((k) => k !== id) });
+};
 
 export const setTheme = (theme: Theme) => {
   set({ theme });
