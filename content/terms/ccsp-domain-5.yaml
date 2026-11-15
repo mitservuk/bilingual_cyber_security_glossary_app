@@ -116,6 +116,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 1 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 1 }
   related:
     - cloud.virtual-machine
     - cloud.hypervisor
@@ -184,6 +185,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 1 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 1 }
   related:
     - cloud.guest-os
     - cloud.hypervisor
@@ -253,6 +255,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 1 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 1 }
   related:
     - tech.kubernetes
     - sec.high-availability
@@ -313,6 +316,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 1 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 1 }
   frameworks:
     - ITIL
   related:
@@ -376,6 +380,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 1 }
     - { cert: GCP-PCA, outline: "current", domain: 6 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 5 }
   related:
     - sec.monitoring
     - tech.capacity-management
@@ -500,6 +505,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 1 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 1 }
   related:
     - cloud.hypervisor
     - cloud.type-2-hypervisor
@@ -560,6 +566,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 1 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 1 }
   related:
     - cloud.hypervisor
     - cloud.type-1-hypervisor
@@ -617,6 +624,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 2 }
     - { cert: GCP-PCSE, outline: "current", domain: 2 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related:
     - sec.vpn
     - sec.ssh
@@ -679,6 +687,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 2 }
     - { cert: GCP-PCSE, outline: "current", domain: 2 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related:
     - sec.remote-access
     - sec.bastion-host
@@ -751,6 +760,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 2 }
     - { cert: GCP-PCSE, outline: "current", domain: 2 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related:
     - sec.remote-access
     - sec.ssh
@@ -824,6 +834,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 2 }
     - { cert: GCP-PCSE, outline: "current", domain: 2 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related:
     - sec.network-segmentation
     - sec.microsegmentation
@@ -892,6 +903,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 2 }
     - { cert: GCP-PCSE, outline: "current", domain: 2 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related:
     - sec.digital-signature
     - sec.integrity
@@ -956,6 +968,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 2 }
     - { cert: GCP-PCSE, outline: "current", domain: 2 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related:
     - sec.vlan
     - cloud.virtual-network
@@ -1022,6 +1035,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 2 }
     - { cert: GCP-PCSE, outline: "current", domain: 2 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related:
     - sec.bastion-host
     - sec.ssh
@@ -1164,6 +1178,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 3 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 3 }
   frameworks:
     - ITIL
   related:
@@ -1304,6 +1319,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 6 }
     - { cert: GCP-PCA, outline: "current", domain: 3 }
     - { cert: GCP-PCSE, outline: "current", domain: 5 }
+    - { cert: KCSA, outline: "current", domain: 6 }
   frameworks:
     - ITIL
   related:
@@ -1374,6 +1390,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 5 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 4 }
   related:
     - tech.ci-cd
     - tech.pipeline
@@ -1450,6 +1467,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 2 }
     - { cert: GCP-PCA, outline: "current", domain: 6 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 5 }
   related:
     - tech.deployment
     - tech.change-management
@@ -1566,6 +1584,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 1 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 1 }
   related:
     - tech.iac
     - cloud.container
@@ -3520,6 +3539,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 5 }
     - { cert: GCP-PCA, outline: "current", domain: 3 }
     - { cert: GCP-PCSE, outline: "current", domain: 3 }
+    - { cert: KCSA, outline: "current", domain: 6 }
   related:
     - sec.backup
     - sec.restore

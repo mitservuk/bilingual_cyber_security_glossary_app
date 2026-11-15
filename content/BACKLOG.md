@@ -9,10 +9,6 @@ the same pull request.
 
 ## Next up
 
-- Kubernetes and containers, with the KCSA exam.
-- Frameworks that have an entry but little vocabulary of their own: GDPR and
-  LOPDGDD beyond the basics, ISO/IEC 27001, NIST CSF, PCI DSS, the AI Act,
-  eIDAS, MAGERIT.
 - Situational phrases: what to say in a meeting, an incident call, an audit.
 
 ## Quality
@@ -49,10 +45,10 @@ They are already named in `taxonomy.yaml`, without domains.
 - **Microsoft:** AZ-900 (Azure Fundamentals), SC-900 (Security, Compliance and Identity Fundamentals), AZ-104 (Azure Administrator), SC-200 (Security Operations Analyst), SC-300 (Identity and Access Administrator).
 - **OffSec:** OSCP (OffSec Certified Professional).
 - **PeopleCert:** ITIL 4 Foundation.
-- **The Linux Foundation:** KCNA (Kubernetes and Cloud Native Associate), KCSA (Kubernetes and Cloud Native Security Associate), CKA (Certified Kubernetes Administrator), CKAD (Certified Kubernetes Application Developer), CKS (Certified Kubernetes Security Specialist).
+- **The Linux Foundation:** KCNA (Kubernetes and Cloud Native Associate), CKA (Certified Kubernetes Administrator), CKAD (Certified Kubernetes Application Developer), CKS (Certified Kubernetes Security Specialist).
 - **The Open Group:** TOGAF.
 - **The SABSA Institute:** SABSA Practitioner (SABSA Chartered Security Architect, Practitioner (SCP)), SABSA Master (SABSA Chartered Security Architect, Master (SCM)).
 
 ## Frameworks with no terms yet
 
-ENI, Data Act, UK GDPR and Data Protection Act 2018, NIS Regulations 2018, Cyber Essentials, NCSC Cyber Assessment Framework, NCSC Cloud Security Principles, NIST SP 800-53, NIST SP 800-171, NIST SP 800-207, NIST Risk Management Framework, NIST AI Risk Management Framework, FedRAMP, CMMC, GLBA, CCPA and CPRA, ISO/IEC 27005, ISO/IEC 27701, ISO/IEC 42001.
+ENI, Data Act, NIS Regulations 2018, NCSC Cloud Security Principles, NIST SP 800-53, NIST SP 800-171, NIST SP 800-207, NIST Risk Management Framework, NIST AI Risk Management Framework, FedRAMP, CMMC, GLBA, CCPA and CPRA, ISO/IEC 27005, ISO/IEC 27701, ISO/IEC 42001.

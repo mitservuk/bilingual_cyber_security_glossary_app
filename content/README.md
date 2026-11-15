@@ -113,6 +113,6 @@ checked source and confirm each `found` text is still on its page.
 `sec.` security concepts · `cloud.` cloud concepts · `grc.` governance, risk
 and business terms · `ai.` artificial intelligence · `tech.` other technology ·
 `law.` legal terms · `fw.` frameworks, standards and regulations · `azure.`
-Microsoft Azure · `gcp.` Google Cloud · `aws.` Amazon Web Services · `ens.` the
+Microsoft Azure · `gcp.` Google Cloud · `aws.` Amazon Web Services · `k8s.` Kubernetes · `ens.` the
 vocabulary of the ENS. Later: `aws.`, `k8s.`, `tool.`,
 `attack.`.

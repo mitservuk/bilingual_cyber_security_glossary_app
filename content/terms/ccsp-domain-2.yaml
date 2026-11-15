@@ -130,6 +130,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 5 }
     - { cert: GCP-PCA, outline: "current", domain: 3 }
     - { cert: GCP-PCSE, outline: "current", domain: 3 }
+    - { cert: KCSA, outline: "current", domain: 6 }
   related: [cloud.object-storage, sec.resiliency, sec.availability]
   sources:
     - label: "Google Cloud, páginas para España"
@@ -268,6 +269,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 1 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 1 }
   related: [cloud.block-storage, cloud.file-storage, sec.unstructured-data]
   sources:
     - label: "Real Decreto 145/2026, curso de especialización en Recursos y servicios en la nube (BOE)"
@@ -354,6 +356,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 1 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 1 }
   related: [cloud.object-storage, cloud.file-storage, cloud.volume-storage]
   sources:
     - label: "Paradigma Digital, blog"
@@ -431,6 +434,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 1 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 1 }
   related: [cloud.object-storage, cloud.block-storage, cloud.long-term-storage]
   sources:
     - label: "Real Decreto 145/2026, curso de especialización en Recursos y servicios en la nube (BOE)"
@@ -519,6 +523,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 1 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 1 }
   related: [cloud.ephemeral-computing, cloud.volume-storage, cloud.virtual-machine, cloud.container]
   sources:
     - label: "Microsoft Learn, es-ES"
@@ -589,6 +594,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 5 }
     - { cert: GCP-PCA, outline: "current", domain: 3 }
     - { cert: GCP-PCSE, outline: "current", domain: 3 }
+    - { cert: KCSA, outline: "current", domain: 6 }
   related: [sec.data-archiving, sec.data-retention, sec.backup]
   sources:
     - label: "AWS, páginas en español"
@@ -666,6 +672,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 1 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 1 }
   related: [cloud.block-storage, cloud.volume-storage, cloud.virtual-machine]
   sources:
     - label: "AWS, documentación en español"
@@ -731,6 +738,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 1 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 1 }
   related: [cloud.block-storage, cloud.raw-storage, cloud.ephemeral-storage, cloud.virtual-machine]
   sources:
     - label: "Paradigma Digital, blog"
@@ -2130,6 +2138,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 5 }
     - { cert: GCP-PCA, outline: "current", domain: 3 }
     - { cert: GCP-PCSE, outline: "current", domain: 3 }
+    - { cert: KCSA, outline: "current", domain: 6 }
   related: [sec.key-management, sec.hsm, sec.envelope-encryption, law.data-sovereignty]
   sources:
     - label: "Microsoft Learn, es-ES"
@@ -2212,6 +2221,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 5 }
     - { cert: GCP-PCA, outline: "current", domain: 3 }
     - { cert: GCP-PCSE, outline: "current", domain: 3 }
+    - { cert: KCSA, outline: "current", domain: 6 }
   related: [sec.key-management, sec.symmetric-encryption, sec.key-rotation, sec.hsm]
   sources:
     - label: "Microsoft Learn, es-ES"
@@ -2330,6 +2340,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 5 }
     - { cert: GCP-PCA, outline: "current", domain: 3 }
     - { cert: GCP-PCSE, outline: "current", domain: 3 }
+    - { cert: KCSA, outline: "current", domain: 6 }
   related: [sec.data-in-transit, sec.digital-certificate, sec.certificate-authority, sec.encryption]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -2404,6 +2415,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 5 }
     - { cert: GCP-PCA, outline: "current", domain: 3 }
     - { cert: GCP-PCSE, outline: "current", domain: 3 }
+    - { cert: KCSA, outline: "current", domain: 6 }
   related: [sec.data-at-rest, sec.data-in-use, sec.tls, sec.encryption]
   sources:
     - label: "Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE"
@@ -4173,6 +4185,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 5 }
     - { cert: GCP-PCA, outline: "current", domain: 3 }
     - { cert: GCP-PCSE, outline: "current", domain: 3 }
+    - { cert: KCSA, outline: "current", domain: 6 }
   related: [cloud.long-term-storage, sec.data-retention, sec.backup, sec.data-lifecycle]
   sources:
     - label: "AWS, páginas en español"

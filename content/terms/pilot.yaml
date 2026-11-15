@@ -70,6 +70,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 1 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 1 }
   related: [cloud.iaas, cloud.shared-responsibility, cloud.multitenancy]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad"
@@ -150,6 +151,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 1 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 1 }
   related: [cloud.cloud-computing, cloud.iaas]
   sources:
     - label: "CCN-STIC 499, Arquitecturas de seguridad cloud"
@@ -234,6 +236,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 1 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 1 }
   related: [cloud.cloud-computing, cloud.hypervisor]
   sources:
     - label: "CCN-STIC 499, Arquitecturas de seguridad cloud"
@@ -303,6 +306,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 1 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 1 }
   related: [cloud.cloud-computing, cloud.shared-responsibility, cloud.virtual-machine]
   sources:
     - label: "CCN-STIC 823, Seguridad en entornos cloud"
@@ -669,6 +673,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 3 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 3 }
   related: [cloud.virtual-machine, cloud.multitenancy]
   sources:
     - label: "CCN-STIC 887D, Guía de configuración segura multi-cuenta AWS"
@@ -725,6 +730,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 1 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 1 }
   related: [cloud.hypervisor, cloud.iaas]
   sources:
     - label: "INCIBE, Guía de buenas prácticas de ciberseguridad en redes privadas 5G: glosario"
@@ -882,6 +888,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 2 }
     - { cert: GCP-PCSE, outline: "current", domain: 2 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related: [sec.log, sec.api]
   sources:
     - label: "Diccionario panhispánico de dudas (RAE): cortafuegos"
@@ -966,6 +973,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 5 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 4 }
   related: [sec.threat-modelling, sec.sandbox]
   sources:
     - label: "CCN-STIC 812, Seguridad en entornos y aplicaciones web"

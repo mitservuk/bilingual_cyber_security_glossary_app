@@ -1,0 +1,2828 @@
+# Frameworks and laws: ISO/IEC 27001, GDPR and LOPDGDD, NIST CSF, PCI DSS, the AI Act, eIDAS, MAGERIT and the UK's.
+# Format is described in content/README.md. These entries were written from
+# working knowledge of usage in Spain; each `found` text was then located in a
+# page the glossary already cites and confirmed with scripts/check_sources.py.
+# Forms with no usedBy have not been seen in a source.
+
+- id: grc.context-of-organization
+  en:
+    term: context of the organisation
+    definition: The internal and external issues, and the needs of interested parties, that
+      an organisation must understand before setting the scope of its management system (clause
+      4).
+  es:
+    verdict: translated
+    forms:
+      - text: contexto de la organización
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - microsoft
+      - text: cuestiones internas y externas
+        article: las
+        kind: noun
+        note: Internal and external issues.
+    definition: Cuestiones internas y externas, y necesidades de las partes interesadas, que
+      una organización debe comprender antes de fijar el alcance de su sistema de gestión.
+    examples:
+      - es: El auditor empezó preguntando por el contexto de la organización.
+        en: The auditor began by asking about the context of the organisation.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - ISO-27001
+  related:
+    - grc.isms
+    - grc.stakeholder
+    - grc.audit-scope
+  sources:
+    - label: AEPD, Guía de protección de datos por defecto
+      url: https://www.aepd.es/guias/guia-proteccion-datos-por-defecto.pdf
+      found:
+        - contexto de la organización
+      checked: 2026-11-15
+    - label: Microsoft Security, es-ES
+      url: https://www.microsoft.com/es-es/security/business/security-101/what-is-data-loss-prevention-dlp
+      found:
+        - contexto de la organización
+      checked: 2026-11-15
+  status: sourced
+
+- id: grc.top-management
+  en:
+    term: top management
+    definition: The person or group that directs the organisation at the highest level, whose
+      leadership and commitment the standard requires (clause 5).
+  es:
+    verdict: translated
+    forms:
+      - text: alta dirección
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+      - text: liderazgo y compromiso
+        article: el
+        kind: noun
+        note: Leadership and commitment, what is asked of it.
+      - text: dirección
+        article: la
+        kind: noun
+        note: 'Management, in general: la dirección ha aprobado la política.'
+    definition: Persona o grupo que dirige la organización al más alto nivel y de quien la
+      norma exige liderazgo y compromiso.
+    examples:
+      - es: La alta dirección debe aprobar la política de seguridad.
+        en: Top management must approve the security policy.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - ISO-27001
+  related:
+    - law.management-body
+    - grc.management-review
+    - grc.governance
+  sources:
+    - label: AEPD, Guía de Privacidad desde el Diseño
+      url: https://www.aepd.es/guias/guia-privacidad-desde-diseno.pdf
+      found:
+        - la alta dirección
+      checked: 2026-11-15
+    - label: Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81962
+      found:
+        - la alta dirección para
+      checked: 2026-11-15
+  status: sourced
+
+- id: grc.security-objectives
+  en:
+    term: information security objectives
+    definition: Measurable goals the organisation sets for its management system, with plans
+      for achieving them (clause 6.2).
+  es:
+    verdict: translated
+    forms:
+      - text: objetivos de seguridad de la información
+        article: los
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+    definition: Metas medibles que la organización fija para su sistema de gestión, con planes
+      para alcanzarlas.
+    examples:
+      - es: Uno de los objetivos de seguridad de la información es reducir el tiempo de parcheo.
+        en: One of the information security objectives is to reduce patching time.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - ISO-27001
+  related:
+    - grc.kpi
+    - grc.isms
+    - grc.policy
+  sources:
+    - label: AEPD, Guía de Privacidad desde el Diseño
+      url: https://www.aepd.es/guias/guia-privacidad-desde-diseno.pdf
+      found:
+        - objetivos de seguridad
+      checked: 2026-11-15
+    - label: Reglamento de Ejecución (UE) 2024/482 (EUCC), en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-80181
+      found:
+        - objetivos de seguridad
+      checked: 2026-11-15
+  status: sourced
+
+- id: grc.documented-information
+  en:
+    term: documented information
+    definition: The standard's term for the documents and records the organisation must control
+      and keep (clause 7.5).
+  es:
+    verdict: translated
+    forms:
+      - text: información documentada
+        article: la
+        kind: noun
+        primary: true
+      - text: registro
+        article: el
+        kind: noun
+        plural: los registros
+        note: 'A record: evidence that something was done.'
+    definition: Término de la norma para los documentos y registros que la organización debe
+      controlar y conservar.
+    examples:
+      - es: El procedimiento debe mantenerse como información documentada.
+        en: The procedure must be kept as documented information.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - ISO-27001
+  related:
+    - sec.evidence
+    - grc.procedure
+    - grc.audit
+  sources: []
+  status: draft
+
+- id: grc.nonconformity
+  en:
+    term: nonconformity
+    definition: A failure to meet a requirement, found in an audit or in operation; a major
+      one can stop certification, a minor one needs a correction plan.
+  es:
+    verdict: translated
+    forms:
+      - text: no conformidad
+        article: la
+        kind: noun
+        primary: true
+        plural: las no conformidades
+        usedBy:
+          - official
+          - eu
+      - text: no conformidad mayor
+        article: la
+        kind: noun
+        note: A major nonconformity. A minor one is menor.
+      - text: NC
+        article: la
+        kind: noun
+        register: informal
+        note: The usual abbreviation in audit reports.
+    definition: Incumplimiento de un requisito, detectado en una auditoría o en la operación.
+    examples:
+      - es: La auditoría se cerró con una no conformidad menor.
+        en: The audit closed with one minor nonconformity.
+  topics:
+    - grc
+    - assessment
+  technology: []
+  frameworks:
+    - ISO-27001
+  related:
+    - grc.corrective-action
+    - grc.finding
+    - grc.audit-report
+  sources:
+    - label: AEPD, resolución PS/00176/2022
+      url: https://www.aepd.es/documento/ps-00176-2022.pdf
+      found:
+        - la no conformidad con
+      checked: 2026-11-15
+    - label: Reglamento (UE) 2024/2847 (Reglamento de Ciberresiliencia), texto en español
+        publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81720
+      found:
+        - la no conformidad pueda
+      checked: 2026-11-15
+  status: sourced
+
+- id: grc.corrective-action
+  en:
+    term: corrective action
+    definition: Action that removes the cause of a nonconformity so that it does not happen
+      again (clause 10.2).
+  es:
+    verdict: translated
+    forms:
+      - text: acción correctiva
+        article: la
+        kind: noun
+        primary: true
+        plural: las acciones correctivas
+        usedBy:
+          - official
+          - eu
+      - text: plan de acciones correctivas
+        article: el
+        kind: noun
+        note: The PAC, which the certification body asks for after an audit.
+    definition: Acción que elimina la causa de una no conformidad para que no vuelva a producirse.
+    examples:
+      - es: Tenemos treinta días para presentar el plan de acciones correctivas.
+        en: We have thirty days to submit the corrective action plan.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - ISO-27001
+  related:
+    - grc.nonconformity
+    - sec.remediation
+    - sec.root-cause-analysis
+    - tech.continual-improvement
+  sources:
+    - label: Ley Orgánica 3/2018 (LOPDGDD)
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673
+      found:
+        - la acción correctiva
+      checked: 2026-11-15
+    - label: Reglamento (UE) 2016/679 (RGPD), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2016-80807
+      found:
+        - garantizar acciones correctivas para
+      checked: 2026-11-15
+  status: sourced
+
+- id: grc.finding
+  en:
+    term: audit finding
+    definition: 'What an audit records: a nonconformity, an observation or an opportunity
+      for improvement.'
+  es:
+    verdict: translated
+    forms:
+      - text: hallazgo
+        article: el
+        kind: noun
+        primary: true
+        plural: los hallazgos
+        usedBy:
+          - official
+          - eu
+      - text: observación
+        article: la
+        kind: noun
+        note: 'An observation: not a breach, but worth noting.'
+      - text: oportunidad de mejora
+        article: la
+        kind: noun
+        note: An opportunity for improvement, OdM.
+    definition: 'Lo que recoge una auditoría: una no conformidad, una observación o una oportunidad
+      de mejora.'
+    examples:
+      - es: El informe recoge tres hallazgos, ninguno grave.
+        en: The report records three findings, none of them serious.
+  topics:
+    - assessment
+    - grc
+  technology: []
+  frameworks:
+    - ISO-27001
+  related:
+    - grc.nonconformity
+    - grc.audit-report
+    - grc.audit
+  sources:
+    - label: Esquema Nacional de Seguridad (RD 311/2022)
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - identificando los hallazgos de
+      checked: 2026-11-15
+    - label: Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81962
+      found:
+        - de los hallazgos
+      checked: 2026-11-15
+  status: sourced
+
+- id: grc.management-review
+  en:
+    term: management review
+    definition: The periodic meeting at which top management reviews the management system's
+      performance and decides on changes (clause 9.3).
+  es:
+    verdict: translated
+    forms:
+      - text: revisión por la dirección
+        article: la
+        kind: noun
+        primary: true
+    definition: Reunión periódica en la que la alta dirección revisa el funcionamiento del
+      sistema de gestión y decide cambios.
+    examples:
+      - es: El acta de la revisión por la dirección es una evidencia obligatoria.
+        en: The minutes of the management review are mandatory evidence.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - ISO-27001
+  related:
+    - grc.top-management
+    - grc.internal-audit
+    - tech.continual-improvement
+  sources: []
+  status: draft
+
+- id: grc.risk-owner
+  en:
+    term: risk owner
+    definition: The person with the accountability and authority to manage a risk, who approves
+      its treatment and accepts what remains.
+  es:
+    verdict: translated
+    forms:
+      - text: propietario del riesgo
+        article: el
+        kind: noun
+        primary: true
+      - text: dueño del riesgo
+        article: el
+        kind: noun
+    definition: Persona con la responsabilidad y la autoridad para gestionar un riesgo, que
+      aprueba su tratamiento y acepta el riesgo restante.
+    examples:
+      - es: El propietario del riesgo debe firmar la aceptación del riesgo residual.
+        en: The risk owner must sign off acceptance of the residual risk.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - ISO-27001
+  related:
+    - grc.risk-acceptance
+    - grc.risk-treatment
+    - grc.data-owner
+  sources: []
+  status: draft
+
+- id: grc.annex-a
+  en:
+    term: Annex A
+    definition: The list of 93 reference controls in ISO/IEC 27001:2022, grouped into four
+      themes, against which the statement of applicability is written.
+  es:
+    verdict: translated
+    forms:
+      - text: Anexo A
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: controles organizativos, de personas, físicos y tecnológicos
+        article: los
+        kind: noun
+        note: 'The four themes: sections 5, 6, 7 and 8.'
+    definition: Lista de 93 controles de referencia de la ISO/IEC 27001:2022, agrupados en
+      cuatro temas, frente a la que se redacta la declaración de aplicabilidad.
+    examples:
+      - es: La declaración de aplicabilidad justifica cada control del Anexo A que se excluye.
+        en: The statement of applicability justifies every Annex A control that is excluded.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - ISO-27001
+  related:
+    - ens.declaracion-de-aplicabilidad
+    - grc.control
+    - fw.iso-27002
+    - fw.iso-27001
+  sources:
+    - label: Ley 37/2015, de carreteras
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2015-10439
+      found:
+        - viario anexo a dicha
+      checked: 2026-11-15
+  status: sourced
+
+- id: fw.iso-27002
+  en:
+    term: ISO/IEC 27002
+    definition: The companion standard that gives guidance on implementing each of the Annex
+      A controls; it is guidance, and cannot be certified against.
+  es:
+    verdict: english-kept
+    forms:
+      - text: ISO/IEC 27002
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - microsoft
+      - text: código de buenas prácticas
+        article: el
+        kind: noun
+        usedBy:
+          - official
+    definition: Norma complementaria que orienta sobre cómo implantar cada control del Anexo
+      A; es una guía y no es certificable.
+    examples:
+      - es: Para implantar el control consultamos la guía de la ISO 27002.
+        en: To implement the control we consulted the guidance in ISO 27002.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - ISO-27001
+  related:
+    - fw.iso-27001
+    - grc.annex-a
+    - grc.guideline
+  sources:
+    - label: INCIBE, dosier Protección de la información
+      url: https://www.incibe.es/sites/default/files/contenidos/dosieres/metad_proteccion-de-la-informacion.pdf
+      found:
+        - EN ISO/IEC 27002
+      checked: 2026-11-15
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/compliance/regulatory/offering-iso-27017
+      found:
+        - en ISO/IEC 27002
+      checked: 2026-11-15
+    - label: INCIBE, Guía sobre borrado seguro de la información
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_ciberseguridad_borrado_seguro_metad_0.pdf
+      found:
+        - código de buenas prácticas
+      checked: 2026-11-15
+  status: sourced
+
+- id: grc.certification-audit
+  en:
+    term: certification audit
+    definition: 'The two-stage audit by a certification body that leads to a certificate:
+      stage 1 reviews documentation, stage 2 checks the system in operation. Surveillance
+      audits follow yearly and recertification every three years.'
+  es:
+    verdict: translated
+    forms:
+      - text: auditoría de certificación
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: auditoría de seguimiento
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: A surveillance audit, each year between certifications.
+      - text: fase 1
+        article: la
+        kind: noun
+        note: Stage 1; stage 2 is fase 2.
+    definition: 'Auditoría en dos fases de una entidad de certificación que conduce al certificado:
+      la fase 1 revisa la documentación y la fase 2 comprueba el sistema en funcionamiento.'
+    examples:
+      - es: Superamos la fase 2 de la auditoría de certificación sin no conformidades mayores.
+        en: We passed stage 2 of the certification audit with no major nonconformities.
+  topics:
+    - assessment
+    - grc
+  technology: []
+  frameworks:
+    - ISO-27001
+  related:
+    - grc.external-audit
+    - grc.certification
+    - ens.entidad-de-certificacion
+    - grc.nonconformity
+  sources:
+    - label: Esquema Nacional de Seguridad (RD 311/2022)
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - auditoría de certificación
+      checked: 2026-11-15
+    - label: Orden PRE/2740/2007, Reglamento de Evaluación y Certificación de la Seguridad
+        de las TI
+      url: https://www.boe.es/buscar/pdf/2007/BOE-A-2007-16830-consolidado.pdf
+      found:
+        - auditoría de seguimiento
+      checked: 2026-11-15
+  status: sourced
+
+- id: grc.pdca
+  en:
+    term: plan-do-check-act
+    acronym: PDCA
+    definition: 'The improvement cycle behind ISO management systems: plan, do, check, act.'
+  es:
+    verdict: translated
+    forms:
+      - text: ciclo PDCA
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: planificar, hacer, verificar y actuar
+        kind: verb
+      - text: ciclo de Deming
+        article: el
+        kind: noun
+    say: 'PDCA is spelled out: pe-de-ce-a.'
+    definition: 'Ciclo de mejora en el que se basan los sistemas de gestión ISO: planificar,
+      hacer, verificar y actuar.'
+    examples:
+      - es: El SGSI sigue el ciclo PDCA de mejora continua.
+        en: The ISMS follows the PDCA cycle of continual improvement.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - ISO-27001
+  related:
+    - tech.continual-improvement
+    - grc.isms
+    - grc.management-review
+  sources:
+    - label: AEPD, Gestión del riesgo y evaluación de impacto en tratamientos de datos personales
+      url: https://www.aepd.es/guias/gestion-riesgo-y-evaluacion-impacto-en-tratamientos-datos-personales.pdf
+      found:
+        - un ciclo PDCA
+      checked: 2026-11-15
+  status: sourced
+
+- id: sec.web-filtering
+  en:
+    term: web filtering
+    definition: Controlling which websites users can reach, to block malicious or unauthorised
+      content; a control added to ISO/IEC 27001 in 2022 (8.23).
+  es:
+    verdict: translated
+    forms:
+      - text: filtrado web
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - aws
+      - text: filtrado de contenidos
+        article: el
+        kind: noun
+        usedBy:
+          - official
+      - text: proxy
+        article: el
+        kind: noun
+        usedBy:
+          - official
+        note: The web proxy that usually does it.
+    definition: Control de los sitios web a los que pueden acceder los usuarios, para bloquear
+      contenido malicioso o no autorizado.
+    examples:
+      - es: El filtrado web bloquea los dominios de phishing conocidos.
+        en: Web filtering blocks known phishing domains.
+  topics:
+    - network
+  technology:
+    - networking
+  frameworks:
+    - ISO-27001
+  related:
+    - sec.firewall
+    - sec.phishing
+    - sec.sase
+    - sec.traffic-inspection
+  sources:
+    - label: AWS, páginas en español
+      url: https://aws.amazon.com/es/network-firewall/
+      found:
+        - el filtrado web
+      checked: 2026-11-15
+    - label: INCIBE, Taxonomía de soluciones de ciberseguridad
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/taxonomia_ciberseguridad.pdf
+      found:
+        - filtrado de contenidos
+      checked: 2026-11-15
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - Proxy
+      checked: 2026-11-15
+  status: sourced
+
+- id: grc.ict-readiness
+  en:
+    term: ICT readiness for business continuity
+    definition: Making sure IT services can be recovered in the time the business needs during
+      a disruption; a control added to ISO/IEC 27001 in 2022 (5.30).
+  es:
+    verdict: translated
+    forms:
+      - text: preparación de las TIC para la continuidad del negocio
+        article: la
+        kind: noun
+        primary: true
+      - text: continuidad de las TIC
+        article: la
+        kind: noun
+    definition: Garantía de que los servicios de TI pueden recuperarse en el tiempo que el
+      negocio necesita durante una interrupción.
+    examples:
+      - es: La preparación de las TIC para la continuidad del negocio se prueba con un simulacro
+          anual.
+        en: ICT readiness for business continuity is tested with a yearly drill.
+  topics:
+    - incident
+    - grc
+  technology: []
+  frameworks:
+    - ISO-27001
+  related:
+    - sec.business-continuity
+    - sec.rto
+    - sec.drp
+    - grc.bia
+  sources: []
+  status: draft
+
+- id: law.processing
+  en:
+    term: processing
+    definition: 'Any operation performed on personal data: collecting, storing, using, sharing
+      or deleting it.'
+  es:
+    verdict: translated
+    forms:
+      - text: tratamiento
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+      - text: tratamiento de datos personales
+        article: el
+        kind: noun
+        usedBy:
+          - official
+      - text: tratar
+        kind: verb
+    definition: 'Cualquier operación realizada con datos personales: recogida, conservación,
+      uso, comunicación o supresión.'
+    examples:
+      - es: Cada tratamiento debe tener una finalidad y una base jurídica.
+        en: Every processing operation must have a purpose and a legal basis.
+    watchOut: Processing personal data is tratamiento, never procesamiento. Procesamiento
+      is for what a computer does.
+  topics:
+    - data
+    - grc
+  technology: []
+  frameworks:
+    - GDPR
+  related:
+    - law.data-controller
+    - law.data-processor
+    - law.lawful-basis
+    - law.ropa
+  sources:
+    - label: Ley Orgánica 3/2018 (LOPDGDD)
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673
+      found:
+        - tratamiento de datos personales
+      checked: 2026-11-15
+    - label: Reglamento (UE) 2016/679 (RGPD), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2016-80807
+      found:
+        - tratamiento de datos personales
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.lawful-basis
+  en:
+    term: lawful basis
+    definition: One of the six grounds the GDPR accepts for processing personal data, such
+      as consent, contract, legal obligation or legitimate interest.
+  es:
+    verdict: translated
+    forms:
+      - text: base jurídica
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+      - text: base de legitimación
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: The AEPD's usual phrase.
+      - text: licitud del tratamiento
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: Lawfulness of processing, the heading of Article 6.
+      - text: interés legítimo
+        article: el
+        kind: noun
+        usedBy:
+          - official
+        note: Legitimate interest, the most argued-over basis.
+    definition: Cada uno de los seis fundamentos que el RGPD admite para tratar datos personales,
+      como el consentimiento, el contrato, la obligación legal o el interés legítimo.
+    examples:
+      - es: La base jurídica del tratamiento es la ejecución del contrato.
+        en: The lawful basis for the processing is performance of the contract.
+  topics:
+    - data
+    - grc
+  technology: []
+  frameworks:
+    - GDPR
+  related:
+    - law.consent
+    - law.processing
+    - law.data-controller
+  sources:
+    - label: AEPD, Adecuación al RGPD de tratamientos que incorporan inteligencia artificial
+      url: https://www.aepd.es/guias/adecuacion-rgpd-ia.pdf
+      found:
+        - una base jurídica legitimadora
+        - Interés legítimo
+      checked: 2026-11-15
+    - label: Reglamento (UE) 2016/679 (RGPD), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2016-80807
+      found:
+        - una base jurídica
+      checked: 2026-11-15
+    - label: AEPD, resolución PS/00176/2022
+      url: https://www.aepd.es/documento/ps-00176-2022.pdf
+      found:
+        - bases de legitimación
+        - licitud del tratamiento
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.special-categories
+  en:
+    term: special categories of personal data
+    definition: Data the GDPR protects more strictly, such as health, biometric and genetic
+      data, ethnic origin, political opinions, religion and sexual orientation.
+  es:
+    verdict: translated
+    forms:
+      - text: categorías especiales de datos
+        article: las
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+      - text: datos especialmente protegidos
+        article: los
+        kind: noun
+        usedBy:
+          - official
+        note: The older Spanish term, still heard.
+      - text: datos de salud
+        article: los
+        kind: noun
+        usedBy:
+          - official
+    definition: Datos a los que el RGPD da una protección reforzada, como los de salud, biométricos
+      y genéticos, el origen étnico, las opiniones políticas, la religión y la orientación
+      sexual.
+    examples:
+      - es: Los datos de salud son categorías especiales de datos y exigen una evaluación
+          de impacto.
+        en: Health data is a special category of data and requires an impact assessment.
+  topics:
+    - data
+    - grc
+  technology: []
+  frameworks:
+    - GDPR
+  related:
+    - sec.sensitive-data
+    - law.personal-data
+    - law.phi
+    - sec.biometrics
+  sources:
+    - label: AEPD, Adecuación al RGPD de tratamientos que incorporan inteligencia artificial
+      url: https://www.aepd.es/guias/adecuacion-rgpd-ia.pdf
+      found:
+        - Categorías especiales de datos
+      checked: 2026-11-15
+    - label: Reglamento (UE) 2016/679 (RGPD), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2016-80807
+      found:
+        - categorías especiales de datos
+      checked: 2026-11-15
+    - label: AEPD, Orientaciones y garantías en los procedimientos de anonimización de datos
+        personales
+      url: https://www.aepd.es/guias/guia-orientaciones-procedimientos-anonimizacion.pdf
+      found:
+        - datos especialmente protegidos
+      checked: 2026-11-15
+    - label: 'AEPD, área de actuación: Salud'
+      url: https://www.aepd.es/areas-de-actuacion/salud
+      found:
+        - datos de salud
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.data-minimisation
+  en:
+    term: data minimisation
+    definition: The GDPR principle that only the personal data needed for the purpose may
+      be collected and kept.
+  es:
+    verdict: translated
+    forms:
+      - text: minimización de datos
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+      - text: limitación de la finalidad
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: Purpose limitation, the companion principle.
+      - text: limitación del plazo de conservación
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: Storage limitation.
+    definition: Principio del RGPD por el que solo pueden recogerse y conservarse los datos
+      personales necesarios para la finalidad.
+    examples:
+      - es: Por minimización de datos, el formulario ya no pide la fecha de nacimiento.
+        en: For data minimisation, the form no longer asks for date of birth.
+  topics:
+    - data
+    - grc
+  technology: []
+  frameworks:
+    - GDPR
+  related:
+    - sec.data-retention
+    - law.privacy-by-design
+    - law.processing
+  sources:
+    - label: AEPD, Orientaciones sobre IA agéntica
+      url: https://www.aepd.es/guias/orientaciones-ia-agentica.pdf
+      found:
+        - Minimización de datos
+      checked: 2026-11-15
+    - label: Reglamento (UE) 2016/679 (RGPD), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2016-80807
+      found:
+        - minimización de datos
+      checked: 2026-11-15
+    - label: AEPD, Guía de Privacidad desde el Diseño
+      url: https://www.aepd.es/guias/guia-privacidad-desde-diseno.pdf
+      found:
+        - limitación de la finalidad
+        - limitación del plazo de conservación
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.proactive-accountability
+  en:
+    term: accountability principle
+    definition: The GDPR principle that the controller must comply and be able to demonstrate
+      that it does.
+  es:
+    verdict: translated
+    forms:
+      - text: responsabilidad proactiva
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+    definition: Principio del RGPD por el que el responsable debe cumplir y ser capaz de demostrarlo.
+    examples:
+      - es: La responsabilidad proactiva obliga a documentar las decisiones sobre los datos.
+        en: The accountability principle requires decisions about data to be documented.
+    watchOut: The Spanish GDPR renders accountability as responsabilidad proactiva. Outside
+      data protection, accountability is usually rendición de cuentas.
+  topics:
+    - data
+    - grc
+  technology: []
+  frameworks:
+    - GDPR
+  related:
+    - sec.accountability
+    - law.ropa
+    - law.data-controller
+  sources:
+    - label: AEPD, Adecuación al RGPD de tratamientos que incorporan inteligencia artificial
+      url: https://www.aepd.es/guias/adecuacion-rgpd-ia.pdf
+      found:
+        - responsabilidad proactiva
+      checked: 2026-11-15
+    - label: Reglamento (UE) 2016/679 (RGPD), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2016-80807
+      found:
+        - de responsabilidad proactiva
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.ropa
+  en:
+    term: record of processing activities
+    acronym: RoPA
+    definition: The inventory of processing operations that controllers and processors must
+      keep under Article 30 of the GDPR.
+  es:
+    verdict: translated
+    forms:
+      - text: registro de actividades de tratamiento
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+      - text: RAT
+        article: el
+        kind: noun
+        headline: true
+    say: RAT is said as a word, 'rat'.
+    definition: Inventario de los tratamientos que responsables y encargados deben llevar
+      según el artículo 30 del RGPD.
+    examples:
+      - es: El nuevo servicio hay que darlo de alta en el registro de actividades de tratamiento.
+        en: The new service has to be added to the record of processing activities.
+  topics:
+    - data
+    - grc
+  technology: []
+  frameworks:
+    - GDPR
+  related:
+    - law.processing
+    - law.proactive-accountability
+    - sec.data-mapping
+  sources:
+    - label: INCIBE, blog de empresas
+      url: https://www.incibe.es/protege-tu-empresa/blog/ser-proactivo-privacidad-elabora-tu-registro-actividades
+      found:
+        - registro de actividades de tratamiento
+      checked: 2026-11-15
+    - label: Reglamento (UE) 2016/679 (RGPD), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2016-80807
+      found:
+        - Registro de las actividades de tratamiento
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.dpa-contract
+  en:
+    term: data processing agreement
+    acronym: DPA
+    definition: The contract the GDPR requires between a controller and a processor, setting
+      out what the processor may do with the data.
+  es:
+    verdict: translated
+    forms:
+      - text: contrato de encargado del tratamiento
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: contrato de encargo
+        article: el
+        kind: noun
+        usedBy:
+          - official
+      - text: DPA
+        article: el
+        kind: noun
+        headline: true
+        note: The English acronym, common with cloud providers.
+    definition: Contrato que el RGPD exige entre un responsable y un encargado, y que fija
+      lo que este puede hacer con los datos.
+    examples:
+      - es: Antes de usar el servicio hay que firmar el contrato de encargado del tratamiento.
+        en: Before using the service, the data processing agreement has to be signed.
+  topics:
+    - data
+    - grc
+    - supplychain
+  technology: []
+  frameworks:
+    - GDPR
+  related:
+    - law.data-processor
+    - law.contract
+    - law.scc
+  sources:
+    - label: AEPD, Guía para la notificación de brechas de datos personales
+      url: https://www.aepd.es/guias/guia-brechas-seguridad.pdf
+      found:
+        - contrato de encargo
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.scc
+  en:
+    term: standard contractual clauses
+    acronym: SCCs
+    definition: Model clauses approved by the European Commission that make a transfer of
+      personal data outside the EEA lawful.
+  es:
+    verdict: translated
+    forms:
+      - text: cláusulas contractuales tipo
+        article: las
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+      - text: CCT
+        article: las
+        kind: noun
+        headline: true
+      - text: decisión de adecuación
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: 'An adequacy decision: the alternative, when the Commission has found a country''s
+          protection adequate.'
+    definition: Cláusulas modelo aprobadas por la Comisión Europea que permiten transferir
+      legalmente datos personales fuera del EEE.
+    examples:
+      - es: La transferencia a Estados Unidos se ampara en las cláusulas contractuales tipo.
+        en: The transfer to the United States relies on standard contractual clauses.
+  topics:
+    - data
+    - grc
+  technology: []
+  frameworks:
+    - GDPR
+  related:
+    - law.international-transfer
+    - law.dpa-contract
+    - law.data-sovereignty
+  sources:
+    - label: AEPD, resolución PS/00176/2022
+      url: https://www.aepd.es/documento/ps-00176-2022.pdf
+      found:
+        - Cláusulas contractuales tipo
+        - decisión de adecuación
+      checked: 2026-11-15
+    - label: BOE, Reglamento (UE) 2023/2854 (Reglamento de Datos)
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2023-81895
+      found:
+        - cláusulas contractuales tipo
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.data-subject-rights
+  en:
+    term: data subject rights
+    definition: 'The rights the GDPR gives individuals over their data: access, rectification,
+      erasure, restriction, portability and objection.'
+  es:
+    verdict: translated
+    forms:
+      - text: derechos de los interesados
+        article: los
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+      - text: derecho de acceso
+        article: el
+        kind: noun
+        usedBy:
+          - official
+      - text: derecho a la portabilidad
+        article: el
+        kind: noun
+        usedBy:
+          - official
+      - text: derechos ARCO
+        article: los
+        kind: noun
+        note: The old acronym, still used; the extended one is ARSULIPO.
+    definition: 'Derechos que el RGPD reconoce a las personas sobre sus datos: acceso, rectificación,
+      supresión, limitación, portabilidad y oposición.'
+    examples:
+      - es: El plazo para responder a un ejercicio de derechos es de un mes.
+        en: The deadline for answering a rights request is one month.
+  topics:
+    - data
+    - grc
+  technology: []
+  frameworks:
+    - GDPR
+  related:
+    - law.right-to-erasure
+    - law.data-subject
+    - law.dpo
+  sources:
+    - label: AEPD, Adecuación al RGPD de tratamientos que incorporan inteligencia artificial
+      url: https://www.aepd.es/guias/adecuacion-rgpd-ia.pdf
+      found:
+        - derechos de los interesados
+      checked: 2026-11-15
+    - label: Reglamento (UE) 2016/679 (RGPD), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2016-80807
+      found:
+        - derechos de los interesados
+      checked: 2026-11-15
+    - label: AEPD, traducción del informe de ENISA «Ingeniería de la protección de datos»
+        (2022)
+      url: https://www.aepd.es/documento/enisa-ingenieria-de-la-proteccion-de-datos.pdf
+      found:
+        - DERECHO DE ACCESO
+      checked: 2026-11-15
+    - label: AEPD, Guía para clientes que contraten servicios de cloud computing (2018; marcada
+        como obsoleta)
+      url: https://www.aepd.es/guias/guia-cloud-clientes.pdf
+      found:
+        - portabilidad de los datos
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.profiling
+  en:
+    term: profiling
+    definition: Automated processing of personal data to evaluate aspects of a person; the
+      GDPR restricts decisions based solely on it.
+  es:
+    verdict: translated
+    forms:
+      - text: elaboración de perfiles
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+      - text: decisiones individuales automatizadas
+        article: las
+        kind: noun
+        usedBy:
+          - official
+        note: Automated individual decision-making, Article 22.
+    definition: Tratamiento automatizado de datos personales para evaluar aspectos de una
+      persona; el RGPD limita las decisiones basadas únicamente en él.
+    examples:
+      - es: La elaboración de perfiles para conceder créditos exige intervención humana.
+        en: Profiling to grant loans requires human intervention.
+  topics:
+    - data
+    - grc
+  technology:
+    - ai-ml
+  frameworks:
+    - GDPR
+  related:
+    - ai.machine-learning
+    - law.data-subject-rights
+    - ai.human-oversight
+  sources:
+    - label: AEPD, Adecuación al RGPD de tratamientos que incorporan inteligencia artificial
+      url: https://www.aepd.es/guias/adecuacion-rgpd-ia.pdf
+      found:
+        - elaboración de perfiles
+        - decisiones individuales automatizadas
+      checked: 2026-11-15
+    - label: Reglamento (UE) 2016/679 (RGPD), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2016-80807
+      found:
+        - elaboración de perfiles
+      checked: 2026-11-15
+  status: sourced
+
+- id: fw.lopdgdd
+  en:
+    term: LOPDGDD
+    definition: Spain's data protection act of 2018, which supplements the GDPR and adds a
+      set of digital rights.
+  es:
+    verdict: translated
+    forms:
+      - text: LOPDGDD
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: Ley Orgánica de Protección de Datos Personales y garantía de los derechos digitales
+        article: la
+        kind: noun
+        register: formal
+        usedBy:
+          - official
+      - text: LOPD
+        article: la
+        kind: noun
+        note: The name of the previous law, still used loosely for the current one.
+      - text: derechos digitales
+        article: los
+        kind: noun
+        usedBy:
+          - official
+        note: 'The digital rights it adds, such as the right to disconnect: la desconexión
+          digital.'
+    say: Spelled out, or shortened in speech to 'la LOPD'.
+    definition: Ley orgánica española de 2018 que complementa el RGPD y añade un conjunto
+      de derechos digitales.
+    examples:
+      - es: La LOPDGDD fija en catorce años la edad del consentimiento digital.
+        en: The LOPDGDD sets the age of digital consent at fourteen.
+  topics:
+    - grc
+    - data
+  technology: []
+  frameworks:
+    - LOPDGDD
+    - GDPR
+  related:
+    - fw.gdpr
+    - law.aepd
+    - law.data-protection
+  sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - LOPDGDD
+        - Ley Orgánica de Protección de Datos Personales y Garantía de los Derechos Digitales
+        - los Derechos Digitales
+      checked: 2026-11-15
+    - label: AEPD, resolución PS/00176/2022
+      url: https://www.aepd.es/documento/ps-00176-2022.pdf
+      found:
+        - la LOPDGDD
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.aepd
+  en:
+    term: Spanish Data Protection Agency
+    acronym: AEPD
+    definition: Spain's national data protection authority, which publishes guidance, handles
+      complaints and imposes fines.
+  es:
+    verdict: translated
+    forms:
+      - text: Agencia Española de Protección de Datos
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - engineers
+      - text: AEPD
+        article: la
+        kind: noun
+        headline: true
+        usedBy:
+          - official
+    say: 'Spelled out: a-e-pe-de. People often just say ''la Agencia''.'
+    definition: Autoridad española de protección de datos, que publica guías, tramita reclamaciones
+      e impone sanciones.
+    examples:
+      - es: La AEPD sancionó a la empresa por no notificar la brecha.
+        en: The AEPD fined the company for failing to notify the breach.
+    watchOut: Catalonia, the Basque Country and Andalusia have their own authorities for their
+      public sectors.
+  topics:
+    - grc
+    - data
+  technology: []
+  frameworks:
+    - GDPR
+    - LOPDGDD
+  related:
+    - law.supervisory-authority
+    - fw.lopdgdd
+    - law.breach-notification
+  sources:
+    - label: Ley Orgánica 3/2018 (LOPDGDD)
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673
+      found:
+        - Agencia Española de Protección de Datos
+      checked: 2026-11-15
+    - label: Xataka
+      url: https://www.xataka.com/seguridad/como-anonimos-datos-anonimizados-que-nos-prometen-empresas-cuando-van-a-usar-nuestros-datos-personales
+      found:
+        - Agencia Española de Protección de Datos
+      checked: 2026-11-15
+    - label: AEPD, Guía para la notificación de brechas de datos personales
+      url: https://www.aepd.es/guias/guia-brechas-seguridad.pdf
+      found:
+        - la AEPD en
+      checked: 2026-11-15
+  status: sourced
+
+- id: fw.csf-functions
+  en:
+    term: CSF functions
+    definition: 'The six top-level groupings of the NIST Cybersecurity Framework 2.0: Govern,
+      Identify, Protect, Detect, Respond and Recover.'
+  es:
+    verdict: translated
+    forms:
+      - text: funciones del marco
+        article: las
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+      - text: gobernar, identificar, proteger, detectar, responder y recuperar
+        kind: verb
+        usedBy:
+          - microsoft
+    definition: 'Los seis grandes bloques del Marco de Ciberseguridad del NIST 2.0: gobernar,
+      identificar, proteger, detectar, responder y recuperar.'
+    examples:
+      - es: La versión 2.0 añadió la función de gobernar a las cinco anteriores.
+        en: Version 2.0 added the Govern function to the previous five.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - NIST-CSF
+  related:
+    - fw.nist-csf
+    - fw.csf-profile
+    - grc.governance
+  sources:
+    - label: AEPD, traducción del informe de ENISA «Ingeniería de la protección de datos»
+        (2022)
+      url: https://www.aepd.es/documento/enisa-ingenieria-de-la-proteccion-de-datos.pdf
+      found:
+        - funciones básicas
+      checked: 2026-11-15
+    - label: Reglamento (UE) 2024/2847 (Reglamento de Ciberresiliencia), texto en español
+        publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81720
+      found:
+        - las funciones básicas de
+      checked: 2026-11-15
+    - label: Microsoft Security, es-ES
+      url: https://www.microsoft.com/es-es/security/business/security-101/what-is-cloud-security
+      found:
+        - identificar, proteger, detectar, responder y recuperar
+      checked: 2026-11-15
+  status: sourced
+
+- id: fw.csf-profile
+  en:
+    term: CSF profile
+    definition: A description of an organisation's current or target cyber security outcomes
+      in terms of the framework; the gap between the two drives the plan.
+  es:
+    verdict: translated
+    forms:
+      - text: perfil
+        article: el
+        kind: noun
+        primary: true
+      - text: perfil actual
+        article: el
+        kind: noun
+        note: The current profile; the target is the perfil objetivo.
+      - text: niveles de implementación
+        article: los
+        kind: noun
+        note: The tiers, from partial to adaptive, that describe how rigorous the practices
+          are.
+    definition: Descripción de los resultados de ciberseguridad actuales o deseados de una
+      organización en términos del marco; la diferencia entre ambos orienta el plan.
+    examples:
+      - es: Comparando el perfil actual con el perfil objetivo sale el plan de acción.
+        en: Comparing the current profile with the target profile produces the action plan.
+  topics:
+    - grc
+    - assessment
+  technology: []
+  frameworks:
+    - NIST-CSF
+  related:
+    - fw.nist-csf
+    - fw.csf-functions
+    - grc.gap-analysis
+    - grc.maturity-model
+  sources: []
+  status: draft
+
+- id: law.cde
+  en:
+    term: cardholder data environment
+    acronym: CDE
+    definition: The people, processes and systems that store, process or transmit card data,
+      plus anything connected to them; it defines the scope of PCI DSS.
+  es:
+    verdict: translated
+    forms:
+      - text: entorno de datos del titular de la tarjeta
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - aws
+      - text: CDE
+        article: el
+        kind: noun
+        headline: true
+      - text: reducción del alcance
+        article: la
+        kind: noun
+        usedBy:
+          - aws
+        note: Scope reduction, usually by segmenting the network or tokenising.
+    say: 'CDE is spelled out: ce-de-e.'
+    definition: Personas, procesos y sistemas que almacenan, procesan o transmiten datos de
+      tarjetas, más todo lo conectado a ellos; delimita el alcance de PCI DSS.
+    examples:
+      - es: Segmentamos la red para sacar los servidores de correo del CDE.
+        en: We segmented the network to take the mail servers out of the CDE.
+  topics:
+    - data
+    - grc
+  technology: []
+  frameworks:
+    - PCI-DSS
+  related:
+    - fw.pci-dss
+    - law.cardholder-data
+    - sec.network-segmentation
+    - sec.tokenization
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/entra/standards/pci-dss-guidance
+      found:
+        - entorno de datos de titulares de tarjetas
+      checked: 2026-11-15
+    - label: AWS, documentación es_es
+      url: https://docs.aws.amazon.com/es_es/config/latest/developerguide/operational-best-practices-for-pci-dss.html
+      found:
+        - entorno de datos del titular de la tarjeta
+      checked: 2026-11-15
+    - label: AWS Well-Architected Framework, es_ES
+      url: https://docs.aws.amazon.com/es_es/wellarchitected/latest/security-pillar/sec_securely_operate_threat_model.html
+      found:
+        - Reducción del alcance
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.pan
+  en:
+    term: primary account number
+    acronym: PAN
+    definition: The payment card number; PCI DSS requires it to be unreadable wherever it
+      is stored. Sensitive authentication data, such as the CVV, may not be stored at all
+      after authorisation.
+  es:
+    verdict: translated
+    forms:
+      - text: número de cuenta principal
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - microsoft
+      - text: PAN
+        article: el
+        kind: noun
+        headline: true
+      - text: número de tarjeta
+        article: el
+        kind: noun
+        usedBy:
+          - official
+        note: What everyone calls it.
+      - text: datos confidenciales de autenticación
+        article: los
+        kind: noun
+        usedBy:
+          - official
+        note: 'Sensitive authentication data, SAD: the CVV, PIN and track data.'
+    say: PAN is said as a word, 'pan'.
+    definition: Número de la tarjeta de pago; PCI DSS exige que sea ilegible allí donde se
+      almacene.
+    examples:
+      - es: 'El PAN se guarda truncado: solo se ven los cuatro últimos dígitos.'
+        en: 'The PAN is stored truncated: only the last four digits are visible.'
+  topics:
+    - data
+  technology: []
+  frameworks:
+    - PCI-DSS
+  related:
+    - law.cardholder-data
+    - sec.tokenization
+    - sec.data-masking
+    - law.cde
+  sources:
+    - label: 'INCIBE, blog: Si manejas información de tarjetas bancarias, este artículo te
+        interesa'
+      url: https://www.incibe.es/empresas/blog/si-manejas-informacion-tarjetas-bancarias-este-articulo-te-interesa
+      found:
+        - Número de cuenta principal
+        - Datos confidenciales de autenticación
+      checked: 2026-11-15
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/entra/standards/pci-dss-guidance
+      found:
+        - Número de cuenta principal
+      checked: 2026-11-15
+    - label: AEPD, Gestión del riesgo y evaluación de impacto en tratamientos de datos personales
+      url: https://www.aepd.es/guias/gestion-riesgo-y-evaluacion-impacto-en-tratamientos-datos-personales.pdf
+      found:
+        - Número de tarjeta
+      checked: 2026-11-15
+  status: sourced
+
+- id: grc.qsa
+  en:
+    term: Qualified Security Assessor
+    acronym: QSA
+    definition: A person or firm approved by the PCI Security Standards Council to assess
+      compliance with PCI DSS and sign the report on compliance.
+  es:
+    verdict: english-kept
+    forms:
+      - text: QSA
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+      - text: asesor de seguridad cualificado
+        article: el
+        kind: noun
+        register: formal
+        usedBy:
+          - google
+      - text: informe de cumplimiento
+        article: el
+        kind: noun
+        usedBy:
+          - official
+        note: The report on compliance, ROC. The summary declaration is the AOC, declaración
+          de cumplimiento.
+      - text: cuestionario de autoevaluación
+        article: el
+        kind: noun
+        note: The self-assessment questionnaire, SAQ, for smaller merchants.
+    say: 'QSA is spelled out: cu-ese-a.'
+    definition: Persona o empresa autorizada por el PCI Security Standards Council para evaluar
+      el cumplimiento de PCI DSS y firmar el informe de cumplimiento.
+    examples:
+      - es: El QSA revisó la segmentación de red durante la evaluación anual.
+        en: The QSA reviewed the network segmentation during the annual assessment.
+  topics:
+    - assessment
+    - grc
+  technology: []
+  frameworks:
+    - PCI-DSS
+  related:
+    - fw.pci-dss
+    - grc.auditor
+    - grc.attestation
+    - grc.audit-report
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/entra/standards/pci-dss-guidance
+      found:
+        - QSA
+      checked: 2026-11-15
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/security/compliance/pci-dss?hl=es
+      found:
+        - asesor de seguridad cualificado
+      checked: 2026-11-15
+    - label: Real Decreto 738/2015, artículo 4
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2015-8646
+      found:
+        - informe de cumplimiento
+      checked: 2026-11-15
+  status: sourced
+
+- id: fw.ai-act
+  en:
+    term: AI Act
+    definition: 'The EU regulation that sets rules for artificial intelligence according to
+      risk: some uses are banned, high-risk systems carry strict duties, and others need transparency.'
+  es:
+    verdict: translated
+    forms:
+      - text: Reglamento de Inteligencia Artificial
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+      - text: RIA
+        article: el
+        kind: noun
+        headline: true
+        note: The Spanish acronym, used by the authorities.
+      - text: Ley de IA
+        article: la
+        kind: noun
+        usedBy:
+          - microsoft
+        note: The press's name for it; AI Act is also used as it is.
+    definition: 'Reglamento de la UE que regula la inteligencia artificial según el riesgo:
+      prohíbe algunos usos, impone obligaciones estrictas a los sistemas de alto riesgo y
+      exige transparencia a otros.'
+    examples:
+      - es: El sistema de selección de personal es de alto riesgo según el Reglamento de Inteligencia
+          Artificial.
+        en: The recruitment system is high-risk under the AI Act.
+  topics:
+    - grc
+  technology:
+    - ai-ml
+  frameworks:
+    - AI-ACT
+  related:
+    - ai.high-risk
+    - ai.provider-deployer
+    - ai.gpai
+    - ai.artificial-intelligence
+  sources:
+    - label: AEPD, Orientaciones sobre IA agéntica
+      url: https://www.aepd.es/guias/orientaciones-ia-agentica.pdf
+      found:
+        - Reglamento de Inteligencia Artificial
+      checked: 2026-11-15
+    - label: Reglamento (UE) 2024/2847 (Reglamento de Ciberresiliencia), texto en español
+        publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81720
+      found:
+        - Reglamento (UE) 2024/1689
+      checked: 2026-11-15
+    - label: Microsoft, es-ES
+      url: https://www.microsoft.com/es-es/ai/responsible-ai
+      found:
+        - Ley de IA
+      checked: 2026-11-15
+  status: sourced
+
+- id: ai.high-risk
+  en:
+    term: high-risk AI system
+    definition: Under the AI Act, an AI system used in a sensitive area such as employment,
+      credit, education or critical infrastructure, which must meet requirements before it
+      is placed on the market.
+  es:
+    verdict: translated
+    forms:
+      - text: sistema de IA de alto riesgo
+        article: el
+        kind: noun
+        primary: true
+        plural: los sistemas de IA de alto riesgo
+        usedBy:
+          - eu
+      - text: prácticas de IA prohibidas
+        article: las
+        kind: noun
+        usedBy:
+          - eu
+        note: 'Prohibited AI practices, the tier above: banned outright.'
+      - text: riesgo sistémico
+        article: el
+        kind: noun
+        usedBy:
+          - eu
+        note: Systemic risk, the test for the most capable general-purpose models.
+    definition: En el Reglamento de IA, sistema usado en un ámbito sensible como el empleo,
+      el crédito, la educación o las infraestructuras críticas, que debe cumplir requisitos
+      antes de comercializarse.
+    examples:
+      - es: Un sistema de IA de alto riesgo necesita gestión de riesgos, registros y supervisión
+          humana.
+        en: A high-risk AI system needs risk management, logging and human oversight.
+  topics:
+    - grc
+  technology:
+    - ai-ml
+  frameworks:
+    - AI-ACT
+  related:
+    - fw.ai-act
+    - ai.human-oversight
+    - ai.conformity-assessment
+    - grc.risk
+  sources:
+    - label: Reglamento (UE) 2024/1689 de Inteligencia Artificial, en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81079
+      found:
+        - sistemas de IA de alto riesgo
+        - las prácticas prohibidas por
+        - con riesgo sistémico deben
+      checked: 2026-11-15
+  status: sourced
+
+- id: ai.provider-deployer
+  en:
+    term: provider and deployer
+    definition: 'The AI Act''s two main roles: the provider develops an AI system or puts
+      it on the market; the deployer uses it under its own authority.'
+  es:
+    verdict: translated
+    forms:
+      - text: proveedor
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - eu
+      - text: responsable del despliegue
+        article: el
+        kind: noun
+        plural: los responsables del despliegue
+        usedBy:
+          - eu
+        note: The deployer.
+    definition: 'Los dos papeles principales del Reglamento de IA: el proveedor desarrolla
+      un sistema de IA o lo comercializa; el responsable del despliegue lo utiliza bajo su
+      propia autoridad.'
+    examples:
+      - es: Si usamos el modelo de un tercero, somos responsables del despliegue, no proveedores.
+        en: If we use a third party's model, we are the deployer, not the provider.
+    watchOut: Responsable del despliegue is the deployer. It has nothing to do with the GDPR's
+      responsable del tratamiento, though the same company may be both.
+  topics:
+    - grc
+  technology:
+    - ai-ml
+  frameworks:
+    - AI-ACT
+  related:
+    - fw.ai-act
+    - law.data-controller
+    - cloud.service-provider
+  sources:
+    - label: Reglamento (UE) 2024/1689 de Inteligencia Artificial, en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81079
+      found:
+        - proveedores de modelos de IA
+        - responsables del despliegue
+      checked: 2026-11-15
+  status: sourced
+
+- id: ai.gpai
+  en:
+    term: general-purpose AI model
+    acronym: GPAI
+    definition: An AI model, such as a large language model, that can perform a wide range
+      of tasks and be built into many systems; the AI Act gives its providers their own obligations.
+  es:
+    verdict: translated
+    forms:
+      - text: modelo de IA de uso general
+        article: el
+        kind: noun
+        primary: true
+        plural: los modelos de IA de uso general
+        usedBy:
+          - eu
+      - text: IA generativa
+        article: la
+        kind: noun
+        usedBy:
+          - microsoft
+        note: Generative AI, the everyday term for what these models do.
+    definition: Modelo de IA, como un gran modelo de lenguaje, capaz de realizar tareas muy
+      diversas e integrarse en muchos sistemas; el Reglamento de IA impone obligaciones propias
+      a sus proveedores.
+    examples:
+      - es: Los proveedores de modelos de IA de uso general deben documentar los datos de
+          entrenamiento.
+        en: Providers of general-purpose AI models must document their training data.
+  topics:
+    - grc
+  technology:
+    - ai-ml
+  frameworks:
+    - AI-ACT
+  related:
+    - ai.llm
+    - ai.model
+    - fw.ai-act
+    - ai.training-data
+  sources:
+    - label: Reglamento (UE) 2024/1689 de Inteligencia Artificial, en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81079
+      found:
+        - modelos de IA de uso general
+      checked: 2026-11-15
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/machine-learning/overview-what-is-azure-machine-learning
+      found:
+        - IA generativa Azure
+      checked: 2026-11-15
+  status: sourced
+
+- id: ai.human-oversight
+  en:
+    term: human oversight
+    definition: The AI Act's requirement that a high-risk system can be effectively monitored,
+      overridden or stopped by a person.
+  es:
+    verdict: translated
+    forms:
+      - text: supervisión humana
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - official
+      - text: intervención humana
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: Human intervention, the GDPR's phrase for automated decisions.
+    definition: Requisito del Reglamento de IA de que una persona pueda vigilar, corregir
+      o detener eficazmente un sistema de alto riesgo.
+    examples:
+      - es: La supervisión humana exige que alguien pueda anular la decisión del sistema.
+        en: Human oversight requires that someone can override the system's decision.
+  topics:
+    - grc
+    - human
+  technology:
+    - ai-ml
+  frameworks:
+    - AI-ACT
+  related:
+    - ai.high-risk
+    - law.profiling
+    - ai.ethics
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/well-architected/ai/responsible-ai
+      found:
+        - requieran supervisión humana para
+      checked: 2026-11-15
+    - label: AEPD, Orientaciones sobre IA agéntica
+      url: https://www.aepd.es/guias/orientaciones-ia-agentica.pdf
+      found:
+        - supervisión humana
+      checked: 2026-11-15
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - requerir intervención humana para
+      checked: 2026-11-15
+  status: sourced
+
+- id: ai.conformity-assessment
+  en:
+    term: conformity assessment
+    definition: The process of showing that a product, here a high-risk AI system, meets the
+      legal requirements before it is sold; it ends in the CE marking.
+  es:
+    verdict: translated
+    forms:
+      - text: evaluación de la conformidad
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+      - text: marcado CE
+        article: el
+        kind: noun
+        usedBy:
+          - eu
+        note: The CE marking.
+      - text: organismo notificado
+        article: el
+        kind: noun
+        usedBy:
+          - eu
+        note: A notified body, which carries it out where a third party is needed.
+    definition: Proceso por el que se demuestra que un producto, aquí un sistema de IA de
+      alto riesgo, cumple los requisitos legales antes de venderse.
+    examples:
+      - es: El proveedor debe completar la evaluación de la conformidad antes de comercializar
+          el sistema.
+        en: The provider must complete the conformity assessment before placing the system
+          on the market.
+  topics:
+    - assessment
+    - grc
+  technology: []
+  frameworks:
+    - AI-ACT
+    - CRA
+  related:
+    - ai.high-risk
+    - grc.certification
+    - fw.common-criteria
+  sources:
+    - label: Ley 6/2020, reguladora de determinados aspectos de los servicios electrónicos
+        de confianza
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2020-14046
+      found:
+        - evaluación de la conformidad
+      checked: 2026-11-15
+    - label: Reglamento (UE) 2024/2847 (Reglamento de Ciberresiliencia), texto en español
+        publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81720
+      found:
+        - evaluación de la conformidad
+        - el marcado CE en
+      checked: 2026-11-15
+    - label: Reglamento (UE) 2024/1689 de Inteligencia Artificial, en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81079
+      found:
+        - organismo notificado
+      checked: 2026-11-15
+  status: sourced
+
+- id: ai.sandbox
+  en:
+    term: AI regulatory sandbox
+    definition: A controlled environment set up by an authority in which companies can develop
+      and test AI systems under supervision before release. Spain ran the first.
+  es:
+    verdict: translated
+    forms:
+      - text: espacio controlado de pruebas
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - eu
+      - text: sandbox regulatorio
+        article: el
+        kind: noun
+        headline: true
+      - text: AESIA
+        article: la
+        kind: noun
+        note: The Agencia Española de Supervisión de la Inteligencia Artificial, Spain's AI
+          supervisor, based in A Coruña.
+    definition: Entorno controlado, creado por una autoridad, en el que las empresas pueden
+      desarrollar y probar sistemas de IA bajo supervisión antes de lanzarlos.
+    examples:
+      - es: La empresa probó su sistema en el sandbox regulatorio español.
+        en: The company tested its system in the Spanish regulatory sandbox.
+  topics:
+    - grc
+  technology:
+    - ai-ml
+  frameworks:
+    - AI-ACT
+  related:
+    - sec.sandbox
+    - fw.ai-act
+    - law.competent-authority
+  sources:
+    - label: Reglamento (UE) 2024/1689 de Inteligencia Artificial, en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81079
+      found:
+        - espacio controlado de pruebas
+      checked: 2026-11-15
+  status: sourced
+
+- id: ai.fria
+  en:
+    term: fundamental rights impact assessment
+    acronym: FRIA
+    definition: The assessment some deployers of high-risk AI systems must make of how the
+      system affects people's fundamental rights.
+  es:
+    verdict: translated
+    forms:
+      - text: evaluación de impacto relativa a los derechos fundamentales
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - eu
+      - text: derechos fundamentales
+        article: los
+        kind: noun
+        usedBy:
+          - official
+    definition: Evaluación que determinados responsables del despliegue de sistemas de IA
+      de alto riesgo deben hacer sobre cómo afecta el sistema a los derechos fundamentales
+      de las personas.
+    examples:
+      - es: La evaluación de impacto relativa a los derechos fundamentales puede apoyarse
+          en la EIPD ya hecha.
+        en: The fundamental rights impact assessment can build on the DPIA already done.
+  topics:
+    - assessment
+    - grc
+  technology:
+    - ai-ml
+  frameworks:
+    - AI-ACT
+  related:
+    - law.dpia
+    - ai.high-risk
+    - ai.provider-deployer
+  sources:
+    - label: Reglamento (UE) 2024/1689 de Inteligencia Artificial, en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81079
+      found:
+        - evaluación de impacto relativa a los derechos fundamentales
+      checked: 2026-11-15
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - los derechos fundamentales de
+      checked: 2026-11-15
+  status: sourced
+
+- id: fw.eidas
+  en:
+    term: eIDAS
+    definition: The EU regulation on electronic identification and trust services, which makes
+      electronic signatures, seals and identities from one member state valid in the others.
+  es:
+    verdict: english-kept
+    forms:
+      - text: eIDAS
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - engineers
+      - text: Reglamento eIDAS
+        article: el
+        kind: noun
+        usedBy:
+          - official
+      - text: eIDAS 2
+        kind: noun
+        usedBy:
+          - engineers
+        note: The 2024 revision, which adds the European digital identity wallet.
+    say: Said 'e-idas'.
+    definition: Reglamento de la UE sobre identificación electrónica y servicios de confianza,
+      que da validez en todos los Estados miembros a las firmas, los sellos y las identidades
+      electrónicas de cualquiera de ellos.
+    examples:
+      - es: La firma cumple eIDAS, así que es válida en toda la Unión.
+        en: The signature complies with eIDAS, so it is valid across the Union.
+  topics:
+    - grc
+    - authn
+  technology: []
+  frameworks:
+    - EIDAS
+  related:
+    - law.electronic-signature
+    - law.trust-service-provider
+    - law.eudi-wallet
+    - sec.digital-signature
+  sources:
+    - label: Esquema Nacional de Seguridad (RD 311/2022)
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - Reglamento eIDAS
+      checked: 2026-11-15
+    - label: Telefónica Tech, blog
+      url: https://telefonicatech.com/blog/la-revolucion-de-la-identidad-digital-de-la-centralizacion-a-la-soberania-de-tus-datos
+      found:
+        - Reglamento eIDAS
+        - Reglamento eIDAS 2
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.electronic-signature
+  en:
+    term: electronic signature
+    definition: 'Data in electronic form used to sign. eIDAS defines three levels: simple,
+      advanced and qualified, the last having the legal effect of a handwritten signature.'
+  es:
+    verdict: translated
+    forms:
+      - text: firma electrónica
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: firma electrónica cualificada
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: A qualified electronic signature. The level below is avanzada.
+      - text: sello electrónico
+        article: el
+        kind: noun
+        usedBy:
+          - official
+        note: 'An electronic seal: the same for an organisation.'
+      - text: sello de tiempo
+        article: el
+        kind: noun
+        usedBy:
+          - official
+        note: A time stamp.
+    definition: 'Datos en formato electrónico que se usan para firmar. eIDAS distingue tres
+      niveles: simple, avanzada y cualificada, esta última con el mismo efecto que la manuscrita.'
+    examples:
+      - es: El contrato exige firma electrónica cualificada.
+        en: The contract requires a qualified electronic signature.
+    watchOut: Firma electrónica is the legal concept; firma digital is the cryptographic technique.
+      In Spain people use the first far more.
+  topics:
+    - authn
+    - crypto
+    - grc
+  technology: []
+  frameworks:
+    - EIDAS
+  related:
+    - sec.digital-signature
+    - law.qualified-certificate
+    - sec.non-repudiation
+    - fw.eidas
+  sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - Firma electrónica
+      checked: 2026-11-15
+    - label: Esquema Nacional de Interoperabilidad (RD 4/2010)
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2010-1331
+      found:
+        - firma electrónica
+      checked: 2026-11-15
+    - label: Esquema Nacional de Seguridad (RD 311/2022)
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - Firma electrónica cualificada
+        - Sellos de tiempo
+      checked: 2026-11-15
+    - label: Ley 6/2020, reguladora de determinados aspectos de los servicios electrónicos
+        de confianza
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2020-14046
+      found:
+        - el sello electrónico de
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.qualified-certificate
+  en:
+    term: qualified certificate
+    definition: A certificate issued by a qualified trust service provider under eIDAS, on
+      which qualified signatures and seals rest.
+  es:
+    verdict: translated
+    forms:
+      - text: certificado cualificado
+        article: el
+        kind: noun
+        primary: true
+        plural: los certificados cualificados
+        usedBy:
+          - official
+          - eu
+      - text: certificado electrónico
+        article: el
+        kind: noun
+        usedBy:
+          - official
+        note: What people call the personal certificate used with the administration, typically
+          the FNMT's.
+      - text: DNIe
+        article: el
+        kind: noun
+        usedBy:
+          - official
+        note: The electronic national identity card, which carries one.
+    definition: Certificado emitido por un prestador cualificado de servicios de confianza
+      conforme a eIDAS, en el que se apoyan las firmas y los sellos cualificados.
+    examples:
+      - es: Para el trámite necesitas un certificado cualificado, como el de la FNMT.
+        en: For the procedure you need a qualified certificate, such as the FNMT's.
+  topics:
+    - authn
+    - crypto
+  technology: []
+  frameworks:
+    - EIDAS
+  related:
+    - sec.digital-certificate
+    - sec.certificate-authority
+    - law.electronic-signature
+    - law.trust-service-provider
+  sources:
+    - label: Ley 6/2020, reguladora de determinados aspectos de los servicios electrónicos
+        de confianza
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2020-14046
+      found:
+        - para certificados cualificados tales
+      checked: 2026-11-15
+    - label: Reglamento (UE) n.º 910/2014 (eIDAS), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2014-81822
+      found:
+        - de certificados cualificados
+      checked: 2026-11-15
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - un certificado electrónico
+      checked: 2026-11-15
+    - label: 'INCIBE, agenda: seminario sobre los perfiles de protección del DNIe'
+      url: https://www.incibe.es/eventos/agenda/seminario-sobre-los-perfiles-de-proteccion-del-dnie
+      found:
+        - del DNIe
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.trust-service-provider
+  en:
+    term: trust service provider
+    definition: An organisation that provides electronic signatures, seals, time stamps or
+      certificates. Qualified ones are supervised and listed nationally.
+  es:
+    verdict: translated
+    forms:
+      - text: prestador de servicios de confianza
+        article: el
+        kind: noun
+        primary: true
+        plural: los prestadores de servicios de confianza
+        usedBy:
+          - official
+          - eu
+      - text: prestador cualificado
+        article: el
+        kind: noun
+        usedBy:
+          - official
+      - text: servicios de confianza
+        article: los
+        kind: noun
+        usedBy:
+          - official
+    definition: Organización que presta servicios de firma, sello, sello de tiempo o certificados
+      electrónicos. Los cualificados están supervisados y figuran en una lista nacional.
+    examples:
+      - es: La FNMT es un prestador cualificado de servicios de confianza.
+        en: The FNMT is a qualified trust service provider.
+  topics:
+    - authn
+    - grc
+  technology: []
+  frameworks:
+    - EIDAS
+  related:
+    - sec.certificate-authority
+    - law.qualified-certificate
+    - sec.pki
+  sources:
+    - label: Ley 6/2020, reguladora de determinados aspectos de los servicios electrónicos
+        de confianza
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2020-14046
+      found:
+        - prestadores de servicios de confianza
+        - los prestadores cualificados
+        - servicios de confianza
+      checked: 2026-11-15
+    - label: Reglamento (UE) n.º 910/2014 (eIDAS), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2014-81822
+      found:
+        - prestadores de servicios de confianza
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.electronic-identification
+  en:
+    term: electronic identification
+    definition: Proving who you are online with a recognised means of identification. eIDAS
+      grades these as low, substantial or high assurance.
+  es:
+    verdict: translated
+    forms:
+      - text: identificación electrónica
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+      - text: Cl@ve
+        kind: noun
+        usedBy:
+          - official
+        note: Spain's public-sector sign-in system, said 'clave'.
+      - text: nivel de seguridad sustancial
+        article: el
+        kind: noun
+        usedBy:
+          - official
+        note: Substantial assurance level; the others are bajo and alto.
+    definition: Demostración de la identidad en línea con un medio de identificación reconocido.
+      eIDAS los clasifica en nivel de seguridad bajo, sustancial o alto.
+    examples:
+      - es: La sede electrónica admite identificación electrónica con Cl@ve o certificado.
+        en: The e-government portal accepts electronic identification with Cl@ve or a certificate.
+  topics:
+    - authn
+    - iam
+  technology: []
+  frameworks:
+    - EIDAS
+  related:
+    - sec.identification
+    - sec.identity-proofing
+    - law.eudi-wallet
+    - sec.federated-identity
+  sources:
+    - label: Ley 6/2020, reguladora de determinados aspectos de los servicios electrónicos
+        de confianza
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2020-14046
+      found:
+        - la identificación electrónica
+      checked: 2026-11-15
+    - label: Reglamento (UE) n.º 910/2014 (eIDAS), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2014-81822
+      found:
+        - la identificación electrónica
+      checked: 2026-11-15
+    - label: AEPD, Guía para la notificación de brechas de datos personales
+      url: https://www.aepd.es/guias/guia-brechas-seguridad.pdf
+      found:
+        - sistemas Cl@ve permanente
+      checked: 2026-11-15
+    - label: Ley Orgánica 3/2018 (LOPDGDD)
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673
+      found:
+        - identidad sustancial con
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.eudi-wallet
+  en:
+    term: European Digital Identity Wallet
+    definition: The mobile app each EU state must offer under eIDAS 2, holding a person's
+      identity and verified attributes such as a driving licence or diploma.
+  es:
+    verdict: translated
+    forms:
+      - text: cartera europea de identidad digital
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - engineers
+      - text: cartera digital
+        article: la
+        kind: noun
+        usedBy:
+          - engineers
+      - text: EUDI Wallet
+        article: la
+        kind: noun
+        usedBy:
+          - engineers
+        note: The English name, common in technical circles.
+    definition: Aplicación móvil que cada Estado de la UE debe ofrecer según eIDAS 2, con
+      la identidad de la persona y atributos verificados como el permiso de conducir o un
+      título.
+    examples:
+      - es: Con la cartera europea de identidad digital podrás acreditar tu edad sin enseñar
+          el DNI.
+        en: With the European Digital Identity Wallet you will be able to prove your age without
+          showing your identity card.
+  topics:
+    - authn
+    - iam
+  technology: []
+  frameworks:
+    - EIDAS
+  related:
+    - fw.eidas
+    - law.electronic-identification
+    - sec.passkey
+  sources:
+    - label: Telefónica Tech, blog
+      url: https://telefonicatech.com/blog/la-revolucion-de-la-identidad-digital-de-la-centralizacion-a-la-soberania-de-tus-datos
+      found:
+        - Cartera Europea de Identidad Digital
+        - una cartera digital
+        - EUDI Wallet
+      checked: 2026-11-15
+  status: sourced
+
+- id: fw.magerit
+  en:
+    term: MAGERIT
+    definition: The Spanish public administration's risk analysis and management methodology,
+      the usual way of meeting the ENS's risk requirement.
+  es:
+    verdict: translated
+    forms:
+      - text: MAGERIT
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: Metodología de Análisis y Gestión de Riesgos de los Sistemas de Información
+        article: la
+        kind: noun
+        register: formal
+        usedBy:
+          - official
+      - text: PILAR
+        kind: noun
+        usedBy:
+          - official
+        note: The CCN's tool that implements it.
+    say: Said as a word, 'majerit'.
+    definition: Metodología de análisis y gestión de riesgos de las Administraciones públicas
+      españolas, la forma habitual de cumplir el requisito de riesgos del ENS.
+    examples:
+      - es: El análisis de riesgos se hizo con MAGERIT y la herramienta PILAR.
+        en: The risk analysis was done with MAGERIT and the PILAR tool.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - MAGERIT
+    - ENS
+  related:
+    - ens.gestion-basada-en-riesgos
+    - sec.risk-assessment
+    - grc.asset-valuation
+    - fw.ens
+  sources:
+    - label: 'INCIBE, Gestión de riesgos: una guía de aproximación para el empresario'
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_ciberseguridad_gestion_riesgos_metad.pdf
+      found:
+        - MAGERIT
+        - Metodología de Análisis y Gestión de Riesgos de los Sistemas de Información
+      checked: 2026-11-15
+    - label: AEPD, resolución PS/00176/2022
+      url: https://www.aepd.es/documento/ps-00176-2022.pdf
+      found:
+        - herramienta PILAR del
+      checked: 2026-11-15
+  status: sourced
+
+- id: grc.asset-valuation
+  en:
+    term: asset valuation
+    definition: In MAGERIT, rating what each asset is worth to the organisation in each security
+      dimension; the value flows down to the assets it depends on.
+  es:
+    verdict: translated
+    forms:
+      - text: valoración de activos
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: dependencias entre activos
+        article: las
+        kind: noun
+        note: Dependencies between assets, through which value is inherited.
+      - text: activos esenciales
+        article: los
+        kind: noun
+        usedBy:
+          - official
+        note: 'Essential assets: the information and services everything else supports.'
+    definition: En MAGERIT, estimación del valor de cada activo para la organización en cada
+      dimensión de seguridad; el valor se traslada a los activos de los que depende.
+    examples:
+      - es: La valoración de activos empieza por la información y los servicios esenciales.
+        en: Asset valuation starts with the essential information and services.
+  topics:
+    - grc
+    - asset
+  technology: []
+  frameworks:
+    - MAGERIT
+  related:
+    - grc.asset
+    - ens.dimensiones-de-seguridad
+    - grc.impact
+    - fw.magerit
+  sources:
+    - label: 'INCIBE, Gestión de riesgos: una guía de aproximación para el empresario'
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_ciberseguridad_gestion_riesgos_metad.pdf
+      found:
+        - valoración de los activos
+      checked: 2026-11-15
+    - label: INCIBE, Taxonomía de soluciones de ciberseguridad
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/taxonomia_ciberseguridad.pdf
+      found:
+        - los activos esenciales para
+      checked: 2026-11-15
+  status: sourced
+
+- id: grc.degradation
+  en:
+    term: degradation
+    definition: In MAGERIT, the share of an asset's value that a threat would destroy if it
+      materialised; with the asset's value it gives the impact.
+  es:
+    verdict: translated
+    forms:
+      - text: degradación
+        article: la
+        kind: noun
+        primary: true
+      - text: impacto acumulado
+        article: el
+        kind: noun
+        usedBy:
+          - official
+        note: Accumulated impact, counting the value of dependent assets. Repercutido is the
+          impact passed up to the assets above.
+    definition: En MAGERIT, parte del valor de un activo que una amenaza destruiría si se
+      materializara; junto con el valor del activo determina el impacto.
+    examples:
+      - es: Con una degradación del 100 %, el impacto es igual al valor del activo.
+        en: With degradation of 100%, the impact equals the value of the asset.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - MAGERIT
+  related:
+    - grc.impact
+    - grc.likelihood
+    - grc.inherent-risk
+    - sec.threat
+  sources:
+    - label: AEPD, Gestión del riesgo y evaluación de impacto en tratamientos de datos personales
+      url: https://www.aepd.es/guias/gestion-riesgo-y-evaluacion-impacto-en-tratamientos-datos-personales.pdf
+      found:
+        - de impacto acumulado dando
+      checked: 2026-11-15
+  status: draft
+
+- id: fw.uk-gdpr
+  en:
+    term: UK GDPR
+    definition: The United Kingdom's version of the GDPR, kept in UK law after Brexit and
+      read alongside the Data Protection Act 2018.
+  es:
+    verdict: translated
+    forms:
+      - text: RGPD del Reino Unido
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - aws
+      - text: UK GDPR
+        article: el
+        kind: noun
+        headline: true
+      - text: Ley de Protección de Datos de 2018
+        article: la
+        kind: noun
+        note: The Data Protection Act 2018.
+    definition: Versión británica del RGPD, mantenida en el Derecho del Reino Unido tras el
+      Brexit y aplicada junto con la Ley de Protección de Datos de 2018.
+    examples:
+      - es: Las transferencias al Reino Unido se apoyan en la decisión de adecuación, no en
+          el RGPD del Reino Unido.
+        en: Transfers to the United Kingdom rely on the adequacy decision, not on the UK GDPR.
+  topics:
+    - grc
+    - data
+  technology: []
+  frameworks:
+    - UK-GDPR
+  related:
+    - fw.gdpr
+    - law.ico
+    - law.scc
+    - law.international-transfer
+  sources:
+    - label: AWS, páginas en español
+      url: https://aws.amazon.com/es/compliance/gdpr-center/
+      found:
+        - RGPD del Reino Unido
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.ico
+  en:
+    term: Information Commissioner's Office
+    acronym: ICO
+    definition: The United Kingdom's data protection authority.
+  es:
+    verdict: english-kept
+    forms:
+      - text: ICO
+        article: la
+        kind: noun
+        primary: true
+        note: Feminine, as an oficina or autoridad.
+      - text: autoridad británica de protección de datos
+        article: la
+        kind: noun
+    say: Spelled out, i-ce-o, or said as a word.
+    definition: Autoridad de protección de datos del Reino Unido.
+    examples:
+      - es: La filial inglesa notificó la brecha a la ICO.
+        en: The English subsidiary notified the breach to the ICO.
+  topics:
+    - grc
+    - data
+  technology: []
+  frameworks:
+    - UK-GDPR
+  related:
+    - law.aepd
+    - law.supervisory-authority
+    - fw.uk-gdpr
+  sources: []
+  status: draft
+
+- id: fw.cyber-essentials
+  en:
+    term: Cyber Essentials
+    definition: The UK government-backed certification of five basic technical controls, required
+      for many public-sector contracts. Cyber Essentials Plus adds an independent test.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Cyber Essentials
+        kind: noun
+        primary: true
+        usedBy:
+          - aws
+      - text: certificación Cyber Essentials
+        article: la
+        kind: noun
+    definition: Certificación respaldada por el Gobierno británico sobre cinco controles técnicos
+      básicos, exigida en muchos contratos públicos.
+    examples:
+      - es: El cliente británico nos exige la certificación Cyber Essentials Plus.
+        en: The British customer requires us to hold Cyber Essentials Plus certification.
+    watchOut: The nearest Spanish equivalent in purpose is the ENS at the basic category,
+      but the two are not interchangeable.
+  topics:
+    - grc
+    - hardening
+  technology: []
+  frameworks:
+    - CYBER-ESSENTIALS
+  related:
+    - grc.certification
+    - sec.security-baseline
+    - law.cyber-hygiene
+    - law.ncsc
+  sources:
+    - label: AWS, páginas en español
+      url: https://aws.amazon.com/es/compliance/programs/
+      found:
+        - TISAX Cyber Essentials Plus
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.ncsc
+  en:
+    term: National Cyber Security Centre
+    acronym: NCSC
+    definition: The UK's national technical authority for cyber security, part of GCHQ; it
+      publishes guidance, the Cyber Assessment Framework and the cloud security principles.
+  es:
+    verdict: english-kept
+    forms:
+      - text: NCSC
+        article: el
+        kind: noun
+        primary: true
+      - text: Centro Nacional de Ciberseguridad del Reino Unido
+        article: el
+        kind: noun
+        register: formal
+        usedBy:
+          - oracle
+    say: 'Spelled out: ene-ce-ese-ce.'
+    definition: Autoridad técnica nacional de ciberseguridad del Reino Unido, parte del GCHQ;
+      publica guías, el Cyber Assessment Framework y los principios de seguridad en la nube.
+    examples:
+      - es: El NCSC británico cumple un papel parecido al del CCN e INCIBE en España.
+        en: The British NCSC plays a role similar to that of the CCN and INCIBE in Spain.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - NCSC-CAF
+    - NCSC-CLOUD
+  related:
+    - ens.ccn
+    - law.csirt
+    - fw.cyber-essentials
+  sources:
+    - label: Oracle España
+      url: https://www.oracle.com/es/security/cloud-security/
+      found:
+        - Centro Nacional de Ciberseguridad del Reino Unido
+      checked: 2026-11-15
+  status: draft
+
+- id: fw.ncsc-caf
+  en:
+    term: Cyber Assessment Framework
+    acronym: CAF
+    definition: The NCSC's outcome-based framework for assessing the cyber resilience of essential
+      services, used by UK regulators under the NIS Regulations.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Cyber Assessment Framework
+        article: el
+        kind: noun
+        primary: true
+      - text: CAF
+        article: el
+        kind: noun
+        headline: true
+      - text: marco de evaluación de la ciberseguridad
+        article: el
+        kind: noun
+        note: A descriptive translation.
+    say: CAF is said as a word, 'caf'.
+    definition: Marco del NCSC, basado en resultados, para evaluar la ciberresiliencia de
+      los servicios esenciales; lo usan los reguladores británicos.
+    examples:
+      - es: El regulador británico evalúa a la eléctrica con el Cyber Assessment Framework.
+        en: The British regulator assesses the utility with the Cyber Assessment Framework.
+    watchOut: In Azure, CAF means the Cloud Adoption Framework, which is unrelated.
+  topics:
+    - grc
+    - assessment
+  technology: []
+  frameworks:
+    - NCSC-CAF
+    - UK-NIS
+  related:
+    - law.ncsc
+    - fw.nis2
+    - law.essential-entity
+  sources: []
+  status: draft

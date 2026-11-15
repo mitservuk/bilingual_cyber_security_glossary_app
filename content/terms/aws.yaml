@@ -568,6 +568,7 @@
     - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 2 }
     - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: KCSA, outline: "current", domain: 1 }
   related:
     - tech.kubernetes
     - azure.aks
