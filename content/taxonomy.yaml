@@ -151,8 +151,8 @@ frameworks:
   - { id: MAGERIT, name: "MAGERIT", summary: "The public sector's risk analysis and management methodology", region: es }
   - { id: CCN-STIC, name: "CCN-STIC guides", summary: "Security guidance from the national cryptology centre", region: es }
   - { id: GDPR, name: "GDPR", fullName: "General Data Protection Regulation", summary: "Data protection across the EU. RGPD in Spanish", region: eu, entry: fw.gdpr }
-  - { id: NIS2, name: "NIS2", summary: "Security of network and information systems", region: eu }
-  - { id: DORA, name: "DORA", fullName: "Digital Operational Resilience Act", summary: "Digital operational resilience in financial services", region: eu }
+  - { id: NIS2, name: "NIS2", summary: "Security of network and information systems", region: eu, entry: fw.nis2 }
+  - { id: DORA, name: "DORA", fullName: "Digital Operational Resilience Act", summary: "Digital operational resilience in financial services", region: eu, entry: fw.dora }
   - { id: CRA, name: "Cyber Resilience Act", summary: "Security of products with digital elements", region: eu }
   - { id: AI-ACT, name: "AI Act", summary: "Regulation of artificial intelligence", region: eu }
   - { id: DATA-ACT, name: "Data Act", summary: "Access to data and switching between data services", region: eu }

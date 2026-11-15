@@ -38,7 +38,7 @@ Write `drafts/<name>.yaml` (the folder is not committed). A draft is an entry
 as described in `README.md`, without `sources`, `status` or `usedBy`.
 
 - Ids take the prefix for their kind: `sec.`, `cloud.`, `grc.`, `law.`, `fw.`,
-  `tech.`, `ai.`, `azure.`, `gcp.`, `ens.`. Add a prefix for a new platform.
+  `tech.`, `ai.`, `azure.`, `gcp.`, `aws.`, `ens.`. Add a prefix for a new platform.
 - A Spanish concept with no real English name gets `headword: es`.
 - Give the form people in Spain actually use as `primary`, then the
   alternatives: the vendor's translation, the English word if engineers keep
