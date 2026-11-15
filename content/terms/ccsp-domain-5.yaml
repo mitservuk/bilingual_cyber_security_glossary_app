@@ -108,6 +108,14 @@
     - cert: CISSP
       outline: 2027-04
       domain: 3
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 1 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 2 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 1 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related:
     - cloud.virtual-machine
     - cloud.hypervisor
@@ -168,6 +176,14 @@
     - cert: CISSP
       outline: 2027-04
       domain: 3
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 1 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 2 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 1 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related:
     - cloud.guest-os
     - cloud.hypervisor
@@ -229,6 +245,14 @@
     - cert: CISSP
       outline: 2027-04
       domain: 3
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 1 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 2 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 1 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related:
     - tech.kubernetes
     - sec.high-availability
@@ -281,6 +305,14 @@
     - cert: CISSP
       outline: 2027-04
       domain: 3
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 1 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 2 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 1 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   frameworks:
     - ITIL
   related:
@@ -336,6 +368,14 @@
     - cert: CISSP
       outline: 2027-04
       domain: 7
+    - { cert: AZ-500, outline: "2026-01", domain: 4 }
+    - { cert: AZ-305, outline: "2026-04", domain: 1 }
+    - { cert: SC-100, outline: "2026-10", domain: 2 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 3 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 1 }
+    - { cert: GCP-PCA, outline: "current", domain: 6 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related:
     - sec.monitoring
     - tech.capacity-management
@@ -452,6 +492,14 @@
     - cert: CISSP
       outline: 2027-04
       domain: 3
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 1 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 2 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 1 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related:
     - cloud.hypervisor
     - cloud.type-2-hypervisor
@@ -504,6 +552,14 @@
     - cert: CISSP
       outline: 2027-04
       domain: 3
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 1 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 2 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 1 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related:
     - cloud.hypervisor
     - cloud.type-1-hypervisor
@@ -553,6 +609,14 @@
     - cert: CISSP
       outline: 2027-04
       domain: 4
+    - { cert: AZ-500, outline: "2026-01", domain: 2 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 3 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 1 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 2 }
+    - { cert: GCP-PCSE, outline: "current", domain: 2 }
   related:
     - sec.vpn
     - sec.ssh
@@ -607,6 +671,14 @@
     - cert: CISSP
       outline: 2027-04
       domain: 4
+    - { cert: AZ-500, outline: "2026-01", domain: 2 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 3 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 1 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 2 }
+    - { cert: GCP-PCSE, outline: "current", domain: 2 }
   related:
     - sec.remote-access
     - sec.bastion-host
@@ -671,6 +743,14 @@
     - cert: CISSP
       outline: 2027-04
       domain: 4
+    - { cert: AZ-500, outline: "2026-01", domain: 2 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 3 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 1 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 2 }
+    - { cert: GCP-PCSE, outline: "current", domain: 2 }
   related:
     - sec.remote-access
     - sec.ssh
@@ -736,6 +816,14 @@
     - cert: CISSP
       outline: 2027-04
       domain: 4
+    - { cert: AZ-500, outline: "2026-01", domain: 2 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 3 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 1 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 2 }
+    - { cert: GCP-PCSE, outline: "current", domain: 2 }
   related:
     - sec.network-segmentation
     - sec.microsegmentation
@@ -796,6 +884,14 @@
     - cert: CISSP
       outline: 2027-04
       domain: 4
+    - { cert: AZ-500, outline: "2026-01", domain: 2 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 3 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 1 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 2 }
+    - { cert: GCP-PCSE, outline: "current", domain: 2 }
   related:
     - sec.digital-signature
     - sec.integrity
@@ -852,6 +948,14 @@
     - cert: CISSP
       outline: 2027-04
       domain: 4
+    - { cert: AZ-500, outline: "2026-01", domain: 2 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 3 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 1 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 2 }
+    - { cert: GCP-PCSE, outline: "current", domain: 2 }
   related:
     - sec.vlan
     - cloud.virtual-network
@@ -910,6 +1014,14 @@
     - cert: CISSP
       outline: 2027-04
       domain: 4
+    - { cert: AZ-500, outline: "2026-01", domain: 2 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 3 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 1 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 2 }
+    - { cert: GCP-PCSE, outline: "current", domain: 2 }
   related:
     - sec.bastion-host
     - sec.ssh
@@ -1044,6 +1156,14 @@
     - cert: CISSP
       outline: 2027-04
       domain: 3
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 3 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 3 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   frameworks:
     - ITIL
   related:
@@ -1177,6 +1297,13 @@
     - cert: CISSP
       outline: 2027-04
       domain: 1
+    - { cert: AZ-500, outline: "2026-01", domain: 4 }
+    - { cert: AZ-305, outline: "2026-04", domain: 1 }
+    - { cert: SC-100, outline: "2026-10", domain: 2 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 1 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 6 }
+    - { cert: GCP-PCA, outline: "current", domain: 3 }
+    - { cert: GCP-PCSE, outline: "current", domain: 5 }
   frameworks:
     - ITIL
   related:
@@ -1240,6 +1367,13 @@
     - cert: CISSP
       outline: 2027-04
       domain: 8
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 4 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 5 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related:
     - tech.ci-cd
     - tech.pipeline
@@ -1308,6 +1442,14 @@
     - cert: CISSP
       outline: 2027-04
       domain: 7
+    - { cert: AZ-500, outline: "2026-01", domain: 4 }
+    - { cert: AZ-305, outline: "2026-04", domain: 3 }
+    - { cert: SC-100, outline: "2026-10", domain: 2 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 2 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 3 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 2 }
+    - { cert: GCP-PCA, outline: "current", domain: 6 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related:
     - tech.deployment
     - tech.change-management
@@ -1416,6 +1558,14 @@
     - cert: CISSP
       outline: 2027-04
       domain: 3
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 1 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 2 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 1 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related:
     - tech.iac
     - cloud.container
@@ -3362,6 +3512,14 @@
     - cert: CISSP
       outline: 2027-04
       domain: 2
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: AZ-305, outline: "2026-04", domain: 2 }
+    - { cert: SC-100, outline: "2026-10", domain: 4 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 5 }
+    - { cert: GCP-PCA, outline: "current", domain: 3 }
+    - { cert: GCP-PCSE, outline: "current", domain: 3 }
   related:
     - sec.backup
     - sec.restore

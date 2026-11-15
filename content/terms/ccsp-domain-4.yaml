@@ -165,6 +165,13 @@
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
     - { cert: CISSP, outline: "2027-04", domain: 8 }
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 4 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 5 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related: [tech.devsecops, tech.ci-cd, tech.pipeline, tech.iac]
   sources:
     - label: "Paradigma Digital, blog"
@@ -239,6 +246,13 @@
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
     - { cert: CISSP, outline: "2027-04", domain: 8 }
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 4 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 5 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related: [tech.pipeline, tech.devops, tech.devsecops, tech.version-control]
   sources:
     - label: "Paradigma Digital, blog"
@@ -329,6 +343,13 @@
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
     - { cert: CISSP, outline: "2027-04", domain: 8 }
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 4 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 5 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related: [tech.ci-cd, tech.devops, sec.sast, tech.iac]
   sources:
     - label: "Paradigma Digital, blog"
@@ -406,6 +427,14 @@
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
     - { cert: CISSP, outline: "2027-04", domain: 3 }
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 1 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 2 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 1 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related: [tech.devops, tech.pipeline, tech.version-control, sec.misconfiguration]
   sources:
     - label: "Telefónica Tech, blog"
@@ -640,6 +669,13 @@
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
     - { cert: CISSP, outline: "2027-04", domain: 8 }
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 4 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 5 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related: [tech.scm, tech.iac, sec.code-review, tech.ci-cd]
   sources:
     - label: "Orden TAS/1478/2005, temario de oposiciones (BOE)"
@@ -721,6 +757,13 @@
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
     - { cert: CISSP, outline: "2027-04", domain: 8 }
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 4 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 5 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related: [tech.version-control, tech.iac, sec.security-baseline]
   sources:
     - label: "Orden TAS/1478/2005, temario de oposiciones (BOE)"
@@ -897,6 +940,13 @@
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
     - { cert: CISSP, outline: "2027-04", domain: 8 }
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 4 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 5 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related: [sec.dast, sec.iast, sec.sca, sec.code-review]
   sources:
     - label: "Telefónica Tech, blog"
@@ -969,6 +1019,13 @@
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
     - { cert: CISSP, outline: "2027-04", domain: 8 }
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 4 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 5 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related: [sec.sast, sec.iast, sec.black-box-testing, sec.penetration-test]
   sources:
     - label: "Telefónica Tech, blog"
@@ -1028,6 +1085,13 @@
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
     - { cert: CISSP, outline: "2027-04", domain: 8 }
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 4 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 5 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related: [sec.sast, sec.dast, sec.sca]
   sources:
     - label: "Telefónica Tech, blog"
@@ -1089,6 +1153,13 @@
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
     - { cert: CISSP, outline: "2027-04", domain: 8 }
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 4 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 5 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related: [sec.sast, sec.sbom, tech.dependency, sec.software-supply-chain]
   sources:
     - label: "Telefónica Tech, blog"
@@ -2473,6 +2544,10 @@
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
     - { cert: CISSP, outline: "2027-04", domain: 8 }
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: SC-100, outline: "2026-10", domain: 4 }
+    - { cert: GCP-PCA, outline: "current", domain: 5 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   frameworks: [SLSA]
   related: [sec.sbom, tech.dependency, tech.third-party-software, sec.sca]
   sources:
@@ -2552,6 +2627,10 @@
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
     - { cert: CISSP, outline: "2027-04", domain: 8 }
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: SC-100, outline: "2026-10", domain: 4 }
+    - { cert: GCP-PCA, outline: "current", domain: 5 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   frameworks: [CRA]
   related: [sec.software-supply-chain, sec.sca, tech.dependency, tech.third-party-software]
   sources:
@@ -2774,6 +2853,10 @@
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
     - { cert: CISSP, outline: "2027-04", domain: 8 }
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: SC-100, outline: "2026-10", domain: 4 }
+    - { cert: GCP-PCA, outline: "current", domain: 5 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related: [tech.third-party-software, sec.sbom, sec.sca, sec.software-supply-chain]
   sources:
     - label: "INCIBE-CERT, blog"
@@ -2918,6 +3001,13 @@
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
     - { cert: CISSP, outline: "2027-04", domain: 8 }
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 4 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 5 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related: [sec.firewall, sec.api-gateway, sec.sql-injection, fw.owasp-top-10]
   sources:
     - label: "INCIBE, blog para empresas"
@@ -2993,6 +3083,13 @@
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
     - { cert: CISSP, outline: "2027-04", domain: 8 }
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 4 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 5 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related: [sec.api, sec.waf, cloud.microservices, sec.oauth]
   sources:
     - label: "Paradigma Digital, blog"
@@ -3108,6 +3205,14 @@
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
     - { cert: CISSP, outline: "2027-04", domain: 3 }
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 1 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 2 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 1 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related: [cloud.virtualization, cloud.container, sec.sandbox, sec.isolation]
   sources:
     - label: "INCIBE, blog para empresas"
@@ -3161,6 +3266,13 @@
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
     - { cert: CISSP, outline: "2027-04", domain: 8 }
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 4 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 5 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related: [sec.waf, sec.api-gateway, sec.firewall, sec.api]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -3216,6 +3328,14 @@
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
     - { cert: CISSP, outline: "2027-04", domain: 3 }
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 1 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 2 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 1 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related: [cloud.container, tech.kubernetes, cloud.orchestration, cloud.microservices]
   sources:
     - label: "INCIBE-CERT, blog"
@@ -3296,6 +3416,14 @@
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
     - { cert: CISSP, outline: "2027-04", domain: 3 }
+    - { cert: AZ-500, outline: "2026-01", domain: 3 }
+    - { cert: AZ-305, outline: "2026-04", domain: 4 }
+    - { cert: SC-100, outline: "2026-10", domain: 1 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 2 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 2 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
+    - { cert: GCP-PCA, outline: "current", domain: 1 }
+    - { cert: GCP-PCSE, outline: "current", domain: 4 }
   related: [cloud.orchestration, cloud.container, tech.docker, cloud.microservices]
   sources:
     - label: "INCIBE, Guía de buenas prácticas de ciberseguridad en redes privadas 5G"
@@ -3371,6 +3499,14 @@
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
     - { cert: CISSP, outline: "2027-04", domain: 5 }
+    - { cert: AZ-500, outline: "2026-01", domain: 1 }
+    - { cert: AZ-305, outline: "2026-04", domain: 1 }
+    - { cert: SC-100, outline: "2026-10", domain: 2 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 1 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 4 }
+    - { cert: GCP-PCA, outline: "current", domain: 3 }
+    - { cert: GCP-PCSE, outline: "current", domain: 1 }
   related: [sec.idp, sec.sso, sec.saml, sec.iam]
   sources:
     - label: "AEPD, Guía de privacidad desde el diseño"
@@ -3452,6 +3588,14 @@
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
     - { cert: CISSP, outline: "2027-04", domain: 5 }
+    - { cert: AZ-500, outline: "2026-01", domain: 1 }
+    - { cert: AZ-305, outline: "2026-04", domain: 1 }
+    - { cert: SC-100, outline: "2026-10", domain: 2 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 1 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 4 }
+    - { cert: GCP-PCA, outline: "current", domain: 3 }
+    - { cert: GCP-PCSE, outline: "current", domain: 1 }
   related: [sec.federated-identity, sec.sso, sec.saml, sec.openid-connect]
   sources:
     - label: "INCIBE-CERT, blog"
@@ -3526,6 +3670,14 @@
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
     - { cert: CISSP, outline: "2027-04", domain: 5 }
+    - { cert: AZ-500, outline: "2026-01", domain: 1 }
+    - { cert: AZ-305, outline: "2026-04", domain: 1 }
+    - { cert: SC-100, outline: "2026-10", domain: 2 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 1 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 4 }
+    - { cert: GCP-PCA, outline: "current", domain: 3 }
+    - { cert: GCP-PCSE, outline: "current", domain: 1 }
   related: [sec.federated-identity, sec.idp, sec.saml, sec.mfa]
   sources:
     - label: "INCIBE-CERT, blog"
@@ -3614,6 +3766,14 @@
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
     - { cert: CISSP, outline: "2027-04", domain: 5 }
+    - { cert: AZ-500, outline: "2026-01", domain: 1 }
+    - { cert: AZ-305, outline: "2026-04", domain: 1 }
+    - { cert: SC-100, outline: "2026-10", domain: 2 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 1 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 4 }
+    - { cert: GCP-PCA, outline: "current", domain: 3 }
+    - { cert: GCP-PCSE, outline: "current", domain: 1 }
   related: [sec.openid-connect, sec.authorization, sec.api, sec.idp]
   sources:
     - label: "INCIBE-CERT, blog"
@@ -3687,6 +3847,14 @@
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
     - { cert: CISSP, outline: "2027-04", domain: 5 }
+    - { cert: AZ-500, outline: "2026-01", domain: 1 }
+    - { cert: AZ-305, outline: "2026-04", domain: 1 }
+    - { cert: SC-100, outline: "2026-10", domain: 2 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 1 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 4 }
+    - { cert: GCP-PCA, outline: "current", domain: 3 }
+    - { cert: GCP-PCSE, outline: "current", domain: 1 }
   related: [sec.oauth, sec.idp, sec.sso, sec.authentication]
   sources:
     - label: "INCIBE-CERT, blog"
@@ -3756,6 +3924,14 @@
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
     - { cert: CISSP, outline: "2027-04", domain: 5 }
+    - { cert: AZ-500, outline: "2026-01", domain: 1 }
+    - { cert: AZ-305, outline: "2026-04", domain: 1 }
+    - { cert: SC-100, outline: "2026-10", domain: 2 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 1 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 4 }
+    - { cert: GCP-PCA, outline: "current", domain: 3 }
+    - { cert: GCP-PCSE, outline: "current", domain: 1 }
   related: [sec.sso, sec.idp, sec.federated-identity, sec.openid-connect]
   sources:
     - label: "INCIBE-CERT, aviso de vulnerabilidad"
@@ -3838,6 +4014,14 @@
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
     - { cert: CISSP, outline: "2027-04", domain: 5 }
+    - { cert: AZ-500, outline: "2026-01", domain: 1 }
+    - { cert: AZ-305, outline: "2026-04", domain: 1 }
+    - { cert: SC-100, outline: "2026-10", domain: 2 }
+    - { cert: AWS-SA-ASSOCIATE, outline: "SAA-C03", domain: 1 }
+    - { cert: AWS-SA-PROFESSIONAL, outline: "SAP-C02", domain: 1 }
+    - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 4 }
+    - { cert: GCP-PCA, outline: "current", domain: 3 }
+    - { cert: GCP-PCSE, outline: "current", domain: 1 }
   related: [sec.iam, sec.least-privilege, sec.secrets-management, sec.bastion-host]
   sources:
     - label: "INCIBE-CERT, blog"

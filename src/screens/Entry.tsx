@@ -35,7 +35,13 @@ function categoryLine(term: Term, lang: Lang) {
   const parts: string[] = [];
   const topic = topics.find((t) => t.id === term.topics[0]);
   if (topic) parts.push(topic[lang]);
-  for (const c of term.curriculum ?? []) parts.push(`${c.cert} ${lang === 'es' ? 'Dominio' : 'Domain'} ${c.domain}`);
+  // A widely used term can sit in many exams: name the first two and count the rest.
+  const exams = term.curriculum ?? [];
+  for (const c of exams.slice(0, 2)) {
+    const cert = certifications.find((x) => x.id === c.cert);
+    parts.push(`${cert?.name ?? c.cert} ${lang === 'es' ? 'Dominio' : 'Domain'} ${c.domain}`);
+  }
+  if (exams.length > 2) parts.push(lang === 'es' ? `+${exams.length - 2} exámenes` : `+${exams.length - 2} more exams`);
   for (const id of term.frameworks ?? []) {
     const framework = frameworks.find((f) => f.id === id);
     if (framework) parts.push(framework.name);
@@ -74,7 +80,7 @@ export function Entry({ id }: { id: string }) {
   const isSaved = saved.includes(term.id);
   const related = alphabetical(term.related.flatMap((r) => getTerm(r) ?? []));
   // Each exam outline the term is filed under, named once at the foot of the page.
-  const outlines = (term.curriculum ?? []).flatMap((c) => {
+  const outlines = (term.curriculum ?? []).slice(0, 2).flatMap((c) => {
     const cert = certifications.find((x) => x.id === c.cert);
     return cert?.outlineLabel ? [`${cert.name}: ${cert.outlineLabel}`] : [];
   });

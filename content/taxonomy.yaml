@@ -25,6 +25,7 @@ topics:
 technology:
   - { id: cloud-general, en: Cloud, es: Nube }
   - { id: aws, en: AWS, es: AWS }
+  - { id: wiz, en: Wiz, es: Wiz }
   - { id: azure, en: Azure, es: Azure }
   - { id: gcp, en: Google Cloud, es: Google Cloud }
   - { id: kubernetes, en: Kubernetes, es: Kubernetes }
@@ -103,27 +104,112 @@ certifications:
   - { id: GCPN, name: "GCPN", fullName: "Cloud Penetration Tester", issuer: "GIAC (SANS)" }
   - { id: GCFR, name: "GCFR", fullName: "Cloud Forensics Responder", issuer: "GIAC (SANS)" }
   - { id: GICSP, name: "GICSP", fullName: "Global Industrial Cyber Security Professional", issuer: "GIAC (SANS)" }
-  - { id: SABSA-SCF, name: "SABSA Foundation", fullName: "SABSA Chartered Security Architect, Foundation (SCF)", issuer: "The SABSA Institute" }
+  - id: SABSA-SCF
+    name: "SABSA Foundation"
+    fullName: "SABSA Chartered Security Architect, Foundation (SCF)"
+    issuer: "The SABSA Institute"
+    outlineLabel: "SABSA Foundation modules F1 and F2; not re-checked against the current syllabus"
+    domains:
+      - { n: 1, name: "Security Strategy and Planning (F1)" }
+      - { n: 2, name: "Security Service Management and Design (F2)" }
   - { id: SABSA-SCP, name: "SABSA Practitioner", fullName: "SABSA Chartered Security Architect, Practitioner (SCP)", issuer: "The SABSA Institute" }
   - { id: SABSA-SCM, name: "SABSA Master", fullName: "SABSA Chartered Security Architect, Master (SCM)", issuer: "The SABSA Institute" }
   - { id: CCSK, name: "CCSK", fullName: "Certificate of Cloud Security Knowledge", issuer: "Cloud Security Alliance" }
   - { id: CCZT, name: "CCZT", fullName: "Certificate of Competence in Zero Trust", issuer: "Cloud Security Alliance" }
   - { id: AWS-CLOUD-PRACTITIONER, name: "Cloud Practitioner", issuer: "AWS" }
-  - { id: AWS-SA-ASSOCIATE, name: "Solutions Architect, Associate", issuer: "AWS" }
-  - { id: AWS-SA-PROFESSIONAL, name: "Solutions Architect, Professional", issuer: "AWS" }
-  - { id: AWS-SECURITY-SPECIALTY, name: "Security, Specialty", issuer: "AWS" }
+  - id: AWS-SA-ASSOCIATE
+    name: "Solutions Architect, Associate"
+    issuer: "AWS"
+    outline: "SAA-C03"
+    outlineLabel: AWS exam guide SAA-C03
+    domains:
+      - { n: 1, name: "Design Secure Architectures", weight: "30" }
+      - { n: 2, name: "Design Resilient Architectures", weight: "26" }
+      - { n: 3, name: "Design High-Performing Architectures", weight: "24" }
+      - { n: 4, name: "Design Cost-Optimized Architectures", weight: "20" }
+  - id: AWS-SA-PROFESSIONAL
+    name: "Solutions Architect, Professional"
+    issuer: "AWS"
+    outline: "SAP-C02"
+    outlineLabel: AWS exam guide SAP-C02
+    domains:
+      - { n: 1, name: "Design Solutions for Organizational Complexity", weight: "26" }
+      - { n: 2, name: "Design for New Solutions", weight: "29" }
+      - { n: 3, name: "Continuous Improvement for Existing Solutions", weight: "25" }
+      - { n: 4, name: "Accelerate Workload Migration and Modernization", weight: "20" }
+  - id: AWS-SECURITY-SPECIALTY
+    name: "Security, Specialty"
+    issuer: "AWS"
+    outline: "SCS-C03"
+    outlineLabel: AWS exam guide SCS-C03
+    domains:
+      - { n: 1, name: "Detection", weight: "16" }
+      - { n: 2, name: "Incident Response", weight: "14" }
+      - { n: 3, name: "Infrastructure Security", weight: "18" }
+      - { n: 4, name: "Identity and Access Management", weight: "20" }
+      - { n: 5, name: "Data Protection", weight: "18" }
+      - { n: 6, name: "Security Foundations and Governance", weight: "14" }
   - { id: AZ-900, name: "AZ-900", fullName: "Azure Fundamentals", issuer: "Microsoft" }
   - { id: SC-900, name: "SC-900", fullName: "Security, Compliance and Identity Fundamentals", issuer: "Microsoft" }
   - { id: AZ-104, name: "AZ-104", fullName: "Azure Administrator", issuer: "Microsoft" }
-  - { id: AZ-500, name: "AZ-500", fullName: "Azure Security Engineer", issuer: "Microsoft" }
-  - { id: AZ-305, name: "AZ-305", fullName: "Azure Solutions Architect", issuer: "Microsoft" }
+  - id: AZ-500
+    name: "AZ-500"
+    fullName: "Azure Security Engineer"
+    issuer: "Microsoft"
+    outline: "2026-01"
+    outlineLabel: Microsoft study guide, skills measured as of 22 January 2026
+    domains:
+      - { n: 1, name: "Secure identity and access", weight: "15–20" }
+      - { n: 2, name: "Secure networking", weight: "20–25" }
+      - { n: 3, name: "Secure compute, storage, and databases", weight: "20–25" }
+      - { n: 4, name: "Secure Azure using Microsoft Defender for Cloud and Microsoft Sentinel", weight: "30–35" }
+  - id: AZ-305
+    name: "AZ-305"
+    fullName: "Azure Solutions Architect"
+    issuer: "Microsoft"
+    outline: "2026-04"
+    outlineLabel: Microsoft study guide, skills measured as of 17 April 2026
+    domains:
+      - { n: 1, name: "Design identity, governance, and monitoring solutions", weight: "25–30" }
+      - { n: 2, name: "Design data storage solutions", weight: "20–25" }
+      - { n: 3, name: "Design business continuity solutions", weight: "15–20" }
+      - { n: 4, name: "Design infrastructure solutions", weight: "30–35" }
   - { id: SC-200, name: "SC-200", fullName: "Security Operations Analyst", issuer: "Microsoft" }
   - { id: SC-300, name: "SC-300", fullName: "Identity and Access Administrator", issuer: "Microsoft" }
-  - { id: SC-100, name: "SC-100", fullName: "Cybersecurity Architect", issuer: "Microsoft" }
+  - id: SC-100
+    name: "SC-100"
+    fullName: "Cybersecurity Architect"
+    issuer: "Microsoft"
+    outline: "2026-10"
+    outlineLabel: Microsoft study guide, skills measured as of 21 October 2026
+    domains:
+      - { n: 1, name: "Design solutions that align with security best practices and priorities", weight: "20–25" }
+      - { n: 2, name: "Design security operations, identity, and compliance capabilities", weight: "25–30" }
+      - { n: 3, name: "Design security solutions for infrastructure", weight: "25–30" }
+      - { n: 4, name: "Design security solutions for applications and data", weight: "20–25" }
   - { id: GCP-CDL, name: "Cloud Digital Leader", issuer: "Google Cloud" }
   - { id: GCP-ACE, name: "Associate Cloud Engineer", issuer: "Google Cloud" }
-  - { id: GCP-PCA, name: "Professional Cloud Architect", issuer: "Google Cloud" }
-  - { id: GCP-PCSE, name: "Professional Cloud Security Engineer", issuer: "Google Cloud" }
+  - id: GCP-PCA
+    name: "Professional Cloud Architect"
+    issuer: "Google Cloud"
+    outlineLabel: "Google Cloud exam guide; section names not re-checked against the current guide"
+    domains:
+      - { n: 1, name: "Designing and planning a cloud solution architecture" }
+      - { n: 2, name: "Managing and provisioning a solution infrastructure" }
+      - { n: 3, name: "Designing for security and compliance" }
+      - { n: 4, name: "Analyzing and optimizing technical and business processes" }
+      - { n: 5, name: "Managing implementation" }
+      - { n: 6, name: "Ensuring solution and operations excellence" }
+  - id: GCP-PCSE
+    name: "Professional Cloud Security Engineer"
+    issuer: "Google Cloud"
+    outlineLabel: "Google Cloud exam guide; section names not re-checked against the current guide"
+    domains:
+      - { n: 1, name: "Configuring access" }
+      - { n: 2, name: "Securing communications and establishing boundary protection" }
+      - { n: 3, name: "Ensuring data protection" }
+      - { n: 4, name: "Managing operations" }
+      - { n: 5, name: "Supporting compliance requirements" }
   - { id: KCNA, name: "KCNA", fullName: "Kubernetes and Cloud Native Associate", issuer: "The Linux Foundation" }
   - { id: KCSA, name: "KCSA", fullName: "Kubernetes and Cloud Native Security Associate", issuer: "The Linux Foundation" }
   - { id: CKA, name: "CKA", fullName: "Certified Kubernetes Administrator", issuer: "The Linux Foundation" }
@@ -197,6 +283,6 @@ frameworks:
   - { id: MITRE-ATTACK, name: "MITRE ATT&CK", summary: "Adversary tactics and techniques", region: intl }
   - { id: OWASP, name: "OWASP Top 10, ASVS and SAMM", summary: "Application security references", region: intl }
   - { id: SLSA, name: "SLSA", summary: "Integrity levels for the software supply chain", region: intl }
-  - { id: SABSA, name: "SABSA", summary: "Security architecture method", region: intl }
+  - { id: SABSA, name: "SABSA", summary: "Security architecture method", region: intl, entry: fw.sabsa }
   - { id: TOGAF, name: "TOGAF", summary: "Enterprise architecture method", region: intl }
   - { id: WELL-ARCHITECTED, name: "Well-Architected Frameworks", summary: "The cloud providers' own design guidance", region: intl, entry: fw.well-architected-framework }

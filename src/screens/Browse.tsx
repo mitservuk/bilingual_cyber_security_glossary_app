@@ -127,13 +127,17 @@ function CertificationSection({
       </button>
       {open && (
         <div id={panel} className="domains">
-          {cert.domains.map((d) => (
+          {/* A domain with no terms yet is left out. */}
+          {cert.domains
+            .filter((d) => termsFor('cert', cert.id, d.n).length > 0)
+            .map((d) => (
             <a key={d.n} className="row" href={href(`/list/cert/${cert.id}/${d.n}`)}>
               <span className="badge">{d.n}</span>
               <span className="row-text">
                 <span className="row-title compact">{d.name}</span>
                 <span className="secondary small">
-                  {d.weight}% of exam · {count(termsFor('cert', cert.id, d.n).length)}
+                  {d.weight ? `${d.weight}% of exam · ` : ''}
+                  {count(termsFor('cert', cert.id, d.n).length)}
                 </span>
               </span>
               <ChevronIcon />
@@ -148,7 +152,8 @@ function CertificationSection({
 const monthYear = new Intl.DateTimeFormat('en-GB', { month: 'short', year: 'numeric', timeZone: 'UTC' });
 
 /** Turns an exam outline's version, such as "2026-08", into "Aug 2026". */
-const outlineDate = (outline: string) => monthYear.format(new Date(`${outline}-01T00:00:00Z`));
+const outlineDate = (outline: string) =>
+  /^\d{4}-\d{2}$/.test(outline) ? monthYear.format(new Date(`${outline}-01T00:00:00Z`)) : outline;
 
 /** Frameworks, narrowed by any regions that are ticked. None ticked shows them all. */
 function Frameworks() {

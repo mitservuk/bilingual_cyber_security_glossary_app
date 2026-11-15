@@ -1,0 +1,686 @@
+# SABSA: the vocabulary of the framework and its Foundation exam.
+# Format is described in content/README.md. These entries were written from
+# working knowledge of usage in Spain; each `found` text was then located in a
+# page the glossary already cites and confirmed with scripts/check_sources.py.
+# Forms with no usedBy have not been seen in a source.
+
+- id: fw.sabsa
+  en:
+    term: SABSA
+    expansion: Sherwood Applied Business Security Architecture
+    definition: A framework and method for building enterprise security architecture that
+      starts from business requirements and traces every control back to them.
+  es:
+    verdict: english-kept
+    forms:
+      - text: SABSA
+        kind: noun
+        primary: true
+      - text: arquitectura de seguridad empresarial
+        article: la
+        kind: noun
+        note: Enterprise security architecture, what it produces.
+    say: Said as a word, 'sabsa'.
+    definition: Marco y método para construir la arquitectura de seguridad de una organización
+      partiendo de los requisitos de negocio y trazando cada control hasta ellos.
+    examples:
+      - es: La arquitectura de seguridad del banco se diseñó siguiendo SABSA.
+        en: The bank's security architecture was designed following SABSA.
+  topics:
+    - architecture
+    - grc
+  technology: []
+  curriculum:
+    - cert: SABSA-SCF
+      outline: current
+      domain: 1
+  frameworks:
+    - SABSA
+  related:
+    - fw.sabsa-matrix
+    - fw.business-attributes
+    - cloud.reference-architecture
+    - fw.cobit
+  sources:
+    - label: ISC2, temario del examen CISSP en español (2027)
+      url: https://edge.sitecorecloud.io/internationf173-xmc4e73-prodbc0f-9660/media/Project/ISC2/Main/Media/documents/exam-outlines/2027/EXAMS-CISSP-Exam-Outline-English-RB-Revised-1016-ESN-2.pdf
+      found:
+        - SABSA
+        - Arquitectura de Seguridad Empresarial
+      checked: 2026-11-15
+  status: sourced
+
+- id: fw.sabsa-matrix
+  en:
+    term: SABSA Matrix
+    definition: 'The grid at the heart of SABSA: six architecture layers down the side and
+      six questions (what, why, how, who, where, when) across the top.'
+  es:
+    verdict: translated
+    forms:
+      - text: matriz SABSA
+        article: la
+        kind: noun
+        primary: true
+      - text: qué, por qué, cómo, quién, dónde y cuándo
+        kind: noun
+        note: 'The six columns: assets, motivation, process, people, location and time.'
+    definition: 'Cuadrícula central de SABSA: seis capas de arquitectura en vertical y seis
+      preguntas (qué, por qué, cómo, quién, dónde y cuándo) en horizontal.'
+    examples:
+      - es: Cada celda de la matriz SABSA define un entregable de la arquitectura.
+        en: Each cell of the SABSA Matrix defines an architecture deliverable.
+  topics:
+    - architecture
+  technology: []
+  curriculum:
+    - cert: SABSA-SCF
+      outline: current
+      domain: 1
+  frameworks:
+    - SABSA
+  related:
+    - fw.sabsa
+    - fw.sabsa-layers
+  sources: []
+  status: draft
+
+- id: fw.sabsa-layers
+  en:
+    term: architecture layers
+    definition: 'SABSA''s six views of an architecture: contextual, conceptual, logical, physical,
+      component, and the service management layer that runs alongside them.'
+  es:
+    verdict: translated
+    forms:
+      - text: capas de la arquitectura
+        article: las
+        kind: noun
+        primary: true
+        usedBy:
+          - engineers
+      - text: contextual, conceptual, lógica, física y de componentes
+        kind: adjective
+        note: The five stacked layers, from the business view down to products.
+      - text: arquitectura lógica
+        article: la
+        kind: noun
+        usedBy:
+          - microsoft
+        note: 'The logical layer: services and information, independent of technology.'
+    definition: 'Las seis vistas de una arquitectura en SABSA: contextual, conceptual, lógica,
+      física, de componentes y la de gestión del servicio, transversal a las demás.'
+    examples:
+      - es: En la capa conceptual se definen los atributos de negocio; en la lógica, los servicios
+          de seguridad.
+        en: The business attributes are defined in the conceptual layer; the security services
+          in the logical one.
+  topics:
+    - architecture
+  technology: []
+  curriculum:
+    - cert: SABSA-SCF
+      outline: current
+      domain: 1
+  frameworks:
+    - SABSA
+  related:
+    - fw.sabsa-matrix
+    - fw.sabsa
+    - cloud.reference-architecture
+  sources:
+    - label: El Lado del Mal
+      url: https://www.elladodelmal.com/2024/12/como-montar-tu-propio-servidor-de_24.html
+      found:
+        - capas de la arquitectura
+      checked: 2026-11-15
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/architecture/databases/guide/big-data-architectures
+      found:
+        - una arquitectura lógica para
+      checked: 2026-11-15
+  status: sourced
+
+- id: fw.business-attributes
+  en:
+    term: business attributes profile
+    definition: 'SABSA''s central technique: expressing what the business needs as a set of
+      named, measurable attributes, such as available, private or compliant, which security
+      must deliver.'
+  es:
+    verdict: translated
+    forms:
+      - text: perfil de atributos de negocio
+        article: el
+        kind: noun
+        primary: true
+      - text: atributo de negocio
+        article: el
+        kind: noun
+        plural: los atributos de negocio
+    definition: 'Técnica central de SABSA: expresar lo que necesita el negocio como un conjunto
+      de atributos con nombre y medibles que la seguridad debe garantizar.'
+    examples:
+      - es: El perfil de atributos de negocio traduce los objetivos del consejo a requisitos
+          de seguridad.
+        en: The business attributes profile translates the board's objectives into security
+          requirements.
+  topics:
+    - architecture
+    - grc
+  technology: []
+  curriculum:
+    - cert: SABSA-SCF
+      outline: current
+      domain: 1
+  frameworks:
+    - SABSA
+  related:
+    - fw.sabsa
+    - fw.business-driven-security
+    - sec.traceability
+    - tech.non-functional-requirement
+  sources: []
+  status: draft
+
+- id: fw.business-driven-security
+  en:
+    term: business-driven security
+    definition: The principle that security exists to enable business objectives, so every
+      control should be justified by a business requirement.
+  es:
+    verdict: translated
+    forms:
+      - text: seguridad orientada al negocio
+        article: la
+        kind: noun
+        primary: true
+      - text: seguridad alineada con el negocio
+        article: la
+        kind: noun
+      - text: facilitador del negocio
+        article: el
+        kind: noun
+        note: A business enabler, how security is meant to be seen.
+    definition: Principio según el cual la seguridad existe para hacer posibles los objetivos
+      del negocio, de modo que cada control debe justificarse con un requisito de negocio.
+    examples:
+      - es: Una seguridad orientada al negocio empieza preguntando qué quiere conseguir la
+          empresa.
+        en: Business-driven security starts by asking what the company wants to achieve.
+  topics:
+    - grc
+    - architecture
+  technology: []
+  curriculum:
+    - cert: SABSA-SCF
+      outline: current
+      domain: 1
+  frameworks:
+    - SABSA
+  related:
+    - fw.business-attributes
+    - grc.governance
+    - grc.risk-appetite
+  sources: []
+  status: draft
+
+- id: fw.two-way-traceability
+  en:
+    term: two-way traceability
+    definition: Being able to trace each business requirement down to the controls that meet
+      it, and each control up to the requirement that justifies it.
+  es:
+    verdict: translated
+    forms:
+      - text: trazabilidad bidireccional
+        article: la
+        kind: noun
+        primary: true
+      - text: completitud y justificación
+        article: la
+        kind: noun
+        note: Completeness and justification, the two things it proves.
+    definition: Capacidad de seguir cada requisito de negocio hasta los controles que lo cumplen,
+      y cada control hasta el requisito que lo justifica.
+    examples:
+      - es: Gracias a la trazabilidad bidireccional pudimos retirar controles que no respondían
+          a ningún requisito.
+        en: Thanks to two-way traceability we were able to retire controls that answered no
+          requirement.
+  topics:
+    - architecture
+    - grc
+  technology: []
+  curriculum:
+    - cert: SABSA-SCF
+      outline: current
+      domain: 1
+  frameworks:
+    - SABSA
+  related:
+    - sec.traceability
+    - fw.business-attributes
+    - grc.control
+  sources: []
+  status: draft
+
+- id: fw.risk-and-opportunity
+  en:
+    term: risk and opportunity
+    definition: 'SABSA''s balanced view of risk: an uncertain event can bring loss or benefit,
+      and architecture should manage both.'
+  es:
+    verdict: translated
+    forms:
+      - text: riesgo y oportunidad
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - google
+      - text: riesgos y oportunidades
+        article: los
+        kind: noun
+        usedBy:
+          - official
+        note: The plural, which is also ISO's phrase.
+    definition: 'Visión equilibrada del riesgo en SABSA: un suceso incierto puede traer pérdida
+      o beneficio, y la arquitectura debe gestionar ambos.'
+    examples:
+      - es: El modelo de riesgo y oportunidad evita ver la seguridad solo como un freno.
+        en: The risk and opportunity model avoids seeing security only as a brake.
+  topics:
+    - grc
+  technology: []
+  curriculum:
+    - cert: SABSA-SCF
+      outline: current
+      domain: 1
+  frameworks:
+    - SABSA
+    - ISO-31000
+  related:
+    - grc.risk
+    - grc.risk-appetite
+    - fw.business-driven-security
+  sources:
+    - label: Ley Orgánica 3/2018 (LOPDGDD)
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673
+      found:
+        - riesgos y oportunidades
+      checked: 2026-11-15
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/responsible-ai?hl=es
+      found:
+        - riesgos y oportunidades
+      checked: 2026-11-15
+  status: sourced
+
+- id: fw.security-domain
+  en:
+    term: security domain
+    definition: A set of elements under a single security policy and a single authority; SABSA
+      models an enterprise as nested and connected domains.
+  es:
+    verdict: translated
+    forms:
+      - text: dominio de seguridad
+        article: el
+        kind: noun
+        primary: true
+        plural: los dominios de seguridad
+        usedBy:
+          - official
+          - microsoft
+      - text: autoridad del dominio
+        article: la
+        kind: noun
+        note: The domain authority, who sets its policy.
+    definition: Conjunto de elementos sujetos a una misma política de seguridad y a una misma
+      autoridad.
+    examples:
+      - es: Cada filial es un dominio de seguridad con su propia autoridad.
+        en: Each subsidiary is a security domain with its own authority.
+  topics:
+    - architecture
+    - grc
+  technology: []
+  curriculum:
+    - cert: SABSA-SCF
+      outline: current
+      domain: 1
+  frameworks:
+    - SABSA
+  related:
+    - fw.trust-model
+    - sec.network-segmentation
+    - grc.policy
+  sources:
+    - label: INCIBE, Guía de buenas prácticas de ciberseguridad en redes privadas 5G
+      url: https://www.incibe.es/sites/default/files/2025-12/INCIBE&ULE_GuiaBuenasPracticasCiberseguridadRedesPrivadas5G.pdf
+      found:
+        - dominios de seguridad
+      checked: 2026-11-15
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/security/fundamentals/encryption-overview
+      found:
+        - dominio de seguridad
+      checked: 2026-11-15
+  status: sourced
+
+- id: fw.trust-model
+  en:
+    term: trust model
+    definition: A description of who trusts whom, for what and on what basis, between the
+      domains and parties in an architecture.
+  es:
+    verdict: translated
+    forms:
+      - text: modelo de confianza
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - google
+      - text: relación de confianza
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: A trust relationship.
+    definition: Descripción de quién confía en quién, para qué y sobre qué base, entre los
+      dominios y las partes de una arquitectura.
+    examples:
+      - es: El modelo de confianza define qué proveedores de identidad acepta cada dominio.
+        en: The trust model defines which identity providers each domain accepts.
+  topics:
+    - architecture
+    - iam
+  technology: []
+  curriculum:
+    - cert: SABSA-SCF
+      outline: current
+      domain: 1
+  frameworks:
+    - SABSA
+  related:
+    - fw.security-domain
+    - sec.zero-trust
+    - sec.federated-identity
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/well-architected/security/principles
+      found:
+        - modelo de Confianza
+      checked: 2026-11-15
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/learn/what-is-zero-trust?hl=es
+      found:
+        - modelo de confianza
+      checked: 2026-11-15
+    - label: AEPD, Guía de Privacidad desde el Diseño
+      url: https://www.aepd.es/guias/guia-privacidad-desde-diseno.pdf
+      found:
+        - relación de confianza
+      checked: 2026-11-15
+  status: sourced
+
+- id: fw.security-services
+  en:
+    term: security services
+    definition: In SABSA's logical layer, the technology-neutral services, such as authentication
+      or audit, that deliver the business attributes; mechanisms and products implement them
+      lower down.
+  es:
+    verdict: translated
+    forms:
+      - text: servicios de seguridad
+        article: los
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+      - text: mecanismo de seguridad
+        article: el
+        kind: noun
+        usedBy:
+          - official
+        note: A security mechanism, in the physical layer.
+    definition: En la capa lógica de SABSA, servicios independientes de la tecnología, como
+      la autenticación o la auditoría, que proporcionan los atributos de negocio.
+    examples:
+      - es: Primero se definen los servicios de seguridad y después los productos que los
+          implementan.
+        en: The security services are defined first, and then the products that implement
+          them.
+  topics:
+    - architecture
+  technology: []
+  curriculum:
+    - cert: SABSA-SCF
+      outline: current
+      domain: 2
+  frameworks:
+    - SABSA
+  related:
+    - fw.sabsa-layers
+    - grc.control
+    - fw.business-attributes
+  sources:
+    - label: INCIBE, Taxonomía de soluciones de ciberseguridad
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/taxonomia_ciberseguridad.pdf
+      found:
+        - servicios de seguridad
+      checked: 2026-11-15
+    - label: Directiva (UE) 2022/2555 (NIS 2), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81963
+      found:
+        - servicios de seguridad
+      checked: 2026-11-15
+    - label: INCIBE, Protocolos y seguridad de red en infraestructuras SCI
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/incibe_protocolos_seguridad_red_sci.pdf
+      found:
+        - mecanismo de seguridad
+      checked: 2026-11-15
+  status: sourced
+
+- id: fw.sabsa-lifecycle
+  en:
+    term: SABSA lifecycle
+    definition: 'The four repeating phases of SABSA: strategy and planning, design, implement,
+      and manage and measure.'
+  es:
+    verdict: translated
+    forms:
+      - text: ciclo de vida de SABSA
+        article: el
+        kind: noun
+        primary: true
+      - text: estrategia y planificación, diseño, implementación, y gestión y medición
+        kind: noun
+        note: The four phases.
+    definition: 'Las cuatro fases que se repiten en SABSA: estrategia y planificación, diseño,
+      implementación, y gestión y medición.'
+    examples:
+      - es: La fase de gestión y medición alimenta de nuevo la estrategia.
+        en: The manage and measure phase feeds back into strategy.
+  topics:
+    - architecture
+    - grc
+  technology: []
+  curriculum:
+    - cert: SABSA-SCF
+      outline: current
+      domain: 2
+  frameworks:
+    - SABSA
+  related:
+    - fw.sabsa
+    - tech.continual-improvement
+    - sec.sdlc
+  sources: []
+  status: draft
+
+- id: fw.service-management-matrix
+  en:
+    term: service management matrix
+    definition: 'SABSA''s second matrix, which sets out how the architecture is operated:
+      the service management activities for each layer.'
+  es:
+    verdict: translated
+    forms:
+      - text: matriz de gestión del servicio
+        article: la
+        kind: noun
+        primary: true
+      - text: gestión de servicios de seguridad
+        article: la
+        kind: noun
+    definition: 'Segunda matriz de SABSA, que describe cómo se opera la arquitectura: las
+      actividades de gestión del servicio en cada capa.'
+    examples:
+      - es: La matriz de gestión del servicio enlaza la arquitectura con las operaciones de
+          seguridad.
+        en: The service management matrix links the architecture to security operations.
+  topics:
+    - architecture
+    - grc
+  technology: []
+  curriculum:
+    - cert: SABSA-SCF
+      outline: current
+      domain: 2
+  frameworks:
+    - SABSA
+    - ITIL
+  related:
+    - fw.sabsa-matrix
+    - fw.itil
+    - tech.service-level-management
+  sources: []
+  status: draft
+
+- id: fw.performance-target
+  en:
+    term: performance target
+    definition: The measurable level set for a business attribute, against which the architecture's
+      success is judged.
+  es:
+    verdict: translated
+    forms:
+      - text: objetivo de rendimiento
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - eu
+          - microsoft
+      - text: métrica
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: A metric.
+    definition: Nivel medible que se fija para un atributo de negocio y con el que se juzga
+      el éxito de la arquitectura.
+    examples:
+      - es: El atributo 'disponible' tiene un objetivo de rendimiento del 99,9 %.
+        en: The 'available' attribute has a performance target of 99.9%.
+  topics:
+    - grc
+    - assessment
+  technology: []
+  curriculum:
+    - cert: SABSA-SCF
+      outline: current
+      domain: 2
+  frameworks:
+    - SABSA
+  related:
+    - fw.business-attributes
+    - grc.kpi
+    - grc.kri
+    - grc.sla
+  sources:
+    - label: Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81962
+      found:
+        - objetivos de rendimiento
+      checked: 2026-11-15
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/well-architected/reliability/redundancy
+      found:
+        - objetivos de rendimiento
+      checked: 2026-11-15
+    - label: AEPD, Adecuación al RGPD de tratamientos que incorporan inteligencia artificial
+      url: https://www.aepd.es/guias/adecuacion-rgpd-ia.pdf
+      found:
+        - la métrica adecuada
+      checked: 2026-11-15
+  status: sourced
+
+- id: fw.enterprise-architecture
+  en:
+    term: enterprise architecture
+    definition: The discipline of describing an organisation's business, information and technology
+      as a coherent whole; security architecture is one view of it.
+  es:
+    verdict: translated
+    forms:
+      - text: arquitectura empresarial
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - engineers
+      - text: arquitecto de seguridad
+        article: el
+        kind: noun
+        usedBy:
+          - engineers
+        note: A security architect. The feminine is la arquitecta.
+      - text: arquitectura de seguridad
+        article: la
+        kind: noun
+        usedBy:
+          - official
+    definition: Disciplina que describe el negocio, la información y la tecnología de una
+      organización como un todo coherente; la arquitectura de seguridad es una de sus vistas.
+    examples:
+      - es: La arquitectura de seguridad debe encajar en la arquitectura empresarial.
+        en: The security architecture must fit within the enterprise architecture.
+  topics:
+    - architecture
+  technology: []
+  curriculum:
+    - cert: SABSA-SCF
+      outline: current
+      domain: 1
+  frameworks:
+    - SABSA
+    - TOGAF
+  related:
+    - fw.sabsa
+    - cloud.reference-architecture
+    - fw.well-architected-framework
+  sources:
+    - label: Tecnoempleo, oferta de empleo en España
+      url: https://www.tecnoempleo.com/arquitecto-soluciones-serem/kafka-devops/rf-96e91aeda2fbe341d548
+      found:
+        - de arquitectura empresarial
+      checked: 2026-11-15
+    - label: Tecnoempleo, oferta de empleo en España
+      url: https://www.tecnoempleo.com/arquitecto-seguridad-ia-generativa-ust/aws-cloudformation/rf-603b1ce89244d34ca147
+      found:
+        - Arquitecto de Seguridad
+      checked: 2026-11-15
+    - label: INCIBE, Guía de buenas prácticas de ciberseguridad en redes privadas 5G
+      url: https://www.incibe.es/sites/default/files/2025-12/INCIBE&ULE_GuiaBuenasPracticasCiberseguridadRedesPrivadas5G.pdf
+      found:
+        - Arquitectura de seguridad
+      checked: 2026-11-15
+  status: sourced
