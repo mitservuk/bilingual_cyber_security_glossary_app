@@ -1,0 +1,2011 @@
+# The vocabulary of the Esquema Nacional de Seguridad (Real Decreto 311/2022).
+# Format is described in content/README.md. These entries were written from
+# working knowledge of usage in Spain; each `found` text was then located in a
+# page already downloaded for earlier entries and confirmed with
+# scripts/check_sources.py. Forms with no usedBy have not been seen in a source.
+
+- id: ens.categoria-de-seguridad
+  headword: es
+  en:
+    term: security category
+    definition: The overall rating the ENS gives an information system, BÁSICA, MEDIA or ALTA,
+      which decides which measures apply and how strictly.
+  es:
+    verdict: translated
+    forms:
+      - text: categoría de seguridad
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - microsoft
+      - text: categoría básica
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: The three categories are BÁSICA, MEDIA and ALTA, written in capitals in the
+          decree.
+      - text: categorización
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: The act of working out a system's category.
+    definition: Valoración global que el ENS asigna a un sistema de información, BÁSICA, MEDIA
+      o ALTA, y que determina qué medidas se aplican.
+    examples:
+      - es: El sistema de nóminas es de categoría media.
+        en: The payroll system is in the medium category.
+    watchOut: A system has a categoría; each dimension has a nivel. The category is the highest
+      level among the dimensions.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - ENS
+  related:
+    - ens.dimensiones-de-seguridad
+    - ens.nivel-de-seguridad
+    - sec.data-classification
+  sources:
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - categoría de seguridad
+        - de categoría BÁSICA solo
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/web-application-firewall/overview
+      found:
+        - categoría de seguridad
+      checked: 2026-11-14
+    - label: AEPD, Orientaciones y garantías en los procedimientos de anonimización de datos
+        personales
+      url: https://www.aepd.es/guias/guia-orientaciones-procedimientos-anonimizacion.pdf
+      found:
+        - CATEGORIZACIÓN DE
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.dimensiones-de-seguridad
+  headword: es
+  en:
+    term: security dimensions
+    definition: 'The five properties the ENS assesses separately for a system: confidentiality,
+      integrity, traceability, authenticity and availability.'
+  es:
+    verdict: translated
+    forms:
+      - text: dimensiones de seguridad
+        article: las
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: confidencialidad, integridad, trazabilidad, autenticidad y disponibilidad
+        kind: noun
+        note: The five, often abbreviated C, I, T, A, D.
+    definition: 'Las cinco propiedades que el ENS valora por separado en un sistema: confidencialidad,
+      integridad, trazabilidad, autenticidad y disponibilidad.'
+    examples:
+      - es: Hay que valorar cada servicio en las cinco dimensiones de seguridad.
+        en: Each service has to be rated in the five security dimensions.
+    watchOut: The ENS adds trazabilidad and autenticidad to the classic confidentiality, integrity
+      and availability triad.
+  topics:
+    - grc
+    - data
+  technology: []
+  frameworks:
+    - ENS
+  related:
+    - sec.confidentiality
+    - sec.integrity
+    - sec.availability
+    - sec.traceability
+    - ens.categoria-de-seguridad
+  sources:
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - dimensiones de seguridad
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.nivel-de-seguridad
+  headword: es
+  en:
+    term: security level
+    definition: The rating, BAJO, MEDIO or ALTO, given to each security dimension of a system
+      according to the harm an incident would cause.
+  es:
+    verdict: translated
+    forms:
+      - text: nivel de seguridad
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: nivel alto
+        article: el
+        kind: noun
+        usedBy:
+          - official
+        note: The levels are BAJO, MEDIO and ALTO.
+    definition: Valoración, BAJO, MEDIO o ALTO, de cada dimensión de seguridad de un sistema
+      según el perjuicio que causaría un incidente.
+    examples:
+      - es: La disponibilidad se ha valorado en nivel alto.
+        en: Availability has been rated at the high level.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - ENS
+  related:
+    - ens.categoria-de-seguridad
+    - ens.dimensiones-de-seguridad
+    - grc.impact
+  sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - nivel de seguridad
+      checked: 2026-11-14
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - nivel de seguridad
+        - Nivel ALTO
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.principios-basicos
+  headword: es
+  en:
+    term: basic principles
+    definition: The seven principles the ENS says must guide every security decision, such
+      as security as an integral process and risk-based management.
+  es:
+    verdict: translated
+    forms:
+      - text: principios básicos
+        article: los
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+    definition: Los siete principios que, según el ENS, deben guiar toda decisión de seguridad,
+      como la seguridad como proceso integral y la gestión basada en los riesgos.
+    examples:
+      - es: La política de seguridad se apoya en los principios básicos del ENS.
+        en: The security policy rests on the basic principles of the ENS.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - ENS
+  related:
+    - ens.requisitos-minimos
+    - ens.proceso-integral
+    - ens.gestion-basada-en-riesgos
+    - fw.ens
+  sources:
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - los principios básicos
+      checked: 2026-11-14
+    - label: Reglamento (UE) 2016/679 (RGPD), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2016-80807
+      found:
+        - los principios básicos para
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.requisitos-minimos
+  headword: es
+  en:
+    term: minimum requirements
+    definition: The fifteen requirements every ENS security policy must cover, from organisation
+      and risk analysis to incident handling and continuous improvement.
+  es:
+    verdict: translated
+    forms:
+      - text: requisitos mínimos
+        article: los
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+    definition: Los quince requisitos que debe cubrir toda política de seguridad conforme
+      al ENS, desde la organización y el análisis de riesgos hasta la gestión de incidentes.
+    examples:
+      - es: El mínimo privilegio es uno de los requisitos mínimos del ENS.
+        en: Least privilege is one of the minimum requirements of the ENS.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - ENS
+  related:
+    - ens.principios-basicos
+    - grc.policy
+    - fw.ens
+  sources:
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - requisitos mínimos que
+      checked: 2026-11-14
+    - label: Reglamento de Ejecución (UE) 2024/482 (EUCC), en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-80181
+      found:
+        - los requisitos mínimos aplicables
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.marco-organizativo
+  headword: es
+  en:
+    term: organisational framework
+    definition: The first group of ENS measures, coded org, covering the security policy,
+      rules, procedures and the authorisation process.
+  es:
+    verdict: translated
+    forms:
+      - text: marco organizativo
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+    definition: Primer grupo de medidas del ENS, de código org, que cubre la política de seguridad,
+      la normativa, los procedimientos y el proceso de autorización.
+    examples:
+      - es: La política de seguridad es la medida org.1 del marco organizativo.
+        en: The security policy is measure org.1 of the organisational framework.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - ENS
+  related:
+    - ens.marco-operacional
+    - ens.medidas-de-proteccion
+    - grc.policy
+  sources:
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - el marco organizativo
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.marco-operacional
+  headword: es
+  en:
+    term: operational framework
+    definition: The second group of ENS measures, coded op, covering planning, access control,
+      operations, external resources, cloud services, continuity and monitoring.
+  es:
+    verdict: translated
+    forms:
+      - text: marco operacional
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+    definition: Segundo grupo de medidas del ENS, de código op, que cubre la planificación,
+      el control de acceso, la explotación, los recursos externos, la nube, la continuidad
+      y la monitorización.
+    examples:
+      - es: El control de acceso pertenece al marco operacional.
+        en: Access control belongs to the operational framework.
+    watchOut: 'The decree calls day-to-day operations explotación, a word worth knowing: it
+      does not mean exploitation in the attack sense.'
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - ENS
+  related:
+    - ens.marco-organizativo
+    - ens.medidas-de-proteccion
+    - sec.access-control
+  sources:
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - el marco operacional
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.medidas-de-proteccion
+  headword: es
+  en:
+    term: protection measures
+    definition: 'The third group of ENS measures, coded mp, protecting specific assets: facilities,
+      staff, equipment, communications, media, software, information and services.'
+  es:
+    verdict: translated
+    forms:
+      - text: medidas de protección
+        article: las
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+    definition: 'Tercer grupo de medidas del ENS, de código mp, que protege activos concretos:
+      instalaciones, personal, equipos, comunicaciones, soportes, aplicaciones, información
+      y servicios.'
+    examples:
+      - es: El cifrado de portátiles es una de las medidas de protección de los equipos.
+        en: Laptop encryption is one of the protection measures for equipment.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - ENS
+  related:
+    - ens.marco-organizativo
+    - ens.marco-operacional
+    - grc.control
+  sources:
+    - label: AEPD, Gestión del riesgo y evaluación de impacto en tratamientos de datos personales
+      url: https://www.aepd.es/guias/gestion-riesgo-y-evaluacion-impacto-en-tratamientos-datos-personales.pdf
+      found:
+        - Medidas de protección
+      checked: 2026-11-14
+    - label: Reglamento (UE) 2024/1689 de Inteligencia Artificial, en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81079
+      found:
+        - medidas de protección
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.declaracion-de-aplicabilidad
+  headword: es
+  en:
+    term: statement of applicability
+    definition: The signed document listing which ENS measures apply to a system and justifying
+      any that do not; ISO 27001 has the same concept.
+  es:
+    verdict: translated
+    forms:
+      - text: declaración de aplicabilidad
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: SoA
+        article: la
+        kind: noun
+        note: The English acronym, common among people who also work with ISO 27001.
+    definition: Documento firmado que relaciona las medidas del ENS que se aplican a un sistema
+      y justifica las que no.
+    examples:
+      - es: El auditor empezó por revisar la declaración de aplicabilidad.
+        en: The auditor began by reviewing the statement of applicability.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - ENS
+    - ISO-27001
+  related:
+    - ens.medidas-compensatorias
+    - ens.perfil-de-cumplimiento
+    - grc.isms
+  sources:
+    - label: Real Decreto 43/2021, de seguridad de las redes y sistemas de información (BOE)
+      url: https://www.boe.es/diario_boe/txt.php?id=BOE-A-2021-1192
+      found:
+        - declaración de aplicabilidad
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.medidas-compensatorias
+  headword: es
+  en:
+    term: compensating measures
+    definition: Alternative measures that an organisation may use in place of those the ENS
+      requires, if it can show they protect equally well.
+  es:
+    verdict: translated
+    forms:
+      - text: medidas compensatorias
+        article: las
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: control compensatorio
+        article: el
+        kind: noun
+        note: A compensating control, the general term outside the ENS.
+    definition: Medidas alternativas que una organización puede emplear en lugar de las exigidas
+      por el ENS si justifica que protegen igual o mejor.
+    examples:
+      - es: Las medidas compensatorias deben constar en la declaración de aplicabilidad.
+        en: Compensating measures must be recorded in the statement of applicability.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - ENS
+  related:
+    - ens.declaracion-de-aplicabilidad
+    - grc.control
+    - grc.risk-treatment
+  sources:
+    - label: AEPD, Gestión del riesgo y evaluación de impacto en tratamientos de datos personales
+      url: https://www.aepd.es/guias/gestion-riesgo-y-evaluacion-impacto-en-tratamientos-datos-personales.pdf
+      found:
+        - de medidas compensatorias
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.perfil-de-cumplimiento
+  headword: es
+  en:
+    term: specific compliance profile
+    definition: A tailored set of ENS measures approved by the CCN for a particular type of
+      organisation or technology, such as town councils or a cloud service.
+  es:
+    verdict: translated
+    forms:
+      - text: perfil de cumplimiento específico
+        article: el
+        kind: noun
+        primary: true
+        plural: los perfiles de cumplimiento específicos
+        usedBy:
+          - official
+      - text: PCE
+        article: el
+        kind: noun
+        note: The usual abbreviation.
+    definition: Conjunto adaptado de medidas del ENS, validado por el CCN, para un tipo concreto
+      de entidad o de tecnología.
+    examples:
+      - es: El ayuntamiento aplica el perfil de cumplimiento específico para entidades locales.
+        en: The town council applies the specific compliance profile for local bodies.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - ENS
+  related:
+    - ens.declaracion-de-aplicabilidad
+    - ens.ccn
+    - fw.ens
+  sources:
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - perfil de cumplimiento específico
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.declaracion-de-conformidad
+  headword: es
+  en:
+    term: declaration of conformity
+    definition: The self-declaration, based on a self-assessment, by which a BÁSICA category
+      system states that it meets the ENS.
+  es:
+    verdict: translated
+    forms:
+      - text: declaración de conformidad
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+      - text: autoevaluación
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: The self-assessment behind it.
+    definition: Declaración, basada en una autoevaluación, por la que un sistema de categoría
+      BÁSICA manifiesta que cumple el ENS.
+    examples:
+      - es: Para la categoría básica basta una declaración de conformidad.
+        en: For the basic category, a declaration of conformity is enough.
+  topics:
+    - assessment
+    - grc
+  technology: []
+  frameworks:
+    - ENS
+  related:
+    - ens.certificacion-de-conformidad
+    - ens.distintivo-de-conformidad
+    - ens.categoria-de-seguridad
+  sources:
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - Declaración de Conformidad
+        - una autoevaluación para
+      checked: 2026-11-14
+    - label: Reglamento (UE) 2024/2847 (Reglamento de Ciberresiliencia), texto en español
+        publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81720
+      found:
+        - declaración de conformidad
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.certificacion-de-conformidad
+  headword: es
+  en:
+    term: certification of conformity
+    definition: The certificate an accredited body issues after auditing a MEDIA or ALTA category
+      system against the ENS.
+  es:
+    verdict: translated
+    forms:
+      - text: certificación de conformidad
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+      - text: certificación ENS
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: 'What people say: tenemos la certificación ENS categoría alta.'
+    definition: Certificado que emite una entidad acreditada tras auditar un sistema de categoría
+      MEDIA o ALTA frente al ENS.
+    examples:
+      - es: El pliego exige la certificación de conformidad con el ENS en categoría media.
+        en: The tender requires certification of conformity with the ENS at the medium category.
+  topics:
+    - assessment
+    - grc
+  technology: []
+  frameworks:
+    - ENS
+  related:
+    - ens.declaracion-de-conformidad
+    - ens.entidad-de-certificacion
+    - ens.auditoria-de-la-seguridad
+    - grc.certification
+  sources:
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - Certificación de Conformidad
+      checked: 2026-11-14
+    - label: Reglamento de Ejecución (UE) 2024/482 (EUCC), en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-80181
+      found:
+        - certificación de conformidad
+      checked: 2026-11-14
+    - label: INCIBE y Universidad de León, Guía de buenas prácticas de ciberseguridad para
+        redes privadas 5G
+      url: https://www.incibe.es/sites/default/files/2025-12/INCIBE&ULE_GuiaBuenasPracticasCiberseguridadRedesPrivadas5G.pdf
+      found:
+        - La certificación ENS de
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.distintivo-de-conformidad
+  headword: es
+  en:
+    term: conformity mark
+    definition: The official badge an organisation may display on its website once a system
+      has been declared or certified as ENS-conformant.
+  es:
+    verdict: translated
+    forms:
+      - text: distintivo de conformidad
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: sello del ENS
+        article: el
+        kind: noun
+        register: informal
+    definition: Insignia oficial que una entidad puede mostrar en su web cuando un sistema
+      ha obtenido la declaración o la certificación de conformidad con el ENS.
+    examples:
+      - es: La sede electrónica muestra el distintivo de conformidad con el ENS.
+        en: The e-government portal displays the ENS conformity mark.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - ENS
+  related:
+    - ens.certificacion-de-conformidad
+    - ens.declaracion-de-conformidad
+  sources:
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - distintivo de conformidad
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.auditoria-de-la-seguridad
+  headword: es
+  en:
+    term: security audit
+    definition: The formal ENS audit that MEDIA and ALTA category systems must pass at least
+      every two years, and after any substantial change.
+  es:
+    verdict: translated
+    forms:
+      - text: auditoría de la seguridad
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: auditoría del ENS
+        article: la
+        kind: noun
+        usedBy:
+          - official
+    definition: Auditoría formal que los sistemas de categoría MEDIA y ALTA deben superar
+      al menos cada dos años y tras cualquier cambio sustancial.
+    examples:
+      - es: La auditoría de la seguridad se realiza cada dos años.
+        en: The security audit is carried out every two years.
+  topics:
+    - assessment
+    - grc
+  technology: []
+  frameworks:
+    - ENS
+  related:
+    - grc.audit
+    - ens.certificacion-de-conformidad
+    - ens.entidad-de-certificacion
+    - grc.audit-report
+  sources:
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - auditoría de la seguridad
+      checked: 2026-11-14
+    - label: AEPD, resolución PS/00176/2022
+      url: https://www.aepd.es/documento/ps-00176-2022.pdf
+      found:
+        - Auditoría del ENS
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.entidad-de-certificacion
+  headword: es
+  en:
+    term: certification body
+    definition: An organisation accredited by ENAC, Spain's accreditation body, to audit and
+      certify systems against the ENS.
+  es:
+    verdict: translated
+    forms:
+      - text: entidad de certificación
+        article: la
+        kind: noun
+        primary: true
+        plural: las entidades de certificación
+        usedBy:
+          - official
+          - microsoft
+      - text: ENAC
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: The Entidad Nacional de Acreditación, which accredits them.
+    definition: Organización acreditada por ENAC para auditar y certificar sistemas conforme
+      al ENS.
+    examples:
+      - es: La auditoría la hizo una entidad de certificación acreditada por ENAC.
+        en: The audit was carried out by a certification body accredited by ENAC.
+  topics:
+    - assessment
+    - grc
+  technology: []
+  frameworks:
+    - ENS
+  related:
+    - ens.certificacion-de-conformidad
+    - grc.external-audit
+    - grc.auditor
+  sources:
+    - label: Ley Orgánica 3/2018 (LOPDGDD)
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673
+      found:
+        - entidad de certificación
+      checked: 2026-11-14
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/key-vault/certificates/about-certificates
+      found:
+        - entidad de certificación
+      checked: 2026-11-14
+    - label: AEPD, resolución PS/00176/2022
+      url: https://www.aepd.es/documento/ps-00176-2022.pdf
+      found:
+        - de ENAC
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.responsable-de-la-informacion
+  headword: es
+  en:
+    term: information owner
+    definition: The ENS role that decides the security requirements of the information handled,
+      and so its levels in each dimension.
+  es:
+    verdict: translated
+    forms:
+      - text: responsable de la información
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - microsoft
+        note: La responsable when a woman holds the role, as with the other three roles.
+    definition: Rol del ENS que determina los requisitos de seguridad de la información tratada
+      y, con ello, sus niveles en cada dimensión.
+    examples:
+      - es: El responsable de la información aprueba la valoración de los datos.
+        en: The information owner approves the rating of the data.
+    watchOut: Not the same as the GDPR's responsable del tratamiento, the data controller,
+      although one person may hold both.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - ENS
+  related:
+    - ens.responsable-del-servicio
+    - ens.responsable-de-la-seguridad
+    - grc.data-owner
+    - law.data-controller
+  sources:
+    - label: AEPD, Orientaciones y garantías en los procedimientos de anonimización de datos
+        personales
+      url: https://www.aepd.es/guias/guia-orientaciones-procedimientos-anonimizacion.pdf
+      found:
+        - responsable de la información
+      checked: 2026-11-14
+    - label: Microsoft Security, es-ES
+      url: https://www.microsoft.com/es-es/security/business/security-101/what-is-data-security
+      found:
+        - responsable de la información
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.responsable-del-servicio
+  headword: es
+  en:
+    term: service owner
+    definition: The ENS role that decides the security requirements of the services provided.
+  es:
+    verdict: translated
+    forms:
+      - text: responsable del servicio
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+    definition: Rol del ENS que determina los requisitos de seguridad de los servicios prestados.
+    examples:
+      - es: El responsable del servicio fija el nivel de disponibilidad exigido.
+        en: The service owner sets the required level of availability.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - ENS
+  related:
+    - ens.responsable-de-la-informacion
+    - ens.responsable-del-sistema
+    - grc.sla
+  sources:
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - responsable del servicio
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.responsable-de-la-seguridad
+  headword: es
+  en:
+    term: security officer
+    definition: The ENS role that decides how the security requirements are met and oversees
+      the measures; in effect the CISO, and independent of the system owner.
+  es:
+    verdict: translated
+    forms:
+      - text: responsable de la seguridad
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+      - text: CISO
+        article: el
+        kind: noun
+        headline: true
+        usedBy:
+          - official
+        note: The private-sector title for the same job. Said 'ciso'.
+      - text: responsable de seguridad de la información
+        article: el
+        kind: noun
+        usedBy:
+          - official
+        note: The title in NIS-related law, shortened to RSI.
+    definition: Rol del ENS que determina las decisiones para satisfacer los requisitos de
+      seguridad y supervisa las medidas; debe ser distinto del responsable del sistema.
+    examples:
+      - es: El responsable de la seguridad no puede depender del responsable del sistema.
+        en: The security officer cannot report to the system owner.
+  topics:
+    - grc
+    - human
+  technology: []
+  frameworks:
+    - ENS
+  related:
+    - ens.responsable-del-sistema
+    - ens.diferenciacion-de-responsabilidades
+    - sec.separation-of-duties
+  sources:
+    - label: Real Decreto 43/2021, de seguridad de las redes y sistemas de información (BOE)
+      url: https://www.boe.es/diario_boe/txt.php?id=BOE-A-2021-1192
+      found:
+        - responsable de la seguridad
+        - responsable de seguridad de la información
+      checked: 2026-11-14
+    - label: BOE, Reglamento (UE) 2023/2854 (Reglamento de Datos)
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2023-81895
+      found:
+        - responsable de la seguridad
+      checked: 2026-11-14
+    - label: AEPD, Gestión del riesgo y evaluación de impacto en tratamientos de datos personales
+      url: https://www.aepd.es/guias/gestion-riesgo-y-evaluacion-impacto-en-tratamientos-datos-personales.pdf
+      found:
+        - CISO
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.responsable-del-sistema
+  headword: es
+  en:
+    term: system owner
+    definition: The ENS role that develops, operates and maintains the information system
+      and applies the security measures to it.
+  es:
+    verdict: translated
+    forms:
+      - text: responsable del sistema
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+    definition: Rol del ENS que desarrolla, opera y mantiene el sistema de información y le
+      aplica las medidas de seguridad.
+    examples:
+      - es: El responsable del sistema puede suspender el servicio ante un incidente grave.
+        en: The system owner may suspend the service in the event of a serious incident.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - ENS
+  related:
+    - ens.responsable-de-la-seguridad
+    - ens.responsable-del-servicio
+    - ens.sistema-de-informacion
+  sources:
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - responsable del sistema
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.diferenciacion-de-responsabilidades
+  headword: es
+  en:
+    term: separation of responsibilities
+    definition: The ENS principle that the information owner, service owner, security officer
+      and system owner are distinct roles, with security kept apart from operations.
+  es:
+    verdict: translated
+    forms:
+      - text: diferenciación de responsabilidades
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+    definition: Principio del ENS por el que el responsable de la información, el del servicio,
+      el de la seguridad y el del sistema son roles distintos.
+    examples:
+      - es: La diferenciación de responsabilidades impide que quien opera el sistema supervise
+          su propia seguridad.
+        en: The separation of responsibilities stops whoever operates the system from overseeing
+          its own security.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - ENS
+  related:
+    - sec.separation-of-duties
+    - ens.responsable-de-la-seguridad
+    - ens.principios-basicos
+  sources:
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - diferenciación de responsabilidades
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.instruccion-tecnica
+  headword: es
+  en:
+    term: technical security instruction
+    definition: A binding instruction that develops part of the ENS in detail, such as the
+      ones on audits, conformity and incident notification.
+  es:
+    verdict: translated
+    forms:
+      - text: instrucción técnica de seguridad
+        article: la
+        kind: noun
+        primary: true
+        plural: las instrucciones técnicas de seguridad
+        usedBy:
+          - official
+      - text: ITS
+        article: la
+        kind: noun
+        headline: true
+        usedBy:
+          - official
+    say: 'ITS is spelled out: i-te-ese.'
+    definition: Instrucción de obligado cumplimiento que desarrolla en detalle una parte del
+      ENS, como las de auditoría, conformidad y notificación de incidentes.
+    examples:
+      - es: La instrucción técnica de seguridad de auditoría fija el contenido del informe.
+        en: The technical security instruction on audits sets out what the report must contain.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - ENS
+  related:
+    - ens.guias-ccn-stic
+    - ens.auditoria-de-la-seguridad
+    - law.regulation
+  sources:
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - Instrucción Técnica de Seguridad
+      checked: 2026-11-14
+    - label: BOE, normas europeas ratificadas por UNE en marzo de 2021
+      url: https://www.boe.es/boe/dias/2021/04/12/pdfs/BOE-A-2021-5756.pdf
+      found:
+        - ITS
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.ccn
+  headword: es
+  en:
+    term: National Cryptologic Centre
+    definition: The Spanish body, part of the intelligence service, that leads cyber security
+      for the public sector, writes the ENS guidance and runs CCN-CERT.
+  es:
+    verdict: translated
+    forms:
+      - text: Centro Criptológico Nacional
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - google
+      - text: CCN
+        article: el
+        kind: noun
+        headline: true
+        usedBy:
+          - official
+      - text: CCN-CERT
+        article: el
+        kind: noun
+        usedBy:
+          - official
+        note: Its incident response team, to which public-sector incidents are reported.
+    say: 'Spelled out: ce-ce-ene. CERT is said as a word.'
+    definition: Organismo español, adscrito al CNI, que dirige la ciberseguridad del sector
+      público, elabora las guías del ENS y gestiona el CCN-CERT.
+    examples:
+      - es: Los incidentes de nivel alto se notifican al CCN-CERT.
+        en: High-level incidents are reported to CCN-CERT.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - ENS
+  related:
+    - ens.guias-ccn-stic
+    - grc.regulator
+    - sec.incident-response
+    - fw.ens
+  sources:
+    - label: Orden PRE/2740/2007, Reglamento de Evaluación y Certificación de la Seguridad
+        de las TI
+      url: https://www.boe.es/buscar/pdf/2007/BOE-A-2007-16830-consolidado.pdf
+      found:
+        - Centro Criptológico Nacional
+      checked: 2026-11-14
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/security/compliance/ens?hl=es
+      found:
+        - Centro Criptológico Nacional
+      checked: 2026-11-14
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - seguridad CCN
+        - el CCN-CERT
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.guias-ccn-stic
+  headword: es
+  en:
+    term: CCN-STIC guides
+    definition: The CCN's series of security guides; the 800 series explains how to apply
+      the ENS, and others give hardening baselines for products.
+  es:
+    verdict: translated
+    forms:
+      - text: guías CCN-STIC
+        article: las
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: serie 800
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: The guides on the ENS itself, such as the CCN-STIC 808 on verification.
+    say: STIC is said as a word, 'estic'.
+    definition: Colección de guías de seguridad del CCN; la serie 800 explica cómo aplicar
+      el ENS y otras recogen el bastionado de productos.
+    examples:
+      - es: Hemos bastionado los servidores según la guía CCN-STIC correspondiente.
+        en: We have hardened the servers following the relevant CCN-STIC guide.
+  topics:
+    - hardening
+    - grc
+  technology: []
+  frameworks:
+    - ENS
+    - CCN-STIC
+  related:
+    - ens.ccn
+    - sec.hardening
+    - grc.guideline
+    - ens.instruccion-tecnica
+  sources:
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - guías CCN-STIC
+        - la serie 800
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.vigilancia-continua
+  headword: es
+  en:
+    term: continuous monitoring
+    definition: The ENS principle and measure of watching systems all the time to detect anomalies
+      and reassess their security state.
+  es:
+    verdict: translated
+    forms:
+      - text: vigilancia continua
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+    definition: Principio y medida del ENS de vigilar permanentemente los sistemas para detectar
+      anomalías y reevaluar su estado de seguridad.
+    examples:
+      - es: La vigilancia continua permite detectar comportamientos anómalos a tiempo.
+        en: Continuous monitoring makes it possible to detect abnormal behaviour in time.
+  topics:
+    - detection
+    - grc
+  technology: []
+  frameworks:
+    - ENS
+  related:
+    - sec.monitoring
+    - ens.reevaluacion-periodica
+    - sec.soc
+  sources:
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - la vigilancia continua mediante
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.reevaluacion-periodica
+  headword: es
+  en:
+    term: periodic reassessment
+    definition: The ENS principle that security measures are reviewed and updated regularly
+      as risks and protection systems change.
+  es:
+    verdict: translated
+    forms:
+      - text: reevaluación periódica
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+    definition: Principio del ENS por el que las medidas de seguridad se revisan y actualizan
+      con regularidad, a medida que cambian los riesgos.
+    examples:
+      - es: La reevaluación periódica puede llevar a replantear la seguridad por completo.
+        en: Periodic reassessment may lead to security being rethought completely.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - ENS
+  related:
+    - ens.vigilancia-continua
+    - tech.continual-improvement
+    - sec.risk-assessment
+  sources:
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - reevaluación periódica
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.proceso-integral
+  headword: es
+  en:
+    term: security as an integral process
+    definition: 'The first ENS principle: security covers people, technology, premises and
+      organisation together, with no one-off or isolated fixes.'
+  es:
+    verdict: translated
+    forms:
+      - text: seguridad como proceso integral
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+    definition: 'Primer principio del ENS: la seguridad abarca conjuntamente los elementos
+      humanos, técnicos, materiales y organizativos, sin actuaciones puntuales.'
+    examples:
+      - es: El ENS entiende la seguridad como proceso integral, no como un producto.
+        en: The ENS sees security as an integral process, not as a product.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - ENS
+  related:
+    - ens.principios-basicos
+    - sec.defence-in-depth
+    - grc.security-awareness
+  sources:
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - Seguridad como proceso integral
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.gestion-basada-en-riesgos
+  headword: es
+  en:
+    term: risk-based security management
+    definition: The ENS principle that risk analysis and management is an essential and continually
+      updated part of security.
+  es:
+    verdict: translated
+    forms:
+      - text: gestión de la seguridad basada en los riesgos
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: análisis de riesgos
+        article: el
+        kind: noun
+        usedBy:
+          - official
+        note: Usually done with the MAGERIT method and the CCN's PILAR tool.
+    definition: Principio del ENS por el que el análisis y la gestión de riesgos es parte
+      esencial y permanentemente actualizada de la seguridad.
+    examples:
+      - es: La gestión de la seguridad basada en los riesgos exige mantener el análisis al
+          día.
+        en: Risk-based security management requires the analysis to be kept up to date.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - ENS
+    - MAGERIT
+  related:
+    - grc.risk-management
+    - sec.risk-assessment
+    - ens.principios-basicos
+  sources:
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - gestión de la seguridad basada en los riesgos
+      checked: 2026-11-14
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - Análisis de riesgos
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.prevencion-deteccion-respuesta
+  headword: es
+  en:
+    term: prevention, detection, response and preservation
+    definition: The ENS principle that security must include measures to prevent incidents,
+      detect them, respond to them and preserve information and services.
+  es:
+    verdict: translated
+    forms:
+      - text: prevención, detección, respuesta y conservación
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+    definition: Principio del ENS por el que la seguridad debe incluir medidas para prevenir
+      los incidentes, detectarlos, responder a ellos y conservar la información y los servicios.
+    examples:
+      - es: Las copias de seguridad son la medida de conservación por excelencia.
+        en: Backups are the preservation measure par excellence.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - ENS
+  related:
+    - ens.principios-basicos
+    - grc.preventive-control
+    - grc.detective-control
+    - sec.incident-response
+  sources:
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - prevención, detección, respuesta y conservación
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.lineas-de-defensa
+  headword: es
+  en:
+    term: lines of defence
+    definition: The ENS principle that a system has several layers of protection, so that
+      if one fails there is time to react and the impact is reduced.
+  es:
+    verdict: translated
+    forms:
+      - text: líneas de defensa
+        article: las
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+      - text: existencia de líneas de defensa
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: The principle's full name.
+    definition: Principio del ENS por el que un sistema dispone de varias capas de protección,
+      de modo que si una falla se gana tiempo y se reduce el impacto.
+    examples:
+      - es: El cortafuegos es solo una de las líneas de defensa.
+        en: The firewall is only one of the lines of defence.
+  topics:
+    - architecture
+    - grc
+  technology: []
+  frameworks:
+    - ENS
+  related:
+    - sec.defence-in-depth
+    - ens.principios-basicos
+    - sec.network-segmentation
+  sources:
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - líneas de defensa
+        - existencia de líneas de defensa
+      checked: 2026-11-14
+    - label: Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81962
+      found:
+        - líneas de defensa
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.sistema-de-informacion
+  headword: es
+  en:
+    term: information system
+    definition: In the ENS, the organised set of resources through which information is collected,
+      processed, stored and made available; the unit that is categorised and certified.
+  es:
+    verdict: translated
+    forms:
+      - text: sistema de información
+        article: el
+        kind: noun
+        primary: true
+        plural: los sistemas de información
+        usedBy:
+          - official
+    definition: En el ENS, conjunto organizado de recursos con el que la información se recoge,
+      trata, conserva y pone a disposición; es la unidad que se categoriza y se certifica.
+    examples:
+      - es: Cada sistema de información tiene su propia categoría de seguridad.
+        en: Each information system has its own security category.
+  topics:
+    - asset
+    - grc
+  technology: []
+  frameworks:
+    - ENS
+  related:
+    - ens.categoria-de-seguridad
+    - ens.responsable-del-sistema
+    - grc.asset
+  sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - sistema de información
+      checked: 2026-11-14
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - sistema de información
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.sector-publico
+  headword: es
+  en:
+    term: public sector
+    definition: 'The bodies the ENS binds: central, regional and local government and their
+      agencies, plus the private companies that provide them with services.'
+  es:
+    verdict: translated
+    forms:
+      - text: sector público
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+      - text: Administración pública
+        article: la
+        kind: noun
+        plural: las Administraciones públicas
+        usedBy:
+          - official
+        note: Government bodies; shortened to AA. PP. in writing.
+      - text: ámbito de aplicación
+        article: el
+        kind: noun
+        usedBy:
+          - official
+        note: Scope of application, the legal phrase for who is covered.
+    definition: 'Entidades a las que obliga el ENS: las Administraciones estatal, autonómica
+      y local y sus organismos, además de las empresas privadas que les prestan servicios.'
+    examples:
+      - es: Los proveedores del sector público también deben cumplir el ENS.
+        en: Suppliers to the public sector must also comply with the ENS.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - ENS
+  related:
+    - fw.ens
+    - grc.outsourcing
+    - ens.infraestructuras-y-servicios-comunes
+  sources:
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - del sector público
+      checked: 2026-11-14
+    - label: BOE, Reglamento (UE) 2023/2854 (Reglamento de Datos)
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2023-81895
+      found:
+        - del sector público
+      checked: 2026-11-14
+    - label: Esquema Nacional de Interoperabilidad (RD 4/2010)
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2010-1331
+      found:
+        - de Administración Pública
+      checked: 2026-11-14
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - ámbito de aplicación
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.infraestructuras-y-servicios-comunes
+  headword: es
+  en:
+    term: shared infrastructure and services
+    definition: Common platforms provided across government, such as the SARA network, which
+      the ENS encourages bodies to use for efficiency and security.
+  es:
+    verdict: translated
+    forms:
+      - text: infraestructuras y servicios comunes
+        article: las
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: servicios compartidos
+        article: los
+        kind: noun
+        usedBy:
+          - official
+    definition: Plataformas comunes de las Administraciones, como la red SARA, cuyo uso fomenta
+      el ENS por eficiencia y seguridad.
+    examples:
+      - es: El ministerio usa las infraestructuras y servicios comunes para la notificación
+          electrónica.
+        en: The ministry uses the shared infrastructure and services for electronic notification.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - ENS
+  related:
+    - ens.sector-publico
+    - cloud.community-cloud
+    - tech.managed-service
+  sources:
+    - label: Esquema Nacional de Interoperabilidad (RD 4/2010)
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2010-1331
+      found:
+        - Infraestructuras y servicios comunes
+      checked: 2026-11-14
+    - label: AEPD, Guía de protección de datos por defecto
+      url: https://www.aepd.es/guias/guia-proteccion-datos-por-defecto.pdf
+      found:
+        - servicios compartidos con
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.ines
+  headword: es
+  en:
+    term: National Report on the State of Security
+    definition: The yearly report for which public bodies submit their security indicators
+      to the CCN through the INES platform.
+  es:
+    verdict: translated
+    forms:
+      - text: Informe Nacional del Estado de la Seguridad
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: INES
+        kind: noun
+        headline: true
+        usedBy:
+          - official
+        note: Also the name of the CCN tool used to submit the data.
+    say: INES is said as a word, like the name Inés.
+    definition: Informe anual para el que las entidades públicas remiten al CCN sus indicadores
+      de seguridad a través de la plataforma INES.
+    examples:
+      - es: Antes de marzo hay que cargar los datos del organismo en INES.
+        en: The body's data has to be uploaded to INES before March.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - ENS
+  related:
+    - ens.ccn
+    - grc.kpi
+    - ens.vigilancia-continua
+  sources:
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - Informe Nacional del Estado de la Seguridad
+        - INES
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.calificacion-de-la-informacion
+  headword: es
+  en:
+    term: information marking
+    definition: The ENS measure of rating information by its sensitivity and handling it accordingly;
+      the decree avoids the word classification, which is kept for state secrets.
+  es:
+    verdict: translated
+    forms:
+      - text: calificación de la información
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: información clasificada
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: Classified information in the state-secret sense, governed by other law.
+    definition: Medida del ENS que consiste en valorar la información según su sensibilidad
+      y tratarla en consecuencia.
+    examples:
+      - es: La calificación de la información determina quién puede acceder a cada documento.
+        en: The marking of information determines who may access each document.
+    watchOut: In the public sector, clasificada means secret in the legal sense. For ordinary
+      sensitivity levels the ENS says calificación.
+  topics:
+    - data
+    - grc
+  technology: []
+  frameworks:
+    - ENS
+  related:
+    - sec.data-classification
+    - sec.data-labelling
+    - sec.need-to-know
+  sources:
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - Calificación de la información
+        - tratan información clasificada
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.puesto-de-trabajo-despejado
+  headword: es
+  en:
+    term: clear desk
+    definition: The ENS measure requiring desks to be kept free of sensitive material and
+      screens to lock when left.
+  es:
+    verdict: translated
+    forms:
+      - text: puesto de trabajo despejado
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: bloqueo de puesto de trabajo
+        article: el
+        kind: noun
+        usedBy:
+          - official
+        note: 'The companion measure: the workstation locks after a period of inactivity.'
+      - text: política de mesas limpias
+        article: la
+        kind: noun
+        note: The clean desk policy, as companies usually call it.
+    definition: Medida del ENS que obliga a mantener la mesa libre de material sensible y
+      a bloquear la pantalla al ausentarse.
+    examples:
+      - es: La auditoría detectó contraseñas en notas adhesivas, contra la norma de puesto
+          de trabajo despejado.
+        en: The audit found passwords on sticky notes, against the clear desk rule.
+  topics:
+    - physical
+    - human
+  technology: []
+  frameworks:
+    - ENS
+  related:
+    - sec.physical-security
+    - grc.security-awareness
+    - sec.endpoint-security
+  sources:
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - Puesto de trabajo despejado
+        - Bloqueo de puesto de trabajo
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.limpieza-de-documentos
+  headword: es
+  en:
+    term: document sanitisation
+    definition: The ENS measure of removing hidden data, such as metadata, comments and revision
+      history, from documents before they are published.
+  es:
+    verdict: translated
+    forms:
+      - text: limpieza de documentos
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: metadatos
+        article: los
+        kind: noun
+        usedBy:
+          - official
+        note: Metadata, the main thing to remove.
+    definition: Medida del ENS que consiste en retirar de los documentos, antes de publicarlos,
+      los datos ocultos como metadatos, comentarios y revisiones.
+    examples:
+      - es: La limpieza de documentos evita publicar el nombre del autor en los metadatos.
+        en: Document sanitisation avoids publishing the author's name in the metadata.
+  topics:
+    - data
+  technology: []
+  frameworks:
+    - ENS
+  related:
+    - sec.data-obfuscation
+    - sec.dlp
+    - law.personal-data
+  sources:
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - Limpieza de documentos
+      checked: 2026-11-14
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - Metadatos
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.borrado-y-destruccion
+  headword: es
+  en:
+    term: erasure and destruction
+    definition: The ENS measure covering the secure wiping or physical destruction of media
+      before reuse or disposal.
+  es:
+    verdict: translated
+    forms:
+      - text: borrado y destrucción
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: borrado seguro
+        article: el
+        kind: noun
+        usedBy:
+          - official
+        note: Secure erasure, the everyday term.
+      - text: soporte
+        article: el
+        kind: noun
+        plural: los soportes
+        usedBy:
+          - official
+        note: Storage media, the ENS's word for disks, tapes and USB sticks.
+    definition: Medida del ENS que regula el borrado seguro o la destrucción física de los
+      soportes antes de reutilizarlos o desecharlos.
+    examples:
+      - es: El proveedor entrega un certificado de borrado y destrucción de los discos.
+        en: The supplier provides a certificate of erasure and destruction for the disks.
+  topics:
+    - data
+    - asset
+  technology: []
+  frameworks:
+    - ENS
+  related:
+    - sec.media-sanitization
+    - sec.data-deletion
+    - sec.data-remanence
+    - sec.cryptographic-erasure
+  sources:
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - Borrado y destrucción
+      checked: 2026-11-14
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - Borrado seguro
+        - un soporte
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.registro-de-la-actividad
+  headword: es
+  en:
+    term: activity logging
+    definition: The ENS requirement and measure to record what users do, so that actions can
+      be traced to the person who carried them out.
+  es:
+    verdict: translated
+    forms:
+      - text: registro de la actividad
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+      - text: registro de actividad
+        article: el
+        kind: noun
+        usedBy:
+          - official
+    definition: Requisito y medida del ENS de registrar lo que hacen los usuarios para poder
+      atribuir cada acción a quien la realizó.
+    examples:
+      - es: El registro de la actividad de los administradores se conserva dos años.
+        en: The administrators' activity log is kept for two years.
+  topics:
+    - detection
+  technology: []
+  frameworks:
+    - ENS
+  related:
+    - sec.log
+    - sec.traceability
+    - sec.log-management
+    - sec.accountability
+  sources:
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - registro de la actividad
+      checked: 2026-11-14
+    - label: AEPD, resolución PS/00176/2022
+      url: https://www.aepd.es/documento/ps-00176-2022.pdf
+      found:
+        - registro de actividad
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.medios-alternativos
+  headword: es
+  en:
+    term: alternative means
+    definition: The ENS term for the backup facilities, equipment, communications and staff
+      that must be available when the usual ones fail.
+  es:
+    verdict: translated
+    forms:
+      - text: medios alternativos
+        article: los
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+      - text: continuidad de la actividad
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: The ENS's name for continuity, one of its minimum requirements.
+    definition: Término del ENS para las instalaciones, equipos, comunicaciones y personal
+      de respaldo que deben estar disponibles cuando fallan los habituales.
+    examples:
+      - es: La categoría alta exige medios alternativos de comunicación.
+        en: The high category requires alternative means of communication.
+  topics:
+    - incident
+    - architecture
+  technology: []
+  frameworks:
+    - ENS
+  related:
+    - sec.redundancy
+    - sec.business-continuity
+    - sec.hot-site
+    - sec.disaster-recovery
+  sources:
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - Medios alternativos
+        - continuidad de la actividad
+      checked: 2026-11-14
+    - label: Reglamento (UE) 2024/1689 de Inteligencia Artificial, en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81079
+      found:
+        - utilizando medios alternativos adecuados
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.incidente-de-seguridad
+  headword: es
+  en:
+    term: security incident
+    definition: In the ENS, an unexpected or unwanted event with consequences for the security
+      of systems; serious ones must be notified to CCN-CERT.
+  es:
+    verdict: translated
+    forms:
+      - text: incidente de seguridad
+        article: el
+        kind: noun
+        primary: true
+        plural: los incidentes de seguridad
+        usedBy:
+          - official
+      - text: ciberincidente
+        article: el
+        kind: noun
+        usedBy:
+          - official
+        note: The word used in the national notification guide.
+      - text: notificación de incidentes
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: Incident notification, a duty under the ENS.
+    definition: En el ENS, suceso inesperado o no deseado con consecuencias en detrimento
+      de la seguridad de los sistemas; los graves deben notificarse al CCN-CERT.
+    examples:
+      - es: El incidente de seguridad se notificó al CCN-CERT en menos de 24 horas.
+        en: The security incident was notified to CCN-CERT in under 24 hours.
+    watchOut: IT service desks say incidencia for any fault or ticket. An incidente de seguridad
+      is the security event.
+  topics:
+    - incident
+  technology: []
+  frameworks:
+    - ENS
+  related:
+    - sec.incident-response
+    - ens.ccn
+    - sec.data-breach
+    - law.breach-notification
+  sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - Incidente de seguridad
+      checked: 2026-11-14
+    - label: INCIBE, Taxonomía de soluciones de ciberseguridad
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/taxonomia_ciberseguridad.pdf
+      found:
+        - incidente de seguridad
+      checked: 2026-11-14
+    - label: Real Decreto 43/2021, de seguridad de las redes y sistemas de información (BOE)
+      url: https://www.boe.es/diario_boe/txt.php?id=BOE-A-2021-1192
+      found:
+        - un ciberincidente conforme
+        - notificación de incidentes
+      checked: 2026-11-14
+  status: sourced
+
+- id: ens.catalogo-cpstic
+  headword: es
+  en:
+    term: catalogue of ICT security products and services
+    definition: The CCN's list of products and services it has qualified or approved, from
+      which ENS systems are expected to choose their security components.
+  es:
+    verdict: translated
+    forms:
+      - text: Catálogo de Productos y Servicios de Seguridad de las Tecnologías de la Información
+          y la Comunicación
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - aws
+      - text: catálogo CPSTIC
+        article: el
+        kind: noun
+        headline: true
+        note: The name everyone uses. Also the guide CCN-STIC 105.
+      - text: producto cualificado
+        article: el
+        kind: noun
+        note: A qualified product, one listed for ENS use.
+    definition: Lista del CCN de productos y servicios cualificados o aprobados, de la que
+      los sistemas sujetos al ENS deben elegir sus componentes de seguridad.
+    examples:
+      - es: El cortafuegos elegido figura en el catálogo CPSTIC para categoría alta.
+        en: The chosen firewall is listed in the CPSTIC catalogue for the high category.
+  topics:
+    - supplychain
+    - grc
+  technology: []
+  frameworks:
+    - ENS
+    - CCN-STIC
+  related:
+    - ens.ccn
+    - fw.common-criteria
+    - grc.certification
+  sources:
+    - label: Esquema Nacional de Seguridad (RD 311/2022), medida mp.if.1
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - CPSTIC
+      checked: 2026-11-14
+    - label: AWS, páginas en español
+      url: https://aws.amazon.com/es/compliance/programs/
+      found:
+        - CPSTIC CNC
+      checked: 2026-11-14
+  status: sourced
