@@ -61,6 +61,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.iaas, cloud.shared-responsibility, cloud.multitenancy]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad"
@@ -132,6 +133,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.cloud-computing, cloud.iaas]
   sources:
     - label: "CCN-STIC 499, Arquitecturas de seguridad cloud"
@@ -207,6 +209,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.cloud-computing, cloud.hypervisor]
   sources:
     - label: "CCN-STIC 499, Arquitecturas de seguridad cloud"
@@ -267,6 +270,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.cloud-computing, cloud.shared-responsibility, cloud.virtual-machine]
   sources:
     - label: "CCN-STIC 823, Seguridad en entornos cloud"
@@ -322,6 +326,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [sec.key-management, sec.data-at-rest, sec.tokenization]
   sources:
     - label: "Diccionario de la lengua española (RAE): cifrar"
@@ -389,6 +394,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 2 }
   related: [sec.encryption, sec.key-management, sec.dlp]
   sources:
     - label: "CCN-STIC 499, Arquitecturas de seguridad cloud"
@@ -443,6 +449,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [sec.encryption, sec.data-at-rest]
   sources:
     - label: "CCN-STIC 401, Glosario y abreviaturas: Gestión de claves"
@@ -503,6 +510,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 2 }
   related: [sec.encryption, sec.dlp, law.personal-data]
   sources:
     - label: "Google Cloud, páginas para España"
@@ -565,6 +573,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 2 }
   related: [sec.data-at-rest, sec.tokenization, law.personal-data]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad: DLP"
@@ -619,6 +628,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.virtual-machine, cloud.multitenancy]
   sources:
     - label: "CCN-STIC 887D, Guía de configuración segura multi-cuenta AWS"
@@ -666,6 +676,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.hypervisor, cloud.iaas]
   sources:
     - label: "INCIBE, Guía de buenas prácticas de ciberseguridad en redes privadas 5G: glosario"
@@ -736,6 +747,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 7 }
   related: [sec.backup, sec.incident-response]
   sources:
     - label: "INCIBE, Guía de gestión de crisis"
@@ -813,6 +825,7 @@
   technology: [networking]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 4 }
   related: [sec.log, sec.api]
   sources:
     - label: "Diccionario panhispánico de dudas (RAE): cortafuegos"
@@ -889,6 +902,7 @@
   technology: [ci-cd]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   related: [sec.threat-modelling, sec.sandbox]
   sources:
     - label: "CCN-STIC 812, Seguridad en entornos y aplicaciones web"
@@ -951,6 +965,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [sec.sdlc, cloud.virtual-machine]
   sources:
     - label: "INCIBE-CERT, blog: actuación frente a ciberincidentes"
@@ -1017,6 +1032,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 7 }
   related: [sec.sdlc, sec.risk-assessment]
   sources:
     - label: "INCIBE, diccionario de controles C4V (borrador)"
@@ -1076,6 +1092,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   related: [sec.firewall, sec.sdlc]
   sources:
     - label: "Diccionario panhispánico de dudas (RAE): sigla"
@@ -1150,6 +1167,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 5 }
+    - { cert: CISSP, outline: "2027-04", domain: 7 }
   related: [sec.log, sec.disaster-recovery]
   sources:
     - label: "Esquema Nacional de Seguridad (RD 311/2022), medida op.exp.7: Gestión de incidentes"
@@ -1223,6 +1241,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 5 }
+    - { cert: CISSP, outline: "2027-04", domain: 7 }
   related: [sec.incident-response, cloud.iaas]
   sources:
     - label: "INCIBE-CERT, blog: Gestión de parches en sistemas de control"
@@ -1302,6 +1321,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 5 }
+    - { cert: CISSP, outline: "2027-04", domain: 7 }
   related: [sec.incident-response, sec.firewall]
   sources:
     - label: "Esquema Nacional de Seguridad (RD 311/2022), medida op.exp.8: Registro de la actividad"
@@ -1379,6 +1399,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 5 }
+    - { cert: CISSP, outline: "2027-04", domain: 7 }
   related: [sec.disaster-recovery, sec.data-at-rest]
   sources:
     - label: "Diccionario panhispánico de dudas (RAE): copia de seguridad"
@@ -1440,6 +1461,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 6 }
+    - { cert: CISSP, outline: "2027-04", domain: 1 }
   frameworks: [GDPR]
   related: [law.data-controller, law.personal-data]
   sources:
@@ -1493,6 +1515,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 6 }
+    - { cert: CISSP, outline: "2027-04", domain: 1 }
   frameworks: [GDPR]
   related: [fw.gdpr, law.personal-data, cloud.shared-responsibility]
   sources:
@@ -1540,6 +1563,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 6 }
+    - { cert: CISSP, outline: "2027-04", domain: 2 }
   frameworks: [GDPR]
   related: [fw.gdpr, law.data-controller, sec.dlp]
   sources:
@@ -1597,6 +1621,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 6 }
+    - { cert: CISSP, outline: "2027-04", domain: 1 }
   related: [sec.threat-modelling, fw.gdpr]
   sources:
     - label: "Esquema Nacional de Seguridad (RD 311/2022), Anexo IV: Glosario"

@@ -35,8 +35,7 @@ function categoryLine(term: Term, lang: Lang) {
   const parts: string[] = [];
   const topic = topics.find((t) => t.id === term.topics[0]);
   if (topic) parts.push(topic[lang]);
-  const c = term.curriculum?.[0];
-  if (c) parts.push(`${c.cert} ${lang === 'es' ? 'Dominio' : 'Domain'} ${c.domain}`);
+  for (const c of term.curriculum ?? []) parts.push(`${c.cert} ${lang === 'es' ? 'Dominio' : 'Domain'} ${c.domain}`);
   for (const id of term.frameworks ?? []) {
     const framework = frameworks.find((f) => f.id === id);
     if (framework) parts.push(framework.name);
@@ -74,8 +73,11 @@ export function Entry({ id }: { id: string }) {
 
   const isSaved = saved.includes(term.id);
   const related = alphabetical(term.related.flatMap((r) => getTerm(r) ?? []));
-  const certId = term.curriculum?.[0]?.cert;
-  const cert = certId ? certifications.find((c) => c.id === certId) : undefined;
+  // Each exam outline the term is filed under, named once at the foot of the page.
+  const outlines = (term.curriculum ?? []).flatMap((c) => {
+    const cert = certifications.find((x) => x.id === c.cert);
+    return cert?.outlineLabel ? [`${cert.name}: ${cert.outlineLabel}`] : [];
+  });
   // A Spanish concept with no real English name is titled in Spanish.
   const spanishFirst = term.headword === 'es';
   const acronym = spanishFirst ? term.es.acronym : term.en.acronym;
@@ -175,7 +177,7 @@ export function Entry({ id }: { id: string }) {
 
       <Sources term={term} />
 
-      {cert?.outlineLabel && <p className="footnote">{cert.outlineLabel}</p>}
+      {outlines.length > 0 && <p className="footnote">{outlines.join(' · ')}</p>}
     </main>
   );
 }

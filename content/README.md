@@ -109,5 +109,6 @@ checked source and confirm each `found` text is still on its page.
 
 `sec.` security concepts · `cloud.` cloud concepts · `grc.` governance, risk
 and business terms · `ai.` artificial intelligence · `tech.` other technology ·
-`law.` legal terms · `fw.` frameworks, standards and regulations. Later:
-`aws.`, `azure.`, `gcp.`, `k8s.`, `tool.`, `attack.`.
+`law.` legal terms · `fw.` frameworks, standards and regulations · `azure.`
+Microsoft Azure · `gcp.` Google Cloud. Later: `aws.`, `k8s.`, `tool.`,
+`attack.`.
