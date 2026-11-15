@@ -8,6 +8,7 @@ import {
   primaryForm,
   technology,
   terms,
+  termsFor,
   topics,
   wordOfTheDay,
 } from '../data';
@@ -57,8 +58,8 @@ function Modules() {
   const example = word.es.examples[0];
   // The four ways into the glossary, in alphabetical order.
   const tiles = [
-    { label: 'Certifications', count: certifications.length, path: '/browse/cert' },
-    { label: 'Frameworks', count: frameworks.length, path: '/browse/framework' },
+    { label: 'Certifications', count: certifications.filter((c) => c.domains.length > 0).length, path: '/browse/cert' },
+    { label: 'Frameworks', count: frameworks.filter((f) => termsFor('framework', f.id).length > 0).length, path: '/browse/framework' },
     { label: 'Technologies', count: populated(technology, 'tech').length, path: '/browse/tech' },
     { label: 'Topics', count: populated(topics, 'topic').length, path: '/browse/topic' },
   ];

@@ -1,6 +1,7 @@
 # Content format
 
 To add a batch of terms, follow [ADDING-TERMS.md](ADDING-TERMS.md).
+What is waiting to be added is listed in [BACKLOG.md](BACKLOG.md).
 
 Terms live in YAML files under `content/terms/`. One entry is one English
 term with its Spanish usage in Spain (es-ES). The app is built from these
@@ -86,7 +87,7 @@ One confirmed sighting of the main form is enough. Two is plenty.
 ## Certifications and frameworks
 
 `content/taxonomy.yaml` lists them. A certification with no `domains` yet, or
-a framework with no terms, shows in the app as "coming soon".
+a framework with no terms, is not shown in the app.
 
 A term joins a framework through `frameworks`, and only when it is part of that
 framework's own vocabulary. A general term such as encryption does not belong
