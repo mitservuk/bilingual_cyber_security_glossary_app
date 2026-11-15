@@ -1,0 +1,1946 @@
+# Kubernetes and containers, following the KCSA curriculum.
+# Format is described in content/README.md. These entries were written from
+# working knowledge of usage in Spain; each `found` text was then located in a
+# page the glossary already cites and confirmed with scripts/check_sources.py.
+# Forms with no usedBy have not been seen in a source.
+
+- id: k8s.cloud-native
+  en:
+    term: cloud native
+    definition: 'Built to run in the cloud from the start: packaged in containers, orchestrated,
+      automated and made of loosely coupled services.'
+  es:
+    verdict: both
+    forms:
+      - text: nativo de la nube
+        kind: adjective
+        primary: true
+        usedBy:
+          - microsoft
+          - google
+      - text: cloud native
+        kind: adjective
+        headline: true
+        usedBy:
+          - aws
+        note: 'Very often kept in English: aplicaciones cloud native.'
+    definition: 'Diseñado desde el principio para ejecutarse en la nube: empaquetado en contenedores,
+      orquestado, automatizado y formado por servicios poco acoplados.'
+    examples:
+      - es: La nueva plataforma es nativa de la nube y se despliega en Kubernetes.
+        en: The new platform is cloud native and is deployed on Kubernetes.
+  topics:
+    - architecture
+  technology:
+    - kubernetes
+    - containers-oci
+    - cloud-general
+  curriculum:
+    - cert: KCSA
+      outline: current
+      domain: 1
+  related:
+    - tech.kubernetes
+    - cloud.container
+    - cloud.microservices
+    - sec.cnapp
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/architecture/guide/technology-choices/compute-decision-tree
+      found:
+        - nativas de la nube
+      checked: 2026-11-15
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/learn/what-is-cloud-native?hl=es
+      found:
+        - nativas de la nube
+      checked: 2026-11-15
+    - label: AWS, páginas en español
+      url: https://aws.amazon.com/es/kubernetes/
+      found:
+        - con Cloud Native Computing
+      checked: 2026-11-15
+  status: sourced
+
+- id: k8s.4cs
+  en:
+    term: the 4Cs of cloud native security
+    definition: 'A layered model of where security applies: cloud, cluster, container and
+      code, each layer resting on the one outside it.'
+  es:
+    verdict: translated
+    forms:
+      - text: las 4C de la seguridad nativa de la nube
+        kind: noun
+        primary: true
+      - text: nube, clúster, contenedor y código
+        kind: noun
+        note: The four layers, from the outside in.
+    definition: 'Modelo por capas de dónde se aplica la seguridad: nube, clúster, contenedor
+      y código, cada una apoyada en la exterior.'
+    examples:
+      - es: Según las 4C, un clúster no puede ser más seguro que la nube sobre la que corre.
+        en: According to the 4Cs, a cluster cannot be more secure than the cloud it runs on.
+  topics:
+    - architecture
+  technology:
+    - kubernetes
+    - containers-oci
+  curriculum:
+    - cert: KCSA
+      outline: current
+      domain: 1
+  related:
+    - sec.defence-in-depth
+    - k8s.cloud-native
+    - cloud.shared-responsibility
+  sources: []
+  status: draft
+
+- id: k8s.node
+  en:
+    term: node
+    definition: A machine, virtual or physical, in a Kubernetes cluster. Worker nodes run
+      the pods; control plane nodes run the cluster's own components.
+  es:
+    verdict: translated
+    forms:
+      - text: nodo
+        article: el
+        kind: noun
+        primary: true
+        plural: los nodos
+        usedBy:
+          - microsoft
+          - google
+      - text: nodo de trabajo
+        article: el
+        kind: noun
+        usedBy:
+          - microsoft
+        note: A worker node; also nodo worker.
+    definition: Máquina, virtual o física, de un clúster de Kubernetes. Los nodos de trabajo
+      ejecutan los pods; los del plano de control, los componentes del propio clúster.
+    examples:
+      - es: El clúster tiene tres nodos de trabajo repartidos en tres zonas.
+        en: The cluster has three worker nodes spread across three zones.
+  topics:
+    - architecture
+  technology:
+    - kubernetes
+  curriculum:
+    - cert: KCSA
+      outline: current
+      domain: 1
+  related:
+    - cloud.cluster
+    - k8s.pod
+    - k8s.kubelet
+    - cloud.control-plane
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/architecture/guide/technology-choices/compute-decision-tree
+      found:
+        - nodos de trabajo
+      checked: 2026-11-15
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/learn/what-is-kubernetes?hl=es
+      found:
+        - nodos del clúster
+      checked: 2026-11-15
+  status: sourced
+
+- id: k8s.pod
+  en:
+    term: pod
+    definition: 'The smallest unit Kubernetes deploys: one or more containers that share a
+      network address and storage.'
+  es:
+    verdict: english-kept
+    forms:
+      - text: pod
+        article: el
+        kind: noun
+        primary: true
+        plural: los pods
+        usedBy:
+          - microsoft
+          - google
+    definition: 'Unidad mínima que despliega Kubernetes: uno o varios contenedores que comparten
+      dirección de red y almacenamiento.'
+    examples:
+      - es: El pod no arranca porque no puede descargar la imagen.
+        en: The pod will not start because it cannot pull the image.
+  topics:
+    - architecture
+  technology:
+    - kubernetes
+  curriculum:
+    - cert: KCSA
+      outline: current
+      domain: 1
+  related:
+    - cloud.container
+    - k8s.node
+    - k8s.namespace
+    - k8s.security-context
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/storage/common/storage-introduction
+      found:
+        - rápidamente los pods con
+      checked: 2026-11-15
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/learn/what-is-kubernetes?hl=es
+      found:
+        - si un pod falla
+      checked: 2026-11-15
+  status: sourced
+
+- id: k8s.namespace
+  en:
+    term: namespace
+    definition: A named partition of a Kubernetes cluster used to separate teams or applications
+      and to scope policies, quotas and access.
+  es:
+    verdict: both
+    forms:
+      - text: espacio de nombres
+        article: el
+        kind: noun
+        primary: true
+        plural: los espacios de nombres
+        usedBy:
+          - microsoft
+          - google
+      - text: namespace
+        article: el
+        kind: noun
+        headline: true
+        plural: los namespaces
+        note: What engineers say.
+    definition: Partición con nombre de un clúster de Kubernetes que separa equipos o aplicaciones
+      y delimita políticas, cuotas y accesos.
+    examples:
+      - es: Cada equipo tiene su propio namespace con cuotas de recursos.
+        en: Each team has its own namespace with resource quotas.
+    watchOut: 'A namespace separates names, not workloads: on its own it is not a security
+      boundary. Linux kernel namespaces, which isolate containers, are a different thing with
+      the same name.'
+  topics:
+    - architecture
+    - authz
+  technology:
+    - kubernetes
+  curriculum:
+    - cert: KCSA
+      outline: current
+      domain: 2
+  related:
+    - cloud.multitenancy
+    - k8s.network-policy
+    - k8s.rbac
+    - sec.isolation
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/windows/win32/api/nvme/ns-nvme-nvme_identify_controller_data
+      found:
+        - espacio de nombres
+      checked: 2026-11-15
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/discover/what-is-containerization?hl=es
+      found:
+        - espacios de nombres
+      checked: 2026-11-15
+  status: sourced
+
+- id: k8s.api-server
+  en:
+    term: API server
+    definition: 'The front door of the Kubernetes control plane: every request to read or
+      change the cluster goes through it and is authenticated, authorised and admitted there.'
+  es:
+    verdict: translated
+    forms:
+      - text: servidor de la API
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - aws
+      - text: API server
+        article: el
+        kind: noun
+        headline: true
+        usedBy:
+          - official
+      - text: kube-apiserver
+        kind: noun
+        note: The component's name.
+    definition: 'Puerta de entrada del plano de control de Kubernetes: toda petición de leer
+      o modificar el clúster pasa por él y allí se autentica, se autoriza y se admite.'
+    examples:
+      - es: El servidor de la API no debe ser accesible desde internet.
+        en: The API server must not be reachable from the internet.
+  topics:
+    - architecture
+    - authn
+  technology:
+    - kubernetes
+  curriculum:
+    - cert: KCSA
+      outline: current
+      domain: 2
+  related:
+    - cloud.control-plane
+    - k8s.etcd
+    - wiz.admission-controller
+    - k8s.kubectl
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/networking/design-guide/azure-firewall
+      found:
+        - del servidor API
+      checked: 2026-11-15
+    - label: AWS, páginas en español
+      url: https://aws.amazon.com/es/kubernetes/
+      found:
+        - servidor de API
+      checked: 2026-11-15
+    - label: 'INCIBE-CERT, Estudio: SBOM en entornos industriales (2026)'
+      url: https://www.incibe.es/sites/default/files/2026-05/INCIBE-CERT_ESTUDIO_SBOM%20EN%20ENTORNOS%20INDUSTRIALES_v1.0.pdf
+      found:
+        - API Server
+      checked: 2026-11-15
+  status: sourced
+
+- id: k8s.etcd
+  en:
+    term: etcd
+    definition: The key-value store that holds all of a Kubernetes cluster's state, including
+      its secrets.
+  es:
+    verdict: english-kept
+    forms:
+      - text: etcd
+        kind: noun
+        primary: true
+        usedBy:
+          - aws
+    say: Said 'et-ce-de'.
+    definition: Almacén de clave-valor que guarda todo el estado de un clúster de Kubernetes,
+      incluidos sus secretos.
+    examples:
+      - es: Quien accede a etcd puede leer todos los secretos del clúster.
+        en: Whoever gets access to etcd can read every secret in the cluster.
+  topics:
+    - data
+    - architecture
+  technology:
+    - kubernetes
+  curriculum:
+    - cert: KCSA
+      outline: current
+      domain: 2
+  related:
+    - k8s.api-server
+    - k8s.secret
+    - sec.data-at-rest
+    - sec.backup
+  sources:
+    - label: AWS, páginas en español
+      url: https://aws.amazon.com/es/kubernetes/
+      found:
+        - etcd
+      checked: 2026-11-15
+  status: sourced
+
+- id: k8s.kubelet
+  en:
+    term: kubelet
+    definition: The agent on every node that starts and watches the containers the control
+      plane assigns to it.
+  es:
+    verdict: english-kept
+    forms:
+      - text: kubelet
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - google
+          - engineers
+    say: Said 'cúbelet'.
+    definition: Agente presente en cada nodo que arranca y vigila los contenedores que le
+      asigna el plano de control.
+    examples:
+      - es: La API del kubelet debe exigir autenticación.
+        en: The kubelet's API must require authentication.
+  topics:
+    - architecture
+    - hardening
+  technology:
+    - kubernetes
+  curriculum:
+    - cert: KCSA
+      outline: current
+      domain: 2
+  related:
+    - k8s.node
+    - k8s.container-runtime
+    - k8s.api-server
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/learn/what-is-kubernetes?hl=es
+      found:
+        - Kubelet lanza
+      checked: 2026-11-15
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/kubernetes-almacenamiento-persistencia-datos/
+      found:
+        - componente kubelet de
+      checked: 2026-11-15
+  status: sourced
+
+- id: k8s.kubectl
+  en:
+    term: kubectl
+    definition: The command-line tool for talking to a Kubernetes cluster; its kubeconfig
+      file holds the cluster address and the user's credentials.
+  es:
+    verdict: english-kept
+    forms:
+      - text: kubectl
+        kind: noun
+        primary: true
+        usedBy:
+          - google
+          - engineers
+      - text: kubeconfig
+        article: el
+        kind: noun
+        usedBy:
+          - engineers
+        note: The configuration file with the credentials, to be protected like a password.
+    say: Heard as 'cube-ce-te-ele' and as 'cube-control'.
+    definition: Herramienta de línea de comandos para comunicarse con un clúster de Kubernetes;
+      su fichero kubeconfig guarda la dirección del clúster y las credenciales del usuario.
+    examples:
+      - es: Comprueba con kubectl qué permisos tiene la cuenta de servicio.
+        en: Check with kubectl what permissions the service account has.
+  topics:
+    - iam
+    - authn
+  technology:
+    - kubernetes
+  curriculum:
+    - cert: KCSA
+      outline: current
+      domain: 2
+  related:
+    - k8s.api-server
+    - sec.credential
+    - k8s.rbac
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/learn/what-is-kubernetes?hl=es
+      found:
+        - comandos kubectl
+      checked: 2026-11-15
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/kubernetes-almacenamiento-persistencia-datos/
+      found:
+        - kubectl apply
+      checked: 2026-11-15
+    - label: Adictos al Trabajo (Autentia)
+      url: https://www.adictosaltrabajo.com/2018/11/13/desplegar-en-k8s-desde-gitlab-ci/
+      found:
+        - KUBECONFIG
+      checked: 2026-11-15
+  status: sourced
+
+- id: k8s.rbac
+  en:
+    term: Kubernetes RBAC
+    definition: 'Kubernetes''s authorisation model: Roles and ClusterRoles list permitted
+      actions, and bindings grant them to users, groups or service accounts.'
+  es:
+    verdict: both
+    forms:
+      - text: RBAC de Kubernetes
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - oracle
+      - text: Role
+        article: el
+        kind: noun
+        note: 'The object names stay in English: Role, ClusterRole, RoleBinding, ClusterRoleBinding.'
+      - text: vinculación de rol
+        article: la
+        kind: noun
+        note: A role binding, when translated.
+    definition: 'Modelo de autorización de Kubernetes: los Role y ClusterRole enumeran acciones
+      permitidas y las vinculaciones las conceden a usuarios, grupos o cuentas de servicio.'
+    examples:
+      - es: No uses el ClusterRole cluster-admin para las aplicaciones.
+        en: Do not use the cluster-admin ClusterRole for applications.
+  topics:
+    - authz
+    - iam
+  technology:
+    - kubernetes
+  curriculum:
+    - cert: KCSA
+      outline: current
+      domain: 2
+  related:
+    - sec.rbac
+    - k8s.service-account
+    - sec.least-privilege
+    - k8s.namespace
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/security/benchmark/azure/mcsb-v2-asset-management
+      found:
+        - el RBAC de
+      checked: 2026-11-15
+    - label: Oracle España
+      url: https://www.oracle.com/es/cloud/cloud-native/container-engine-kubernetes/what-is-kubernetes/
+      found:
+        - RBAC
+      checked: 2026-11-15
+  status: sourced
+
+- id: k8s.service-account
+  en:
+    term: ServiceAccount
+    definition: The identity a pod uses to call the Kubernetes API, with a token mounted into
+      the pod.
+  es:
+    verdict: both
+    forms:
+      - text: cuenta de servicio de Kubernetes
+        article: la
+        kind: noun
+        primary: true
+      - text: ServiceAccount
+        article: la
+        kind: noun
+        headline: true
+        usedBy:
+          - engineers
+        note: The object name, kept in English.
+      - text: token de cuenta de servicio
+        article: el
+        kind: noun
+    definition: Identidad que usa un pod para llamar a la API de Kubernetes, con un token
+      montado en el pod.
+    examples:
+      - es: Desactiva el montaje automático del token de la cuenta de servicio si el pod no
+          lo necesita.
+        en: Turn off automatic mounting of the service account token if the pod does not need
+          it.
+  topics:
+    - iam
+    - authn
+  technology:
+    - kubernetes
+  curriculum:
+    - cert: KCSA
+      outline: current
+      domain: 2
+  related:
+    - sec.service-account
+    - k8s.rbac
+    - gcp.workload-identity
+    - k8s.pod
+  sources:
+    - label: Adictos al Trabajo (Autentia)
+      url: https://adictosaltrabajo.com/2021/04/13/monitorizar-aplicaciones-en-un-cluster-de-kubernetes/
+      found:
+        - ServiceAccount metadata
+      checked: 2026-11-15
+  status: draft
+
+- id: k8s.secret
+  en:
+    term: Secret
+    definition: The Kubernetes object for holding sensitive values such as passwords and keys;
+      by default it is only base64-encoded, not encrypted.
+  es:
+    verdict: both
+    forms:
+      - text: Secret
+        article: el
+        kind: noun
+        primary: true
+        plural: los Secrets
+      - text: secreto de Kubernetes
+        article: el
+        kind: noun
+        usedBy:
+          - google
+      - text: cifrado en reposo de los secretos
+        article: el
+        kind: noun
+        note: Encryption at rest for secrets, which has to be switched on.
+    definition: Objeto de Kubernetes para guardar valores sensibles como contraseñas y claves;
+      por defecto solo se codifica en base64, no se cifra.
+    examples:
+      - es: 'Un Secret en base64 no está cifrado: cualquiera con acceso puede leerlo.'
+        en: 'A base64 Secret is not encrypted: anyone with access can read it.'
+  topics:
+    - secrets
+  technology:
+    - kubernetes
+  curriculum:
+    - cert: KCSA
+      outline: current
+      domain: 2
+  related:
+    - sec.secrets-management
+    - k8s.etcd
+    - sec.encryption
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/security/products/security-key-management?hl=es
+      found:
+        - secretos de Kubernetes
+      checked: 2026-11-15
+  status: draft
+
+- id: k8s.network-policy
+  en:
+    term: NetworkPolicy
+    definition: A Kubernetes object that says which pods may talk to which, enforced by the
+      network plugin; without one, all pods can reach each other.
+  es:
+    verdict: both
+    forms:
+      - text: política de red
+        article: la
+        kind: noun
+        primary: true
+        plural: las políticas de red
+        usedBy:
+          - microsoft
+          - google
+      - text: NetworkPolicy
+        article: la
+        kind: noun
+        headline: true
+      - text: denegar por defecto
+        kind: verb
+        note: Default deny, the starting policy to aim for.
+    definition: Objeto de Kubernetes que indica qué pods pueden comunicarse entre sí y que
+      aplica el complemento de red; sin ninguna, todos los pods se ven.
+    examples:
+      - es: Una política de red impide que el frontal hable directamente con la base de datos.
+        en: A network policy stops the front end talking directly to the database.
+  topics:
+    - network
+  technology:
+    - kubernetes
+    - networking
+  curriculum:
+    - cert: KCSA
+      outline: current
+      domain: 2
+  related:
+    - sec.microsegmentation
+    - k8s.cni
+    - sec.network-segmentation
+    - sec.east-west-traffic
+  sources:
+    - label: Microsoft Security, es-ES
+      url: https://www.microsoft.com/es-es/security/business/security-101/what-is-container-security
+      found:
+        - políticas de red
+      checked: 2026-11-15
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/vpc?hl=es
+      found:
+        - políticas de red
+      checked: 2026-11-15
+  status: sourced
+
+- id: k8s.cni
+  en:
+    term: CNI
+    expansion: Container Network Interface
+    definition: The plugin standard through which Kubernetes gives pods network connectivity;
+      the plugin chosen decides whether network policies are enforced.
+  es:
+    verdict: english-kept
+    forms:
+      - text: CNI
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - aws
+          - engineers
+      - text: complemento de red
+        article: el
+        kind: noun
+        note: A network plugin. Plugin is also used as it is.
+    say: 'Spelled out: ce-ene-i.'
+    definition: Norma de complementos con la que Kubernetes da conectividad de red a los pods;
+      el complemento elegido determina si se aplican las políticas de red.
+    examples:
+      - es: Hemos cambiado de CNI para poder cifrar el tráfico entre nodos.
+        en: We have changed CNI so that traffic between nodes can be encrypted.
+  topics:
+    - network
+  technology:
+    - kubernetes
+    - networking
+  curriculum:
+    - cert: KCSA
+      outline: current
+      domain: 2
+  related:
+    - k8s.network-policy
+    - cloud.sdn
+    - k8s.service-mesh
+  sources:
+    - label: AWS, páginas en español
+      url: https://aws.amazon.com/es/kubernetes/
+      found:
+        - para CNI Redes
+      checked: 2026-11-15
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/virtualizacion-contenedores-kubernetes-despliegue-networking/
+      found:
+        - Multus CNI Redes
+      checked: 2026-11-15
+  status: sourced
+
+- id: k8s.ingress
+  en:
+    term: Ingress
+    definition: The Kubernetes object and controller that route outside HTTP traffic to services
+      inside the cluster, usually terminating TLS.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Ingress
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - google
+      - text: controlador de Ingress
+        article: el
+        kind: noun
+        usedBy:
+          - microsoft
+      - text: tráfico de entrada
+        article: el
+        kind: noun
+        usedBy:
+          - aws
+        note: Ingress traffic in general. Egress is tráfico de salida.
+    definition: Objeto y controlador de Kubernetes que encaminan el tráfico HTTP exterior
+      hacia los servicios del clúster, normalmente terminando TLS.
+    examples:
+      - es: El certificado TLS se configura en el Ingress.
+        en: The TLS certificate is configured on the Ingress.
+  topics:
+    - network
+  technology:
+    - kubernetes
+    - networking
+  curriculum:
+    - cert: KCSA
+      outline: current
+      domain: 2
+  related:
+    - cloud.load-balancer
+    - sec.tls
+    - sec.api-gateway
+    - sec.waf
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/architecture/microservices/design/gateway
+      found:
+        - de Ingress Controller
+      checked: 2026-11-15
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/security/products/armor?hl=es
+      found:
+        - de Ingress de
+      checked: 2026-11-15
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/architecture/guide/technology-choices/compute-decision-tree
+      found:
+        - Controlador de entrada
+      checked: 2026-11-15
+    - label: AWS, documentación es_es
+      url: https://docs.aws.amazon.com/es_es/config/latest/developerguide/operational-best-practices-for-pci-dss.html
+      found:
+        - tráfico de entrada
+      checked: 2026-11-15
+  status: sourced
+
+- id: k8s.audit-log
+  en:
+    term: audit log
+    definition: 'The chronological record of every request made to the Kubernetes API server:
+      who, what, when and the outcome.'
+  es:
+    verdict: translated
+    forms:
+      - text: registro de auditoría
+        article: el
+        kind: noun
+        primary: true
+        plural: los registros de auditoría
+        usedBy:
+          - microsoft
+          - google
+      - text: log de auditoría
+        article: el
+        kind: noun
+        register: informal
+      - text: política de auditoría
+        article: la
+        kind: noun
+        note: The audit policy, which sets what is recorded.
+    definition: 'Registro cronológico de todas las peticiones hechas al servidor de la API
+      de Kubernetes: quién, qué, cuándo y con qué resultado.'
+    examples:
+      - es: El registro de auditoría muestra quién leyó el secreto.
+        en: The audit log shows who read the secret.
+  topics:
+    - detection
+  technology:
+    - kubernetes
+  curriculum:
+    - cert: KCSA
+      outline: current
+      domain: 5
+  related:
+    - sec.log
+    - sec.traceability
+    - k8s.api-server
+    - sec.siem
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/storage/blobs/immutable-legal-hold-overview
+      found:
+        - Registro de auditoría
+      checked: 2026-11-15
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/security/products/secret-manager?hl=es
+      found:
+        - Registros de auditoría
+      checked: 2026-11-15
+  status: sourced
+
+- id: k8s.pod-security-standards
+  en:
+    term: Pod Security Standards
+    definition: Kubernetes's three predefined security levels for pods, Privileged, Baseline
+      and Restricted, enforced per namespace by Pod Security Admission.
+  es:
+    verdict: both
+    forms:
+      - text: Pod Security Standards
+        article: los
+        kind: noun
+        primary: true
+      - text: estándares de seguridad de pods
+        article: los
+        kind: noun
+      - text: Pod Security Admission
+        kind: noun
+        note: The built-in admission controller that enforces them. It replaced PodSecurityPolicy.
+    definition: Los tres niveles de seguridad predefinidos de Kubernetes para los pods, Privileged,
+      Baseline y Restricted, que Pod Security Admission aplica por espacio de nombres.
+    examples:
+      - es: El namespace de producción aplica el nivel Restricted de los Pod Security Standards.
+        en: The production namespace enforces the Restricted level of the Pod Security Standards.
+  topics:
+    - hardening
+  technology:
+    - kubernetes
+  curriculum:
+    - cert: KCSA
+      outline: current
+      domain: 2
+  related:
+    - wiz.admission-controller
+    - k8s.security-context
+    - k8s.privileged-container
+    - sec.security-baseline
+  sources: []
+  status: draft
+
+- id: k8s.container-runtime
+  en:
+    term: container runtime
+    definition: The software that actually runs containers on a node, such as containerd or
+      CRI-O.
+  es:
+    verdict: translated
+    forms:
+      - text: entorno de ejecución de contenedores
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - aws
+      - text: runtime de contenedores
+        article: el
+        kind: noun
+        headline: true
+      - text: containerd
+        kind: noun
+        note: The most common one.
+    definition: Software que ejecuta realmente los contenedores en un nodo, como containerd
+      o CRI-O.
+    examples:
+      - es: Hay que actualizar el runtime de contenedores por una vulnerabilidad de escape.
+        en: The container runtime has to be updated because of an escape vulnerability.
+    watchOut: Some translated documentation says tiempo de ejecución de contenedores, a literal
+      rendering of runtime.
+  topics:
+    - architecture
+    - hardening
+  technology:
+    - kubernetes
+    - containers-oci
+  curriculum:
+    - cert: KCSA
+      outline: current
+      domain: 3
+  related:
+    - tech.runtime
+    - cloud.container
+    - tech.docker
+    - k8s.kubelet
+  sources:
+    - label: Microsoft Security, es-ES
+      url: https://www.microsoft.com/es-es/security/business/security-101/what-is-container-security
+      found:
+        - Entorno de ejecución de contenedores
+      checked: 2026-11-15
+    - label: AWS, páginas en español
+      url: https://aws.amazon.com/es/what-is/containerization/
+      found:
+        - tiempo de ejecución de contenedores
+      checked: 2026-11-15
+  status: sourced
+
+- id: k8s.container-image
+  en:
+    term: container image
+    definition: The read-only package, built in layers, from which containers are started.
+  es:
+    verdict: translated
+    forms:
+      - text: imagen de contenedor
+        article: la
+        kind: noun
+        primary: true
+        plural: las imágenes de contenedor
+        usedBy:
+          - microsoft
+          - google
+      - text: imagen base
+        article: la
+        kind: noun
+        usedBy:
+          - google
+        note: A base image.
+      - text: registro de contenedores
+        article: el
+        kind: noun
+        usedBy:
+          - microsoft
+        note: A container registry, where images are stored.
+    definition: Paquete de solo lectura, construido por capas, a partir del cual se arrancan
+      los contenedores.
+    examples:
+      - es: Usa una imagen base mínima para reducir vulnerabilidades.
+        en: Use a minimal base image to reduce vulnerabilities.
+  topics:
+    - supplychain
+    - hardening
+  technology:
+    - containers-oci
+    - kubernetes
+  curriculum:
+    - cert: KCSA
+      outline: current
+      domain: 3
+  related:
+    - cloud.container
+    - gcp.artifact-registry
+    - k8s.image-scanning
+    - k8s.image-signing
+  sources:
+    - label: Microsoft Security, es-ES
+      url: https://www.microsoft.com/es-es/security/business/security-101/what-is-container-security
+      found:
+        - Imágenes de contenedores
+        - registros de contenedores
+      checked: 2026-11-15
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/discover/what-is-containerization?hl=es
+      found:
+        - imágenes de contenedor
+        - Una imagen base para
+      checked: 2026-11-15
+  status: sourced
+
+- id: k8s.security-context
+  en:
+    term: security context
+    definition: The pod and container settings that control privileges, such as the user it
+      runs as, Linux capabilities and a read-only file system.
+  es:
+    verdict: both
+    forms:
+      - text: contexto de seguridad
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - official
+      - text: securityContext
+        article: el
+        kind: noun
+        usedBy:
+          - engineers
+        note: The field name in the manifest.
+      - text: ejecutar como root
+        kind: verb
+        note: To run as root, the thing to avoid.
+    definition: Ajustes del pod y del contenedor que controlan sus privilegios, como el usuario
+      con el que se ejecuta, las capacidades de Linux y el sistema de ficheros de solo lectura.
+    examples:
+      - es: El contexto de seguridad impide que el contenedor se ejecute como root.
+        en: The security context stops the container running as root.
+  topics:
+    - hardening
+  technology:
+    - kubernetes
+    - containers-oci
+  curriculum:
+    - cert: KCSA
+      outline: current
+      domain: 3
+  related:
+    - k8s.privileged-container
+    - k8s.pod-security-standards
+    - sec.least-privilege
+    - k8s.seccomp
+  sources:
+    - label: Microsoft Security, es-ES
+      url: https://www.microsoft.com/es-es/security/business/security-101/what-is-cloud-security
+      found:
+        - contexto de seguridad
+      checked: 2026-11-15
+    - label: 'INCIBE, Gestión de riesgos: una guía de aproximación para el empresario'
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_ciberseguridad_gestion_riesgos_metad.pdf
+      found:
+        - contexto de seguridad
+      checked: 2026-11-15
+    - label: Adictos al Trabajo (Autentia)
+      url: https://adictosaltrabajo.com/2021/04/13/monitorizar-aplicaciones-en-un-cluster-de-kubernetes/
+      found:
+        - securityContext
+      checked: 2026-11-15
+  status: sourced
+
+- id: k8s.privileged-container
+  en:
+    term: privileged container
+    definition: A container given almost all the host's capabilities and devices, from which
+      breaking out to the node is easy.
+  es:
+    verdict: translated
+    forms:
+      - text: contenedor privilegiado
+        article: el
+        kind: noun
+        primary: true
+        plural: los contenedores privilegiados
+      - text: contenedor con privilegios
+        article: el
+        kind: noun
+    definition: Contenedor al que se conceden casi todas las capacidades y dispositivos del
+      host, desde el que resulta fácil escapar al nodo.
+    examples:
+      - es: La política de admisión rechaza los contenedores privilegiados.
+        en: The admission policy rejects privileged containers.
+  topics:
+    - hardening
+    - threat
+  technology:
+    - kubernetes
+    - containers-oci
+  curriculum:
+    - cert: KCSA
+      outline: current
+      domain: 3
+  related:
+    - k8s.container-escape
+    - k8s.security-context
+    - sec.privilege-escalation
+  sources: []
+  status: draft
+
+- id: k8s.container-escape
+  en:
+    term: container escape
+    definition: An attack in which code inside a container breaks its isolation and gains
+      access to the host node.
+  es:
+    verdict: translated
+    forms:
+      - text: escape de contenedor
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+      - text: escapar del contenedor
+        kind: verb
+    definition: Ataque en el que el código de un contenedor rompe su aislamiento y obtiene
+      acceso al nodo anfitrión.
+    examples:
+      - es: La vulnerabilidad del runtime permitía un escape de contenedor.
+        en: The runtime vulnerability allowed a container escape.
+  topics:
+    - threat
+  technology:
+    - containers-oci
+    - kubernetes
+  curriculum:
+    - cert: KCSA
+      outline: current
+      domain: 3
+  related:
+    - sec.vm-escape
+    - k8s.privileged-container
+    - sec.isolation
+    - k8s.sandboxed-container
+  sources:
+    - label: Microsoft Security, es-ES
+      url: https://www.microsoft.com/es-es/security/business/security-101/what-is-container-security
+      found:
+        - Escape del contenedor
+      checked: 2026-11-15
+  status: sourced
+
+- id: k8s.seccomp
+  en:
+    term: seccomp
+    definition: A Linux kernel feature that restricts which system calls a process may make;
+      with AppArmor and SELinux, one of the main ways to confine a container.
+  es:
+    verdict: english-kept
+    forms:
+      - text: seccomp
+        kind: noun
+        primary: true
+      - text: perfil de seccomp
+        article: el
+        kind: noun
+      - text: llamada al sistema
+        article: la
+        kind: noun
+        plural: las llamadas al sistema
+        usedBy:
+          - engineers
+        note: A system call; syscall in speech.
+      - text: AppArmor
+        kind: noun
+        usedBy:
+          - official
+        note: Kept as a name, like SELinux.
+    say: Said 'sec-comp'.
+    definition: Función del núcleo de Linux que limita las llamadas al sistema que puede hacer
+      un proceso; junto con AppArmor y SELinux, una de las principales formas de confinar
+      un contenedor.
+    examples:
+      - es: El perfil de seccomp por defecto bloquea las llamadas al sistema más peligrosas.
+        en: The default seccomp profile blocks the most dangerous system calls.
+  topics:
+    - hardening
+  technology:
+    - linux-kernel
+    - containers-oci
+    - kubernetes
+  curriculum:
+    - cert: KCSA
+      outline: current
+      domain: 3
+  related:
+    - k8s.security-context
+    - sec.mac
+    - sec.hardening
+    - k8s.linux-namespaces
+  sources:
+    - label: El Lado del Mal
+      url: https://www.elladodelmal.com/2023/06/owasp-top-10-for-large-language-model.html
+      found:
+        - llamada al sistema
+      checked: 2026-11-15
+    - label: INCIBE-CERT, blog (menú del sitio)
+      url: https://www.incibe.es/incibe-cert/blog/bastionado-sistemas-el-caso-linux
+      found:
+        - módulo AppArmor
+      checked: 2026-11-15
+  status: draft
+
+- id: k8s.linux-namespaces
+  en:
+    term: Linux namespaces and cgroups
+    definition: 'The two kernel features containers are built from: namespaces limit what
+      a process can see, and control groups limit the resources it can use.'
+  es:
+    verdict: both
+    forms:
+      - text: espacios de nombres de Linux
+        article: los
+        kind: noun
+        primary: true
+      - text: cgroups
+        article: los
+        kind: noun
+        headline: true
+        usedBy:
+          - google
+        note: Control groups; grupos de control when translated.
+      - text: núcleo
+        article: el
+        kind: noun
+        note: The kernel. Kernel is used as it is just as often.
+    definition: 'Las dos funciones del núcleo con las que se construyen los contenedores:
+      los espacios de nombres limitan lo que ve un proceso y los grupos de control, los recursos
+      que puede usar.'
+    examples:
+      - es: 'Los contenedores comparten el núcleo del host: solo los separan namespaces y
+          cgroups.'
+        en: 'Containers share the host''s kernel: only namespaces and cgroups separate them.'
+  topics:
+    - architecture
+    - hardening
+  technology:
+    - linux-kernel
+    - containers-oci
+  curriculum:
+    - cert: KCSA
+      outline: current
+      domain: 3
+  related:
+    - sec.isolation
+    - cloud.container
+    - k8s.namespace
+    - k8s.seccomp
+  sources:
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/discover/what-is-containerization?hl=es
+      found:
+        - mediante cgroups para
+      checked: 2026-11-15
+  status: draft
+
+- id: k8s.sandboxed-container
+  en:
+    term: sandboxed container
+    definition: A container run with a stronger isolation layer, such as a lightweight virtual
+      machine or a user-space kernel, for untrusted workloads.
+  es:
+    verdict: translated
+    forms:
+      - text: contenedor aislado
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - google
+      - text: gVisor
+        kind: noun
+        note: With Kata Containers, the best-known implementations.
+    definition: Contenedor que se ejecuta con una capa de aislamiento más fuerte, como una
+      máquina virtual ligera o un núcleo en espacio de usuario, para cargas no fiables.
+    examples:
+      - es: El código de terceros se ejecuta en contenedores aislados con gVisor.
+        en: Third-party code runs in sandboxed containers with gVisor.
+  topics:
+    - hardening
+    - architecture
+  technology:
+    - containers-oci
+    - kubernetes
+  curriculum:
+    - cert: KCSA
+      outline: current
+      domain: 3
+  related:
+    - sec.sandbox
+    - k8s.container-escape
+    - sec.isolation
+    - cloud.multitenancy
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/dotnet/architecture/microservices/container-docker-introduction/docker-defined
+      found:
+        - el contenedor aislado pero
+      checked: 2026-11-15
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/discover/object-vs-block-vs-file-storage?hl=es
+      found:
+        - en contenedores aislados llamados
+      checked: 2026-11-15
+  status: sourced
+
+- id: k8s.resource-limits
+  en:
+    term: resource requests and limits
+    definition: The CPU and memory a container asks for and the maximum it may use; without
+      limits one workload can starve the rest.
+  es:
+    verdict: translated
+    forms:
+      - text: solicitudes y límites de recursos
+        article: las
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - oracle
+      - text: cuota de recursos
+        article: la
+        kind: noun
+        usedBy:
+          - microsoft
+        note: A ResourceQuota, the cap for a whole namespace.
+    definition: CPU y memoria que pide un contenedor y máximo que puede consumir; sin límites,
+      una carga puede dejar sin recursos a las demás.
+    examples:
+      - es: Sin límites de recursos, un pod comprometido puede tumbar el nodo.
+        en: Without resource limits, a compromised pod can bring the node down.
+  topics:
+    - hardening
+    - architecture
+  technology:
+    - kubernetes
+  curriculum:
+    - cert: KCSA
+      outline: current
+      domain: 3
+  related:
+    - sec.dos
+    - k8s.namespace
+    - sec.availability
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/architecture/guide/multitenant/considerations/tenancy-models
+      found:
+        - límites de recursos
+        - cuota de recursos
+      checked: 2026-11-15
+    - label: Oracle España
+      url: https://www.oracle.com/es/security/cloud-security/key-management/faq/
+      found:
+        - límites de recursos
+      checked: 2026-11-15
+  status: sourced
+
+- id: k8s.image-scanning
+  en:
+    term: image scanning
+    definition: Checking container images for known vulnerabilities, secrets and misconfigurations,
+      in the pipeline and in the registry.
+  es:
+    verdict: translated
+    forms:
+      - text: análisis de imágenes
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - google
+      - text: escaneo de imágenes
+        article: el
+        kind: noun
+        usedBy:
+          - microsoft
+        note: The everyday word.
+    definition: Comprobación de las imágenes de contenedor en busca de vulnerabilidades conocidas,
+      secretos y malas configuraciones, en el pipeline y en el registro.
+    examples:
+      - es: El pipeline falla si el análisis de imágenes encuentra una vulnerabilidad crítica.
+        en: The pipeline fails if image scanning finds a critical vulnerability.
+  topics:
+    - vulnmgmt
+    - supplychain
+  technology:
+    - containers-oci
+    - ci-cd
+  curriculum:
+    - cert: KCSA
+      outline: current
+      domain: 4
+  related:
+    - k8s.container-image
+    - sec.vulnerability-scan
+    - sec.sca
+    - sec.shift-left
+  sources:
+    - label: Microsoft Security, es-ES
+      url: https://www.microsoft.com/es-es/security/business/security-101/what-is-container-security
+      found:
+        - escaneo de imágenes
+      checked: 2026-11-15
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/learn/what-is-artificial-intelligence?hl=es
+      found:
+        - análisis de imágenes
+      checked: 2026-11-15
+  status: sourced
+
+- id: k8s.image-signing
+  en:
+    term: image signing
+    definition: Signing a container image cryptographically so that a cluster can verify who
+      built it and that it has not been altered.
+  es:
+    verdict: translated
+    forms:
+      - text: firma de imágenes
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+      - text: Sigstore
+        kind: noun
+        note: The open-source signing project; cosign is its tool.
+      - text: procedencia
+        article: la
+        kind: noun
+        usedBy:
+          - google
+        note: 'Provenance: the verifiable record of how an artefact was built.'
+    definition: Firma criptográfica de una imagen de contenedor para que el clúster pueda
+      verificar quién la construyó y que no ha sido alterada.
+    examples:
+      - es: El clúster solo admite imágenes firmadas por nuestro pipeline.
+        en: The cluster only admits images signed by our pipeline.
+  topics:
+    - supplychain
+    - crypto
+  technology:
+    - containers-oci
+    - kubernetes
+    - ci-cd
+  curriculum:
+    - cert: KCSA
+      outline: current
+      domain: 4
+  frameworks:
+    - SLSA
+  related:
+    - sec.digital-signature
+    - gcp.binary-authorization
+    - sec.software-supply-chain
+    - sec.sbom
+  sources:
+    - label: Microsoft Security, es-ES
+      url: https://www.microsoft.com/es-es/security/business/security-101/what-is-container-security
+      found:
+        - utilizar imágenes firmadas para
+      checked: 2026-11-15
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/learn/what-is-big-data?hl=es
+      found:
+        - la procedencia de
+      checked: 2026-11-15
+  status: sourced
+
+- id: k8s.manifest
+  en:
+    term: manifest
+    definition: A YAML or JSON file that declares the desired state of Kubernetes objects.
+  es:
+    verdict: translated
+    forms:
+      - text: manifiesto
+        article: el
+        kind: noun
+        primary: true
+        plural: los manifiestos
+        usedBy:
+          - engineers
+      - text: manifest
+        article: el
+        kind: noun
+        register: informal
+        usedBy:
+          - engineers
+      - text: chart de Helm
+        article: el
+        kind: noun
+        usedBy:
+          - engineers
+        note: 'A Helm chart: a packaged, templated set of manifests.'
+    definition: Fichero YAML o JSON que declara el estado deseado de objetos de Kubernetes.
+    examples:
+      - es: Los manifiestos se analizan antes de aplicarlos al clúster.
+        en: The manifests are scanned before they are applied to the cluster.
+  topics:
+    - appsec
+    - hardening
+  technology:
+    - kubernetes
+    - iac
+  curriculum:
+    - cert: KCSA
+      outline: current
+      domain: 4
+  related:
+    - tech.iac
+    - k8s.gitops
+    - wiz.code-scanning
+    - sec.misconfiguration
+  sources:
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/gestion-secretos-kubernetes-external-secret-operator/
+      found:
+        - manifiestos de Kubernetes
+        - este manifest de
+        - chart de Helm
+      checked: 2026-11-15
+  status: sourced
+
+- id: k8s.gitops
+  en:
+    term: GitOps
+    definition: 'Running infrastructure and deployments from a Git repository: the repository
+      is the source of truth and an agent keeps the cluster in line with it.'
+  es:
+    verdict: english-kept
+    forms:
+      - text: GitOps
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - oracle
+      - text: fuente de verdad
+        article: la
+        kind: noun
+        usedBy:
+          - microsoft
+        note: Source of truth.
+    say: Said 'guit-ops'.
+    definition: 'Gestión de la infraestructura y los despliegues desde un repositorio Git:
+      el repositorio es la fuente de verdad y un agente mantiene el clúster conforme a él.'
+    examples:
+      - es: Con GitOps nadie aplica cambios a mano en producción.
+        en: With GitOps nobody applies changes to production by hand.
+  topics:
+    - appsec
+    - supplychain
+  technology:
+    - kubernetes
+    - ci-cd
+    - iac
+  curriculum:
+    - cert: KCSA
+      outline: current
+      domain: 4
+  related:
+    - tech.iac
+    - tech.ci-cd
+    - tech.version-control
+    - cloud.immutable-infrastructure
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/architecture/microservices/design/gateway
+      found:
+        - como GitOps
+      checked: 2026-11-15
+    - label: Oracle España
+      url: https://www.oracle.com/es/cloud/cloud-native/container-engine-kubernetes/what-is-kubernetes/
+      found:
+        - Implementa GitOps
+      checked: 2026-11-15
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/reliability/concept-redundancy-replication-backup
+      found:
+        - fuente de verdad
+      checked: 2026-11-15
+  status: sourced
+
+- id: k8s.policy-as-code
+  en:
+    term: policy as code
+    definition: Writing security and compliance rules as code that tools evaluate automatically,
+      for example at admission to a cluster.
+  es:
+    verdict: translated
+    forms:
+      - text: política como código
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - aws
+      - text: OPA
+        kind: noun
+        note: Open Policy Agent, with Gatekeeper and Kyverno the usual engines.
+    definition: Redacción de las reglas de seguridad y cumplimiento como código que las herramientas
+      evalúan automáticamente, por ejemplo en la admisión al clúster.
+    examples:
+      - es: Con política como código, la regla de no usar la etiqueta latest se aplica sola.
+        en: With policy as code, the rule against using the latest tag enforces itself.
+  topics:
+    - grc
+    - hardening
+  technology:
+    - kubernetes
+    - iac
+    - ci-cd
+  curriculum:
+    - cert: KCSA
+      outline: current
+      domain: 4
+  related:
+    - wiz.admission-controller
+    - tech.iac
+    - azure.policy
+    - grc.policy
+  sources:
+    - label: Microsoft Security, es-ES
+      url: https://www.microsoft.com/es-es/security/business/security-101/what-is-devsecops
+      found:
+        - directiva como código
+      checked: 2026-11-15
+    - label: AWS, páginas en español
+      url: https://aws.amazon.com/es/devops/what-is-devops/
+      found:
+        - política como código
+      checked: 2026-11-15
+  status: sourced
+
+- id: k8s.service-mesh
+  en:
+    term: service mesh
+    definition: An infrastructure layer of proxies that handles traffic between services,
+      adding mutual TLS, traffic control and telemetry without changing application code.
+  es:
+    verdict: translated
+    forms:
+      - text: malla de servicios
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - google
+      - text: service mesh
+        article: el
+        kind: noun
+        headline: true
+        usedBy:
+          - google
+      - text: sidecar
+        article: el
+        kind: noun
+        usedBy:
+          - microsoft
+        note: The proxy container placed beside each application container.
+    definition: Capa de infraestructura formada por proxies que gestiona el tráfico entre
+      servicios y añade TLS mutuo, control del tráfico y telemetría sin tocar el código.
+    examples:
+      - es: La malla de servicios cifra todo el tráfico entre pods con mTLS.
+        en: The service mesh encrypts all traffic between pods with mTLS.
+  topics:
+    - network
+    - architecture
+  technology:
+    - service-mesh
+    - kubernetes
+  curriculum:
+    - cert: KCSA
+      outline: current
+      domain: 5
+  related:
+    - k8s.mtls
+    - cloud.microservices
+    - sec.zero-trust
+    - k8s.cni
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/architecture/microservices/design/gateway
+      found:
+        - malla de servicios
+      checked: 2026-11-15
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/learn/what-is-multicloud?hl=es
+      found:
+        - malla de servicios
+      checked: 2026-11-15
+    - label: Google Cloud, páginas para España
+      url: https://cloud.google.com/security/compliance/ens?hl=es
+      found:
+        - Cloud Service Mesh Cloud
+      checked: 2026-11-15
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/container-apps/storage-mounts
+      found:
+        - contenedor sidecar
+      checked: 2026-11-15
+  status: sourced
+
+- id: k8s.mtls
+  en:
+    term: mutual TLS
+    acronym: mTLS
+    definition: TLS in which both sides present a certificate, so each service proves its
+      identity to the other.
+  es:
+    verdict: translated
+    forms:
+      - text: TLS mutuo
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - microsoft
+      - text: mTLS
+        article: el
+        kind: noun
+        headline: true
+        usedBy:
+          - microsoft
+      - text: autenticación mutua
+        article: la
+        kind: noun
+        usedBy:
+          - official
+    say: 'mTLS is spelled out: eme-te-ele-ese.'
+    definition: TLS en el que ambas partes presentan un certificado, de modo que cada servicio
+      demuestra su identidad al otro.
+    examples:
+      - es: Entre microservicios exigimos TLS mutuo.
+        en: Between microservices we require mutual TLS.
+  topics:
+    - crypto
+    - authn
+  technology:
+    - service-mesh
+    - networking
+  curriculum:
+    - cert: KCSA
+      outline: current
+      domain: 5
+  related:
+    - sec.tls
+    - k8s.service-mesh
+    - sec.digital-certificate
+    - sec.zero-trust
+  sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - la autenticación mutua requiere
+      checked: 2026-11-15
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/architecture/microservices/design/gateway
+      found:
+        - el TLS mutuo
+      checked: 2026-11-15
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/architecture/guide/architecture-styles/microservices
+      found:
+        - mTLS
+      checked: 2026-11-15
+  status: sourced
+
+- id: k8s.runtime-security
+  en:
+    term: runtime security
+    definition: Detecting and blocking malicious behaviour in workloads while they run, typically
+      by watching system calls with tools such as Falco.
+  es:
+    verdict: translated
+    forms:
+      - text: seguridad en tiempo de ejecución
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+      - text: eBPF
+        kind: noun
+        note: The kernel technology most runtime tools now use.
+      - text: Falco
+        kind: noun
+        note: The best-known open-source runtime detection tool.
+    definition: Detección y bloqueo de comportamientos maliciosos en las cargas de trabajo
+      mientras se ejecutan, normalmente vigilando las llamadas al sistema.
+    examples:
+      - es: La seguridad en tiempo de ejecución detectó una shell abierta dentro de un contenedor.
+        en: Runtime security detected a shell opened inside a container.
+  topics:
+    - detection
+  technology:
+    - kubernetes
+    - containers-oci
+    - linux-kernel
+  curriculum:
+    - cert: KCSA
+      outline: current
+      domain: 5
+  related:
+    - wiz.sensor
+    - tech.runtime
+    - sec.edr
+    - wiz.cdr
+  sources:
+    - label: Microsoft Security, es-ES
+      url: https://www.microsoft.com/es-es/security/business/security-101/what-is-container-security
+      found:
+        - seguridad en tiempo de ejecución
+      checked: 2026-11-15
+  status: sourced
+
+- id: k8s.cis-benchmark
+  en:
+    term: CIS Kubernetes Benchmark
+    definition: The Center for Internet Security's hardening checklist for Kubernetes, which
+      tools such as kube-bench check a cluster against.
+  es:
+    verdict: both
+    forms:
+      - text: CIS Kubernetes Benchmark
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - official
+      - text: guía de bastionado
+        article: la
+        kind: noun
+        note: A hardening guide in general.
+      - text: kube-bench
+        kind: noun
+        note: The tool that runs the checks.
+    definition: Lista de comprobación de bastionado de Kubernetes del Center for Internet
+      Security, frente a la que herramientas como kube-bench evalúan un clúster.
+    examples:
+      - es: El clúster cumple el 95 % del CIS Kubernetes Benchmark.
+        en: The cluster meets 95% of the CIS Kubernetes Benchmark.
+  topics:
+    - hardening
+    - assessment
+  technology:
+    - kubernetes
+  curriculum:
+    - cert: KCSA
+      outline: current
+      domain: 6
+  frameworks:
+    - CIS
+  related:
+    - fw.cis-controls
+    - sec.kspm
+    - sec.security-baseline
+    - sec.hardening
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/well-architected/security/establish-baseline
+      found:
+        - comparativas de CIS
+      checked: 2026-11-15
+    - label: INCIBE, Guía de buenas prácticas de ciberseguridad en redes privadas 5G
+      url: https://www.incibe.es/sites/default/files/2025-12/INCIBE&ULE_GuiaBuenasPracticasCiberseguridadRedesPrivadas5G.pdf
+      found:
+        - Sus CIS Benchmarks son
+      checked: 2026-11-15
+  status: sourced
+
+- id: k8s.threat-matrix
+  en:
+    term: threat matrix for Kubernetes
+    definition: A catalogue of attacker tactics and techniques against Kubernetes, modelled
+      on MITRE ATT&CK, used for threat modelling and detection coverage.
+  es:
+    verdict: translated
+    forms:
+      - text: matriz de amenazas para Kubernetes
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - microsoft
+          - engineers
+      - text: MITRE ATT&CK
+        kind: noun
+        headline: true
+        usedBy:
+          - microsoft
+        note: The framework it follows; said 'máiter atac'.
+      - text: tácticas, técnicas y procedimientos
+        article: las
+        kind: noun
+        usedBy:
+          - aws
+        note: TTPs.
+    definition: Catálogo de tácticas y técnicas de ataque contra Kubernetes, basado en MITRE
+      ATT&CK, que se usa para el modelado de amenazas y para medir la cobertura de detección.
+    examples:
+      - es: Hemos mapeado nuestras detecciones con la matriz de amenazas para Kubernetes.
+        en: We have mapped our detections to the threat matrix for Kubernetes.
+  topics:
+    - threat
+  technology:
+    - kubernetes
+  curriculum:
+    - cert: KCSA
+      outline: current
+      domain: 6
+  frameworks:
+    - MITRE-ATTACK
+  related:
+    - sec.threat-modelling
+    - sec.threat-intelligence
+    - fw.stride
+  sources:
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/security/benchmark/azure/mcsb-v2-asset-management
+      found:
+        - MITRE ATT&CK Acceso
+      checked: 2026-11-15
+    - label: Tecnoempleo, oferta de empleo en España
+      url: https://www.tecnoempleo.com/data-analyst-for-cybersecurity-gmv/sql-google-cloud/rf-d18e19fad2a93307f341
+      found:
+        - como MITRE ATT&CK
+      checked: 2026-11-15
+    - label: AWS Well-Architected Framework, es_ES
+      url: https://docs.aws.amazon.com/es_es/wellarchitected/latest/security-pillar/sec_incident_response_run_game_days.html
+      found:
+        - tácticas, técnicas y procedimientos
+      checked: 2026-11-15
+  status: sourced

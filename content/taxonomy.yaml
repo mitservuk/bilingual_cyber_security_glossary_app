@@ -211,7 +211,18 @@ certifications:
       - { n: 4, name: "Managing operations" }
       - { n: 5, name: "Supporting compliance requirements" }
   - { id: KCNA, name: "KCNA", fullName: "Kubernetes and Cloud Native Associate", issuer: "The Linux Foundation" }
-  - { id: KCSA, name: "KCSA", fullName: "Kubernetes and Cloud Native Security Associate", issuer: "The Linux Foundation" }
+  - id: KCSA
+    name: KCSA
+    fullName: Kubernetes and Cloud Native Security Associate
+    issuer: The Linux Foundation
+    outlineLabel: CNCF curriculum for KCSA, as published on 15 November 2026
+    domains:
+      - { n: 1, name: "Cloud Native Fundamentals", weight: 16 }
+      - { n: 2, name: "Kubernetes Security Fundamentals", weight: 20 }
+      - { n: 3, name: "Container Security Fundamentals", weight: 20 }
+      - { n: 4, name: "Secure Software Supply Chain", weight: 16 }
+      - { n: 5, name: "Monitoring, Logging and Runtime Security", weight: 12 }
+      - { n: 6, name: "General Security Knowledge", weight: 16 }
   - { id: CKA, name: "CKA", fullName: "Certified Kubernetes Administrator", issuer: "The Linux Foundation" }
   - { id: CKAD, name: "CKAD", fullName: "Certified Kubernetes Application Developer", issuer: "The Linux Foundation" }
   - { id: CKS, name: "CKS", fullName: "Certified Kubernetes Security Specialist", issuer: "The Linux Foundation" }

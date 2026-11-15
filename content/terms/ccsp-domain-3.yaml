@@ -46,6 +46,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 1 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 1 }
   related: [cloud.control-plane, sec.iam, sec.mfa, sec.least-privilege]
   sources:
     - label: "INCIBE y Universidad de León, Guía de buenas prácticas de ciberseguridad para redes privadas 5G"
@@ -106,6 +107,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 1 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 1 }
   related: [cloud.management-plane, cloud.sdn, cloud.orchestration, cloud.container]
   sources:
     - label: "INCIBE y Universidad de León, Guía de buenas prácticas de ciberseguridad para redes privadas 5G"
@@ -187,6 +189,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 1 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 1 }
   related: [cloud.virtual-machine, cloud.iaas, cloud.container, cloud.serverless]
   sources:
     - label: "INCIBE y Universidad de León, Guía de buenas prácticas de ciberseguridad para redes privadas 5G"
@@ -265,6 +268,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 2 }
     - { cert: GCP-PCSE, outline: "current", domain: 2 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related: [cloud.control-plane, cloud.virtual-network, cloud.virtualization, sec.microsegmentation]
   sources:
     - label: "INCIBE y Universidad de León, Guía de buenas prácticas de ciberseguridad para redes privadas 5G"
@@ -333,6 +337,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 2 }
     - { cert: GCP-PCSE, outline: "current", domain: 2 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related: [cloud.virtual-network, sec.security-group, sec.network-segmentation, sec.vpn]
   sources:
     - label: "Paradigma Digital, blog"
@@ -397,6 +402,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 2 }
     - { cert: GCP-PCSE, outline: "current", domain: 2 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related: [cloud.vpc, cloud.sdn, sec.network-segmentation, sec.vpn]
   sources:
     - label: "Paradigma Digital, blog"
@@ -479,6 +485,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 2 }
     - { cert: GCP-PCSE, outline: "current", domain: 2 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related: [sec.high-availability, sec.failover, cloud.cdn, sec.dos]
   sources:
     - label: "INCIBE y Universidad de León, Guía de buenas prácticas de ciberseguridad para redes privadas 5G"
@@ -572,6 +579,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 2 }
     - { cert: GCP-PCSE, outline: "current", domain: 2 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   frameworks: [NIS2]
   related: [cloud.load-balancer, cloud.edge-computing, sec.dos, cloud.region]
   sources:
@@ -634,6 +642,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 1 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 1 }
   related: [cloud.availability-zone, tech.data-centre, law.data-residency, sec.geolocation]
   sources:
     - label: "Paradigma Digital, blog"
@@ -702,6 +711,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 1 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 1 }
   related: [cloud.region, tech.data-centre, sec.high-availability, sec.redundancy]
   sources:
     - label: "Paradigma Digital, blog"
@@ -1339,6 +1349,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 1 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 1 }
   related: [cloud.multitenancy, sec.isolation, sec.network-segmentation, cloud.hypervisor]
   sources:
     - label: "Microsoft Learn, es-ES"
@@ -1402,6 +1413,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 2 }
     - { cert: GCP-PCSE, outline: "current", domain: 2 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related: [sec.microsegmentation, sec.firewall, sec.isolation, cloud.vpc]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -1484,6 +1496,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 2 }
     - { cert: GCP-PCSE, outline: "current", domain: 2 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related: [sec.network-segmentation, sec.zero-trust, sec.security-group, sec.firewall]
   sources:
     - label: "INCIBE, blog para empresas"
@@ -1555,6 +1568,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 2 }
     - { cert: GCP-PCSE, outline: "current", domain: 2 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related: [sec.firewall, cloud.vpc, sec.microsegmentation, sec.network-segmentation]
   sources:
     - label: "AWS, documentación en español"
@@ -1647,6 +1661,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 1 }
     - { cert: GCP-PCA, outline: "current", domain: 6 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 5 }
   related: [sec.ips, sec.firewall, sec.log, sec.traffic-inspection]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -1736,6 +1751,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 2 }
     - { cert: GCP-PCSE, outline: "current", domain: 2 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related: [sec.ids, sec.firewall, sec.traffic-inspection, sec.dos]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -1826,6 +1842,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 2 }
     - { cert: GCP-PCSE, outline: "current", domain: 2 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related: [sec.firewall, sec.vpn, sec.dmz, sec.least-privilege]
   sources:
     - label: "AWS, documentación en español"
@@ -1979,6 +1996,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 2 }
     - { cert: GCP-PCSE, outline: "current", domain: 2 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related: [sec.tls, sec.data-in-transit, sec.zero-trust, sec.bastion-host]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -2075,6 +2093,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 2 }
     - { cert: GCP-PCSE, outline: "current", domain: 2 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related: [sec.firewall, sec.network-segmentation, sec.bastion-host, sec.defence-in-depth]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -2151,6 +2170,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 2 }
     - { cert: GCP-PCSE, outline: "current", domain: 2 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related: [sec.traffic-inspection, sec.ids, sec.mitm, sec.log]
   sources:
     - label: "INCIBE-CERT, blog"
@@ -2290,6 +2310,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 4 }
     - { cert: GCP-PCA, outline: "current", domain: 3 }
     - { cert: GCP-PCSE, outline: "current", domain: 1 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related: [sec.identification, sec.authorization, sec.mfa, sec.iam]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -2387,6 +2408,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 4 }
     - { cert: GCP-PCA, outline: "current", domain: 3 }
     - { cert: GCP-PCSE, outline: "current", domain: 1 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related: [sec.authentication, sec.access-control, sec.least-privilege, sec.identification]
   sources:
     - label: "Esquema Nacional de Seguridad (RD 311/2022)"
@@ -2469,6 +2491,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 4 }
     - { cert: GCP-PCA, outline: "current", domain: 3 }
     - { cert: GCP-PCSE, outline: "current", domain: 1 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related: [sec.authentication, sec.iam, sec.zero-trust, sec.account-hijacking]
   sources:
     - label: "Esquema Nacional de Seguridad (RD 311/2022), glosario y medidas op.acc"
@@ -3302,6 +3325,7 @@
     - { cert: AZ-500, outline: "2026-01", domain: 4 }
     - { cert: SC-100, outline: "2026-10", domain: 1 }
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 1 }
+    - { cert: KCSA, outline: "current", domain: 6 }
   related: [sec.availability, sec.firewall, cloud.cdn, cloud.load-balancer]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -3372,6 +3396,7 @@
     - { cert: AZ-500, outline: "2026-01", domain: 4 }
     - { cert: SC-100, outline: "2026-10", domain: 1 }
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 1 }
+    - { cert: KCSA, outline: "current", domain: 6 }
   related: [sec.tls, sec.data-in-transit, sec.digital-certificate, sec.encryption]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -3442,6 +3467,7 @@
     - { cert: AZ-500, outline: "2026-01", domain: 4 }
     - { cert: SC-100, outline: "2026-10", domain: 1 }
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 1 }
+    - { cert: KCSA, outline: "current", domain: 6 }
   related: [cloud.hypervisor, cloud.virtual-machine, sec.isolation, cloud.multitenancy]
   sources:
     - label: "INCIBE-CERT, aviso: Leaky Vessels, vulnerabilidades en componentes de contenedores"
@@ -3572,6 +3598,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 3 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 3 }
   related: [sec.security-baseline, sec.vulnerability, sec.attack-surface, sec.data-breach]
   sources:
     - label: "Real Decreto 43/2021, de seguridad de las redes y sistemas de información (BOE)"

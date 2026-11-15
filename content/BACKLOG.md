@@ -9,7 +9,6 @@ the same pull request.
 
 ## Next up
 
-- Kubernetes and containers, with the KCSA exam.
 - Frameworks that have an entry but little vocabulary of their own: GDPR and
   LOPDGDD beyond the basics, ISO/IEC 27001, NIST CSF, PCI DSS, the AI Act,
   eIDAS, MAGERIT.
@@ -49,7 +48,7 @@ They are already named in `taxonomy.yaml`, without domains.
 - **Microsoft:** AZ-900 (Azure Fundamentals), SC-900 (Security, Compliance and Identity Fundamentals), AZ-104 (Azure Administrator), SC-200 (Security Operations Analyst), SC-300 (Identity and Access Administrator).
 - **OffSec:** OSCP (OffSec Certified Professional).
 - **PeopleCert:** ITIL 4 Foundation.
-- **The Linux Foundation:** KCNA (Kubernetes and Cloud Native Associate), KCSA (Kubernetes and Cloud Native Security Associate), CKA (Certified Kubernetes Administrator), CKAD (Certified Kubernetes Application Developer), CKS (Certified Kubernetes Security Specialist).
+- **The Linux Foundation:** KCNA (Kubernetes and Cloud Native Associate), CKA (Certified Kubernetes Administrator), CKAD (Certified Kubernetes Application Developer), CKS (Certified Kubernetes Security Specialist).
 - **The Open Group:** TOGAF.
 - **The SABSA Institute:** SABSA Practitioner (SABSA Chartered Security Architect, Practitioner (SCP)), SABSA Master (SABSA Chartered Security Architect, Master (SCM)).
 

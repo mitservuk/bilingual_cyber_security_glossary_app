@@ -1411,6 +1411,7 @@
     - { cert: AZ-500, outline: "2026-01", domain: 3 }
     - { cert: AZ-305, outline: "2026-04", domain: 4 }
     - { cert: SC-100, outline: "2026-10", domain: 1 }
+    - { cert: KCSA, outline: "current", domain: 1 }
   related:
     - tech.kubernetes
     - cloud.cluster

@@ -332,6 +332,8 @@
     - wiz
     - containers-oci
     - kubernetes
+  curriculum:
+    - { cert: KCSA, outline: "current", domain: 5 }
   related:
     - tech.runtime
     - sec.edr
@@ -389,6 +391,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 3 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 3 }
   related:
     - sec.cnapp
     - sec.misconfiguration
@@ -457,6 +460,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 3 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 3 }
   related:
     - sec.cnapp
     - sec.cspm
@@ -530,6 +534,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 4 }
     - { cert: GCP-PCA, outline: "current", domain: 3 }
     - { cert: GCP-PCSE, outline: "current", domain: 1 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related:
     - sec.least-privilege
     - sec.access-review
@@ -590,6 +595,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 5 }
     - { cert: GCP-PCA, outline: "current", domain: 3 }
     - { cert: GCP-PCSE, outline: "current", domain: 3 }
+    - { cert: KCSA, outline: "current", domain: 6 }
   related:
     - sec.data-discovery
     - sec.data-classification
@@ -644,6 +650,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 3 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 3 }
   related:
     - tech.kubernetes
     - sec.cspm
@@ -696,6 +703,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 3 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 3 }
   related:
     - ai.model
     - ai.training-data
@@ -829,6 +837,8 @@
   technology:
     - kubernetes
     - wiz
+  curriculum:
+    - { cert: KCSA, outline: "current", domain: 3 }
   related:
     - tech.kubernetes
     - gcp.binary-authorization

@@ -1384,6 +1384,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 5 }
     - { cert: GCP-PCA, outline: "current", domain: 3 }
     - { cert: GCP-PCSE, outline: "current", domain: 3 }
+    - { cert: KCSA, outline: "current", domain: 6 }
   related:
     - sec.casb
     - sec.misconfiguration
@@ -1565,6 +1566,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 1 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 1 }
   related:
     - sec.zero-trust
     - sec.casb
@@ -2549,6 +2551,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 2 }
     - { cert: GCP-PCSE, outline: "current", domain: 2 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related:
     - tech.tcp-ip
     - tech.protocol
@@ -2608,6 +2611,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 2 }
     - { cert: GCP-PCSE, outline: "current", domain: 2 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related:
     - tech.osi-model
     - tech.protocol
@@ -2666,6 +2670,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 2 }
     - { cert: GCP-PCSE, outline: "current", domain: 2 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related:
     - tech.tcp-ip
     - sec.tls
@@ -2728,6 +2733,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 2 }
     - { cert: GCP-PCSE, outline: "current", domain: 2 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related:
     - sec.vpn
     - sec.tls
@@ -2795,6 +2801,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 2 }
     - { cert: GCP-PCSE, outline: "current", domain: 2 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related:
     - sec.vlan
     - tech.qos
@@ -2856,6 +2863,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 2 }
     - { cert: GCP-PCSE, outline: "current", domain: 2 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related:
     - tech.latency
     - tech.qos
@@ -2919,6 +2927,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 2 }
     - { cert: GCP-PCSE, outline: "current", domain: 2 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related:
     - tech.bandwidth
     - tech.qos
@@ -2994,6 +3003,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 2 }
     - { cert: GCP-PCSE, outline: "current", domain: 2 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related:
     - sec.isolation
     - sec.network-segmentation
@@ -3060,6 +3070,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 2 }
     - { cert: GCP-PCSE, outline: "current", domain: 2 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related:
     - sec.microsegmentation
     - sec.traffic-inspection
@@ -3122,6 +3133,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 2 }
     - { cert: GCP-PCSE, outline: "current", domain: 2 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related:
     - sec.nac
     - sec.vlan
@@ -3182,6 +3194,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 2 }
     - { cert: GCP-PCSE, outline: "current", domain: 2 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related:
     - tech.wifi
     - tech.iot
@@ -3241,6 +3254,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 2 }
     - { cert: GCP-PCSE, outline: "current", domain: 2 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related:
     - tech.iot
     - cloud.edge-computing
@@ -3307,6 +3321,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 2 }
     - { cert: GCP-PCSE, outline: "current", domain: 2 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related:
     - cloud.sdn
     - sec.sase
@@ -3369,6 +3384,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 2 }
     - { cert: GCP-PCSE, outline: "current", domain: 2 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related:
     - sec.access-control
     - sec.endpoint-security
@@ -3493,6 +3509,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 2 }
     - { cert: GCP-PCSE, outline: "current", domain: 2 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related:
     - sec.firewall
     - sec.vlan
@@ -3669,6 +3686,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 4 }
     - { cert: GCP-PCA, outline: "current", domain: 3 }
     - { cert: GCP-PCSE, outline: "current", domain: 1 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related:
     - sec.abac
     - sec.authorization
@@ -3741,6 +3759,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 4 }
     - { cert: GCP-PCA, outline: "current", domain: 3 }
     - { cert: GCP-PCSE, outline: "current", domain: 1 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related:
     - sec.rbac
     - sec.authorization
@@ -4257,6 +4276,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 4 }
     - { cert: GCP-PCA, outline: "current", domain: 3 }
     - { cert: GCP-PCSE, outline: "current", domain: 1 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related:
     - sec.pam
     - sec.least-privilege
@@ -4317,6 +4337,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 4 }
     - { cert: GCP-PCA, outline: "current", domain: 3 }
     - { cert: GCP-PCSE, outline: "current", domain: 1 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related:
     - sec.passkey
     - sec.fido
@@ -4381,6 +4402,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 4 }
     - { cert: GCP-PCA, outline: "current", domain: 3 }
     - { cert: GCP-PCSE, outline: "current", domain: 1 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related:
     - sec.passkey
     - sec.passwordless
@@ -4450,6 +4472,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 4 }
     - { cert: GCP-PCA, outline: "current", domain: 3 }
     - { cert: GCP-PCSE, outline: "current", domain: 1 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related:
     - sec.fido
     - sec.passwordless
@@ -4576,6 +4599,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 4 }
     - { cert: GCP-PCA, outline: "current", domain: 3 }
     - { cert: GCP-PCSE, outline: "current", domain: 1 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related:
     - sec.deprovisioning
     - grc.onboarding
@@ -4643,6 +4667,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 4 }
     - { cert: GCP-PCA, outline: "current", domain: 3 }
     - { cert: GCP-PCSE, outline: "current", domain: 1 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related:
     - sec.provisioning
     - grc.offboarding
@@ -4808,6 +4833,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 4 }
     - { cert: GCP-PCA, outline: "current", domain: 3 }
     - { cert: GCP-PCSE, outline: "current", domain: 1 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related:
     - sec.credential
     - sec.least-privilege
@@ -4864,6 +4890,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 4 }
     - { cert: GCP-PCA, outline: "current", domain: 3 }
     - { cert: GCP-PCSE, outline: "current", domain: 1 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related:
     - sec.sso
     - sec.pass-the-hash
@@ -5824,6 +5851,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 2 }
     - { cert: GCP-PCSE, outline: "current", domain: 2 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related:
     - sec.firewall
     - sec.ips
@@ -5988,6 +6016,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 2 }
     - { cert: GCP-PCSE, outline: "current", domain: 2 }
+    - { cert: KCSA, outline: "current", domain: 2 }
   related:
     - tech.bandwidth
     - tech.latency
@@ -6281,6 +6310,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 1 }
     - { cert: GCP-PCA, outline: "current", domain: 6 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 5 }
   related:
     - sec.dlp
     - sec.traffic-inspection
@@ -6341,6 +6371,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 5 }
     - { cert: GCP-PCA, outline: "current", domain: 3 }
     - { cert: GCP-PCSE, outline: "current", domain: 3 }
+    - { cert: KCSA, outline: "current", domain: 6 }
   related:
     - sec.backup
     - sec.ransomware
@@ -6521,6 +6552,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 5 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 4 }
   related:
     - tech.devsecops
     - sec.sast
@@ -6749,6 +6781,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 5 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 4 }
   related:
     - cloud.container
     - sec.iast
@@ -6818,6 +6851,7 @@
     - { cert: AWS-SECURITY-SPECIALTY, outline: "SCS-C03", domain: 3 }
     - { cert: GCP-PCA, outline: "current", domain: 5 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 4 }
   related:
     - tech.version-control
     - tech.scm
@@ -6989,6 +7023,7 @@
     - { cert: SC-100, outline: "2026-10", domain: 4 }
     - { cert: GCP-PCA, outline: "current", domain: 5 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 4 }
   related:
     - cloud.paas
     - cloud.shared-responsibility

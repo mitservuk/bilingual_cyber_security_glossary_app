@@ -496,6 +496,7 @@
   curriculum:
     - { cert: GCP-PCA, outline: "current", domain: 1 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 1 }
   related:
     - tech.kubernetes
     - cloud.cluster
@@ -1472,6 +1473,7 @@
   curriculum:
     - { cert: GCP-PCA, outline: "current", domain: 5 }
     - { cert: GCP-PCSE, outline: "current", domain: 4 }
+    - { cert: KCSA, outline: "current", domain: 4 }
   frameworks:
     - SLSA
   related:
