@@ -1,0 +1,1315 @@
+# EU cyber security law: the vocabulary of NIS2 and DORA.
+# Format is described in content/README.md. These entries were written from
+# working knowledge of usage in Spain; each `found` text was then located in a
+# page the glossary already cites and confirmed with scripts/check_sources.py.
+# Forms with no usedBy have not been seen in a source.
+
+- id: fw.nis2
+  en:
+    term: NIS2 Directive
+    definition: The EU directive on a high common level of cyber security, which sets risk-management
+      and incident-reporting duties for essential and important entities.
+  es:
+    verdict: translated
+    forms:
+      - text: Directiva NIS 2
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - microsoft
+      - text: NIS2
+        article: la
+        kind: noun
+        headline: true
+        usedBy:
+          - official
+        note: Feminine, as a directiva.
+      - text: Directiva (UE) 2022/2555
+        article: la
+        kind: noun
+        register: formal
+        usedBy:
+          - official
+    say: Said 'nis dos'.
+    definition: Directiva de la UE sobre un elevado nivel común de ciberseguridad, que impone
+      medidas de gestión de riesgos y notificación de incidentes a las entidades esenciales
+      e importantes.
+    examples:
+      - es: La empresa entra en el ámbito de la NIS2 como entidad importante.
+        en: The company falls within the scope of NIS2 as an important entity.
+    watchOut: 'A directive needs national law to apply it: the word is transposición. In Spain
+      that law has been slow to arrive, so check its current state.'
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - NIS2
+  related:
+    - law.essential-entity
+    - law.significant-incident
+    - law.csirt
+    - fw.dora
+    - law.regulation
+  sources:
+    - label: INCIBE, blog de empresas
+      url: https://www.incibe.es/empresas/blog/analisis-riesgos-pasos-sencillo
+      found:
+        - FAQ NIS2
+      checked: 2026-11-15
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/azure-sovereign-clouds/sovereignty-implementation
+      found:
+        - NIS2
+      checked: 2026-11-15
+    - label: INCIBE, Guía de buenas prácticas de ciberseguridad en redes privadas 5G
+      url: https://www.incibe.es/sites/default/files/2025-12/INCIBE&ULE_GuiaBuenasPracticasCiberseguridadRedesPrivadas5G.pdf
+      found:
+        - Directiva (UE) 2022/2555
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.essential-entity
+  en:
+    term: essential entity
+    definition: Under NIS2, a large organisation in a highly critical sector, subject to the
+      full regime and to supervision in advance. Important entities are supervised after the
+      event.
+  es:
+    verdict: translated
+    forms:
+      - text: entidad esencial
+        article: la
+        kind: noun
+        primary: true
+        plural: las entidades esenciales
+        usedBy:
+          - official
+          - eu
+      - text: entidad importante
+        article: la
+        kind: noun
+        plural: las entidades importantes
+        usedBy:
+          - official
+        note: 'The second tier: lighter supervision and lower fines.'
+    definition: En la NIS2, gran organización de un sector de alta criticidad, sujeta al régimen
+      completo y a supervisión previa.
+    examples:
+      - es: Las entidades esenciales pueden ser inspeccionadas en cualquier momento.
+        en: Essential entities may be inspected at any time.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - NIS2
+  related:
+    - fw.nis2
+    - law.competent-authority
+    - law.risk-management-measures
+  sources:
+    - label: INCIBE-CERT, blog (menú del sitio)
+      url: https://www.incibe.es/incibe-cert/blog/bastionado-sistemas-el-caso-linux
+      found:
+        - Farmacéutico Entidad esencial Entidad
+      checked: 2026-11-15
+    - label: Directiva (UE) 2022/2555 (NIS 2), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81963
+      found:
+        - entidades esenciales
+      checked: 2026-11-15
+    - label: INCIBE, blog de empresas
+      url: https://www.incibe.es/empresas/blog/analisis-riesgos-pasos-sencillo
+      found:
+        - innovadora Entidad importante VPN
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.risk-management-measures
+  en:
+    term: cybersecurity risk-management measures
+    definition: The technical, operational and organisational measures NIS2 requires entities
+      to take, listed in its Article 21.
+  es:
+    verdict: translated
+    forms:
+      - text: medidas para la gestión de riesgos de ciberseguridad
+        article: las
+        kind: noun
+        primary: true
+        usedBy:
+          - eu
+    definition: Medidas técnicas, operativas y de organización que la NIS2 exige adoptar a
+      las entidades, enumeradas en su artículo 21.
+    examples:
+      - es: El órgano de dirección debe aprobar las medidas para la gestión de riesgos de
+          ciberseguridad.
+        en: The management body must approve the cybersecurity risk-management measures.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - NIS2
+  related:
+    - fw.nis2
+    - grc.control
+    - grc.risk-management
+    - law.management-body
+  sources:
+    - label: Directiva (UE) 2022/2555 (NIS 2), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81963
+      found:
+        - medidas para la gestión de riesgos de ciberseguridad
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.management-body
+  en:
+    term: management body
+    definition: The board or equivalent, which NIS2 and DORA make personally accountable for
+      approving and overseeing cyber risk management.
+  es:
+    verdict: translated
+    forms:
+      - text: órgano de dirección
+        article: el
+        kind: noun
+        primary: true
+        plural: los órganos de dirección
+        usedBy:
+          - official
+          - eu
+      - text: consejo de administración
+        article: el
+        kind: noun
+        usedBy:
+          - eu
+        note: The board of directors of a Spanish company.
+      - text: alta dirección
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: Senior management.
+    definition: Consejo u órgano equivalente al que la NIS2 y DORA hacen responsable de aprobar
+      y supervisar la gestión de los riesgos de ciberseguridad.
+    examples:
+      - es: Los miembros del órgano de dirección deben recibir formación en ciberseguridad.
+        en: Members of the management body must receive cyber security training.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - NIS2
+    - DORA
+  related:
+    - grc.governance
+    - sec.accountability
+    - law.liability
+  sources:
+    - label: 'INCIBE, blog de empresas: ¿Qué es el reglamento DORA?'
+      url: https://www.incibe.es/empresas/blog/que-es-el-reglamento-dora
+      found:
+        - órgano de dirección
+      checked: 2026-11-15
+    - label: Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81962
+      found:
+        - órgano de dirección
+      checked: 2026-11-15
+    - label: Reglamento (UE) 2016/679 (RGPD), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2016-80807
+      found:
+        - consejo de administración
+      checked: 2026-11-15
+    - label: AEPD, Guía de Privacidad desde el Diseño
+      url: https://www.aepd.es/guias/guia-privacidad-desde-diseno.pdf
+      found:
+        - la alta dirección
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.significant-incident
+  en:
+    term: significant incident
+    definition: Under NIS2, an incident that causes or could cause serious disruption or loss,
+      and so must be reported.
+  es:
+    verdict: translated
+    forms:
+      - text: incidente significativo
+        article: el
+        kind: noun
+        primary: true
+        plural: los incidentes significativos
+        usedBy:
+          - official
+          - eu
+    definition: En la NIS2, incidente que causa o puede causar perturbaciones o pérdidas graves
+      y que, por ello, debe notificarse.
+    examples:
+      - es: Un incidente significativo debe notificarse al CSIRT en 24 horas.
+        en: A significant incident must be notified to the CSIRT within 24 hours.
+  topics:
+    - incident
+    - grc
+  technology: []
+  frameworks:
+    - NIS2
+  related:
+    - law.early-warning
+    - law.csirt
+    - ens.incidente-de-seguridad
+    - law.major-ict-incident
+  sources:
+    - label: INCIBE, Guía de gestión de crisis
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_gestion_de_crisis.pdf
+      found:
+        - un incidente significativo en
+      checked: 2026-11-15
+    - label: Directiva (UE) 2022/2555 (NIS 2), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81963
+      found:
+        - un incidente significativo puede
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.early-warning
+  en:
+    term: early warning
+    definition: The first notice of a significant incident, due within 24 hours under NIS2;
+      a fuller notification follows within 72 hours and a final report within a month.
+  es:
+    verdict: translated
+    forms:
+      - text: alerta temprana
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+      - text: notificación del incidente
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: The 72-hour notification that follows.
+      - text: informe final
+        article: el
+        kind: noun
+        usedBy:
+          - official
+        note: The final report, due within a month.
+    definition: Primer aviso de un incidente significativo, que la NIS2 exige en 24 horas;
+      le siguen una notificación en 72 horas y un informe final en un mes.
+    examples:
+      - es: Enviamos la alerta temprana antes de conocer el alcance del ataque.
+        en: We sent the early warning before we knew the extent of the attack.
+  topics:
+    - incident
+    - grc
+  technology: []
+  frameworks:
+    - NIS2
+  related:
+    - law.significant-incident
+    - law.csirt
+    - law.breach-notification
+  sources:
+    - label: INCIBE-CERT, blog
+      url: https://www.incibe.es/incibe-cert/blog/big-data-ia-y-analitica-predictiva-del-dato-inteligencia-ciberseguridad
+      found:
+        - CERT Alerta temprana Avisos
+      checked: 2026-11-15
+    - label: Directiva (UE) 2022/2555 (NIS 2), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81963
+      found:
+        - de alerta temprana de
+      checked: 2026-11-15
+    - label: Ley 6/2020, reguladora de determinados aspectos de los servicios electrónicos
+        de confianza
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2020-14046
+      found:
+        - notificación del incidente
+      checked: 2026-11-15
+    - label: AEPD, Orientaciones y garantías en los procedimientos de anonimización de datos
+        personales
+      url: https://www.aepd.es/guias/guia-orientaciones-procedimientos-anonimizacion.pdf
+      found:
+        - INFORME FINAL
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.csirt
+  en:
+    term: CSIRT
+    expansion: computer security incident response team
+    definition: A team that receives incident reports, coordinates the response and issues
+      warnings; each EU state designates national ones.
+  es:
+    verdict: both
+    forms:
+      - text: CSIRT
+        article: el
+        kind: noun
+        primary: true
+        plural: los CSIRT
+        usedBy:
+          - official
+      - text: equipo de respuesta a incidentes de seguridad informática
+        article: el
+        kind: noun
+        register: formal
+        usedBy:
+          - official
+      - text: CERT
+        article: el
+        kind: noun
+        usedBy:
+          - official
+        note: The older name, kept in INCIBE-CERT and CCN-CERT.
+    say: Said 'ce-sirt'.
+    definition: Equipo que recibe las notificaciones de incidentes, coordina la respuesta
+      y emite avisos; cada Estado de la UE designa los suyos.
+    examples:
+      - es: En España los CSIRT de referencia son el CCN-CERT e INCIBE-CERT.
+        en: In Spain the reference CSIRTs are CCN-CERT and INCIBE-CERT.
+  topics:
+    - incident
+  technology: []
+  frameworks:
+    - NIS2
+  related:
+    - ens.ccn
+    - sec.incident-response
+    - sec.soc
+    - law.significant-incident
+  sources:
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - CSIRT
+        - CERT
+      checked: 2026-11-15
+    - label: Real Decreto 43/2021, de seguridad de las redes y sistemas de información (BOE)
+      url: https://www.boe.es/diario_boe/txt.php?id=BOE-A-2021-1192
+      found:
+        - CSIRT
+      checked: 2026-11-15
+    - label: Esquema Nacional de Seguridad (RD 311/2022)
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2022-7191
+      found:
+        - equipo de respuesta a incidentes de seguridad informática
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.competent-authority
+  en:
+    term: competent authority
+    definition: The public body a member state designates to supervise and enforce a law such
+      as NIS2 or DORA.
+  es:
+    verdict: translated
+    forms:
+      - text: autoridad competente
+        article: la
+        kind: noun
+        primary: true
+        plural: las autoridades competentes
+        usedBy:
+          - official
+          - eu
+      - text: punto de contacto único
+        article: el
+        kind: noun
+        usedBy:
+          - official
+        note: The single point of contact each state names for cross-border liaison under
+          NIS2.
+    definition: Organismo público que un Estado miembro designa para supervisar y hacer cumplir
+      una norma como la NIS2 o DORA.
+    examples:
+      - es: La autoridad competente puede ordenar una auditoría de seguridad.
+        en: The competent authority may order a security audit.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - NIS2
+    - DORA
+  related:
+    - grc.regulator
+    - law.supervisory-authority
+    - law.essential-entity
+  sources:
+    - label: Real Decreto 43/2021, de seguridad de las redes y sistemas de información (BOE)
+      url: https://www.boe.es/diario_boe/txt.php?id=BOE-A-2021-1192
+      found:
+        - de autoridades competentes en
+        - punto de contacto único
+      checked: 2026-11-15
+    - label: Directiva (UE) 2022/2555 (NIS 2), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81963
+      found:
+        - las autoridades competentes de
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.near-miss
+  en:
+    term: near miss
+    definition: An event that could have harmed systems or data but was stopped or did not
+      happen; NIS2 encourages voluntary reporting of these.
+  es:
+    verdict: translated
+    forms:
+      - text: cuasiincidente
+        article: el
+        kind: noun
+        primary: true
+        plural: los cuasiincidentes
+        usedBy:
+          - eu
+    definition: Suceso que podría haber dañado sistemas o datos, pero que se evitó o no llegó
+      a producirse.
+    examples:
+      - es: 'El correo malicioso fue bloqueado a tiempo: se registró como cuasiincidente.'
+        en: 'The malicious email was blocked in time: it was logged as a near miss.'
+  topics:
+    - incident
+  technology: []
+  frameworks:
+    - NIS2
+  related:
+    - law.significant-incident
+    - sec.incident-response
+  sources:
+    - label: Directiva (UE) 2022/2555 (NIS 2), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81963
+      found:
+        - cuasiincidentes
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.cyber-hygiene
+  en:
+    term: cyber hygiene
+    definition: The basic routine practices, such as patching, strong passwords and backups,
+      that keep systems and users secure.
+  es:
+    verdict: translated
+    forms:
+      - text: ciberhigiene
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+      - text: higiene digital
+        article: la
+        kind: noun
+    definition: Prácticas básicas y rutinarias, como parchear, usar contraseñas robustas y
+      hacer copias de seguridad, que mantienen seguros los sistemas y a los usuarios.
+    examples:
+      - es: La NIS2 exige prácticas básicas de ciberhigiene y formación.
+        en: NIS2 requires basic cyber hygiene practices and training.
+  topics:
+    - human
+    - hardening
+  technology: []
+  frameworks:
+    - NIS2
+  related:
+    - grc.security-awareness
+    - sec.patch-management
+    - sec.security-baseline
+  sources:
+    - label: INCIBE, blog de empresas
+      url: https://www.incibe.es/empresas/blog/analisis-riesgos-pasos-sencillo
+      found:
+        - tiempo Ciberhigiene Procesos
+      checked: 2026-11-15
+    - label: Directiva (UE) 2022/2555 (NIS 2), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81963
+      found:
+        - de ciberhigiene proporcionan
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.transposition
+  en:
+    term: transposition
+    definition: A member state passing national law to give effect to an EU directive.
+  es:
+    verdict: translated
+    forms:
+      - text: transposición
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+      - text: transponer
+        kind: verb
+        usedBy:
+          - official
+    definition: Aprobación por un Estado miembro de la norma nacional que incorpora una directiva
+      de la UE.
+    examples:
+      - es: La transposición de la directiva se ha retrasado.
+        en: The transposition of the directive has been delayed.
+    watchOut: Regulations (reglamentos) such as the GDPR and DORA apply directly and need
+      no transposition.
+  topics:
+    - grc
+  technology: []
+  related:
+    - law.regulation
+    - fw.nis2
+    - law.legislation
+  sources:
+    - label: Ley Orgánica 3/2018 (LOPDGDD)
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673
+      found:
+        - La transposición de
+      checked: 2026-11-15
+    - label: Directiva (UE) 2022/2555 (NIS 2), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81963
+      found:
+        - la transposición de
+      checked: 2026-11-15
+    - label: Ley Orgánica 13/2015, de modificación de la Ley de Enjuiciamiento Criminal
+      url: https://www.boe.es/buscar/doc.php?id=BOE-A-2015-10725
+      found:
+        - necesario transponer en
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.enisa
+  en:
+    term: ENISA
+    expansion: European Union Agency for Cybersecurity
+    definition: The EU agency that supports member states on cyber security, runs the EU certification
+      schemes and publishes guidance.
+  es:
+    verdict: english-kept
+    forms:
+      - text: ENISA
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+        note: Feminine, as an agencia.
+      - text: Agencia de la Unión Europea para la Ciberseguridad
+        article: la
+        kind: noun
+        register: formal
+        usedBy:
+          - official
+    say: Said as a word, 'enisa'.
+    definition: Agencia de la UE que apoya a los Estados miembros en ciberseguridad, gestiona
+      los esquemas europeos de certificación y publica orientaciones.
+    examples:
+      - es: La ENISA publica cada año su informe sobre el panorama de amenazas.
+        en: ENISA publishes its threat landscape report every year.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - NIS2
+    - EU-CSA
+  related:
+    - fw.nis2
+    - law.csirt
+    - grc.regulator
+  sources:
+    - label: AEPD, traducción del informe de ENISA «Ingeniería de la protección de datos»
+        (2022)
+      url: https://www.aepd.es/documento/enisa-ingenieria-de-la-proteccion-de-datos.pdf
+      found:
+        - DE ENISA La
+        - Agencia de la Unión Europea para la Ciberseguridad
+      checked: 2026-11-15
+    - label: Reglamento (UE) 2024/2847 (Reglamento de Ciberresiliencia), texto en español
+        publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-81720
+      found:
+        - ENISA
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.administrative-fine
+  en:
+    term: administrative fine
+    definition: A financial penalty imposed by a regulator, not a court; under NIS2 up to
+      10 million euros or 2% of worldwide turnover for essential entities.
+  es:
+    verdict: translated
+    forms:
+      - text: multa administrativa
+        article: la
+        kind: noun
+        primary: true
+        plural: las multas administrativas
+        usedBy:
+          - official
+          - eu
+      - text: sanción
+        article: la
+        kind: noun
+        plural: las sanciones
+        usedBy:
+          - official
+        note: A penalty in general, the more common word.
+      - text: volumen de negocios
+        article: el
+        kind: noun
+        usedBy:
+          - official
+        note: Turnover, the basis for the percentage.
+    definition: Sanción económica impuesta por un regulador y no por un tribunal.
+    examples:
+      - es: Las multas administrativas pueden alcanzar el 2 % del volumen de negocios mundial.
+        en: Administrative fines can reach 2% of worldwide turnover.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - NIS2
+    - GDPR
+  related:
+    - law.liability
+    - law.competent-authority
+    - grc.regulatory-compliance
+  sources:
+    - label: AEPD, Guía de Privacidad desde el Diseño
+      url: https://www.aepd.es/guias/guia-privacidad-desde-diseno.pdf
+      found:
+        - de multas administrativas
+      checked: 2026-11-15
+    - label: Reglamento (UE) 2016/679 (RGPD), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2016-80807
+      found:
+        - de multas administrativas
+      checked: 2026-11-15
+    - label: Ley Orgánica 3/2018 (LOPDGDD)
+      url: https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673
+      found:
+        - posible sanción
+      checked: 2026-11-15
+    - label: Red.es, Resolución de 9 de junio de 2014 (BOE-A-2014-6641)
+      url: https://www.boe.es/diario_boe/txt.php?id=BOE-A-2014-6641
+      found:
+        - volumen de negocios
+      checked: 2026-11-15
+  status: sourced
+
+- id: fw.dora
+  en:
+    term: DORA
+    expansion: Digital Operational Resilience Act
+    definition: The EU regulation that sets ICT risk, incident, testing and third-party rules
+      for financial entities and their critical technology suppliers.
+  es:
+    verdict: both
+    forms:
+      - text: DORA
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - microsoft
+        note: 'Used with el for the reglamento: el Reglamento DORA, or just DORA.'
+      - text: Reglamento de Resiliencia Operativa Digital
+        article: el
+        kind: noun
+        register: formal
+        usedBy:
+          - eu
+      - text: Reglamento (UE) 2022/2554
+        article: el
+        kind: noun
+        register: formal
+        usedBy:
+          - eu
+    say: Said as a word, 'dora'.
+    definition: Reglamento de la UE que fija las normas sobre riesgo de TIC, incidentes, pruebas
+      y terceros para las entidades financieras y sus proveedores tecnológicos esenciales.
+    examples:
+      - es: Como proveedor de un banco, DORA nos afecta a través del contrato.
+        en: As a supplier to a bank, DORA affects us through the contract.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - DORA
+  related:
+    - law.digital-operational-resilience
+    - law.ict-risk
+    - law.ict-third-party-provider
+    - fw.nis2
+  sources:
+    - label: 'INCIBE, blog de empresas: ¿Qué es el reglamento DORA?'
+      url: https://www.incibe.es/empresas/blog/que-es-el-reglamento-dora
+      found:
+        - reglamento DORA
+      checked: 2026-11-15
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/azure-sovereign-clouds/sovereignty-implementation
+      found:
+        - es DORA
+      checked: 2026-11-15
+    - label: Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81962
+      found:
+        - resiliencia operativa digital del sector financiero
+        - Reglamento (UE) 2022/2554
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.digital-operational-resilience
+  en:
+    term: digital operational resilience
+    definition: A financial entity's ability to build, assure and review its operational integrity
+      through technology disruptions.
+  es:
+    verdict: translated
+    forms:
+      - text: resiliencia operativa digital
+        article: la
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+      - text: pruebas de resiliencia operativa digital
+        article: las
+        kind: noun
+        usedBy:
+          - official
+        note: The testing programme DORA requires.
+    definition: Capacidad de una entidad financiera de construir, garantizar y revisar su
+      integridad operativa ante perturbaciones tecnológicas.
+    examples:
+      - es: El banco presenta cada año su estrategia de resiliencia operativa digital.
+        en: The bank presents its digital operational resilience strategy every year.
+  topics:
+    - grc
+    - incident
+  technology: []
+  frameworks:
+    - DORA
+  related:
+    - fw.dora
+    - sec.resiliency
+    - sec.business-continuity
+  sources:
+    - label: 'INCIBE, blog de empresas: ¿Qué es el reglamento DORA?'
+      url: https://www.incibe.es/empresas/blog/que-es-el-reglamento-dora
+      found:
+        - resiliencia operativa digital
+        - Pruebas de resiliencia operativa digital
+      checked: 2026-11-15
+    - label: Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81962
+      found:
+        - resiliencia operativa digital
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.ict-risk
+  en:
+    term: ICT risk
+    definition: DORA's term for any reasonably identifiable circumstance in the use of network
+      and information systems that could compromise them.
+  es:
+    verdict: translated
+    forms:
+      - text: riesgo relacionado con las TIC
+        article: el
+        kind: noun
+        primary: true
+        plural: los riesgos relacionados con las TIC
+        usedBy:
+          - eu
+      - text: TIC
+        article: las
+        kind: noun
+        usedBy:
+          - official
+        note: 'ICT: tecnologías de la información y la comunicación. Plural and feminine.'
+      - text: marco de gestión del riesgo relacionado con las TIC
+        article: el
+        kind: noun
+        usedBy:
+          - eu
+        note: The ICT risk management framework each entity must have.
+    definition: Término de DORA para cualquier circunstancia razonablemente identificable
+      en el uso de las redes y los sistemas de información que pueda comprometerlos.
+    examples:
+      - es: El marco de gestión del riesgo relacionado con las TIC se revisa al menos una
+          vez al año.
+        en: The ICT risk management framework is reviewed at least once a year.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - DORA
+  related:
+    - fw.dora
+    - grc.risk-management
+    - grc.risk
+  sources:
+    - label: Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81962
+      found:
+        - riesgo relacionado con las TIC
+        - marco de gestión del riesgo relacionado con las TIC
+      checked: 2026-11-15
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - las TIC
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.major-ict-incident
+  en:
+    term: major ICT-related incident
+    definition: Under DORA, an ICT incident with a high adverse impact on critical or important
+      functions, which must be reported to the supervisor.
+  es:
+    verdict: translated
+    forms:
+      - text: incidente grave relacionado con las TIC
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+      - text: ciberamenaza importante
+        article: la
+        kind: noun
+        usedBy:
+          - eu
+        note: A significant cyber threat, which may be reported voluntarily.
+    definition: En DORA, incidente de TIC con gran repercusión negativa en funciones esenciales
+      o importantes, que debe notificarse al supervisor.
+    examples:
+      - es: La caída de la banca en línea se clasificó como incidente grave relacionado con
+          las TIC.
+        en: The online banking outage was classified as a major ICT-related incident.
+  topics:
+    - incident
+    - grc
+  technology: []
+  frameworks:
+    - DORA
+  related:
+    - law.significant-incident
+    - fw.dora
+    - sec.incident-response
+  sources:
+    - label: 'INCIBE, blog de empresas: ¿Qué es el reglamento DORA?'
+      url: https://www.incibe.es/empresas/blog/que-es-el-reglamento-dora
+      found:
+        - incidentes graves relacionados con las TIC
+      checked: 2026-11-15
+    - label: Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81962
+      found:
+        - incidentes graves relacionados con las TIC
+        - ciberamenazas importantes
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.ict-third-party-provider
+  en:
+    term: ICT third-party service provider
+    definition: A company supplying ICT services, including cloud, to a financial entity;
+      those designated critical are overseen directly at EU level.
+  es:
+    verdict: translated
+    forms:
+      - text: proveedor tercero de servicios de TIC
+        article: el
+        kind: noun
+        primary: true
+        plural: los proveedores terceros de servicios de TIC
+        usedBy:
+          - eu
+      - text: proveedor tercero esencial de servicios de TIC
+        article: el
+        kind: noun
+        usedBy:
+          - eu
+        note: A critical provider, under direct EU oversight.
+    definition: Empresa que presta servicios de TIC, incluida la nube, a una entidad financiera;
+      los designados como esenciales están sujetos a supervisión directa de la UE.
+    examples:
+      - es: Los grandes proveedores de nube son proveedores terceros esenciales de servicios
+          de TIC.
+        en: The big cloud providers are critical ICT third-party service providers.
+    watchOut: The Spanish text of DORA translates critical as esencial here, not crítico.
+  topics:
+    - supplychain
+    - grc
+  technology:
+    - cloud-general
+  frameworks:
+    - DORA
+  related:
+    - grc.third-party-risk
+    - cloud.service-provider
+    - law.register-of-information
+    - law.concentration-risk
+  sources:
+    - label: Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81962
+      found:
+        - proveedor tercero de servicios de TIC
+        - proveedores terceros esenciales de servicios de TIC
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.critical-function
+  en:
+    term: critical or important function
+    definition: Under DORA, a function whose disruption would materially impair a financial
+      entity's performance, soundness or compliance; stricter rules apply to ICT supporting
+      it.
+  es:
+    verdict: translated
+    forms:
+      - text: función esencial o importante
+        article: la
+        kind: noun
+        primary: true
+        plural: las funciones esenciales o importantes
+        usedBy:
+          - eu
+    definition: En DORA, función cuya perturbación afectaría de forma significativa a los
+      resultados, la solidez o el cumplimiento de una entidad financiera.
+    examples:
+      - es: El contrato de nube sustenta una función esencial o importante, así que exige
+          estrategia de salida.
+        en: The cloud contract supports a critical or important function, so it requires an
+          exit strategy.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - DORA
+  related:
+    - grc.bia
+    - grc.exit-strategy
+    - law.ict-third-party-provider
+  sources:
+    - label: Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81962
+      found:
+        - funciones esenciales o importantes
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.tlpt
+  en:
+    term: threat-led penetration testing
+    acronym: TLPT
+    definition: Advanced red-team testing of live production systems, guided by threat intelligence,
+      which DORA requires of the most significant entities at least every three years.
+  es:
+    verdict: translated
+    forms:
+      - text: pruebas de penetración basadas en amenazas
+        article: las
+        kind: noun
+        primary: true
+        usedBy:
+          - eu
+      - text: TLPT
+        kind: noun
+        headline: true
+      - text: TIBER-ES
+        kind: noun
+        note: The Spanish version of the European TIBER-EU framework for these tests, run
+          by the Banco de España.
+    say: 'TLPT is spelled out: te-ele-pe-te.'
+    definition: Pruebas avanzadas de equipo rojo sobre sistemas en producción, guiadas por
+      inteligencia de amenazas, que DORA exige a las entidades más significativas al menos
+      cada tres años.
+    examples:
+      - es: El banco debe realizar pruebas de penetración basadas en amenazas cada tres años.
+        en: The bank must carry out threat-led penetration testing every three years.
+  topics:
+    - assessment
+  technology: []
+  frameworks:
+    - DORA
+  related:
+    - sec.penetration-test
+    - sec.red-team
+    - sec.threat-intelligence
+  sources:
+    - label: Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81962
+      found:
+        - pruebas de penetración basadas en amenazas
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.register-of-information
+  en:
+    term: register of information
+    definition: The record DORA requires of every contract a financial entity has with ICT
+      third-party providers, reported to the supervisor.
+  es:
+    verdict: translated
+    forms:
+      - text: registro de información
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - official
+          - eu
+      - text: acuerdos contractuales
+        article: los
+        kind: noun
+        usedBy:
+          - official
+        note: Contractual arrangements, which is what it lists.
+    definition: Registro que DORA exige de todos los contratos de una entidad financiera con
+      proveedores terceros de servicios de TIC, y que se comunica al supervisor.
+    examples:
+      - es: Cada nuevo contrato de nube debe añadirse al registro de información.
+        en: Every new cloud contract must be added to the register of information.
+  topics:
+    - supplychain
+    - grc
+  technology: []
+  frameworks:
+    - DORA
+  related:
+    - law.ict-third-party-provider
+    - grc.vendor-management
+    - law.contract
+  sources:
+    - label: Orden PRE/2740/2007, Reglamento de Evaluación y Certificación de la Seguridad
+        de las TI
+      url: https://www.boe.es/buscar/pdf/2007/BOE-A-2007-16830-consolidado.pdf
+      found:
+        - registro de información
+      checked: 2026-11-15
+    - label: Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81962
+      found:
+        - registro de información
+      checked: 2026-11-15
+    - label: 'INCIBE, blog de empresas: ¿Qué es el reglamento DORA?'
+      url: https://www.incibe.es/empresas/blog/que-es-el-reglamento-dora
+      found:
+        - estableciendo acuerdos contractuales específicos
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.concentration-risk
+  en:
+    term: concentration risk
+    definition: The risk of depending too heavily on one supplier, or on a few that cannot
+      easily be replaced.
+  es:
+    verdict: translated
+    forms:
+      - text: riesgo de concentración
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - eu
+      - text: riesgo de concentración de TIC
+        article: el
+        kind: noun
+        usedBy:
+          - eu
+        note: DORA's fuller term.
+    definition: Riesgo de depender en exceso de un proveedor, o de unos pocos difíciles de
+      sustituir.
+    examples:
+      - es: Tener todo en un solo proveedor de nube aumenta el riesgo de concentración.
+        en: Having everything with a single cloud provider increases concentration risk.
+  topics:
+    - supplychain
+    - grc
+  technology:
+    - cloud-general
+  frameworks:
+    - DORA
+  related:
+    - cloud.vendor-lock-in
+    - cloud.multi-cloud
+    - grc.exit-strategy
+    - grc.third-party-risk
+  sources:
+    - label: Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81962
+      found:
+        - riesgo de concentración
+        - riesgo de concentración de TIC
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.lead-overseer
+  en:
+    term: lead overseer
+    definition: The European supervisory authority assigned to oversee a critical ICT third-party
+      provider under DORA.
+  es:
+    verdict: translated
+    forms:
+      - text: supervisor principal
+        article: el
+        kind: noun
+        primary: true
+        usedBy:
+          - eu
+      - text: Autoridades Europeas de Supervisión
+        article: las
+        kind: noun
+        usedBy:
+          - official
+        note: 'The ESAs: the EBA, EIOPA and ESMA, shortened to AES in Spanish.'
+    definition: Autoridad europea de supervisión a la que se asigna la vigilancia de un proveedor
+      tercero esencial de servicios de TIC en DORA.
+    examples:
+      - es: El supervisor principal puede inspeccionar las instalaciones del proveedor de
+          nube.
+        en: The lead overseer may inspect the cloud provider's premises.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - DORA
+  related:
+    - law.competent-authority
+    - law.ict-third-party-provider
+    - grc.regulator
+  sources:
+    - label: Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81962
+      found:
+        - un supervisor principal nombrado
+      checked: 2026-11-15
+    - label: INCIBE, Glosario de términos de ciberseguridad (2021)
+      url: https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf
+      found:
+        - AES
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.rts
+  en:
+    term: regulatory technical standards
+    acronym: RTS
+    definition: Detailed binding rules drafted by the EU supervisory authorities and adopted
+      by the Commission to spell out what a regulation such as DORA requires.
+  es:
+    verdict: translated
+    forms:
+      - text: normas técnicas de regulación
+        article: las
+        kind: noun
+        primary: true
+        usedBy:
+          - eu
+      - text: RTS
+        article: las
+        kind: noun
+        headline: true
+        note: The English acronym is what practitioners use. NTR is the Spanish one.
+      - text: normas técnicas de ejecución
+        article: las
+        kind: noun
+        usedBy:
+          - eu
+        note: 'Implementing technical standards, ITS: the forms and templates.'
+    say: 'RTS is spelled out: erre-te-ese.'
+    definition: Normas detalladas y vinculantes que redactan las autoridades europeas de supervisión
+      y adopta la Comisión para concretar un reglamento como DORA.
+    examples:
+      - es: Las normas técnicas de regulación detallan el contenido de la política de TIC.
+        en: The regulatory technical standards set out what the ICT policy must contain.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - DORA
+  related:
+    - fw.dora
+    - law.regulation
+    - grc.standard
+  sources:
+    - label: Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81962
+      found:
+        - normas técnicas de regulación
+        - normas técnicas de ejecución
+      checked: 2026-11-15
+  status: sourced
+
+- id: law.financial-entity
+  en:
+    term: financial entity
+    definition: 'DORA''s collective term for the firms it covers: banks, insurers, investment
+      firms, payment institutions, crypto-asset providers and others.'
+  es:
+    verdict: translated
+    forms:
+      - text: entidad financiera
+        article: la
+        kind: noun
+        primary: true
+        plural: las entidades financieras
+        usedBy:
+          - official
+          - eu
+      - text: entidad de crédito
+        article: la
+        kind: noun
+        usedBy:
+          - eu
+        note: 'A credit institution: a bank, in regulatory language.'
+    definition: 'Término con el que DORA agrupa a las empresas a las que se aplica: bancos,
+      aseguradoras, empresas de inversión, entidades de pago y otras.'
+    examples:
+      - es: DORA se aplica a unas veinte categorías de entidades financieras.
+        en: DORA applies to some twenty categories of financial entity.
+  topics:
+    - grc
+  technology: []
+  frameworks:
+    - DORA
+  related:
+    - fw.dora
+    - law.ict-third-party-provider
+    - law.competent-authority
+  sources:
+    - label: 'INCIBE, blog de empresas: ¿Qué es el reglamento DORA?'
+      url: https://www.incibe.es/empresas/blog/que-es-el-reglamento-dora
+      found:
+        - las entidades financieras deben
+      checked: 2026-11-15
+    - label: Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE
+      url: https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81962
+      found:
+        - las entidades financieras de
+        - entidad de crédito
+      checked: 2026-11-15
+  status: sourced

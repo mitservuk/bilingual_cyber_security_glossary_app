@@ -1,5 +1,7 @@
 # Content format
 
+To add a batch of terms, follow [ADDING-TERMS.md](ADDING-TERMS.md).
+
 Terms live in YAML files under `content/terms/`. One entry is one English
 term with its Spanish usage in Spain (es-ES). The app is built from these
 files; nothing about a term is stored anywhere else.
@@ -110,5 +112,6 @@ checked source and confirm each `found` text is still on its page.
 `sec.` security concepts · `cloud.` cloud concepts · `grc.` governance, risk
 and business terms · `ai.` artificial intelligence · `tech.` other technology ·
 `law.` legal terms · `fw.` frameworks, standards and regulations · `azure.`
-Microsoft Azure · `gcp.` Google Cloud. Later: `aws.`, `k8s.`, `tool.`,
+Microsoft Azure · `gcp.` Google Cloud · `aws.` Amazon Web Services · `ens.` the
+vocabulary of the ENS. Later: `aws.`, `k8s.`, `tool.`,
 `attack.`.

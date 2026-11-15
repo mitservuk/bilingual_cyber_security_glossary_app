@@ -1,0 +1,1304 @@
+# Amazon Web Services: platform concepts and services.
+# Format is described in content/README.md. These entries were written from
+# working knowledge of usage in Spain; each `found` text was then located in a
+# page the glossary already cites and confirmed with scripts/check_sources.py.
+# Forms with no usedBy have not been seen in a source.
+
+- id: aws.account
+  en:
+    term: AWS account
+    definition: The basic container and security boundary in AWS; resources, billing and identities
+      belong to an account.
+  es:
+    verdict: translated
+    forms:
+      - text: cuenta de AWS
+        article: la
+        kind: noun
+        primary: true
+        plural: las cuentas de AWS
+        usedBy:
+          - aws
+          - engineers
+      - text: usuario raíz
+        article: el
+        kind: noun
+        usedBy:
+          - aws
+        note: The root user, which owns the account and should be locked away.
+    definition: 'Contenedor básico y límite de seguridad en AWS: los recursos, la facturación
+      y las identidades pertenecen a una cuenta.'
+    examples:
+      - es: Cada entorno tiene su propia cuenta de AWS.
+        en: Each environment has its own AWS account.
+  topics:
+    - architecture
+    - grc
+  technology:
+    - aws
+  related:
+    - aws.organizations
+    - azure.subscription
+    - gcp.project
+  sources:
+    - label: AWS, documentación es_es
+      url: https://docs.aws.amazon.com/es_es/config/latest/developerguide/operational-best-practices-for-pci-dss.html
+      found:
+        - Cuentas de AWS
+        - el usuario raíz
+      checked: 2026-11-15
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/aws-guardduty-luchas-amenzas/
+      found:
+        - cuenta de AWS
+      checked: 2026-11-15
+  status: sourced
+
+- id: aws.organizations
+  en:
+    term: AWS Organizations
+    definition: The service for managing many AWS accounts together, grouped into organisational
+      units and governed by service control policies.
+  es:
+    verdict: english-kept
+    forms:
+      - text: AWS Organizations
+        kind: noun
+        primary: true
+        usedBy:
+          - aws
+          - engineers
+      - text: unidad organizativa
+        article: la
+        kind: noun
+        plural: las unidades organizativas
+        usedBy:
+          - aws
+        note: An organisational unit, OU.
+      - text: política de control de servicios
+        article: la
+        kind: noun
+        note: 'A service control policy, SCP: a guardrail on what member accounts can do.'
+    definition: Servicio para administrar conjuntamente muchas cuentas de AWS, agrupadas en
+      unidades organizativas y gobernadas con políticas de control de servicios.
+    examples:
+      - es: Una SCP de AWS Organizations impide desactivar CloudTrail en cualquier cuenta.
+        en: An AWS Organizations SCP stops CloudTrail being turned off in any account.
+  topics:
+    - grc
+    - architecture
+  technology:
+    - aws
+  related:
+    - aws.account
+    - aws.control-tower
+    - azure.management-group
+    - gcp.org-policy
+  sources:
+    - label: AWS, blog en español
+      url: https://aws.amazon.com/es/blogs/aws-spanish/gestion-automatica-de-recursos-efimeros-para-pruebas-usando-tecnologia-sin-servidor/
+      found:
+        - tiene AWS Organizations
+      checked: 2026-11-15
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/techbiz/control-acceso-cloud-mucho-mas-seguro-propio-datacenter/
+      found:
+        - llama AWS Organizations
+      checked: 2026-11-15
+    - label: AWS, documentación en español
+      url: https://docs.aws.amazon.com/es_es/wellarchitected/latest/security-pillar/governance.html
+      found:
+        - unidades organizativas
+      checked: 2026-11-15
+  status: sourced
+
+- id: aws.control-tower
+  en:
+    term: AWS Control Tower
+    definition: A service that sets up and governs a multi-account AWS landing zone with pre-built
+      guardrails.
+  es:
+    verdict: english-kept
+    forms:
+      - text: AWS Control Tower
+        kind: noun
+        primary: true
+        usedBy:
+          - aws
+          - engineers
+      - text: barrera de protección
+        article: la
+        kind: noun
+        usedBy:
+          - aws
+        note: AWS's translation of guardrail. People say guardrail.
+    definition: Servicio que crea y gobierna una zona de aterrizaje de AWS con varias cuentas
+      y controles ya preparados.
+    examples:
+      - es: Las cuentas nuevas se crean desde AWS Control Tower con los controles aplicados.
+        en: New accounts are created from AWS Control Tower with the controls applied.
+  topics:
+    - grc
+    - architecture
+  technology:
+    - aws
+  related:
+    - azure.landing-zone
+    - aws.organizations
+    - aws.config
+  sources:
+    - label: AWS, blog en español
+      url: https://aws.amazon.com/es/blogs/aws-spanish/gestion-automatica-de-recursos-efimeros-para-pruebas-usando-tecnologia-sin-servidor/
+      found:
+        - AWS Control Tower
+      checked: 2026-11-15
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/novedades-aws-re-invent-2021/
+      found:
+        - AWS Control Tower
+      checked: 2026-11-15
+    - label: AWS, páginas en español
+      url: https://aws.amazon.com/es/what-is/artificial-intelligence/
+      found:
+        - barreras de protección
+      checked: 2026-11-15
+  status: sourced
+
+- id: aws.iam
+  en:
+    term: AWS IAM
+    definition: 'AWS''s identity and access service: users, roles and the JSON policies that
+      say what each may do.'
+  es:
+    verdict: both
+    forms:
+      - text: IAM
+        kind: noun
+        primary: true
+        usedBy:
+          - aws
+          - official
+      - text: rol de IAM
+        article: el
+        kind: noun
+        plural: los roles de IAM
+        usedBy:
+          - aws
+        note: 'An IAM role, assumed temporarily: asumir un rol.'
+      - text: política de IAM
+        article: la
+        kind: noun
+        usedBy:
+          - aws
+        note: An IAM policy. AWS says política, as Google does.
+      - text: usuario de IAM
+        article: el
+        kind: noun
+        usedBy:
+          - aws
+    say: IAM is said the English way, 'ai-am', or spelled out in Spanish.
+    definition: 'Servicio de identidades y accesos de AWS: usuarios, roles y las políticas
+      en JSON que indican qué puede hacer cada uno.'
+    examples:
+      - es: La función asume un rol de IAM con permisos mínimos.
+        en: The function assumes an IAM role with minimum permissions.
+  topics:
+    - iam
+    - authz
+  technology:
+    - aws
+    - identity-platforms
+  related:
+    - sec.iam
+    - gcp.iam
+    - azure.rbac
+    - sec.least-privilege
+  sources:
+    - label: AWS, documentación es_es
+      url: https://docs.aws.amazon.com/es_es/config/latest/developerguide/operational-best-practices-for-pci-dss.html
+      found:
+        - de IAM se
+        - rol de IAM
+        - políticas de IAM
+      checked: 2026-11-15
+    - label: INCIBE-CERT, blog
+      url: https://www.incibe.es/incibe-cert/blog/seguridad-de-las-api
+      found:
+        - en IAM en
+      checked: 2026-11-15
+    - label: AWS Well-Architected Framework, es_ES
+      url: https://docs.aws.amazon.com/es_es/wellarchitected/latest/framework/sec-iam.html
+      found:
+        - usuario de IAM
+      checked: 2026-11-15
+  status: sourced
+
+- id: aws.identity-center
+  en:
+    term: IAM Identity Center
+    definition: AWS's service for single sign-on to many accounts and applications, formerly
+      AWS SSO.
+  es:
+    verdict: english-kept
+    forms:
+      - text: IAM Identity Center
+        kind: noun
+        primary: true
+        usedBy:
+          - aws
+          - engineers
+      - text: conjunto de permisos
+        article: el
+        kind: noun
+        usedBy:
+          - engineers
+        note: A permission set, what a user is granted in each account.
+    definition: Servicio de AWS de inicio de sesión único en muchas cuentas y aplicaciones,
+      antes llamado AWS SSO.
+    examples:
+      - es: Los empleados entran en todas las cuentas a través de IAM Identity Center.
+        en: Employees get into every account through IAM Identity Center.
+  topics:
+    - iam
+    - authn
+  technology:
+    - aws
+    - identity-platforms
+  related:
+    - sec.sso
+    - sec.federated-identity
+    - azure.entra-id
+  sources:
+    - label: AWS Well-Architected Framework, es_ES
+      url: https://docs.aws.amazon.com/es_es/wellarchitected/latest/framework/sec-iam.html
+      found:
+        - IAM Identity Center
+      checked: 2026-11-15
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/guerra-de-nubes-aws-azure-gcp/
+      found:
+        - IAM Identity Center
+      checked: 2026-11-15
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/patrones-arquitectura-microservicios-seguridad-con-jwt/
+      found:
+        - conjunto de permisos
+      checked: 2026-11-15
+  status: sourced
+
+- id: aws.s3
+  en:
+    term: Amazon S3
+    expansion: Simple Storage Service
+    definition: AWS's object storage service; objects are kept in buckets.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Amazon S3
+        kind: noun
+        primary: true
+        usedBy:
+          - aws
+          - official
+      - text: bucket de S3
+        article: el
+        kind: noun
+        plural: los buckets de S3
+        usedBy:
+          - aws
+      - text: bloqueo de acceso público
+        article: el
+        kind: noun
+        note: Block Public Access, the setting that prevents accidental exposure.
+    say: S3 is said 'ese tres'.
+    definition: Servicio de almacenamiento de objetos de AWS; los objetos se guardan en buckets.
+    examples:
+      - es: El bloqueo de acceso público está activado en todos los buckets de S3.
+        en: Block Public Access is enabled on all the S3 buckets.
+  topics:
+    - data
+  technology:
+    - aws
+  related:
+    - cloud.object-storage
+    - gcp.cloud-storage
+    - azure.blob-storage
+    - sec.misconfiguration
+  sources:
+    - label: AWS, documentación es_es
+      url: https://docs.aws.amazon.com/es_es/config/latest/developerguide/operational-best-practices-for-pci-dss.html
+      found:
+        - Amazon S3
+        - bucket de S3
+      checked: 2026-11-15
+    - label: Red.es, Resolución de 9 de junio de 2014 (BOE-A-2014-6641)
+      url: https://www.boe.es/diario_boe/txt.php?id=BOE-A-2014-6641
+      found:
+        - Amazon S3
+      checked: 2026-11-15
+  status: sourced
+
+- id: aws.ec2
+  en:
+    term: Amazon EC2
+    expansion: Elastic Compute Cloud
+    definition: AWS's virtual machine service.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Amazon EC2
+        kind: noun
+        primary: true
+        usedBy:
+          - aws
+          - engineers
+      - text: instancia de EC2
+        article: la
+        kind: noun
+        plural: las instancias de EC2
+        usedBy:
+          - aws
+    say: EC2 is said 'e-ce-dos'.
+    definition: Servicio de máquinas virtuales de AWS.
+    examples:
+      - es: Las instancias de EC2 no tienen IP pública y salen por una puerta de enlace NAT.
+        en: The EC2 instances have no public IP and go out through a NAT gateway.
+  topics:
+    - architecture
+  technology:
+    - aws
+  related:
+    - cloud.virtual-machine
+    - gcp.compute-engine
+    - cloud.iaas
+  sources:
+    - label: AWS, documentación es_es
+      url: https://docs.aws.amazon.com/es_es/config/latest/developerguide/operational-best-practices-for-pci-dss.html
+      found:
+        - Amazon EC2
+      checked: 2026-11-15
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/techbiz/aws-outposts-integrando-nube-centro-datos/
+      found:
+        - como Amazon EC2
+      checked: 2026-11-15
+    - label: AWS, documentación en español
+      url: https://docs.aws.amazon.com/es_es/AWSEC2/latest/UserGuide/InstanceStorage.html
+      found:
+        - instancias de EC2
+      checked: 2026-11-15
+  status: sourced
+
+- id: aws.vpc
+  en:
+    term: Amazon VPC
+    definition: AWS's virtual network, scoped to one region and divided into subnets across
+      availability zones.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Amazon VPC
+        kind: noun
+        primary: true
+        usedBy:
+          - aws
+          - engineers
+      - text: ACL de red
+        article: la
+        kind: noun
+        usedBy:
+          - aws
+        note: A network ACL, the stateless filter on a subnet.
+      - text: punto de conexión de VPC
+        article: el
+        kind: noun
+        usedBy:
+          - aws
+        note: A VPC endpoint, for reaching AWS services privately. PrivateLink is the technology
+          behind it.
+    definition: Red virtual de AWS, limitada a una región y dividida en subredes repartidas
+      por zonas de disponibilidad.
+    examples:
+      - es: El acceso a S3 va por un punto de conexión de VPC, sin salir a internet.
+        en: Access to S3 goes through a VPC endpoint, without going out to the internet.
+  topics:
+    - network
+  technology:
+    - aws
+    - networking
+  related:
+    - cloud.vpc
+    - sec.security-group
+    - azure.virtual-network
+    - gcp.vpc
+    - azure.private-endpoint
+  sources:
+    - label: AWS, documentación es_es
+      url: https://docs.aws.amazon.com/es_es/config/latest/developerguide/operational-best-practices-for-pci-dss.html
+      found:
+        - Amazon VPC
+      checked: 2026-11-15
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/novedades-aws-re-invent-2021/
+      found:
+        - Amazon VPC IP
+      checked: 2026-11-15
+    - label: AWS, documentación en español
+      url: https://docs.aws.amazon.com/es_es/vpc/latest/userguide/vpc-security-groups.html
+      found:
+        - ACL de red
+      checked: 2026-11-15
+    - label: AWS, páginas en español
+      url: https://aws.amazon.com/es/network-firewall/features/
+      found:
+        - puntos de conexión de VPC
+      checked: 2026-11-15
+  status: sourced
+
+- id: aws.lambda
+  en:
+    term: AWS Lambda
+    definition: AWS's serverless service for running functions in response to events.
+  es:
+    verdict: english-kept
+    forms:
+      - text: AWS Lambda
+        kind: noun
+        primary: true
+        usedBy:
+          - aws
+          - official
+      - text: función de Lambda
+        article: la
+        kind: noun
+        usedBy:
+          - aws
+        note: A Lambda function; in speech, una lambda.
+    definition: Servicio sin servidor de AWS para ejecutar funciones en respuesta a eventos.
+    examples:
+      - es: Una función de Lambda rota las credenciales cada noche.
+        en: A Lambda function rotates the credentials every night.
+  topics:
+    - architecture
+  technology:
+    - aws
+    - serverless
+  related:
+    - cloud.serverless
+    - azure.functions
+    - gcp.cloud-functions
+  sources:
+    - label: AWS, documentación en español
+      url: https://docs.aws.amazon.com/es_es/lambda/latest/dg/welcome.html
+      found:
+        - es AWS Lambda
+        - funciones de Lambda
+      checked: 2026-11-15
+    - label: INCIBE-CERT, blog
+      url: https://www.incibe.es/incibe-cert/blog/seguridad-de-las-api
+      found:
+        - como AWS Lambda
+      checked: 2026-11-15
+  status: sourced
+
+- id: aws.eks
+  en:
+    term: Amazon EKS
+    expansion: Elastic Kubernetes Service
+    definition: AWS's managed Kubernetes service.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Amazon EKS
+        kind: noun
+        primary: true
+        usedBy:
+          - aws
+          - engineers
+      - text: EKS
+        kind: noun
+        headline: true
+        usedBy:
+          - aws
+    say: 'EKS is spelled out: e-ka-ese.'
+    definition: Servicio gestionado de Kubernetes de AWS.
+    examples:
+      - es: Los pods de EKS obtienen permisos mediante roles de IAM.
+        en: The EKS pods get permissions through IAM roles.
+  topics:
+    - architecture
+  technology:
+    - aws
+    - kubernetes
+  related:
+    - tech.kubernetes
+    - azure.aks
+    - gcp.gke
+  sources:
+    - label: AWS, páginas en español
+      url: https://aws.amazon.com/es/kubernetes/
+      found:
+        - con Amazon EKS
+        - EKS
+      checked: 2026-11-15
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/aws-guardduty-luchas-amenzas/
+      found:
+        - de Amazon EKS
+      checked: 2026-11-15
+  status: sourced
+
+- id: aws.rds
+  en:
+    term: Amazon RDS
+    expansion: Relational Database Service
+    definition: AWS's managed relational database service.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Amazon RDS
+        kind: noun
+        primary: true
+        usedBy:
+          - aws
+          - engineers
+      - text: instancia de base de datos
+        article: la
+        kind: noun
+        usedBy:
+          - microsoft
+        note: A DB instance.
+    say: 'RDS is spelled out: erre-de-ese.'
+    definition: Servicio gestionado de bases de datos relacionales de AWS.
+    examples:
+      - es: La base de datos de Amazon RDS está cifrada y en subredes privadas.
+        en: The Amazon RDS database is encrypted and in private subnets.
+  topics:
+    - data
+    - architecture
+  technology:
+    - aws
+  related:
+    - gcp.cloud-sql
+    - tech.managed-service
+    - cloud.paas
+  sources:
+    - label: AWS, documentación es_es
+      url: https://docs.aws.amazon.com/es_es/config/latest/developerguide/operational-best-practices-for-pci-dss.html
+      found:
+        - Amazon RDS
+      checked: 2026-11-15
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/montar-nube-la-ayuda-aws-cloudformation/
+      found:
+        - Amazon RDS
+      checked: 2026-11-15
+    - label: Microsoft Learn, es-ES
+      url: https://learn.microsoft.com/es-es/azure/well-architected/reliability/redundancy
+      found:
+        - instancia de base de datos
+      checked: 2026-11-15
+  status: sourced
+
+- id: aws.kms
+  en:
+    term: AWS KMS
+    expansion: Key Management Service
+    definition: AWS's service for creating and controlling the keys that encrypt data across
+      its services.
+  es:
+    verdict: english-kept
+    forms:
+      - text: AWS KMS
+        kind: noun
+        primary: true
+        usedBy:
+          - aws
+          - engineers
+      - text: clave administrada por el cliente
+        article: la
+        kind: noun
+        usedBy:
+          - aws
+        note: A customer managed key. AWS says administrada where Google says gestionada.
+      - text: política de claves
+        article: la
+        kind: noun
+        usedBy:
+          - official
+        note: A key policy, which says who may use a key.
+    say: 'KMS is spelled out: ka-eme-ese.'
+    definition: Servicio de AWS para crear y controlar las claves que cifran los datos en
+      sus servicios.
+    examples:
+      - es: El bucket se cifra con una clave de AWS KMS administrada por el cliente.
+        en: The bucket is encrypted with a customer managed AWS KMS key.
+  topics:
+    - crypto
+    - secrets
+  technology:
+    - aws
+  related:
+    - sec.key-management
+    - gcp.cloud-kms
+    - azure.key-vault
+    - sec.envelope-encryption
+  sources:
+    - label: AWS, documentación en español
+      url: https://docs.aws.amazon.com/es_es/kms/latest/developerguide/rotate-keys.html
+      found:
+        - AWS KMS keys
+        - claves administradas por el cliente
+      checked: 2026-11-15
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/techbiz/control-acceso-cloud-mucho-mas-seguro-propio-datacenter/
+      found:
+        - AWS KMS permiten
+      checked: 2026-11-15
+    - label: AEPD, Orientaciones y garantías en los procedimientos de anonimización de datos
+        personales
+      url: https://www.aepd.es/guias/guia-orientaciones-procedimientos-anonimizacion.pdf
+      found:
+        - política de claves
+      checked: 2026-11-15
+  status: sourced
+
+- id: aws.secrets-manager
+  en:
+    term: AWS Secrets Manager
+    definition: AWS's service for storing, retrieving and automatically rotating secrets such
+      as database passwords.
+  es:
+    verdict: english-kept
+    forms:
+      - text: AWS Secrets Manager
+        kind: noun
+        primary: true
+        usedBy:
+          - aws
+          - engineers
+      - text: rotación de secretos
+        article: la
+        kind: noun
+        usedBy:
+          - aws
+    definition: Servicio de AWS para guardar, recuperar y rotar automáticamente secretos como
+      las contraseñas de bases de datos.
+    examples:
+      - es: La aplicación lee la contraseña de AWS Secrets Manager en cada arranque.
+        en: The application reads the password from AWS Secrets Manager at every start-up.
+  topics:
+    - secrets
+  technology:
+    - aws
+  related:
+    - sec.secrets-management
+    - gcp.secret-manager
+    - azure.key-vault
+  sources:
+    - label: AWS, páginas en español
+      url: https://aws.amazon.com/es/secrets-manager/
+      found:
+        - AWS Secrets Manager
+        - Rotación de secretos
+      checked: 2026-11-15
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/guerra-de-nubes-aws-azure-gcp/
+      found:
+        - AWS Secrets Manager
+      checked: 2026-11-15
+  status: sourced
+
+- id: aws.cloudtrail
+  en:
+    term: AWS CloudTrail
+    definition: 'The AWS service that records every API call made in an account: who did what,
+      when and from where.'
+  es:
+    verdict: english-kept
+    forms:
+      - text: AWS CloudTrail
+        kind: noun
+        primary: true
+        usedBy:
+          - aws
+          - engineers
+      - text: registro de seguimiento
+        article: el
+        kind: noun
+        usedBy:
+          - aws
+        note: A trail, in AWS's translation. People say trail.
+    definition: 'Servicio de AWS que registra cada llamada a la API realizada en una cuenta:
+      quién hizo qué, cuándo y desde dónde.'
+    examples:
+      - es: Según AWS CloudTrail, la clave se creó desde una IP desconocida.
+        en: According to AWS CloudTrail, the key was created from an unknown IP.
+  topics:
+    - detection
+  technology:
+    - aws
+  related:
+    - sec.log
+    - sec.traceability
+    - gcp.cloud-logging
+    - azure.monitor
+  sources:
+    - label: AWS, documentación es_es
+      url: https://docs.aws.amazon.com/es_es/config/latest/developerguide/operational-best-practices-for-pci-dss.html
+      found:
+        - enabled AWS CloudTrail registra
+        - registros de seguimiento
+      checked: 2026-11-15
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/aws-guardduty-luchas-amenzas/
+      found:
+        - de AWS CloudTrail
+      checked: 2026-11-15
+  status: sourced
+
+- id: aws.cloudwatch
+  en:
+    term: Amazon CloudWatch
+    definition: AWS's monitoring service for metrics, logs and alarms.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Amazon CloudWatch
+        kind: noun
+        primary: true
+        usedBy:
+          - aws
+          - engineers
+      - text: alarma
+        article: la
+        kind: noun
+        note: A CloudWatch alarm; AWS says alarma where other tools say alerta.
+    definition: Servicio de monitorización de AWS para métricas, registros y alarmas.
+    examples:
+      - es: Una alarma de Amazon CloudWatch avisa si alguien usa el usuario raíz.
+        en: An Amazon CloudWatch alarm warns if anyone uses the root user.
+  topics:
+    - detection
+  technology:
+    - aws
+  related:
+    - sec.monitoring
+    - azure.monitor
+    - sec.alert
+    - aws.cloudtrail
+  sources:
+    - label: AWS, documentación es_es
+      url: https://docs.aws.amazon.com/es_es/config/latest/developerguide/operational-best-practices-for-pci-dss.html
+      found:
+        - Usa Amazon CloudWatch para
+      checked: 2026-11-15
+    - label: Adictos al Trabajo (Autentia)
+      url: https://adictosaltrabajo.com/2021/04/13/monitorizar-aplicaciones-en-un-cluster-de-kubernetes/
+      found:
+        - de Amazon CloudWatch
+      checked: 2026-11-15
+  status: sourced
+
+- id: aws.guardduty
+  en:
+    term: Amazon GuardDuty
+    definition: AWS's threat detection service, which analyses logs and network activity for
+      signs of compromise.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Amazon GuardDuty
+        kind: noun
+        primary: true
+        usedBy:
+          - aws
+          - engineers
+      - text: hallazgo
+        article: el
+        kind: noun
+        plural: los hallazgos
+        note: A finding. AWS's Spain documentation says resultado.
+    definition: Servicio de detección de amenazas de AWS, que analiza los registros y la actividad
+      de red en busca de indicios de compromiso.
+    examples:
+      - es: Amazon GuardDuty detectó minería de criptomonedas en una instancia.
+        en: Amazon GuardDuty detected cryptocurrency mining on an instance.
+  topics:
+    - detection
+    - threat
+  technology:
+    - aws
+  related:
+    - aws.security-hub
+    - azure.defender-for-cloud
+    - gcp.scc
+    - sec.ioc
+  sources:
+    - label: AWS, documentación es_es
+      url: https://docs.aws.amazon.com/es_es/macie/latest/user/what-is-macie.html
+      found:
+        - CSPM Amazon GuardDuty Amazon
+      checked: 2026-11-15
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/aws-guardduty-luchas-amenzas/
+      found:
+        - Amazon GuardDuty es
+      checked: 2026-11-15
+  status: sourced
+
+- id: aws.security-hub
+  en:
+    term: AWS Security Hub
+    definition: The AWS service that gathers security findings from other services and checks
+      accounts against standards such as CIS.
+  es:
+    verdict: english-kept
+    forms:
+      - text: AWS Security Hub
+        kind: noun
+        primary: true
+        usedBy:
+          - aws
+          - engineers
+    definition: Servicio de AWS que reúne los resultados de seguridad de otros servicios y
+      comprueba las cuentas frente a normas como CIS.
+    examples:
+      - es: AWS Security Hub muestra el cumplimiento de CIS en todas las cuentas.
+        en: AWS Security Hub shows CIS compliance across all the accounts.
+  topics:
+    - detection
+    - hardening
+  technology:
+    - aws
+  related:
+    - sec.cnapp
+    - aws.guardduty
+    - aws.config
+    - fw.cis-controls
+  sources:
+    - label: AWS, documentación es_es
+      url: https://docs.aws.amazon.com/es_es/macie/latest/user/what-is-macie.html
+      found:
+        - AWS Security Hub
+      checked: 2026-11-15
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/aws-guardduty-luchas-amenzas/
+      found:
+        - AWS Security Hub
+      checked: 2026-11-15
+  status: sourced
+
+- id: aws.config
+  en:
+    term: AWS Config
+    definition: The AWS service that records how resources are configured over time and evaluates
+      them against rules.
+  es:
+    verdict: english-kept
+    forms:
+      - text: AWS Config
+        kind: noun
+        primary: true
+        usedBy:
+          - aws
+          - engineers
+      - text: regla de AWS Config
+        article: la
+        kind: noun
+        plural: las reglas de AWS Config
+        usedBy:
+          - aws
+    definition: Servicio de AWS que registra cómo están configurados los recursos a lo largo
+      del tiempo y los evalúa frente a reglas.
+    examples:
+      - es: Una regla de AWS Config marca los volúmenes sin cifrar.
+        en: An AWS Config rule flags unencrypted volumes.
+  topics:
+    - hardening
+    - grc
+  technology:
+    - aws
+  related:
+    - tech.configuration-management
+    - sec.misconfiguration
+    - azure.policy
+    - sec.security-baseline
+  sources:
+    - label: AWS, documentación es_es
+      url: https://docs.aws.amazon.com/es_es/config/latest/developerguide/operational-best-practices-for-pci-dss.html
+      found:
+        - AWS Config View
+      checked: 2026-11-15
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/aws-guardduty-luchas-amenzas/
+      found:
+        - AWS Config
+      checked: 2026-11-15
+    - label: AWS, páginas en español
+      url: https://aws.amazon.com/es/compliance/gdpr-center/
+      found:
+        - reglas de AWS Config
+      checked: 2026-11-15
+  status: sourced
+
+- id: aws.waf-shield
+  en:
+    term: AWS WAF and AWS Shield
+    definition: AWS's web application firewall and its DDoS protection service, usually deployed
+      together in front of web applications.
+  es:
+    verdict: english-kept
+    forms:
+      - text: AWS WAF
+        kind: noun
+        primary: true
+        usedBy:
+          - aws
+      - text: AWS Shield
+        kind: noun
+        usedBy:
+          - aws
+      - text: ACL web
+        article: la
+        kind: noun
+        usedBy:
+          - aws
+        note: A web ACL, the set of WAF rules.
+    say: WAF is said as a word, 'guaf'.
+    definition: Cortafuegos de aplicaciones web de AWS y su servicio de protección frente
+      a DDoS, que suelen desplegarse juntos delante de las aplicaciones web.
+    examples:
+      - es: AWS WAF bloquea las inyecciones SQL antes de que lleguen a la API.
+        en: AWS WAF blocks SQL injection before it reaches the API.
+  topics:
+    - network
+    - appsec
+  technology:
+    - aws
+    - networking
+  related:
+    - sec.waf
+    - sec.ddos
+    - gcp.cloud-armor
+    - azure.front-door
+  sources:
+    - label: AWS, documentación en español
+      url: https://docs.aws.amazon.com/es_es/waf/latest/developerguide/aws-managed-rule-groups-baseline.html
+      found:
+        - AWS WAF
+        - AWS Shield Advanced
+        - ACL web
+      checked: 2026-11-15
+  status: sourced
+
+- id: aws.macie
+  en:
+    term: Amazon Macie
+    definition: An AWS service that finds and classifies sensitive data, such as personal
+      data, in S3.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Amazon Macie
+        kind: noun
+        primary: true
+        usedBy:
+          - aws
+    definition: Servicio de AWS que localiza y clasifica datos sensibles, como los personales,
+      en S3.
+    examples:
+      - es: Amazon Macie encontró números de DNI en un bucket de registros.
+        en: Amazon Macie found national identity numbers in a logs bucket.
+  topics:
+    - data
+  technology:
+    - aws
+  related:
+    - sec.data-discovery
+    - sec.data-classification
+    - azure.purview
+    - sec.dlp
+  sources:
+    - label: AWS, documentación es_es
+      url: https://docs.aws.amazon.com/es_es/macie/latest/user/what-is-macie.html
+      found:
+        - es Amazon Macie
+      checked: 2026-11-15
+  status: sourced
+
+- id: aws.inspector
+  en:
+    term: Amazon Inspector
+    definition: AWS's vulnerability scanning service for EC2 instances, container images and
+      Lambda functions.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Amazon Inspector
+        kind: noun
+        primary: true
+        usedBy:
+          - aws
+          - engineers
+    definition: Servicio de análisis de vulnerabilidades de AWS para instancias de EC2, imágenes
+      de contenedor y funciones de Lambda.
+    examples:
+      - es: Amazon Inspector analiza cada imagen que se sube al registro.
+        en: Amazon Inspector scans every image pushed to the registry.
+  topics:
+    - vulnmgmt
+  technology:
+    - aws
+  related:
+    - sec.vulnerability-scan
+    - sec.vulnerability-management
+    - aws.security-hub
+  sources:
+    - label: AWS, páginas en español
+      url: https://aws.amazon.com/es/what-is/devsecops/
+      found:
+        - utilizan Amazon Inspector para
+      checked: 2026-11-15
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/aws-guardduty-luchas-amenzas/
+      found:
+        - Amazon Inspector
+      checked: 2026-11-15
+  status: sourced
+
+- id: aws.cloudformation
+  en:
+    term: AWS CloudFormation
+    definition: 'AWS''s infrastructure-as-code service: templates describe resources and are
+      deployed as stacks.'
+  es:
+    verdict: english-kept
+    forms:
+      - text: AWS CloudFormation
+        kind: noun
+        primary: true
+        usedBy:
+          - aws
+          - engineers
+      - text: pila
+        article: la
+        kind: noun
+        usedBy:
+          - aws
+        note: A stack. Engineers say stack.
+      - text: plantilla
+        article: la
+        kind: noun
+        usedBy:
+          - aws
+        note: A template.
+    definition: 'Servicio de infraestructura como código de AWS: las plantillas describen
+      los recursos y se despliegan como pilas.'
+    examples:
+      - es: La red se despliega con una plantilla de AWS CloudFormation.
+        en: The network is deployed with an AWS CloudFormation template.
+  topics:
+    - architecture
+    - hardening
+  technology:
+    - aws
+    - iac
+  related:
+    - tech.iac
+    - azure.arm-template
+    - tech.deployment
+  sources:
+    - label: AWS, blog en español
+      url: https://aws.amazon.com/es/blogs/aws-spanish/gestion-automatica-de-recursos-efimeros-para-pruebas-usando-tecnologia-sin-servidor/
+      found:
+        - de AWS CloudFormation que
+      checked: 2026-11-15
+    - label: Tecnoempleo, oferta de empleo en España
+      url: https://www.tecnoempleo.com/arquitecto-seguridad-ia-generativa-ust/aws-cloudformation/rf-603b1ce89244d34ca147
+      found:
+        - AWS CloudFormation
+      checked: 2026-11-15
+    - label: AWS, páginas en español
+      url: https://aws.amazon.com/es/devops/what-is-devops/
+      found:
+        - Utilizan una pila de
+      checked: 2026-11-15
+    - label: AWS, documentación en español
+      url: https://docs.aws.amazon.com/es_es/mwaa/latest/userguide/tutorials-private-network-bastion.html
+      found:
+        - plantilla de CloudFormation
+      checked: 2026-11-15
+  status: sourced
+
+- id: aws.direct-connect
+  en:
+    term: AWS Direct Connect
+    definition: A dedicated private connection between an organisation's network and AWS.
+  es:
+    verdict: english-kept
+    forms:
+      - text: AWS Direct Connect
+        kind: noun
+        primary: true
+        usedBy:
+          - aws
+          - engineers
+    definition: Conexión privada y dedicada entre la red de una organización y AWS.
+    examples:
+      - es: El tráfico con el CPD va por AWS Direct Connect, cifrado con una VPN encima.
+        en: Traffic with the data centre goes over AWS Direct Connect, encrypted with a VPN
+          on top.
+  topics:
+    - network
+  technology:
+    - aws
+    - networking
+  related:
+    - azure.expressroute
+    - gcp.interconnect
+    - cloud.hybrid-cloud
+  sources:
+    - label: AWS, páginas en español
+      url: https://aws.amazon.com/es/about-aws/global-infrastructure/regions_az/
+      found:
+        - AWS Direct Connect
+      checked: 2026-11-15
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/dev/novedades-aws-re-invent-2021/
+      found:
+        - AWS Direct Connect
+      checked: 2026-11-15
+  status: sourced
+
+- id: aws.cloudfront
+  en:
+    term: Amazon CloudFront
+    definition: AWS's content delivery network.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Amazon CloudFront
+        kind: noun
+        primary: true
+        usedBy:
+          - aws
+      - text: distribución
+        article: la
+        kind: noun
+        note: A CloudFront distribution.
+    definition: Red de entrega de contenido de AWS.
+    examples:
+      - es: El sitio se sirve por Amazon CloudFront con AWS WAF delante.
+        en: The site is served through Amazon CloudFront with AWS WAF in front.
+  topics:
+    - network
+  technology:
+    - aws
+    - networking
+  related:
+    - cloud.cdn
+    - aws.waf-shield
+    - azure.front-door
+  sources:
+    - label: AWS, páginas en español
+      url: https://aws.amazon.com/es/what-is/cdn/
+      found:
+        - es Amazon CloudFront
+      checked: 2026-11-15
+  status: sourced
+
+- id: aws.artifact
+  en:
+    term: AWS Artifact
+    definition: The AWS portal for downloading its compliance reports, such as SOC reports
+      and ISO certificates, and accepting agreements.
+  es:
+    verdict: english-kept
+    forms:
+      - text: AWS Artifact
+        kind: noun
+        primary: true
+        usedBy:
+          - aws
+      - text: informes de conformidad
+        article: los
+        kind: noun
+        usedBy:
+          - aws
+        note: Compliance reports, what it holds.
+    definition: Portal de AWS para descargar sus informes de conformidad, como los SOC y los
+      certificados ISO, y aceptar acuerdos.
+    examples:
+      - es: El informe SOC 2 de AWS se descarga desde AWS Artifact.
+        en: AWS's SOC 2 report is downloaded from AWS Artifact.
+  topics:
+    - grc
+    - assessment
+  technology:
+    - aws
+  related:
+    - grc.soc-2-report
+    - grc.attestation
+    - cloud.shared-responsibility
+  sources:
+    - label: AWS, páginas en español
+      url: https://aws.amazon.com/es/compliance/soc-faqs/
+      found:
+        - en AWS Artifact
+        - informes de conformidad
+      checked: 2026-11-15
+  status: sourced
+
+- id: aws.bedrock
+  en:
+    term: Amazon Bedrock
+    definition: AWS's managed service for using foundation models from several providers through
+      an API.
+  es:
+    verdict: english-kept
+    forms:
+      - text: Amazon Bedrock
+        kind: noun
+        primary: true
+        usedBy:
+          - aws
+          - engineers
+      - text: modelo fundacional
+        article: el
+        kind: noun
+        plural: los modelos fundacionales
+        usedBy:
+          - aws
+        note: A foundation model.
+    definition: Servicio gestionado de AWS para usar mediante una API modelos fundacionales
+      de varios proveedores.
+    examples:
+      - es: El asistente interno usa un modelo de Amazon Bedrock con barreras de protección.
+        en: The internal assistant uses an Amazon Bedrock model with guardrails.
+  topics:
+    - architecture
+  technology:
+    - aws
+    - ai-ml
+  related:
+    - ai.llm
+    - ai.model
+    - gcp.vertex-ai
+  sources:
+    - label: AWS, documentación en español
+      url: https://docs.aws.amazon.com/es_es/waf/latest/developerguide/aws-managed-rule-groups-baseline.html
+      found:
+        - Amazon Bedrock AgentCore
+      checked: 2026-11-15
+    - label: Paradigma Digital, blog
+      url: https://www.paradigmadigital.com/techbiz/plataformas-ia-generativa-como-elegir-la-mas-adecuada/
+      found:
+        - Studio Amazon Bedrock Agents
+      checked: 2026-11-15
+    - label: AWS, páginas en español
+      url: https://aws.amazon.com/es/what-is/artificial-intelligence/
+      found:
+        - Los modelos fundacionales son
+      checked: 2026-11-15
+  status: sourced
