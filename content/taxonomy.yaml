@@ -243,22 +243,22 @@ certifications:
 frameworks:
   - { id: ENS, name: "ENS", fullName: "Esquema Nacional de Seguridad", summary: "National security framework for the public sector and its suppliers", region: es, entry: fw.ens }
   - { id: ENI, name: "ENI", fullName: "Esquema Nacional de Interoperabilidad", summary: "National interoperability framework for the public sector", region: es }
-  - { id: LOPDGDD, name: "LOPDGDD", fullName: "Ley Orgánica de Protección de Datos Personales y garantía de los derechos digitales", summary: "The Spanish data protection law that sits alongside the GDPR", region: es }
+  - { id: LOPDGDD, name: "LOPDGDD", fullName: "Ley Orgánica de Protección de Datos Personales y garantía de los derechos digitales", summary: "The Spanish data protection law that sits alongside the GDPR", region: es, entry: fw.lopdgdd }
   - { id: LEY-PIC, name: "Ley PIC", fullName: "Ley de protección de las infraestructuras críticas", summary: "Protection of critical infrastructure", region: es }
-  - { id: MAGERIT, name: "MAGERIT", summary: "The public sector's risk analysis and management methodology", region: es }
+  - { id: MAGERIT, name: "MAGERIT", summary: "The public sector's risk analysis and management methodology", region: es, entry: fw.magerit }
   - { id: CCN-STIC, name: "CCN-STIC guides", summary: "Security guidance from the national cryptology centre", region: es }
   - { id: GDPR, name: "GDPR", fullName: "General Data Protection Regulation", summary: "Data protection across the EU. RGPD in Spanish", region: eu, entry: fw.gdpr }
   - { id: NIS2, name: "NIS2", summary: "Security of network and information systems", region: eu, entry: fw.nis2 }
   - { id: DORA, name: "DORA", fullName: "Digital Operational Resilience Act", summary: "Digital operational resilience in financial services", region: eu, entry: fw.dora }
   - { id: CRA, name: "Cyber Resilience Act", summary: "Security of products with digital elements", region: eu }
-  - { id: AI-ACT, name: "AI Act", summary: "Regulation of artificial intelligence", region: eu }
+  - { id: AI-ACT, name: "AI Act", summary: "Regulation of artificial intelligence", region: eu, entry: fw.ai-act }
   - { id: DATA-ACT, name: "Data Act", summary: "Access to data and switching between data services", region: eu }
-  - { id: EIDAS, name: "eIDAS", summary: "Electronic identification and trust services", region: eu }
+  - { id: EIDAS, name: "eIDAS", summary: "Electronic identification and trust services", region: eu, entry: fw.eidas }
   - { id: EU-CSA, name: "EU Cybersecurity Act", summary: "European cybersecurity certification schemes, including EUCC and EUCS", region: eu }
-  - { id: UK-GDPR, name: "UK GDPR and Data Protection Act 2018", summary: "Data protection in the United Kingdom", region: uk }
+  - { id: UK-GDPR, name: "UK GDPR and Data Protection Act 2018", summary: "Data protection in the United Kingdom", region: uk, entry: fw.uk-gdpr }
   - { id: UK-NIS, name: "NIS Regulations 2018", summary: "Security of network and information systems", region: uk }
-  - { id: CYBER-ESSENTIALS, name: "Cyber Essentials", summary: "Baseline certification scheme", region: uk }
-  - { id: NCSC-CAF, name: "NCSC Cyber Assessment Framework", summary: "Assessment framework for essential services", region: uk }
+  - { id: CYBER-ESSENTIALS, name: "Cyber Essentials", summary: "Baseline certification scheme", region: uk, entry: fw.cyber-essentials }
+  - { id: NCSC-CAF, name: "NCSC Cyber Assessment Framework", summary: "Assessment framework for essential services", region: uk, entry: fw.ncsc-caf }
   - { id: NCSC-CLOUD, name: "NCSC Cloud Security Principles", summary: "Guidance for choosing and using cloud services", region: uk }
   - { id: NIST-CSF, name: "NIST Cybersecurity Framework", summary: "Outcome-based security framework, version 2.0", region: us, entry: fw.nist-csf }
   - { id: NIST-800-53, name: "NIST SP 800-53", summary: "Catalogue of security and privacy controls", region: us }

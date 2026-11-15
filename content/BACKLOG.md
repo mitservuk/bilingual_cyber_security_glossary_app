@@ -9,9 +9,6 @@ the same pull request.
 
 ## Next up
 
-- Frameworks that have an entry but little vocabulary of their own: GDPR and
-  LOPDGDD beyond the basics, ISO/IEC 27001, NIST CSF, PCI DSS, the AI Act,
-  eIDAS, MAGERIT.
 - Situational phrases: what to say in a meeting, an incident call, an audit.
 
 ## Quality
@@ -54,4 +51,4 @@ They are already named in `taxonomy.yaml`, without domains.
 
 ## Frameworks with no terms yet
 
-ENI, Data Act, UK GDPR and Data Protection Act 2018, NIS Regulations 2018, Cyber Essentials, NCSC Cyber Assessment Framework, NCSC Cloud Security Principles, NIST SP 800-53, NIST SP 800-171, NIST SP 800-207, NIST Risk Management Framework, NIST AI Risk Management Framework, FedRAMP, CMMC, GLBA, CCPA and CPRA, ISO/IEC 27005, ISO/IEC 27701, ISO/IEC 42001.
+ENI, Data Act, NIS Regulations 2018, NCSC Cloud Security Principles, NIST SP 800-53, NIST SP 800-171, NIST SP 800-207, NIST Risk Management Framework, NIST AI Risk Management Framework, FedRAMP, CMMC, GLBA, CCPA and CPRA, ISO/IEC 27005, ISO/IEC 27701, ISO/IEC 42001.
