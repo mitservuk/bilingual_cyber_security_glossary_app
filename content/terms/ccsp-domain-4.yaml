@@ -43,6 +43,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   related: [tech.waterfall, sec.sdlc, tech.devops]
   sources:
     - label: "Telefónica Tech, blog"
@@ -105,6 +106,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   related: [tech.agile, sec.sdlc, tech.functional-requirement]
   sources:
     - label: "Adictos al Trabajo (Autentia)"
@@ -162,6 +164,7 @@
   technology: [ci-cd]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   related: [tech.devsecops, tech.ci-cd, tech.pipeline, tech.iac]
   sources:
     - label: "Paradigma Digital, blog"
@@ -235,6 +238,7 @@
   technology: [ci-cd]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   related: [tech.pipeline, tech.devops, tech.devsecops, tech.version-control]
   sources:
     - label: "Paradigma Digital, blog"
@@ -324,6 +328,7 @@
   technology: [ci-cd]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   related: [tech.ci-cd, tech.devops, sec.sast, tech.iac]
   sources:
     - label: "Paradigma Digital, blog"
@@ -400,6 +405,7 @@
   technology: [iac]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [tech.devops, tech.pipeline, tech.version-control, sec.misconfiguration]
   sources:
     - label: "Telefónica Tech, blog"
@@ -475,6 +481,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   related: [sec.sdlc, sec.code-review, sec.sast, sec.secure-by-design]
   sources:
     - label: "Esquema Nacional de Seguridad (RD 311/2022), medida mp.sw.1"
@@ -551,6 +558,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   related: [sec.secure-coding, sec.sast, tech.version-control, sec.white-box-testing]
   sources:
     - label: "Telefónica Tech, blog"
@@ -631,6 +639,7 @@
   technology: [ci-cd]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   related: [tech.scm, tech.iac, sec.code-review, tech.ci-cd]
   sources:
     - label: "Orden TAS/1478/2005, temario de oposiciones (BOE)"
@@ -711,6 +720,7 @@
   technology: [ci-cd]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   related: [tech.version-control, tech.iac, sec.security-baseline]
   sources:
     - label: "Orden TAS/1478/2005, temario de oposiciones (BOE)"
@@ -765,6 +775,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   related: [tech.non-functional-requirement, sec.sdlc, sec.abuse-case]
   sources:
     - label: "AEPD, Gestión del riesgo y evaluación de impacto en tratamientos de datos personales"
@@ -823,6 +834,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   related: [tech.functional-requirement, sec.availability, sec.sdlc]
   sources:
     - label: "AEPD, Gestión del riesgo y evaluación de impacto en tratamientos de datos personales"
@@ -884,6 +896,7 @@
   technology: [ci-cd]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   related: [sec.dast, sec.iast, sec.sca, sec.code-review]
   sources:
     - label: "Telefónica Tech, blog"
@@ -955,6 +968,7 @@
   technology: [ci-cd]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   related: [sec.sast, sec.iast, sec.black-box-testing, sec.penetration-test]
   sources:
     - label: "Telefónica Tech, blog"
@@ -1013,6 +1027,7 @@
   technology: [ci-cd]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   related: [sec.sast, sec.dast, sec.sca]
   sources:
     - label: "Telefónica Tech, blog"
@@ -1073,6 +1088,7 @@
   technology: [ci-cd]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   related: [sec.sast, sec.sbom, tech.dependency, sec.software-supply-chain]
   sources:
     - label: "Telefónica Tech, blog"
@@ -1139,6 +1155,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 6 }
   related: [sec.vulnerability-scan, sec.black-box-testing, sec.white-box-testing, sec.exploit]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -1213,6 +1230,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 7 }
   related: [sec.penetration-test, sec.vulnerability, sec.patch-management, sec.dast]
   sources:
     - label: "Esquema Nacional de Seguridad (RD 311/2022), medida op.mon.3"
@@ -1274,6 +1292,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 6 }
   related: [sec.dast, sec.black-box-testing, sec.vulnerability, sec.buffer-overflow]
   sources:
     - label: "INCIBE-CERT, blog"
@@ -1322,6 +1341,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   related: [sec.threat-modelling, tech.functional-requirement, fw.stride, sec.sdlc]
   sources:
     - label: "Paradigma Digital, blog"
@@ -1380,6 +1400,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 6 }
   related: [sec.sdlc, tech.functional-requirement, sec.black-box-testing, sec.code-review]
   sources:
     - label: "Paradigma Digital, blog"
@@ -1446,6 +1467,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 6 }
   related: [sec.white-box-testing, sec.penetration-test, sec.dast, sec.fuzzing]
   sources:
     - label: "INCIBE-CERT, blog"
@@ -1500,6 +1522,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 6 }
   related: [sec.black-box-testing, sec.sast, sec.code-review, sec.penetration-test]
   sources:
     - label: "INCIBE-CERT, blog"
@@ -1564,6 +1587,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 7 }
   related: [sec.threat-modelling, fw.dread, fw.pasta, sec.non-repudiation]
   sources:
     - label: "Microsoft Learn, es-ES"
@@ -1613,6 +1637,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   frameworks: [OWASP]
   related: [fw.owasp-asvs, fw.owasp-api-top-10, fw.cwe-top-25, sec.injection]
   sources:
@@ -1663,6 +1688,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 7 }
   related: [sec.threat-modelling, fw.stride, fw.pasta, sec.risk-assessment]
   sources:
     - label: "Microsoft Learn, es-ES"
@@ -1699,6 +1725,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 7 }
   related: [sec.threat-modelling, fw.stride, fw.dread, sec.risk-assessment]
   sources: []
   status: draft
@@ -1732,6 +1759,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   frameworks: [OWASP]
   related: [fw.owasp-top-10, sec.secure-coding, sec.sdlc, tech.non-functional-requirement]
   sources:
@@ -1770,6 +1798,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   frameworks: [OWASP]
   related: [fw.owasp-top-10, sec.api, sec.api-gateway, sec.broken-access-control]
   sources:
@@ -1816,6 +1845,7 @@
   technology: [ai-ml]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   frameworks: [OWASP]
   related: [ai.llm, fw.owasp-top-10, sec.injection]
   sources:
@@ -1867,6 +1897,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   related: [fw.owasp-top-10, sec.vulnerability, sec.sast, sec.buffer-overflow]
   sources:
     - label: "INCIBE-CERT, bitácora de ciberseguridad"
@@ -1917,6 +1948,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   related: [sec.sql-injection, sec.xss, fw.owasp-top-10, sec.waf]
   sources:
     - label: "INCIBE-CERT, blog"
@@ -1976,6 +2008,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   related: [sec.injection, sec.waf, sec.dam, sec.secure-coding]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -2054,6 +2087,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   related: [sec.injection, sec.csrf, sec.waf]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -2126,6 +2160,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   related: [sec.xss, sec.ssrf, sec.authentication]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -2190,6 +2225,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   related: [sec.csrf, sec.network-segmentation, fw.owasp-top-10]
   sources:
     - label: "INCIBE-CERT, bitácora de ciberseguridad"
@@ -2254,6 +2290,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   frameworks: [OWASP]
   related: [sec.access-control, sec.authorization, sec.least-privilege, fw.owasp-top-10]
   sources:
@@ -2315,6 +2352,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   frameworks: [OWASP]
   related: [sec.injection, fw.owasp-top-10, sec.exploit]
   sources:
@@ -2377,6 +2415,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   related: [sec.exploit, sec.vulnerability, fw.cwe-top-25, sec.fuzzing]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -2433,6 +2472,7 @@
   technology: [ci-cd]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   frameworks: [SLSA]
   related: [sec.sbom, tech.dependency, tech.third-party-software, sec.sca]
   sources:
@@ -2511,6 +2551,7 @@
   technology: [ci-cd]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   frameworks: [CRA]
   related: [sec.software-supply-chain, sec.sca, tech.dependency, tech.third-party-software]
   sources:
@@ -2587,6 +2628,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   related: [law.software-licence, tech.third-party-software, tech.dependency, sec.sca]
   sources:
     - label: "Directiva (UE) 2022/2555 (NIS 2), texto en español publicado en el BOE"
@@ -2669,6 +2711,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   related: [tech.dependency, tech.open-source-software, sec.software-supply-chain, sec.sca]
   sources:
     - label: "INCIBE-CERT, Estudio: SBOM en entornos industriales (2026)"
@@ -2730,6 +2773,7 @@
   technology: [ci-cd]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   related: [tech.third-party-software, sec.sbom, sec.sca, sec.software-supply-chain]
   sources:
     - label: "INCIBE-CERT, blog"
@@ -2796,6 +2840,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 1 }
   related: [tech.open-source-software, tech.third-party-software, sec.sca, sec.sbom]
   sources:
     - label: "BOE, Resolución de 26 de diciembre de 2024 (convenio NubeSARA)"
@@ -2872,6 +2917,7 @@
   technology: [networking]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   related: [sec.firewall, sec.api-gateway, sec.sql-injection, fw.owasp-top-10]
   sources:
     - label: "INCIBE, blog para empresas"
@@ -2946,6 +2992,7 @@
   technology: [networking]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   related: [sec.api, sec.waf, cloud.microservices, sec.oauth]
   sources:
     - label: "Paradigma Digital, blog"
@@ -3014,6 +3061,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 2 }
   related: [sec.log, sec.auditability, sec.sql-injection, sec.dlp]
   sources:
     - label: "Oracle España"
@@ -3059,6 +3107,7 @@
   technology: [endpoint]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.virtualization, cloud.container, sec.sandbox, sec.isolation]
   sources:
     - label: "INCIBE, blog para empresas"
@@ -3111,6 +3160,7 @@
   technology: [networking]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   related: [sec.waf, sec.api-gateway, sec.firewall, sec.api]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -3165,6 +3215,7 @@
   technology: [containers-oci]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.container, tech.kubernetes, cloud.orchestration, cloud.microservices]
   sources:
     - label: "INCIBE-CERT, blog"
@@ -3244,6 +3295,7 @@
   technology: [kubernetes, containers-oci]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.orchestration, cloud.container, tech.docker, cloud.microservices]
   sources:
     - label: "INCIBE, Guía de buenas prácticas de ciberseguridad en redes privadas 5G"
@@ -3318,6 +3370,7 @@
   technology: [identity-platforms]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 5 }
   related: [sec.idp, sec.sso, sec.saml, sec.iam]
   sources:
     - label: "AEPD, Guía de privacidad desde el diseño"
@@ -3398,6 +3451,7 @@
   technology: [identity-platforms]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 5 }
   related: [sec.federated-identity, sec.sso, sec.saml, sec.openid-connect]
   sources:
     - label: "INCIBE-CERT, blog"
@@ -3471,6 +3525,7 @@
   technology: [identity-platforms]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 5 }
   related: [sec.federated-identity, sec.idp, sec.saml, sec.mfa]
   sources:
     - label: "INCIBE-CERT, blog"
@@ -3558,6 +3613,7 @@
   technology: [identity-platforms]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 5 }
   related: [sec.openid-connect, sec.authorization, sec.api, sec.idp]
   sources:
     - label: "INCIBE-CERT, blog"
@@ -3630,6 +3686,7 @@
   technology: [identity-platforms]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 5 }
   related: [sec.oauth, sec.idp, sec.sso, sec.authentication]
   sources:
     - label: "INCIBE-CERT, blog"
@@ -3698,6 +3755,7 @@
   technology: [identity-platforms]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 5 }
   related: [sec.sso, sec.idp, sec.federated-identity, sec.openid-connect]
   sources:
     - label: "INCIBE-CERT, aviso de vulnerabilidad"
@@ -3779,6 +3837,7 @@
   technology: [identity-platforms]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 4 }
+    - { cert: CISSP, outline: "2027-04", domain: 5 }
   related: [sec.iam, sec.least-privilege, sec.secrets-management, sec.bastion-host]
   sources:
     - label: "INCIBE-CERT, blog"

@@ -48,6 +48,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 3
   related:
     - sec.hsm
     - cloud.confidential-computing
@@ -102,6 +105,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 3
   related:
     - cloud.virtual-machine
     - cloud.hypervisor
@@ -159,6 +165,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 3
   related:
     - cloud.guest-os
     - cloud.hypervisor
@@ -217,6 +226,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 3
   related:
     - tech.kubernetes
     - sec.high-availability
@@ -266,6 +278,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 3
   frameworks:
     - ITIL
   related:
@@ -318,6 +333,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 7
   related:
     - sec.monitoring
     - tech.capacity-management
@@ -367,6 +385,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 3
   related:
     - sec.secure-by-design
     - sec.security-baseline
@@ -428,6 +449,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 3
   related:
     - cloud.hypervisor
     - cloud.type-2-hypervisor
@@ -477,6 +501,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 3
   related:
     - cloud.hypervisor
     - cloud.type-1-hypervisor
@@ -523,6 +550,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 4
   related:
     - sec.vpn
     - sec.ssh
@@ -574,6 +604,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 4
   related:
     - sec.remote-access
     - sec.bastion-host
@@ -635,6 +668,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 4
   related:
     - sec.remote-access
     - sec.ssh
@@ -697,6 +733,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 4
   related:
     - sec.network-segmentation
     - sec.microsegmentation
@@ -754,6 +793,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 4
   related:
     - sec.digital-signature
     - sec.integrity
@@ -807,6 +849,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 4
   related:
     - sec.vlan
     - cloud.virtual-network
@@ -862,6 +907,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 4
   related:
     - sec.bastion-host
     - sec.ssh
@@ -927,6 +975,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 3
   related:
     - sec.security-baseline
     - sec.attack-surface
@@ -990,6 +1041,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 3
   frameworks:
     - ITIL
   related:
@@ -1053,6 +1107,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 1
   frameworks:
     - ITIL
   related:
@@ -1117,6 +1174,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 1
   frameworks:
     - ITIL
   related:
@@ -1177,6 +1237,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 8
   related:
     - tech.ci-cd
     - tech.pipeline
@@ -1242,6 +1305,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 7
   related:
     - tech.deployment
     - tech.change-management
@@ -1296,6 +1362,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 7
   related:
     - sec.patch-management
     - tech.change-management
@@ -1344,6 +1413,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 3
   related:
     - tech.iac
     - cloud.container
@@ -1382,6 +1454,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 1
   frameworks:
     - ITIL
   related:
@@ -1418,6 +1493,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 7
   frameworks:
     - ITIL
   related:
@@ -1454,6 +1532,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 1
   frameworks:
     - ITIL
   related:
@@ -1488,6 +1569,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 3
   frameworks:
     - ITIL
   related:
@@ -1525,6 +1609,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 1
   frameworks:
     - ITIL
     - ISO-27001
@@ -1583,6 +1670,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 7
   frameworks:
     - ITIL
     - ISO-22301
@@ -1632,6 +1722,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 1
   frameworks:
     - COBIT
   related:
@@ -1682,6 +1775,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 1
   frameworks:
     - CIS
   related:
@@ -1724,6 +1820,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 1
   frameworks:
     - COSO
   related:
@@ -1771,6 +1870,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 1
   frameworks:
     - ISO-20000
   related:
@@ -1822,6 +1924,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 7
   related:
     - sec.alert
     - sec.siem
@@ -1874,6 +1979,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 7
   related:
     - sec.monitoring
     - sec.siem
@@ -1943,6 +2051,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 7
   related:
     - sec.siem
     - sec.soar
@@ -2017,6 +2128,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 7
   related:
     - sec.soc
     - sec.soar
@@ -2079,6 +2193,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 7
   related:
     - sec.siem
     - sec.soc
@@ -2132,6 +2249,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 7
   related:
     - sec.log
     - sec.siem
@@ -2187,6 +2307,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 7
   related:
     - sec.siem
     - sec.alert
@@ -2251,6 +2374,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 7
   frameworks:
     - MITRE-ATTACK
   related:
@@ -2319,6 +2445,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 7
   related:
     - sec.threat-intelligence
     - sec.malware
@@ -2364,6 +2493,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 7
   related:
     - sec.vulnerability
     - sec.vulnerability-scan
@@ -2410,6 +2542,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 7
   related:
     - sec.vulnerability
     - sec.patch-management
@@ -2467,6 +2602,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 7
   related:
     - sec.evidence
     - sec.chain-of-custody
@@ -2527,6 +2665,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 7
   related:
     - sec.chain-of-custody
     - sec.digital-forensics
@@ -2580,6 +2721,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 1
   related:
     - law.legal-hold
     - sec.digital-forensics
@@ -2624,6 +2768,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 7
   related:
     - sec.digital-forensics
     - sec.chain-of-custody
@@ -2661,6 +2808,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 7
   related:
     - sec.incident-response
     - sec.eradication
@@ -2711,6 +2861,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 7
   related:
     - sec.incident-response
     - sec.containment
@@ -2773,6 +2926,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 7
   related:
     - tech.problem-management
     - sec.post-incident-review
@@ -2837,6 +2993,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 7
   related:
     - sec.incident-response
     - sec.root-cause-analysis
@@ -2890,6 +3049,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 7
   related:
     - sec.runbook
     - sec.soar
@@ -2947,6 +3109,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 7
   related:
     - sec.playbook
     - grc.procedure
@@ -3008,6 +3173,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 7
   related:
     - sec.incident-response
     - sec.alert
@@ -3059,6 +3227,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 1
   related:
     - grc.governance
     - law.data-subject
@@ -3122,6 +3293,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 7
   related:
     - sec.backup
     - sec.snapshot
@@ -3185,6 +3359,9 @@
     - cert: CCSP
       outline: 2026-08
       domain: 5
+    - cert: CISSP
+      outline: 2027-04
+      domain: 2
   related:
     - sec.backup
     - sec.restore

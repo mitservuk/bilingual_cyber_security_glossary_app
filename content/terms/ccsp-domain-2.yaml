@@ -44,6 +44,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 2 }
   related: [sec.data-retention, sec.data-archiving, sec.data-deletion, sec.data-classification]
   sources:
     - label: "AEPD, Adecuación al RGPD de tratamientos que incorporan inteligencia artificial"
@@ -120,6 +121,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 2 }
   related: [cloud.object-storage, sec.resiliency, sec.availability]
   sources:
     - label: "Google Cloud, páginas para España"
@@ -175,6 +177,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 2 }
   related: [sec.data-mapping, sec.threat-modelling, sec.data-in-transit]
   sources:
     - label: "Real Decreto 145/2026, curso de especialización en Recursos y servicios en la nube (BOE)"
@@ -248,6 +251,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.block-storage, cloud.file-storage, sec.unstructured-data]
   sources:
     - label: "Real Decreto 145/2026, curso de especialización en Recursos y servicios en la nube (BOE)"
@@ -325,6 +329,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.object-storage, cloud.file-storage, cloud.volume-storage]
   sources:
     - label: "Paradigma Digital, blog"
@@ -393,6 +398,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.object-storage, cloud.block-storage, cloud.long-term-storage]
   sources:
     - label: "Real Decreto 145/2026, curso de especialización en Recursos y servicios en la nube (BOE)"
@@ -472,6 +478,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.ephemeral-computing, cloud.volume-storage, cloud.virtual-machine, cloud.container]
   sources:
     - label: "Microsoft Learn, es-ES"
@@ -533,6 +540,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 2 }
   related: [sec.data-archiving, sec.data-retention, sec.backup]
   sources:
     - label: "AWS, páginas en español"
@@ -601,6 +609,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.block-storage, cloud.volume-storage, cloud.virtual-machine]
   sources:
     - label: "AWS, documentación en español"
@@ -657,6 +666,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.block-storage, cloud.raw-storage, cloud.ephemeral-storage, cloud.virtual-machine]
   sources:
     - label: "Paradigma Digital, blog"
@@ -743,6 +753,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 1 }
   related: [law.data-residency, fw.gdpr, cloud.service-provider]
   sources:
     - label: "Google Cloud, páginas para España"
@@ -827,6 +838,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 1 }
   related: [law.data-sovereignty, sec.geolocation, sec.geofencing]
   sources:
     - label: "Real Decreto 145/2026, curso de especialización en Recursos y servicios en la nube (BOE)"
@@ -927,6 +939,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 7 }
   frameworks: [GDPR]
   related: [sec.incident-response, sec.dlp, law.personal-data, fw.gdpr]
   sources:
@@ -1026,6 +1039,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 1 }
   related: [grc.data-custodian, law.data-controller, sec.data-classification, sec.accountability]
   sources:
     - label: "Telefónica Tech, blog"
@@ -1107,6 +1121,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 1 }
   related: [grc.data-owner, law.data-controller, sec.chain-of-custody]
   sources:
     - label: "Google Cloud, páginas para España"
@@ -1183,6 +1198,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [sec.key-management, sec.key-rotation, sec.hsm, tech.devsecops]
   sources:
     - label: "Paradigma Digital, blog"
@@ -1254,6 +1270,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [sec.asymmetric-encryption, sec.encryption, sec.key-management, sec.envelope-encryption]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -1338,6 +1355,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [sec.symmetric-encryption, sec.digital-signature, sec.pki, sec.encryption]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -1425,6 +1443,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [sec.integrity, sec.digital-signature, sec.encryption, sec.pseudonymization]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -1501,6 +1520,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   frameworks: [EIDAS]
   related: [sec.asymmetric-encryption, sec.hashing, sec.digital-certificate, sec.non-repudiation]
   sources:
@@ -1595,6 +1615,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   frameworks: [EIDAS]
   related: [sec.certificate-authority, sec.pki, sec.certificate-revocation, sec.tls]
   sources:
@@ -1682,6 +1703,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [sec.certificate-authority, sec.digital-certificate, sec.asymmetric-encryption, sec.certificate-revocation]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -1780,6 +1802,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   frameworks: [EIDAS]
   related: [sec.pki, sec.digital-certificate, sec.certificate-revocation, sec.hsm]
   sources:
@@ -1870,6 +1893,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [sec.key-management, fw.fips-140-3, sec.byok, sec.certificate-authority]
   sources:
     - label: "INCIBE, Guía de implantación y buenas prácticas de DNSSEC"
@@ -1948,6 +1972,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [sec.key-management, sec.secrets-management, sec.hsm, sec.envelope-encryption]
   sources:
     - label: "Paradigma Digital, blog"
@@ -2032,6 +2057,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [sec.key-management, sec.hsm, sec.envelope-encryption, law.data-sovereignty]
   sources:
     - label: "Microsoft Learn, es-ES"
@@ -2105,6 +2131,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [sec.key-management, sec.symmetric-encryption, sec.key-rotation, sec.hsm]
   sources:
     - label: "Microsoft Learn, es-ES"
@@ -2154,6 +2181,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [sec.data-in-use, cloud.confidential-computing, sec.encryption]
   sources:
     - label: "AEPD, blog: Cifrado y Privacidad III: Cifrado Homomórfico"
@@ -2213,6 +2241,7 @@
   technology: [networking]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [sec.data-in-transit, sec.digital-certificate, sec.certificate-authority, sec.encryption]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -2278,6 +2307,7 @@
   technology: [networking]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 2 }
   related: [sec.data-at-rest, sec.data-in-use, sec.tls, sec.encryption]
   sources:
     - label: "Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE"
@@ -2346,6 +2376,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 2 }
   related: [sec.data-at-rest, sec.data-in-transit, cloud.confidential-computing, sec.homomorphic-encryption]
   sources:
     - label: "Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE"
@@ -2414,6 +2445,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [sec.digital-certificate, sec.certificate-authority, sec.pki]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -2481,6 +2513,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 2 }
   related: [sec.data-obfuscation, sec.tokenization, sec.anonymization, sec.sensitive-data]
   sources:
     - label: "AEPD, traducción del informe de ENISA «Ingeniería de la protección de datos» (2022)"
@@ -2562,6 +2595,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 2 }
   related: [sec.data-masking, sec.tokenization, sec.encryption, sec.anonymization]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -2647,6 +2681,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 2 }
   related: [sec.pseudonymization, sec.data-masking, law.personal-data, fw.gdpr]
   sources:
     - label: "AEPD, blog: Anonimización y seudonimización"
@@ -2730,6 +2765,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 2 }
   frameworks: [GDPR]
   related: [sec.anonymization, sec.tokenization, law.personal-data, fw.gdpr]
   sources:
@@ -2818,6 +2854,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 2 }
   related: [sec.data-classification, sec.data-mapping, sec.sensitive-data, sec.dlp]
   sources:
     - label: "Google Cloud, páginas para España"
@@ -2883,6 +2920,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 2 }
   related: [sec.unstructured-data, sec.semi-structured-data, sec.data-discovery]
   sources:
     - label: "Paradigma Digital, blog"
@@ -2945,6 +2983,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 2 }
   related: [sec.structured-data, sec.semi-structured-data, sec.data-discovery, cloud.object-storage]
   sources:
     - label: "AEPD, Orientaciones sobre IA agéntica"
@@ -3016,6 +3055,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 2 }
   related: [sec.structured-data, sec.unstructured-data, sec.log]
   sources:
     - label: "Paradigma Digital, blog"
@@ -3091,6 +3131,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 2 }
   frameworks: [ENS]
   related: [sec.data-labelling, sec.data-discovery, sec.sensitive-data, grc.data-owner]
   sources:
@@ -3180,6 +3221,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 2 }
   related: [sec.data-classification, sec.dlp, sec.irm, ai.training-data]
   sources:
     - label: "AEPD, Guía de protección de datos por defecto"
@@ -3258,6 +3300,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 2 }
   related: [sec.data-flow, sec.data-discovery, sec.data-classification, sec.data-lifecycle]
   sources:
     - label: "Adictos al Trabajo (Autentia)"
@@ -3343,6 +3386,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 2 }
   related: [law.personal-data, sec.data-classification, sec.dlp, law.pii]
   sources:
     - label: "Reglamento (UE) 2016/679 (RGPD), considerando 10 y artículo 9, en el BOE"
@@ -3458,6 +3502,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 2 }
   related: [law.personal-data, law.phi, sec.sensitive-data, fw.gdpr]
   sources:
     - label: "Reglamento (UE) 2016/679 (RGPD), artículo 4.1, en el BOE"
@@ -3545,6 +3590,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 2 }
   frameworks: [HIPAA]
   related: [law.pii, law.personal-data, sec.sensitive-data, fw.gdpr]
   sources:
@@ -3628,6 +3674,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 2 }
   frameworks: [PCI-DSS]
   related: [sec.tokenization, sec.data-masking, sec.sensitive-data, law.pii]
   sources:
@@ -3708,6 +3755,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 2 }
   related: [sec.drm, sec.dlp, sec.encryption, sec.data-classification]
   sources:
     - label: "Microsoft Learn, es-ES"
@@ -3778,6 +3826,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 2 }
   related: [sec.irm, sec.encryption, sec.dlp]
   sources:
     - label: "Telefónica Tech, blog"
@@ -3841,6 +3890,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 2 }
   related: [sec.data-deletion, sec.data-archiving, law.legal-hold, sec.data-lifecycle]
   sources:
     - label: "Reglamento (UE) 2016/679 (RGPD), texto en español publicado en el BOE"
@@ -3935,6 +3985,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 2 }
   related: [sec.data-retention, sec.media-sanitization, sec.cryptographic-erasure, law.legal-hold]
   sources:
     - label: "Adictos al Trabajo (Autentia)"
@@ -4017,6 +4068,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 2 }
   related: [cloud.long-term-storage, sec.data-retention, sec.backup, sec.data-lifecycle]
   sources:
     - label: "AWS, páginas en español"
@@ -4111,6 +4163,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 1 }
   related: [sec.data-retention, sec.data-deletion, sec.chain-of-custody, law.personal-data]
   sources:
     - label: "AWS, documentación es_ES"
@@ -4183,6 +4236,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 7 }
   related: [sec.traceability, sec.accountability, sec.log, cloud.auditor]
   sources:
     - label: "INCIBE-CERT, blog"
@@ -4250,6 +4304,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 7 }
   frameworks: [ENS]
   related: [sec.auditability, sec.accountability, sec.log, fw.ens]
   sources:
@@ -4340,6 +4395,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 1 }
   frameworks: [GDPR]
   related: [sec.traceability, sec.auditability, sec.non-repudiation, fw.gdpr]
   sources:
@@ -4433,6 +4489,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [sec.digital-signature, sec.integrity, sec.accountability, sec.pki]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -4494,6 +4551,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 7 }
   related: [sec.incident-response, sec.integrity, sec.hashing, law.legal-hold]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -4567,6 +4625,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 2 }
+    - { cert: CISSP, outline: "2027-04", domain: 2 }
   related: [sec.geofencing, law.data-residency, law.data-sovereignty, law.personal-data]
   sources:
     - label: "Ley Orgánica 3/2018 (LOPDGDD)"

@@ -57,7 +57,21 @@ certifications:
       - { n: 6, name: "Legal, Risk and Compliance", weight: 13 }
   - { id: CC, name: "CC", fullName: "Certified in Cybersecurity", issuer: "ISC2" }
   - { id: SSCP, name: "SSCP", fullName: "Systems Security Certified Practitioner", issuer: "ISC2" }
-  - { id: CISSP, name: "CISSP", fullName: "Certified Information Systems Security Professional", issuer: "ISC2" }
+  - id: CISSP
+    name: CISSP
+    fullName: Certified Information Systems Security Professional
+    issuer: ISC2
+    outline: "2027-04"
+    outlineLabel: ISC2 exam outline of 15 April 2027
+    domains:
+      - { n: 1, name: "Security Governance and Risk Management", weight: 13.6 }
+      - { n: 2, name: "Asset Security", weight: 12 }
+      - { n: 3, name: "Security Architecture and Engineering", weight: 12.8 }
+      - { n: 4, name: "Communication and Network Security", weight: 12.8 }
+      - { n: 5, name: "Identity and Access Management (IAM)", weight: 13.6 }
+      - { n: 6, name: "Security Assessment and Testing", weight: 11.2 }
+      - { n: 7, name: "Security Operations", weight: 12.8 }
+      - { n: 8, name: "Software Development Security", weight: 11.2 }
   - { id: CGRC, name: "CGRC", fullName: "Certified in Governance, Risk and Compliance", issuer: "ISC2" }
   - { id: CSSLP, name: "CSSLP", fullName: "Certified Secure Software Lifecycle Professional", issuer: "ISC2" }
   - { id: CISA, name: "CISA", fullName: "Certified Information Systems Auditor", issuer: "ISACA" }

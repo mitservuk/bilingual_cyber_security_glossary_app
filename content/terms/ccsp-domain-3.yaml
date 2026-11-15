@@ -37,6 +37,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.control-plane, sec.iam, sec.mfa, sec.least-privilege]
   sources:
     - label: "INCIBE y Universidad de León, Guía de buenas prácticas de ciberseguridad para redes privadas 5G"
@@ -88,6 +89,7 @@
   technology: [cloud-general, kubernetes]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.management-plane, cloud.sdn, cloud.orchestration, cloud.container]
   sources:
     - label: "INCIBE y Universidad de León, Guía de buenas prácticas de ciberseguridad para redes privadas 5G"
@@ -160,6 +162,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.virtual-machine, cloud.iaas, cloud.container, cloud.serverless]
   sources:
     - label: "INCIBE y Universidad de León, Guía de buenas prácticas de ciberseguridad para redes privadas 5G"
@@ -229,6 +232,7 @@
   technology: [networking]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 4 }
   related: [cloud.control-plane, cloud.virtual-network, cloud.virtualization, sec.microsegmentation]
   sources:
     - label: "INCIBE y Universidad de León, Guía de buenas prácticas de ciberseguridad para redes privadas 5G"
@@ -288,6 +292,7 @@
   technology: [cloud-general, networking]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 4 }
   related: [cloud.virtual-network, sec.security-group, sec.network-segmentation, sec.vpn]
   sources:
     - label: "Paradigma Digital, blog"
@@ -343,6 +348,7 @@
   technology: [cloud-general, networking]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 4 }
   related: [cloud.vpc, cloud.sdn, sec.network-segmentation, sec.vpn]
   sources:
     - label: "Paradigma Digital, blog"
@@ -416,6 +422,7 @@
   technology: [networking]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 4 }
   related: [sec.high-availability, sec.failover, cloud.cdn, sec.dos]
   sources:
     - label: "INCIBE y Universidad de León, Guía de buenas prácticas de ciberseguridad para redes privadas 5G"
@@ -500,6 +507,7 @@
   technology: [networking]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 4 }
   frameworks: [NIS2]
   related: [cloud.load-balancer, cloud.edge-computing, sec.dos, cloud.region]
   sources:
@@ -553,6 +561,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.availability-zone, tech.data-centre, law.data-residency, sec.geolocation]
   sources:
     - label: "Paradigma Digital, blog"
@@ -612,6 +621,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.region, tech.data-centre, sec.high-availability, sec.redundancy]
   sources:
     - label: "Paradigma Digital, blog"
@@ -684,6 +694,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [sec.physical-security, tech.hvac, tech.ups, cloud.region]
   sources:
     - label: "BOE, Directiva (UE) 2022/2555 (NIS 2)"
@@ -766,6 +777,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [sec.high-availability, sec.fault-tolerance, sec.failover, sec.resiliency]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -833,6 +845,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [sec.availability, sec.redundancy, sec.failover, grc.sla]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -900,6 +913,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [sec.redundancy, sec.high-availability, sec.failover, sec.resiliency]
   sources:
     - label: "INCIBE y Universidad de León, Guía de buenas prácticas de ciberseguridad para redes privadas 5G"
@@ -967,6 +981,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 7 }
   related: [sec.high-availability, sec.redundancy, sec.disaster-recovery, sec.rto]
   sources:
     - label: "Paradigma Digital, blog"
@@ -1033,6 +1048,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [tech.data-centre, tech.ups, sec.physical-security, sec.redundancy]
   sources:
     - label: "INCIBE, blog de empresas"
@@ -1107,6 +1123,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [tech.data-centre, tech.hvac, sec.redundancy, sec.physical-security]
   sources:
     - label: "INCIBE, blog de empresas"
@@ -1167,6 +1184,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   frameworks: [ENS]
   related: [tech.data-centre, sec.access-control, sec.defence-in-depth, tech.hvac]
   sources:
@@ -1232,6 +1250,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.multitenancy, sec.isolation, sec.network-segmentation, cloud.hypervisor]
   sources:
     - label: "Microsoft Learn, es-ES"
@@ -1286,6 +1305,7 @@
   technology: [networking]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 4 }
   related: [sec.microsegmentation, sec.firewall, sec.isolation, cloud.vpc]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -1359,6 +1379,7 @@
   technology: [networking, cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 4 }
   related: [sec.network-segmentation, sec.zero-trust, sec.security-group, sec.firewall]
   sources:
     - label: "INCIBE, blog para empresas"
@@ -1421,6 +1442,7 @@
   technology: [aws, azure, networking]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 4 }
   related: [sec.firewall, cloud.vpc, sec.microsegmentation, sec.network-segmentation]
   sources:
     - label: "AWS, documentación en español"
@@ -1504,6 +1526,7 @@
   technology: [networking]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 7 }
   related: [sec.ips, sec.firewall, sec.log, sec.traffic-inspection]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -1584,6 +1607,7 @@
   technology: [networking]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 4 }
   related: [sec.ids, sec.firewall, sec.traffic-inspection, sec.dos]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -1665,6 +1689,7 @@
   technology: [networking, cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 4 }
   related: [sec.firewall, sec.vpn, sec.dmz, sec.least-privilege]
   sources:
     - label: "AWS, documentación en español"
@@ -1742,6 +1767,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 7 }
   related: [sec.ids, sec.sandbox, sec.threat]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -1808,6 +1834,7 @@
   technology: [networking]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 4 }
   related: [sec.tls, sec.data-in-transit, sec.zero-trust, sec.bastion-host]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -1895,6 +1922,7 @@
   technology: [networking]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 4 }
   related: [sec.firewall, sec.network-segmentation, sec.bastion-host, sec.defence-in-depth]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -1962,6 +1990,7 @@
   technology: [networking]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 4 }
   related: [sec.traffic-inspection, sec.ids, sec.mitm, sec.log]
   sources:
     - label: "INCIBE-CERT, blog"
@@ -2030,6 +2059,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 5 }
   related: [sec.authentication, sec.authorization, sec.iam, sec.accountability]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -2091,6 +2121,7 @@
   technology: [identity-platforms]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 5 }
   related: [sec.identification, sec.authorization, sec.mfa, sec.iam]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -2179,6 +2210,7 @@
   technology: [identity-platforms]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 5 }
   related: [sec.authentication, sec.access-control, sec.least-privilege, sec.identification]
   sources:
     - label: "Esquema Nacional de Seguridad (RD 311/2022)"
@@ -2252,6 +2284,7 @@
   technology: [identity-platforms]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 5 }
   related: [sec.authentication, sec.iam, sec.zero-trust, sec.account-hijacking]
   sources:
     - label: "Esquema Nacional de Seguridad (RD 311/2022), glosario y medidas op.acc"
@@ -2360,6 +2393,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 7 }
   frameworks: [ISO-22301]
   related: [sec.bcp, sec.disaster-recovery, grc.bia, sec.resiliency]
   sources:
@@ -2456,6 +2490,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 7 }
   frameworks: [ISO-22301, ENS]
   related: [sec.business-continuity, sec.disaster-recovery, grc.bia, sec.tabletop-exercise]
   sources:
@@ -2533,6 +2568,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 7 }
   related: [sec.rpo, sec.disaster-recovery, grc.bia, grc.sla]
   sources:
     - label: "INCIBE, Guía de gestión de crisis"
@@ -2620,6 +2656,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 7 }
   related: [sec.rto, sec.backup, sec.disaster-recovery, grc.bia]
   sources:
     - label: "INCIBE, Guía de gestión de crisis"
@@ -2708,6 +2745,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 7 }
   related: [sec.bcp, sec.incident-response, sec.disaster-recovery, sec.business-continuity]
   sources:
     - label: "INCIBE, Guía de gestión de crisis"
@@ -2781,6 +2819,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 7 }
   related: [sec.rto, sec.rpo, sec.disaster-recovery, grc.sla]
   sources:
     - label: "INCIBE, blog para empresas"
@@ -2828,6 +2867,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 7 }
   related: [sec.vulnerability, sec.threat-modelling, sec.risk-assessment, sec.apt]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -2888,6 +2928,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 7 }
   related: [sec.threat, sec.exploit, sec.patch-management, sec.risk-assessment]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -2949,6 +2990,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 7 }
   related: [sec.vulnerability, sec.patch-management, sec.malware, sec.apt]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -3009,6 +3051,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 7 }
   related: [sec.threat, sec.vulnerability, sec.security-baseline, sec.least-privilege]
   sources:
     - label: "Directiva (UE) 2022/2555 (NIS 2), texto en español publicado en el BOE"
@@ -3071,6 +3114,7 @@
   technology: [networking]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 7 }
   related: [sec.availability, sec.firewall, cloud.cdn, cloud.load-balancer]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -3137,6 +3181,7 @@
   technology: [networking]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 7 }
   related: [sec.tls, sec.data-in-transit, sec.digital-certificate, sec.encryption]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -3203,6 +3248,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 7 }
   related: [cloud.hypervisor, cloud.virtual-machine, sec.isolation, cloud.multitenancy]
   sources:
     - label: "INCIBE-CERT, aviso: Leaky Vessels, vulnerabilidades en componentes de contenedores"
@@ -3261,6 +3307,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 2 }
   related: [cloud.virtual-machine, cloud.virtualization, sec.attack-surface, sec.patch-management]
   sources:
     - label: "INCIBE, blog para empresas"
@@ -3321,6 +3368,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [sec.security-baseline, sec.vulnerability, sec.attack-surface, sec.data-breach]
   sources:
     - label: "Real Decreto 43/2021, de seguridad de las redes y sistemas de información (BOE)"
@@ -3386,6 +3434,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 7 }
   related: [sec.threat, sec.least-privilege, sec.separation-of-duties, sec.dlp]
   sources:
     - label: "INCIBE, blog para empresas"
@@ -3450,6 +3499,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 7 }
   related: [sec.mfa, sec.authentication, sec.iam, sec.mitm]
   sources:
     - label: "INCIBE, blog"
@@ -3512,6 +3562,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 7 }
   related: [sec.threat, sec.malware, sec.exploit, sec.ids]
   sources:
     - label: "Esquema Nacional de Seguridad (RD 311/2022)"
@@ -3592,6 +3643,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 7 }
   related: [sec.ransomware, sec.exploit, sec.sandbox, sec.apt]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -3665,6 +3717,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 3 }
+    - { cert: CISSP, outline: "2027-04", domain: 7 }
   related: [sec.malware, sec.backup, sec.encryption, sec.incident-response]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"

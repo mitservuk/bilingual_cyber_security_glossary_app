@@ -60,6 +60,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.service-customer, cloud.shared-responsibility, cloud.service-partner, grc.sla]
   sources:
     - label: "Directiva (UE) 2022/2555 (NIS 2), texto en español publicado en el BOE"
@@ -149,6 +150,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.service-provider, cloud.shared-responsibility, law.data-controller]
   sources:
     - label: "AEPD, Guía para clientes que contraten servicios de cloud computing (2018; marcada como obsoleta)"
@@ -222,6 +224,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   related: [cloud.service-partner, cloud.service-provider, sec.casb]
   sources:
     - label: "AEPD, Orientaciones para prestadores de servicios de cloud computing (2018; marcada como obsoleta)"
@@ -274,6 +277,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   related: [cloud.service-broker, cloud.auditor, cloud.service-provider]
   sources:
     - label: "AEPD, Guía para clientes que contraten servicios de cloud computing (2018; marcada como obsoleta)"
@@ -341,6 +345,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 6 }
   related: [cloud.service-partner, grc.regulator, fw.csa-star]
   sources:
     - label: "AEPD, Guía para clientes que contraten servicios de cloud computing (2018; marcada como obsoleta)"
@@ -419,6 +424,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 1 }
   related: [fw.gdpr, grc.governance, cloud.auditor]
   sources:
     - label: "Reglamento (UE) 2022/2554 (DORA), texto en español publicado en el BOE"
@@ -497,6 +503,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.cloud-computing, cloud.rapid-elasticity, cloud.measured-service]
   sources:
     - label: "Red.es, Resolución de 9 de junio de 2014 (BOE-A-2014-6641)"
@@ -590,6 +597,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.cloud-computing, cloud.on-demand-self-service, cloud.resource-pooling]
   sources:
     - label: "Directiva (UE) 2022/2555 (NIS 2), texto en español publicado en el BOE"
@@ -649,6 +657,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.multitenancy, cloud.virtualization, cloud.cloud-computing]
   sources:
     - label: "AWS, páginas en español"
@@ -720,6 +729,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.scalability, cloud.on-demand-self-service, cloud.cloud-computing]
   sources:
     - label: "Directiva (UE) 2022/2555 (NIS 2), texto en español publicado en el BOE"
@@ -794,6 +804,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.cloud-computing, cloud.on-demand-self-service, grc.sla]
   sources:
     - label: "Red.es, Resolución de 9 de junio de 2014 (BOE-A-2014-6641)"
@@ -885,6 +896,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.rapid-elasticity, cloud.orchestration, sec.availability]
   sources:
     - label: "Real Decreto 145/2026, curso de especialización en Recursos y servicios en la nube (BOE)"
@@ -967,6 +979,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.iaas, cloud.saas, cloud.shared-responsibility]
   sources:
     - label: "Esquema Nacional de Seguridad (RD 311/2022), medida op.nub.1"
@@ -1050,6 +1063,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.iaas, cloud.paas, cloud.shared-responsibility]
   sources:
     - label: "Esquema Nacional de Seguridad (RD 311/2022), medida op.nub.1"
@@ -1133,6 +1147,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.private-cloud, cloud.hybrid-cloud, cloud.multitenancy]
   sources:
     - label: "Real Decreto 145/2026, curso de especialización en Recursos y servicios en la nube (BOE)"
@@ -1214,6 +1229,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.public-cloud, cloud.hybrid-cloud, cloud.community-cloud]
   sources:
     - label: "Real Decreto 145/2026, curso de especialización en Recursos y servicios en la nube (BOE)"
@@ -1299,6 +1315,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.public-cloud, cloud.private-cloud, cloud.multi-cloud]
   sources:
     - label: "Real Decreto 145/2026, curso de especialización en Recursos y servicios en la nube (BOE)"
@@ -1380,6 +1397,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.private-cloud, cloud.public-cloud, cloud.hybrid-cloud]
   sources:
     - label: "AEPD, Guía para clientes que contraten servicios de cloud computing (2018; marcada como obsoleta)"
@@ -1443,6 +1461,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.hybrid-cloud, cloud.vendor-lock-in, cloud.portability, cloud.interoperability]
   sources:
     - label: "Real Decreto 145/2026, curso de especialización en Recursos y servicios en la nube (BOE)"
@@ -1512,6 +1531,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.hypervisor, cloud.virtual-machine, cloud.container]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -1572,6 +1592,7 @@
   technology: [containers-oci]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.orchestration, cloud.microservices, cloud.virtual-machine, sec.isolation]
   sources:
     - label: "INCIBE-CERT, aviso de seguridad"
@@ -1646,6 +1667,7 @@
   technology: [containers-oci, kubernetes]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.container, cloud.microservices, cloud.scalability]
   sources:
     - label: "INCIBE-CERT, blog"
@@ -1714,6 +1736,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.container, cloud.orchestration, sec.api, cloud.serverless]
   sources:
     - label: "INCIBE-CERT, blog"
@@ -1789,6 +1812,7 @@
   technology: [serverless]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.microservices, cloud.container, cloud.paas, cloud.ephemeral-computing]
   sources:
     - label: "Paradigma Digital, blog"
@@ -1874,6 +1898,7 @@
   technology: [cloud-general, networking]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [tech.iot, cloud.cloud-computing, cloud.hybrid-cloud]
   sources:
     - label: "INCIBE-CERT, blog"
@@ -1947,6 +1972,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [sec.data-at-rest, sec.encryption, sec.isolation, cloud.hypervisor]
   sources:
     - label: "Microsoft Learn, es-ES"
@@ -2011,6 +2037,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.edge-computing, cloud.cloud-computing]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -2080,6 +2107,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [sec.integrity, sec.encryption]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -2144,6 +2172,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [sec.encryption, sec.key-management, tech.blockchain]
   sources:
     - label: "INCIBE-CERT, blog"
@@ -2207,6 +2236,7 @@
   technology: [ci-cd]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 8 }
   related: [sec.sdlc, sec.secure-by-design, sec.threat-modelling]
   sources:
     - label: "Telefónica Tech, blog"
@@ -2271,6 +2301,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.portability, cloud.reversibility, cloud.vendor-lock-in, cloud.multi-cloud]
   sources:
     - label: "Esquema Nacional de Interoperabilidad (RD 4/2010)"
@@ -2343,6 +2374,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.interoperability, cloud.reversibility, cloud.vendor-lock-in, cloud.container]
   sources:
     - label: "AEPD, Guía para clientes que contraten servicios de cloud computing"
@@ -2421,6 +2453,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 1 }
   related: [cloud.portability, cloud.vendor-lock-in, cloud.interoperability]
   sources:
     - label: "AEPD, Guía para clientes que contraten servicios de cloud computing"
@@ -2474,6 +2507,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 7 }
   related: [sec.availability, sec.disaster-recovery, sec.backup, grc.bia]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -2551,6 +2585,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [sec.confidentiality, sec.integrity, sec.resiliency, grc.sla]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -2637,6 +2672,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 1 }
   related: [cloud.portability, cloud.interoperability, cloud.reversibility, cloud.multi-cloud]
   sources:
     - label: "Paradigma Digital, blog"
@@ -2724,6 +2760,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 1 }
   related: [sec.availability, cloud.service-provider, cloud.service-customer, cloud.measured-service]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -2809,6 +2846,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 1 }
   related: [sec.risk-assessment, grc.regulator, cloud.shared-responsibility]
   sources:
     - label: "INCIBE, taller: Ciberseguridad transversal e integral"
@@ -2891,6 +2929,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 2 }
   related: [sec.integrity, sec.availability, sec.encryption, sec.access-control]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -2956,6 +2995,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 2 }
   related: [sec.confidentiality, sec.availability, sec.encryption]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -3031,6 +3071,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [sec.zero-trust, sec.least-privilege, sec.isolation, sec.firewall]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -3099,6 +3140,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 5 }
   related: [sec.separation-of-duties, sec.access-control, sec.iam, sec.zero-trust]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -3195,6 +3237,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 5 }
   related: [sec.least-privilege, sec.access-control, sec.iam, grc.governance]
   sources:
     - label: "Esquema Nacional de Seguridad (RD 311/2022), medida op.acc.3"
@@ -3266,6 +3309,7 @@
   technology: [networking]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [sec.least-privilege, sec.iam, sec.defence-in-depth, sec.casb]
   sources:
     - label: "INCIBE, blog para empresas"
@@ -3349,6 +3393,7 @@
   technology: [identity-platforms]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 5 }
   related: [sec.access-control, sec.least-privilege, sec.zero-trust, sec.separation-of-duties]
   sources:
     - label: "Google Cloud, páginas para España"
@@ -3420,6 +3465,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 5 }
   related: [sec.iam, sec.least-privilege, sec.separation-of-duties, sec.confidentiality]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -3501,6 +3547,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 4 }
   related: [sec.dlp, sec.zero-trust, cloud.saas, sec.traffic-inspection]
   sources:
     - label: "INCIBE-CERT, blog"
@@ -3578,6 +3625,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 2 }
   related: [sec.cryptographic-erasure, sec.data-at-rest, law.personal-data]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -3643,6 +3691,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [sec.media-sanitization, sec.key-management, sec.encryption]
   sources:
     - label: "Microsoft Learn, es-ES"
@@ -3706,6 +3755,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [sec.patch-management, sec.secure-by-design, grc.governance, fw.well-architected-framework]
   sources:
     - label: "Microsoft Learn, es-ES"
@@ -3760,6 +3810,7 @@
   technology: [networking]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 4 }
   related: [sec.firewall, sec.encryption, sec.casb, sec.dlp]
   sources:
     - label: "Microsoft Learn, es-ES"
@@ -3826,6 +3877,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 5 }
   related: [sec.access-control, sec.zero-trust, sec.firewall]
   sources:
     - label: "Telefónica Tech, blog"
@@ -3891,6 +3943,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.multitenancy, cloud.hypervisor, sec.sandbox, cloud.container]
   sources:
     - label: "Esquema Nacional de Seguridad (RD 311/2022), medida op.exp.7"
@@ -3959,6 +4012,7 @@
   technology: [cloud-general, containers-oci, serverless]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [cloud.container, cloud.serverless, cloud.virtual-machine, cloud.rapid-elasticity]
   sources:
     - label: "Paradigma Digital, blog"
@@ -4043,6 +4097,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [sec.sdlc, tech.devsecops, sec.threat-modelling, sec.security-baseline]
   sources:
     - label: "Esquema Nacional de Seguridad (RD 311/2022), medidas mp.sw.1 y op.exp.2"
@@ -4139,6 +4194,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 1 }
   related: [sec.disaster-recovery, sec.availability, sec.risk-assessment, sec.resiliency]
   sources:
     - label: "INCIBE, Glosario de términos de ciberseguridad (2021)"
@@ -4213,6 +4269,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 1 }
   related: [grc.roi, grc.bia, sec.risk-assessment]
   sources:
     - label: "Real Decreto 738/2015, artículo 4"
@@ -4280,6 +4337,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 1 }
   related: [grc.cost-benefit-analysis, grc.bia, grc.governance]
   sources:
     - label: "Telefónica Tech, blog"
@@ -4335,6 +4393,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [fw.well-architected-framework, sec.secure-by-design, sec.security-baseline]
   sources:
     - label: "Real Decreto 959/2022 (programa UNICO I+D Cloud)"
@@ -4413,6 +4472,7 @@
   technology: [cloud-general, aws, azure]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   frameworks: [WELL-ARCHITECTED]
   related: [cloud.reference-architecture, sec.secure-by-design, cloud.shared-responsibility]
   sources:
@@ -4478,6 +4538,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 6 }
   frameworks: [COMMON-CRITERIA]
   related: [fw.fips-140-3, fw.iso-27017, fw.csa-star]
   sources:
@@ -4552,6 +4613,7 @@
   technology: []
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   frameworks: [FIPS-140-3]
   related: [fw.common-criteria, sec.key-management, sec.encryption]
   sources:
@@ -4606,6 +4668,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 1 }
   frameworks: [CSA-CCM]
   related: [fw.iso-27017, fw.common-criteria, cloud.service-provider, cloud.auditor]
   sources:
@@ -4659,6 +4722,7 @@
   technology: [cloud-general]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 1 }
   frameworks: [ISO-27017]
   related: [fw.csa-star, fw.common-criteria, cloud.service-provider, cloud.shared-responsibility]
   sources:
@@ -4719,6 +4783,7 @@
   technology: [ai-ml]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [ai.machine-learning, ai.llm, ai.model, ai.ethics]
   sources:
     - label: "INCIBE, blog"
@@ -4791,6 +4856,7 @@
   technology: [ai-ml]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [ai.artificial-intelligence, ai.model, ai.training-data, ai.data-science]
   sources:
     - label: "AEPD, Adecuación al RGPD de tratamientos que incorporan inteligencia artificial"
@@ -4897,6 +4963,7 @@
   technology: [ai-ml]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [ai.artificial-intelligence, ai.model, ai.training-data, ai.machine-learning]
   sources:
     - label: "El Lado del Mal"
@@ -4987,6 +5054,7 @@
   technology: [ai-ml]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 2 }
   related: [ai.data-set, ai.model, ai.machine-learning, law.personal-data]
   sources:
     - label: "AEPD, Adecuación al RGPD de tratamientos que incorporan inteligencia artificial"
@@ -5053,6 +5121,7 @@
   technology: [ai-ml]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 2 }
   related: [ai.training-data, ai.data-science, ai.model]
   sources:
     - label: "Reglamento (UE) 2024/1689 de Inteligencia Artificial, en el BOE"
@@ -5137,6 +5206,7 @@
   technology: [ai-ml]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 3 }
   related: [ai.llm, ai.training-data, ai.machine-learning, ai.artificial-intelligence]
   sources:
     - label: "Reglamento (UE) 2024/1689 de Inteligencia Artificial, en el BOE"
@@ -5221,6 +5291,7 @@
   technology: [ai-ml]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 2 }
   related: [ai.machine-learning, ai.data-set, ai.artificial-intelligence]
   sources:
     - label: "AEPD, Adecuación al RGPD de tratamientos que incorporan inteligencia artificial"
@@ -5299,6 +5370,7 @@
   technology: [ai-ml]
   curriculum:
     - { cert: CCSP, outline: "2026-08", domain: 1 }
+    - { cert: CISSP, outline: "2027-04", domain: 1 }
   related: [ai.artificial-intelligence, grc.governance, law.personal-data, ai.training-data]
   sources:
     - label: "AEPD, Adecuación al RGPD de tratamientos que incorporan inteligencia artificial"
