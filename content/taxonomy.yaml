@@ -149,7 +149,7 @@ frameworks:
   - { id: CYBER-ESSENTIALS, name: "Cyber Essentials", summary: "Baseline certification scheme", region: uk }
   - { id: NCSC-CAF, name: "NCSC Cyber Assessment Framework", summary: "Assessment framework for essential services", region: uk }
   - { id: NCSC-CLOUD, name: "NCSC Cloud Security Principles", summary: "Guidance for choosing and using cloud services", region: uk }
-  - { id: NIST-CSF, name: "NIST Cybersecurity Framework", summary: "Outcome-based security framework, version 2.0", region: us }
+  - { id: NIST-CSF, name: "NIST Cybersecurity Framework", summary: "Outcome-based security framework, version 2.0", region: us, entry: fw.nist-csf }
   - { id: NIST-800-53, name: "NIST SP 800-53", summary: "Catalogue of security and privacy controls", region: us }
   - { id: NIST-800-171, name: "NIST SP 800-171", summary: "Protecting controlled unclassified information", region: us }
   - { id: NIST-800-207, name: "NIST SP 800-207", summary: "Zero trust architecture", region: us }
@@ -157,28 +157,28 @@ frameworks:
   - { id: NIST-AI-RMF, name: "NIST AI Risk Management Framework", summary: "Managing the risks of artificial intelligence", region: us }
   - { id: FEDRAMP, name: "FedRAMP", summary: "Cloud authorisation for federal use", region: us }
   - { id: CMMC, name: "CMMC", fullName: "Cybersecurity Maturity Model Certification", summary: "Defence supply-chain security certification", region: us }
-  - { id: HIPAA, name: "HIPAA and HITECH", summary: "Protection of health information", region: us }
-  - { id: SOX, name: "Sarbanes-Oxley Act", fullName: "SOX", summary: "Controls over financial reporting", region: us }
+  - { id: HIPAA, name: "HIPAA and HITECH", summary: "Protection of health information", region: us, entry: fw.hipaa }
+  - { id: SOX, name: "Sarbanes-Oxley Act", fullName: "SOX", summary: "Controls over financial reporting", region: us, entry: fw.sox }
   - { id: GLBA, name: "GLBA", fullName: "Gramm-Leach-Bliley Act", summary: "Financial privacy", region: us }
   - { id: CCPA, name: "CCPA and CPRA", summary: "California privacy law", region: us }
-  - { id: NERC-CIP, name: "NERC CIP", summary: "Critical infrastructure protection in the electricity sector", region: us }
+  - { id: NERC-CIP, name: "NERC CIP", summary: "Critical infrastructure protection in the electricity sector", region: us, entry: fw.nerc-cip }
   - { id: FIPS-140-3, name: "FIPS 140-3", summary: "Validation of cryptographic modules", region: us, entry: fw.fips-140-3 }
-  - { id: ISO-27001, name: "ISO/IEC 27001 and 27002", summary: "Information security management and controls", region: intl }
+  - { id: ISO-27001, name: "ISO/IEC 27001 and 27002", summary: "Information security management and controls", region: intl, entry: fw.iso-27001 }
   - { id: ISO-27005, name: "ISO/IEC 27005", summary: "Information security risk management", region: intl }
   - { id: ISO-27017, name: "ISO/IEC 27017", summary: "Security controls for cloud services", region: intl, entry: fw.iso-27017 }
-  - { id: ISO-27018, name: "ISO/IEC 27018", summary: "Personal data in public clouds", region: intl }
+  - { id: ISO-27018, name: "ISO/IEC 27018", summary: "Personal data in public clouds", region: intl, entry: fw.iso-27018 }
   - { id: ISO-27701, name: "ISO/IEC 27701", summary: "Privacy information management", region: intl }
   - { id: ISO-22301, name: "ISO 22301", summary: "Business continuity management", region: intl }
-  - { id: ISO-20000, name: "ISO/IEC 20000-1", summary: "IT service management", region: intl }
+  - { id: ISO-20000, name: "ISO/IEC 20000-1", summary: "IT service management", region: intl, entry: fw.iso-20000 }
   - { id: ISO-31000, name: "ISO 31000", summary: "Risk management", region: intl }
   - { id: ISO-42001, name: "ISO/IEC 42001", summary: "Management systems for artificial intelligence", region: intl }
-  - { id: PCI-DSS, name: "PCI DSS", fullName: "Payment Card Industry Data Security Standard", summary: "Protection of payment card data", region: intl }
+  - { id: PCI-DSS, name: "PCI DSS", fullName: "Payment Card Industry Data Security Standard", summary: "Protection of payment card data", region: intl, entry: fw.pci-dss }
   - { id: SOC-2, name: "SOC 2", summary: "Assurance reports on service organisations, under SSAE 18 and ISAE 3402", region: intl }
   - { id: CSA-CCM, name: "CSA Cloud Controls Matrix and STAR", summary: "Cloud controls and provider assurance", region: intl, entry: fw.csa-star }
-  - { id: CIS, name: "CIS Controls and Benchmarks", summary: "Prioritised controls and hardening baselines", region: intl }
-  - { id: COBIT, name: "COBIT", summary: "Governance of enterprise IT", region: intl }
-  - { id: ITIL, name: "ITIL", summary: "IT service management practice", region: intl }
-  - { id: COSO, name: "COSO", summary: "Internal control and enterprise risk", region: intl }
+  - { id: CIS, name: "CIS Controls and Benchmarks", summary: "Prioritised controls and hardening baselines", region: intl, entry: fw.cis-controls }
+  - { id: COBIT, name: "COBIT", summary: "Governance of enterprise IT", region: intl, entry: fw.cobit }
+  - { id: ITIL, name: "ITIL", summary: "IT service management practice", region: intl, entry: fw.itil }
+  - { id: COSO, name: "COSO", summary: "Internal control and enterprise risk", region: intl, entry: fw.coso }
   - { id: COMMON-CRITERIA, name: "Common Criteria", summary: "Security evaluation of IT products", region: intl, entry: fw.common-criteria }
   - { id: MITRE-ATTACK, name: "MITRE ATT&CK", summary: "Adversary tactics and techniques", region: intl }
   - { id: OWASP, name: "OWASP Top 10, ASVS and SAMM", summary: "Application security references", region: intl }

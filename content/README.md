@@ -58,9 +58,10 @@ files; nothing about a term is stored anywhere else.
 
 ## Status
 
-- `draft`: at least one form or note still rests on general knowledge or on
-  a lead.
-- `sourced`: every form and note rests on a checked source.
+- `draft`: the main Spanish form has not yet been found in a checked source.
+- `sourced`: the main Spanish form was found in at least one checked source.
+  Alternative forms and notes may rest on working knowledge of usage in Spain;
+  a form carries `usedBy` only where it was actually seen.
 - `verified`: additionally confirmed by a native-speaking professional.
 
 Sources come in two strengths. A source with `found` and `checked` was

@@ -232,7 +232,7 @@
       url: "https://www.tecnoempleo.com/administrador-mo365-azure-michael-page/microsoft-365-microsoft-entra-id/rf-ba87109282e6a3c6bb4f"
       found: ["tenant Microsoft 365"]
       checked: 2026-11-14
-  status: draft
+  status: sourced
 
 - id: cloud.iaas
   en:
@@ -349,7 +349,7 @@
       url: "https://www.genbeta.com/actualidad/anunciaron-que-gmail-tendra-cifrado-extremo-a-extremo-definicion-expertos-no-coincide-google"
       found: ["permanece encriptado"]
       checked: 2026-11-14
-  status: draft
+  status: sourced
 
 - id: sec.data-at-rest
   en:
@@ -471,7 +471,7 @@
       url: "https://telefonicatech.com/blog/evaluacion-proveedores-cloud-quantum-readiness-auditoria"
       found: ["gestión de claves"]
       checked: 2026-11-14
-  status: draft
+  status: sourced
 
 - id: sec.tokenization
   en:
@@ -586,7 +586,7 @@
       url: "https://telefonicatech.com/blog/redefiniendo-seguridad-nube-con-sase"
       found: ["DLP"]
       checked: 2026-11-14
-  status: draft
+  status: sourced
 
 - id: cloud.hypervisor
   en:
@@ -769,7 +769,7 @@
       url: "https://www.incibe.es/sites/default/files/contenidos/guias/doc/guia_glosario_ciberseguridad_2021.pdf"
       found: ["Plan de contingencia"]
       checked: 2026-11-14
-  status: draft
+  status: sourced
 
 - id: sec.firewall
   en:
@@ -852,7 +852,7 @@
       url: "https://www.genbeta.com/linux/mejores-cortafuegos-para-proteger-tu-equipo-linux"
       found: ["cortafuegos", "firewall de Linux"]
       checked: 2026-11-14
-  status: draft
+  status: sourced
 
 - id: sec.sdlc
   en:
@@ -976,7 +976,7 @@
       url: "https://telefonicatech.com/blog/sandbox-de-ia-entornos-seguros-para-evaluacion-y-proteccion-modelos-de-inteligencia-artificial"
       found: ["cajas de arena"]
       checked: 2026-11-14
-  status: draft
+  status: sourced
 
 - id: sec.threat-modelling
   en:
@@ -1104,7 +1104,7 @@
       url: "https://www.paradigmadigital.com/techbiz/8-razones-las-tus-desarrollos-estan-mas-seguros-cloud/"
       found: ["las APIs"]
       checked: 2026-11-14
-  status: draft
+  status: sourced
 
 - id: sec.incident-response
   en:
@@ -1178,7 +1178,7 @@
       url: "https://www.tecnoempleo.com/analista-respuesta-nivel-3-ciberseguridad-cajamar-/cisa-cism/rf-f85b15f662a533a34e47"
       found: ["gestión de incidentes"]
       checked: 2026-11-14
-  status: draft
+  status: sourced
 
 - id: sec.patch-management
   en:
@@ -1339,7 +1339,7 @@
       url: "https://www.paradigmadigital.com/techbiz/8-razones-las-tus-desarrollos-estan-mas-seguros-cloud/"
       found: ["registros de actividad"]
       checked: 2026-11-14
-  status: draft
+  status: sourced
 
 - id: sec.backup
   en:
@@ -1404,7 +1404,7 @@
       url: "https://www.tecnoempleo.com/administrador-sistemas-linux-rhel-vmware-baoss/intel-red-hat-satellite/rf-59231cd0e2ca33f1e04c"
       found: ["administración de backups"]
       checked: 2026-11-14
-  status: draft
+  status: sourced
 
 - id: fw.gdpr
   en:
@@ -1636,4 +1636,4 @@
       url: "https://telefonicatech.com/blog/backup-empresarial-continuidad-negocio-proteger-datos"
       found: ["evaluación de riesgos"]
       checked: 2026-11-14
-  status: draft
+  status: sourced
